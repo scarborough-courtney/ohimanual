@@ -58,8 +58,6 @@ To do this through Github:
   + to resolve these conflicts, follow instructions from [OHI-Science](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub#resolving-conflicts).  
   
 6. Once your repo on on github.com is has been updated, you can pull your updated fork to your workspace in RStudio either from the Git pulldown menu or from the Git tab. ![](zfig_pull6_sk.png)
-
-  
   
   
   
