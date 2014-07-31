@@ -3,7 +3,11 @@ computer (ex: `remi-daigle/ohi-global`), there may be committed updates
 in the owner's repository that is 'upstream' (ex:
 `OHI-Science/ohi-global`). To ensure that you are working with the most
 updated repository, you need to update your fork by creating a **pull
-request**.
+request**. See some tips on process
+[here](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub#process).
+
+Updating your fork
+------------------
 
 To do this on the command line, see
 [help.github.com](https://help.github.com/articles/syncing-a-fork).
@@ -16,18 +20,18 @@ To do this through Github:
     Melsteroni. To pull the most recent version of `ohi-global` from
     `OHI-Science`, click on the green button.
 
-> ![](fig_updatedrepo_sk.png)
+> ![](zfig_updatedrepo_sk.png)
 
 1.  You will need to sync forks (the default is to sync branches).
 
-> ![](fig_pull1_sk.png)
+> ![](zfig_pull1_sk.png)
 
 1.  Change the base fork to your repo: in this example it is
     `remi-daigle\ohi-global`. The head fork is the owner's repo:
     `OHI-Science\ohi-global`. You can see those most recent commits by
     Melsteroni. Now you can click 'Create pull request'.
 
-> ![](fig_pull2_sk.png)
+> ![](zfig_pull2_sk.png)
 
 **Note:**
 
@@ -38,9 +42,23 @@ To do this through Github:
 -   if that if you get an error *There isn't anything to compare*, make
     sure you are still comparing forks, not branches.
 
-> ![](fig_pull3_sk.png)
+> ![](zfig_pull3_sk.png)
 
 1.  Enter a Title and a comment, when then allows you to click *Create
     pull request*
 
-> ![](fig_pull4.png)
+> ![](zfig_pull4.png)
+
+1.  Scolling down on the next screen, you should either see:
+
+-   that you have been granted access ![](zfig_pull5.png)
+-   that you must request permission before merging
+-   you will be notified once you have been granted permission; then
+    continue to step 6 below
+-   that you must resolve conflicts before merging ![](zfig_pull5b.png)
+-   to resolve these conflicts, follow instructions from
+    [OHI-Science](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub#resolving-conflicts).
+
+1.  Once your repo on on github.com is has been updated, you can pull
+    your updated fork to your workspace in RStudio either from the Git
+    pulldown menu or from the Git tab. ![](zfig_pull6_sk.png)
