@@ -1,21 +1,22 @@
 ---
 title: "Accessing GitHub Repositories"
 output: 
+  md_document:
+    variant: markdown_github
   html_document:
     fig_caption: yes
     keep_md: yes
-    toc: yes
+    toc: no
   pdf_document: 
     fig_caption: yes
     toc: yes
 ---
 
-## Introduction
-**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by [Halpern et al. 2012](http://www.nature.com/nature/journal/v488/n7413/abs/nature11397.html) in *Nature*, we have conducted annual global assessments to track changes in global ocean health through time. At the same time, we have been developing software called the **OHI Toolbox** that will enable others to conduct assessments on their own using the OHI framework. 
+**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by [Halpern et al. 2012](http://www.nature.com/nature/journal/v488/n7413/abs/nature11397.html) in *Nature*, we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **OHI Toolbox**: software that will enable others to conduct assessments on their own using the OHI framework. 
 
 
 ### OHI and GitHub 
-OHI uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub) to develop and share its software and data. GitHub has powerful versioning capabilities, which allow changes to be archived and revisited and the author of the changes to be identified.  
+OHI uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub) to develop and share its software and data. GitHub has powerful versioning capabilities, which allow changes to be archived and tracked with the user identified.
   
 OHI has several repositories where data and code are stored. From the [GitHub glossary](https://help.github.com/articles/github-glossary#repository): 
 
@@ -25,8 +26,11 @@ OHI has several repositories where data and code are stored. From the [GitHub gl
   
 
 ### OHI regional assessments and GitHub
-We recommend that groups interested in conducting OHI assessments do so through GitHub. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below for creating a GitHub user account. The OHI team can create a repository for your regional assessment.
+We recommend that groups interested in conducting OHI assessments do so through GitHub. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below for creating a GitHub user account. The OHI team can create a repository for your regional assessment.  
+  
+Here is a simple diagram of GitHub's collaborative workflow :
 
+> ![](zfig_clone_push_pull.png)
 
 ## Sign up for GitHub
 To get started, [signup](http://github.com) for a GitHub account, and provide your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu so you can access your ohi-[assessment] repository.
