@@ -4,7 +4,8 @@ output: html_document
 
 ---
 
- ```{r, echo = FALSE, message = FALSE}
+```{r, echo = FALSE, message = FALSE}
+devtools::install_github("rstudio/rmarkdown")
 knitr::opts_chunk$set(
   comment = " ",
   error = FALSE,
@@ -53,16 +54,16 @@ To do this through Github:
 5. Scolling down on the next screen, you should either see:
 - that you have been granted access ![](zfig_pull5.png)
 - that you must request permission before merging
-  + you will be notified once you have been granted permission; then continue to step 6 below
++ you will be notified once you have been granted permission; then continue to step 6 below
 - that you must resolve conflicts before merging ![](zfig_pull5b.png)
-  + to resolve these conflicts, follow instructions from [OHI-Science](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub#resolving-conflicts).  
-  
++ to resolve these conflicts, follow instructions from [OHI-Science](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub#resolving-conflicts).  
+
 6. Once your repo on on github.com is has been updated, you can pull your updated fork to your workspace in RStudio either from the Git pulldown menu or from the Git tab. ![](zfig_pull6_sk.png)
-  
-  
-  
-  
-  
+
+
+
+
+
 
 
 
