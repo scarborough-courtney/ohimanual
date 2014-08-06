@@ -3,14 +3,29 @@
 ### OHI regional assessments without GitHub
 It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend [accessing a repository with GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md) but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
 
+## Getting started
 
-Hi Mian, 
+### Install the latest version of R
+Download [**R**](http://cran.r-project.org/) and install this on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).
 
-I have prepared the files for you and have attached them here in ohi-china.zi file that you can change to .zip. 
+### Install the latest version of RStudio
+While not required, we highly recommend working with [**RStudio**](http://www.rstudio.com/products/RStudio/), which is an interface that makes working with R much easier. RStudio also has great compatibility with GitHub so you can collaborate with your team directly from your R code. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
 
-Tomorrow I will write up documentation of how work with GitHub. It is possible to work with this before then without Github. Here is what you need to do:
-save the ohi-china folder somewhere close to your root directory
-open ohi-china/ohi-china.Rproj: this will launch RStudio
+### Create your ohi-[assessment] repo
+Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
+
+### Download the repo to your computer
+When your repository has been created, enter the url in to an internet browser (for example, `github.com/OHI-Science/ohi-israel`). Click `Download ZIP`.  
+  
+> ![](zfig_download_zip_sk.png)  
+  
+### Working locally
+
+1. Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
+
+2. Double-click `ohi-china/ohi-china.Rproj`: this will launch RStudio. Be sure to have the [latest version of R and RStudio]
+
+
 open ohi-china/china2014/launch_app_code.R within RStudioInline image 1
 this will launch the Toolbox user interface. Notice that when the user interface opens, it cannot display Output Scores. This is because they have not been calculated yet. Change variable type to Input Variable to see the map: Inline image 3
 Inline image 4
