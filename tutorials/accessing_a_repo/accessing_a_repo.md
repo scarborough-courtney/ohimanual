@@ -7,7 +7,7 @@ OHI has several repositories ('repos') where data and code are stored. From the 
 
 > A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private.
 
-[OHI-Science](https://github.com/OHI-Science) is the 'owner' of OHI repositories, and individual users contribute to these repositories when they have permission. Here is a simple diagram of GitHub's collaborative workflow, with the example of the `ohi-israel` repo owned by `OHI-Science`:
+[OHI-Science](https://github.com/OHI-Science) is the 'owner' of OHI repositories, and individual users contribute to these repositories when they have permission. This simple example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
 
 > > > > > ![](zfig_clone_push_pull.png)
 
@@ -58,6 +58,7 @@ Once there is a repository for your OHI regional assessment called `OHI-Science/
 
 \*\* With either approach, we recommend creating a folder called `github` in your root directory so that you can clone the repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path.
 
+
 #### Cloning options
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
@@ -75,11 +76,25 @@ You will work on your computer to change the files in `~/github/ohi-[assessment]
 All changes within this folder will be tracked by GitHub when you [commit](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#committing-locally) these changes, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
 ### Committing locally
-Commit locally, associating a message with each set of changes.
+Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
+
+> ![](zfig_RStudio_sk1.png)
 
 ### Push commits to GitHub ohi-[assessment] repository.
+When you modify or add a file, the file will appear in the 'Git' window. In the example below, the file `test.R` was created. 
 
-## Keeping Syncronized
+1. Clicking the 'Staged' box and the 'Commit' button opens a new window where you can review changes. 
+2. Type a commit message that is informative to the changes you've made. 
+  - Note 1: there will often be multiple files 'staged' at the same time, and so the same commit message will be associated with all of the updated files. It is best to commit changes often with informative commit messages. 
+  - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
+3. Click 'Commit' to commit the changes and the commit message
+4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. See [Keeping synchronized](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#keeping-syncronized). 
+5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.  
+  
+> ![](zfig_commit_sk.png)
+
+## Keeping syncronized
+Always pull before pushing commits. 
 
 ### Pull commits to get changes from anyone else.
 
