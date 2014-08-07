@@ -21,18 +21,14 @@ When your repository has been created, enter the url in to an internet browser (
   
 ### Working locally
 
-1. Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: 
-> `~/github/ohi-[assessment]`. 
-
-This will make collaborating much simpler since everyone will work with the same file path. 
+1. Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
 
 2. Double-click `ohi-[assessment]/ohi-[assessment].Rproj`: this will launch RStudio. Be sure to have the [latest version of R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/required_software.md#software).
 
-3. open `ohi-[assessment]/[scenario]/launch_app_code.R`: for example, `ohi-israel/med2014/launch_app_code.R`. You can open this from within RStudio: 
+3. Open `ohi-[assessment]/[scenario]/launch_app_code.R` (for example, `ohi-israel/med2014/launch_app_code.R`). You can open this from within RStudio: 
+   > ![](zfig_RStudio_ohi-israel_sk.png)  
   
-[image]
-
-3. Launch the Toolbox user interface 
+4. Launch the Toolbox user interface 
 Run `launch_app_code.R` to launch the Toolbox user interface. Notice that when the user interface opens, it cannot display Output Scores. This is because they have not been calculated yet. 
   
 Change variable type to Input Variable to see the map: Inline image 3
