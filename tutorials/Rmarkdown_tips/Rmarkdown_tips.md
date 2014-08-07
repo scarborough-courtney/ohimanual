@@ -1,4 +1,5 @@
 # Rmarkdown Tips
+# testing
 
 ## Rmarkdown
 [Rmarkdown](http://rmarkdown.rstudio.com/) is a simple formatting tool for creating HTML, PDF, presentations, and Microsoft Word documents, and it can render R code within those formats. See this [great post](https://github.com/bbest/rmarkdown-example#writing-with-rmarkdown) as an introduction to its capabilities.  
