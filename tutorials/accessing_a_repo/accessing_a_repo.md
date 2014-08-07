@@ -18,12 +18,8 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
   
 ## Getting started
 
-<<<<<<< HEAD
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/required_software.md). 
-=======
-[Install R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/required_software.md): make sure you have the most current version. 
->>>>>>> 5dd78688b5bbc36496ce347fc9b6d2910df83147
 
 ### Create a GitHub account
 To get started, [signup](http://github.com) for a GitHub account, and provide your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu so you can access your ohi-[assessment] repository.
