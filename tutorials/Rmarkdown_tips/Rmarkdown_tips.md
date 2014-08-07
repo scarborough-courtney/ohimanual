@@ -1,7 +1,7 @@
 # Rmarkdown Tips
 
 ### Rmarkdown
-[Rmarkdown](http://rmarkdown.rstudio.com/) is 'a simple formatting syntax for authoring HTML, PDF, and MS Word documents'. See this [great post](https://github.com/bbest/rmarkdown-example#writing-with-rmarkdown) about its capabilities and how to use it.
+[Rmarkdown](http://rmarkdown.rstudio.com/) is 'a simple formatting syntax for authoring HTML, PDF, and MS Word documents' and can render R code within those formats. Here are a few examples of documents written in Rmarkdown, rendered in [.html](file:///Library/Frameworks/R.framework/Versions/3.1/Resources/library/dplyr/doc/introduction.html) and [.pdf](http://cran.r-project.org/web/packages/dplyr/dplyr.pdf) formats. See this [great post](https://github.com/bbest/rmarkdown-example#writing-with-rmarkdown) about its capabilities and how to use it.
 
 To get started writing in Rmarkdown, [update R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#getting-started). Then, in RStudio, install Rmarkdown and pandoc by pasting this into the console:
 
