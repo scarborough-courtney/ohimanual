@@ -49,17 +49,17 @@ You will then need to set up your Git Identity, which identifies you with any ch
   
 Substitute your GitHub user information with the user John Doe:
 
-```{bash}
+```
 git config --global user.name jdoe
 ```
 
-```{bash}
+```
 git config --global user.email johndoe@example.com
 ```
 
 You can check settings with the following:
 
-```{bash}
+```
 git config --list
 ```
 

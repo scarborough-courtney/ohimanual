@@ -1,5 +1,7 @@
 # Accessing GitHub repositories
 
+
+
 ## OHI and GitHub 
 The Ocean Health Index (OHI) Toolbox is written in [R](http://cran.r-project.org/) and uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub) to develop and share software and data. GitHub has powerful versioning capabilities, which allow changes to be archived and tracked by each user. This is incredibly useful to not only document what work has been done, but how it differs from work done in the past, and who is responsible for the changes. GitHub enables easy collaboration with others, including the OHI team. 
   
@@ -24,25 +26,27 @@ Make sure you have the most current version of [R and RStudio](https://github.co
 ### Create a GitHub account
 To get started, [signup](http://github.com) for a GitHub account, and provide your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu so you can access your ohi-[assessment] repository.
 
-### Install *git*
+### Install *git* Application
 *git* is required to work behind the scenes on your computer. [Download](http://git-scm.com/downloads) and install *git*. (Here are a few [tips](https://github.com/OHI-Science/ohiprep/wiki/Setup#git)).  
   
 You will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
-* **Mac**: launch the Terminal application
+* **Mac**: launch the Terminal application (Applications > Utilities > Terminal)
 * **Windows**: go to command line in Windows (Start > Run > cmd)  
   
 Substitute your GitHub user information with the user John Doe:
 
-```{bash}
+```
 git config --global user.name jdoe
+```
+
+```
 git config --global user.email johndoe@example.com
-git config --list
 ```
 
 You can check settings with the following:
 
-```{bash}
+```
 git config --list
 ```
 
