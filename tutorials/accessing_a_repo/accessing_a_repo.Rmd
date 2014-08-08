@@ -1,6 +1,11 @@
 ---
 title: "Accessing GitHub repositories"
 output: 
+  html_document:
+    fig_caption: yes
+    keep_md: yes
+    number_sections: no
+    toc: yes
   pdf_document: 
     fig_caption: yes
     toc: yes
@@ -47,7 +52,7 @@ Substitute your GitHub user information with the user John Doe:
 ```
 git config --global user.name jdoe
 ```
-
+and then: 
 ```
 git config --global user.email johndoe@example.com
 ```

@@ -1,6 +1,6 @@
 # Accessing GitHub repositories
 
-
+   
 
 ## OHI and GitHub 
 The Ocean Health Index (OHI) Toolbox is written in [R](http://cran.r-project.org/) and uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub) to develop and share software and data. GitHub has powerful versioning capabilities, which allow changes to be archived and tracked by each user. This is incredibly useful to not only document what work has been done, but how it differs from work done in the past, and who is responsible for the changes. GitHub enables easy collaboration with others, including the OHI team. 
@@ -39,7 +39,7 @@ Substitute your GitHub user information with the user John Doe:
 ```
 git config --global user.name jdoe
 ```
-
+and then: 
 ```
 git config --global user.email johndoe@example.com
 ```
