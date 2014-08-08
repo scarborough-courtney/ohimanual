@@ -63,6 +63,11 @@ You can check settings with the following:
 git config --list
 ```
 
+Quit the Terminal after typing:
+```
+exit
+```
+
 ### Create your ohi-[assessment] repo
 Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
 
