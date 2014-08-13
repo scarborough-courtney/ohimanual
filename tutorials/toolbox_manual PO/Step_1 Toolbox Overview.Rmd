@@ -37,7 +37,7 @@ Using the Toolbox to explore global results only requires becoming familiar with
 
 1. Internet Connection
     + Free software must be [downloaded](http://cran.r-project.org/) from the R website (Step_1a)
-    + Follow the Toolbox App [Install](http://ohi-science.org) instructions (Step_2a)
+    + Follow the Toolbox App [Install](http://ohi-science.org/pages/install.html) instructions (Step_2a)
 
 ### Requirements for conducting a regional assessment with new data and models:
 
