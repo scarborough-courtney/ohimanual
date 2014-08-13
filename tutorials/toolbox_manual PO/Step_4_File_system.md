@@ -65,7 +65,7 @@ goals.csv also indicates the arguments passed to functions.R. These are indicate
  + **resilience_weights.csv:** describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
 ### spatial folder 
-The spatial folder contains components of shapefiles to delineate the 2013 OHI reporting regions that are created and read by spatial analysis software like ESRI’s ArcGIS. When conducting regional assessments, the files within this folder will need to be replaced by new files created for the study area and regions. See an example below in ‘Scenarios’. 
+The spatial folder contains components of shapefiles to delineate the 2013 OHI reporting regions that are created and read by spatial analysis software like ESRI’s ArcGIS. When conducting regional assessments, the files within this folder will need to be replaced by new files created for the study area and regions. See an example below in ‘Step_5 Scenarios’.
 
 
 
