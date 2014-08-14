@@ -13,11 +13,22 @@ output:
 ## Using the OHI Toolbox App
 The Toolbox App runs through a web browser and has four tabs that lead to different pages: *Data*, *Goals*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Goals*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#goals-page) page summarizes the global data, and weights for various goals can be adjusted.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#calculate-page) will calculate goal scores based on the information in the filesystem (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#report-page) page provides different methods of reporting the data.
 
-![alt text](Toolbox.png)
-*View of the Toolbox App when it is first launched through R: the Data page in Map view.*
+![alt text](Toolbox16.png)
 
 ## Data Page
 The Data tab displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#map), [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#histogram), or [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#table).
+
+  * Data displayed in Map form:
+  
+![alt text](Toolbox17.png)
+
+  * Data displayed in Histogram form:
+  
+![alt text](Toolbox18.png)
+
+  * Data displayed in Table form:
+  
+![alt text](Toolbox19.png)
 
 ### Overview of variable options
 ![alt text](Toolbox2.png)
@@ -51,6 +62,7 @@ If the user selects ‘Output Score’ as the variable type (which is the defaul
     + Status, trend, future state, pressures, resilience, and score
 
 If the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
+
 * Target options (with numeric identifiers):
     + Ten goals and eight sub-goals
     + Pressures
