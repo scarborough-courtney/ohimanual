@@ -1,8 +1,0 @@
-# The Ocean Health Index Toolbox Manual
-
-
-
-## Instructions for Installing the OHI software
-You can install and launch the latest OHI application from the cross-platform, open-source [R](http://cran.r-project.org/) statistics software (install R on [Windows](http://cran.rstudio.com/bin/windows/base/) or [Mac](http://cran.rstudio.com/bin/macosx/)). 
-
-
