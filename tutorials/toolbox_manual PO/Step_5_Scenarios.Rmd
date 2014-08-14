@@ -4,6 +4,8 @@ output:
 html_document:
     toc: yes
     keep_md: yes
+  md_document:
+    variant: markdown_github
 ---
 
 
