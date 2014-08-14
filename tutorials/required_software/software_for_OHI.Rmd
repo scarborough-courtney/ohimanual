@@ -21,7 +21,7 @@ The Ocean Health Index works primarily with freely available, open-source softwa
 
 Download [**R from cran.r-project.org**](http://cran.r-project.org/) and follow the install instructions for your computer. 
   
-If you already have R installed, check  [**cran.r-project.org**](http://cran.r-project.org/) for updates. There are frequent updates available, and the current version is identified on the website. Compare what is available with what you already have on your computer by typing `sessionInfo()` into your R console. 
+If you already have R installed, check  [**cran.r-project.org**](http://cran.r-project.org/) for updates. There are frequent updates available, and the current version is identified on the website. Compare what is available with what you already have on your computer by typing `sessionInfo()` into your R console (see also: [learning R](http://ohi-science.org/pages/learning_r.html)).
   
   
 # Optional Software
