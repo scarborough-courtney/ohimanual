@@ -9,7 +9,7 @@ The Toolbox App runs through a web browser and has four tabs that lead to differ
 *View of the Toolbox App when it is first launched through R: the Data page in Map view.*
 
 ## Data Page
-The Data tab displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: map, histogram, or table (each explained separately below).
+The Data tab displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#map), [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#histogram), or [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#table).
 
 ### Overview of variable options
 ![alt text](Toolbox2.png)
