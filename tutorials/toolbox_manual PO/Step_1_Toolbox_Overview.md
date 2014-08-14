@@ -21,7 +21,7 @@ Following initial installation, the Toolbox does not require an Internet connect
 
 Following initial installation, the Toolbox does not require an Internet connection. New data can be incorporated into the file system and goal models can be modified allowing calculation of scores with updated data and visualized with the Toolbox App. However, conducting a regional assessment using GitHub (recommended) does require frequent access to the Internet.
 
-**Requirements**: familiarity with the Toolbox application and proficiency with data management and the coding language **R** (See: [Step_3]() and other [R resources](http://ohi-science.org/pages/learning_r.html)). Proficiency in spatial software such as ArcGIS may also be required, depending on the regional assessment strategy.  (See: [Step_4]() and [Step_5]()).
+**Requirements**: familiarity with the Toolbox application and proficiency with data management (See: [Step_4]()) and the coding language **R** (See: other [R resources](http://ohi-science.org/pages/learning_r.html)). Proficiency in spatial software such as ArcGIS may also be required, depending on the regional assessment strategy.  (See: [Create Regions](http://ohi-science.org/pages/create_regions.html)).
 
 1. Install the [latest version of R](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/software_for_OHI.md#required-software).
 2. Install the OHI Toolbox by [accessing a regional assessment repository](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#accessing-github-repositories)
