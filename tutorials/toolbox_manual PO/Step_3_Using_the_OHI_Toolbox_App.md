@@ -3,15 +3,15 @@
 
 
 ## Using the OHI Toolbox App
-The Toolbox App runs through a web browser and has four tabs that lead to different pages: *Data*, *Goals*, *Calculate*, and *Report*. The *Data* page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The *Goals* page summarizes the global data, and weights for various goals can be adjusted.  The *Calculate* will calculate goal scores based on the information in the filesystem (data can be changed and tested). The *Report* page provides different methods of reporting the data. Each page will be described in full below.
+The Toolbox App runs through a web browser and has four tabs that lead to different pages: *Data*, *Goals*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Goals*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#goals-page) page summarizes the global data, and weights for various goals can be adjusted.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#calculate-page) will calculate goal scores based on the information in the filesystem (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#report-page) page provides different methods of reporting the data.
 
 ![alt text](Toolbox.png)
 *View of the Toolbox App when it is first launched through R: the Data page in Map view.*
 
-### Data Page
+## Data Page
 The Data tab displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: map, histogram, or table (each explained separately below).
 
-#### Overview of variable options
+### Overview of variable options
 ![alt text](Toolbox2.png)
 
 Below the Data tab are drop-down menus from which the user chooses:
@@ -55,7 +55,7 @@ If the user selects “Input Layer” as the variable type, they will be able to
 * Year options:
     + This option will appear if the layer identified has multiple years
 
-#### Overview of display options
+### Overview of display options
 The default display option for the Data page is Map view; Histogram and Table view are also possible. These options are presented as tabs located above the map. For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
 
 ### Map 
@@ -82,7 +82,7 @@ The table displays the target value for each region and the overall study area. 
 
 It is possible to search the data using the search bar at the upper right of the table (Caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
-### Goals Page
+## Goals Page
 Flower diagrams are used to visualize calculated scores for each region and the overall study area. The number in the center of the diagram is the overall score for the region, and each petal represents a goal or sub-goal. The length of each petal reflects the score for the goal or sub-goal. Goal and sub-goal scores are on a scale from 0 to 100, with 0 being worst (no visible petal) and 100 being best (petal length extends to the outer ring). This score is also written outside of the diagram along with the goal or sub-goal identifier. The width of the petal reflects the weighting of a goal or sub-goal relative to the other goals and sub-goals.  The default flower diagram displays each goal with equal weighting (10%), with sub-goals contributing equally to each goal (5%).
 
 ![alt text](Toolbox7.png)
@@ -91,7 +91,7 @@ The Goals page allows the user to change the goal weights, influencing the overa
 
 To change goal weightings, use the mouse to slide the weights across any of the goals and see how the flower diagram changes. Currently, other goal weights will change in order to ensure that all weightings equal 100%. In future iterations of the Toolbox App there will be more control over how to set these settings.
 
-### Calculate Page
+## Calculate Page
 The Calculate page is used to calculate the Index. 
 If the user is only exploring the results from the global assessment and followed the Toolbox App [installation](http://ohi-science.org/pages/install.html) (Step 1a and 2a), then the files responsible for the default 2013 global results, containing the code and data files, are automatically downloaded onto the user’s computer. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
 
@@ -108,7 +108,7 @@ The Calculate Page  will also be used for the regional assessment to incorporate
 The toolbox supports use on both a Mac and PC.
 The code and data files within the folder are the components required to configure and calculate the Ocean Health Index.  At this point the user should become familiar with the file system (see below) to prepare files to perform their own analyses. The user can adapt these files based on different models or data and will then return to the Calculate tab. However, before calculation it is important to prepare data in the proper format and understand the underlying framework. Please see the ‘File system’ section to learn how to configure data files and model functions (Step_4 and Step_5).
 
-### Report Page
+## Report Page
 The Report page allows the user to create a report of results as .html and .pdfs files.
 ![alt text](Toolbox9.png)
 It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
