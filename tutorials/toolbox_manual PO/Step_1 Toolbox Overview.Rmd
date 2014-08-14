@@ -11,38 +11,28 @@ test
 
 
 ## The Ocean Health Index Toolbox 
-The Ocean Health Index (OHI) Toolbox was created to facilitate regional assessments of ocean health using the OHI framework. The Toolbox consists of both software Application (App) operated through a web browser and all files required to calculate Index scores, which can be modified in regional assessments. This document contains technical information to aid those using the Toolbox App. It will be updated with further details with increased functionality of the Toolbox App, which is in progress.   
-
-OHI scores by goal are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. For detailed information about the Ocean Health Index framework, please see the OHI Conceptual Guide available at ohi-science.org. There are also further supporting documents to aid understanding and facilitate regional assessments.
-
-## Using the Toolbox
-### What is the Ocean Health Index Toolbox?
-The Ocean Health Index (OHI) Toolbox was developed for exploration of global OHI scores and to facilitate calculations of regional assessments. The heart of the Toolbox is the Toolbox App, which is displayed through a web browser and runs using the statistical programming language R. The App takes input values and calculates goal and Index scores, and displays both inputs and scores for each region and the entire study area graphically with maps, histograms, and tables.
-
-Files and scripts that run the Toolbox App can be downloaded to the user’s file system, enabling exploration and modified calculations without further Internet access. New data can be incorporated into the file system and goal models can be modified allowing calculation of scores with updated data and different regions. This is possible with the Toolbox App after experienced R users modify any goal models and GIS analysts update region information. 
-
-The OHI Toolbox will promote deeper understanding of this flexible, transparent framework, and highlight opportunities for realizing a healthier ocean. The Toolbox will enable the user to:
-
-* Explore the operations behind the global ocean health index results
-* Recalculate the Index globally using alternative data, weights, and models
-* Calculate the Index at a regional scale, with customized modifications and local data inputs tailored to be appropriate to the region and scale of choice 
-* Visualize results to highlight best opportunities for improving ocean health.
+**The OHI Toolbox** Application (App) was developed for exploration of global OHI scores and to facilitate regional assessments. The Toolbox is displayed through a web browser and runs using the statistical programming language **R**. The Toolbox takes input data and calculates goal scores for each region and combines the regions using a weighted average to produce the score for the overall study area assessed. Input data and calculated scores are displayed graphically with maps, histograms, and tables.
 
 ## Getting Started
-The Toolbox App is a graphical user interface (GUI) that is displayed in a web browser where the user can use drop-down menus, buttons and sliders to explore and visualize calculations from the Index. This App is operated by programming code in the language R, free software that is available for download from http://cran.r-project.org. 
 
-Using the Toolbox to explore global results only requires becoming familiar with the Toolbox App, whereas there are additional requirements to conduct regional assessments (see below).
+### Exploring the results from the global assessment:
 
-### Requirements for exploring the results from the global assessment:
+Following initial installation, the Toolbox does not require an Internet connection and exploration using the Toolbox App is possible offline. 
 
-1. Internet Connection
-    + Free software must be [downloaded](http://cran.r-project.org/) from the R website (Step_1a)
-    + Follow the Toolbox App [Install](http://ohi-science.org/pages/install.html) instructions (Step_2a)
+**Requirements**: familiarity with the Toolbox application
 
-### Requirements for conducting a regional assessment with new data and models:
+1. Install the [latest version of R](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/software_for_OHI.md#required-software).
+2. Install the [OHI Toolbox](http://ohi-science.org/pages/install.html).
+3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3%20Using%20the%20OHI%20Toolbox%20App.md)
 
-1. Internet connection
-    + Free software must be [downloaded](http://cran.r-project.org/) from the R website (Step_1b)
-    + Follow Github [Install](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#accessing-github-repositories) instructions (Step_2b)
-2. Technical Knowledge
-    + Any changes to data layers or goal models will require strong familiarity with the R coding language (See: [Learning R](http://ohi-science.org/pages/learning_r.html)), with the Toolbox App (See: [Step_3]()), and also with the way input files must be organized (See: [Step_4]()) and prepared ‘behind the scenes’ (See: [Step_5]()).
+### Conducting a regional assessment:
+
+Following initial installation, the Toolbox does not require an Internet connection. New data can be incorporated into the file system and goal models can be modified allowing calculation of scores with updated data and visualized with the Toolbox App. However, conducting a regional assessment using GitHub (recommended) does require frequent access to the Internet.
+
+**Requirements**: familiarity with the Toolbox application and proficiency with data management and the coding language **R** (See: [Step_3]()). Proficiency in spatial software such as ArcGIS may also be required, depending on the regional assessment strategy.  (See: [Step_4]() and [Step_5]()).
+
+1. Install the [latest version of R](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/software_for_OHI.md#required-software).
+2. Install the OHI Toolbox by [accessing a regional assessment repository](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#accessing-github-repositories)
+3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3%20Using%20the%20OHI%20Toolbox%20App.md)
+    
+    
