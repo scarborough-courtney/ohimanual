@@ -1,12 +1,4 @@
----
-title: "The Ocean Health Index Toolbox Manual"
-output: 
-  html_document:
-    toc: yes
-    keep_md: yes
-  md_document:
-    variant: markdown_github
----
+# The Ocean Health Index Toolbox Manual
 
 
 
