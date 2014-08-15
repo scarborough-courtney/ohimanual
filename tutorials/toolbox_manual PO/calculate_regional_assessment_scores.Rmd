@@ -1,0 +1,30 @@
+---
+title: "Calculate regional assessment scores"
+output: 
+  html_document:
+    fig_caption: yes
+    keep_md: yes
+    number_sections: no
+    toc: no
+  pdf_document: 
+    fig_caption: yes
+    toc: no
+  md_document:
+    variant: markdown_github
+---
+
+\*\* Note: this page is under development
+
+Note: the Toolbox architecture can help you plan and organize the data you need for a regional assessment; however, 90% of the work in conducting a regional assessment occurs before using the Toolbox. 
+
+## Incorporating decisions
+
+## Updating data layers
+- updated data layers
+- new data layers
+
+## Registering data layers
+Updating layers.csv
+
+## Updating goal models
+
