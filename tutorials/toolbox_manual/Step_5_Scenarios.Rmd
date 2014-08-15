@@ -9,7 +9,7 @@ html_document:
 
 
 ## Scenarios: conducting regional analyses
-After the user if familiar with the Toolbox App functioning and set-up, it is possible to begin modifying, adding or deleting files to explore alternate versions of the global analysis or to tailor the Index for a assessments at a regional scale. In this latter case, it will also be necessary to define regions and regions. This can be done using the commercial software ArcGIS.
+After the user is familiar with the Toolbox App functioning and set-up, it is possible to begin modifying, adding or deleting files to explore alternate versions of the global analysis or to tailor the Index for a assessments at a regional scale. In this latter case, it will also be necessary to define regions and regions. This can be done using the commercial software ArcGIS.
 
 ### Creating a scenario
 To create a new scenario, start by copying the folder scenario.Global2013.www2013 and renaming it in the same parent folder myohi.
