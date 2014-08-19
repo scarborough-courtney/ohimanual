@@ -29,29 +29,29 @@ When your repository has been created, enter the url in to an internet browser (
    > ![](zfig_RStudio_ohi-israel_sk.png)  
   
 4. Launch the Toolbox user interface 
-Run `launch_app_code.R` to launch the Toolbox user interface. Notice that when the user interface opens, it cannot display Output Scores. This is because they have not been calculated yet. 
+Run `launch_app_code.R` to launch the Toolbox user interface. Notice that when the user interface opens, it may not be able to display *Output Scores*. This is because they have not been calculated yet: select *Input Layer* instead to see the map:
+   > ![](zfig_input_layer.png)  
   
-Change variable type to Input Variable to see the map: Inline image 3
-Inline image 4
+5. Navigate through the Toolbox file system
+Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/3_File_system.md#the-ocean-health-index-toolbox-manual). \*\*Note: this page is under active development\*\*
 
-4. Navigate through the Toolbox
+6. To change data presented: 
+Within the folder ohi-[assessment]/[scenario]layers, open a `.csv` file and see that there are fewer regions represented than in the [global **layers** folder](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/3_File_system.md#layers-folders).  
 
-5. To change data presented: 
-Within the folder ohi-[assessment]/[scenario]layers, open a file to see that there are now only 11 regions shown. For example: alien_species_global2013.csv
+This is because we have modified all the files to coincide with the six regions in the `ohi-israel` assessment. All these files have the suffix _global2013.csv because they are just copies of the global assessment, with the same value copied into each regions. For example: *alien_species_global2013.csv* has six region identifiers (`rgn_id`s, consistent with `ohi-israel`'s six regions. 
   
-[image]  
+  > ![](zfig_layers_example.png)  
   
-This is because we have modified all the files to coincide with the 11 regions in the China assessment. All these files have the suffix _global2013.csv because they are just copies of the global assessment, spread across the 11 regions: all the data is the same. 
-One file is specific to china2014: ohi-[assessment]/[scenario]/layers/rgn_labels_[scenario].csv. This file describes the regions.
+At this point, only one file is specific to the assessment: `**ohi-[assessment]/[scenario]/layers/rgn_labels_[scenario].csv**`, which is the file that describes all the regions (in this example, in Hebrew): 
 
-[image]  
+  > ![](zfig_rgn_example.png)  
 
-So, for data layers that you will update, we suggest you copy the *_global2013.csv file, save it as _[scenario].csv, delete the old data and input your new data there. 
+  For the data layers that you will update, we suggest you replace the *\_global2013.csv* file, with a file that has a suffix identifying your scenario. So *alien_species_global2013.csv* would become *alien_species_med2014.csv* or *alien_species_israel2014.csv*. You can keep a copy of the old *_global2013.csv* file in a separate foler or delete it (there is a record of it on the GitHub website ([example](https://github.com/OHI-Science/ohi-israel/blob/master/med2014/layers/alien_species_global2013.csv)). 
 
-Final step: ohi-[assessment]/[scenario]/layers.csv is a directory or a registry of where the Toolbox looks for the data it uses. When you change a filename to _china2014.csv, you will need to update the registry so the 'filename' column so the Toolbox know where to look.
+7. Register the updated layers
+`ohi-[assessment]/[scenario]/layers.csv` is a registry (directory) of where the Toolbox looks for the data it uses. When you change a filename to *_china2014.csv*, you will need to update the registry so the 'filename' column so the Toolbox know where to look.
 
-[image]
+  > ![](zfig_layers_folder.png)  
 
-### More information
 
 
