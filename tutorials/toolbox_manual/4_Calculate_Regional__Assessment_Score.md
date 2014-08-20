@@ -23,23 +23,13 @@ Become familiar with the layers that are included in the global OHI assessment. 
 - updated data layers
 - new data layers
 
-- updating layers.csv
+- update layers.csv
 
-- updating pressures_matrix.csv
+- [update goals.csv]()
 
-- updating resilience_matrix.csv
+- update pressures_matrix.csv
 
-Troubleshooting: this error means you should update your pressures matrix because it expects there to be components that your region does not have: 
-
-```
-Running Setup()...
-Calculating Pressures...
-The following components for NP are not in the aggregation layer np_harvest_product_weight categories (fish_oil, ornamentals, seaweeds): corals, shells, sponges
-Error in data.frame(names(P), P) : 
-  arguments imply differing number of rows: 0, 1
-```  
-  
-  > ![](zfig_tblshoot_pressures.png)  
+- [update resilience_matrix.csv]()
 
 ## Updating goal models
 - functions.r

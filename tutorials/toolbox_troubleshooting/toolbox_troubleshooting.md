@@ -22,7 +22,7 @@ This error means you should update your pressures matrix because it expects ther
 
 ## Calculating Resilience ... 
 
-### 'Error in match(x, table, nomatch = OL) : object \'id_num\' not found'
+### 'Error in match(x, table, nomatch = OL) : object id_num not found'
 
   > ![](xfig_error_resil_mtx.png)  
 
