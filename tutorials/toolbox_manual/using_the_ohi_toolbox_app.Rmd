@@ -34,14 +34,13 @@ The Data page displays the scores for each goal parameter as well as the data la
 
 In the Data Page are drop-down menus from which the user chooses:
 
-![alt text](zfig_output_score_fisheries_score.png)
-
-![alt text](zfig_overview_variable_options.png)
-
 1. **variable type**
     + *Output layer: Shows the calculated score*
     + *Input Layer: Shows the data layer used to calculate the score*
-2. **target** index or goal/sub-goal
+2. **target** 
+    + *Index*
+    + *Goal*
+    + *Sub-goal*
 3. **dimension** (for score variables) or layer (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
@@ -51,8 +50,13 @@ In the Data Page are drop-down menus from which the user chooses:
 > **Output layer > Fisheries > Score**
 shows the final calculated score for the fisheries sub-goal in 2013.
 
-> **Input layer > Fisheries > B/Bmsy estimates > sardina pilchardus > 2011**
-shows the B/Bmsy ratio of sardines in 2011 that was used to calculate the fisheries sub-goal.
+![alt text](zfig_output_score_fisheries_score.png)
+
+
+> **Input layer > Mariculture > Mariculture species harvested**
+shows the different harvested species that were used to calculate the mariculture sub-goal.
+
+![alt text](zfig_input_mariculture_harvested.png)
 
 The options to choose depend on what the user sets as the variable type. 
 
