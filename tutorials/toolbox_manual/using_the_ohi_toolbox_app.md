@@ -3,12 +3,12 @@
 
 
 ## Using the OHI Toolbox App
-The Toolbox App runs through a web browser and has four tabs that lead to different pages: *Data*, *Goals*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Goals*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#goals-page) page summarizes the global data, and weights for various goals can be adjusted.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#calculate-page) will calculate goal scores based on the information in the filesystem (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#report-page) page provides different methods of reporting the data.
+The Toolbox App runs through a web browser and has four page options: *Data*, *Goals*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Goals*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#goals-page) page summarizes the global data, and weights for various goals can be adjusted.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#calculate-page) page will calculate goal scores based on the information in the filesystem (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#report-page) page provides different methods of reporting the data.
 
 ![alt text](zfig_homepage_view.png)
 
 ## Data Page
-The Data tab displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#map), [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#histogram), or [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#table).
+The Data page displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#map), [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#histogram), or [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md#table).
 
   * Data displayed in Map form:
   
@@ -23,9 +23,10 @@ The Data tab displays the scores for each goal parameter as well as the data lay
 ![alt text](zfig_tablepage_view.png)
 
 ### Overview of variable options
-![alt text](zfig_overview_variable_options.png)
 
-Below the Data tab are drop-down menus from which the user chooses:
+In the Data Page are drop-down menus from which the user chooses:
+
+![alt text](zfig_overview_variable_options.png)
 
 1. **variable type**
     + *Output layer: Shows the calculated score*
@@ -68,7 +69,7 @@ If the user selects “Input Layer” as the variable type, they will be able to
     + This option will appear if the layer identified has multiple years
 
 ### Overview of display options
-The default display option for the Data page is Map view; Histogram and Table view are also possible. These options are presented as tabs located above the map. For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
+The default display option for the Data page is Map view; Histogram and Table views are also possible. These options are presented as tabs located above the map. For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
 
 ### Map 
 The map displays data for every region as reported in the 2013 global assessment.
@@ -105,11 +106,11 @@ To change goal weightings, use the mouse to slide the weights across any of the 
 
 ## Calculate Page
 The Calculate page is used to calculate the Index. 
-If the user is only exploring the results from the global assessment and followed the Toolbox App [installation](http://ohi-science.org/pages/install.html) (Step 1a and 2a), then the files responsible for the default 2013 global results, containing the code and data files, are automatically downloaded onto the user’s computer. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
+If the user is only exploring the results from the global assessment and followed the Toolbox App [installation](http://ohi-science.org/pages/install.html), then the files responsible for the default 2013 global results, containing the code and data files, are automatically downloaded onto the user’s computer. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
 
 ![alt text](zfig_calculate_view.png)
 
-The Calculate Page  will also be used for the regional assessment to incorporate new data and/or model equations into the App and calculate the overall Index for different study areas. To do so will require working with the software program R and understanding the framework and files that are operating behind-the-scenes of the App (See: Step_4 and Step_5). In this case, the "Scenario path" will be:
+The Calculate Page  will also be used for the regional assessment to incorporate new data and/or model equations into the App and calculate the overall Index for different study areas. To do so will require working with the software program R and understanding the framework and files that are operating behind-the-scenes of the App. In this case, the "Scenario path" will be:
 
 > ~/github/ohi-[assessment]
 
@@ -122,5 +123,7 @@ The code and data files within the folder are the components required to configu
 
 ## Report Page
 The Report page allows the user to create a report of results as .html and .pdfs files.
+
 ![alt text](zfig_reportpage_view.png)
+
 It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
