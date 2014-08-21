@@ -16,7 +16,7 @@ Following initial installation, the Toolbox does not require an Internet connect
 
 **Requirements**: familiarity with the Toolbox application
 
-1. Install the [latest version of R](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/software_for_OHI.md#required-software).
+1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the [OHI Toolbox](http://ohi-science.org/pages/install.html).
 3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md)
 
@@ -26,7 +26,7 @@ Following initial installation, the Toolbox does not require an Internet connect
 
 **Requirements**: familiarity with the Toolbox application and proficiency with data management and the coding language **R** (See: other [R resources](http://ohi-science.org/pages/learning_r.html)). Proficiency in spatial software such as ArcGIS may also be required, depending on the regional assessment strategy. 
 
-1. Install the [latest version of R](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/software_for_OHI.md#required-software).
+1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the OHI Toolbox by [accessing a regional assessment repository](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#accessing-github-repositories)
 3. Become familiar with the [File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_4_File_system.md)
 4. Calculate [regional assessment scores](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/calculate_regional_assessment_scores.md)
