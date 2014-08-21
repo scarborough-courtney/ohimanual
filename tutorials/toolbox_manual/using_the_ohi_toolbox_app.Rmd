@@ -34,6 +34,8 @@ The Data page displays the scores for each goal parameter as well as the data la
 
 In the Data Page are drop-down menus from which the user chooses:
 
+![alt text](zfig_output_score_fisheries_score.png)
+
 ![alt text](zfig_overview_variable_options.png)
 
 1. **variable type**
