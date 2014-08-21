@@ -18,7 +18,7 @@ Following initial installation, the Toolbox does not require an Internet connect
 
 1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the [OHI Toolbox](http://ohi-science.org/pages/install.html).
-3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_3_Using_the_OHI_Toolbox_App.md)
+3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#the-ocean-health-index-toolbox-manual)
 
 ### Conducting a regional assessment:
 
