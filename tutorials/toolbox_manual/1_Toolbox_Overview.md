@@ -28,6 +28,6 @@ Following initial installation, the Toolbox does not require an Internet connect
 1. Install the [latest version of R](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/required_software/software_for_OHI.md#required-software).
 2. Install the OHI Toolbox by [accessing a regional assessment repository](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#accessing-github-repositories)
 3. Become familiar with the [File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/Step_4_File_system.md)
-4. Calculate [regional assessment scores](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/calculate_regional_assessment_scores.md) (Also see: Scenarios)
+4. Calculate [regional assessment scores](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual%20PO/calculate_regional_assessment_scores.md)
     
     
