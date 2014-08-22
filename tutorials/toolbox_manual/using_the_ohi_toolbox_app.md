@@ -64,7 +64,7 @@ If the user selects ‘Output Score’ as the variable type (which is the defaul
 * Target options (with numeric identifiers):
     + Overall Index
     + Ten goals and eight sub-goals
-
+    
 * Dimension options:
     + Status, trend, future state, pressures, resilience, and score
     
