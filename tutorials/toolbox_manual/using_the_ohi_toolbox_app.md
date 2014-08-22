@@ -8,17 +8,17 @@ The Toolbox App runs through a web browser and has four page options: *Data*, *G
 ![alt text](zfig_homepage_view.png)
 
 ## Data Page
-The Data page displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a: [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#map), [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#histogram), or [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#table).
+The Data page displays the scores for each goal parameter as well as the data layers used to calculate these parameters, and presents the information as a Map, Histogram, or Table.
 
-  * Data displayed in Map form:
+  * Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#map) form:
   
 ![alt text](zfig_datapage_view.png)
 
-  * Data displayed in Histogram form:
+  * Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#histogram) form:
   
 ![alt text](zfig_histogrampage_view.png)
 
-  * Data displayed in Table form:
+  * Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#table) form:
   
 ![alt text](zfig_tablepage_view.png)
 
@@ -30,12 +30,16 @@ In the Data Page are drop-down menus from which the user chooses:
     + *Output layer: Shows the calculated score*
     + *Input Layer: Shows the data layer used to calculate the score*
 2. **target** 
-    + *Index*
-    + *Goal*
-    + *Sub-goal*
+    + *Overall Index*
+    + *Ten Goals*
+    + *Eight Sub-goals*
 3. **dimension** (for score variables) or layer (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
+
+The options to choose depend on what the user sets as the variable type. 
+
+
 
 **For example:**
 
@@ -50,16 +54,21 @@ shows the different harvested species that were used to calculate the maricultur
 
 ![alt text](zfig_input_mariculture_harvested.png)
 
-The options to choose depend on what the user sets as the variable type. 
 
+
+The options to choose depend on what the user sets as the variable type:
+
+#### Output score
 If the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a target and a dimension. The target identifies the scale of reporting (goal/sub-goal) and the dimension indicates the calculation to be reported.
 
 * Target options (with numeric identifiers):
     + Overall Index
     + Ten goals and eight sub-goals
+
 * Dimension options:
     + Status, trend, future state, pressures, resilience, and score
-
+    
+#### Input layer
 If the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
 
 * Target options (with numeric identifiers):
