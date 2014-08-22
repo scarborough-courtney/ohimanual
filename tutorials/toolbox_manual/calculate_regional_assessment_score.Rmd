@@ -31,7 +31,12 @@ It is at this point that it is possible to incorporate all of the decisions your
 Understanding how the Toolbox is structured can help identify what must be modified for a regional assessemt, particularly with data and models.      
 
 ## Modifying and registering data layers
-Become familiar with the layers that are included in the global OHI assessment. Each data layer is saved as a separate *.csv* file in the `layers` folder. 
+The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
+
+![alt text](zfig_layers_location.png)
+
+New data layers will be added, and old layers modified directly in this folder.
+   
   
 - updated data layers
 - new data layers
