@@ -17,6 +17,8 @@ It is at this point that it is possible to incorporate all of the decisions your
     
 Understanding how the Toolbox is structured can help identify what must be modified for a regional assessemt, particularly with data and models.
 
+## Overview
+
 1.  Modifying data layers in the layers folder
 
 2.  Registering the layers in layers.csv
