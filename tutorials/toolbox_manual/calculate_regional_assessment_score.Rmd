@@ -32,13 +32,13 @@ Understanding how the Toolbox is structured can help identify what must be modif
 
 ## Overview
 
-1.  Modifying data layers in the layers folder
+1.  Modifying data layers
 
-2.  Registering the layers in layers.csv
+2.  Registering the layers
 
-3.  Updating goal models in functions.r
+3.  Updating goal models
 
-4.  Register goal inputs in goals.csv
+4.  Register goal inputs 
 
 5.  Check (and update when appropriate) pressures_matrix.csv and resilience_matrix.csv
 
@@ -51,9 +51,19 @@ New data layers will be added, and old layers modified directly in this folder.
 
 ## Registering data layers
 
+![alt text](zfig_layers_csv.png) 
+
 ## Updating goal models
 
+![alt text](zfig_funtions_r.png)
+
 ## Register goal inputs
+
+![alt text](zfig_goals_csv.png)
+
+## Check (and update when appropriate) pressures matrix and resilience matrix
+
+![alt text](zfig_pressures_resilience_matrix.png)
 
 - updated data layers
 - new data layers
