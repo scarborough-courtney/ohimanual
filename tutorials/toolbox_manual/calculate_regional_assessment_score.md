@@ -2,20 +2,11 @@
 
 \*\* **Note: this page is under development**
 
-It is at this point that it is possible to incorporate all of the decisions your team has made into the OHI framework:
+It is at this point possible to incorporate all of the decisions your team has made into the OHI framework: You may want to consult the data discovery and pre-calculation strategy page before starting.
 
-* Goals:
-    + which goals to include? 
-    + how will the goals be weighted?
-* Spatial scale:
-    + what are the regions within the study area?
-* Data:  
-    + which data layers can be updated?
-    + which data layers must be changed to develop new goal models?
-* Goal models:
-    + develop any goal models with the best available data
-    
 Understanding how the Toolbox is structured can help identify what must be modified for a regional assessemt, particularly with data and models.
+
+Also, please learn how to [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/HowTo_FormatDataForToolbox_v1.xlsx) the data prior to starting.
 
 ## Overview
 
@@ -34,13 +25,15 @@ The default data layers to be modified for the regional assessment are located i
 
 ![alt text](zfig_layers_location_1.png)
 
-New data layers will be added, and old layers modified directly in this folder. 
+New data layers will be added, and old layers modified directly in this folder.
 
 Suppose for instance that finer resolution data becomes available for the fisheries sub-goal during a regional evaluation; for example an improved B/Bmsy ratio for the 'Ablennes hians' species that was obtained through formal stock assessments and complex models developed for data-rich fisheries. The old ratios derived from the latest global assessment, say 1.03 in 2008 could then be replaced  with the new ratio, and the new score subsequently calculated.
 
 ![alt text](zfig_bmsy_layer_example_3.png)
 
 ## Registering data layers
+
+Once the new data has been introduced into the appropriate layer file, it has to be registered into the registry shown in the file below.
 
 ![alt text](zfig_layers_csv.png) 
 
@@ -61,9 +54,12 @@ Suppose for instance that finer resolution data becomes available for the fisher
 
 - update layers.csv
 
-- [update goals.csv]()
+- [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
 
-- update pressures_matrix.csv
+- update pressures_matrix.csv. 
 
-- [update resilience_matrix.csv]()
+See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/HowTo_CalculatePressures_v2.xlsx)
 
+- [update resilience_matrix.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_resilience_matrix.md#update-resilience_matrixcsv)
+
+See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/HowTo_CalculateResilience_v2.xlsx) 
