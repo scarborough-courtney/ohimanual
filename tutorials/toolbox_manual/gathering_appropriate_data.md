@@ -1,15 +1,18 @@
 # Gathering Appropriate Data
 
+
 \*\* **Note: this page is under development**
+
+
 
 
 # Data Discovery and Acquisition: How to Gather Appropriate Data for the Ocean Health Index
 
 The Ocean Health Index (OHI) spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. This document describes how to gather appropriate data, and provides examples.
 
-OHI scores by goal are calculated at the scale of the reporting unit, which is called a *region* and then combined using a weighted average to produce the score for the overall area assessed, called a *study area*. 
+OHI scores by goal are calculated at the scale of the reporting unit, which is called a **region** and then combined using a weighted average to produce the score for the overall area assessed, called a **study area**. 
 
-Each data component that is included in the OHI is called a *data layer* because it will be combined with others to create the most complete picture of ocean health. Each data layer is scaled from 0-1 to be combined with others on the same unitless scale. This is true for all data used to model status, trend, pressures, and resilience.
+Each data component that is included in the OHI is called a **data layer** because it will be combined with others to create the most complete picture of ocean health. Each data layer is scaled from 0-1 to be combined with others on the same unitless scale. This is true for all data used to model status, trend, pressures, and resilience.
 
 
 ## Data gathering responsibilities
@@ -34,11 +37,11 @@ It is good practice to keep detailed notes of attributes of each potential data 
 
 Four requirements to remember when investigating (or ‘scoping’) potential data layers are: relevance to ocean health, the reference point, spatial scale, and temporal scale. Each data layer must then be formatted in a specific way to be used by the OHI Toolbox App; (See: [formatting_data_for_toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx).
 
-### 1.  Relevance
+### 1.  Relevance to ocean health
 
 There must be a clear connection between the data and ocean health, and determining this will be closely linked to each goal model.
 
-### 2.  Relevance
+### 2.  Reference point
 
 Each data layer must be scaled to a reference point, and therefore when considering different data sources it is important to identify what a reasonable reference point may be. Ask the following types of questions as you explore data possibilities:
   * Is there a known relationship associated with these data?
@@ -48,7 +51,7 @@ Each data layer must be scaled to a reference point, and therefore when consider
   
 ### 3.  Appropriate spatial scale
 
-Data must be available for every regionwithin the study area.*
+Data must be available for every region within the study area.*
 
 ### 4.  Appropriate temporal scale
 
@@ -80,6 +83,3 @@ The US Endangered Species Act identifies a species list focused on species of co
 
   * Time series data are not long enough to calculate a trend or a reference point (when a historical reference point is most appropriate)
 For the US West Coast, available data measure the current extent of seagrass habitats, however, these only exist for one time point in most areas so could not be used to calculate the trend or set a historical reference point. As these were the best data available for habitat coverage, we built a model to calculate the status and trend of seagrass habitats using other data that were available over time. A reasonable approach was to model the pressures exerted on seagrasses over time as a proxy for seagrass health.
-
-
-
