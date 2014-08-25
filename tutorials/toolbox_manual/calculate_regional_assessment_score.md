@@ -32,9 +32,13 @@ Understanding how the Toolbox is structured can help identify what must be modif
 ## Modifying data layers
 The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
 
-![alt text](zfig_layers_location.png)
+![alt text](zfig_layers_location_1.png)
 
-New data layers will be added, and old layers modified directly in this folder.
+New data layers will be added, and old layers modified directly in this folder. 
+
+Suppose for instance that finer resolution data becomes available for the fisheries sub-goal during a regional evaluation; for example an improved B/Bmsy ratio for the 'Ablennes hians' species that was obtained through formal stock assessments and complex models developed for data-rich fisheries.
+
+![alt text](zfig_bmsy_layer_example_3.png)
 
 ## Registering data layers
 
