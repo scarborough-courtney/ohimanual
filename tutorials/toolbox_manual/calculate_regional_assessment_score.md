@@ -6,7 +6,7 @@ It is at this point possible to incorporate all of the decisions your team has m
 
 Understanding how the Toolbox is structured can help identify what must be modified for a regional assessemt, particularly with data and models.
 
-Also, please learn how to [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/HowTo_FormatDataForToolbox_v1.xlsx) the data prior to starting.
+Also, please learn how to [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data prior to starting.
 
 ## Overview
 
@@ -57,9 +57,7 @@ Once the new data has been introduced into the appropriate layer file, it has to
 - [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
 
 - update pressures_matrix.csv. 
-
-See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/HowTo_CalculatePressures_v2.xlsx)
+See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx)
 
 - [update resilience_matrix.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_resilience_matrix.md#update-resilience_matrixcsv)
-
-See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/HowTo_CalculateResilience_v2.xlsx) 
+See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) 
