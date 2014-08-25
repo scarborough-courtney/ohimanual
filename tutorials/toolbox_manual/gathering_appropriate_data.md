@@ -4,6 +4,17 @@
 \*\* **Note: this page is under development**
 
 
+* Goals:
+    + which goals to include? 
+    + how will the goals be weighted?
+* Spatial scale:
+    + what are the regions within the study area?
+* Data:  
+    + which data layers can be updated?
+    + which data layers must be changed to develop new goal models?
+* Goal models:
+    + develop any goal models with the best available data
+    
 
 
 # Data Discovery and Acquisition: How to Gather Appropriate Data for the Ocean Health Index
