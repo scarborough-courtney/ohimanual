@@ -2,9 +2,9 @@
 
 \*\* **Note: this page is under development**
 
-It is at this point possible to incorporate all of the decisions your team has made into the OHI framework. 
+It is at this point possible to incorporate all of the decisions your team has made into the OHI framework.
 
-You may want to consult the gathering data [page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) before starting. Also, please learn how to [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data prior to starting.
+You may want to learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data prior to starting.
 
 In general, understanding how the Toolbox is structured can help identify what must be modified for a regional assessemt, particularly with data and models.
 
