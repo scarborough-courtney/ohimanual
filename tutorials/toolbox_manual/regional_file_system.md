@@ -3,7 +3,7 @@
 
 
 ## Regional Evaluation File System
-Within the github folder is a folder called ohi-[country] (for example: ohi-china for the OHI China regional) which is the repository created by the OHI team from which the regional evaluation will be conducted.
+Within the github folder is a folder called ohi-[assessment] (for example: ohi-china for the OHI China regional) which is the repository created by the OHI team from which the regional evaluation will be conducted.
 
 ![alt text](zfig_assessment_location.png)
 
