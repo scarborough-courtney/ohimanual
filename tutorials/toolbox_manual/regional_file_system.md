@@ -3,13 +3,15 @@
 
 
 ## Regional Evaluation File System
-Within the github folder is a folder called ohi-[assessment] (for example: ohi-china for the OHI China regional) which is the repository created by the OHI team from which the regional evaluation will be conducted.
+Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China have a repository called ohi-china  from which the regional evaluation will be conducted.
 
 ![alt text](zfig_assessment_location.png)
 
 *OHI Toolbox file systems on a Mac.*
 
 In this case, ohi-china is the **assessment**, and china2014 is the **scenario** that contains all the data, functions and other files required to calculate the Ocean Health Index. The default data and models are from the global 2013 analysis. To calculate the Index for a different region or with new data or models, the user will modify the files within this folder.
+
+The ohi-china assessment will subsequently be used to illustrate how to perform a regional evaluation. 
 
 ### china2014
 Each of the elements (files and folders) within github/ohi-china/china2014 are critical to the proper functioning of the Toolbox App.
