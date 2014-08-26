@@ -15,7 +15,7 @@ Within the github folder is a sub-folder called ohi-[region-name] which is the r
 
 ![alt text](zfig_assessment_location.png)
 
-*OHI Toolbox file systems on a Mac.*
+>> *OHI Toolbox file systems on a Mac.*
 
 In this case, ohi-china is the **assessment**, and china2014 is the **scenario** that contains all the data, functions and other files required to calculate the Ocean Health Index. The default data and models are from the global 2013 analysis. To calculate the Index for a different region or with new data or models, the user will modify the files within this folder.
 

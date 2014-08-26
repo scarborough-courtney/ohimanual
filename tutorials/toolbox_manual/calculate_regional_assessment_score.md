@@ -10,17 +10,21 @@ In general, understanding how the Toolbox is structured can help identify what m
 
 ## Overview
 
-  1.  Modifying data layers
+  1.  Modifying existing data layers
+  
+  2.  Creating new data layers
 
-  2.  Registering the layers
+  3.  Registering the layers
 
-  3.  Updating goal models
+  4.  Updating goal models
 
-  4.  Register goal inputs 
+  5.  Register goal inputs 
 
-  5.  Check (and update when appropriate) pressures_matrix.csv and resilience_matrix.csv
+  6.  Check (and update when appropriate) pressures_matrix.csv and resilience_matrix.csv
 
-## Modifying data layers
+![alt text](zfig_china2014.png)
+
+## Modifying existing data layers
 The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
 
 ![alt text](zfig_layers_location_1.png)
@@ -31,11 +35,22 @@ Suppose for instance that finer resolution data becomes available for the fisher
 
 ![alt text](zfig_bmsy_layer_example_3.png)
 
-## Registering data layers
+## Creating new data layers
+Suppose however that the methodology for a particular data layer needs to be modified, rather than data points just being updated as in the example above with the B/Bmsy ratio. In that case, a new data layer must be created, registered, and then updated the relevant goal models and pressure/resilience matrices.
 
-Once the new data has been introduced into the appropriate layer file, it has to be registered into the registry shown in the file below.
+To create a new data layer, simply create a new csv file in the layers folder, add the relevant data points, and save the file.  
 
-![alt text](zfig_layers_csv.png) 
+![alt text](zfig_new_data_layer.png)
+
+## Registering new data layers
+Once the new data has been introduced into the appropriate layer file, it has to be registered in the registry shown in the file below:
+
+![alt text](zfig_layers_csv.png)
+
+New rows need to be added in the registry, and the newly created data layer formatted and registered as illustrated below, with the column-G entry matching the name of the csv file created previously: 
+
+![alt text](zfig_new_layer.png)
+
 
 ## Updating goal models
 
