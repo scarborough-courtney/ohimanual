@@ -72,14 +72,20 @@ Add a new row in the registry for the new data layer (example is highlighted in 
  + **fld_value:** indicates the units along with the units column.
  + **units:** importantly describes which field (column header) is the value from the data layer.
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
- + **fld_id_num:** XXXXXXXXXXXXX.
+ + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
 ## Updating goal models
-Adding and registering a new data layer as described previously, and subsequently running the Toolbox App will allow R to read the layer but will not incorporate the new data into the goal calculations. It will thus now be necessary to update the models and goals for which the new data layers were created.
+Running the Toolbox App once the new data layer is created and registered will allow R to read the new layer. The new data however will not be incorporated into the goal calculations unless the goals and models are themselves modified to include the new variable. It will therefore now be necessary to update the models and goals for which the new data layers were created. 
 
-functions.R: contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in layers.csv.
+To do so, open the `functions.R` file in RStudio, which contains the functions for each goal and sub-goal model and has a navigation pane that can be used to navigate around the page:
 
-![alt text](zfig_funtions_r.png)
+![alt text](zfig_navigation_functions.png)
+
+If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
+
+![alt text](zfig_functions_explained.png)
+
+In other words, changes in *# cast data* allows the models to call on new layers, whereas changes in *# model* allows you to change the model.  
 
 ## Register goal inputs
 
