@@ -45,11 +45,11 @@ Suppose however that the methodology for a particular data layer needs to be mod
   * In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
 
 ## Registering new data layers
-Once the new data has been introduced into the appropriate layer file, it has to be registered in the registry shown in the file below:
+Once the new data has been introduced into the appropriate layer file, it has to be registered in the layers.csv registry below:
 
 ![alt text](zfig_layers_csv.png)
 
-New rows need to be added in the registry, and the newly created data layer registered as illustrated below, with the column-G entry matching the name of the csv file created previously:
+New rows need to be added in the registry, and the newly created data layer registered as illustrated below:
 
  + **targets:** indicates the goal/dimension that any given data layer relates to (each row is a layer). Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately
  + **layer:** is the identifying name of the data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv. This is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
@@ -62,6 +62,7 @@ New rows need to be added in the registry, and the newly created data layer regi
  
 ![alt text](zfig_new_layer.png)
 
+  * Note in particular that the column-G entry needs to match the name of the csv file created previously.
 
 ## Updating goal models
 
