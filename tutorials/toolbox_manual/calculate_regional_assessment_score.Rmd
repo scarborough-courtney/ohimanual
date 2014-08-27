@@ -55,12 +55,14 @@ To create a new data layer, simply create a new csv file in the layers folder, a
 
 ![alt text](zfig_new_data_layer.png)
 
+In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
+
 ## Registering new data layers
 Once the new data has been introduced into the appropriate layer file, it has to be registered in the registry shown in the file below:
 
 ![alt text](zfig_layers_csv.png)
 
-New rows need to be added in the registry, and the newly created data layer formatted and registered as illustrated below, with the column-G entry matching the name of the csv file created previously: 
+New rows need to be added in the registry, and the newly created data layer registered as illustrated below, with the column-G entry matching the name of the csv file created previously: 
 
 ![alt text](zfig_new_layer.png)
 
