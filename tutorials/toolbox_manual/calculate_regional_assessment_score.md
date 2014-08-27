@@ -10,17 +10,17 @@ In general, understanding how the Toolbox is structured can help identify what m
 
 ## Overview
 
-  1.  Modifying existing data layers
+  1.  [Modifying existing data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#modifying-existing-data-layers)
   
-  2.  Creating new data layers
+  2.  [Creating new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers)
 
-  3.  Registering the layers
+  3.  [Registering the layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-new-data-layers)
 
-  4.  Updating goal models
+  4.  [Updating goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-goal-models)
 
-  5.  Register goal inputs 
+  5.  [Registering goal inputs](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#register-goal-inputs) 
 
-  6.  Check (and update when appropriate) pressures_matrix.csv and resilience_matrix.csv
+  6.  [Updating pressures and resilience matrix
 
 
 ## Modifying existing data layers
@@ -72,9 +72,9 @@ If the AO (Artisanal Opportunities) option is selected for example, the user is 
 
 ![alt text](zfig_functions_explained.png)
 
-In other words, changes in *# cast data* allows the models to call on new layers, whereas changes in *# model* allows you to change the model.  
+In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
-## Register goal inputs
+## Registering goal inputs
 
 ![alt text](zfig_goals_csv.png)
 
@@ -82,12 +82,14 @@ goals.csv: is a list of goals and sub-goals and their weights used to calculate 
 
 - [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
 
-## Check (and update when appropriate) pressures matrix and resilience matrix
+## Updating pressures and resilience matrix
 
 ![alt text](zfig_pressures_resilience_matrix.png)
 
 pressures_matrix.csv: describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion. Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details.
+
 resilience_matrix.csv: describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details.
+
 resilience_weights.csv: describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
 
