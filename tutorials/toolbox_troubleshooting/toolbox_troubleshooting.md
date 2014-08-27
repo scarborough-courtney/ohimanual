@@ -3,6 +3,26 @@
 The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips.  
 (\*\* note: this page is under development).
 
+
+## Loading RWorkspace on Restart
+
+When you restart your R Session (Session > Restart R on a Mac), if you see that it is trying to load `ohicore`, it may give you an error:
+
+  > ![](zfig_ohicore_load.png)
+  
+You do not want it to load `ohicore` or to save anything in your workspace. You will need to change the default setting from you **.Rproj** file. Steps to do this:
+
+1. Go to Project Options, either in the pull-down menu or by double-clicking the .Rproj file:
+   
+
+  > ![](zfig_proj_op.png)
+  
+  > ![](zfig_proj_op2.png)
+  
+2. Change all options to **No:**
+    
+  > ![](zfig_proj_op3.png)
+    
 ## Calculating Pressures...
 
 ### 'The following components for [goal] are not in the aggregation layer [layer]...'
@@ -20,10 +40,17 @@ Error in data.frame(names(P), P) :
   
 This error means you should update your pressures matrix because it expects there to be components that your region does not have.
 
+### 'Error in matrix...'
+
+Example: 
+  > ![](zfig_tblshoot_pressures.png)  
+  
+This error means there is an empty column in `pressures_matrix.csv`, and the Toolbox cannot handle empty columns.
+
 ## Calculating Resilience ... 
 
 ### 'Error in match(x, table, nomatch = OL) : object id_num not found'
 
-  > ![](xfig_error_resil_mtx.png)  
+  > ![](zfig_error_resil_mtx.png)  
 
 This error means you should check that there is at least one entry for each goal (for each row) in `resilience_matrix.csv`.
