@@ -35,7 +35,6 @@ In general, understanding how the Toolbox is structured can help identify what m
 
   6.  Check (and update when appropriate) pressures_matrix.csv and resilience_matrix.csv
 
-![alt text](zfig_china2014.png)
 
 ## Modifying existing data layers
 The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
@@ -67,16 +66,13 @@ Add a new row in the registry for the new data layer (example is highlighted in 
 ![alt text](zfig_new_layer.png)
 
  + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately
- + **layer:** is the identifying name of the data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv. This is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **name:** is a longer title of the data layer; this is displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **description:** is further description of the data layer; this is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **citation:** is for book-keeping purposes, indicating where to find further information about the layer from the supplemental information of the 2012 Nature publication.
- + **units:** importantly describes which field (column header) is the value from the data layer.
- + **filename:** is the .csv filename that holds the data layer information, and is located in the folder called ‘layers’.
+ + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
+ + **name:** Add a longer title for the data layer.
+ + **description:** Add a longer description of the new data layer.
  + **fld_value:** indicates the units along with the units column.
- 
-
-  * Note in particular that the column-G entry needs to match the name of the csv file created previously.
+ + **units:** importantly describes which field (column header) is the value from the data layer.
+ + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
+ + **fld_id_num:** XXXXXXXXXXXXX.
 
 ## Updating goal models
 
