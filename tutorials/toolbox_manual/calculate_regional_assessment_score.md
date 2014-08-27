@@ -75,12 +75,15 @@ If the AO (Artisanal Opportunities) option is selected for example, the user is 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
 ## Registering goal inputs
+goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
 
 ![alt text](zfig_goals_csv.png)
 
-goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. Changing goal weights will be done here by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0. goals.csv also indicates the arguments passed to functions.R. These are indicated by two columns: preindex_function (functions for all goals that do not have sub-goals, and functions for all sub-goals) and postindex_function (functions for goals with sub-goals).
+Changing goal weights will be done here by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0. goals.csv also indicates the arguments passed to functions.R. These are indicated by two columns: preindex_function (functions for all goals that do not have sub-goals, and functions for all sub-goals) and postindex_function (functions for goals with sub-goals).
 
-- [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
+![alt text](zfig_registering_goals.png)
+
+- Also, see: [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
 
 ## Updating pressures and resilience matrix
 
@@ -91,7 +94,6 @@ pressures_matrix.csv: describes the layers (‘layers’ column in layers.csv) n
 resilience_matrix.csv: describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details.
 
 resilience_weights.csv: describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
-
 
 - update pressures_matrix.csv. 
 See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx)
