@@ -38,11 +38,11 @@ Suppose for instance that finer resolution data becomes available for the fisher
 ## Creating new data layers
 Suppose however that the methodology for a particular data layer needs to be modified, rather than data points just being updated as in the example above with the B/Bmsy ratio. In that case, a new data layer must be created, registered, and then updated the relevant goal models and pressure/resilience matrices.
 
-To create a new data layer, simply create a new csv file in the layers folder, add the relevant data points, and save the file.  
+  * To create a new data layer, simply create a new csv file in the layers folder, add the relevant data points, and save the file.  
 
 ![alt text](zfig_new_data_layer.png)
 
-In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
+  * In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
 
 ## Registering new data layers
 Once the new data has been introduced into the appropriate layer file, it has to be registered in the registry shown in the file below:
