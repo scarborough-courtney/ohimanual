@@ -6,7 +6,7 @@ It is at this point possible to incorporate all of the decisions your team has m
 
 You may want to learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data prior to starting.
 
-In general, understanding how the Toolbox is structured can help identify what must be modified for a regional assessemt, particularly with data and models.
+In general, understanding how the Toolbox is structured can help identify what must be modified for a regional assessement, particularly with data and models.
 
 ## Overview
 
@@ -45,13 +45,15 @@ Suppose however that the methodology for a particular data layer needs to be mod
   * In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
 
 ## Registering new data layers
-Once the new data has been introduced into the appropriate layer file, it has to be registered in the layers.csv registry below:
+Once the new data has been introduced into the appropriate layer file, it has to be registered as a new row in the layers.csv registry, which manages all the data that the Toolbox App uses:
 
 ![alt text](zfig_layers_csv.png)
 
-New rows need to be added in the registry, and the newly created data layer registered as illustrated below:
+Add a new row in the registry for the new data layer (example is highlighted in yellow), and fill in the first eight columns (columns A-H) as described below; other columns are generated later by the Toolbox App as it confirms data formatting and content.  
 
- + **targets:** indicates the goal/dimension that any given data layer relates to (each row is a layer). Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately
+![alt text](zfig_new_layer.png)
+
+ + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately
  + **layer:** is the identifying name of the data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv. This is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
  + **name:** is a longer title of the data layer; this is displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
  + **description:** is further description of the data layer; this is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
@@ -60,7 +62,6 @@ New rows need to be added in the registry, and the newly created data layer regi
  + **filename:** is the .csv filename that holds the data layer information, and is located in the folder called ‘layers’.
  + **fld_value:** indicates the units along with the units column.
  
-![alt text](zfig_new_layer.png)
 
   * Note in particular that the column-G entry needs to match the name of the csv file created previously.
 
