@@ -20,7 +20,7 @@ In general, understanding how the Toolbox is structured can help identify what m
 
   5.  [Registering goal inputs](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#register-goal-inputs) 
 
-  6.  [Updating pressures and resilience matrix
+  6.  [Updating pressures and resilience matrix](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-pressures-and-resilience-matrix)
 
 
 ## Modifying existing data layers
