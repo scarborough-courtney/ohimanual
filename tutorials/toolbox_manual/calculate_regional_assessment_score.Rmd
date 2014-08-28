@@ -100,7 +100,7 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 ## Updating pressures and resilience matrix
 
-Updating (adding, modifying, and/or removing) pressures can be done in the relevant folders shown below.
+Updating (adding, modifying, and/or removing) pressures and resilience can be done in the relevant folders shown below.
 
 ![alt text](zfig_pressures_resilience_matrix.png)
 
@@ -116,20 +116,11 @@ Suppose for instance that a research group wished to include additional pressure
 
 ![alt text](zfig_register_pressure.png)
 
-Then register the new layer in the pressure_matrix.csv and indicate how much the pressure affects the respective goals (3=high pressure, 1=low pressure)
+Then register the new layer in the pressure_matrix.csv and indicate how much the pressure affects the respective goals based on scientific literature and expert opinion (3=high pressure, 1=low pressure).
 
 ![alt text](zfig_register_new_pressures.png)
 
-
-
 See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx) for more details about calculating pressures.
 
-
-
-See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
-
-
-
-- [update resilience_matrix.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_resilience_matrix.md#update-resilience_matrixcsv)
-
+Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
 
