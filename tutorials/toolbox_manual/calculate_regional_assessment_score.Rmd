@@ -128,3 +128,4 @@ See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/
 
 Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
 
+Once the changes have been added and regisered appropriately, save all changes (r.functions, )
