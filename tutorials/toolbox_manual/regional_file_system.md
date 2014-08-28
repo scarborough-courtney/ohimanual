@@ -3,18 +3,21 @@
 
 
 ## Regional Evaluation File System
-Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China have a repository called ohi-china  from which the regional evaluation will be conducted.
+Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China will have a repository called ohi-china from which the regional evaluation will be conducted.
 
 ![alt text](zfig_assessment_location.png)
 
->> *OHI Toolbox file systems on a Mac.*
+>> *OHI Toolbox regional file systems on a Mac.*
 
 In this case, ohi-china is the **assessment**, and china2014 is the **scenario** that contains all the data, functions and other files required to calculate the Ocean Health Index. The default data and models are from the global 2013 analysis. To calculate the Index for a different region or with new data or models, the user will modify the files within this folder.
 
 The ohi-china assessment will subsequently be used to illustrate how to perform a regional evaluation. 
 
 ### china2014
-Each of the elements (files and folders) within github/ohi-china/china2014 are critical to the proper functioning of the Toolbox App.
+Each of the elements (files and folders) within github/ohi-china/china2014 are critical to the proper functioning of the Toolbox App (See file and folder descriptions below)
+
+![alt text](zfig_china2014_descr.png)
+
 
 ### launchApp.command (for Mac), launchApp.bat (for Windows)
 After the china2014 folder has been installed on the user’s computer, further launches of the App can be done without the software program R. Instead, PC users can double-click the 'launchApp.bat' file and Mac users can double-click the ‘launchApp.command’ file.  It is also possible to relaunch the App using the instructions above in ‘Launching the Toolbox App’.
