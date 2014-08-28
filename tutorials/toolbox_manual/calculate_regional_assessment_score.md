@@ -87,6 +87,9 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 ## Updating pressures and resilience matrix
 
+Suppose you want to include additional pressures that were excluded from the previous analysis, such as the effects of desalination operations. To do so, create and register a new layer (for example: po_desal_china2014) as described previously.
+
+
 ![alt text](zfig_pressures_resilience_matrix.png)
 
 ### pressures_matrix.csv: 
