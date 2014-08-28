@@ -111,7 +111,7 @@ Updating (adding, modifying, and/or removing) pressures and resilience can be do
 - **resilience_weights.csv:** Describes the weight of various resilience layers that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
 
-### Desalination pressure example
+### Example: Adding 'desalination' pressure
 Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers).
 
 ![alt text](zfig_register_pressure.png)
@@ -119,6 +119,10 @@ Suppose for instance that a research group wished to include additional pressure
 Then register the new layer in the pressure_matrix.csv and indicate how much the pressure affects the respective goals based on scientific literature and expert opinion (3=high pressure, 1=low pressure).
 
 ![alt text](zfig_register_new_pressures.png)
+
+Notice that the pressures are grouped by category, indicated by a pre-fix (for example: po_ for pollution). Each category is calculated in a different way, so it is important to register the new pressure with the appropriate category pre-fix.
+
+![alt text](zfig_pressure_categories.png)
 
 See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx) for more details about calculating pressures.
 
