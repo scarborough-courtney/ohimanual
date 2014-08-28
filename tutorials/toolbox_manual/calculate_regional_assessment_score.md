@@ -87,23 +87,35 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 ## Updating pressures and resilience matrix
 
-Suppose you want to include additional pressures that were excluded from the previous analysis, such as the effects of desalination operations. To do so, create and register a new layer (for example: po_desal_china2014) as described previously.
-
+Updating (adding, modifying, and/or removing) pressures can be done in the relevant folders shown below.
 
 ![alt text](zfig_pressures_resilience_matrix.png)
 
-### pressures_matrix.csv: 
-Describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion. 
+- **pressures_matrix.csv:** Describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+
+- **resilience_matrix.csv:** Describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. for more details.
+
+- **resilience_weights.csv:** Describes the weight of various resilience layers that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+
+
+### Desalination pressure example
+Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers).
+
+![alt text](zfig_register_pressure.png)
+
+Then register the new layer in the pressure_matrix.csv and indicate how much the pressure affects the respective goals (3=high pressure, 1=low pressure)
+
+![alt text](zfig_register_new_pressures.png)
+
+
 
 See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx) for more details about calculating pressures.
 
-### resilience_matrix.csv: 
-Describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. for more details.
+
 
 See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
 
-### resilience_weights.csv: 
-Describes the weight of various resilience layers that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+
 
 - [update resilience_matrix.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_resilience_matrix.md#update-resilience_matrixcsv)
 
