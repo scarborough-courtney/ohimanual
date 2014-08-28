@@ -102,14 +102,19 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 ![alt text](zfig_pressures_resilience_matrix.png)
 
-pressures_matrix.csv: describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion. Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details.
+### pressures_matrix.csv: 
+Describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion. 
 
-resilience_matrix.csv: describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details.
+See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx) for more details about calculating pressures.
 
-resilience_weights.csv: describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+### resilience_matrix.csv: 
+Describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. for more details.
 
-- update pressures_matrix.csv. 
-See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx)
+See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
+
+### resilience_weights.csv: 
+Describes the weight of various resilience layers that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
 - [update resilience_matrix.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_resilience_matrix.md#update-resilience_matrixcsv)
-See: [excel spreadsheet](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) 
+
+
