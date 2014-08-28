@@ -43,18 +43,16 @@ The first eight columns (columns A-H) contain information inputted by the user; 
 ### layers folders
 The layers folder contains every data layer as an individual .csv file. The names of the .csv files within the layers folder correspond to those listed in the filename field of the layers.csv file described above.
 
-![alt text](zfig_layers_folder_location.png)
+![alt text](zfig_layers_location_1.png)
 
-Note that each file has a specific format that the Toolbox expects and requires in order to run properly. Comma separated value files (.csv files) can be opened with text editor software, or will open by default by Microsoft Excel (if it is installed). Below is an example of proper data formatting using the file cc_acid_2013.csv. Note the unique region identifier (rgn_id) with a single associated pressure_score, and that the data are presented in ‘long format’ with minimal columns. Please see HowTo_FormatDataForToolbox (available from ohi-science.org) for further details and instructions on data formatting requirements.
+Note that each file has a specific format that the Toolbox expects and requires in order to run properly. Comma separated value files (.csv files) can be opened with text editor software, or will open by default by Microsoft Excel (if it is installed). Below is an example of proper data formatting using the file cc_acid_2013.csv. Note the unique region identifier (rgn_id) with a single associated pressure_score, and that the data are presented in ‘long format’ with minimal columns. Please see [formatting_data_for_toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) for further details and instructions on data formatting requirements.
 
 ![alt text](zfig_cc_acid_format_example.png)
 
 ### scenario.R
-scenario.R is a script in R that identifies which data layers and models should be used to calculate OHI scores using the Toolbox App. This combination of data layers, models, and all supporting files are called a ‘scenario’. Currently, the default scenario is using Global 2013 assessment files, and is the folder within ohi-global, called eez2013. When conducting regional assessments, the best way to start is by copying the folder eez2013, renaming it to indicate the desired study area, and changing the working directory within the scenario.R file to identify that folder. The name of the folder should begin with ‘scenario.’, and indentify the year of study. For example, if conducting a California regional assessment, the folder could be named scenario.California2014, and has all the contents identical to the original eez2013 folder, and in scenario.R, the third line would be changed to read:
+scenario.R is a script in R that identifies which data layers and models should be used to calculate OHI scores using the Toolbox App. This combination of data layers, models, and all supporting files are called a ‘scenario’. Currently, the default scenario is using Global 2013 assessment files, and is the folder within ohi-global, called eez2013. 
 
-> Users/jstewart/ohi-california
-
-![alt text](zfig_file_system_scenario.png)
+When conducting regional assessments, the best way to start is by copying the folder eez2013, renaming it to indicate the desired study area, and changing the working directory within the scenario.R file to identify that folder. The name of the folder should begin with ‘scenario.’, and indentify the year of study. For example, if conducting a California regional assessment, the folder could be named scenario.California2014, and has all the contents identical to the original eez2013 folder
 
 ### scores.csv
 scores.csv is a record of the calculated scores for the assessment (Global 2013 scores). Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each reporting region, and are presented in ‘long’ format. 
@@ -71,4 +69,4 @@ goals.csv also indicates the arguments passed to functions.R. These are indicate
  + **resilience_weights.csv:** describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
 ### spatial folder 
-The spatial folder contains components of shapefiles to delineate the 2013 OHI reporting regions that are created and read by spatial analysis software like ESRI’s ArcGIS. When conducting regional assessments, the files within this folder will need to be replaced by new files created for the study area and regions. See an example below in ‘Step_5 Scenarios’.
+The spatial folder contains components of shapefiles to delineate the 2013 OHI reporting regions that are created and read by spatial analysis software like ESRI’s ArcGIS. When conducting regional assessments, the files within this folder will need to be replaced by new files created for the study area and regions.
