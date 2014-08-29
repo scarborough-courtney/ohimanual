@@ -89,14 +89,13 @@ All changes within this folder will be tracked by GitHub when you [commit](https
 
 ## Committing and pushing changes locally
 
-Committing and pushing changes can be done using either RStudio or the Github App
+Committing and pushing changes can be done using [RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#using-rstudio-to-commit-changes) or the [Github App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#using-github-app-to-push-commits-to-github-ohi-assessment-repository)
 
-### Using RStudio to commit changes
+### Using RStudio to commit and push changes to GitHub ohi-[assessment] repository
 Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](zfig_RStudio_sk1.png)
 
-### Using RStudio to push commits to GitHub ohi-[assessment] repository
 When you modify or add a file, the file will appear in the 'Git' window. In the example below, the file `test.R` was created. 
 
 1. Clicking the 'Staged' box and the 'Commit' button opens a new window where you can review changes. 
@@ -105,8 +104,7 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
 3. Click 'Commit' to commit the changes and the commit message
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. See [Keeping synchronized](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#keeping-syncronized). 
-5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.  
-  
+5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.
   
 > ![](zfig_commit_sk.png)
 
@@ -114,7 +112,6 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
 ![alt text](zfig_github_app.png)
-
 
 
 ## Keeping syncronized
