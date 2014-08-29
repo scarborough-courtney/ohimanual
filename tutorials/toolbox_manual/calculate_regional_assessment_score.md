@@ -19,8 +19,8 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
   3.  [Registering the layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-goal-inputs)
 
   4.  [Updating goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-goal-models)
-    * Example: [Modifying 'Artisanal Opportunities' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-modifying-ao-model)
-    * Example: [Removing 'Carbon Storage' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-removing-cs-goal)
+    * Example: [Modifying 'Artisanal Opportunities' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-modifying-artisanal-opportunities-model)
+    * Example: [Removing 'Carbon Storage' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-removing-carbon-storage-goal)
     
   5.  [Registering goal inputs](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-goal-inputs)
   
