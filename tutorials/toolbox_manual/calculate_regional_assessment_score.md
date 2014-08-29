@@ -4,9 +4,7 @@
 
 It is at this point possible to incorporate all of the decisions your team has made into the OHI framework.
 
-You may want to learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data prior to starting.
-
-In general, understanding how the Toolbox is structured can help identify what must be modified for a regional assessement, particularly with data and models.
+First, you must learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx). Having a good understanding of how the Toolbox is structured can help identify what must be modified for a regional assessement, particularly with data and models.
 
 ## Overview
 
@@ -23,6 +21,8 @@ In general, understanding how the Toolbox is structured can help identify what m
   6.  [Updating pressures and resilience matrix](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-pressures-and-resilience-matrix)
 
 
+
+
 ## Modifying existing data layers
 The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
 
@@ -34,6 +34,8 @@ Suppose for instance that finer resolution data becomes available for the fisher
 
 ![alt text](zfig_bmsy_layer_example_3.png)
 
+
+
 ## Creating new data layers
 Suppose however that the methodology for a particular data layer needs to be modified, rather than data points just being updated as in the example above with the B/Bmsy ratio. In that case, a new data layer must be created, registered, and then updated the relevant goal models and pressure/resilience matrices.
 
@@ -42,6 +44,8 @@ Suppose however that the methodology for a particular data layer needs to be mod
 ![alt text](zfig_new_data_layer.png)
 
   * In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
+
+
 
 ## Registering new data layers
 Once the new data has been introduced into the appropriate layer file, it has to be registered as a new row in the layers.csv registry, which manages all the data that the Toolbox App uses:
@@ -61,6 +65,8 @@ Add a new row in the registry for the new data layer (example is highlighted in 
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
+
+
 ## Updating goal models
 Running the Toolbox App once the new data layer is created and registered will allow R to read the new layer. The new data however will not be incorporated into the goal calculations unless the goals and models are themselves modified to include the new variable. It will therefore now be necessary to update the models and goals for which the new data layers were created. 
 
@@ -74,6 +80,8 @@ If the AO (Artisanal Opportunities) option is selected for example, the user is 
 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
+
+
 ## Registering goal inputs
 goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
 
@@ -84,6 +92,8 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 ![alt text](zfig_registering_goals.png)
 
 - Also, see: [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
+
+
 
 ## Updating pressures and resilience matrix
 
@@ -96,6 +106,7 @@ Updating (adding, modifying, and/or removing) pressures and resilience can be do
 - **resilience_matrix.csv:** Describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. for more details.
 
 - **resilience_weights.csv:** Describes the weight of various resilience layers that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+
 
 
 ### Example: Adding 'desalination' pressure
