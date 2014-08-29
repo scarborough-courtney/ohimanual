@@ -21,8 +21,6 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
 
 
 
-
-
 # Overview
 
   1.  [Modifying existing data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#modifying-existing-data-layers)
@@ -55,9 +53,7 @@ Suppose for instance that finer resolution data becomes available for the fisher
 
 
 
-
-
-## Creating new data layers
+# Creating new data layers
 Suppose however that the methodology for a particular data layer needs to be modified, rather than data points just being updated as in the example above with the B/Bmsy ratio. In that case, a new data layer must be created, registered, and then updated the relevant goal models and pressure/resilience matrices.
 
   * To create a new data layer, simply create a new csv file in the layers folder, add the relevant data points, and save the file.  
@@ -68,9 +64,7 @@ Suppose however that the methodology for a particular data layer needs to be mod
 
 
 
-
-
-## Registering new data layers
+# Registering new data layers
 Once the new data has been introduced into the appropriate layer file, it has to be registered as a new row in the layers.csv registry, which manages all the data that the Toolbox App uses:
 
 ![alt text](zfig_layers_csv.png)
@@ -90,9 +84,7 @@ Add a new row in the registry for the new data layer (example is highlighted in 
 
 
 
-
-
-## Updating goal models
+# Updating goal models
 Running the Toolbox App once the new data layer is created and registered will allow R to read the new layer. The new data however will not be incorporated into the goal calculations unless the goals and models are themselves modified to include the new variable. It will therefore now be necessary to update the models and goals for which the new data layers were created. 
 
 To do so, open the `functions.R` file in RStudio, which contains the functions for each goal and sub-goal model and has a navigation pane that can be used to navigate around the page:
@@ -101,13 +93,15 @@ To do so, open the `functions.R` file in RStudio, which contains the functions f
 
 If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
 
-### Example: Modifying 'Artisanal Opportunities' model
+
+## Example: Modifying 'Artisanal Opportunities' model
 
 ![alt text](zfig_functions_explained.png)
 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
-### Example: Removing 'Carbon Storage' goal
+
+## Example: Removing 'Carbon Storage' goal
 
 In order to remove the CS goal from OHI for example, the following files need to be removed because the latter goal is referenced by these 4-files:
 
@@ -139,7 +133,9 @@ In order to remove the CS goal from OHI for example, the following files need to
 
 *Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*
 
-## Registering goal inputs
+
+
+# Registering goal inputs
 goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
 
 ![alt text](zfig_goals_csv.png)
@@ -152,9 +148,7 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 
 
-
-
-## Updating pressures and resilience matrix
+# Updating pressures and resilience matrix
 
 Updating (adding, modifying, and/or removing) pressures and resilience can be done in the relevant folders shown below.
 
@@ -168,9 +162,7 @@ Updating (adding, modifying, and/or removing) pressures and resilience can be do
 
 
 
-
-
-### Example: Adding 'desalination' pressure
+## Example: Adding 'desalination' pressure
 Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers).
 
 ![alt text](zfig_register_pressure.png)
