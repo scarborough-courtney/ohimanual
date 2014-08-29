@@ -87,13 +87,24 @@ To do so, open the `functions.R` file in RStudio, which contains the functions f
 
 If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
 
+### Example: Modifying AO model
+
 ![alt text](zfig_functions_explained.png)
 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
+### Example: Removing CS goal
+
+In order to remove the CS goal from OHI for example, the following files need to be removed because the latter goal is referenced by these 4-files:
+
+![alt text](zfig_remove_goal.png)
 
 
+**goals.csv:**
 
+>> ![alt text](zfig_goals_delete.png)
+
+Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages. 
 
 ## Registering goal inputs
 goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
