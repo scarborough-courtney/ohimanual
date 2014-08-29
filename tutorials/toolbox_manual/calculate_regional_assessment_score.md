@@ -112,13 +112,13 @@ In order to remove the CS goal from OHI for example, the following files need to
 
   * Delete the highlighted row that contains the registered CS goal.
 
-**pressures_matrix.csv**
+**pressures_matrix.csv:**
 
 >> ![alt text](zfig_delete_pressures.png)
 
   * Delete the highlighted row that contains the registered CS pressures.
 
-**resilience_matrix.csv**
+**resilience_matrix.csv:**
 
 >> ![alt text](zfig_delete_resilience.png)
 
