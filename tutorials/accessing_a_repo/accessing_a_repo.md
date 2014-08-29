@@ -87,12 +87,16 @@ All of the files available from the online server repository `https://github.com
 You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. 
 All changes within this folder will be tracked by GitHub when you [commit](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#committing-locally) these changes, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
-### Committing locally
+## Committing and pushing changes locally
+
+Committing and pushing changes can be done using either RStudio or the Github App
+
+### Using RStudio to commit changes
 Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](zfig_RStudio_sk1.png)
 
-### Push commits to GitHub ohi-[assessment] repository.
+### Using RStudio to push commits to GitHub ohi-[assessment] repository
 When you modify or add a file, the file will appear in the 'Git' window. In the example below, the file `test.R` was created. 
 
 1. Clicking the 'Staged' box and the 'Commit' button opens a new window where you can review changes. 
@@ -105,6 +109,13 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   
   
 > ![](zfig_commit_sk.png)
+
+### Using Github App to push commits to GitHub ohi-[assessment] repository
+The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
+
+![alt text](zfig_github_app.png)
+
+
 
 ## Keeping syncronized
 Always pull before pushing commits. 
