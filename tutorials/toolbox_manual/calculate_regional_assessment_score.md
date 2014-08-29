@@ -100,7 +100,7 @@ In order to remove the CS goal from OHI for example, the following files need to
 
 ![alt text](zfig_remove_goal.png)
 
-**functions.r:**
+**functions.R:**
 
 >> ![alt text](zfig_functions_delete.png)
 
@@ -110,7 +110,11 @@ In order to remove the CS goal from OHI for example, the following files need to
 
 **pressures_matrix.csv**
 
->> 
+>> ![alt text](zfig_delete_pressures.png)
+
+**resilience_matrix.csv**
+
+>> ![alt text](zfig_delete_resilience.png)
 
 Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages. 
 
