@@ -47,7 +47,7 @@ The default data layers to be modified for the regional assessment are located i
 
 New data layers will be added, and old layers modified directly in this folder.
 
-## Example: Modifying fisheries data
+### Example: Modifying fisheries data
 Suppose for instance that finer resolution data becomes available for the fisheries sub-goal during a regional evaluation; for example an improved B/Bmsy ratio for the 'Ablennes hians' species that was obtained through formal stock assessments and complex models developed for data-rich fisheries. The old ratios derived from the latest global assessment, say 1.03 in 2008 could then be replaced  with the new ratio, and the new score subsequently calculated.
 
 ![alt text](zfig_bmsy_layer_example_3.png)
