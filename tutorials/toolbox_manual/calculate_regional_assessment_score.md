@@ -10,7 +10,7 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
 
 
 
-## Overview
+# Overview
 
   1.  [Modifying existing data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#modifying-existing-data-layers)
   
@@ -29,7 +29,7 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
 
 
 
-## Modifying existing data layers
+# Modifying existing data layers
 The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
 
 ![alt text](zfig_layers_location_1.png)
