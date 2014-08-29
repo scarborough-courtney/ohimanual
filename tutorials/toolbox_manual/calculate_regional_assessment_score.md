@@ -19,13 +19,13 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
   3.  [Registering the layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-goal-inputs)
 
   4.  [Updating goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-goal-models)
-    * Example: [Modifying AO model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-modifying-ao-model)
-    * Example: [Removing CS model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-removing-cs-goal)
+    * Example: [Modifying 'Artisanal Opportunities' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-modifying-ao-model)
+    * Example: [Removing 'Carbon Storage' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-removing-cs-goal)
     
   5.  [Registering goal inputs](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-goal-inputs)
   
   6.  [Updating pressures and resilience matrix](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-pressures-and-resilience-matrix)
-    * Example: [Adding desalination pressure](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-adding-desalination-pressure)
+    * Example: [Adding 'desalination' pressure](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-adding-desalination-pressure)
 
 
 
@@ -88,13 +88,13 @@ To do so, open the `functions.R` file in RStudio, which contains the functions f
 
 If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
 
-### Example: Modifying AO model
+### Example: Modifying 'Artisanal Opportunities' model
 
 ![alt text](zfig_functions_explained.png)
 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
-### Example: Removing CS goal
+### Example: Removing 'Carbon Storage' goal
 
 In order to remove the CS goal from OHI for example, the following files need to be removed because the latter goal is referenced by these 4-files:
 
