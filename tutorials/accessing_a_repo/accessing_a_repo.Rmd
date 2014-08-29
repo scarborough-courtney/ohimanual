@@ -33,6 +33,10 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
   
 ## Getting started
 
+### What is needed?
+
+![alt text](zfig_overview_requirements.png)
+
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). 
 
