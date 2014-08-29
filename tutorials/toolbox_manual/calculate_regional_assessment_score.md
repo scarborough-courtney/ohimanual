@@ -104,19 +104,27 @@ In order to remove the CS goal from OHI for example, the following files need to
 
 >> ![alt text](zfig_functions_delete.png)
 
+Delete the highlighted text that references the CS layers and contains the functions for calculating the CS goal's status, trend, and scores.
+
 **goals.csv:**
 
 >> ![alt text](zfig_goals_delete.png)
+
+Delete the highlighted row that contains the registered CS goal.
 
 **pressures_matrix.csv**
 
 >> ![alt text](zfig_delete_pressures.png)
 
+Delete the highlighted row that contains the registered CS pressures.
+
 **resilience_matrix.csv**
 
 >> ![alt text](zfig_delete_resilience.png)
 
-Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages. 
+Delete the highlighted row that contains the registered CS resiliences.
+
+*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*
 
 ## Registering goal inputs
 goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
