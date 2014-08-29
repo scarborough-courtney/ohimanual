@@ -17,7 +17,7 @@ output:
 
 It is at this point possible to incorporate all of the decisions your team has made into the OHI framework.
 
-First, you must learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx). Having a good understanding of how the Toolbox is structured can help identify what must be modified for a regional assessement, particularly with data and models.
+First, you must learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessement, particularly with data and models.
 
 
 
@@ -83,8 +83,8 @@ Add a new row in the registry for the new data layer (example is highlighted in 
  + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
  + **name:** Add a longer title for the data layer.
  + **description:** Add a longer description of the new data layer.
- + **fld_value:** indicates the units along with the units column.
- + **units:** importantly describes which field (column header) is the value from the data layer.
+ + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
+ + **units:** Add a description about the 'units' chosen in the 'fld_value' column above.
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
