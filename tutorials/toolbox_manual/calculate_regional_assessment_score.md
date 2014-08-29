@@ -82,14 +82,14 @@ To do so, open the `functions.R` file in RStudio, which contains the functions f
 If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
 
 
-## Example: Modifying 'Artisanal Opportunities' model
+### Example: Modifying 'Artisanal Opportunities' model
 
 ![alt text](zfig_functions_explained.png)
 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
 
-## Example: Removing 'Carbon Storage' goal
+### Example: Removing 'Carbon Storage' goal
 
 In order to remove the CS goal from OHI for example, the following files need to be removed because the latter goal is referenced by these 4-files:
 
@@ -150,7 +150,7 @@ Updating (adding, modifying, and/or removing) pressures and resilience can be do
 
 
 
-## Example: Adding 'desalination' pressure
+### Example: Adding 'desalination' pressure
 Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers).
 
 ![alt text](zfig_register_pressure.png)
