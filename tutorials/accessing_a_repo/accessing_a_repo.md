@@ -11,7 +11,7 @@ OHI has several repositories ('repos') where data and code are stored. From the 
 
 [OHI-Science](https://github.com/OHI-Science) is the 'owner' of OHI repositories, and individual users contribute to these repositories when they have permission. This simple example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
 
-> > > > > ![](zfig_clone_push_pull.png)
+> > > > > ![](../../img/zfig_clone_push_pull.png)
 
 ### OHI regional assessments and GitHub
 We recommend that groups interested in conducting OHI assessments do so through GitHub. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
