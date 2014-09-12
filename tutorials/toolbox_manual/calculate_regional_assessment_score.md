@@ -24,6 +24,8 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
   
   6.  [Updating pressures and resilience matrix](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-pressures-and-resilience-matrix)
     * Example: [Adding 'desalination' pressure](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-adding-desalination-pressure)
+     
+  7.  [Troubleshooting](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#troubleshooting)
 
 
 
@@ -167,4 +169,10 @@ See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/
 
 Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
 
-Once the changes have been added and regisered appropriately, save all changes (r.functions, )
+Once the changes have been added and regisered appropriately, save all changes (r.functions)
+
+
+# Troubleshooting
+
+Please check the [troubleshooting page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshooting/toolbox_troubleshooting.md#toolbox-troubleshooting)
+
