@@ -25,8 +25,8 @@ Modifications can be made to the global studies and to new regional studies, all
 
 1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the Toolbox for a [regional assessment](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
-3. Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/regional_file_system.md#the-ocean-health-index-toolbox-manual)
-4. Modify the file system and [calculate regional scores](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#calculate-regional-assessment-scores)
+3. Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
+4. Modify the file system and [calculate regional scores](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#calculate-regional-assessment-scores)
 
 
 

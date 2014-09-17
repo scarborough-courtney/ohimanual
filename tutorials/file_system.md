@@ -1,8 +1,4 @@
-# The Ocean Health Index Toolbox Manual
-
-
-
-## File System
+# File System
 Within the ohi-global folder is a folder called eez2013 which contains all the data, functions and other files required to calculate the Ocean Health Index. The default data and models are from the global 2013 analysis. To calculate the Index for a different region or with new data or models, the user will modify the files within this folder.
 
 ### eez2013
