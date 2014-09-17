@@ -4,7 +4,7 @@
 
 
 ## The Ocean Health Index Toolbox 
-**The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. 
+**The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. The Toolbox runs on both a Mac and PC. 
 
 ## Getting Started
   
