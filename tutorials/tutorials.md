@@ -192,10 +192,10 @@ Run `launch_app_code.R` to launch the Toolbox user interface. Notice that when t
    > ![](./fig/input_layer.png)  
   
 5. Navigate through the Toolbox file system
-Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/3_File_system.md#the-ocean-health-index-toolbox-manual). \*\*Note: this page is under active development\*\*
+Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/3_File_system.md#the-ocean-health-index-toolbox-manual). \*\*Note: this page is under active development\*\*
 
 6. To change data presented: 
-Within the folder ohi-[assessment]/[scenario]layers, open a `.csv` file and see that there are fewer regions represented than in the [global **layers** folder](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/3_File_system.md#layers-folders).  
+Within the folder ohi-[assessment]/[scenario]layers, open a `.csv` file and see that there are fewer regions represented than in the [global **layers** folder](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/3_File_system.md#layers-folders).  
 
 This is because we have modified all the files to coincide with the six regions in the `ohi-israel` assessment. All these files have the suffix _global2013.csv because they are just copies of the global assessment, with the same value copied into each regions. For example: *alien_species_global2013.csv* has six region identifiers (`rgn_id`s, consistent with `ohi-israel`'s six regions. 
   

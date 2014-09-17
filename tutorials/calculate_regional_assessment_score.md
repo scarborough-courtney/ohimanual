@@ -4,28 +4,28 @@
 
 It is at this point possible to incorporate all of the decisions your team has made into the OHI framework.
 
-First, you must learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx) the data. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessement, particularly with data and models.
+First, you must learn how to appropriately [gather](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/gathering_appropriate_data.md#gathering-appropriate-data) and [format](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx) the data. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessement, particularly with data and models.
 
 
 
 # Overview
 
-  1.  [Modifying existing data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#modifying-existing-data-layers)
+  1.  [Modifying existing data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-existing-data-layers)
   
-  2.  [Creating new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers)
+  2.  [Creating new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#creating-new-data-layers)
 
-  3.  [Registering the layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-goal-inputs)
+  3.  [Registering the layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#registering-goal-inputs)
 
-  4.  [Updating goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-goal-models)
-    * Example: [Modifying 'Artisanal Opportunities' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-modifying-artisanal-opportunities-model)
-    * Example: [Removing 'Carbon Storage' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-removing-carbon-storage-goal)
+  4.  [Updating goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#updating-goal-models)
+    * Example: [Modifying 'Artisanal Opportunities' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#example-modifying-artisanal-opportunities-model)
+    * Example: [Removing 'Carbon Storage' model](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#example-removing-carbon-storage-goal)
     
-  5.  [Registering goal inputs](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#registering-goal-inputs)
+  5.  [Registering goal inputs](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#registering-goal-inputs)
   
-  6.  [Updating pressures and resilience matrix](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#updating-pressures-and-resilience-matrix)
-    * Example: [Adding 'desalination' pressure](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#example-adding-desalination-pressure)
+  6.  [Updating pressures and resilience matrix](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#updating-pressures-and-resilience-matrix)
+    * Example: [Adding 'desalination' pressure](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#example-adding-desalination-pressure)
      
-  7.  [Troubleshooting](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#troubleshooting)
+  7.  [Troubleshooting](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#troubleshooting)
 
 
 
@@ -134,7 +134,7 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 ![alt text(./fig/registering_goals.png)
 
-- Also, see: [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
+- Also, see: [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_goals.md#update-goalscsv)
 
 
 
@@ -153,7 +153,7 @@ Updating (adding, modifying, and/or removing) pressures and resilience can be do
 
 
 ### Example: Adding 'desalination' pressure
-Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers).
+Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#creating-new-data-layers).
 
 ![alt text(./fig/register_pressure.png)
 
@@ -165,9 +165,9 @@ Notice that the pressures are grouped by category, indicated by a pre-fix (for e
 
 ![alt text(./fig/pressure_categories.png)
 
-See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx) for more details about calculating pressures.
+See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculating_pressures.xlsx) for more details about calculating pressures.
 
-Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_resilience.xlsx) for more details about calculating resilience.
+Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculating_resilience.xlsx) for more details about calculating resilience.
 
 Once the changes have been added and regisered appropriately, save all changes (r.functions)
 

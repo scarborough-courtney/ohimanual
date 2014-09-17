@@ -46,7 +46,7 @@ It is good practice to keep detailed notes of attributes of each potential data 
 
 ## Requirements for data layers
 
-Four requirements to remember when investigating (or ‘scoping’) potential data layers are: relevance to ocean health, the reference point, spatial scale, and temporal scale. Each data layer must then be formatted in a specific way to be used by the OHI Toolbox App; (See: [formatting_data_for_toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/formatting_data_for_toolbox.xlsx).
+Four requirements to remember when investigating (or ‘scoping’) potential data layers are: relevance to ocean health, the reference point, spatial scale, and temporal scale. Each data layer must then be formatted in a specific way to be used by the OHI Toolbox App; (See: [formatting_data_for_toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx).
 
 ### 1.  Relevance to ocean health
 

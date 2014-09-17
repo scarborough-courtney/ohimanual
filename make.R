@@ -26,12 +26,21 @@ setwd('~/github/ohimanual/tutorials/fig')
 for (f in list.files(getwd(), glob2rx('zfig_*'))){
   file.rename(f, str_replace(f, 'zfig_',''))
 }
-# update paths in *.md
+# update fig paths in *.md
 setwd(wd)
 for (f in list.files(getwd(), glob2rx('*.md'))){
   
   s = readLines(f, warn=F, encoding='UTF-8')
   s = str_replace_all(s, fixed('](zfig_'), fixed('(./fig/'))
+  writeLines(s, f)  
+  
+}
+
+# update .md paths in *.md
+for (f in list.files(getwd(), glob2rx('*.md'))){
+  
+  s = readLines(f, warn=F, encoding='UTF-8')
+  s = str_replace_all(s, fixed('/toolbox_manual/'), fixed('/'))
   writeLines(s, f)  
   
 }
