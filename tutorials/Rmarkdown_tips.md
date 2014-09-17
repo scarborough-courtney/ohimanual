@@ -18,11 +18,11 @@ Because GitHub cannot render `.Rmd` files, editing those files directly is diffi
 
 Select the most recent change:
 
-   > > > > > ![](zfig_github_editing2_sk.png)  
+   > > > > > ![](./fig/github_editing2_sk.png)  
   
 Make edits side-by-side:
   
-   > > > > > ![](zfig_github_editing.png)  
+   > > > > > ![](./fig/github_editing.png)  
   
 Your edits will be reviewed and merged into the documents by the file owner.
 
@@ -37,7 +37,7 @@ install.packages('rmarkdown')
   
 Then, open a new [.Rmd document](https://github.com/bbest/rmarkdown-example#process). Instead of a blank document, it will give a template that you can **Knit** to see how it renders. Try it.  
 
-   > > > > > ![](zfig_rstudio_knit-button.png)  
+   > > > > > ![](./fig/rstudio_knit-button.png)  
 
 #### Editing
 

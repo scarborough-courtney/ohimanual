@@ -20,18 +20,18 @@ To do this through Github:
     Melsteroni. To pull the most recent version of `ohi-global` from
     `OHI-Science`, click on the green button.
 
-> ![](zfig_updatedrepo_sk.png)
+> ![](./fig/updatedrepo_sk.png)
 
 1.  You will need to sync forks (the default is to sync branches).
 
-> ![](zfig_pull1_sk.png)
+> ![](./fig/pull1_sk.png)
 
 1.  Change the base fork to your repo: in this example it is
     `remi-daigle\ohi-global`. The head fork is the owner's repo:
     `OHI-Science\ohi-global`. You can see those most recent commits by
     Melsteroni. Now you can click 'Create pull request'.
 
-> ![](zfig_pull2_sk.png)
+> ![](./fig/pull2_sk.png)
 
 **Note:**
 
@@ -42,23 +42,23 @@ To do this through Github:
 -   if that if you get an error *There isn't anything to compare*, make
     sure you are still comparing forks, not branches.
 
-> ![](zfig_pull3_sk.png)
+> ![](./fig/pull3_sk.png)
 
 1.  Enter a Title and a comment, when then allows you to click *Create
     pull request*
 
-> ![](zfig_pull4.png)
+> ![](./fig/pull4.png)
 
 1.  Scolling down on the next screen, you should either see:
 
--   that you have been granted access ![](zfig_pull5.png)
+-   that you have been granted access ![](./fig/pull5.png)
 -   that you must request permission before merging
 -   you will be notified once you have been granted permission; then
     continue to step 6 below
--   that you must resolve conflicts before merging ![](zfig_pull5b.png)
+-   that you must resolve conflicts before merging ![](./fig/pull5b.png)
 -   to resolve these conflicts, follow instructions from
     [OHI-Science](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub#resolving-conflicts).
 
 1.  Once your repo on on github.com is has been updated, you can pull
     your updated fork to your workspace in RStudio either from the Git
-    pulldown menu or from the Git tab. ![](zfig_pull6_sk.png)
+    pulldown menu or from the Git tab. ![](./fig/pull6_sk.png)

@@ -11,7 +11,7 @@ OHI has several repositories ('repos') where data and code are stored. From the 
 
 [OHI-Science](https://github.com/OHI-Science) is the 'owner' of OHI repositories, and individual users contribute to these repositories when they have permission. This simple example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
 
-> > > > > ![](/img/zfig_clone_push_pull.png)
+> > > > > ![](./fig/clone_push_pull.png)
 
 ### OHI regional assessments and GitHub
 We recommend that groups interested in conducting OHI assessments do so through GitHub. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
@@ -22,7 +22,7 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
 
 ### What is needed?
 
-![alt text](zfig_overview_requirements.png)
+![alt text(./fig/overview_requirements.png)
 
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). 
@@ -82,7 +82,7 @@ There are several options to clone the ohi-[assessment] repository to your local
 ## Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified (we recommend cloning the repository to this file path: `~/github/ohi-[assessment]`). 
 
-> ![](zfig_filepath.png)
+> ![](./fig/filepath.png)
 
 You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. 
 All changes within this folder will be tracked by GitHub when you [commit](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#committing-locally) these changes, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
@@ -94,7 +94,7 @@ Committing and pushing changes can be done using [RStudio](https://github.com/OH
 ### Using RStudio to commit and push changes to GitHub ohi-[assessment] repository
 Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
-> ![](zfig_RStudio_sk1.png)
+> ![](./fig/RStudio_sk1.png)
 
 When you modify or add a file, the file will appear in the 'Git' window. In the example below, the file `test.R` was created. 
 
@@ -106,12 +106,12 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. See [Keeping synchronized](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#keeping-syncronized). 
 5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.
   
-> ![](zfig_commit_sk.png)
+> ![](./fig/commit_sk.png)
 
 ### Using Github App to push commits to GitHub ohi-[assessment] repository
 The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
-![alt text](zfig_github_app.png)
+![alt text(./fig/github_app.png)
 
 
 ## Keeping syncronized

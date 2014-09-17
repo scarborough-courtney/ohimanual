@@ -17,7 +17,7 @@ Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create 
 ### Download the repo to your computer
 When your repository has been created, enter the url in to an internet browser (for example, `github.com/OHI-Science/ohi-israel`). Click `Download ZIP`.  
   
-> ![](zfig_download_zip_sk.png)  
+> ![](./fig/download_zip_sk.png)  
   
 ### Working locally
 
@@ -26,11 +26,11 @@ When your repository has been created, enter the url in to an internet browser (
 2. Double-click `ohi-[assessment]/ohi-[assessment].Rproj`: this will launch RStudio. Be sure to have the [latest version of R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md).
 
 3. Open `ohi-[assessment]/[scenario]/launch_app_code.R` (for example, `ohi-israel/med2014/launch_app_code.R`). You can open this from within RStudio: 
-   > ![](zfig_RStudio_ohi-israel_sk.png)  
+   > ![](./fig/RStudio_ohi-israel_sk.png)  
   
 4. Launch the Toolbox user interface 
 Run `launch_app_code.R` to launch the Toolbox user interface. Notice that when the user interface opens, it may not be able to display *Output Scores*. This is because they have not been calculated yet: select *Input Layer* instead to see the map:
-   > ![](zfig_input_layer.png)  
+   > ![](./fig/input_layer.png)  
   
 5. Navigate through the Toolbox file system
 Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/3_File_system.md#the-ocean-health-index-toolbox-manual). \*\*Note: this page is under active development\*\*
@@ -40,18 +40,18 @@ Within the folder ohi-[assessment]/[scenario]layers, open a `.csv` file and see 
 
 This is because we have modified all the files to coincide with the six regions in the `ohi-israel` assessment. All these files have the suffix _global2013.csv because they are just copies of the global assessment, with the same value copied into each regions. For example: *alien_species_global2013.csv* has six region identifiers (`rgn_id`s, consistent with `ohi-israel`'s six regions. 
   
-  > ![](zfig_layers_example.png)  
+  > ![](./fig/layers_example.png)  
   
 At this point, only one file is specific to the assessment: `**ohi-[assessment]/[scenario]/layers/rgn_labels_[scenario].csv**`, which is the file that describes all the regions (in this example, in Hebrew): 
 
-  > ![](zfig_rgn_example.png)  
+  > ![](./fig/rgn_example.png)  
 
   For the data layers that you will update, we suggest you replace the *\_global2013.csv* file, with a file that has a suffix identifying your scenario. So *alien_species_global2013.csv* would become *alien_species_med2014.csv* or *alien_species_israel2014.csv*. You can keep a copy of the old *_global2013.csv* file in a separate foler or delete it (there is a record of it on the GitHub website ([example](https://github.com/OHI-Science/ohi-israel/blob/master/med2014/layers/alien_species_global2013.csv)). 
 
 7. Register the updated layers
 `ohi-[assessment]/[scenario]/layers.csv` is a registry (directory) of where the Toolbox looks for the data it uses. When you change a filename to *_china2014.csv*, you will need to update the registry so the 'filename' column so the Toolbox know where to look.
 
-  > ![](zfig_layers_folder.png)  
+  > ![](./fig/layers_folder.png)  
 
 
 
