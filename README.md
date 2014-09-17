@@ -8,7 +8,7 @@
 
 ## Getting Started
   
-We recommend exploring the results from the global assessment and becoming familiar with the Toolbox App before beginning a regional assessment.  
+Modifications can be made to the global studies and to new regional studies, allowing calculation of scores with updated data and visualized with the Toolbox App. We recommend first exploring the results from the global assessment and becoming familiar with the Toolbox App before beginning a regional assessment.  
   
 ### Exploring the results from the global assessment:
 
@@ -20,9 +20,8 @@ We recommend exploring the results from the global assessment and becoming famil
 
 ### Conducting a regional assessment:
 
-New data can be incorporated into the file system and goal models can be modified allowing calculation of scores with updated data and visualized with the Toolbox App. However, conducting a regional assessment using GitHub (recommended) does require frequent access to the Internet.
 
-**Requirements**: an Internet connection for the initial Toolbox App installation; proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). The Toolbox can be used for regional applications after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points.
+**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). The Toolbox can be used for regional applications after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points.
 
 1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the Toolbox for a [regional assessment](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#accessing-github-repositories)
