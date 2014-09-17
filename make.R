@@ -1,4 +1,6 @@
-# TODO: use bibliography
+# TODO: 
+# - use bibliography
+# use title. problem now is that input md docs already using header 1
 
 # load libraries ----
 library(knitr)
@@ -6,7 +8,7 @@ library(rmarkdown)
 library(stringr)
 
 # set variables ----
-title = 'Manual for the Ocean Health Index'
+title = 'Tutorials for the Ocean Health Index'
 wd = '~/github/ohimanual/tutorials'
 in_md = c(
   'software_for_OHI.md',
@@ -26,7 +28,7 @@ for (f in list.files(getwd(), glob2rx('zfig_*'))){
 }
 # update paths in *.md
 setwd(wd)
-for (f in list.files(getwd(), glob2rx('*.md'))){ # f = list.files(getwd(), glob2rx('*.md'))[1]
+for (f in list.files(getwd(), glob2rx('*.md'))){
   
   s = readLines(f, warn=F, encoding='UTF-8')
   s = str_replace_all(s, fixed('](zfig_'), fixed('(./fig/'))
@@ -35,23 +37,24 @@ for (f in list.files(getwd(), glob2rx('*.md'))){ # f = list.files(getwd(), glob2
 }
 
 # helper functions ----
-
 cat_md = function(
   files_md = setdiff(list.files(getwd(), glob2rx('*.md')), out_md),
   out_md  = '_all_.md'){
     
   if (file.exists(out_md)) unlink(out_md)
   
+  cat('---\n', 'title: ', title, '\n---\n\n', sep='', file=out_md, append=T)
+  
   for (md in files_md){    
     cat(paste(c(readLines(md),'',''), collapse='\n'), file=out_md, append=T)
   }
 }
 
-# concatenate tutorials.md ----
+# concatenate md ----
 setwd(wd)
-#cat_md()                           # use default alphabetical order , default output _all_.md
-#cat_md(md_order)                   # use own md ordered file listing, default output _all_.md
-cat_md(in_md, out_md) # use own md ordered file listing, output to tutorials.md up a dir
+#cat_md()                           # use default file listing of *.md, default output _all_.md
+#cat_md(md_order)                   # use own md ordered file listing , default output _all_.md
+cat_md(in_md, out_md)               # use own md ordered file listing , output to tutorials.md
 pfx = tools::file_path_sans_ext(out_md)
 
 # render html ----

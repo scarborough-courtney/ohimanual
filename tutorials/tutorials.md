@@ -1,3 +1,7 @@
+---
+title: Tutorials for the Ocean Health Index
+---
+
 # Software for OHI
 
 The Ocean Health Index works primarily with freely available, open-source software. To work the the Toolbox, there are several software programs you will need to download. 
