@@ -38,7 +38,7 @@ In terms of philosophical considerations, the most important thing to remember w
 
 Begin by understanding and comparing the best approaches used in assessments that have been completed, including global 2013, Brazil, and the US West Coast. If finer-resolution local data were available in the study area, they could be used either in a newly developed regional goal model using locally appropriate and informed approaches, or in the existing global goal model. When local data were not available, the same global-scale data were used with the original global goal model, which is least desirable because it does not provide more information than the global study. When looking for data, the following decision tree may be useful. This should be a goal-by-goal process:
 
->>> ![alt text](zfig_data_discovery.png)
+>>> ![alt text(./fig/data_discovery.png)
 
 Searching for data requires exploring data sources beyond any single discipline, and a good place to start is with an internet search. Internet searches can lead to published data in government and non-governmental organization reports, peer-reviewed articles, and masters and doctoral dissertations. Not everything will be freely available online but it is sometimes possible to request access.
 

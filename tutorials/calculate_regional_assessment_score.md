@@ -32,14 +32,14 @@ First, you must learn how to appropriately [gather](https://github.com/OHI-Scien
 # Modifying existing data layers
 The default data layers to be modified for the regional assessment are located in the layers folder (as shown for the China assessment below), and each data layer is saved as a separate *.csv* file in the `layers` folder.
 
-![alt text](zfig_layers_location_1.png)
+![alt text(./fig/layers_location_1.png)
 
 New data layers will be added, and old layers modified directly in this folder.
 
 ### Example: Modifying fisheries data
 Suppose for instance that finer resolution data becomes available for the fisheries sub-goal during a regional evaluation; for example an improved B/Bmsy ratio for the 'Ablennes hians' species that was obtained through formal stock assessments and complex models developed for data-rich fisheries. The old ratios derived from the latest global assessment, say 1.03 in 2008 could then be replaced  with the new ratio, and the new score subsequently calculated.
 
-![alt text](zfig_bmsy_layer_example_3.png)
+![alt text(./fig/bmsy_layer_example_3.png)
 
 
 
@@ -48,7 +48,7 @@ Suppose however that the methodology for a particular data layer needs to be mod
 
   * To create a new data layer, simply create a new csv file in the layers folder, add the relevant data points, and save the file.  
 
-![alt text](zfig_new_data_layer.png)
+![alt text(./fig/new_data_layer.png)
 
   * In this case, additional 'access' data for the artisanal opportunities goal was added for each of the regions.
 
@@ -57,11 +57,11 @@ Suppose however that the methodology for a particular data layer needs to be mod
 # Registering new data layers
 Once the new data has been introduced into the appropriate layer file, it has to be registered as a new row in the layers.csv registry, which manages all the data that the Toolbox App uses:
 
-![alt text](zfig_layers_csv.png)
+![alt text(./fig/layers_csv.png)
 
 Add a new row in the registry for the new data layer (example is highlighted in yellow), and fill in the first eight columns (columns A-H) as described below; other columns are generated later by the Toolbox App as it confirms data formatting and content.  
 
-![alt text](zfig_new_layer.png)
+![alt text(./fig/new_layer.png)
 
  + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately
  + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
@@ -79,14 +79,14 @@ Running the Toolbox App once the new data layer is created and registered will a
 
 To do so, open the `functions.R` file in RStudio, which contains the functions for each goal and sub-goal model and has a navigation pane that can be used to navigate around the page:
 
-![alt text](zfig_navigation_functions.png)
+![alt text(./fig/navigation_functions.png)
 
 If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
 
 
 ### Example: Modifying 'Artisanal Opportunities' model
 
-![alt text](zfig_functions_explained.png)
+![alt text(./fig/functions_explained.png)
 
 In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
 
@@ -95,29 +95,29 @@ In other words, changes in **# cast data** allows the models to call on new laye
 
 In order to remove the CS goal from OHI for example, the following files need to be removed because the latter goal is referenced by these 4-files:
 
-![alt text](zfig_remove_goal.png)
+![alt text(./fig/remove_goal.png)
 
 **functions.R:**
 
->> ![alt text](zfig_functions_delete.png)
+>> ![alt text(./fig/functions_delete.png)
 
   * Delete the highlighted text that references the CS layers and contains the functions for calculating the CS goal's status, trend, and scores.
 
 **goals.csv:**
 
->> ![alt text](zfig_goals_delete.png)
+>> ![alt text(./fig/goals_delete.png)
 
   * Delete the highlighted row that contains the registered CS goal.
 
 **pressures_matrix.csv:**
 
->> ![alt text](zfig_delete_pressures.png)
+>> ![alt text(./fig/delete_pressures.png)
 
   * Delete the highlighted row that contains the registered CS pressures.
 
 **resilience_matrix.csv:**
 
->> ![alt text](zfig_delete_resilience.png)
+>> ![alt text(./fig/delete_resilience.png)
 
   * Delete the highlighted row that contains the registered CS resiliences.
 
@@ -128,11 +128,11 @@ In order to remove the CS goal from OHI for example, the following files need to
 # Registering goal inputs
 goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
 
-![alt text](zfig_goals_csv.png)
+![alt text(./fig/goals_csv.png)
 
 Changing goal weights will be done here by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0. goals.csv also indicates the arguments passed to functions.R. These are indicated by two columns: preindex_function (functions for all goals that do not have sub-goals, and functions for all sub-goals) and postindex_function (functions for goals with sub-goals).
 
-![alt text](zfig_registering_goals.png)
+![alt text(./fig/registering_goals.png)
 
 - Also, see: [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/update_goals.md#update-goalscsv)
 
@@ -142,7 +142,7 @@ Changing goal weights will be done here by editing the value in the ‘weight’
 
 Updating (adding, modifying, and/or removing) pressures and resilience can be done in the relevant folders shown below.
 
-![alt text](zfig_pressures_resilience_matrix.png)
+![alt text(./fig/pressures_resilience_matrix.png)
 
 - **pressures_matrix.csv:** Describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
@@ -155,15 +155,15 @@ Updating (adding, modifying, and/or removing) pressures and resilience can be do
 ### Example: Adding 'desalination' pressure
 Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculate_regional_assessment_score.md#creating-new-data-layers).
 
-![alt text](zfig_register_pressure.png)
+![alt text(./fig/register_pressure.png)
 
 Then register the new layer in the pressure_matrix.csv and indicate how much the pressure affects the respective goals based on scientific literature and expert opinion (3=high pressure, 1=low pressure).
 
-![alt text](zfig_register_new_pressures.png)
+![alt text(./fig/register_new_pressures.png)
 
 Notice that the pressures are grouped by category, indicated by a pre-fix (for example: po_ for pollution). Each category is calculated in a different way, so it is important to register the new pressure with the appropriate category pre-fix.
 
-![alt text](zfig_pressure_categories.png)
+![alt text(./fig/pressure_categories.png)
 
 See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/calculating_pressures.xlsx) for more details about calculating pressures.
 
