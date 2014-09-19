@@ -1,5 +1,29 @@
 # Ocean Health Index Regional Assessments
 
-   
+**Regional assessments** use the Ocean Health Index framework to study smaller spatial scales where policy and management decisions are made. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. Regional assessments have been published in peer-review journals for the U.S. West Coast and for Brazil, and more are underway.   
 
-## OHI and GitHub 
+## Conducting a regional assessment
+
+Regional assessments require a qualified team to tailor the Ocean Health Index for the study area; there are many decisions to make and data to gather from disparate sources. The Toolbox can be used to do all of the calculations for the assessment, but it is only after all other items have been accomplished:
+
++ decisions have been made about which goal models to include and/or modify
++ data are collected and properly formatted
++ reference points have been decided
+
+Using the Toolbox is only about 20% of the work involved in conducting a regional assessment.
+
+## Getting Started
+
+Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. These files and scripts are packaged together in a folder called a **repository**. Each Ocean Health Index assessment has its own repository. Repositories are stored online through GitHub, which enables easy collaboration with versioning capabilities.  
+
+It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case. 
+
+Here are instructions to:
+
+- [Access a regional assessment repository with GitHub syncing](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
+- [Access a regional assessment repository without GitHub synching](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
+
+
+
+
+
