@@ -1,6 +1,10 @@
 # Ocean Health Index Regional Assessments
 
-**Regional assessments** use the Ocean Health Index framework to study smaller spatial scales where policy and management decisions are made. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. Regional assessments have been published in peer-review journals for the U.S. West Coast and for Brazil, and more are underway.   
+**Regional assessments** use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Scores by goal are calculated for each *region*, and regions are combined using a weighted average to produce the score for the overall area assessed, called a *study area*. In regional assessments, coastal states or provinces are often the *regions* within a country, which is the *study area*. 
+
+![alt text(./fig/global_v_brazil_map.png)
+
+Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. Regional assessments have been published in peer-review journals for the U.S. West Coast and for Brazil, and more are underway.   
 
 ## Conducting a regional assessment
 
@@ -20,8 +24,8 @@ It is possible to conduct a regional assessment by downloading a template reposi
 
 Here are instructions to:
 
-- [Access a regional assessment repository with GitHub syncing](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
-- [Access a regional assessment repository without GitHub synching](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
+- [access a regional assessment repository with GitHub syncing](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
+- [access a regional assessment repository without GitHub syncing](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_GitHub.md#accessing-repositories-without-github)
 
 
 
