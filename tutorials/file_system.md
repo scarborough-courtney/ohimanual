@@ -4,7 +4,7 @@ Within the ohi-global folder is a folder called eez2013 which contains all the d
 ### eez2013
 Each of the elements (files and folders) within ohi-global/eez2013 are critical to the proper functioning of the Toolbox App.
 
-![alt text(./fig/ohiglobal_file_location.png)
+![alt text](./fig/ohiglobal_file_location.png)
 
 *OHI Toolbox file systems on a Mac. Note that on a Mac, launch_App.command is how to run the Toolbox App by double-clicking, and on a PC, launchApp.bat is the correct file to double-click.*
 
