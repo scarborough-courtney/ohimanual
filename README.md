@@ -4,7 +4,9 @@
 
 
 ## The Ocean Health Index Toolbox 
-**The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. The Toolbox runs on both a Mac and PC. 
+**The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. The Toolbox can be used to calculate scores in smaller-scale **regional assessments** after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points.   
+
+The Toolbox runs on both a Mac and PC. 
 
 ## Getting Started
   
@@ -12,16 +14,16 @@ Modifications can be made to the global studies and to new regional studies, all
   
 ### Exploring the results from the global assessment:
 
-**Requirements**: an Internet connection for the initial Toolbox App installation
+**Requirements**: an Internet connection for the initial Toolbox App installation.
 
 1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the Toolbox for the [global assessment](http://ohi-science.org/pages/install.html).
-3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_manual/using_the_ohi_toolbox_app.md#using-the-ohi-toolbox-app)
+3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#using-the-ohi-toolbox-app)
 
 ### Conducting a regional assessment:
 
 
-**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). The Toolbox can be used for regional applications after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points.
+**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). 
 
 1. Install the [latest version of R](http://cran.r-project.org/).
 2. Install the Toolbox for a [regional assessment](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#accessing-github-repositories)
