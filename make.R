@@ -13,6 +13,7 @@ wd = '~/github/ohimanual/tutorials'
 in_md = c(
   'software_for_OHI.md',
   'regional_assessments_intro.md',
+  'github_repos.md',
   'accessing_a_repo.md',
   'accessing_a_repo_without_GitHub.md',
   'syncing_forks.md',
