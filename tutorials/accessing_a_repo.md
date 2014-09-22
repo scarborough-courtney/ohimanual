@@ -29,7 +29,7 @@ see also:
 
 This simple example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
 
-      ![](./fig/clone_push_pull.png)
+> > > ![](./fig/clone_push_pull.png)
 
 
 We recommend that groups interested in conducting OHI assessments do so through GitHub. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  

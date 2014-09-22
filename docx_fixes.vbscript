@@ -1,0 +1,62 @@
+Sub ohimanual_fixes()
+'
+' ohimanual_fixes Macro
+' From: https://github.com/bbest/dissertation#word-tweaks
+'
+'
+
+'----
+' resize figures
+
+Dim shp As Word.Shape
+Dim ishp As Word.InlineShape
+Dim width_in As Integer
+
+width_in = 6
+
+' iterate over all shapes
+For Each shp In ActiveDocument.Shapes
+    shp.LockAspectRatio = True
+    shp.Width = InchesToPoints(width_in)
+Next
+
+' iterate over all inline shapes
+For Each ishp In ActiveDocument.InlineShapes
+    ishp.LockAspectRatio = True
+    ishp.Width = InchesToPoints(width_in)
+Next
+
+'----
+' add table of contents after 1st paragraph
+
+Dim toc_str As String
+Dim rng As Object
+
+toc_str = "Table of Contents"
+
+' set location in doc
+Set rng = ActiveDocument.Range( _
+    Start:=ActiveDocument.Paragraphs(1).Range.End, _
+    End:=ActiveDocument.Paragraphs(1).Range.End)
+
+' add toc
+ActiveDocument.TablesOfContents.Add rng, _
+    UseFields:=True, _
+    UseHeadingStyles:=True, _
+    LowerHeadingLevel:=3, _
+    UpperHeadingLevel:=1
+
+' prefix toc with string
+With ActiveDocument.Paragraphs(1).Range
+    .InsertParagraphAfter
+    .InsertAfter (toc_str)
+    .InsertParagraphAfter
+End With
+
+' make toc bold
+With Selection.Find
+    .Replacement.Font.Bold = True
+    .Execute FindText:=toc_str, replaceWith:=toc_str
+End With
+
+End Sub
