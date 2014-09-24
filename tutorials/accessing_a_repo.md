@@ -10,11 +10,11 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
 > ![](./fig/overview_requirements.png)
 
 ### Install R and RStudio
-Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/). 
+Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
 
 
-### Install *git* Application
-*git* is required to work behind the scenes on your computer. [Download](http://git-scm.com/downloads) and install *git*. 
+### Install *git* software
+*git* is version-control software that you will need to [download](http://git-scm.com/downloads) and install. 
   
 After downloading and installing, you will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
@@ -46,7 +46,7 @@ If you have problems, here are a few [tips](https://github.com/OHI-Science/ohipr
 
 
 ### Create a GitHub account
-[Sign up](http://github.com) for a GitHub account, and provide your username to the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu). The OHI team will create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
+GitHub is an online interface for git. [Sign up](http://github.com) for a GitHub account, and provide your username to the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu). The OHI team will create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
 
 ### Clone your ohi-[assessment] repo to your computer
 Once there is a repository for your OHI regional assessment called `OHI-Science/ohi-[assessment]`, you can decide whether you will clone and work directly from that repository  or from a forked repository. There are benefits to both approaches:
