@@ -1,5 +1,8 @@
 # File System
-Within the ohi-global folder is a folder called eez2013 which contains all the data, functions and other files required to calculate the Ocean Health Index. The default data and models are from the global 2013 analysis. To calculate the Index for a different region or with new data or models, the user will modify the files within this folder.
+This section describes the files within the ohi-assessment folder that you have either cloned (accessed) through GitHub and RStudio downloaded to your computer from GitHub.
+
+## Assessments and scenarios
+Within the **ohi-[assessment]** folder is the **scenario** folder. In this example, the **ohi-global** is the assessment folder and called **eez2013** is the scenario: this is the global assessment in 2013. The scenario folder eez2013 contains all the data, functions and other files required to calculate the Ocean Health Index. The default data and models are from the global 2013 analysis. To calculate the Index for a different region or with new data or models, the user will modify the files within this folder.
 
 ### eez2013
 Each of the elements (files and folders) within ohi-global/eez2013 are critical to the proper functioning of the Toolbox App.
