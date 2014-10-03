@@ -33,7 +33,7 @@ setwd(wd)
 for (f in list.files(getwd(), glob2rx('*.md'))){
   
   s = readLines(f, warn=F, encoding='UTF-8')
-  s = str_replace_all(s, fixed('](zfig_'), fixed('(./fig/'))
+  s = str_replace_all(s, fixed('](zfig_'), fixed('](./fig/'))
   writeLines(s, f)  
   
 }
