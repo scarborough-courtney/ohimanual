@@ -172,6 +172,11 @@ Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/m
 Once the changes have been added and regisered appropriately, save all changes (r.functions)
 
 
+# Changing goal weights       
+
+Changing goal weights will be done in **[scenario]/conf/goals.csv** by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0.
+
+
 # Troubleshooting
 
 Please check the [troubleshooting page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshooting/toolbox_troubleshooting.md#toolbox-troubleshooting)
