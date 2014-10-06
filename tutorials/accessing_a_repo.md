@@ -1,6 +1,6 @@
 # Accessing GitHub repositories
 
-We recommend that groups interested in conducting OHI assessments do so using GitHub. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
+We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions [here](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_GitHub.md#accessing-repositories-without-github). We can always get your filesystem onto GitHub later. 
   
@@ -13,6 +13,10 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
 
 
+### Create a GitHub account
+GitHub is an online interface for *git*, and to use it you must [create a GitHub account](http://github.com). You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
+
+
 ### Install *git* software
 *git* is version-control software that you will need to [download](http://git-scm.com/downloads) and install. 
   
@@ -21,12 +25,12 @@ After downloading and installing, you will then need to set up your Git Identity
 * **Mac**: launch the Terminal application (Applications > Utilities > Terminal)
 * **Windows**: go to command line in Windows (Start > Run > cmd)  
   
-Substitute your GitHub user information with the user John Doe:
-
+  
+Substitute your GitHub username instead of jdoe:
 ```
 git config --global user.name jdoe
 ```
-and then: 
+and then: substitute the email address you used to create your GitHub account: 
 ```
 git config --global user.email johndoe@example.com
 ```
@@ -42,14 +46,11 @@ Quit the Terminal after typing:
 exit
 ```
 
-If you have problems, here are a few [tips](https://github.com/OHI-Science/ohiprep/wiki/Setup#git).
-
-
-### Create a GitHub account
-GitHub is an online interface for git. [Sign up](http://github.com) for a GitHub account, and provide your username to the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu). The OHI team will create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
 
 ### Clone your ohi-[assessment] repo to your computer
-Once there is a repository for your OHI regional assessment called `OHI-Science/ohi-[assessment]`, you can decide whether you will clone and work directly from that repository  or from a forked repository. There are benefits to both approaches:
+The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
+
+The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`. Once your repository has been created, you can decide whether you will clone and work directly from that repository  or from a forked repository. There are benefits to both approaches: 
 
 * [Cloning](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#cloning-options) and working directly on a repository is simplest: you can make changes on your local computer and push them directly to the online repository, as described regarding [GitHub-OHI repositories](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_repos.md#ohi-regional-assessments-and-github). You do not need to send pull requests; simply clone from `OHI-Science/ohi-[assessment]` and push/pull from there.
 * [Forking](https://help.github.com/articles/fork-a-repo) a repository is best when you have multiple collaborators working on the same repository. This would allow you to commit changes to your local version, push commits up to github for offsite archiving, and eventually make a pull request to have those changes merged back to `ohi-science/ohi-[assessment]` while your collaborators do the same. This is a good way for someone who is not in the core team of the assessment to contribute comments.
