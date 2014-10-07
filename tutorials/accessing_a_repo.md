@@ -67,14 +67,14 @@ Downloading a repository from GitHub is called **cloning** and there are multipl
 #### Cloning options
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
-1. The GitHub App for [Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))
-2. [The command line (Windows) or Terminal (Mac)](https://help.github.com/articles/fork-a-repo#keep-your-fork-synced). For example, clone `ohi-israel` into the `~/github` folder:
+1) The GitHub App for [Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))
+2) [The command line (Windows) or Terminal (Mac)](https://help.github.com/articles/fork-a-repo#keep-your-fork-synced). For example, clone `ohi-israel` into the `~/github` folder:
 ```
 cd ~/github
 git clone https://github.com/OHI-Science/ohi-israel.git
 cd ohi-israel
 ```
-3. [RStudio](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+3) [RStudio](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
 
 
 ## Working locally
@@ -109,7 +109,7 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 ### Using Github App to push commits to GitHub ohi-[assessment] repository
 The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
-> ![](./fig/github_app.png)
+> ![](./fig/github_app_notes.png)
 
 
 ## Keeping syncronized
