@@ -18,8 +18,12 @@ GitHub is an online interface for *git*, and to use it you must [create a GitHub
 
 
 ### Install *git* software
-*git* is version-control software that you will need to [download](http://git-scm.com/downloads) and install. 
+*git* is version-control software that you will need to install on your computer. 
+
+[Download](http://git-scm.com/downloads) *git* and follow the install instructions. There are specific settings to select for [**Windows**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_windows.md#git-on-windows) and [**Mac**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_mac.md). 
   
+  
+### Set up your Git Identity
 After downloading and installing, you will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
 * **Mac**: launch the Terminal application (Applications > Utilities > Terminal)
@@ -52,10 +56,15 @@ The OHI team will create a repository for your assessment once you provide your 
 
 The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`. Once your repository has been created, you can decide whether you will clone and work directly from that repository  or from a forked repository. There are benefits to both approaches: 
 
+\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/ohi-[assessment]` will therefore be:
+
++ on a Mac: `/Users/[User]/github/ohi-[assessment]`
++ on Windows: `C:\Users\[User]\Documents\github\ohi-[assessment]` 
+
+
 * [Cloning](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#cloning-options) and working directly on a repository is simplest: you can make changes on your local computer and push them directly to the online repository, as described regarding [GitHub-OHI repositories](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_repos.md#ohi-regional-assessments-and-github). You do not need to send pull requests; simply clone from `OHI-Science/ohi-[assessment]` and push/pull from there.
 * [Forking](https://help.github.com/articles/fork-a-repo) a repository is best when you have multiple collaborators working on the same repository. This would allow you to commit changes to your local version, push commits up to github for offsite archiving, and eventually make a pull request to have those changes merged back to `ohi-science/ohi-[assessment]` while your collaborators do the same. This is a good way for someone who is not in the core team of the assessment to contribute comments.
 
-\*\* **Tip:** With either approach, we recommend creating a folder called `github` in your root directory so that you can clone the repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path.
 
 
 #### Cloning options
