@@ -67,7 +67,8 @@ Downloading a repository from GitHub is called **cloning** and there are multipl
 #### Cloning options
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
-1) The GitHub App for [Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))
+1) The [GitHub App for Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))  
+
 2) [The command line (Windows) or Terminal (Mac)](https://help.github.com/articles/fork-a-repo#keep-your-fork-synced). For example, clone `ohi-israel` into the `~/github` folder:
 ```
 cd ~/github
