@@ -1,17 +1,30 @@
 # *git* on Mac
 
-Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version:
+[Download](http://git-scm.com/downloads) and install *git* for Mac.  
+
+Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in RStudio and in Terminal:
 
 - **RStudio**
+  Within RStudio, update your preferences for 'Git executable':
   
-  Update Preferences > Git/SVN > Git executable to `/usr/local/git/bin/git`
+  > RStudio > Preferences... > Git/SVN > Git executable: `/usr/local/git/bin/git`
   
   ![](https://raw.githubusercontent.com/OHI-Science/ohiprep/master/wiki/img/rstudio_prefs_git.png)
 
 - **Terminal**
   
-  Add the following line to your bash profile by running `pico ~/.bash_profile`:
+  From Terminal, add a line to your 'bash profile' (launch Terminal from Applications > Utilities > Terminal).
+  
+  First type:  `pico ~/.bash_profile`
+  
+  Add this line: 
 
   ```
   export PATH=/usr/local/git/bin:$PATH
   ```
+  
+  Type `control-X` to exit pico; type `exit` before quitting Terminal.  
+  
+  
+  After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#set-up-your-git-identity)
+
