@@ -109,7 +109,7 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 ### Using Github App to push commits to GitHub ohi-[assessment] repository
 The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
-> ![](./fig/github_app.png)
+> ![](./fig/github_app_notes.png)
 
 
 ## Keeping syncronized
