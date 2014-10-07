@@ -9,7 +9,7 @@ Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools opt
   
   > RStudio > Preferences... > Git/SVN > Git executable: `/usr/local/git/bin/git`
   
-  ![](https://raw.githubusercontent.com/OHI-Science/ohiprep/master/wiki/img/rstudio_prefs_git.png)
+ ![](./fig/rstudio_prefs_git.png)
 
 - **Terminal**
   
@@ -25,6 +25,7 @@ Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools opt
   
   Type `control-X` to exit pico; type `exit` before quitting Terminal.  
   
+  ![](./fig/terminal_pico.png)
   
-  After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#set-up-your-git-identity)
+After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#set-up-your-git-identity)
 
