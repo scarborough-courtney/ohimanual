@@ -17,7 +17,7 @@ Modifications can be made to the global studies and to new regional studies, all
 **Requirements**: an Internet connection for the initial Toolbox App installation.
 
 1. Install the [latest version of R](http://cran.r-project.org/).
-2. Begin a [global assessment](http://ohi-science.org/pages/install.html).
+2. Setup to investigate the [global assessment](http://ohi-science.org/pages/install.html).
 3. Become familiar [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#using-the-ohi-toolbox-app)
 
 ### Conducting a regional assessment:
