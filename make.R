@@ -7,19 +7,25 @@ library(knitr)
 library(rmarkdown)
 library(stringr)
 
+# copy ohimanual/README.md into ohimanual/tutorials/README.md
+stopifnot(file.copy('~/github/ohimanual/README.md', file.path('~/github/ohimanual/tutorials/README.md'), overwrite=T))
+
 # set variables ----
 title = 'Tutorials for the Ocean Health Index'
 wd = '~/github/ohimanual/tutorials'
 in_md = c(
-  'software_for_OHI.md',
+  'README.md',
+  'using_the_ohi_toolbox_app.md',
   'regional_assessments_intro.md',
   'github_repos.md',
   'accessing_a_repo.md',
   'accessing_a_repo_without_GitHub.md',
-  'syncing_forks.md',
-  'Rmarkdown_tips.md',
+  'file_system.md',
+  'calculate_regional_assessment_score.md',
+  'frequently_asked_questions.md',
   'toolbox_troubleshooting.md')
 out_md = 'tutorials.md'
+
 
 # cleanup original ----
 

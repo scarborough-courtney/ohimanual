@@ -6,8 +6,9 @@ This page explains how to incorporate all of the [pre-Toolbox decisions](https:/
 
 The most common modifications you will make to your repository are changes with:
 
-- [data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#data-layers)
-- [goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#goal-models)
+- [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#data-layers)
+- [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-goal-models)
+- [removing goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#removing-goal-models)
 
 
 # Data layers
@@ -47,14 +48,12 @@ However, if a new layer has been added (for example when a new goal model is dev
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
-![alt text](./fig/new_layer.png)
-
 ## Checking pressures and resilience matrices
 
+[under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
 
-
-# Goal models
-In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate these new data. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
+# Modifying goal models
+In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
   
 **There are several steps to follow when working with goal models:**
 
@@ -63,107 +62,82 @@ In the discussion on data layers above, when an existing layer is still used as 
 
 ## Update *functions.r*
 
-To incorporate a new data layer into a goal model, open `functions.R`. This script contains the models for each goal and sub-goal and has a navigation pane that can be used to navigate between them:
+To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. In RStudio, there is a navigation pane that can be used to navigate between them:
 
 ![alt text](./fig/navigation_functions.png)
 
-If the AO (Artisanal Opportunities) option is selected for example, the user is redirected to the the AO section that contains the AO models and references to the data layers (in layers folder) that are used to calculate the status and trend. 
+## Check and possibly update *goals.csv*
 
+*goals.csv* provides input information for *functions.r*, particularly about goal weighting and function calls. It also includes descriptions about goals and sub-goals, which is presented in the Toolbox Application. 
 
-### Example: Modifying 'Artisanal Opportunities' model
-
-![alt text](./fig/functions_explained.png)
-
-In other words, changes in **# cast data** allows the models to call on new layers, whereas changes in **# model** allows you to change the model.  
-
-
-### Example: Removing 'Carbon Storage' goal
-
-In order to remove the CS goal from OHI for example, the following files need to be removed because the latter goal is referenced by these 4-files:
-
-![alt text](./fig/remove_goal.png)
-
-**functions.R:**
-
->> ![alt text](./fig/functions_delete.png)
-
-  * Delete the highlighted text that references the CS layers and contains the functions for calculating the CS goal's status, trend, and scores.
-
-**goals.csv:**
-
->> ![alt text](./fig/goals_delete.png)
-
-  * Delete the highlighted row that contains the registered CS goal.
-
-**pressures_matrix.csv:**
-
->> ![alt text](./fig/delete_pressures.png)
-
-  * Delete the highlighted row that contains the registered CS pressures.
-
-**resilience_matrix.csv:**
-
->> ![alt text](./fig/delete_resilience.png)
-
-  * Delete the highlighted row that contains the registered CS resiliences.
-
-*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*
-
-
-
-# Registering goal inputs
-goals.csv: is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App.
-
-![alt text](./fig/goals_csv.png)
-
-Changing goal weights will be done here by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0. goals.csv also indicates the arguments passed to functions.R. These are indicated by two columns: preindex_function (functions for all goals that do not have sub-goals, and functions for all sub-goals) and postindex_function (functions for goals with sub-goals).
+Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
 
 ![alt text](./fig/registering_goals.png)
 
-- Also, see: [update goals.csv](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_goals.md#update-goalscsv)
+
+**When updating layers or goal models, it is important to ensure that information called from *goals.csv* is correct**: 
+
+- check the years
+- etc...
 
 
 
-# Updating pressures and resilience matrix
+# Removing goal models
+If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal:
 
-Updating (adding, modifying, and/or removing) pressures and resilience can be done in the relevant folders shown below.
+1. `functions.r`
+2. `goals.csv`
+3. `pressures_matrix.csv`
+4. `resilience_matrix.csv`
 
-![alt text](./fig/pressures_resilience_matrix.png)
+![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
 
-- **pressures_matrix.csv:** Describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+## Example: Removing 'Carbon Storage' goal
+1) Remove the CS goal model from `functions.r`:
 
-- **resilience_matrix.csv:** Describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories. for more details.
+>> ![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
 
-- **resilience_weights.csv:** Describes the weight of various resilience layers that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+2) Remove the CS row from `goals.csv`:
 
+>> ![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
 
+3) Remove all CS rows from `pressures_matrix.csv`:
 
-### Example: Adding 'desalination' pressure
-Suppose for instance that a research group wished to include additional pressures that were excluded from the previous analysis such as the effects of desalination operations. To do so, first create and register the necessary new layers (for example: po_desal_in_china2014, and po_desal_in_china2014) as described [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#creating-new-data-layers).
+>> ![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
 
-![alt text](./fig/register_pressure.png)
+4) Remove all CS rows from `resilience_matrix.csv`:
 
-Then register the new layer in the pressure_matrix.csv and indicate how much the pressure affects the respective goals based on scientific literature and expert opinion (3=high pressure, 1=low pressure).
-
-![alt text](./fig/register_new_pressures.png)
-
-Notice that the pressures are grouped by category, indicated by a pre-fix (for example: po_ for pollution). Each category is calculated in a different way, so it is important to register the new pressure with the appropriate category pre-fix.
-
-![alt text](./fig/pressure_categories.png)
-
-See: [calculate_pressures](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculating_pressures.xlsx) for more details about calculating pressures.
-
-Also See: [calculate_resilience](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculating_resilience.xlsx) for more details about calculating resilience.
-
-Once the changes have been added and regisered appropriately, save all changes (r.functions)
+>> ![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
 
 
-# Changing goal weights       
 
-Changing goal weights will be done in **[scenario]/conf/goals.csv** by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0.
 
+# Examples:
+
+## Adding a new layer to a goal model
+
+In this example we will walk through the following steps:
+
+1. decide to add artisanal access component to the model because of locally available data
+2. prepare the data file; save layer ao_access_art
+3. register in `layers.csv`
+4. update goal model in `functions.r`
+5. update goal call in `goals.csv`
+
+1. and 2. is done outside of the Toolbox
+
+3. register in `layers.csv`
+![alt text](./fig/new_layer.png)
+
+
+4. update goal model
+![alt text](./fig/functions_explained.png)
+
+5. [develop]
+
+# Frequently asked questions
+Please check the [frequently asked questions page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshootingfrequently_asked_questions.md)
 
 # Troubleshooting
-
 Please check the [troubleshooting page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshooting/toolbox_troubleshooting.md#toolbox-troubleshooting)
 
