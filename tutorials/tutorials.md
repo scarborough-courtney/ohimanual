@@ -42,22 +42,22 @@ The Toolbox App runs through a web browser and has four page options: *Data*, *G
   
 The scenario is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
   
-![alt text](./fig/homepage_view.png)
+![](./fig/homepage_view.png)
 
 ## Data Page
 The Data page displays input data or calculated scores for each goal parameter and presents the information as a Map, Histogram, or Table.
 
   * Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#map) form:
   
-![alt text](./fig/datapage_view.png)
+![](./fig/datapage_view.png)
 
   * Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#histogram) form:
   
-![alt text](./fig/histogrampage_view.png)
+![](./fig/histogrampage_view.png)
 
   * Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#table) form:
   
-![alt text](./fig/tablepage_view.png)
+![](./fig/tablepage_view.png)
 
 ### Overview of display options
 The default display option for the Data page is Map view; Histogram and Table views are also possible. These options are presented as tabs located above the map. For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
@@ -83,13 +83,13 @@ The Data page has drop-down menus from which the user chooses:
 > **Output Score > Fisheries (FIS) > score**
 shows the final calculated score for the fisheries sub-goal in the current scenario (2013).
 
-![alt text](./fig/output_score_fisheries_score.png)
+![](./fig/output_score_fisheries_score.png)
 
 
 > **Input Layer > Mariculture > Mariculture species harvested**
 shows the different harvested species that were used to calculate the mariculture sub-goal in the current scenario (2013).
 
-![alt text](./fig/input_mariculture_harvested.png)
+![](./fig/input_mariculture_harvested.png)
 
 
 #### Output Score
@@ -119,7 +119,7 @@ If the user selects “Input Layer” as the variable type, they will be able to
 
 ### Map 
 The map displays data for every region as reported in the scenario.
-![alt text](./fig/map_view.png)
+![](./fig/map_view.png)
 
 Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
 
@@ -131,20 +131,20 @@ The histogram shows the distribution of the selected variable as the number of o
 > For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
 
 
-![alt text](./fig/histogram_view.png)
+![](./fig/histogram_view.png)
 
 
 ### Table
 The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
 
-![alt text](./fig/table_view.png)
+![](./fig/table_view.png)
 
 It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
 ## Goals Page
 Flower diagrams are used to visualize calculated scores for each region and the overall study area. The number in the center of the diagram is the overall score for the region, and each petal represents a goal or sub-goal. The length of each petal reflects the score for the goal or sub-goal. Goal and sub-goal scores are on a scale from 0 to 100, with 0 being worst (no visible petal) and 100 being best (petal length extends to the outer ring). This score is also written outside of the diagram along with the goal or sub-goal identifier. The width of the petal reflects the weighting of a goal or sub-goal relative to the other goals and sub-goals.  The default flower diagram displays each goal with equal weighting (10%), with sub-goals contributing equally to each goal (5%).
 
-![alt text](./fig/goals_view.png)
+![](./fig/goals_view.png)
 
 The Goals page allows the user to change the goal weights, influencing the overall score. While the score for each individual goal remains unchanged (the petal length stays the same), changing the relative contribution of each goal score does influence the overall index score (the petal width changes). For example, if a goal that scores poorly is assigned a bigger weight, this will cause the overall score to decrease.
 
@@ -153,13 +153,13 @@ To change goal weightings, use the mouse to slide the weights across any of the 
 ## Calculate Page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
 
-![alt text](./fig/calculate_view.png)  
+![](./fig/calculate_view.png)  
   
 
 ## Report Page
 The Report page allows the user to create a report of results as .html and .pdfs files.
 
-![alt text](./fig/reportpage_view.png)
+![](./fig/reportpage_view.png)
 
 It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
 
@@ -396,12 +396,12 @@ In this example, **ohi-global** is the assessment folder and **eez2013** is the 
 ### eez2013
 Each of the elements (files and folders) within `ohi-global/eez2013` are critical to the proper functioning of the Toolbox. All .csv files can be read with text editors or with Microsoft Excel or similar software.
 
-![alt text](./fig/ohiglobal_file_location.png)
+![](./fig/ohiglobal_file_location.png)
 
 ### layers.csv
 `layers.csv` is the registry that manages all data to be used in the Toolbox.
 
-![alt text](./fig/layers_csv_registry.png)
+![](./fig/layers_csv_registry.png)
 
 Each row of information represents a specific data layer that has been prepared and formatted properly for the Toolbox. The first columns contain information inputted by the user; other columns are generated later by the Toolbox App as it confirms data formatting and content. The first columns have the following information:
 
@@ -417,19 +417,15 @@ Each row of information represents a specific data layer that has been prepared 
 ### layers folder
 The layers folder contains every data layer as an individual .csv file. The names of the .csv files within the layers folder correspond to those listed in the *filename* column of the 'layers.csv' file described above.
 
-![alt text](./fig/layers_folder_location.png)
+![](./fig/layers_folder_location.png)
 
-Note that each .csv file within the 'layers' folder has a specific format that the Toolbox expects and requires. Comma separated value files (.csv files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software. 
-
-Here is an example of proper data formatting using the file *cc_acid_2013.csv*. Note the unique region identifier ('rgn_id') with a single associated pressure_score, and that the data are presented in ‘long format’ with minimal columns. Please see [Download this tutorial](http://www.nceas.ucsb.edu/~jstewart/HowTo_FormatDataForToolbox_v1.xlsx) for further details and instructions on data formatting requirements.
-
-![alt text](./fig/cc_acid_format_example.png)
+Note that each .csv file within the `layers` folder has a specific format that the Toolbox expects and requires. Comma separated value files (*.csv* files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software. Open a `layers/*.csv` file: note the unique region identifier (*rgn_id*) with a single associated *score* or *value*, and that the data are presented in ‘long format’ with minimal columns. Please see [this tutorial](http://www.nceas.ucsb.edu/~jstewart/HowTo_FormatDataForToolbox_v1.xlsx) for further details and instructions on data formatting requirements.
 
 
 ### conf folder
 This folder includes includes R functions (*config.R* and *functions.R*) and .csv files containing information that will be accessed by the R functions (*goals.csv*, *pressures_matrix.R*, *resilience_matrix.csv*, and *resilience_weights.csv*).
 
-![alt text](./fig/layers_folder_location_conf.png)
+![](./fig/layers_folder_location_conf.png)
 
 + **config.R** is an R script that configures labeling and constants appropriately.
 + **functions.R** contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in layers.csv. 
@@ -456,12 +452,12 @@ This page explains how to incorporate all of the [pre-Toolbox decisions](https:/
 
 The most common modifications you will make to your repository are changes with:
 
-- [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#data-layers)
+- [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-and-creating-data-layers)
 - [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-goal-models)
 - [removing goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#removing-goal-models)
 
 
-# Data layers
+## Modifying and creating data layers
 
 To modify existing or create new data layers, data must be appropriately [formatted](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx).  
   
@@ -471,7 +467,7 @@ To modify existing or create new data layers, data must be appropriately [format
 2. Register the layer in `layers.csv`
 3. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
 
-## Saving data layers in the *layers* folder
+### Saving data layers in the *layers* folder
 
 Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
 
@@ -481,7 +477,7 @@ When you modify existing or create new data layers, we recommend saving this as 
 
 ![alt text](./fig/layer_example_israel2014.png)
   
-## Registering data layers in *layers.csv*  
+### Registering data layers in *layers.csv*  
   
 When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
@@ -502,7 +498,7 @@ However, if a new layer has been added (for example when a new goal model is dev
 
 [under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
 
-# Modifying goal models
+## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
   
 **There are several steps to follow when working with goal models:**
@@ -510,13 +506,13 @@ In the discussion on data layers above, when an existing layer is still used as 
 1. Update `functions.r`
 2. Check and possibly update `goals.csv`
 
-## Update *functions.r*
+### Update *functions.r*
 
 To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. In RStudio, there is a navigation pane that can be used to navigate between them:
 
 ![alt text](./fig/navigation_functions.png)
 
-## Check and possibly update *goals.csv*
+### Check and possibly update *goals.csv*
 
 *goals.csv* provides input information for *functions.r*, particularly about goal weighting and function calls. It also includes descriptions about goals and sub-goals, which is presented in the Toolbox Application. 
 
@@ -532,7 +528,7 @@ Changing goal weights will be done here by editing the value in the *weight* col
 
 
 
-# Removing goal models
+## Removing goal models
 If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal:
 
 1. `functions.r`
@@ -542,7 +538,7 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 ![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
 
-## Example: Removing 'Carbon Storage' goal
+### Example: Removing 'Carbon Storage' goal
 1) Remove the CS goal model from `functions.r`:
 
 >> ![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
@@ -562,9 +558,9 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 
 
-# Examples:
+## Example modifications:
 
-## Adding a new layer to a goal model
+### Adding a new layer to a goal model
 
 In this example we will walk through the following steps:
 
@@ -585,10 +581,10 @@ In this example we will walk through the following steps:
 
 5. [develop]
 
-# Frequently asked questions
+## Frequently asked questions
 Please check the [frequently asked questions page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshootingfrequently_asked_questions.md)
 
-# Troubleshooting
+## Troubleshooting
 Please check the [troubleshooting page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshooting/toolbox_troubleshooting.md#toolbox-troubleshooting)
 
 
