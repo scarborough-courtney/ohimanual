@@ -1,4 +1,4 @@
-# Calculate regional assessment scores
+# Using the Toolbox for a Regional Assessment
 
 \*\* **Note: this page is under development**
 
@@ -8,7 +8,7 @@ The most common modifications you will make to your repository are changes with:
 
 - [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-and-creating-data-layers)
 - [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-goal-models)
-- [removing goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#removing-goal-models)
+- [removing goals](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#removing-goals)
 
 
 ## Modifying and creating data layers
@@ -17,11 +17,15 @@ To modify existing or create new data layers, data must be appropriately [format
   
 **There are several steps to follow when working with data layers:**
 
-1. Save the layer in the `layers` folder
-2. Register the layer in `layers.csv`
-3. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
+1. Create data layer with proper formatting
+2. Save the layer in the `layers` folder
+3. Register the layer in `layers.csv`
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
 
-### Saving data layers in the *layers* folder
+### Create data layers with proper formatting
+[develop]
+
+### Save data layers in the *layers* folder
 
 Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
 
@@ -29,9 +33,9 @@ Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]
   
 When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data.
 
-![alt text](./fig/layer_example_israel2014.png)
+![](./fig/layer_example_israel2014.png)
   
-### Registering data layers in *layers.csv*  
+### Register data layers in *layers.csv*  
   
 When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
@@ -48,7 +52,7 @@ However, if a new layer has been added (for example when a new goal model is dev
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
-## Checking pressures and resilience matrices
+### Check pressures and resilience matrices
 
 [under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
 
@@ -64,7 +68,7 @@ In the discussion on data layers above, when an existing layer is still used as 
 
 To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. In RStudio, there is a navigation pane that can be used to navigate between them:
 
-![alt text](./fig/navigation_functions.png)
+![](./fig/navigation_functions.png)
 
 ### Check and possibly update *goals.csv*
 
@@ -72,7 +76,7 @@ To incorporate a new data layer into a goal model, open `functions.R`: this scri
 
 Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
 
-![alt text](./fig/registering_goals.png)
+![](./fig/registering_goals.png)
 
 
 **When updating layers or goal models, it is important to ensure that information called from *goals.csv* is correct**: 
@@ -82,7 +86,7 @@ Changing goal weights will be done here by editing the value in the *weight* col
 
 
 
-## Removing goal models
+## Removing goals
 If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal:
 
 1. `functions.r`
@@ -95,19 +99,19 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 ### Example: Removing 'Carbon Storage' goal
 1) Remove the CS goal model from `functions.r`:
 
->> ![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
 
 2) Remove the CS row from `goals.csv`:
 
->> ![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
 
 3) Remove all CS rows from `pressures_matrix.csv`:
 
->> ![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
 
 4) Remove all CS rows from `resilience_matrix.csv`:
 
->> ![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
 
 
 
@@ -124,20 +128,16 @@ In this example we will walk through the following steps:
 4. update goal model in `functions.r`
 5. update goal call in `goals.csv`
 
-1. and 2. is done outside of the Toolbox
+1) and 2) is done outside of the Toolbox
 
 3. register in `layers.csv`
-![alt text](./fig/new_layer.png)
+
+![](./fig/new_layer.png)
 
 
 4. update goal model
-![alt text](./fig/functions_explained.png)
+
+![](./fig/functions_explained.png)
 
 5. [develop]
-
-## Frequently asked questions
-Please check the [frequently asked questions page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshootingfrequently_asked_questions.md)
-
-## Troubleshooting
-Please check the [troubleshooting page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshooting/toolbox_troubleshooting.md#toolbox-troubleshooting)
 

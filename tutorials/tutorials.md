@@ -1,22 +1,18 @@
 ---
-title: Tutorials for the Ocean Health Index
+title: The Ocean Health Index Toolbox Manual
 ---
 
-# The Ocean Health Index Manual
+# Introduction
   
 **The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by [Halpern et al. 2012](http://www.nature.com/nature/journal/v488/n7413/abs/nature11397.html) in *Nature*, we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** software that will enable others to conduct assessments on their own using the OHI framework. Here, the **Ocean Health Index Manual** describes how to use the Toolbox software.
 
 
 ## The Ocean Health Index Toolbox 
-**The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. The Toolbox can be used to calculate scores in smaller-scale **regional assessments** after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points.   
-
-The Toolbox runs on both a Mac and PC. 
-
-## Getting Started
+**The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. The Toolbox can be used to calculate scores in smaller-scale **regional assessments** after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points. The Toolbox runs on both a Mac and PC. 
   
 Modifications can be made to the global studies and to new regional studies, allowing calculation of scores with updated data and visualized with the Toolbox App. We recommend first exploring the results from the global assessment and becoming familiar with the Toolbox App before beginning a regional assessment.  
   
-### Exploring the results from the global assessment:
+## Exploring the results from the global assessment
 
 **Requirements**: an Internet connection for the initial Toolbox App installation.
 
@@ -24,7 +20,7 @@ Modifications can be made to the global studies and to new regional studies, all
 2. Launch the [Toolbox Application](http://ohi-science.org/pages/install.html).
 3. Explore global results [using the Toolbox App](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#using-the-ohi-toolbox-app)
 
-### Conducting a regional assessment:
+## Conducting a regional assessment
 
 
 **Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). 
@@ -36,7 +32,7 @@ Modifications can be made to the global studies and to new regional studies, all
 
 
 
-# Using the OHI Toolbox App
+# The Toolbox Application
 
 The Toolbox App runs through a web browser and has four page options: *Data*, *Goals*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Goals*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#goals-page) page summarizes the global data, and weights for various goals can be adjusted.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#calculate-page) page will calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#report-page) page provides different methods of reporting the data.  
   
@@ -167,6 +163,73 @@ It is currently possible to create flower plots and tables with several options,
 After the initial Toolbox setup, further launches of the Toolbox Application can be done without the software program R. Instead, PC users can double-click the `launchApp.bat` file and Mac users can double-click the `launchApp.command` file.
 
 
+# The Toolbox File System
+This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
+
+## Assessments and scenarios
+Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
+
+In this example, **ohi-global** is the assessment folder and **eez2013** is the scenario.
+
+![](./fig/ohiglobal_file_location.png)
+
+## *layers.csv*
+`layers.csv` is the registry that manages all data to be used in the Toolbox.
+
+![](./fig/layers_csv_registry.png)
+
+Each row of information represents a specific data layer that has been prepared and formatted properly for the Toolbox. The first columns contain information inputted by the user; other columns are generated later by the Toolbox App as it confirms data formatting and content. The first columns have the following information:
+
+ + **targets** indicates how the data layer related goals or dimensions. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
+ + **layer** is the identifying name of the data layer, which will be used in R scripts like `functions.R` and .csv files like `pressures_matrix.csv` and `resilience_matrix.csv`. This is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
+ + **name** is a longer title of the data layer; this is displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
+ + **description** is further description of the data layer; this is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
+ + **fld_value** indicates the units along with the units column.
+ + **units** some clarification about the unit of measure in which the data are reported
+ + **filename** is the .csv filename that holds the data layer information, and is located in the folder ‘layers’.
+ 
+ 
+## *layers* folder
+The `layers` folder contains every data layer as an individual .csv file. The names of the .csv files within the layers folder correspond to those listed in the *filename* column of the `layers.csv` file described above. All *.csv* files can be read with text editors or with Microsoft Excel or similar software.
+
+![](./fig/layers_folder_location.png)
+
+Note that each .csv file within the `layers` folder has a specific format that the Toolbox expects and requires. Comma separated value files (*.csv* files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software. Open a `layers/*.csv` file: note the unique region identifier (*rgn_id*) with a single associated *score* or *value*, and that the data are presented in ‘long format’ with minimal columns. Please see [this tutorial](http://www.nceas.ucsb.edu/~jstewart/HowTo_FormatDataForToolbox_v1.xlsx) for further details and instructions on data formatting requirements.
+
+
+## *conf* folder
+The `conf` folder includes includes R functions (*config.R* and *functions.R*) and .csv files containing information that will be accessed by the R functions (*goals.csv*, *pressures_matrix.R*, *resilience_matrix.csv*, and *resilience_weights.csv*).
+
+![](./fig/layers_folder_location_conf.png)
+
+### *config.r*
+`config.r` is an R script that configures labeling and constants appropriately.
+
+### *functions.r*
+`functions.r` contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in `layers.csv`. 
+
+### *goals.csv* 
+`goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
+
+### *pressures_matrix.csv*
+`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+
+### *resilience_matrix.csv*
+`resilience_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.
+
+### *resilience_weights.csv*
+`resilience_weights.csv` describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+
+## spatial folder 
+The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the GeoJSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
+
+## *calculate_scores.r*
+`calculate_scores.r` will run the Toolbox calculations using the .csv files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
+
+## scores.csv
+`scores.csv` is a record of the calculated scores for the assessment (Global 2013 scores). Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each reporting region, and are presented in ‘long’ format. 
+
+
 # Ocean Health Index Regional Assessments
 
 **Regional assessments** use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Scores by goal are calculated for each *region*, and regions are combined using a weighted average to produce the score for the overall area assessed, called a *study area*. In regional assessments, coastal states or provinces are often the *regions* within a country, which is the *study area*. 
@@ -201,7 +264,7 @@ Here are instructions to:
 
 
 
-# GitHub Repositories
+# Setting up the Toolbox for a Regional Assessment 
 
 ## OHI and GitHub 
 The Ocean Health Index (OHI) Toolbox is written in [R](http://cran.r-project.org/) and uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub), to develop and share software and data. GitHub has powerful versioning capabilities, which allows changes to be archived and tracked by each user. This is incredibly useful to not only document what work has been done, but how it differs from work done in the past, and who is responsible for the changes: it provides a record of all changes made. GitHub enables easy collaboration with others, including the OHI team. 
@@ -216,10 +279,10 @@ OHI has several **repositories** ('repos') where data and code are stored. From 
 
 #### GitHub flow with _Fork & Pull Model_
 
-|     | `http://github.com/ohi-science/[repo]` (web)  | `http://github.com/[user]/[repo]` (web) |   `~/Documents/github/[repo]` (local) |
+|     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
-| -> |                          | -> [fork](https://help.github.com/articles/fork-a-repo)            | -> [clone](https://help.github.com/articles/fetching-a-remote)    |
-| <- |  [merge pull request](https://help.github.com/articles/merging-a-pull-request) {admin} <-                           | <- [pull request](Fork & Pull Model) | <- [push](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio), <-> [commit](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) |
+| -> |                          | -> [fork](help.github.com/articles/fork-a-repo)            | -> [clone](help.github.com/articles/fetching-a-remote)    |
+| <- |  [merge pull request](help.github.com/articles/merging-a-pull-request) {admin} <-                           | <- [pull request](Fork & Pull Model) | <- [push](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio), <-> [commit](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) |
 
 where:
 * `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
@@ -232,16 +295,14 @@ This example illustrates GitHub's collaborative workflow with the `ohi-israel` r
 
 > > > ![](./fig/clone_push_pull.png)
 
-# Accessing GitHub repositories
+## Accessing GitHub repositories
 
 We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions [here](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_GitHub.md#accessing-repositories-without-github). We can always get your filesystem onto GitHub later. 
   
 
-### What is needed?
-
-> ![](./fig/overview_requirements.png)
+> ![software required for regional assessments with version control](./fig/overview_requirements.png)
 
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
@@ -312,7 +373,7 @@ cd ohi-israel
 3) [RStudio](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
 
 
-## Working locally
+### Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
 
 > ![](./fig/filepath.png)
@@ -320,7 +381,7 @@ All of the files available from the online server repository `https://github.com
 You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. 
 All changes within this folder will be tracked by GitHub when you commit and sync these changes, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
-## Committing and pushing changes locally
+### Committing and pushing changes locally
 
 Committing and pushing changes can be done using RStudio or the Github App.
 
@@ -347,9 +408,8 @@ The Github App can also be used to commit and sync any changes made locally in t
 > ![](./fig/github_app_notes.png)
 
 
-## Keeping syncronized
+### Keeping syncronized
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
-
 
 
 #### More Information
@@ -359,14 +419,11 @@ Always pull before pushing commits. This is the best way to avoid merging errors
 
 
 
-# Accessing repositories without GitHub
+## Accessing repositories without GitHub
 
 ### OHI regional assessments without GitHub
 It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend [accessing a repository with GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md) but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
 
-### What is needed?
-
-> ![](./fig/overview_requirements_R.png)
 
 ### Install the latest version of R
 Download [**R**](http://cran.r-project.org/) and install this on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
@@ -385,66 +442,7 @@ Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on you
 
 You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
 
-# File System
-This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
-
-## Assessments and scenarios
-Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
-
-In this example, **ohi-global** is the assessment folder and **eez2013** is the scenario.
-
-### eez2013
-Each of the elements (files and folders) within `ohi-global/eez2013` are critical to the proper functioning of the Toolbox. All .csv files can be read with text editors or with Microsoft Excel or similar software.
-
-![](./fig/ohiglobal_file_location.png)
-
-### layers.csv
-`layers.csv` is the registry that manages all data to be used in the Toolbox.
-
-![](./fig/layers_csv_registry.png)
-
-Each row of information represents a specific data layer that has been prepared and formatted properly for the Toolbox. The first columns contain information inputted by the user; other columns are generated later by the Toolbox App as it confirms data formatting and content. The first columns have the following information:
-
- + **targets** indicates how the data layer related goals or dimensions. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer** is the identifying name of the data layer, which will be used in R scripts like `functions.R` and .csv files like `pressures_matrix.csv` and `resilience_matrix.csv`. This is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **name** is a longer title of the data layer; this is displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **description** is further description of the data layer; this is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **fld_value** indicates the units along with the units column.
- + **units** some clarification about the unit of measure in which the data are reported
- + **filename** is the .csv filename that holds the data layer information, and is located in the folder ‘layers’.
- 
- 
-### layers folder
-The layers folder contains every data layer as an individual .csv file. The names of the .csv files within the layers folder correspond to those listed in the *filename* column of the 'layers.csv' file described above.
-
-![](./fig/layers_folder_location.png)
-
-Note that each .csv file within the `layers` folder has a specific format that the Toolbox expects and requires. Comma separated value files (*.csv* files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software. Open a `layers/*.csv` file: note the unique region identifier (*rgn_id*) with a single associated *score* or *value*, and that the data are presented in ‘long format’ with minimal columns. Please see [this tutorial](http://www.nceas.ucsb.edu/~jstewart/HowTo_FormatDataForToolbox_v1.xlsx) for further details and instructions on data formatting requirements.
-
-
-### conf folder
-This folder includes includes R functions (*config.R* and *functions.R*) and .csv files containing information that will be accessed by the R functions (*goals.csv*, *pressures_matrix.R*, *resilience_matrix.csv*, and *resilience_weights.csv*).
-
-![](./fig/layers_folder_location_conf.png)
-
-+ **config.R** is an R script that configures labeling and constants appropriately.
-+ **functions.R** contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in layers.csv. 
-+ **goals.csv** is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
-+ **pressures_matrix.csv** describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
-+ **resilience_matrix.csv** describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.
-+ **resilience_weights.csv** describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
-
-### spatial folder 
-The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the GeoJSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
-
-### calculate_scores.R
-This R script will run the Toolbox calculations using the .csv files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
-
-### scores.csv
-**scores.csv** is a record of the calculated scores for the assessment (Global 2013 scores). Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each reporting region, and are presented in ‘long’ format. 
-
-
-# Calculate regional assessment scores
+# Using the Toolbox for a Regional Assessment
 
 \*\* **Note: this page is under development**
 
@@ -454,7 +452,7 @@ The most common modifications you will make to your repository are changes with:
 
 - [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-and-creating-data-layers)
 - [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#modifying-goal-models)
-- [removing goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#removing-goal-models)
+- [removing goals](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#removing-goals)
 
 
 ## Modifying and creating data layers
@@ -463,11 +461,15 @@ To modify existing or create new data layers, data must be appropriately [format
   
 **There are several steps to follow when working with data layers:**
 
-1. Save the layer in the `layers` folder
-2. Register the layer in `layers.csv`
-3. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
+1. Create data layer with proper formatting
+2. Save the layer in the `layers` folder
+3. Register the layer in `layers.csv`
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
 
-### Saving data layers in the *layers* folder
+### Create data layers with proper formatting
+[develop]
+
+### Save data layers in the *layers* folder
 
 Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
 
@@ -475,9 +477,9 @@ Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]
   
 When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data.
 
-![alt text](./fig/layer_example_israel2014.png)
+![](./fig/layer_example_israel2014.png)
   
-### Registering data layers in *layers.csv*  
+### Register data layers in *layers.csv*  
   
 When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
@@ -494,7 +496,7 @@ However, if a new layer has been added (for example when a new goal model is dev
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
-## Checking pressures and resilience matrices
+### Check pressures and resilience matrices
 
 [under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
 
@@ -510,7 +512,7 @@ In the discussion on data layers above, when an existing layer is still used as 
 
 To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. In RStudio, there is a navigation pane that can be used to navigate between them:
 
-![alt text](./fig/navigation_functions.png)
+![](./fig/navigation_functions.png)
 
 ### Check and possibly update *goals.csv*
 
@@ -518,7 +520,7 @@ To incorporate a new data layer into a goal model, open `functions.R`: this scri
 
 Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
 
-![alt text](./fig/registering_goals.png)
+![](./fig/registering_goals.png)
 
 
 **When updating layers or goal models, it is important to ensure that information called from *goals.csv* is correct**: 
@@ -528,7 +530,7 @@ Changing goal weights will be done here by editing the value in the *weight* col
 
 
 
-## Removing goal models
+## Removing goals
 If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal:
 
 1. `functions.r`
@@ -541,19 +543,19 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 ### Example: Removing 'Carbon Storage' goal
 1) Remove the CS goal model from `functions.r`:
 
->> ![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
 
 2) Remove the CS row from `goals.csv`:
 
->> ![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
 
 3) Remove all CS rows from `pressures_matrix.csv`:
 
->> ![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
 
 4) Remove all CS rows from `resilience_matrix.csv`:
 
->> ![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
 
 
 
@@ -570,22 +572,18 @@ In this example we will walk through the following steps:
 4. update goal model in `functions.r`
 5. update goal call in `goals.csv`
 
-1. and 2. is done outside of the Toolbox
+1) and 2) is done outside of the Toolbox
 
 3. register in `layers.csv`
-![alt text](./fig/new_layer.png)
+
+![](./fig/new_layer.png)
 
 
 4. update goal model
-![alt text](./fig/functions_explained.png)
+
+![](./fig/functions_explained.png)
 
 5. [develop]
-
-## Frequently asked questions
-Please check the [frequently asked questions page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshootingfrequently_asked_questions.md)
-
-## Troubleshooting
-Please check the [troubleshooting page](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/toolbox_troubleshooting/toolbox_troubleshooting.md#toolbox-troubleshooting)
 
 
 # Frequently Asked Questions (FAQs)
@@ -594,161 +592,162 @@ This document provides answers to some frequently asked questions about conducti
 
 ## Overall
 
-### Conceptual
-**Q: Are regional assessment scores comparable with global assessment scores?**
+## Conceptual
+
+### Q: Are regional assessment scores comparable with global assessment scores?
 
 A: Regional Index scores cannot be directly compared to global Index scores, or to other regional Index scores calculated through separate efforts. This is because data and indicators (both what they measure and their quality), reference points (set using local knowledge and priorities), and specific goal models are often different for the areas being compared.
  
 However, because scores for each goal are scaled to a reference point, qualitative comparisons can be made. For example, a score of 71 in the US West Coast compared to 66 in Brazil says that the US West coast is closer to fully meeting its sustainable goals (i.e., meeting regional reference points). Furthermore, use of the same Ocean Health Index framework across regional assessments permits fruitful discussion and general comparisons even if data inputs differ. Ocean Health Index assessments at any scale always work within a standardized definition of ocean health, using information to capture the philosophy of the ten goals that have been identified (and undergone scientific peer-review) prior to compiling relevant data. Use of the ten-goal framework is important both to ensure that all aspects of ocean health are captured and to allow better comparison across regional assessments than would be possible if the different regions used different methods.
 
-**Q: Where is climate change measured in the Index?**
+### Q: Where is climate change measured in the Index?
 
 A: Four different aspects of climate change -- increases in sea surface temperature (SST), sea level rise (SLR), ultraviolet radiation (UV), and ocean acidification (OA) -- are included as pressures to many goals in the Index, including Natural Products, Carbon Storage, Coastal Protection, Sense of Place, Livelihoods & Economies and Biodiversity.  Mitigation of climate change through carbon storage is one of the ten goals.
 
-**Q: Why are food provision and artisanal fishing opportunities goals separated?**
+### Q: Why are food provision and artisanal fishing opportunities goals separated?
 
 A: These goals measure different aspects of how people relate to fishing. The catch of fish made by artisanal (=small-scale, subsistence type) fisheries is captured in the food provision goal. Jobs, wages and income from both the food provision and artisanal fishing goals are captured in the livelihoods & economies goal. The purpose of the artisanal fishing opportunity goal is to evaluate the opportunity for people to pursue this fishing in relation to their need to do so.  
 
-### Timing and Resources
+## Timing and Resources
 
-**Q: How much does it cost to produce a regional assessment?**
+### Q: How much does it cost to produce a regional assessment?
 
 A: Regional assessments can be completed at(varying costs depending on the local context.(Funds are needed for a management and scientific team, workshops and meetings (including travel), communications, policy engagement, and operating costs. Therefore, securing funding is an important component to satisfactorily complete the assessment. We encourage the development of a local proposal or strategic action plan that details a timeline of activities and the resources needed to accomplish them.
 
-**Q: How many people are required in a team?**
+### Q: How many people are required in a team?
 
 A: rather than a specific number of individuals, what is required are specific skillsets. For example, if the scientific analysts were capable of effectively conducting the R analysis, then a dedicated R analyst would not be required. In current assessments, teams range between 2 and 8 people.
 
-**Q: How long does it take to calculate OHI at a regional scale?**
+### Q: How long does it take to calculate OHI at a regional scale?
 
 A: This depends on many things: budget and number of people involved, the scale of the study area and whether new regions will need to be created, how easily data can be acquired, how much local data can be incorporated, how many goal models need to be changed. Additionally, decisions about setting reference points require input from experts.
 
-**Q: How much time will modifications by an R analyst take?**
+### Q: How much time will modifications by an R analyst take?
 
 A: This will depend on if you are changing any models, and potentially data layers--but a lot of changing data layers just requires registering them properly in layers.csv (and maybe pressures_matrix.csv and resilience_matrix.csv if they are pressures or resilience files) and having the functions.r file call those layers. That is more 'bookkeeping' than actual R programming. 
 
-**Q: How much time will modifications by a GIS analyst take?**
+### Q: How much time will modifications by a GIS analyst take?
 
 A: this will depend on how many layers you are processing: you are clipping spatial data? That will take some time because there are quite a few files, but maybe not too long since it is pretty small scale and once there is a clipping mask created I think you apply it to other files. 
 
-**Q: Which goals require a GIS analyst?**
+### Q: Which goals require a GIS analyst?
 
 A: All goals using spatial data could potentially require a GIS analyst. These goals are commonly: habitat-based goals and sub-goals: (Coastal Protection, Carbon Storage, Habitats—a sub-goal of Biodiversity), Food Provision, Sense of Place, Species—a sub-goal  of Biodiversity, Clean Waters
 
-### Structure
+## Structure
 
-**Q: Can we remove or add goals to the OHI?**
+### Q: Can we remove or add goals to the OHI?
 A: A lot of deliberation went into defining the ten goals, and they seem to do a pretty good job of covering many if not most ocean uses, so additional goals may not be necessary. But it could be that they eclipse or replace an existing goal. 
 
-### Reference points
+## Reference points
 
-**Q: Can planning targets can be used as the reference points?**
+### Q: Can planning targets can be used as the reference points?
 
 A: Yes, planning targets can be used as reference points. This won't be appropriate for every goal, but there are cases where this seemed best (example: iconic species sub-goal in the global assessment, mariculture sub-goal in the US West Coast assessment). 
 
-**Q: What is sector evenness?**
+### Q: What is sector evenness?
 
 A: Sector evenness (also called a diversity index) is an economic concept that is included in OHI to enable comparison across many different sectors included in the Livelihoods & Economies goal. This goal evaluates jobs, wages and revenues for nine marine employment sectors. The distribution of employment across these nine sectors is an effective indicator of resilience. If total employment within a community is primarily based in one or two sectors, the overall economic system will be excessively vulnerable to downturns in those sectors.  Conversely, if employment is spread relatively evenly throughout all nine sectors, the overall system will be more robust and resistant to such disturbances. Overall revenue within the community will remain more stable during such downturns, and workers displaced by a downturn in their sector may be able to find employment in another sector without leaving the community. 
 
-### Appropriate data layers
+## Appropriate data layers
 
-**Q: Shipping and port activity are hardly affected by the health of the ecosystem. Why are these included in the Index?**
+### Q: Shipping and port activity are hardly affected by the health of the ecosystem. Why are these included in the Index?
 
 A: Shipping and port activity are included as pressures only
 
-**Q: Can oil spills be included in OHI?**
+### Q: Can oil spills be included in OHI?
 
 A: Yes, oil spills could be included as a pressure and in the Clean Waters goal.
 
-**Q: Is seasonal (non-permanent) sea ice included in OHI habitats?**
+### Q: Is seasonal (non-permanent) sea ice included in OHI habitats?
 
 A: No, sea ice only includes permanent sea ice.
 
-**Q: Can seaweeds be included in the Carbon Storage goal?**
+### Q: Can seaweeds be included in the Carbon Storage goal?
 
 A: Because they store carbon for less than 100 years, seaweeds and corals are not included in the carbon storage goal. While the pelagic oceanic carbon sink (phytoplankton) plays a large role in the sequestration of anthropogenic carbon, the pelagic ocean mechanisms are not amenable to local or regional management intervention. Phytoplankton and contribute to carbon fixation when they die and sink to the sea bottom at sufficient depth, because it is effectively out of circulation. However, if those phytoplankton are eaten, the carbon is cycled back into the system and not sequestered. Something that could potentially be included in the carbon storage goal is mollusc shells, if they are added to a landfill and not recycled in the sea. So if information on mariculture production and waste disposal are available, this could be an interesting addition to carbon storage at a regional scale.
 
-**Q: Is coastal engineering included in Coastal Protection? What if it reduces erosion?**
+### Q: Is coastal engineering included in Coastal Protection? What if it reduces erosion?
 
 A: We did not include an assessment of the protection afforded by  man-made structures, such as jetties and seawalls, because these structures cannot be preserved without maintenance, may have other negative side effects (e.g. alter sedimentation rates causing erosion in new locations), thus they do not constitute long-term sustainable services. 
 Coastal engineering (jetties, harbours, marina and breakwater) is not natural, and is mostly seen as a pressure. It will also be evident in the status of due to decreased natural habitat. It gets tricky when structures are built to help reduce coastal erosion--they are still manmade and therefore not a natural benefit that the ocean provides. But if available data allow, it might be possible to include tradeoff effects: maybe in areas where natural habitats are degraded and man-made structures have been built to reduce erosion, we could reduce the pressure that would otherwise be applied.
 
-**Q: How is seawater used for cooling on-shore power plants incorporated into OHI?**
+### Q: How is seawater used for cooling on-shore power plants incorporated into OHI?
 
 A: The use of cooling water for on-shore power plants would be a pressure on the ocean, since it causes entrapment of fishes, larvae, etc, and usually is circulated back into the ocean at higher temperatures (and maybe other chemicals, minerals, etc). Since the energy is coming from land-based activities, there isn't a service that the ocean is providing that 'benefits' people, it is only a pressure from the OHI perspective.
 
-**Q: How is freshwater production through desalination incorporated into OHI?**
+### Q: How is freshwater production through desalination incorporated into OHI?
 
 A: Desal would be incorporated into OHI in several places. The benefit is that there is freshwater produced, which could be incorporated into the Natural Products goal (or potentially into its own goal). Data required would be the volume of freshwater created based on the volume of seawater involved and spatial extent. Setting the reference point would not be based on how much can be produced, but some other targets perhaps set by government (percentage of the population served). 
 Similar to the mariculture sub-goal and tourism goals, any negative effects caused by desal that affect other goals (example: species) do not influence the ability to obtain desalination targets now and in the future. Therefore, the sustainability coefficient only measures the ability to sustain that goal, but not the impacts on other goals: instead, they are taken into account as pressures when calculating the other goals. Desal should be included as a pressure similar to cooling on-shore power plants since the discharge brine is dense, doesn't plume very well and there are chemicals involved. 
 
-### Food Provision
+## Food Provision
 
-**Q: Could the culture of marine fish in closed pools on-shore be included in the Mariculture sub-goal?**
+### Q: Could the culture of marine fish in closed pools on-shore be included in the Mariculture sub-goal?
 
 A: This should not be included because onshore aquaculture does not require a marine environment.
 
-**Q: Can aquaculture farms that receive seawater supply and return seawater back to the sea be included in the food provision goal?**
+### Q: Can aquaculture farms that receive seawater supply and return seawater back to the sea be included in the food provision goal?
 
 A: This would be more appropriately included in the Mariculture sub-goal, and with finer-scale data additional pressures due to the intake pipes and the processed brine back into the marine system could be incorporated as well. 
 Natural Products
 
-**Q: If natural products are all produced through on-land aquaculture, should this goal be removed?**
+### Q: If natural products are all produced through on-land aquaculture, should this goal be removed?
 
 A: In this case you would probably have good reason to exclude the natural product goal due if this was defendable through discussions with experts and any reports/papers on the topic. This would also depend on the origin of these natural products--are they from the region’s waters?
 Habitat-based goals
 
-**Q: How is coral health calculated?**
+### Q: How is coral health calculated?
 
 A: Coral health was estimated by compiling point data from multiple studies of percent live coral cover. In other words, estimates of coral cover within transects of certain sites were repeated in time and we used that rate of change in time as an indication of health of the reefs in the whole region. The difficulty lies in 1) having enough different locations sampled that you can say something about the whole region and 2) finding studies that did repeated measures in time, in the same location, over at least 20 years. In the Global 2013 assessment, there were so few datasets that satisfied this condition that we had to pool observations from different locations. 
 
-**Q: Is it possible to calculate habitat goals when there is only one year of habitat data?**
+### Q: Is it possible to calculate habitat goals when there is only one year of habitat data?
 
 A: With only one year of habitat data, it is not possible to calculate the trend (which requires 5 years of data). Instead, it might be best to use the available habitat data to calculate the current status and then to overlay pressures for the last 5 years to calculate trend. 
 
-### Livelihoods & Economies
+## Livelihoods & Economies
 
-**Q: Benefits gained from Wild-caught fisheries, Mariculture, Tourism & Recreation are included in specific goals. Why are these counted again in Livelihoods & Economies?**
+### Q: Benefits gained from Wild-caught fisheries, Mariculture, Tourism & Recreation are included in specific goals. Why are these counted again in Livelihoods & Economies?
 
 A: The quantity of fish, mariculature, and participation in T&R are considered separately in goals whereas the monetary component is captured in L&E.
 
-**Q: Why are revenue data from shipping, boat building, ports and harbors included as revenue? Do these activities rely on a healthy ocean?**
+### Q: Why are revenue data from shipping, boat building, ports and harbors included as revenue? Do these activities rely on a healthy ocean?
 
 A: These sectors are included in the Ocean Health Index because the demand for some of those boats (fishing boats, sailboats, yachts) is dependent on a healthy ocean.
 
-**Q: Why isn’t oil and gas industries included in revenue?**
+### Q: Why isn’t oil and gas industries included in revenue?
 
 A: The Natural Products goal does not include non-living items such as oil, gas, and mining products, because these practices are not considered to be sustainable. They are also done at such large scales that including them would essentially make OHI an index for oil and mining--and they are not truly an ocean product. Because these products are not included in terms of quantity extracted, it did not seem appropriate to include information regarding jobs, wages or revenue. 
 
-### Tourism & Recreation
+## Tourism & Recreation
 
-**Q: How do I calculate the sustainability term for T&R?**
+### Q: How do I calculate the sustainability term for TR?
 
 A: The best way is to use a local indicator or measure of tourism sustainability or competitiveness, otherwise use the TTCI value from the Global 2013 assessment for the study area (applied evenly across all regions.
 
-### Natural Products
+## Natural Products
 
-**Q: Where do Natural Products come from?**
+### Q: Where do Natural Products come from?
 
 A: In the global assessments, Natural Products data come from the UN’s Food and Agriculture Administration (www.fao.org/fishery/statistics/software/fishstatj/en). These data are compiled and reported by product for each country, and available by downloading the FishStatJ software.
 
-### Sense of Place
+## Sense of Place
 
-**Q: Data are only available for marine protected areas, not terrestrial protected areas. Can we still calculate the Lasting Special Places sub-goal?**
+### Q: Data are only available for marine protected areas, not terrestrial protected areas. Can we still calculate the Lasting Special Places sub-goal?
 
 A: Yes, it is possible to calculate only the marine component of this sub-goal: this is not ideal but OHI is flexible to work with the data available.
 
-### Pressures
+## Pressures
 
-**Q: How are single ecological pressures (si in Equation S8) calculated?**
+### Q: How are single ecological pressures (si in Equation S8) calculated?
 
 A: Data included in pressures calculations are accessed in the same manner as any other data layer, and rescaled from 0-1 with an appropriate reference point. For further information, see HowTo_GatherAppropriateData and HowTo_CalculatePressures from ohi-science.org.
 
-**Q: Does the pressures matrix need to be changed?**
+### Q: Does the pressures matrix need to be changed?
 
 A: It is likely that the pressures matrix will not need to be changed. The weights assigned in the matrix were set using information from the literature and by experts; the matrix was created by Halpern et al. 2012. 
 
-**Q: How is commercial high and low bycatch calculated?**
+### Q: How is commercial high and low bycatch calculated?
 
 A: Commercial high and low bycatch are categorical values that were set based on fishing gear type. This began as a list of gear types used, producing a range of potential bycatch frequencies (from local reports when possible), which can be rescaled.
 

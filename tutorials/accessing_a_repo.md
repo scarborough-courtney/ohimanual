@@ -1,13 +1,11 @@
-# Accessing GitHub repositories
+## Accessing GitHub repositories
 
 We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions [here](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_GitHub.md#accessing-repositories-without-github). We can always get your filesystem onto GitHub later. 
   
 
-### What is needed?
-
-> ![](./fig/overview_requirements.png)
+> ![software required for regional assessments with version control](./fig/overview_requirements.png)
 
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
@@ -78,7 +76,7 @@ cd ohi-israel
 3) [RStudio](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
 
 
-## Working locally
+### Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
 
 > ![](./fig/filepath.png)
@@ -86,7 +84,7 @@ All of the files available from the online server repository `https://github.com
 You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. 
 All changes within this folder will be tracked by GitHub when you commit and sync these changes, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
-## Committing and pushing changes locally
+### Committing and pushing changes locally
 
 Committing and pushing changes can be done using RStudio or the Github App.
 
@@ -113,9 +111,8 @@ The Github App can also be used to commit and sync any changes made locally in t
 > ![](./fig/github_app_notes.png)
 
 
-## Keeping syncronized
+### Keeping syncronized
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
-
 
 
 #### More Information

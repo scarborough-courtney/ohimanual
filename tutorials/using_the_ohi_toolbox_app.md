@@ -1,4 +1,4 @@
-# Using the OHI Toolbox App
+# The Toolbox Application
 
 The Toolbox App runs through a web browser and has four page options: *Data*, *Goals*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Goals*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#goals-page) page summarizes the global data, and weights for various goals can be adjusted.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#calculate-page) page will calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/using_the_ohi_toolbox_app.md#report-page) page provides different methods of reporting the data.  
   

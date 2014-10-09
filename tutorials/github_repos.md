@@ -1,4 +1,4 @@
-# GitHub Repositories
+# Setting up the Toolbox for a Regional Assessment 
 
 ## OHI and GitHub 
 The Ocean Health Index (OHI) Toolbox is written in [R](http://cran.r-project.org/) and uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub), to develop and share software and data. GitHub has powerful versioning capabilities, which allows changes to be archived and tracked by each user. This is incredibly useful to not only document what work has been done, but how it differs from work done in the past, and who is responsible for the changes: it provides a record of all changes made. GitHub enables easy collaboration with others, including the OHI team. 
@@ -13,10 +13,10 @@ OHI has several **repositories** ('repos') where data and code are stored. From 
 
 #### GitHub flow with _Fork & Pull Model_
 
-|     | `http://github.com/ohi-science/[repo]` (web)  | `http://github.com/[user]/[repo]` (web) |   `~/Documents/github/[repo]` (local) |
+|     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
-| -> |                          | -> [fork](https://help.github.com/articles/fork-a-repo)            | -> [clone](https://help.github.com/articles/fetching-a-remote)    |
-| <- |  [merge pull request](https://help.github.com/articles/merging-a-pull-request) {admin} <-                           | <- [pull request](Fork & Pull Model) | <- [push](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio), <-> [commit](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) |
+| -> |                          | -> [fork](help.github.com/articles/fork-a-repo)            | -> [clone](help.github.com/articles/fetching-a-remote)    |
+| <- |  [merge pull request](help.github.com/articles/merging-a-pull-request) {admin} <-                           | <- [pull request](Fork & Pull Model) | <- [push](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio), <-> [commit](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) |
 
 where:
 * `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.

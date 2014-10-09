@@ -11,16 +11,16 @@ library(stringr)
 stopifnot(file.copy('~/github/ohimanual/README.md', file.path('~/github/ohimanual/tutorials/README.md'), overwrite=T))
 
 # set variables ----
-title = 'Tutorials for the Ocean Health Index'
+title = 'The Ocean Health Index Toolbox Manual'
 wd = '~/github/ohimanual/tutorials'
 in_md = c(
   'README.md',
   'using_the_ohi_toolbox_app.md',
+  'file_system.md',
   'regional_assessments_intro.md',
   'github_repos.md',
   'accessing_a_repo.md',
   'accessing_a_repo_without_GitHub.md',
-  'file_system.md',
   'calculate_regional_assessment_score.md',
   'frequently_asked_questions.md',
   'toolbox_troubleshooting.md')
