@@ -28,7 +28,7 @@ Your edits will be reviewed and merged into the documents by the file owner.
 
 ### RMarkdown with RStudio
 
-To get started writing in Rmarkdown, first, [update R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#getting-started).  
+To get started writing in Rmarkdown, first, [update R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo_with_github.md#getting-started).  
 Then, in RStudio, install `Rmarkdown` (which also installs the required `pandoc`) with the pull-down menu or by pasting this into the console:
 
 ```

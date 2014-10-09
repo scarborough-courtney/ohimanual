@@ -15,19 +15,39 @@ title = 'The Ocean Health Index Toolbox Manual'
 wd = '~/github/ohimanual/tutorials'
 in_md = c(
   'README.md',
-  'using_the_ohi_toolbox_app.md',
+  'toolbox_app_overview.md',
+  'explore_global_results.md',
+  'regional_assessment_intro.md',
+  'conduct_regional_assessment.md',
+  'install_tbx_regional_assessment.md',
+  'accessing_a_repo_with_github.md',
+  'accessing_a_repo_without_github.md',
   'file_system.md',
-  'regional_assessments_intro.md',
-  'github_repos.md',
-  'accessing_a_repo.md',
-  'accessing_a_repo_without_GitHub.md',
-  'calculate_regional_assessment_score.md',
+  'use_tbx_regional_assessment.md',
   'frequently_asked_questions.md',
   'toolbox_troubleshooting.md')
-out_md = 'tutorials.md'
+out_md = 'ohi-manual.md'
 
 
 # cleanup original ----
+
+## rename some .md files
+for (f in list.files(getwd(), glob2rx('*.md'))){
+  
+  s = readLines(f, warn=F, encoding='UTF-8')
+  # s = str_replace_all(s, fixed('using_the_ohi_toolbox_app.md'), fixed('toolbox_app_overview.md'))
+  # s = str_replace_all(s, fixed('accessing_a_repo_without_GitHub.md'), fixed('accessing_a_repo_without_github.md'))   
+  # s = str_replace_all(s, fixed('accessing_a_repo.md'), fixed('accessing_a_repo_with_github.md')) 
+#   s = str_replace_all(s, fixed('calculate_regional_assessment_score.md'), fixed('use_tbx_regional_assessment.md')) 
+#   s = str_replace_all(s, fixed('regional_assessments_intro.md'), fixed('conduct_regional_assessment.md')) 
+#   s = str_replace_all(s, fixed('conduct_regional_assessment.md'), fixed('regional_assessments_intro.md')) 
+# s = str_replace_all(s, fixed('regional_assessments_intro.md'), fixed('regional_assessment_intro.md'))  
+s = str_replace_all(s, fixed('github_repos.md'), fixed('install_tbx_regional_assessment.md')) 
+  writeLines(s, f)  
+  
+}
+
+
 
 # rename *.png
 setwd('~/github/ohimanual/tutorials/fig')
@@ -44,7 +64,7 @@ for (f in list.files(getwd(), glob2rx('*.md'))){
   
 }
 
-# update .md paths in *.md
+# move contents of /toolbox_manual/ folder out
 for (f in list.files(getwd(), glob2rx('*.md'))){
   
   s = readLines(f, warn=F, encoding='UTF-8')
@@ -52,6 +72,7 @@ for (f in list.files(getwd(), glob2rx('*.md'))){
   writeLines(s, f)  
   
 }
+
 
 # helper functions ----
 cat_md = function(

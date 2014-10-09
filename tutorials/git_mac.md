@@ -27,5 +27,5 @@ Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools opt
   
   ![](./fig/terminal_pico.png)
   
-After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#set-up-your-git-identity)
+After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_with_github.md#set-up-your-git-identity)
 

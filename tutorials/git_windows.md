@@ -6,4 +6,4 @@ When running the Windows installer, use all default options except "Adjusting yo
   
 ![](./fig/git_install_win_option.png)
   
-After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo.md#set-up-your-git-identity)
+After installing, follow the instructions for [setting up your Git Identity](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_with_github.md#set-up-your-git-identity)

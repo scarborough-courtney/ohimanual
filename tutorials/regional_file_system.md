@@ -3,7 +3,7 @@
 
 
 ## Regional Evaluation File System
-Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China will have a repository called ohi-china from which the regional evaluation will be conducted.
+Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo_with_github.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China will have a repository called ohi-china from which the regional evaluation will be conducted.
 
 ![alt text(./fig/assessment_location.png)
 
