@@ -6,6 +6,18 @@ Most time spent before using the Toolbox. Here is a checklist of things that mus
 
 Task Timeline.
 
+* Goals:
+    + which goals to include? 
+    + how will the goals be weighted?
+* Spatial scale:
+    + what are the regions within the study area?
+* Data:  
+    + which data layers can be updated?
+    + which data layers must be changed to develop new goal models?
+* Goal models:
+    + develop any goal models with the best available data
+
+
 ## develop
 
 Regional assessments require a qualified team to tailor the Ocean Health Index for the study area; there are many decisions to make and data to gather from disparate sources. The Toolbox can be used to do all of the calculations for the assessment, but it is only after all other items have been accomplished:
