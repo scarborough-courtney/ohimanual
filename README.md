@@ -6,8 +6,6 @@
 
 OHI scores by goal are calculated at the scale of the reporting unit, which is called a **region** and then combined using a weighted average to produce the score for the overall area assessed, called a **study area**. 
 
-Each data component that is included in the OHI is called a **data layer** because it will be combined with others to create the most complete picture of ocean health. Each data layer is scaled from 0-1 to be combined with others on the same unitless scale. This is true for all data used to model status, trend, pressures, and resilience.
-
 
 ## The Ocean Health Index Toolbox
 **The OHI Toolbox** runs using the statistical programming language R, and the **Toolbox Application (App)** displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. The Toolbox can be used to calculate scores in smaller-scale **regional assessments** after all data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points. The Toolbox runs on both a Mac and PC. 

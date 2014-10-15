@@ -1,6 +1,11 @@
 ## Discovering and Gathering Appropriate Data
 
-The Ocean Health Index (OHI) spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. 
+The Ocean Health Index (OHI) spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity.  
+
+
+Index scores are a reflection of data quality, and thus accessing the best data available is of highest importance. Data from existing environmental, social, and economic indicators may be used. All data will be rescaled to specific reference points (targets) before being combined; therefore setting these reference points at the appropriate scale is a fundamental component of any Ocean Health Index assessment. This requires the regional assessment team to interpret the philosophy of each Index goal and sub-goal using the best available data and indicators.  
+
+Ocean Health Index scores can be recalculated annually as new data become available. This can establish a baseline of ocean health and serve as a monitoring mechanism to evaluate the effectiveness of actions and policies in improving the status of overall ocean health. This is good to keep in mind while looking for data: will it be available again in the future? It is also important to document the sources of all data so that it is both transparent where it came from and so that you will be able to find it again in the future. 
 
 
 ### Data gathering responsibilities
@@ -28,11 +33,11 @@ Four requirements to remember when investigating (or ‘scoping’) potential da
 3. spatial scale
 4. temporal scale. 
 
-#### 1. Relevance to ocean health
+#### Relevance to ocean health
 
 There must be a clear connection between the data and ocean health, and determining this will be closely linked to each goal model.
 
-#### 2.  Reference point
+#### Reference point
 
 As each data layer must be scaled to a reference point, as you consider different data sources it is important to think about or identify what a reasonable reference point may be. Ask the following types of questions as you explore data possibilities:
 
@@ -41,11 +46,11 @@ As each data layer must be scaled to a reference point, as you consider differen
   * Would a historic target be appropriate?
   * Could a region within the study area be set as a spatial target?
   
-#### 3.  Appropriate spatial scale
+#### Appropriate spatial scale
 
 Data must be available for every region within the study area.*
 
-#### 4.  Appropriate temporal scale
+#### Appropriate temporal scale
 
 Data must be available for at least five years to calculate the trend. Longer time series are preferable because this can be used to set temporal reference points.*
 
