@@ -105,6 +105,7 @@ If the user selects “Input Layer” as the variable type, they will be able to
 
 ### Map 
 The map displays data for every region as reported in the scenario.
+
 ![](./fig/map_view.png)
 
 Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
@@ -115,7 +116,6 @@ The target and dimension chosen from the drop-down menu is also displayed as tex
 The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading). 
 
 > For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
-
 
 ![](./fig/histogram_view.png)
 
