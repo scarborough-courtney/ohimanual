@@ -53,7 +53,7 @@ For all visualization options, statistics and metadata are displayed below the d
 
 ### Overview of variable options
 
-The Data page has drop-down menus from which the user chooses:
+The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
 
 1. **variable type**
     + *Output Score: the calculated score*
