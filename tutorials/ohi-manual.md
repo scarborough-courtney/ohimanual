@@ -32,7 +32,7 @@ The scenario is displayed in the upper-right corner of the Data page. This ident
 
 ## Data Page
 ### Overview of display options
-The Data Page displays input data or calculated scores for each goal parameter and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view as the default display option for the Data page).
+The Data Page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
 
   * Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:
   
