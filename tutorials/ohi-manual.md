@@ -27,15 +27,14 @@ Modifications can be made to the global studies and to new regional studies, all
 
 # Overview of the OHI Toolbox App
 
-The Toolbox Application (App) runs through a web browser and has three page options: *Data*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened.  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#calculate-page) page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#report-page) page provides different methods of reporting the data.  
+The Toolbox Application (App) runs through a web browser and has three page options: *Data*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*).  The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#calculate-page) page will calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#report-page) page provides different methods of reporting the data.  
   
 The scenario is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
   
 ![](./fig/homepage_view.png)
 
 ## Data Page
-### Overview of display options
-The Data Page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
+The Data page displays input data or calculated scores for each goal parameter and presents the information as a Map, Histogram, or Table.
 
   * Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:
   
@@ -49,14 +48,12 @@ The Data Page displays input data or calculated scores for each goal parameter, 
   
 ![](./fig/tablepage_view.png)
 
-
-For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
-
-**Insert figure here**
+### Overview of display options
+The default display option for the Data page is Map view; Histogram and Table views are also possible. These options are presented as tabs located above the map. For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
 
 ### Overview of variable options
 
-The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
+The Data page has drop-down menus from which the user chooses:
 
 1. **variable type**
     + *Output Score: the calculated score*
@@ -161,13 +158,14 @@ It is currently possible to create flower plots and tables with several options,
 
 # Introduction to OHI Regional Assessments
 
-**Regional assessments** use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Scores by goal are calculated for each *region*, and regions are combined using a weighted average to produce the score for the overall area assessed, called a *study area*. In regional assessments, coastal states or provinces are often the *regions* within a country, which is the *study area*. 
+**Regional assessments** use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities.  
+
+Scores by goal are calculated for each **region**, and regions are combined using a weighted average to produce the score for the overall area assessed, called a **study area**. In regional assessments, coastal states or provinces are often the **regions** within a country, which is the **study area**. 
 
 ![](./fig/global_v_brazil_map.png)
 
-Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. Regional assessments have been published in peer-review journals for the U.S. West Coast and for Brazil, and more are underway.   
+Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589) ), and more are underway.   
 
-## develop
 
 # Conducting a Regional Assessment
 
@@ -180,15 +178,13 @@ The Ocean Health Index framework is flexible to accommodate regional priorities:
 
 There are key considerations and processes that will be a part of every regional assessment, however, how each regional assessment is conducted will be unique depending on the local context. For example: what data and indicators are available will determine how goal models are able to be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment. 
 
-### Timing 
-
 The time required to complete a regional assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
 
 **Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time alloted for the regional assessment**. 
 
 ![](./fig/task_timeline.png)  
     
-### What is provided  
+## What is provided  
 
 The Ocean Health Index Toolbox can be used to calculate scores for regional assessments. When you begin a regional assessment, you will be provided with a set of Toolbox files and software scripts specific to your study area. The data in the files provided serve as a template: they are the data used in the global assessments, extracted for your study area. These data files will need to be updated with locally available data and indicators so as to give a more fine-scale assessment of ocean health in your study area. However, if better data are not available, it is possible to use the files provided.  
 
@@ -203,7 +199,8 @@ Most of the time spent while conducting a regional assessment occurs before usin
     + understand what pressures and resilience are included 
     + understand how reference points are set
 * Develop strategic plan and timeline
-    + 
+    + determine resources available
+    + outline timeline with any meetings and workshops necessary
     + engage management early for results to be most useful (optional)
 * Assemble a qualified team with diverse skills
     + have a broad scientific understanding and experience with environmental policy
@@ -217,9 +214,11 @@ Most of the time spent while conducting a regional assessment occurs before usin
     + should other goals be added?
     + should goals be weighted unequally? 
     + what are pressures to the local system?
-    + what resilience measures (laws, regulations) are in place?
+    + what resilience measures (laws, regulations) are in place locally?
     + what local cultural preferences or priorities should be captured in the assessment? 
-* Decide the spatial scale for regions within the study area
+* Decide the spatial scale for regions within the study area 
+    + we recommend multiple regions
+    + regions within the study area should be at the smallest scale the data allow
     + in what spatial scale are data most frequently reported?
     + in what spatial scale are policy decisions made (optional)?
 * Discover and gather appropriate data and indicators
@@ -240,17 +239,29 @@ Most of the time spent while conducting a regional assessment occurs before usin
 
 ## Discovering and Gathering Appropriate Data and Indicators
 
-The Ocean Health Index (OHI) spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. There are many decisions to make when gathering from disparate sources, deciding reference points, and developing goal models.
+The OHI spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. There are many decisions to make when gathering from disparate sources, deciding reference points, and developing goal models.
 
 
-Index scores are a reflection of data quality, and thus accessing the best data available is of highest importance. Data from existing environmental, social, and economic indicators may be used. All data will be rescaled to specific reference points (targets) before being combined; therefore setting these reference points at the appropriate scale is a fundamental component of any Ocean Health Index assessment. This requires the regional assessment team to interpret the philosophy of each Index goal and sub-goal using the best available data and indicators.  
+**Index scores are a reflection of data quality, and thus accessing the best data and indicators available is of highest importance**. 
 
-Ocean Health Index scores can be recalculated annually as new data become available. This can establish a baseline of ocean health and serve as a monitoring mechanism to evaluate the effectiveness of actions and policies in improving the status of overall ocean health. This is good to keep in mind while looking for data: will it be available again in the future? It is also important to document the sources of all data so that it is both transparent where it came from and so that you will be able to find it again in the future. 
+Existing data and indicators can be gathered from many sources across environmental, social, and economic disciplines, including:
+
+* government reports
+* government websites
+* academic literature
+* masters and PhD theses
+* university websites
+* non-profit organizations
+
+All data will be rescaled to specific reference points (targets) before being combined; therefore setting these reference points at the appropriate scale is a fundamental component of any OHI assessment. This requires the regional assessment team to interpret the philosophy of each Index goal and sub-goal using the best available data and indicators.  
 
 
 ### Data gathering responsibilities
 
 Gathering appropriate data requires searching for and accessing freely-available data. It is important that team members responsible for data discovery make thoughtful decisions about whether data are appropriate for the regional assessment, and that they also get feedback from the full team to discuss the merits of different data sources. Data discovery and acquisition can be quite an iterative process, as there are both practical and philosophical reasons for including or excluding data, in addition to requiring access to the data.
+
+Index scores can be recalculated annually as new data become available. This can establish a baseline of ocean health and serve as a monitoring mechanism to evaluate the effectiveness of actions and policies in improving the status of overall ocean health. This is good to keep in mind while looking for data: will it be available again in the future? It is also important to document the sources of all data so that it is both transparent where it came from and so that you will be able to find it again in the future. 
+
 
 ### The process of data discovery
 
