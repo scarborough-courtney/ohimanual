@@ -106,13 +106,13 @@ The table displays the target value for each region and the overall study area. 
 It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
 
-## Calculate Page
+## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
 
 ![](./fig/calculate_view.png)  
   
 
-## Report Page
+## Report page
 The Report page allows the user to create a report of results as .html and .pdfs files.
 
 ![](./fig/reportpage_view.png)
