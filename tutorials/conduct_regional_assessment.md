@@ -1,10 +1,5 @@
 # Conducting a Regional Assessment
 
-The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. 
-
-**The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
-  
-
 ## What to expect when conducting a regional assessment
 
 There are key considerations and processes that will be a part of every regional assessment, however, how each regional assessment is conducted will be unique depending on the local context. For example: what data and indicators are available will determine how goal models are able to be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment. 
@@ -17,28 +12,38 @@ The time required to complete a regional assessment depends on the local context
     
 ## What is provided  
 
-The Ocean Health Index Toolbox can be used to calculate scores for regional assessments. When you begin a regional assessment, you will be provided with a set of Toolbox files and software scripts specific to your study area. The data in the files provided serve as a template: they are the data used in the global assessments, extracted for your study area. These data files will need to be updated with locally available data and indicators so as to give a more fine-scale assessment of ocean health in your study area. However, if better data are not available, it is possible to use the files provided.  
+The Ocean Health Index Toolbox can be used to calculate scores for regional assessments. When you begin a regional assessment, you will be provided with a **repository**: a set of Toolbox files and software scripts specific to your study area. The data in the files provided serve as a template: they are the data used in the global assessments, extracted for your study area. These data files will need to be updated with locally available data and indicators so as to give a more fine-scale assessment of ocean health in your study area. However, if better data are not available, it is possible to use the files provided.  
 
 Our team of scientists and managers is prepared to provide guidance for regional assessments, from initial meetings to discussions about model development to disseminating results.
 
+## Recommendations
+
+We recommend to remember the following as you develop your approach:
+
+* People are part of ocean health
+    + economic and social data are included, and certain terrestrial data near the coast
+* Document all decisions made
+    + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
+    + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
+* Assessments can use a mixture of regional-, national- and global-scale data   
+* Scores are calculated by region
+    + comparing scores between sub-national regions is a main reason of conducting a regional assessment
+    + regional scores are combined by weighted average to calculate scores for the study area
+    + goal models are the same across all regions; data are specific to the region. For example, habitat-based goal models are the same in each region, but which habitats contribute to the final scores will depend on which habitats are present in each region
+* Data do not need to be at the same spatial or temporal scale
+    + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
+
+
 ## Checklist: To Do Before Using the Toolbox
 
-Most of the time spent while conducting a regional assessment occurs before using the Toolbox, although being familiar with the Toolbox's composition and structure can help guide you. Here is a checklist of decisions and steps that must be done before the Toolbox can calculate regional goal scores:
+Most of the time spent while conducting a regional assessment occurs before using the Toolbox, although being familiar with the Toolbox's composition and structure can help guide you. The following will not be checked-off in sequence: there is a lot of back and forth as you discover data, develop reference points and models, revisit other data possibilities.  
+
+Here is a checklist of decisions and steps that must be done before the Toolbox can calculate regional goal scores:
 
 * Understand the philosophy of the Ocean Health Index
     + understand what goals represent and how they are modeled 
     + understand what pressures and resilience are included 
     + understand how reference points are set
-* Develop strategic plan and timeline
-    + determine resources available
-    + outline timeline with any meetings and workshops necessary
-    + engage management early for results to be most useful (optional)
-* Assemble a qualified team with diverse skills
-    + have a broad scientific understanding and experience with environmental policy
-    + are comfortable with handling large data sets, making decisions, and thinking creatively
-    + can work with the software program R and user-created packages
-    + can work with ArcGIS or other spatial analysis software
-    + collaborate well in a multidisciplinary team, remotely and in person
 * Identify local characteristics and priorities
     + should any goals be removed?
     + should any goals be redefined?
@@ -52,6 +57,10 @@ Most of the time spent while conducting a regional assessment occurs before usin
     + regions within the study area should be at the smallest scale the data allow
     + in what spatial scale are data most frequently reported?
     + in what spatial scale are policy decisions made (optional)?
+* Be familiar with the global inputs to your Toolbox repository
+    + understand the data and models used in global assessments
+    + prioritize which data and models should be updated 
+    + use the Toolbox repository as a registry to organize data layers
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
     + what local data and indicators are available pressures and resilience?

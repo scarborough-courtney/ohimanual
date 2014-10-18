@@ -116,7 +116,7 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 
 
-## Example modifications:
+## Example modifications
 
 ### Adding a new layer to a goal model
 
@@ -140,4 +140,12 @@ In this example we will walk through the following steps:
 ![](./fig/functions_explained.png)
 
 5. [develop]
+
+
+## Notes about R
+
+The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See for documentation. 
+
+
+
 
