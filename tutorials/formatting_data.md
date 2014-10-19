@@ -16,7 +16,7 @@ In the example below, there are two data layers (tourists_count and jobs_tourism
 
 **Example of data in the appropriate format:**
 
-> ![](formatting_data_example.png)
+![](./fig/formatting_data_example.png)
 
 If there is insufficient data, see the sections below to see examples of gapfilling.
 
