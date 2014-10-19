@@ -2,7 +2,7 @@
 
 The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#calculate-page) page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#report-page) page provides different methods of reporting the data.  
   
-The scenario is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
+The **Current scenario** is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
   
 ![](./fig/homepage_view.png)
 
