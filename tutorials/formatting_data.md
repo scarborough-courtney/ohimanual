@@ -10,11 +10,9 @@ It is important that data prepared for the Toolbox App have no missing values or
 
 In the example below, there are two data layers (tourists_count and jobs_tourism_count) that have data for four regions, A - D. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
-> **1.** At least five years of data are available.
-
-> **2.** There are no data gaps.
-
-> **3.** Data are presented in 'long' or 'narrow' format (not 'wide' format).
+1. At least five years of data are available, 
+2. There are no data gaps
+3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
 
 **Example of data in the appropriate format:**
 
@@ -26,3 +24,33 @@ For more information about types of gapfilling used in the 2013 global assessmen
 
 
 ### Temporal gapfilling
+
+Temporal gaps are when some data are available for a region, but there are missing years. The Toolbox requires data for each year for every region.
+
+![](./fig/temporal_gaps.png)
+
+Many times, creating a linear model is the best way to estimate data and fill temporal gaps. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
+
+Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel.
+
+**Steps to temporally gapfill data (assumes linearity):**
+
+**1.** calculate the slope for each region using the SLOPE(known_y's,known_x's) function. 
+[click on the cells to see the formula used]
+
+**2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
+[click on the cells to see the formula used]
+
+**3.** calculate y for all years
+[click on the cells to see the formula used]
+
+**4.** replace modeled values into original data where gaps had occurred.
+
+![](./fig/filling_temporal_gaps.png)
+
+Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
+
+
+### Spatial gapfilling
+
+Spatial gaps are when no data are available for a particular region.
