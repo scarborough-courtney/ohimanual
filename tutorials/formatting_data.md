@@ -10,8 +10,10 @@ It is important that data prepared for the Toolbox App have no missing values or
 
 In the example below, there are two data layers (tourists_count and jobs_tourism_count) that have data for four regions, A - D. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
-**1.** At least five years of data are available, 
-**2.** There are no data gaps
+**1.** At least five years of data are available.
+
+**2.** There are no data gaps.
+
 **3.** Data are presented in 'long' or 'narrow' format (not 'wide' format).
 
 **Example of data in the appropriate format:**
