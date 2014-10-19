@@ -37,13 +37,14 @@ Using a linear model can be done in most programming languages using specific fu
 
 > **1.** calculate the slope for each region using the SLOPE(known_y's,known_x's) function. 
 
+![](./fig/filling_temporal_gaps_slope.png)
+
 > **2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
 
 > **3.** calculate y for all years
 
 > **4.** replace modeled values into original data where gaps had occurred.
 
-![](./fig/filling_temporal_gaps_slope.png)
 
 ![](./fig/filling_temporal_gaps.png)
 
