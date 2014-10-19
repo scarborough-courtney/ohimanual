@@ -22,9 +22,8 @@ The Data page displays input data or calculated scores for each goal parameter, 
   
 ![](./fig/tablepage_view.png)
 
-For all visualization options, statistics and metadata are displayed below the drop-down menus on the left side of the page.
+For all visualization options, statistics and metadata for the chosen fields are displayed below the drop-down menus on the left side of the page.
 
-**Insert figure here**
 
 ### Overview of variable options
 
