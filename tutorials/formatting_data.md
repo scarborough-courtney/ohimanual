@@ -33,21 +33,21 @@ Many times, creating a linear model is the best way to estimate data and fill te
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region A.
 
-> **Steps to temporally gapfill data (assumes linearity):**
+#### **Steps to temporally gapfill data (assumes linearity):**
 
-> **1.** calculate the slope for each region using the SLOPE(known_y's,known_x's) function. 
+**1.** Calculate the slope for each region using the SLOPE(known_y's,known_x's) function. 
 
 ![](./fig/filling_temporal_gaps_slope.png)
 
-> **2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
+**2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
 
 ![](./fig/filling_temporal_gaps_intercept.png)
 
-> **3.** calculate y for all years
+**3.** calculate y for all years
 
 ![](./fig/filling_temporal_gaps_value.png)
 
-> **4.** replace modeled values into original data where gaps had occurred.
+**4.** replace modeled values into original data where gaps had occurred.
 
 
 Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
