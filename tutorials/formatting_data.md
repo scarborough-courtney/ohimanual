@@ -36,15 +36,14 @@ Using a linear model can be done in most programming languages using specific fu
 > **Steps to temporally gapfill data (assumes linearity):**
 
 > **1.** calculate the slope for each region using the SLOPE(known_y's,known_x's) function. 
-[click on the cells to see the formula used]
 
 > **2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
-[click on the cells to see the formula used]
 
 > **3.** calculate y for all years
-[click on the cells to see the formula used]
 
 > **4.** replace modeled values into original data where gaps had occurred.
+
+![](./fig/filling_temporal_gaps_slope.png)
 
 ![](./fig/filling_temporal_gaps.png)
 
