@@ -50,6 +50,7 @@ Using a linear model can be done in most programming languages using specific fu
 
 Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
 
+![](./fig/filling_temporal_gaps2.png)
 
 ### Spatial gapfilling
 
