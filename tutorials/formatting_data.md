@@ -31,7 +31,7 @@ Temporal gaps are when some data are available for a region, but there are missi
 
 Many times, creating a linear model is the best way to estimate data and fill temporal gaps. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
 
-Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel.
+Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region A.
 
 > **Steps to temporally gapfill data (assumes linearity):**
 
@@ -41,16 +41,17 @@ Using a linear model can be done in most programming languages using specific fu
 
 > **2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
 
+![](./fig/filling_temporal_gaps_intercept.png)
+
 > **3.** calculate y for all years
+
+![](./fig/filling_temporal_gaps_value.png)
 
 > **4.** replace modeled values into original data where gaps had occurred.
 
 
-![](./fig/filling_temporal_gaps.png)
-
 Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
 
-![](./fig/filling_temporal_gaps_2.png)
 
 ### Spatial gapfilling
 
