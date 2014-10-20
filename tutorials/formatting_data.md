@@ -183,15 +183,17 @@ In a few cases, we adopted a method unique and appropriate to the specific situa
 
 3. New reporting regions: Some gap-filling was necessary even when the data sources used were identical to those in the 2012 calculation (i.e., no updated data were available), due to the presence of new, better resolved, reporting regions added for this 2013 calculation (see section 3). Most of the new reporting regions were offshore territorial holdings that in 2012 had been aggregated with their administrative country. For spatially explicit data sources this was not an issue, as we simply re-calculated the values using the new regional delimitations (i.e., all calculations based on habitat coverage, including the soft bottom layer, the exposure layers for the natural products status, the relative weights assigned to the pressure and resilience matrices pertinent to habitat-based goals, most of the pressure layers). However, tabular data were not always reported at the scale of the smaller reporting regions added in 2013 (e.g., trash, targeted harvest, artisanal fishing high & low bycatch, habitat destruction of subtidal hard-bottom, etc.). In these cases, values from 2012 aggregated reporting regions were disaggregated for corresponding 2013 reporting regions using one of three approaches: 
 
-a. identical value assigned, for example with some regulatory measures used in resilience measures (the World Governance Indicators (WGI), the Convention on Biological Diversity (CBD), the Global Competitiveness Index (GCI), the Mariculture Sustainability Index (MSI), the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), alien species regulations, and sector evenness); for the status and trend of habitat-based goals (habitat-specific “health” condition and its trend); for artisanal opportunities (access based on regulations reported by Mora et al. 2009); for pressures (artisanal fishing with high bycatch, and targeted harvest)
+> a. identical value assigned, for example with some regulatory measures used in resilience measures (the World Governance Indicators (WGI), the Convention on Biological Diversity (CBD), the Global Competitiveness Index (GCI), the Mariculture Sustainability Index (MSI), the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), alien species regulations, and sector evenness); for the status and trend of habitat-based goals (habitat-specific “health” condition and its trend); for artisanal opportunities (access based on regulations reported by Mora et al. 2009); for pressures (artisanal fishing with high bycatch, and targeted harvest)
 
-b. weighted by the relative proportions of coastal population (namely: revenue, number of jobs, adjusted workforce size, pressure from artisanal fishing with low bycatch, and from intertidal habitat destruction) 
+> b. weighted by the relative proportions of coastal population (namely: revenue, number of jobs, adjusted workforce size, pressure from artisanal fishing with low bycatch, and from intertidal habitat destruction) 
 
-c. weighted by the relative proportions of corresponding EEZ area (e.g. alien species pressure).
+> c. weighted by the relative proportions of corresponding EEZ area (e.g. alien species pressure).
 
 4. Alternate data sources: for total population, data were not reported in 59 of the 2013 reporting regions. For these cases we manually searched Wikipedia for population estimates to fill in the missing values.  
 
-Gap filling calculated scores: In two cases, gap-filling was applied to calculated values for the pertinent dimension because individually gap-filled layers would produce inaccurate results (details provided in following examples). These exceptions were: 
+#### Gap filling calculated scores: 
+
+In two cases, gap-filling was applied to calculated values for the pertinent dimension because individually gap-filled layers would produce inaccurate results (details provided in following examples). These exceptions were: 
 
 1. the status for tourism & recreation, where relative coastal population abundance and number of employees would not be comparable if they were gap-filled using different approaches (e.g., the regional average for the population layer may not be commensurate to the tourism employment value); and 
 
