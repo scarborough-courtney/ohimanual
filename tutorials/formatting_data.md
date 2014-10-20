@@ -18,9 +18,7 @@ In the example below, there are two data layers (tourists_count and jobs_tourism
 
 ![](./fig/formatting_data_example.png)
 
-If there is insufficient data, see the sections below to see examples of gapfilling.
-
-For more information about types of gapfilling used in the 2013 global assessment, please see the [supplementary methods](www.oceanhealthindex.org/About/Methods/). 
+If there is insufficient data, see the sections below to see examples of gapfilling. For more information about types of gapfilling, see the supplementary  methods used in the 2013 global assessment, available on http://ohi-science.org/.
 
 
 ### Temporal gapfilling
