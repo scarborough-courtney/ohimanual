@@ -33,21 +33,23 @@ Using a linear model can be done in most programming languages using specific fu
 
 #### **Steps to temporally gapfill data (assumes linearity):**
 
-##### **1.** Calculate the slope for each region.
+##### 1. Calculate the slope for each region.
 
-The first step is to calculate the slope of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
+The first step is to calculate the **slope** of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
 ![](./fig/filling_temporal_gaps_slope.png)
 
-**2.** calculate the intercept for each region using the INTERCEPT(known_y's,known_x's) function
+##### 2. Calculate the y-intercept for each region
+
+The next step is to calculate the **intercept** of the line that is fitted through the available data points. This can be done in excel similarly as for the slope calculation, using the the INTERCEPT(known_y's,known_x's) function that calculates the y-intercept (-25273.89) of the fitted line as highlighted in the figure below.
 
 ![](./fig/filling_temporal_gaps_intercept.png)
 
-**3.** calculate y for all years
+##### 3. calculate y for all years
 
 ![](./fig/filling_temporal_gaps_value.png)
 
-**4.** replace modeled values into original data where gaps had occurred.
+##### 4. replace modeled values into original data where gaps had occurred.
 
 
 Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
