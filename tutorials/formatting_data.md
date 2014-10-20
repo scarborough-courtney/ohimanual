@@ -33,7 +33,7 @@ Using a linear model can be done in most programming languages using specific fu
 
 #### **Steps to temporally gapfill data (assumes linearity):**
 
-##### 1. Calculate the slope for each region.
+##### 1. Calculate the slope for each region
 
 The first step is to calculate the **slope** of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
@@ -51,7 +51,7 @@ The slope and y-intercept that were calculated in steps 1 and 2 can then be used
 
 ![](./fig/filling_temporal_gaps_value.png)
 
-##### 4. Replace modeled values into original data where gaps had occurred.
+##### 4. Replace modeled values into original data where gaps had occurred
 
 
 Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
@@ -67,7 +67,7 @@ To fill gaps spatially, assumptions must be made that one region is like another
 
 Depending on the data, this can be done simply by assuming that two regions are similar enough that their data could be exactly copied, or a proportion of those values could also be applied. This will depend on the type of data, and the properties of the region. Each data layer can be gapfilled using a different approach when necessary.
 
-#### Characteristics of a region that can influence spatial gapfilling:
+#### Characteristics of a region that can influence spatial gapfilling
 
 1. proximity: can it be assumed that nearby regions have similar properties? 
 
