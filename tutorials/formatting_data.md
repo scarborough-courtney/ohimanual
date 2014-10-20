@@ -67,7 +67,7 @@ To fill gaps spatially, assumptions must be made that one region is like another
 
 Depending on the data, this can be done simply by assuming that two regions are similar enough that their data could be exactly copied, or a proportion of those values could also be applied. This will depend on the type of data, and the properties of the region. Each data layer can be gapfilled using a different approach when necessary.
 
-#### Characteristics of a region that can influence spatial gapfilling:**
+#### Characteristics of a region that can influence spatial gapfilling:
 
 1. proximity: can it be assumed that nearby regions have similar properties? 
 
