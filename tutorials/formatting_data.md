@@ -191,7 +191,7 @@ In a few cases, we adopted a method unique and appropriate to the specific situa
 
 4. Alternate data sources: for total population, data were not reported in 59 of the 2013 reporting regions. For these cases we manually searched Wikipedia for population estimates to fill in the missing values.  
 
-#### Gap filling calculated scores: 
+#### Gap filling calculated scores:
 
 In two cases, gap-filling was applied to calculated values for the pertinent dimension because individually gap-filled layers would produce inaccurate results (details provided in following examples). These exceptions were: 
 
