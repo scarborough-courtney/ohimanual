@@ -47,7 +47,7 @@ The next step is to calculate the **intercept** of the line that is fitted throu
 
 ##### 3. Calculate y for all years
 
-The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y' values. To do so, simply replace the known three values into the y = mx + b equation to calculate the unknown 'tourist_count' for a given year (189.39 in 2006, and 202.08 in 2007).
+The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y' values. To do so, simply replace the known three values into the y = mx + b equation, as illustrated in the figure below, to calculate the unknown 'tourist_count' for a given year (189.39 in 2006, and 202.08 in 2007).
 
 ![](./fig/filling_temporal_gaps_value.png)
 
