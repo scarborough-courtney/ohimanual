@@ -105,7 +105,7 @@ Data layer is now ready for the Toolbox,  gapfilled and in the appropriate forma
 
 The Toolbox expects data to be in 'long' or 'narrow' formatting. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
 
-Example of data in an incorrect format:
+#### Example of data in an incorrect format:
 
 ![](./fig/formatting_long_example.png)
 
@@ -134,7 +134,7 @@ This will melt everything except any identified columns ('Region' and 'DataLayer
 
 The final step is optional: ordering the data will make it more easy to read for humans (R and the Toolbox can read these data without this final step):
 
-Example of data in the appropriate format: 
+#### Example of data in the appropriate format: 
 
 ![](./fig/formatting_long_example_2.png)
 
