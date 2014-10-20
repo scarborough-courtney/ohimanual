@@ -17,6 +17,6 @@ We recommend first exploring the results from the global assessment and becoming
 
 **Requirements**: an Internet connection for the initial Toolbox App installation. The Toolbox runs on both a Mac and PC.
 
-1. Install the latest version of R at: http://cran.r-project.org/.
-2. Launch the Toolbox Application (See instructions at: http://ohi-science.org/pages/install.html).
+1. Install the latest version of R (http://cran.r-project.org/).
+2. Launch the Toolbox Application (http://ohi-science.org/pages/install.html).
 3. Explore global results using the Toolbox App
