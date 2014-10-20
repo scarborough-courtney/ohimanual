@@ -99,4 +99,42 @@ In the example below, the decision was made to gapfill Region B using the mean o
 
 ![](./fig/gapfilling_spatial_example.png)
 
-Data layer is now ready for the Toolbox,  gapfilled and in the appropriate format. 
+Data layer is now ready for the Toolbox,  gapfilled and in the appropriate format.
+
+### Long formatting
+
+The Toolbox expects data to be in 'long' or 'narrow' formatting. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
+
+Example of data in an incorrect format:
+
+![](./fig/formatting_long_example.png)
+
+With 'wide' format, data layers are more difficult to combine with others and more difficult to read and to analyze.
+
+#### Transforming data into 'narrow' format:
+
+Data are easily transformed in a programming language such as R. 
+
+In R, the 'reshape' package has the 'melt' command, which will melt the data from a wide format into a narrow format. It also can 'cast' the data back into a wide format if desired. R documentation: 
+- http://cran.r-project.org/web/packages/reshape2/reshape2.pdf
+- http://www.slideshare.net/jeffreybreen/reshaping-data-in-r
+- http://tgmstat.wordpress.com/2013/10/31/reshape-and-aggregate-data-with-the-r-package-reshape2/
+
+Example code using the *melt* command in the *reshape2* library. Assume the data above is in a variable called *data_wide*:
+
+> install.packages('reshape2')
+> library(reshape2)
+> data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
+> data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+
+This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
+
+The final step is optional: ordering the data will make it more easy to read for humans (R and the Toolbox can read these data without this final step):
+
+Example of data in the appropriate format: 
+
+![](./fig/formatting_long_example_2.png)
+
+With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
+
+Data layers in this format can be easily combined with other data layers: the range of years available can be different for each data layer, and there are minimal column names.
