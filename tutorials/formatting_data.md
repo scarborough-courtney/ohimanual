@@ -61,7 +61,7 @@ Data layer is now ready for the Toolbox, gapfilled and in the appropriate format
 
 Spatial gaps are when no data are available for a particular region.
 
-Insert Image
+![](./fig/gapfilling_spatial.png)
 
 To fill gaps spatially, assumptions must be made that one region is like another, and data from another region will be substituted in place of the missing data. 
 
@@ -97,6 +97,6 @@ Assign Region B values from:
 
 In the example below, the decision was made to gapfill Region B using the mean of Regions A and C since this would use a combination of both of those regions. Again, other possibilities could be equally correct. But some form of spatial gapfilling is required so a decision must be made.
 
-Insert image
+![](./fig/gapfilling_spatial_example.png)
 
 Data layer is now ready for the Toolbox,  gapfilled and in the appropriate format. 
