@@ -60,3 +60,43 @@ Data layer is now ready for the Toolbox, gapfilled and in the appropriate format
 ### Spatial gapfilling
 
 Spatial gaps are when no data are available for a particular region.
+
+Insert Image
+
+To fill gaps spatially, assumptions must be made that one region is like another, and data from another region will be substituted in place of the missing data. 
+
+Depending on the data, this can be done simply by assuming that two regions are similar enough that their data could be exactly copied, or a proportion of those values could also be applied. This will depend on the type of data, and the properties of the region. Each data layer can be gapfilled using a different approach when necessary.
+
+#### Characteristics of a region that can influence spatial gapfilling:**
+
+1. proximity: can it be assumed that nearby regions have similar properties? 
+
+2. larger regions: Are data reported in larger regions and can those data be used for subregions?
+
+3. demographic information: can it be assumed a region with a similar population size has similar data? 
+
+
+#### Spatial gapfilling example
+
+To spatially gapfill Region B requires thinking about the properties and characteristics of the region and the data, tourists_count. 
+
+Here are properties that can be important for decision making:
+
+Region B:
+- is located between Region A and C
+- is larger than Region A
+- has similar population size/demographics to Region C
+- has not been growing as quickly as Region D
+
+There is no absolute answer of how to best gapfill Region B. Here are a few reasonable possibilities:
+
+Assign Region B values from:
+- Region A
+- Region C
+- Region A and C averaged 
+
+In the example below, the decision was made to gapfill Region B using the mean of Regions A and C since this would use a combination of both of those regions. Again, other possibilities could be equally correct. But some form of spatial gapfilling is required so a decision must be made.
+
+Insert image
+
+Data layer is now ready for the Toolbox,  gapfilled and in the appropriate format. 
