@@ -34,6 +34,7 @@ Using a linear model can be done in most programming languages using specific fu
 #### **Steps to temporally gapfill data (assumes linearity):**
 
 **1.** Calculate the slope for each region.
+
 The first step is to calculate the slope of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
 ![](./fig/filling_temporal_gaps_slope.png)
