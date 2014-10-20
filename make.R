@@ -8,7 +8,7 @@ library(rmarkdown)
 library(stringr)
 
 # copy ohimanual/README.md into ohimanual/tutorials/README.md
-stopifnot(file.copy('~/github/ohimanual/README.md', file.path('~/github/ohimanual/tutorials/README.md'), overwrite=T))
+stopifnot(file.copy('~/github/ohimanual/tutorials/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
 
 # set variables ----
 title = 'The Ocean Health Index Toolbox Manual'
