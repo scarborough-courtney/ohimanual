@@ -145,6 +145,7 @@ Data layers in this format can be easily combined with other data layers: the ra
 ### Gapfilling examples from 2013 Global Assessment
 
 **Data gap filling procedures:**
+
 [excerpted from 2013 Global Supplementary Methods, www.oceanhealthindex.org/About/Methods/]
 
 Many data layers had sufficient global coverage to merit inclusion in the calculation of the Index, yet still had gaps (i.e., regions not represented) that needed to be filled to calculate scores for all Index regions. In this current 2013 assessment, unrepresented regions often included many of the new (small) reporting regions (Table S1). Data used for calculation of goal trends also required temporal replication over the previous five years (minimum), and this was not always available. In both cases (data with spatial and temporal gaps) we attempted to fill gaps in a manner as simple and transparent as possible.
