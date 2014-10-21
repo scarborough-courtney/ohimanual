@@ -7,20 +7,33 @@ The **Current scenario** is displayed in the upper-right corner of the Data page
 ![](./fig/homepage_view.png)
 
 ## Data page
+
 ### Overview of display options
 The Data page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
 
   * Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:
+
+The map displays data for every region as reported in the scenario.
   
 ![](./fig/datapage_view.png)
 
+Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
+
+The target and dimension chosen from the drop-down menu is also displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
+
   * Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#histogram) form:
+
+The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading).
   
 ![](./fig/histogrampage_view.png)
 
   * Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#table) form:
+
+The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
   
 ![](./fig/tablepage_view.png)
+
+It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
 For all visualization options, statistics and metadata for the chosen fields are displayed below the drop-down menus on the left side of the page.
 
@@ -41,20 +54,6 @@ The Data page has drop-down menus from which the user chooses the data to be dis
 3. **dimension** (for score variables) or layer (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
-
-
-**For example:**
-
-> **Output Score > Fisheries (FIS) > score**
-shows the final calculated score for the fisheries sub-goal in the current scenario (2013).
-
-![](./fig/output_score_fisheries_score.png)
-
-
-> **Input Layer > Mariculture > Mariculture species harvested**
-shows the different harvested species that were used to calculate the mariculture sub-goal in the current scenario (2013).
-
-![](./fig/input_mariculture_harvested.png)
 
 
 #### Output Score
@@ -80,31 +79,6 @@ If the user selects “Input Layer” as the variable type, they will be able to
     + This option will appear if the layer identified has categories
 * Year options:
     + This option will appear if the layer identified has multiple years
-
-
-### Map 
-The map displays data for every region as reported in the scenario.
-
-![](./fig/map_view.png)
-
-Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
-
-The target and dimension chosen from the drop-down menu is also displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
-
-### Histogram
-The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading). 
-
-> For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
-
-![](./fig/histogram_view.png)
-
-
-### Table
-The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
-
-![](./fig/table_view.png)
-
-It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
 
 ## Calculate page
