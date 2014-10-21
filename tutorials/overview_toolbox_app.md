@@ -29,6 +29,8 @@ For all visualization options, statistics and metadata for the chosen fields are
 
 The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
 
+![](./fig/overview_variable_options2.png)
+
 1. **variable type**
     + *Output Score: the calculated score*
     + *Input Layer: the data layer used to calculate the score*
