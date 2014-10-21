@@ -31,7 +31,7 @@ Many times, creating a linear model is the best way to estimate data and fill te
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region A.
 
-**Steps to temporally gapfill data (assumes linearity)**
+**Steps to temporally gapfill data (assumes linearity):**
 
 **1. Calculate the slope for each region**
 
@@ -67,7 +67,7 @@ To fill gaps spatially, assumptions must be made that one region is like another
 
 Depending on the data, this can be done simply by assuming that two regions are similar enough that their data could be exactly copied, or a proportion of those values could also be applied. This will depend on the type of data, and the properties of the region. Each data layer can be gapfilled using a different approach when necessary.
 
-**Characteristics of a region that can influence spatial gapfilling**
+**Characteristics of a region that can influence spatial gapfilling:**
 
 1. proximity: can it be assumed that nearby regions have similar properties? 
 
@@ -76,7 +76,7 @@ Depending on the data, this can be done simply by assuming that two regions are 
 3. demographic information: can it be assumed a region with a similar population size has similar data? 
 
 
-**Spatial gapfilling example**
+**Spatial gapfilling example:**
 
 To spatially gapfill Region B requires thinking about the properties and characteristics of the region and the data, tourists_count. 
 
@@ -105,13 +105,13 @@ Data layer is now ready for the Toolbox,  gapfilled and in the appropriate forma
 
 The Toolbox expects data to be in 'long' or 'narrow' formatting. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
 
-**Example of data in an incorrect format**
+**Example of data in an incorrect format:**
 
 ![](./fig/formatting_long_example.png)
 
 With 'wide' format, data layers are more difficult to combine with others and more difficult to read and to analyze.
 
-**Transforming data into 'narrow' format**
+**Transforming data into 'narrow' format:**
 
 Data are easily transformed in a programming language such as R. 
 
@@ -134,7 +134,7 @@ This will melt everything except any identified columns ('Region' and 'DataLayer
 
 The final step is optional: ordering the data will make it more easy to read for humans (R and the Toolbox can read these data without this final step):
 
-**Example of data in the appropriate format**
+**Example of data in the appropriate format:**
 
 ![](./fig/formatting_long_example_2.png)
 
@@ -144,7 +144,7 @@ Data layers in this format can be easily combined with other data layers: the ra
 
 ### Gapfilling examples from 2013 Global Assessment
 
-**Data gap filling procedures**
+**Data gap filling procedures:**
 [excerpted from 2013 Global Supplementary Methods, www.oceanhealthindex.org/About/Methods/]
 
 Many data layers had sufficient global coverage to merit inclusion in the calculation of the Index, yet still had gaps (i.e., regions not represented) that needed to be filled to calculate scores for all Index regions. In this current 2013 assessment, unrepresented regions often included many of the new (small) reporting regions (Table S1). Data used for calculation of goal trends also required temporal replication over the previous five years (minimum), and this was not always available. In both cases (data with spatial and temporal gaps) we attempted to fill gaps in a manner as simple and transparent as possible.
@@ -153,7 +153,7 @@ In regions where data were missing, or the data were considered too outdated to 
 
 We used three different methods to gap-fill missing data within reporting regions: temporal, by using data from previous years; spatial, by using averages from nearby regions, and for a few exceptional cases, fixed scores or alternate datasets used as proxies. If a region was present in time-series data with years of data missing, temporal gap-filling was always attempted first, with spatial gap-filling used only when data were too outdated or for regions that were completely absent. To decide if a region’s values were outdated, we established a year prior to which the data could not be used. This “threshold year” was in most cases set to be 10 years prior to the most recent sampled year in the dataset. A few exceptions were made in the case of fertilizer trends, pesticide trends, natural products monetary value, livelihoods and economies (see data-layer sections for more details).
 
-**Temporal gap filling**
+**Temporal gap filling:**
 
 Gaps in time-series data for each reporting region were filled using one of the following three approaches, each applied when appropriate rather than hierarchically:
 
@@ -163,7 +163,7 @@ Gaps in time-series data for each reporting region were filled using one of the 
 
 3. Fitted values for data older than 10 years: in the cases of livelihoods & economies, the goals based on habitats, i.e. coastal protection, carbon storage and biodiversity, and the monetary value data for natural products, due to the scarcity of data available, the 10 year rule was relaxed so as to include older data. For more details see Halpern et al. (2012), and see the sections 4.3 and 5.53 on natural products value data.
 
-**Spatial gap filling**
+**Spatial gap filling:**
 
 For some reporting regions (e.g., small regions that are remote territorial holdings of countries) and/or certain data layers, no data exist, or they have no data after 2002, and thus temporal gap-filling is not an option. Thus, we used data to gap-fill spatially with the exception of livelihoods & economies, and the goals based on habitats, i.e. coastal protection, carbon storage and biodiversity, where older data were used to gap-fill temporally, following the same rules as in Halpern et al. (2012). For spatial gap-filling, we used one of the following three methods, each applied when appropriate rather than hierarchically:
 
@@ -173,7 +173,7 @@ For some reporting regions (e.g., small regions that are remote territorial hold
 
 3. Habitat regions: for goals using habitat data (i.e., natural products, carbon storage, coastal prediction, and biodiversity), when the habitat extent data indicated that a given habitat was present, but data on its condition was missing, geo-ecological regional averages were used specific to each habitat type (see Halpern et al. 2012, Selig et al. 2013 for descriptions of these regions). Because no habitat data could be updated for this current assessment, we did not need to repeat this method, but its implications for results remain.
 
-**Special gap-filling rules**
+**Special gap-filling rules:**
 
 In a few cases, we adopted a method unique and appropriate to the specific situation. 
 
@@ -191,7 +191,7 @@ In a few cases, we adopted a method unique and appropriate to the specific situa
 
 4. Alternate data sources: for total population, data were not reported in 59 of the 2013 reporting regions. For these cases we manually searched Wikipedia for population estimates to fill in the missing values.  
 
-**Gap filling calculated scores**
+**Gap filling calculated scores:**
 
 In two cases, gap-filling was applied to calculated values for the pertinent dimension because individually gap-filled layers would produce inaccurate results (details provided in following examples). These exceptions were: 
 
