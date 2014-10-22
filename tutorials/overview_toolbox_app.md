@@ -41,7 +41,7 @@ The table displays the target value for each region and the overall study area. 
 
 The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
 
-IMAGE
+![](./fig/varible_options_view.png)
 
 Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
 
