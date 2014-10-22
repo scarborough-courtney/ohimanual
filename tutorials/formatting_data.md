@@ -6,7 +6,7 @@ The Ocean Health Index Toolbox App is designed to work in the programming langua
 
 Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible). In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
-In the example below, there are two data layers (tourists_count and jobs_tourism_count) that have data for four regions, A - D. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+In the example below, there are two data layers files (tr_jobs_total.csv and np_harvest_tonnes.csv) that have data for four and two regions respectively (1-4, and 5-6). In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
 1. At least five years of data are available, 
 2. There are no data gaps
