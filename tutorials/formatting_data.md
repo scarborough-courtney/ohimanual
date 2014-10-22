@@ -140,7 +140,7 @@ The final step is optional: ordering the data will make it more easy to read for
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_long_example_2.png)
+![](./fig/formatting_long_example_3.png)
 
 With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
 
