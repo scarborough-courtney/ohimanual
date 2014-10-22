@@ -2,8 +2,9 @@
 
 The OHI spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. There are many decisions to make when gathering from disparate sources, deciding reference points, and developing goal models.
 
-
 **Index scores are a reflection of data quality, and thus accessing the best data and indicators available is of highest importance**. 
+
+### Data sources 
 
 Existing data and indicators can be gathered from many sources across environmental, social, and economic disciplines, including:
 
@@ -68,6 +69,11 @@ Data must be available for at least five years to calculate the trend. Longer ti
 
 \* It is not always possible to meet the spatial and temporal requirements with each data layer. In these cases it can still be possible to use these data if appropriate gap-filling techniques are used. It is important that data satisfy as many of these requirements as possible, and in cases where creative ways of working with such data are not possible, it might be better to exclude these data from the analyses and try a different approach.
 
+### Notes about data and regions
+
+Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
+
+![Scores will be presented in the EEZ of each region, even if individual data layers do not all extend to the EEZ](./fig/rgns_brazil.png)
 
 ### Example: US West Coast data discovery
 

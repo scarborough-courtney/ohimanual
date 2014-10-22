@@ -30,7 +30,7 @@ We recommend to remember the following as you develop your approach:
     + comparing scores between sub-national regions is a main reason of conducting a regional assessment
     + regional scores are combined by weighted average to calculate scores for the study area
     + goal models are the same across all regions; data are specific to the region. For example, habitat-based goal models are the same in each region, but which habitats contribute to the final scores will depend on which habitats are present in each region
-* Data do not need to be at the same spatial or temporal scale
+* All data do not need to be at the same spatial or temporal scale
     + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
 
 

@@ -34,20 +34,34 @@ The **Current scenario** is displayed in the upper-right corner of the Data page
 ![](./fig/homepage_view.png)
 
 ## Data page
+
 ### Overview of display options
 The Data page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
 
-  * Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:
+
+**Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:**
   
 ![](./fig/datapage_view.png)
 
-  * Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#histogram) form:
-  
+The map displays data for every region as reported in the scenario. Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
+
+The target and dimension chosen from the drop-down menu is also displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
+
+
+
+**Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#histogram) form:**
+
 ![](./fig/histogrampage_view.png)
 
-  * Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#table) form:
+The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading).
+
+
+
+**Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#table) form:**
   
 ![](./fig/tablepage_view.png)
+
+The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each. It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
 For all visualization options, statistics and metadata for the chosen fields are displayed below the drop-down menus on the left side of the page.
 
@@ -55,6 +69,8 @@ For all visualization options, statistics and metadata for the chosen fields are
 ### Overview of variable options
 
 The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
+
+![](./fig/overview_variable_options2.png)
 
 1. **variable type**
     + *Output Score: the calculated score*
@@ -66,20 +82,6 @@ The Data page has drop-down menus from which the user chooses the data to be dis
 3. **dimension** (for score variables) or layer (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
-
-
-**For example:**
-
-> **Output Score > Fisheries (FIS) > score**
-shows the final calculated score for the fisheries sub-goal in the current scenario (2013).
-
-![](./fig/output_score_fisheries_score.png)
-
-
-> **Input Layer > Mariculture > Mariculture species harvested**
-shows the different harvested species that were used to calculate the mariculture sub-goal in the current scenario (2013).
-
-![](./fig/input_mariculture_harvested.png)
 
 
 #### Output Score
@@ -107,31 +109,6 @@ If the user selects “Input Layer” as the variable type, they will be able to
     + This option will appear if the layer identified has multiple years
 
 
-### Map 
-The map displays data for every region as reported in the scenario.
-
-![](./fig/map_view.png)
-
-Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
-
-The target and dimension chosen from the drop-down menu is also displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
-
-### Histogram
-The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading). 
-
-> For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
-
-![](./fig/histogram_view.png)
-
-
-### Table
-The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
-
-![](./fig/table_view.png)
-
-It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
-
-
 ## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
 
@@ -147,10 +124,37 @@ It is currently possible to create flower plots and tables with several options,
 
 
 # Explore Global Results with the Toolbox App
-[develop]
 
 ## develop
 
+**For example:**
+
+> **Output Score > Fisheries (FIS) > score**
+shows the final calculated score for the fisheries sub-goal in the current scenario (2013).
+
+![](./fig/output_score_fisheries_score.png)
+
+
+> **Input Layer > Mariculture > Mariculture species harvested**
+shows the different harvested species that were used to calculate the mariculture sub-goal in the current scenario (2013).
+
+![](./fig/input_mariculture_harvested.png)
+
+
+### Map 
+
+![](./fig/map_view.png)
+
+### Histogram
+
+> For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
+
+![](./fig/histogram_view.png)
+
+
+### Table
+
+![](./fig/table_view.png)
 
 # Introduction to OHI Regional Assessments
 
@@ -223,7 +227,7 @@ We recommend to remember the following as you develop your approach:
     + comparing scores between sub-national regions is a main reason of conducting a regional assessment
     + regional scores are combined by weighted average to calculate scores for the study area
     + goal models are the same across all regions; data are specific to the region. For example, habitat-based goal models are the same in each region, but which habitats contribute to the final scores will depend on which habitats are present in each region
-* Data do not need to be at the same spatial or temporal scale
+* All data do not need to be at the same spatial or temporal scale
     + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
 
 
@@ -274,8 +278,9 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
 
 The OHI spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. There are many decisions to make when gathering from disparate sources, deciding reference points, and developing goal models.
 
-
 **Index scores are a reflection of data quality, and thus accessing the best data and indicators available is of highest importance**. 
+
+### Data sources 
 
 Existing data and indicators can be gathered from many sources across environmental, social, and economic disciplines, including:
 
@@ -340,6 +345,11 @@ Data must be available for at least five years to calculate the trend. Longer ti
 
 \* It is not always possible to meet the spatial and temporal requirements with each data layer. In these cases it can still be possible to use these data if appropriate gap-filling techniques are used. It is important that data satisfy as many of these requirements as possible, and in cases where creative ways of working with such data are not possible, it might be better to exclude these data from the analyses and try a different approach.
 
+### Notes about data and regions
+
+Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
+
+![Scores will be presented in the EEZ of each region, even if individual data layers do not all extend to the EEZ](./fig/rgns_brazil.png)
 
 ### Example: US West Coast data discovery
 
@@ -402,27 +412,27 @@ Many times, creating a linear model is the best way to estimate data and fill te
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region A.
 
-#### **Steps to temporally gapfill data (assumes linearity)**
+**Steps to temporally gapfill data (assumes linearity):**
 
-##### 1. Calculate the slope for each region
+**1. Calculate the slope for each region**
 
 The first step is to calculate the **slope** of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
 ![](./fig/filling_temporal_gaps_slope.png)
 
-##### 2. Calculate the y-intercept for each region
+**2. Calculate the y-intercept for each region**
 
 The next step is to calculate the **intercept** of the line that is fitted through the available data points. This can be done in excel similarly as for the slope calculation, using the the INTERCEPT(known_y's,known_x's) function that calculates the y-intercept (-25273.89) of the fitted line as highlighted in the figure below.
 
 ![](./fig/filling_temporal_gaps_intercept.png)
 
-##### 3. Calculate y for all years
+**3. Calculate y for all years**
 
 The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the **unknown 'y-values'**. To do so, simply replace the known three values into the y = mx + b equation, as illustrated in the figure below, to calculate the unknown 'tourist_count' for a given year (189.39 in 2006, and 202.08 in 2007).
 
 ![](./fig/filling_temporal_gaps_value.png)
 
-##### 4. Replace modeled values into original data where gaps had occurred
+**4. Replace modeled values into original data where gaps had occurred**
 
 
 Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
@@ -438,7 +448,7 @@ To fill gaps spatially, assumptions must be made that one region is like another
 
 Depending on the data, this can be done simply by assuming that two regions are similar enough that their data could be exactly copied, or a proportion of those values could also be applied. This will depend on the type of data, and the properties of the region. Each data layer can be gapfilled using a different approach when necessary.
 
-#### Characteristics of a region that can influence spatial gapfilling
+**Characteristics of a region that can influence spatial gapfilling:**
 
 1. proximity: can it be assumed that nearby regions have similar properties? 
 
@@ -447,7 +457,7 @@ Depending on the data, this can be done simply by assuming that two regions are 
 3. demographic information: can it be assumed a region with a similar population size has similar data? 
 
 
-#### Spatial gapfilling example
+**Spatial gapfilling example:**
 
 To spatially gapfill Region B requires thinking about the properties and characteristics of the region and the data, tourists_count. 
 
@@ -476,13 +486,13 @@ Data layer is now ready for the Toolbox,  gapfilled and in the appropriate forma
 
 The Toolbox expects data to be in 'long' or 'narrow' formatting. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
 
-#### Example of data in an incorrect format
+**Example of data in an incorrect format:**
 
 ![](./fig/formatting_long_example.png)
 
 With 'wide' format, data layers are more difficult to combine with others and more difficult to read and to analyze.
 
-#### Transforming data into 'narrow' format
+**Transforming data into 'narrow' format:**
 
 Data are easily transformed in a programming language such as R. 
 
@@ -505,7 +515,7 @@ This will melt everything except any identified columns ('Region' and 'DataLayer
 
 The final step is optional: ordering the data will make it more easy to read for humans (R and the Toolbox can read these data without this final step):
 
-#### Example of data in the appropriate format
+**Example of data in the appropriate format:**
 
 ![](./fig/formatting_long_example_2.png)
 
@@ -515,7 +525,8 @@ Data layers in this format can be easily combined with other data layers: the ra
 
 ### Gapfilling examples from 2013 Global Assessment
 
-#### Data gap filling procedures
+**Data gap filling procedures:**
+
 [excerpted from 2013 Global Supplementary Methods, www.oceanhealthindex.org/About/Methods/]
 
 Many data layers had sufficient global coverage to merit inclusion in the calculation of the Index, yet still had gaps (i.e., regions not represented) that needed to be filled to calculate scores for all Index regions. In this current 2013 assessment, unrepresented regions often included many of the new (small) reporting regions (Table S1). Data used for calculation of goal trends also required temporal replication over the previous five years (minimum), and this was not always available. In both cases (data with spatial and temporal gaps) we attempted to fill gaps in a manner as simple and transparent as possible.
@@ -524,7 +535,7 @@ In regions where data were missing, or the data were considered too outdated to 
 
 We used three different methods to gap-fill missing data within reporting regions: temporal, by using data from previous years; spatial, by using averages from nearby regions, and for a few exceptional cases, fixed scores or alternate datasets used as proxies. If a region was present in time-series data with years of data missing, temporal gap-filling was always attempted first, with spatial gap-filling used only when data were too outdated or for regions that were completely absent. To decide if a region’s values were outdated, we established a year prior to which the data could not be used. This “threshold year” was in most cases set to be 10 years prior to the most recent sampled year in the dataset. A few exceptions were made in the case of fertilizer trends, pesticide trends, natural products monetary value, livelihoods and economies (see data-layer sections for more details).
 
-#### Temporal gap filling
+**Temporal gap filling:**
 
 Gaps in time-series data for each reporting region were filled using one of the following three approaches, each applied when appropriate rather than hierarchically:
 
@@ -534,7 +545,7 @@ Gaps in time-series data for each reporting region were filled using one of the 
 
 3. Fitted values for data older than 10 years: in the cases of livelihoods & economies, the goals based on habitats, i.e. coastal protection, carbon storage and biodiversity, and the monetary value data for natural products, due to the scarcity of data available, the 10 year rule was relaxed so as to include older data. For more details see Halpern et al. (2012), and see the sections 4.3 and 5.53 on natural products value data.
 
-#### Spatial gap filling
+**Spatial gap filling:**
 
 For some reporting regions (e.g., small regions that are remote territorial holdings of countries) and/or certain data layers, no data exist, or they have no data after 2002, and thus temporal gap-filling is not an option. Thus, we used data to gap-fill spatially with the exception of livelihoods & economies, and the goals based on habitats, i.e. coastal protection, carbon storage and biodiversity, where older data were used to gap-fill temporally, following the same rules as in Halpern et al. (2012). For spatial gap-filling, we used one of the following three methods, each applied when appropriate rather than hierarchically:
 
@@ -544,7 +555,7 @@ For some reporting regions (e.g., small regions that are remote territorial hold
 
 3. Habitat regions: for goals using habitat data (i.e., natural products, carbon storage, coastal prediction, and biodiversity), when the habitat extent data indicated that a given habitat was present, but data on its condition was missing, geo-ecological regional averages were used specific to each habitat type (see Halpern et al. 2012, Selig et al. 2013 for descriptions of these regions). Because no habitat data could be updated for this current assessment, we did not need to repeat this method, but its implications for results remain.
 
-#### Special gap-filling rules
+**Special gap-filling rules:**
 
 In a few cases, we adopted a method unique and appropriate to the specific situation. 
 
@@ -562,7 +573,7 @@ In a few cases, we adopted a method unique and appropriate to the specific situa
 
 4. Alternate data sources: for total population, data were not reported in 59 of the 2013 reporting regions. For these cases we manually searched Wikipedia for population estimates to fill in the missing values.  
 
-#### Gap filling calculated scores
+**Gap filling calculated scores:**
 
 In two cases, gap-filling was applied to calculated values for the pertinent dimension because individually gap-filled layers would produce inaccurate results (details provided in following examples). These exceptions were: 
 
@@ -822,7 +833,7 @@ The `conf` folder includes includes R functions (*config.R* and *functions.R*) a
 `resilience_weights.csv` describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
 
 ### spatial folder 
-The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the GeoJSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
+The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the JSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
 
 ### *calculate_scores.r*
 `calculate_scores.r` will run the Toolbox calculations using the *.csv* files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
