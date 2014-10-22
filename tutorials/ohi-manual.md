@@ -63,50 +63,22 @@ The histogram shows the distribution of the selected variable as the number of o
 
 The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each. It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
-For all visualization options, statistics and metadata for the chosen fields are displayed below the drop-down menus on the left side of the page.
-
 
 ### Overview of variable options
 
-The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
+The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
+
+![](./fig/varible_options_view.png)
+
+
+The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target.
+
+For example, if the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the score calculation (dimension) to be reported.
+
+On the other hand, if the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific data layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
 
 ![](./fig/overview_variable_options2.png)
 
-1. **variable type**
-    + *Output Score: the calculated score*
-    + *Input Layer: the data layer used to calculate the score*
-2. **target** 
-    + *Overall Index*
-    + *Ten goals*
-    + *Eight sub-goals*
-3. **dimension** (for score variables) or layer (for data layer variables)
-4. **category** (this will appear for data layer variables with categories)
-5. **year** (this will appear for data layer variables with multiple years)
-
-
-#### Output Score
-If the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a target and a dimension. The target is a goal or sub-goal, and the dimension indicates the calculation to be reported.
-
-* Target options (with numeric identifiers):
-    + Overall Index
-    + Ten goals and eight sub-goals
-* Dimension options:
-    + Status, trend, future state, pressures, resilience, and score
-    
-#### Input Layer
-If the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
-
-* Target options (with numeric identifiers):
-    + Ten goals and eight sub-goals
-    + Pressures
-    + Resilience
-    + Spatial
-* Layers options:
-    + Specific data layer associated with the target
-* Category options:
-    + This option will appear if the layer identified has categories
-* Year options:
-    + This option will appear if the layer identified has multiple years
 
 
 ## Calculate page
@@ -121,7 +93,6 @@ The Report page allows the user to create a report of results as .html and .pdfs
 ![](./fig/reportpage_view.png)
 
 It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
-
 
 # Explore Global Results with the Toolbox App
 
@@ -158,7 +129,7 @@ shows the different harvested species that were used to calculate the maricultur
 
 # Introduction to OHI Regional Assessments
 
-Regional assessments use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. The OHI is designed to combine existing work into a comprehensive assessment of ocean health.  
+Regional assessments use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Using ten criteria (goals), the Index scores how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets), on a scale of 0 to 100. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. The OHI is designed to combine existing work into a comprehensive assessment of ocean health. And because the assessments are developed at the scale of decision-making using local data and parameters, the findings can help inform decision-making and management actions aimed at maximizing sustainable productivity while preserving vital natural capital.  
 
 **The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
 
@@ -385,11 +356,9 @@ For the US West Coast, available data measure the current extent of seagrass hab
 
 The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based .csv files (.csv stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
 
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible). In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points). 
+Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) with a single associated *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
-It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling.
-
-In the example below, there are two data layers (tourists_count and jobs_tourism_count) that have data for four regions, A - D. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+In the example below, there are two data layers files (tr_jobs_total.csv and np_harvest_tonnes.csv) that have data for four and two regions respectively (1-4, and 5-6). In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
 1. At least five years of data are available, 
 2. There are no data gaps
@@ -397,9 +366,13 @@ In the example below, there are two data layers (tourists_count and jobs_tourism
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_data_example.png)
+![](./fig/formatting_data_example2.png)
 
-If there is insufficient data, see the sections below to see examples of gapfilling. For more information about types of gapfilling, see the supplementary  methods used in the 2013 global assessment, available on http://ohi-science.org/.
+It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
+
+How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highligh some example of temporal and spatial gapfilling. 
+
+**Note that the DataLayer column has been included for clarity in the examples below, but should be ommitted in the final .csv file.**
 
 
 ### Temporal gapfilling
@@ -418,7 +391,7 @@ Using a linear model can be done in most programming languages using specific fu
 
 The first step is to calculate the **slope** of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
-![](./fig/filling_temporal_gaps_slope.png)
+![](./fig/filling_temporal_gaps_slope.png) 
 
 **2. Calculate the y-intercept for each region**
 
@@ -503,13 +476,12 @@ In R, the 'reshape' package has the 'melt' command, which will melt the data fro
 
 Example code using the *melt* command in the *reshape2* library. Assume the data above is in a variable called *data_wide*:
 
-> install.packages('reshape2')
-
-> library(reshape2)
-
-> data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
-
-> data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+```
+install.packages('reshape2')
+library(reshape2)
+data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
+data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+```
 
 This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
 
@@ -517,7 +489,7 @@ The final step is optional: ordering the data will make it more easy to read for
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_long_example_2.png)
+![](./fig/formatting_long_example_3.png)
 
 With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
 
@@ -824,7 +796,7 @@ The `conf` folder includes includes R functions (*config.R* and *functions.R*) a
 `goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
 
 #### *pressures_matrix.csv*
-`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion.
 
 #### *resilience_matrix.csv*
 `resilience_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.
@@ -992,7 +964,7 @@ In this example we will walk through the following steps:
 
 ## Notes about R
 
-The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See for documentation. 
+The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See [github.com/hadley/dplyr#dplyr](https://github.com/hadley/dplyr#dplyr) for documentation. 
 
 
 

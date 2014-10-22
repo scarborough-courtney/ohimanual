@@ -20,7 +20,7 @@ It is important that data prepared for the Toolbox App have no missing values or
 
 How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highligh some example of temporal and spatial gapfilling. 
 
-**Note that the data_layer column has been included for clarity in the examples below, but must be ommitted in the final .csv file.**
+**Note that the DataLayer column has been included for clarity in the examples below, but should be ommitted in the final .csv file.**
 
 
 ### Temporal gapfilling
@@ -124,13 +124,12 @@ In R, the 'reshape' package has the 'melt' command, which will melt the data fro
 
 Example code using the *melt* command in the *reshape2* library. Assume the data above is in a variable called *data_wide*:
 
-> install.packages('reshape2')
-
-> library(reshape2)
-
-> data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
-
-> data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+```
+install.packages('reshape2')
+library(reshape2)
+data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
+data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+```
 
 This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
 
