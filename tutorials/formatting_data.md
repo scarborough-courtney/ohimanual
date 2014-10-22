@@ -14,6 +14,8 @@ In the example below, there are two data layers (tourists_count and jobs_tourism
 
 **Example of data in the appropriate format:**
 
+![](./fig/formatting_data_example2.png)
+
 ![](./fig/formatting_data_example.png)
 
 It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling.
