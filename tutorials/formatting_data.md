@@ -20,7 +20,7 @@ It is important that data prepared for the Toolbox App have no missing values or
 
 How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highligh some example of temporal and spatial gapfilling. 
 
-**Note that the data_layer column has been included for clarity in the examples below, but must be ommitted in the final .csv file.**
+**Note that the DataLayer column has been included for clarity in the examples below, but should be ommitted in the final .csv file.**
 
 
 ### Temporal gapfilling
