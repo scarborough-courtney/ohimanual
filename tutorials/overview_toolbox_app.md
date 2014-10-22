@@ -43,7 +43,7 @@ The Data page has drop-down menus from which the user chooses the data to be dis
 
 IMAGE
 
-A Description, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
+Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
 
 
 The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target.
@@ -54,6 +54,7 @@ On the other hand, if the user selects “Input Layer” as the variable type, t
 
 ![](./fig/overview_variable_options2.png)
 
+The data selected from the pull-down menus can then be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above.
 
 1. **variable type**
     + *Output Score: the calculated score*
@@ -68,7 +69,6 @@ On the other hand, if the user selects “Input Layer” as the variable type, t
 3. **dimension** (for score variables) or **layer** (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
-6. 
 
 ## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
