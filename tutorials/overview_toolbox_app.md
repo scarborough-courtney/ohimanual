@@ -65,10 +65,6 @@ If the user selects ‘Output Score’ as the variable type (which is the defaul
 On the other hand, if the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
 
 
-* Dimension options:
-    + Status, trend, future state, pressures, resilience, and score
-
-
 ## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
 
@@ -81,4 +77,3 @@ The Report page allows the user to create a report of results as .html and .pdfs
 ![](./fig/reportpage_view.png)
 
 It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
-
