@@ -52,34 +52,21 @@ The Data page has drop-down menus from which the user chooses the data to be dis
     + *Overall Index*
     + *Ten goals*
     + *Eight sub-goals*
-3. **dimension** (for score variables) or layer (for data layer variables)
+    + *Pressures* (for input layers only)
+    + *Resilience* (for input layers only)
+    + *Spatial* (for input layers only)
+3. **dimension** (for score variables) or **layer** (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
 
 
-#### Output Score
-If the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a target and a dimension. The target is a goal or sub-goal, and the dimension indicates the calculation to be reported.
+If the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the score calculation (dimension) to be reported.
 
-* Target options (with numeric identifiers):
-    + Overall Index
-    + Ten goals and eight sub-goals
+On the other hand, if the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
+
+
 * Dimension options:
     + Status, trend, future state, pressures, resilience, and score
-    
-#### Input Layer
-If the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
-
-* Target options (with numeric identifiers):
-    + Ten goals and eight sub-goals
-    + Pressures
-    + Resilience
-    + Spatial
-* Layers options:
-    + Specific data layer associated with the target
-* Category options:
-    + This option will appear if the layer identified has categories
-* Year options:
-    + This option will appear if the layer identified has multiple years
 
 
 ## Calculate page
