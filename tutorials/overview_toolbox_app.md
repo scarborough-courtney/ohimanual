@@ -36,14 +36,24 @@ The histogram shows the distribution of the selected variable as the number of o
 
 The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each. It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
-For all visualization options, statistics and metadata for the chosen fields are displayed below the drop-down menus on the left side of the page.
-
 
 ### Overview of variable options
 
 The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
 
+IMAGE
+
+A Description, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
+
+
+The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target.
+
+For example, if the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the score calculation (dimension) to be reported.
+
+On the other hand, if the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific data layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
+
 ![](./fig/overview_variable_options2.png)
+
 
 1. **variable type**
     + *Output Score: the calculated score*
@@ -58,12 +68,7 @@ The Data page has drop-down menus from which the user chooses the data to be dis
 3. **dimension** (for score variables) or **layer** (for data layer variables)
 4. **category** (this will appear for data layer variables with categories)
 5. **year** (this will appear for data layer variables with multiple years)
-
-
-If the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the score calculation (dimension) to be reported.
-
-On the other hand, if the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
-
+6. 
 
 ## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
