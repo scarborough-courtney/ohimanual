@@ -4,7 +4,7 @@
 
 The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based .csv files (.csv stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
 
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible). In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
+Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
 In the example below, there are two data layers files (tr_jobs_total.csv and np_harvest_tonnes.csv) that have data for four and two regions respectively (1-4, and 5-6). In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
@@ -16,13 +16,11 @@ In the example below, there are two data layers files (tr_jobs_total.csv and np_
 
 ![](./fig/formatting_data_example2.png)
 
-![](./fig/formatting_data_example.png)
+It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
 
-It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling.
+How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highlight some example of temporal and spatial gapfilling. 
 
-
-
-If there is insufficient data, see the sections below to see examples of gapfilling. For more information about types of gapfilling, see the supplementary  methods used in the 2013 global assessment, available on http://ohi-science.org/.
+**Note that the DataLayer column has been included for clarity in the examples below, but should be ommitted in the final .csv file.**
 
 
 ### Temporal gapfilling
@@ -126,13 +124,12 @@ In R, the 'reshape' package has the 'melt' command, which will melt the data fro
 
 Example code using the *melt* command in the *reshape2* library. Assume the data above is in a variable called *data_wide*:
 
-> install.packages('reshape2')
-
-> library(reshape2)
-
-> data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
-
-> data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+```
+install.packages('reshape2')
+library(reshape2)
+data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
+data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
+```
 
 This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
 
@@ -140,7 +137,7 @@ The final step is optional: ordering the data will make it more easy to read for
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_long_example_2.png)
+![](./fig/formatting_long_example_3.png)
 
 With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
 
