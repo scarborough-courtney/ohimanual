@@ -13,10 +13,9 @@ OHI scores by goal are calculated at the scale of the reporting unit, which is c
 
 The Toolbox can also be used to calculate scores in smaller-scale **regional assessments** after finer-scale data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points. The Toolbox App therefore enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen area. The App can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
 
-We recommend first exploring the results from the global assessment and becoming familiar with the Toolbox App before beginning a regional assessment.
+We recommend first becoming familiar with the Toolbox App and exploring the results from the global assessment before beginning a regional assessment.
 
 **Requirements**: an Internet connection for the initial Toolbox App installation. The Toolbox runs on both a Mac and PC.
 
 1. Install the latest version of R (http://cran.r-project.org/).
 2. Launch the Toolbox Application (http://ohi-science.org/pages/install.html).
-3. Explore global results using the Toolbox App
