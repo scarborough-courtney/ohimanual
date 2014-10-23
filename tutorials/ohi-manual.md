@@ -63,50 +63,22 @@ The histogram shows the distribution of the selected variable as the number of o
 
 The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each. It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
-For all visualization options, statistics and metadata for the chosen fields are displayed below the drop-down menus on the left side of the page.
-
 
 ### Overview of variable options
 
-The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox:
+The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
+
+![](./fig/varible_options_view.png)
+
+
+The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target.
+
+For example, if the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the score calculation (dimension) to be reported.
+
+On the other hand, if the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific data layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
 
 ![](./fig/overview_variable_options2.png)
 
-1. **variable type**
-    + *Output Score: the calculated score*
-    + *Input Layer: the data layer used to calculate the score*
-2. **target** 
-    + *Overall Index*
-    + *Ten goals*
-    + *Eight sub-goals*
-3. **dimension** (for score variables) or layer (for data layer variables)
-4. **category** (this will appear for data layer variables with categories)
-5. **year** (this will appear for data layer variables with multiple years)
-
-
-#### Output Score
-If the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a target and a dimension. The target is a goal or sub-goal, and the dimension indicates the calculation to be reported.
-
-* Target options (with numeric identifiers):
-    + Overall Index
-    + Ten goals and eight sub-goals
-* Dimension options:
-    + Status, trend, future state, pressures, resilience, and score
-    
-#### Input Layer
-If the user selects “Input Layer” as the variable type, they will be able to choose a target and a specific layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
-
-* Target options (with numeric identifiers):
-    + Ten goals and eight sub-goals
-    + Pressures
-    + Resilience
-    + Spatial
-* Layers options:
-    + Specific data layer associated with the target
-* Category options:
-    + This option will appear if the layer identified has categories
-* Year options:
-    + This option will appear if the layer identified has multiple years
 
 
 ## Calculate page
@@ -121,7 +93,6 @@ The Report page allows the user to create a report of results as .html and .pdfs
 ![](./fig/reportpage_view.png)
 
 It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
-
 
 # Explore Global Results with the Toolbox App
 
@@ -385,11 +356,9 @@ For the US West Coast, available data measure the current extent of seagrass hab
 
 The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based .csv files (.csv stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
 
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible). In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points). 
+Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible). In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
-It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling.
-
-In the example below, there are two data layers (tourists_count and jobs_tourism_count) that have data for four regions, A - D. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+In the example below, there are two data layers files (tr_jobs_total.csv and np_harvest_tonnes.csv) that have data for four and two regions respectively (1-4, and 5-6). In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
 1. At least five years of data are available, 
 2. There are no data gaps
@@ -397,7 +366,13 @@ In the example below, there are two data layers (tourists_count and jobs_tourism
 
 **Example of data in the appropriate format:**
 
+![](./fig/formatting_data_example2.png)
+
 ![](./fig/formatting_data_example.png)
+
+It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling.
+
+
 
 If there is insufficient data, see the sections below to see examples of gapfilling. For more information about types of gapfilling, see the supplementary  methods used in the 2013 global assessment, available on http://ohi-science.org/.
 
@@ -418,7 +393,7 @@ Using a linear model can be done in most programming languages using specific fu
 
 The first step is to calculate the **slope** of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
-![](./fig/filling_temporal_gaps_slope.png)
+![](./fig/filling_temporal_gaps_slope.png) 
 
 **2. Calculate the y-intercept for each region**
 
