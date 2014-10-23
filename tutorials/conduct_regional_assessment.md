@@ -6,7 +6,7 @@ There are key considerations and processes that will be a part of every regional
 
 The time required to complete a regional assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
 
-**Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time alloted for the regional assessment**. 
+**Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time allotted for the regional assessment**. 
 
 ![](./fig/task_timeline.png)  
     
@@ -16,7 +16,7 @@ The Ocean Health Index Toolbox can be used to calculate scores for regional asse
 
 Our team of scientists and managers is prepared to provide guidance for regional assessments, from initial meetings to discussions about model development to disseminating results.
 
-## Recommendations
+## Points to remember
 
 We recommend to remember the following as you develop your approach:
 
@@ -25,11 +25,11 @@ We recommend to remember the following as you develop your approach:
 * Document all decisions made
     + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
     + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
-* Assessments can use a mixture of regional-, national- and global-scale data   
+* Assessments can use a mixture of regional-, country- and global-scale data   
 * Scores are calculated by region
-    + comparing scores between sub-national regions is a main reason of conducting a regional assessment
+    + comparing scores between subcountry regions is a main reason of conducting a regional assessment
     + regional scores are combined by weighted average to calculate scores for the study area
-    + goal models are the same across all regions; data are specific to the region. For example, habitat-based goal models are the same in each region, but which habitats contribute to the final scores will depend on which habitats are present in each region
+    + goal models are the same across all regions; data are specific to the region. For example, the carbon storage goal model is calculated in the same way for each region, but which habitats are present in each region, and the area and condition of those habitats are specific to each region
 * All data do not need to be at the same spatial or temporal scale
     + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
 
