@@ -14,7 +14,7 @@ In the example below, there are two data layers files (tr_jobs_total.csv and np_
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_data_example2.png)
+![](./fig/formatting_data_example.png)
 
 It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
 
@@ -137,7 +137,7 @@ The final step is optional: ordering the data will make it more easy to read for
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_long_example_3.png)
+![](./fig/formatting_long_example_2.png)
 
 With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
 
