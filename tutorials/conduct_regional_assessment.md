@@ -4,6 +4,8 @@
 
 There are key considerations and processes that will be a part of every regional assessment, however, how each regional assessment is conducted will be unique depending on the local context. For example: what data and indicators are available will determine how goal models are able to be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment. 
 
+### Timeline 
+
 The time required to complete a regional assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
 
 **Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time allotted for the regional assessment**. 
@@ -25,6 +27,8 @@ We recommend to remember the following as you develop your approach:
 * Document all decisions made
     + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
     + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
+* Goal models should be modified to capture local characteristics and priorities of the region
+    + how goal models are developed depends on what is important locally and what data/indicators are available.
 * Assessments can use a mixture of regional-, country- and global-scale data   
 * Scores are calculated by region
     + comparing scores between subcountry regions is a main reason of conducting a regional assessment
@@ -60,7 +64,8 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
 * Be familiar with the global inputs to your Toolbox repository
     + understand the data and models used in global assessments
     + prioritize which data and models should be updated 
-    + use the Toolbox repository as a registry to organize data layers
+    + become familiar with the Toolbox framework for your study region: **ohi-science.shinyapps.io/[study_area]**
+      - example: ohi-science.shinyapps.io/colombia
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
     + what local data and indicators are available pressures and resilience?
@@ -68,6 +73,7 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + do local data and indicators capture the philosophy of the Ocean Health Index?
     + are local data and indicators at the appropriate spatial and temporal scales?
     + process and format data and indicators to create data layers* for the Toolbox
+    + use the Toolbox repository as a registry to organize data layers
 * Modify goal models and set reference points:
     + can goal goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?

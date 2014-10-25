@@ -17,13 +17,12 @@ OHI scores by goal are calculated at the scale of the reporting unit, which is c
 
 The Toolbox can also be used to calculate scores in smaller-scale **regional assessments** after finer-scale data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points. The Toolbox App therefore enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen area. The App can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
 
-We recommend first exploring the results from the global assessment and becoming familiar with the Toolbox App before beginning a regional assessment.
+We recommend first becoming familiar with the Toolbox App and exploring the results from the global assessment before beginning a regional assessment.
 
 **Requirements**: an Internet connection for the initial Toolbox App installation. The Toolbox runs on both a Mac and PC.
 
 1. Install the latest version of R (http://cran.r-project.org/).
 2. Launch the Toolbox Application (http://ohi-science.org/pages/install.html).
-3. Explore global results using the Toolbox App
 
 # Overview of the OHI Toolbox App
 
@@ -131,15 +130,16 @@ shows the different harvested species that were used to calculate the maricultur
 
 Regional assessments use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Using ten criteria (goals), the Index scores how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets), on a scale of 0 to 100. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. The OHI is designed to combine existing work into a comprehensive assessment of ocean health. And because the assessments are developed at the scale of decision-making using local data and parameters, the findings can help inform decision-making and management actions aimed at maximizing sustainable productivity while preserving vital natural capital.  
 
-**The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
-
-The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. Similarly, pressures and resilience measures can be refined using local data and indicators. Calculated Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental. 
-
 Scores by goal are calculated weighted average to produce the score for the overall area assessed, called a **study area**. In regional assessments, coastal states or provinces are often the **regions** within a country, which is the **study area**. 
 
 ![](./fig/global_v_brazil_map.png)  
+
+The Ocean Health Index framework is flexible to accommodate regional priorities: goal models should be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. Similarly, pressures and resilience measures can be refined using local data and indicators. Calculated Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental. 
+
+**The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
+
   
-Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589) ), and more are underway.   
+Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589)), and more are underway.   
 
 ## Before getting started
 
@@ -152,14 +152,15 @@ Before beginning a regional assessment, it is important to have planned several 
 * Assemble a qualified team with diverse skills
     + have a broad scientific understanding and experience with environmental policy
     + are comfortable with handling large data sets, making decisions, and thinking creatively
-    + can work with the software program R and user-created packages
-    + can work with ArcGIS or other spatial analysis software
     + collaborate well in a multidisciplinary team, remotely and in person
+    + can work with the software program R and user-created packages (at least one person)
+    + can work with ArcGIS or other spatial analysis software (at least one person)
+    + are fluent in English (at least one person)
 * Funding 
     + greatly depends on the local context
     + potentially needed for a management and scientific team, workshops and meetings (including travel), communications, policy engagement, and operating costs
 * Policy and management interest (optional)
-    + inform government policies to improve ocean health is most effective if there is interest and engagement from policy makers 
+    + engage policy makers early: informing government policies to improve ocean health is most effective if there is early interest and engagement from government agencies
     + requires ongoing communication during Index development to best inform management actions that could have measurable impacts. 
     + repeated assessments as new data become available enable tracking ocean health through time and evaluating management priorities
     
@@ -172,9 +173,11 @@ Before beginning a regional assessment, it is important to have planned several 
 
 There are key considerations and processes that will be a part of every regional assessment, however, how each regional assessment is conducted will be unique depending on the local context. For example: what data and indicators are available will determine how goal models are able to be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment. 
 
+### Timeline 
+
 The time required to complete a regional assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
 
-**Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time alloted for the regional assessment**. 
+**Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time allotted for the regional assessment**. 
 
 ![](./fig/task_timeline.png)  
     
@@ -184,7 +187,7 @@ The Ocean Health Index Toolbox can be used to calculate scores for regional asse
 
 Our team of scientists and managers is prepared to provide guidance for regional assessments, from initial meetings to discussions about model development to disseminating results.
 
-## Recommendations
+## Points to remember
 
 We recommend to remember the following as you develop your approach:
 
@@ -193,11 +196,13 @@ We recommend to remember the following as you develop your approach:
 * Document all decisions made
     + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
     + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
-* Assessments can use a mixture of regional-, national- and global-scale data   
+* Goal models should be modified to capture local characteristics and priorities of the region
+    + how goal models are developed depends on what is important locally and what data/indicators are available.
+* Assessments can use a mixture of regional-, country- and global-scale data   
 * Scores are calculated by region
-    + comparing scores between sub-national regions is a main reason of conducting a regional assessment
+    + comparing scores between subcountry regions is a main reason of conducting a regional assessment
     + regional scores are combined by weighted average to calculate scores for the study area
-    + goal models are the same across all regions; data are specific to the region. For example, habitat-based goal models are the same in each region, but which habitats contribute to the final scores will depend on which habitats are present in each region
+    + goal models are the same across all regions; data are specific to the region. For example, the carbon storage goal model is calculated in the same way for each region, but which habitats are present in each region, and the area and condition of those habitats are specific to each region
 * All data do not need to be at the same spatial or temporal scale
     + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
 
@@ -228,7 +233,8 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
 * Be familiar with the global inputs to your Toolbox repository
     + understand the data and models used in global assessments
     + prioritize which data and models should be updated 
-    + use the Toolbox repository as a registry to organize data layers
+    + become familiar with the Toolbox framework for your study region: **ohi-science.shinyapps.io/[study_area]**
+      - example: ohi-science.shinyapps.io/colombia
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
     + what local data and indicators are available pressures and resilience?
@@ -236,6 +242,7 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + do local data and indicators capture the philosophy of the Ocean Health Index?
     + are local data and indicators at the appropriate spatial and temporal scales?
     + process and format data and indicators to create data layers* for the Toolbox
+    + use the Toolbox repository as a registry to organize data layers
 * Modify goal models and set reference points:
     + can goal goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?
@@ -356,11 +363,7 @@ For the US West Coast, available data measure the current extent of seagrass hab
 
 The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based .csv files (.csv stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
 
-<<<<<<< HEAD
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible). In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
-=======
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) with a single associated *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
->>>>>>> d488c1a6d2a899a8d8b103f28c64835f1f537419
+Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
 In the example below, there are two data layers files (tr_jobs_total.csv and np_harvest_tonnes.csv) that have data for four and two regions respectively (1-4, and 5-6). In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
@@ -372,21 +375,11 @@ In the example below, there are two data layers files (tr_jobs_total.csv and np_
 
 ![](./fig/formatting_data_example2.png)
 
-<<<<<<< HEAD
-![](./fig/formatting_data_example.png)
-
-It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling.
-
-
-
-If there is insufficient data, see the sections below to see examples of gapfilling. For more information about types of gapfilling, see the supplementary  methods used in the 2013 global assessment, available on http://ohi-science.org/.
-=======
 It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
 
-How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highligh some example of temporal and spatial gapfilling. 
+How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highlight some example of temporal and spatial gapfilling. 
 
 **Note that the DataLayer column has been included for clarity in the examples below, but should be ommitted in the final .csv file.**
->>>>>>> d488c1a6d2a899a8d8b103f28c64835f1f537419
 
 
 ### Temporal gapfilling
