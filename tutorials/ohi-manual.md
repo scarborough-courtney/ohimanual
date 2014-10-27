@@ -365,7 +365,7 @@ The Ocean Health Index Toolbox App is designed to work in the programming langua
 
 Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
-In the example below, there are two data layers files (tr_jobs_total.csv and np_harvest_tonnes.csv) that have data for four and two regions respectively (1-4, and 5-6). In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+The example below shows two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
 1. At least five years of data are available, 
 2. There are no data gaps
@@ -373,7 +373,7 @@ In the example below, there are two data layers files (tr_jobs_total.csv and np_
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_data_example2.png)
+![](./fig/formatting_data_example.png)
 
 It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
 
@@ -390,7 +390,7 @@ Temporal gaps are when some data are available for a region, but there are missi
 
 Many times, creating a linear model is the best way to estimate data and fill temporal gaps. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
 
-Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region A.
+Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region 1.
 
 **Steps to temporally gapfill data (assumes linearity):**
 
@@ -439,24 +439,24 @@ Depending on the data, this can be done simply by assuming that two regions are 
 
 **Spatial gapfilling example:**
 
-To spatially gapfill Region B requires thinking about the properties and characteristics of the region and the data, tourists_count. 
+To spatially gapfill Region 2 requires thinking about the properties and characteristics of the region and the data, tourists_count. 
 
 Here are properties that can be important for decision making:
 
-Region B:
-- is located between Region A and C
-- is larger than Region A
-- has similar population size/demographics to Region C
-- has not been growing as quickly as Region D
+Region 2:
+- is located between Region 1 and 3
+- is larger than Region 1
+- has similar population size/demographics to Region 3
+- has not been growing as quickly as Region 4
 
-There is no absolute answer of how to best gapfill Region B. Here are a few reasonable possibilities:
+There is no absolute answer of how to best gapfill Region 2. Here are a few reasonable possibilities:
 
-Assign Region B values from:
-- Region A
-- Region C
-- Region A and C averaged 
+Assign Region 2 values from:
+- Region 1
+- Region 3
+- Region 1 and 3 averaged 
 
-In the example below, the decision was made to gapfill Region B using the mean of Regions A and C since this would use a combination of both of those regions. Again, other possibilities could be equally correct. But some form of spatial gapfilling is required so a decision must be made.
+In the example below, the decision was made to gapfill Region 2 using the mean of Regions 1 and 3 since this would use a combination of both of those regions. Again, other possibilities could be equally correct. But some form of spatial gapfilling is required so a decision must be made.
 
 ![](./fig/gapfilling_spatial_example.png)
 
@@ -496,7 +496,7 @@ The final step is optional: ordering the data will make it more easy to read for
 
 **Example of data in the appropriate format:**
 
-![](./fig/formatting_long_example_3.png)
+![](./fig/formatting_long_example_2.png)
 
 With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
 
