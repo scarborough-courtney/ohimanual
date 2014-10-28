@@ -44,7 +44,9 @@ The Data page has drop-down menus from which the user chooses the data to be dis
 ![](./fig/varible_options_view.png)
 
 
-The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target.
+The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target. 
+
+> In other words: **Output Score = Calculated Score** and **Input Layer = Data**
 
 For example, if the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the score calculation (dimension) to be reported.
 
