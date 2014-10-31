@@ -42,10 +42,7 @@ The Data page displays input data or calculated scores for each goal parameter, 
   
 ![](./fig/datapage_view.png)
 
-The map displays data for every region as reported in the scenario. Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
-
-The target and dimension chosen from the drop-down menu is also displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
-
+The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
 
 **Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#histogram) form:**
@@ -60,7 +57,7 @@ The histogram shows the distribution of the selected variable as the number of o
   
 ![](./fig/tablepage_view.png)
 
-The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each. It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
+The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
 
 
 ### Overview of variable options
@@ -97,7 +94,9 @@ It is currently possible to create flower plots and tables with several options,
 
 # Explore Global Results with the Toolbox App
 
-## develop
+The following section will be devoted to exploring the Ocean Health Index Global Results using the Toolbox App. The section will further familiarize the user with the organizational structure and functionality of the Toolbox, and will also help the user understand the results that were obtained for the global assessment as well on the types of data that were used to calculate the Ocean Health Index.
+
+To begin exploring results, the user must first select the data he wishes to display with the Toolbox (i.e. variable type > target > dimension/layer > category > year).
 
 **For example:**
 
@@ -112,22 +111,35 @@ shows the different harvested species that were used to calculate the maricultur
 
 ![](./fig/input_mariculture_harvested.png)
 
+As mentioned previously, the selected data can then be viewed as a Map, as a distribution on the Histogram tab or numerically in Table form.
 
-### Map 
+## Map 
+
+Suppose for instance that **Output Score > Index > score** is selected and viewed as a map (default selection).
 
 ![](./fig/map_view.png)
 
-### Histogram
+The target (Index) and dimension (Score) chosen from the drop-down menu is displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’. Zooming in and out of the map is possible with the plus/minus in the upper left of the map. A color legend is also displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
-> For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
+## Histogram
+
+For example, if the **Output Score > Fisheries > score** sub-goal is selected, the histogram shows the frequency of each fisheries score:
 
 ![](./fig/histogram_view.png)
 
+As noted in the figure above, the Histogram view allows the user to see the range of scores (lowest and highest) as well as the frequency of each (most vs. least common). The latter may be helpful for instance if the user wishes to compare to score of a particular country to all the other scores.
 
-### Table
+## Table
+
+The table displays the target value for each region and the overall study area, with an identifying code (rgn_id), name (rgn_name), and value (value) for each. 
 
 ![](./fig/table_view.png)
 
+It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
+
+---
+output: html_document
+---
 # Introduction to OHI Regional Assessments
 
 Regional assessments use the Ocean Health Index framework to study smaller spatial scales, often where policy and management decisions are made. Using ten criteria (goals), the Index scores how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets), on a scale of 0 to 100. Regional assessments incorporate local priorities, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores better reflecting local realities. The OHI is designed to combine existing work into a comprehensive assessment of ocean health. And because the assessments are developed at the scale of decision-making using local data and parameters, the findings can help inform decision-making and management actions aimed at maximizing sustainable productivity while preserving vital natural capital.  
@@ -139,7 +151,6 @@ Scores by goal are calculated weighted average to produce the score for the over
 The Ocean Health Index framework is flexible to accommodate regional priorities: goal models should be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. Similarly, pressures and resilience measures can be refined using local data and indicators. Calculated Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental. 
 
 **The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
-
   
 Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589)), and more are underway.   
 
@@ -567,17 +578,20 @@ In two cases, gap-filling was applied to calculated values for the pertinent dim
 [[develop 
 
 
-## Getting Started
+## Overview
 
 Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. These files and scripts are packaged together in a folder called a **repository**. Each Ocean Health Index assessment has its own repository. Repositories are stored online through GitHub, which enables easy collaboration with versioning capabilities. [Learn more about GitHub repositories and OHI]((https://github.com/OHI-Science/ohimanual/blob/master/tutorials/install_tbx_regional_assessment.md#github-repositories)).
 
-It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case. 
+It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case.
 
-**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). 
+**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
 
-1. Begin a [regional assessment](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/regional_assessments_intro.md#ocean-health-index-regional-assessments)
-2. Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
-3. [Modify the Toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#calculate-regional-assessment-scores) to calculate regional scores.
+1. Set up:
+ * Install R and RStudio
+ * Clone regional assessment repository on Desktop
+2. Become familiar with the [OHI Toolbox File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
+
+Detailed instructions for step 1 are provided below for users who either want to work with GitHub (See: Accessing repository with GitHub) or without it (See: Accessing repository without GitHub). Once the user has completed steps 1 and 2, he will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
 
 
 ## OHI and GitHub 
