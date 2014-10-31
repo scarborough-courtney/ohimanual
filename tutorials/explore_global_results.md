@@ -33,6 +33,7 @@ For example, if the **Output Score > Fisheries > score** sub-goal is selected, t
 
 ![](./fig/histogram_view.png)
 
+As noted in the figure above, the Histogram view allows the user to see the range of scores (lowest and highest) as well as the frequency of each (most vs. least common). The latter may be helpful for instance if the user wishes to compare to score of a particular country to all the other scores.
 
 ## Table
 
