@@ -97,6 +97,10 @@ You will then work locally on your own computer, changing the cloned files in `~
 
 All changes within this folder will be tracked by GitHub when you commit and sync these changes back to the repo on the GitHub server, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
+This example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
+
+> > > ![](./fig/clone_push_pull.png)
+
 
 ### Committing and pushing changes locally
 
