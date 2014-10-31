@@ -1,7 +1,5 @@
 # Installing the Toolbox for a Regional Assessment 
 
-[[develop 
-
 
 ## Overview
 
