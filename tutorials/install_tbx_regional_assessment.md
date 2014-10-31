@@ -16,7 +16,7 @@ It is possible to conduct a regional assessment by downloading a template reposi
 
 Detailed instructions for step 1 are provided below for users who want to either:
 
- * work with GitHub (See: [Accessing repository with GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/ohi-manual.md#accessing-repositories-with-github) section, or 
- * work without GitHub (See: [Accessing repository without GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/ohi-manual.md#accessing-repositories-without-github) section. 
+ * work with GitHub (See: [Accessing repository with GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/ohi-manual.md#accessing-repositories-with-github) section), or 
+ * work without GitHub (See: [Accessing repository without GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/ohi-manual.md#accessing-repositories-without-github) section). 
 
 Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
