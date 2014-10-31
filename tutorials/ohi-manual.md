@@ -575,14 +575,14 @@ In two cases, gap-filling was applied to calculated values for the pertinent dim
 
 # Installing the Toolbox for a Regional Assessment 
 
-[[develop 
-
 
 ## Overview
 
 Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. These files and scripts are packaged together in a folder called a **repository**. Each Ocean Health Index assessment has its own repository. Repositories are stored online through GitHub, which enables easy collaboration with versioning capabilities. [Learn more about GitHub repositories and OHI]((https://github.com/OHI-Science/ohimanual/blob/master/tutorials/install_tbx_regional_assessment.md#github-repositories)).
 
 It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case.
+
+## Getting started
 
 **Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
 
@@ -591,7 +591,12 @@ It is possible to conduct a regional assessment by downloading a template reposi
  * Clone regional assessment repository on Desktop
 2. Become familiar with the [OHI Toolbox File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
 
-Detailed instructions for step 1 are provided below for users who either want to work with GitHub (See: Accessing repository with GitHub) or without it (See: Accessing repository without GitHub). Once the user has completed steps 1 and 2, he will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
+Detailed instructions for step 1 are provided below for users who want to either:
+
+ * work with GitHub (See: Accessing repository with GitHub), or 
+ * work without GitHub (See: Accessing repository without GitHub). 
+
+Once the user has completed steps 1 and 2, he will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
 
 
 ## OHI and GitHub 
@@ -630,7 +635,7 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions [here](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_github.md#accessing-repositories-without-github). We can always get your filesystem onto GitHub later. 
   
 
-> ![software required for regional assessments with version control](./fig/overview_requirements.png)
+> ![software required for regional assessments with version control](./fig/overview_requirements_1.png)
 
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
@@ -730,8 +735,8 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   
 > ![](./fig/commit_sk.png)
 
-### Using Github App to push commits to GitHub ohi-[assessment] repository
-The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
+### Using GitHub App to push commits to GitHub ohi-[assessment] repository
+The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
 > ![](./fig/github_app_notes.png)
 
