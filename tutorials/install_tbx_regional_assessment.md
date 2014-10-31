@@ -11,10 +11,10 @@ It is possible to conduct a regional assessment by downloading a template reposi
 
 **Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
 
-1. Set up: 
-  * Install R and RStudio
-  * Clone regional assessment repository on Desktop
-2. Become familiar with the [OHI Toolbox File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
+> 1. Set up: 
+>   * Install R and RStudio
+>   * Clone regional assessment repository on Desktop
+> 2. Become familiar with the [OHI Toolbox File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
 
 Detailed instructions for step 1 are provided below for users who either want to work with Github (See: Accessing repository with Github) or without it (See: Accessing repository without Github). Once the user has completed steps 1 and 2, he will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
 
