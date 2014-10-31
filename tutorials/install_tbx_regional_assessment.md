@@ -21,7 +21,7 @@ Detailed instructions for step 1 are provided below for users who want to either
  * work with GitHub (See: Accessing repository with GitHub), or 
  * work without GitHub (See: Accessing repository without GitHub). 
 
-Once the user has completed steps 1 and 2, he will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
+Once the user has completed steps 1 and 2, they will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
 
 
 ## OHI and GitHub 
