@@ -17,7 +17,7 @@ shows the different harvested species that were used to calculate the maricultur
 
 ![](./fig/input_mariculture_harvested.png)
 
-As mentioned previously, the selected data can then be viewed as a map, as a distribution on the Histogram tab or numerically in Table form.
+As mentioned previously, the selected data can then be viewed as a Map, as a distribution on the Histogram tab or numerically in Table form.
 
 ## Map 
 
@@ -25,9 +25,7 @@ Suppose for instance that **Output Score > Index > score** is selected and viewe
 
 ![](./fig/map_view.png)
 
-The target and dimension chosen from the drop-down menu is displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
-
-Zooming in and out is possible with the plus/minus in the upper left of the map. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
+The target (Index) and dimension (Score) chosen from the drop-down menu is displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’. Zooming in and out of the map is possible with the plus/minus in the upper left of the map. A color legend is also displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
 ## Histogram
 
