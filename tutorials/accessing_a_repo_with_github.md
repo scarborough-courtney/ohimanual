@@ -14,20 +14,24 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
 To get started, follow the steps below:
 
 **1. Install R and RStudio**
+
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
 
 
 **2. Create a GitHub account**
+
 GitHub is an online interface for *git*, and to use it you must [create a GitHub account](http://github.com). You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
 
 
 **3. Install *git* software**
+
 *git* is version-control software that you will need to install on your computer. 
 
 [Download](http://git-scm.com/downloads) *git* and follow the install instructions. There are specific settings to select for [**Windows**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_windows.md#git-on-windows) and [**Mac**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_mac.md). 
   
   
 **4. Set up your Git Identity**
+
 After downloading and installing, you will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
 * **Mac**: launch the Terminal application (Applications > Utilities > Terminal)
@@ -56,6 +60,7 @@ exit
 
 
 **5. Clone your ohi-[assessment] repo to your computer**
+
 The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
 The repository will be backed up and stored on github.com and you will also have a local version on your computer.
@@ -69,6 +74,7 @@ Downloading a repository from GitHub is called **cloning** and there are multipl
 
 
 **Cloning options:**
+
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
 1) The [GitHub App for Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))  
@@ -95,6 +101,7 @@ All changes within this folder will be tracked by GitHub when you commit and syn
 Committing and pushing changes can be done using either RStudio or the GitHub App.
 
 **Using RStudio to commit and push changes to GitHub ohi-[assessment] repository**
+
 Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](./fig/RStudio_sk1.png)
@@ -112,6 +119,7 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 > ![](./fig/commit_sk.png)
 
 **Using GitHub App to push commits to GitHub ohi-[assessment] repository**
+
 The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
 > ![](./fig/github_app_notes.png)
