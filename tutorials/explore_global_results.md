@@ -31,7 +31,7 @@ Zooming in and out is possible with the plus/minus in the upper left of the map.
 
 ## Histogram
 
-For example, if the **Output Score > Fisheries > score** sub-goal is selected, the histogram shows the distribution of fisheries scores as the number of observations per value bin (white bars):
+For example, if the **Output Score > Fisheries > score** sub-goal is selected, the histogram shows the frequency of each fisheries score:
 
 ![](./fig/histogram_view.png)
 
