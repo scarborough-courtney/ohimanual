@@ -21,7 +21,7 @@ As mentioned previously, the selected data can then be viewed as a map, as a dis
 
 ## Map 
 
-> Suppose for instance that **Output Score > Index > score** is selected and viewed as a map (default selection).
+Suppose for instance that **Output Score > Index > score** is selected and viewed as a map (default selection).
 
 ![](./fig/map_view.png)
 
@@ -31,7 +31,7 @@ Zooming in and out is possible with the plus/minus in the upper left of the map.
 
 ## Histogram
 
-> For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
+For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
 
 ![](./fig/histogram_view.png)
 
