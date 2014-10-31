@@ -5,7 +5,7 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions [here](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_github.md#accessing-repositories-without-github). We can always get your filesystem onto GitHub later. 
   
 
-> ![software required for regional assessments with version control](./fig/overview_requirements.png)
+> ![software required for regional assessments with version control](./fig/overview_requirements_1.png)
 
 ### Install R and RStudio
 Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
