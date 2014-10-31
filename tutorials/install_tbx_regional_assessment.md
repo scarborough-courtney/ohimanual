@@ -3,17 +3,20 @@
 [[develop 
 
 
-## Getting Started
+## Overview
 
 Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. These files and scripts are packaged together in a folder called a **repository**. Each Ocean Health Index assessment has its own repository. Repositories are stored online through GitHub, which enables easy collaboration with versioning capabilities. [Learn more about GitHub repositories and OHI]((https://github.com/OHI-Science/ohimanual/blob/master/tutorials/install_tbx_regional_assessment.md#github-repositories)).
 
-It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case. 
+It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case.
 
-**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). 
+**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
 
-1. Begin a [regional assessment](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/regional_assessments_intro.md#ocean-health-index-regional-assessments)
-2. Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
-3. [Modify the Toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#calculate-regional-assessment-scores) to calculate regional scores.
+1. Set up:
+ * Install R and RStudio
+ * Clone regional assessment repository on Desktop
+2. Become familiar with the [OHI Toolbox File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
+
+Detailed instructions for step 1 are provided below for users who either want to work with GitHub (See: Accessing repository with GitHub) or without it (See: Accessing repository without GitHub). Once the user has completed steps 1 and 2, he will then be able to use the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
 
 
 ## OHI and GitHub 
