@@ -51,7 +51,7 @@ On the other hand, if the user selects “Input Layer” as the variable type, t
 
 ![](./fig/overview_variable_options2.png)
 
-
+To further familiarize yourself with the display and variable options of Toolbox App, please see the 'Explore Global Results with the Toolbox App' section below.
 
 ## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
