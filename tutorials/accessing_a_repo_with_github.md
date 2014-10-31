@@ -105,8 +105,8 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   
 > ![](./fig/commit_sk.png)
 
-### Using Github App to push commits to GitHub ohi-[assessment] repository
-The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
+### Using GitHub App to push commits to GitHub ohi-[assessment] repository
+The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
 > ![](./fig/github_app_notes.png)
 
