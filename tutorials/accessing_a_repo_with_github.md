@@ -7,9 +7,11 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the ['Accessing repositories without GitHub'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_github.md#accessing-repositories-without-github) section below. We can always get your filesystem onto GitHub later. 
   
 
-> ![software required for regional assessments with version control](./fig/overview_requirements_1.png)
-
 ### Setting up
+
+Software required for regional assessments with version control:
+
+> ![](./fig/overview_requirements_1.png)
 
 To get started, follow the steps below:
 
