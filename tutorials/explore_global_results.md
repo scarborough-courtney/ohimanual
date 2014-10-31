@@ -19,17 +19,23 @@ shows the different harvested species that were used to calculate the maricultur
 
 As mentioned previously, the selected data can then be viewed as a map, as a distribution on the Histogram tab or numerically in Table form.
 
-### Map 
+## Map 
+
+> Suppose for instance that **Output Score > Index > score** is selected and viewed as a map (default selection).
 
 ![](./fig/map_view.png)
 
-### Histogram
+The target and dimension chosen from the drop-down menu is displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
+
+Zooming in and out is possible with the plus/minus in the upper left of the map. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
+
+## Histogram
 
 > For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
 
 ![](./fig/histogram_view.png)
 
 
-### Table
+## Table
 
 ![](./fig/table_view.png)
