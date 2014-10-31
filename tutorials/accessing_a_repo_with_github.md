@@ -9,7 +9,7 @@ It is also possible to conduct a regional assessment without GitHub. We do not r
 
 > ![software required for regional assessments with version control](./fig/overview_requirements_1.png)
 
-### Getting started
+### Setting up
 
 To get started, follow the steps below:
 
