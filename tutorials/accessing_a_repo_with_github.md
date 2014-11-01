@@ -79,16 +79,26 @@ Downloading a repository from GitHub is called **cloning** and there are multipl
 
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
-1) The **GitHub App** for Mac (freely available at https://mac.github.com/) or Windows (at https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning on Mac (https://mac.github.com/help.html) or on Windows (https://windows.github.com/help.html).  
+1) The **GitHub App** for Mac (freely available at https://mac.github.com/) or Windows (at https://windows.github.com/). 
 
-2) [The command line (Windows) or Terminal (Mac)](https://help.github.com/articles/fork-a-repo#keep-your-fork-synced). For example, clone `ohi-israel` into the `~/github` folder:
+After installing the GitHub App, log in with your username and passord, and then follow instructions for cloning on a Mac (https://mac.github.com/help.html) or on Windows (https://windows.github.com/help.html).  
+
+2) The **Command line** (Windows) or **Terminal** (Mac).
+
+> ![](./fig/creating_local_clone.png)
+
+Copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced
+
+For example, clone `ohi-israel` into the `~/github` folder:
 ```
 cd ~/github
 git clone https://github.com/OHI-Science/ohi-israel.git
 cd ohi-israel
 ```
-3) **RStudio (https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
 
+3) **RStudio (). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+
+Copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio
 
 ### Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
