@@ -85,20 +85,26 @@ After installing the GitHub App, log in with your username and passord, and then
 
 2) The **Command line** (Windows) or **Terminal** (Mac).
 
+Below is an example for a repository called 'Spoon-Knife'.
+
 > ![](./fig/creating_local_clone.png)
 
-Copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced
+(Copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
 
-For example, clone `ohi-israel` into the `~/github` folder:
+Below is another example to clone `ohi-israel` into the `~/github` folder:
 ```
 cd ~/github
 git clone https://github.com/OHI-Science/ohi-israel.git
 cd ohi-israel
 ```
 
-3) **RStudio (). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+3) **RStudio**
 
-Copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio
+This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+
+> ![](./fig/creating_local_clone_R.png)
+
+(Copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio)
 
 ### Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
@@ -149,8 +155,8 @@ Always pull before pushing commits. This is the best way to avoid merging errors
 
 #### More Information
 
-* [presentation: Reproducible science with the Ocean Health Index](http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1)
-* [wiki: Using GitHub](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
+* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
 
 #### GitHub flow with _Fork & Pull Model_
 
@@ -164,4 +170,4 @@ where:
 * `[user]` is your GitHub username
 
 see also:
-* [GitHub flow in the browser](https://help.github.com/articles/github-flow-in-the-browser)
+* 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
