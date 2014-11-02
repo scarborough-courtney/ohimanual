@@ -83,7 +83,7 @@ There are several options to clone the ohi-[assessment] repository to your local
 > 2. **Command line** (Windows) or **Terminal** (Mac)
 > 3. **RStudio**
 
-1) The **GitHub App** 
+**1) The GitHub App** 
 
 **(a)** For Mac (freely available at https://mac.github.com/):
 
@@ -103,7 +103,7 @@ Follow the instructions for cloning on Windows (copied from: https://windows.git
 > ![](./fig/creating_local_clone_windows.png)
 
 
-2) The **Command line** (Windows) or **Terminal** (Mac).
+**2) The Command line (Windows) or Terminal (Mac)**
 
 Below is an example for a repository called 'Spoon-Knife':
 
@@ -112,9 +112,9 @@ Below is an example for a repository called 'Spoon-Knife':
 (Instructions copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
 
 
-3) **RStudio**
+**3) RStudio**
 
-This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
+This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions below copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
 
 > ![](./fig/creating_local_clone_R.png)
 
