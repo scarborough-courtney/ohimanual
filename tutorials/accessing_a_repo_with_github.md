@@ -98,6 +98,8 @@ Follow the instructions for cloning on a Mac (copied from: https://mac.github.co
 
 **(b)** For Windows (freely available at https://windows.github.com/):
 
+> ![](./fig/creating_local_clone_windows.png)
+
 and then follow  or on Windows (https://windows.github.com/help.html).
 
 2) The **Command line** (Windows) or **Terminal** (Mac).
