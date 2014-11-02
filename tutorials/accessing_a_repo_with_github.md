@@ -166,7 +166,8 @@ Always pull before pushing commits. This is the best way to avoid merging errors
 
 
 ### More Information
-The following is a diagram describing three ways in which files can be editted on GitHub. The third column the 'clone', 'push' and 'commit' model described above:
+
+The following is a diagram describing three ways in which files can be editted on GitHub. The third column refers to the 'clone', 'push' and 'commit' model described above:
 
 |     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
