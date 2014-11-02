@@ -114,11 +114,10 @@ Below is an example for a repository called 'Spoon-Knife':
 
 3) **RStudio**
 
-This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
 
 > ![](./fig/creating_local_clone_R.png)
 
-(Instructions copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio)
 
 ### Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
