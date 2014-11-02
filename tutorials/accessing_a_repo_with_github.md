@@ -105,18 +105,12 @@ Follow the instructions for cloning on Windows (copied from: https://windows.git
 
 2) The **Command line** (Windows) or **Terminal** (Mac).
 
-Below is an example for a repository called 'Spoon-Knife'.
+Below is an example for a repository called 'Spoon-Knife':
 
 > ![](./fig/creating_local_clone.png)
 
-(Copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
+(Instructions copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
 
-Below is another example to clone `ohi-israel` into the `~/github` folder:
-```
-cd ~/github
-git clone https://github.com/OHI-Science/ohi-israel.git
-cd ohi-israel
-```
 
 3) **RStudio**
 
@@ -124,7 +118,7 @@ This is best after the initial clone, since RStudio occassionally has trouble wi
 
 > ![](./fig/creating_local_clone_R.png)
 
-(Copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio)
+(Instructions copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio)
 
 ### Working locally
 All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
