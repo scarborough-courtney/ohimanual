@@ -96,11 +96,12 @@ Follow the instructions for cloning on a Mac (copied from: https://mac.github.co
 > ![](./fig/GitHub_App_Cloning_2.png)
 
 
-**(b)** For Windows (freely available at https://windows.github.com/):
+**(b)** For Windows:
+
+Follow the instructions for cloning on Windows (copied from: https://windows.github.com/help.html)
 
 > ![](./fig/creating_local_clone_windows.png)
 
-and then follow  or on Windows (https://windows.github.com/help.html).
 
 2) The **Command line** (Windows) or **Terminal** (Mac).
 
