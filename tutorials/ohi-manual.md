@@ -26,7 +26,7 @@ We recommend first becoming familiar with the Toolbox App and exploring the resu
 
 # Overview of the OHI Toolbox App
 
-The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#calculate-page) page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#report-page) page provides different methods of reporting the data.  
+The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The *Data* page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The *Calculate* page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The *Report* page provides different methods of reporting the data.  
   
 The **Current scenario** is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
   
@@ -38,14 +38,14 @@ The **Current scenario** is displayed in the upper-right corner of the Data page
 The Data page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
 
 
-**Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:**
+**Data displayed in Map form:**
   
 ![](./fig/datapage_view.png)
 
 The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
 
-**Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#histogram) form:**
+**Data displayed in Histogram form:**
 
 ![](./fig/histogrampage_view.png)
 
@@ -53,7 +53,7 @@ The histogram shows the distribution of the selected variable as the number of o
 
 
 
-**Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#table) form:**
+**Data displayed in Table form:**
   
 ![](./fig/tablepage_view.png)
 
@@ -135,11 +135,8 @@ The table displays the target value for each region and the overall study area, 
 
 ![](./fig/table_view.png)
 
-<<<<<<< HEAD
-=======
 It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
->>>>>>> ac0a97de38fc82e7fc68dd4b2bbd83acb912ed06
 ---
 output: html_document
 ---
@@ -155,7 +152,7 @@ The Ocean Health Index framework is flexible to accommodate regional priorities:
 
 **The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
   
-Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589)), and more are underway.   
+Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589)), and more are underway (available at ohi-science.org/).   
 
 ## Before getting started
 
@@ -522,7 +519,7 @@ With 'narrow' format, each row of data provides complete and unique information,
 # Installing the Toolbox for a Regional Assessment 
 
 ## Overview
-The Ocean Health Index (OHI) Toolbox is software written in [R](http://cran.r-project.org/) that can be used to conduct regional assessments using the OHI framework. Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. The files and scripts for any given assessment are packaged together in a folder called a **repository** ('repos'), and stored online through GitHub, an [open-source development platform](http://en.wikipedia.org/wiki/GitHub) that enables easy collaboration with  versioning capabilities.
+The Ocean Health Index (OHI) Toolbox is software written in R that can be used to conduct regional assessments using the OHI framework. Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. The files and scripts for any given assessment are packaged together in a folder called a **repository** ('repos'), and stored online through GitHub, an open-source development platform that enables easy collaboration with  versioning capabilities (See: http://en.wikipedia.org/wiki/GitHub).
 
 It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case.
 
@@ -533,14 +530,14 @@ It is possible to conduct a regional assessment by downloading a template reposi
 1. Set up:
  * Install R and RStudio
  * Clone regional assessment repository on Desktop
-2. Become familiar with the [OHI Toolbox File System](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
+2. Become familiar with the OHI Toolbox File System
 
 Detailed instructions for step 1 are provided below for users who want to either:
 
- * work with GitHub (See: Accessing repository with GitHub), or 
- * work without GitHub (See: Accessing repository without GitHub). 
+ * work with GitHub (See: Accessing repository with GitHubsection), or 
+ * work without GitHub (See: Accessing repository without GitHub section). 
 
-Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: ['Using the Toolbox for a Regional assessment'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#using-the-toolbox-for-a-regional-assessment) section below.
+Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: 'Using the Toolbox for a Regional assessment' section below).
 
 ## Accessing repositories with GitHub
 
@@ -548,10 +545,7 @@ Once the user has completed steps 1 and 2, they will then be able to make change
 
 We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. GitHub has powerful versioning capabilities, which allows changes to be archived and tracked by each user. This is incredibly useful to not only to document what work has been done, but how it differs from work done in the past, and who is responsible for the changes: it provides a record of all changes made. Conducting an OHI regional assessment using GitHub will therefore enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. 
 
-It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the ['Accessing repositories without GitHub'](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_github.md#accessing-repositories-without-github) section below. We can always get your filesystem onto GitHub later. 
-  
-
-### Setting up
+It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
 
 Software required for regional assessments with version control:
 
@@ -559,24 +553,24 @@ Software required for regional assessments with version control:
 
 To get started, follow the steps below:
 
-**1. Install R and RStudio**
+### Install R and RStudio
 
-Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
-
-
-**2. Create a GitHub account**
-
-GitHub is an online interface for *git*, and to use it you must [create a GitHub account](http://github.com). You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
+Make sure you have the most current version of R and RStudio. (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on CRAN at http://cran.r-project.org/). 
 
 
-**3. Install *git* software**
+### Create a GitHub account
+
+GitHub is an online interface for *git*, and to use it you must create a GitHub account at http://github.com. You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
+
+
+### Install *git* software
 
 *git* is version-control software that you will need to install on your computer. 
 
-[Download](http://git-scm.com/downloads) *git* and follow the install instructions. There are specific settings to select for [**Windows**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_windows.md#git-on-windows) and [**Mac**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_mac.md). 
+Download *git* at http://git-scm.com/downloads and follow the install instructions. There are specific settings to select for **Windows** and **Mac**. 
   
   
-**4. Set up your Git Identity**
+### Set up your Git Identity
 
 After downloading and installing, you will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
@@ -605,9 +599,9 @@ exit
 ```
 
 
-**5. Clone your ohi-[assessment] repo to your computer**
+### Clone your ohi-[assessment] repo to your computer
 
-[OHI-Science](https://github.com/OHI-Science) is the 'owner' of the OHI repositories stored on GitHub, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
+OHI-Science is the 'owner' of the OHI repositories stored on GitHub at https://github.com/OHI-Science, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
 The repository will be backed up and stored on github.com and you will also have a local version on your computer.
 
@@ -616,22 +610,53 @@ The repository will be backed up and stored on github.com and you will also have
 + on a Mac: `/Users/[User]/github/ohi-[assessment]`
 + on Windows: `C:\Users\[User]\Documents\github\ohi-[assessment]` 
 
-Downloading a repository from GitHub is called **cloning** and there are multiple ways to do it. Cloning allows you to make changes on your local computer and sync them to the online repository, described elsewhere ([GitHub-OHI repositories](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/install_tbx_regional_assessment.md#ohi-regional-assessments-and-github)). 
+Downloading a repository from GitHub is called **cloning** and there are multiple ways to do it. Cloning allows you to make changes on your local computer and sync them to the online repository. 
 
 
 **Cloning options:**
 
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
-1) The [GitHub App for Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))  
+> 1. **GitHub App**
 
-2) [The command line (Windows) or Terminal (Mac)](https://help.github.com/articles/fork-a-repo#keep-your-fork-synced). For example, clone `ohi-israel` into the `~/github` folder:
-```
-cd ~/github
-git clone https://github.com/OHI-Science/ohi-israel.git
-cd ohi-israel
-```
-3) [RStudio](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+> 2. **Command line** (Windows) or **Terminal** (Mac)
+
+> 3. **RStudio**
+
+**1. The GitHub App** 
+
+**(a)** For Mac (freely available at https://mac.github.com/):
+
+Once the the GitHub App is installed and opened, the following page will appear:
+
+> ![](./fig/GitHub_App_Cloning_1.png)
+
+Follow the instructions for cloning on a Mac (copied from: https://mac.github.com/help.html)
+
+> ![](./fig/GitHub_App_Cloning_2.png)
+
+
+**(b)** For Windows:
+
+Follow the instructions for cloning on Windows (copied from: https://windows.github.com/help.html)
+
+> ![](./fig/creating_local_clone_windows.png)
+
+
+**2. The Command line (Windows) or Terminal (Mac)**
+
+Below is an example for a repository called 'Spoon-Knife':
+
+> ![](./fig/creating_local_clone.png)
+
+(Instructions copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
+
+
+**3. RStudio**
+
+This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions below copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
+
+> ![](./fig/creating_local_clone_R.png)
 
 
 ### Working locally
@@ -681,12 +706,12 @@ The GitHub App is freely available for download for both Mac (mac.github.com) an
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
 
 
-#### More Information
+### More Information
 
-* [presentation: Reproducible science with the Ocean Health Index](http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1)
-* [wiki: Using GitHub](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
+* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
 
-#### GitHub flow with _Fork & Pull Model_
+### GitHub flow with _Fork & Pull Model_
 
 |     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
@@ -698,7 +723,7 @@ where:
 * `[user]` is your GitHub username
 
 see also:
-* [GitHub flow in the browser](https://help.github.com/articles/github-flow-in-the-browser)
+* 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
 
 ## Accessing repositories without GitHub
 
