@@ -547,11 +547,11 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
 
+To get started, follow the steps below:
+
 Software required for regional assessments with version control:
 
 > ![](./fig/overview_requirements_1.png)
-
-To get started, follow the steps below:
 
 ### Install R and RStudio
 
@@ -708,10 +708,7 @@ Always pull before pushing commits. This is the best way to avoid merging errors
 
 ### More Information
 
-* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
-* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
-
-### GitHub flow with _Fork & Pull Model_
+The following is a diagram describing three ways in which files can be editted on GitHub. The third column refers to the 'clone', 'push' and 'commit' model described above:
 
 |     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
@@ -722,19 +719,31 @@ where:
 * `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
 * `[user]` is your GitHub username
 
-see also:
+Note however that users can also change files directly in the repository on the GitHub website (column 1):
+
+> ![](./fig/web_edit.png)
+
+Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
+
+> ![](./fig/fork_repository.png)
+
+See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
+
+See also:
 * 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
+* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
 
 ## Accessing repositories without GitHub
 
 ### OHI regional assessments without GitHub
-It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend [accessing a repository with GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo_with_github.md) but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
+It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend accessing a repository with GitHub but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
 
 
 ### Install the latest version of R
-Download [**R**](http://cran.r-project.org/) and install this on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
+Download R at http://cran.r-project.org/ and install on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
 
-While not required, we highly recommend working with [**RStudio**](http://www.rstudio.com/products/RStudio/), which is an interface that makes working with R much easier. RStudio also has great compatibility with GitHub so you can collaborate with your team directly from your R code. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
+While not required, we highly recommend working with RStudio, which is an interface that makes working with R much easier. RStudio also has great compatibility with GitHub so you can collaborate with your team directly from your R code. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
 
 ### Download the repo to your computer
 Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
@@ -823,18 +832,18 @@ After the initial Toolbox setup, further launches of the Toolbox Application can
 
 \*\* **Note: this page is under development**
 
-This page explains how to incorporate all of the [pre-Toolbox decisions](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/pretoolbox_decisions) your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the [Toolbox file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system).  
+This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
 
 The most common modifications you will make to your repository are changes with:
 
-- [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#modifying-and-creating-data-layers)
-- [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#modifying-goal-models)
-- [removing goals](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#removing-goals)
+- updating or adding new data layers
+- modifying goal models
+- removing goals
 
 
 ## Modifying and creating data layers
 
-To modify existing or create new data layers, data must be appropriately [formatted](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx).  
+To modify existing or create new data layers, data must be appropriately formatted.  
   
 **There are several steps to follow when working with data layers:**
 
@@ -875,7 +884,7 @@ However, if a new layer has been added (for example when a new goal model is dev
 
 ### Check pressures and resilience matrices
 
-[under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
+Under development
 
 ## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
@@ -1052,7 +1061,7 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 
 ## Notes about R
 
-The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See [github.com/hadley/dplyr#dplyr](https://github.com/hadley/dplyr#dplyr) for documentation. 
+The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See: https://github.com/hadley/dplyr#dplyr for documentation. 
 
 
 
