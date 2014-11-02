@@ -85,18 +85,20 @@ There are several options to clone the ohi-[assessment] repository to your local
 
 1) The **GitHub App** 
 
-For Mac (freely available at https://mac.github.com/) or Windows (at https://windows.github.com/). 
+**(a)** For Mac (freely available at https://mac.github.com/):
 
-For Mac:
 Once the the GitHub App is installed and opened, the following page will appear:
 
 > ![](./fig/GitHub_App_Cloning_1.png)
 
+Follow the instructions for cloning on a Mac (copied from: https://mac.github.com/help.html)
+
 > ![](./fig/GitHub_App_Cloning_2.png)
 
-(Instructions for cloning on a Mac copied from: https://mac.github.com/help.html)
 
-After installing the GitHub App, log in with your username and passord, and then follow  or on Windows (https://windows.github.com/help.html).
+**(b)** For Windows (freely available at https://windows.github.com/):
+
+and then follow  or on Windows (https://windows.github.com/help.html).
 
 2) The **Command line** (Windows) or **Terminal** (Mac).
 
