@@ -79,13 +79,15 @@ Downloading a repository from GitHub is called **cloning** and there are multipl
 
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
-> a. **GitHub App**
-> b. **Command line** (Windows) or **Terminal** (Mac)
-> c. **RStudio**
+> i. **GitHub App**
 
-**a. The GitHub App** 
+> ii. **Command line** (Windows) or **Terminal** (Mac)
 
-**(i)** For Mac (freely available at https://mac.github.com/):
+> iii. **RStudio**
+
+**i. The GitHub App** 
+
+**(a)** For Mac (freely available at https://mac.github.com/):
 
 Once the the GitHub App is installed and opened, the following page will appear:
 
@@ -96,14 +98,14 @@ Follow the instructions for cloning on a Mac (copied from: https://mac.github.co
 > ![](./fig/GitHub_App_Cloning_2.png)
 
 
-**(ii)** For Windows:
+**(b)** For Windows:
 
 Follow the instructions for cloning on Windows (copied from: https://windows.github.com/help.html)
 
 > ![](./fig/creating_local_clone_windows.png)
 
 
-**b. The Command line (Windows) or Terminal (Mac)**
+**ii. The Command line (Windows) or Terminal (Mac)**
 
 Below is an example for a repository called 'Spoon-Knife':
 
@@ -112,7 +114,7 @@ Below is an example for a repository called 'Spoon-Knife':
 (Instructions copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
 
 
-**c. RStudio**
+**iii. RStudio**
 
 This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions below copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
 
