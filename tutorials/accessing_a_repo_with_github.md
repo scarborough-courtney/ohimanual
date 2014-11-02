@@ -166,11 +166,7 @@ Always pull before pushing commits. This is the best way to avoid merging errors
 
 
 ### More Information
-
-* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
-* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
-
-### GitHub flow with _Fork & Pull Model_
+The following is a diagram describing three ways in which files can be editted on GitHub. The third column the 'clone', 'push' and 'commit' model described above:
 
 |     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
@@ -181,5 +177,17 @@ where:
 * `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
 * `[user]` is your GitHub username
 
-see also:
+Note however that users can also change files directly in the repository on the GitHub website (column 1):
+
+> ![](./fig/web_edit.png)
+
+Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
+
+> ![](./fig/fork_repository.png)
+
+See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
+
+See also:
 * 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
+* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
