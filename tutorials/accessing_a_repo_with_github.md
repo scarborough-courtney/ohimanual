@@ -58,7 +58,7 @@ exit
 ```
 
 
-### Clone your ohi-[assessment] repo to your computer**
+### Clone your ohi-[assessment] repo to your computer
 
 OHI-Science is the 'owner' of the OHI repositories stored on GitHub at https://github.com/OHI-Science, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
@@ -165,12 +165,12 @@ The GitHub App is freely available for download for both Mac (mac.github.com) an
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
 
 
-#### More Information
+### More Information
 
 * A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
 * A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
 
-#### GitHub flow with _Fork & Pull Model_
+### GitHub flow with _Fork & Pull Model_
 
 |     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
 | --- |------------------------  | -------------------------- | -------------- |
