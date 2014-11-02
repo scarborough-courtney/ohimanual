@@ -5,9 +5,6 @@
 We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. GitHub has powerful versioning capabilities, which allows changes to be archived and tracked by each user. This is incredibly useful to not only to document what work has been done, but how it differs from work done in the past, and who is responsible for the changes: it provides a record of all changes made. Conducting an OHI regional assessment using GitHub will therefore enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. 
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
-  
-
-### Setting up
 
 Software required for regional assessments with version control:
 
@@ -15,24 +12,24 @@ Software required for regional assessments with version control:
 
 To get started, follow the steps below:
 
-**1. Install R and RStudio**
+### Install R and RStudio
 
 Make sure you have the most current version of R and RStudio. (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on CRAN at http://cran.r-project.org/). 
 
 
-**2. Create a GitHub account**
+### Create a GitHub account
 
 GitHub is an online interface for *git*, and to use it you must create a GitHub account at http://github.com. You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
 
 
-**3. Install *git* software**
+### Install *git* software
 
 *git* is version-control software that you will need to install on your computer. 
 
 Download *git* at http://git-scm.com/downloads and follow the install instructions. There are specific settings to select for **Windows** and **Mac**. 
   
   
-**4. Set up your Git Identity**
+### Set up your Git Identity
 
 After downloading and installing, you will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
@@ -61,7 +58,7 @@ exit
 ```
 
 
-**5. Clone your ohi-[assessment] repo to your computer**
+### Clone your ohi-[assessment] repo to your computer**
 
 OHI-Science is the 'owner' of the OHI repositories stored on GitHub at https://github.com/OHI-Science, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
@@ -79,13 +76,13 @@ Downloading a repository from GitHub is called **cloning** and there are multipl
 
 There are several options to clone the ohi-[assessment] repository to your local machine:
 
-> i. **GitHub App**
+> 1. **GitHub App**
 
-> ii. **Command line** (Windows) or **Terminal** (Mac)
+> 2. **Command line** (Windows) or **Terminal** (Mac)
 
-> iii. **RStudio**
+> 3. **RStudio**
 
-**i. The GitHub App** 
+**1. The GitHub App** 
 
 **(a)** For Mac (freely available at https://mac.github.com/):
 
@@ -105,7 +102,7 @@ Follow the instructions for cloning on Windows (copied from: https://windows.git
 > ![](./fig/creating_local_clone_windows.png)
 
 
-**ii. The Command line (Windows) or Terminal (Mac)**
+**2. The Command line (Windows) or Terminal (Mac)**
 
 Below is an example for a repository called 'Spoon-Knife':
 
@@ -114,7 +111,7 @@ Below is an example for a repository called 'Spoon-Knife':
 (Instructions copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
 
 
-**iii. RStudio**
+**3. RStudio**
 
 This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions below copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
 
