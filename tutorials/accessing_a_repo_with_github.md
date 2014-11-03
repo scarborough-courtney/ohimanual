@@ -190,6 +190,9 @@ Alternatively, the user can create a fork, or copy of a repository (column 2) to
 See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
 
 See also:
+
 * 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
+
 * A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+
 * A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
