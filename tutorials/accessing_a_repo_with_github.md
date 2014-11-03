@@ -6,7 +6,7 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
 
-To get started, follow the steps below:
+To get started on an OHI assessments using GitHub, follow the steps below:
 
 Software required for regional assessments with version control:
 
@@ -26,7 +26,7 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
 
 *git* is version-control software that you will need to install on your computer. 
 
-Download *git* at http://git-scm.com/downloads and follow the install instructions. There are specific settings to select for **Windows** and **Mac**. 
+Download *git* at http://git-scm.com/downloads and follow the install instructions. Note that there are specific settings to select for **Windows** and **Mac**. 
   
   
 ### Set up your Git Identity
