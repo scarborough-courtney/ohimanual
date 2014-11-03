@@ -189,7 +189,7 @@ Alternatively, the user can create a fork, or copy of a repository (column 2) to
 
 See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
 
-See also:
+For more information about GitHub, see:
 
 * 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
 
