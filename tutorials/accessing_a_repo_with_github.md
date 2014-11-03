@@ -178,9 +178,10 @@ where:
 * `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
 * `[user]` is your GitHub username
 
-Note however that users can also change files directly in the repository on the GitHub website (column 1):
+Note however that users can also change files directly in the repository on the GitHub website (column 1), by clicking on the button indicated by the red arrow:
 
 > ![](./fig/web_edit.png)
+
 
 Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
 
