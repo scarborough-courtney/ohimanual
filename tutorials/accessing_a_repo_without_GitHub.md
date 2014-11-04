@@ -11,13 +11,13 @@ While not required, we highly recommend working with RStudio, which is an interf
 
 
 ### Download the repo to your computer
-Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
+Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
 When your repository has been created, enter the url in to an internet browser (for example, `github.com/OHI-Science/ohi-israel`). Click `Download ZIP`.  
   
 > ![](./fig/download_zip_sk.png)  
   
 ### Working locally
 
-Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
+Unzip the downloaded folder `[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
 
-You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
+You will work on your computer to change the files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment.

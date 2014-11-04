@@ -1,7 +1,6 @@
 # Toolbox Troubleshooting
 
-The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips.  
-(\*\* note: this page is under development).
+The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips. This section will be updated frequently; please share any problems that you encounter.  
 
 
 ## Loading RWorkspace on Restart

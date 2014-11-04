@@ -64,8 +64,8 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
 * Be familiar with the global inputs to your Toolbox repository
     + understand the data and models used in global assessments
     + prioritize which data and models should be updated 
-    + become familiar with the Toolbox framework for your study region: **ohi-science.shinyapps.io/[study_area]**
-      - example: ohi-science.shinyapps.io/colombia
+    + become familiar with the Toolbox framework for your study region
+      - example: ohi-science.org/ecu
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
     + what local data and indicators are available pressures and resilience?
@@ -74,6 +74,14 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + are local data and indicators at the appropriate spatial and temporal scales?
     + process and format data and indicators to create data layers* for the Toolbox
     + use the Toolbox repository as a registry to organize data layers
+* Modify pressures and resilience matrices
+    + categorize any new pressures layers
+      - example: pollution, fishing, etc
+    + set pressure weighting/ranking based on literature, expert opinion
+    + identify responsive resilience measures
+      - any pressure layer with a weight of 2 or 3 needs a complementary resilience layer
+    + categorize any new resilience layers
+      - example: regulations, ecological, etc
 * Modify goal models and set reference points:
     + can goal goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?

@@ -58,23 +58,23 @@ exit
 ```
 
 
-### Clone your ohi-[assessment] repo to your computer
+### Clone your  repo to your computer
 
 OHI-Science is the 'owner' of the OHI repositories stored on GitHub at https://github.com/OHI-Science, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
 The repository will be backed up and stored on github.com and you will also have a local version on your computer.
 
-\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/ohi-[assessment]` will therefore be:
+\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/[assessment]` will therefore be:
 
-+ on a Mac: `/Users/[User]/github/ohi-[assessment]`
-+ on Windows: `C:\Users\[User]\Documents\github\ohi-[assessment]` 
++ on a Mac: `/Users/[User]/github/[assessment]`
++ on Windows: `C:\Users\[User]\Documents\github\[assessment]` 
 
 Downloading a repository from GitHub is called **cloning** and there are multiple ways to do it. Cloning allows you to make changes on your local computer and sync them to the online repository. 
 
 
 **Cloning options:**
 
-There are several options to clone the ohi-[assessment] repository to your local machine:
+There are several options to clone the repository to your local machine:
 
 > 1. **GitHub App**
 
@@ -119,11 +119,11 @@ This is best after the initial clone, since RStudio occassionally has trouble wi
 
 
 ### Working locally
-All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
+All of the files available from the online server repository `https://github.com/OHI-Science/[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/[assessment]`. 
 
 > ![](./fig/filepath.png)
 
-You will then work locally on your own computer, changing the cloned files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. Because there can be multiple users working on the same repo, there are specific steps involved, and GitHub has specific words for each of these steps, including **cloning** a repo from the server to a local repository, **committing** any changes made with a description, **pulling** any updates from the server's repo, and finally **pushing** committed changes back to the server.
+You will then work locally on your own computer, changing the cloned files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment. Because there can be multiple users working on the same repo, there are specific steps involved, and GitHub has specific words for each of these steps, including **cloning** a repo from the server to a local repository, **committing** any changes made with a description, **pulling** any updates from the server's repo, and finally **pushing** committed changes back to the server.
 
 All changes within this folder will be tracked by GitHub when you commit and sync these changes back to the repo on the GitHub server, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
@@ -136,9 +136,9 @@ This example illustrates GitHub's collaborative workflow with the `ohi-israel` r
 
 Committing and pushing changes can be done using either RStudio or the GitHub App.
 
-**Using RStudio to commit and push changes to GitHub ohi-[assessment] repository**
+**Using RStudio to commit and push changes to GitHub repository**
 
-Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
+Launch your project in RStudio by double-clicking the `[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](./fig/RStudio_sk1.png)
 
@@ -150,11 +150,11 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
 3. Click 'Commit' to commit the changes and the commit message
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. 
-5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.
+5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visable online.
   
 > ![](./fig/commit_sk.png)
 
-**Using GitHub App to push commits to GitHub ohi-[assessment] repository**
+**Using GitHub App to push commits to GitHub repository**
 
 The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 

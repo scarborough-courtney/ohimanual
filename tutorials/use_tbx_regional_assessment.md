@@ -1,50 +1,61 @@
 # Using the Toolbox for a Regional Assessment
 
-\*\* **Note: this page is under development**
-
 This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
 
 The most common modifications you will make to your repository are changes with:
 
-- updating or adding new data layers
+- updating or adding new data layers for status, trend, pressures and resilience
+- modifying pressures and resilience matrices
 - modifying goal models
 - removing goals
 
+## Modifying pressures and resilience matrices
+
+[develop JSL]
+
+Even before data layers are created and formatted, it is important to modify `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
+
+snag material from update_matrices.md
 
 ## Modifying and creating data layers
-
-To modify existing or create new data layers, data must be appropriately formatted.  
   
 **There are several steps to follow when working with data layers:**
 
-1. Create data layer with proper formatting
+1. Modify or create data layer with proper formatting
 2. Save the layer in the `layers` folder
 3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
+
+### Template data layers
+
+Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All  layers provided in your regional assessment repo are the global values from the 2014 assessment. 
+
+![](./fig/layers_folder_location_global2013.png)  
+
+* Layers with the suffix `_gl2014.csv` ('gl' for 'global') have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
+* Layers with the suffix `_sc2014.csv` ('sc' for 'subcountry') have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+
+Both types of layers are data are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
 
 ### Create data layers with proper formatting
-[develop]
+[develop JSL, with Rscript examples]
 
 ### Save data layers in the *layers* folder
 
-Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
-
-  ![](./fig/layers_folder_location_global2013.png)  
-  
-When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data.
+When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
 
 ![](./fig/layer_example_israel2014.png)
   
 ### Register data layers in *layers.csv*  
   
-When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
+When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
   ![](./fig/layers_israel2014.png)  
   
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
  + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
+ + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
  + **name:** Add a longer title for the data layer: this will be displayed in the Toolbox interface.
  + **description:** Add a longer description of the new data layer this will be displayed in the Toolbox interface.
  + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
@@ -54,7 +65,33 @@ However, if a new layer has been added (for example when a new goal model is dev
 
 ### Check pressures and resilience matrices
 
-Under development
+Next, check `pressures_matrix.csv` and `resilience_matrix.csv` to make see if the new or modified layer should be registered or if anything should be altered. 
+
+1. New pressure layer
+
+
+# Update pressures_matrix.csv
+
+[add content]
+
+# Update resilience_matrix.csv
+
+When you update layers in the `layers` folder and in `layers.csv`, you will need to update the `resilience_matrix.csv` file as well.
+
+A few things about these updates: 
+1. There must be at least one field for each goal. Correct:
+
+  > ![](./fig/resil_mtx_good.png)  
+
+  Incorrect:
+  
+  > ![](./fig/resil_mtx_bad.png)  
+  
+  
+
+
+
+
 
 ## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
@@ -96,25 +133,6 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 ![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
 
-### Example: Removing 'Carbon Storage' goal
-1) Remove the CS goal model from `functions.r`:
-
-![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
-
-2) Remove the CS row from `goals.csv`:
-
-![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
-
-3) Remove all CS rows from `pressures_matrix.csv`:
-
-![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
-
-4) Remove all CS rows from `resilience_matrix.csv`:
-
-![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
-
-
-
 
 ## Example modifications
 
@@ -140,6 +158,48 @@ In this example we will walk through the following steps:
 ![](./fig/functions_explained.png)
 
 5. [develop]
+
+
+### Adding a new pressure layer
+In this example there are two new pressure layers to include: the effects of desalination operations. The new layers are called *po_desal_in*, and *po_desal_out*.  
+
+Adding these pressure layers to the Toolbox requires the following steps:
+
+1. register (add) pressure layer(s) in `pressures_matrix.csv`
+  + 1a set the pressure category  
+  + 1b identify the goals affected and set the weighting
+  + 1c modify the resilience matrix (if necessary) 
+2. create pressure layer(s); save in the `layers` folder
+3. register pressure layer(s) in `layers.csv`  
+
+
+#### Register the new layers in `pressure_matrix.csv`. 
+
+**1a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+
+**1b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+
+![](./fig/pressure_categories.png)
+
+
+
+![](./fig/register_new_pressures.png)
+
+**1c.**
+
+#### Create the new layers 
+
+Suppose that there is information 
+
+- for each region
+- compliance reports
+- rescale from 0 to 1
+- save in `layers` folder
+
+#### Register the new layers in `layers.csv`
+
+![](./fig/register_pressure.png)
+
 
 ### Updating resilience matrix with local habitat information
 
@@ -227,6 +287,25 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 * if there are local data on Marine Protected Areas (MPAs) and any areas with special regulations, this should be used to generate the `MPA_coast` and `MPA_eez` layers. \*\*NOTE: these are the same datasets used to calculate the status of Lasting Special Places (LSP).
 5) How to update `resilience_matrix.csv`?
 * write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
+
+### Removing a goal
+
+1) Remove the carbon storage (CS) goal model from `functions.r`:
+
+![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+
+2) Remove the CS row from `goals.csv`:
+
+![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+
+3) Remove all CS rows from `pressures_matrix.csv`:
+
+![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+
+4) Remove all CS rows from `resilience_matrix.csv`:
+
+![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+
 
 
 ## Notes about R

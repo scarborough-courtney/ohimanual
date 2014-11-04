@@ -94,7 +94,7 @@ It is currently possible to create flower plots and tables with several options,
 
 # Explore Global Results with the Toolbox App
 
-The following section will be devoted to exploring the Ocean Health Index Global Results using the Toolbox App. The section will further familiarize the user with the organizational structure and functionality of the Toolbox, and will also help the user understand the results that were obtained for the global assessment as well on the types of data that were used to calculate the Ocean Health Index.
+The following section will be devoted to exploring the Ocean Health Index Global Results using the Toolbox App. The section will further familiarize the user with the organizational structure and functionality of the Toolbox, and will also help the user understand the results that were obtained for the global assessment,  including the types of data that were used to calculate the Ocean Health Index.
 
 To begin exploring results, the user must first select the data he wishes to display with the Toolbox (i.e. variable type > target > dimension/layer > category > year).
 
@@ -246,8 +246,8 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
 * Be familiar with the global inputs to your Toolbox repository
     + understand the data and models used in global assessments
     + prioritize which data and models should be updated 
-    + become familiar with the Toolbox framework for your study region: **ohi-science.shinyapps.io/[study_area]**
-      - example: ohi-science.shinyapps.io/colombia
+    + become familiar with the Toolbox framework for your study region
+      - example: ohi-science.org/ecu
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
     + what local data and indicators are available pressures and resilience?
@@ -256,6 +256,14 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + are local data and indicators at the appropriate spatial and temporal scales?
     + process and format data and indicators to create data layers* for the Toolbox
     + use the Toolbox repository as a registry to organize data layers
+* Modify pressures and resilience matrices
+    + categorize any new pressures layers
+      - example: pollution, fishing, etc
+    + set pressure weighting/ranking based on literature, expert opinion
+    + identify responsive resilience measures
+      - any pressure layer with a weight of 2 or 3 needs a complementary resilience layer
+    + categorize any new resilience layers
+      - example: regulations, ecological, etc
 * Modify goal models and set reference points:
     + can goal goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?
@@ -527,14 +535,14 @@ It is possible to conduct a regional assessment by downloading a template reposi
 
 **Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
 
-1. Set up:
+**1.** Set up:
  * Install R and RStudio
  * Clone regional assessment repository on Desktop
-2. Become familiar with the OHI Toolbox File System
+**2.** Become familiar with the OHI Toolbox File System
 
-Detailed instructions for step 1 are provided below for users who want to either:
+Detailed instructions for step **1** are provided below for users who want to either:
 
- * work with GitHub (See: Accessing repository with GitHubsection), or 
+ * work with GitHub (See: Accessing repository with GitHub section), or 
  * work without GitHub (See: Accessing repository without GitHub section). 
 
 Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: 'Using the Toolbox for a Regional assessment' section below).
@@ -547,7 +555,7 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
 
-To get started, follow the steps below:
+To get started on an OHI assessments using GitHub, follow the steps below:
 
 Software required for regional assessments with version control:
 
@@ -567,7 +575,7 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
 
 *git* is version-control software that you will need to install on your computer. 
 
-Download *git* at http://git-scm.com/downloads and follow the install instructions. There are specific settings to select for **Windows** and **Mac**. 
+Download *git* at http://git-scm.com/downloads and follow the install instructions. Note that there are specific settings to select for **Windows** and **Mac**. 
   
   
 ### Set up your Git Identity
@@ -599,23 +607,23 @@ exit
 ```
 
 
-### Clone your ohi-[assessment] repo to your computer
+### Clone your  repo to your computer
 
 OHI-Science is the 'owner' of the OHI repositories stored on GitHub at https://github.com/OHI-Science, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
 The repository will be backed up and stored on github.com and you will also have a local version on your computer.
 
-\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/ohi-[assessment]` will therefore be:
+\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/[assessment]` will therefore be:
 
-+ on a Mac: `/Users/[User]/github/ohi-[assessment]`
-+ on Windows: `C:\Users\[User]\Documents\github\ohi-[assessment]` 
++ on a Mac: `/Users/[User]/github/[assessment]`
++ on Windows: `C:\Users\[User]\Documents\github\[assessment]` 
 
 Downloading a repository from GitHub is called **cloning** and there are multiple ways to do it. Cloning allows you to make changes on your local computer and sync them to the online repository. 
 
 
 **Cloning options:**
 
-There are several options to clone the ohi-[assessment] repository to your local machine:
+There are several options to clone the repository to your local machine:
 
 > 1. **GitHub App**
 
@@ -660,11 +668,11 @@ This is best after the initial clone, since RStudio occassionally has trouble wi
 
 
 ### Working locally
-All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
+All of the files available from the online server repository `https://github.com/OHI-Science/[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/[assessment]`. 
 
 > ![](./fig/filepath.png)
 
-You will then work locally on your own computer, changing the cloned files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. Because there can be multiple users working on the same repo, there are specific steps involved, and GitHub has specific words for each of these steps, including **cloning** a repo from the server to a local repository, **committing** any changes made with a description, **pulling** any updates from the server's repo, and finally **pushing** committed changes back to the server.
+You will then work locally on your own computer, changing the cloned files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment. Because there can be multiple users working on the same repo, there are specific steps involved, and GitHub has specific words for each of these steps, including **cloning** a repo from the server to a local repository, **committing** any changes made with a description, **pulling** any updates from the server's repo, and finally **pushing** committed changes back to the server.
 
 All changes within this folder will be tracked by GitHub when you commit and sync these changes back to the repo on the GitHub server, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
 
@@ -677,9 +685,9 @@ This example illustrates GitHub's collaborative workflow with the `ohi-israel` r
 
 Committing and pushing changes can be done using either RStudio or the GitHub App.
 
-**Using RStudio to commit and push changes to GitHub ohi-[assessment] repository**
+**Using RStudio to commit and push changes to GitHub repository**
 
-Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
+Launch your project in RStudio by double-clicking the `[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](./fig/RStudio_sk1.png)
 
@@ -691,11 +699,11 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
 3. Click 'Commit' to commit the changes and the commit message
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. 
-5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.
+5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visable online.
   
 > ![](./fig/commit_sk.png)
 
-**Using GitHub App to push commits to GitHub ohi-[assessment] repository**
+**Using GitHub App to push commits to GitHub repository**
 
 The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
@@ -719,9 +727,10 @@ where:
 * `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
 * `[user]` is your GitHub username
 
-Note however that users can also change files directly in the repository on the GitHub website (column 1):
+Note however that users can also change files directly in the repository on the GitHub website (column 1), by clicking on the button indicated by the red arrow:
 
 > ![](./fig/web_edit.png)
+
 
 Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
 
@@ -729,9 +738,12 @@ Alternatively, the user can create a fork, or copy of a repository (column 2) to
 
 See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
 
-See also:
+For more information about GitHub, see:
+
 * 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
+
 * A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+
 * A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
 
 ## Accessing repositories without GitHub
@@ -745,17 +757,18 @@ Download R at http://cran.r-project.org/ and install on your computer. If you al
 
 While not required, we highly recommend working with RStudio, which is an interface that makes working with R much easier. RStudio also has great compatibility with GitHub so you can collaborate with your team directly from your R code. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
 
+
 ### Download the repo to your computer
-Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
+Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
 When your repository has been created, enter the url in to an internet browser (for example, `github.com/OHI-Science/ohi-israel`). Click `Download ZIP`.  
   
 > ![](./fig/download_zip_sk.png)  
   
 ### Working locally
 
-Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
+Unzip the downloaded folder `[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
 
-You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
+You will work on your computer to change the files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
 
 ## OHI Toolbox File System
 This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
@@ -806,7 +819,12 @@ The `conf` folder includes includes R functions (*config.R* and *functions.R*) a
 `goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
 
 #### *pressures_matrix.csv*
-`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion.
+`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high pressure, 1=low pressure). These weights are relative across the rows. Setting these weights will take deliberation with your regional assessment team. 
+
+Pressures are grouped by category, indicated by a prefix (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.
+
+![](./fig/pressure_categories.png)
+
 
 #### *resilience_matrix.csv*
 `resilience_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.
@@ -830,51 +848,62 @@ After the initial Toolbox setup, further launches of the Toolbox Application can
 
 # Using the Toolbox for a Regional Assessment
 
-\*\* **Note: this page is under development**
-
 This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
 
 The most common modifications you will make to your repository are changes with:
 
-- updating or adding new data layers
+- updating or adding new data layers for status, trend, pressures and resilience
+- modifying pressures and resilience matrices
 - modifying goal models
 - removing goals
 
+## Modifying pressures and resilience matrices
+
+[develop JSL]
+
+Even before data layers are created and formatted, it is important to modify `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
+
+snag material from update_matrices.md
 
 ## Modifying and creating data layers
-
-To modify existing or create new data layers, data must be appropriately formatted.  
   
 **There are several steps to follow when working with data layers:**
 
-1. Create data layer with proper formatting
+1. Modify or create data layer with proper formatting
 2. Save the layer in the `layers` folder
 3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
+
+### Template data layers
+
+Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All  layers provided in your regional assessment repo are the global values from the 2014 assessment. 
+
+![](./fig/layers_folder_location_global2013.png)  
+
+* Layers with the suffix `_gl2014.csv` ('gl' for 'global') have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
+* Layers with the suffix `_sc2014.csv` ('sc' for 'subcountry') have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+
+Both types of layers are data are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
 
 ### Create data layers with proper formatting
-[develop]
+[develop JSL, with Rscript examples]
 
 ### Save data layers in the *layers* folder
 
-Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
-
-  ![](./fig/layers_folder_location_global2013.png)  
-  
-When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data.
+When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
 
 ![](./fig/layer_example_israel2014.png)
   
 ### Register data layers in *layers.csv*  
   
-When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
+When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
   ![](./fig/layers_israel2014.png)  
   
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
  + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
+ + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
  + **name:** Add a longer title for the data layer: this will be displayed in the Toolbox interface.
  + **description:** Add a longer description of the new data layer this will be displayed in the Toolbox interface.
  + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
@@ -884,7 +913,33 @@ However, if a new layer has been added (for example when a new goal model is dev
 
 ### Check pressures and resilience matrices
 
-Under development
+Next, check `pressures_matrix.csv` and `resilience_matrix.csv` to make see if the new or modified layer should be registered or if anything should be altered. 
+
+1. New pressure layer
+
+
+# Update pressures_matrix.csv
+
+[add content]
+
+# Update resilience_matrix.csv
+
+When you update layers in the `layers` folder and in `layers.csv`, you will need to update the `resilience_matrix.csv` file as well.
+
+A few things about these updates: 
+1. There must be at least one field for each goal. Correct:
+
+  > ![](./fig/resil_mtx_good.png)  
+
+  Incorrect:
+  
+  > ![](./fig/resil_mtx_bad.png)  
+  
+  
+
+
+
+
 
 ## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
@@ -926,25 +981,6 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 ![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
 
-### Example: Removing 'Carbon Storage' goal
-1) Remove the CS goal model from `functions.r`:
-
-![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
-
-2) Remove the CS row from `goals.csv`:
-
-![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
-
-3) Remove all CS rows from `pressures_matrix.csv`:
-
-![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
-
-4) Remove all CS rows from `resilience_matrix.csv`:
-
-![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
-
-
-
 
 ## Example modifications
 
@@ -970,6 +1006,48 @@ In this example we will walk through the following steps:
 ![](./fig/functions_explained.png)
 
 5. [develop]
+
+
+### Adding a new pressure layer
+In this example there are two new pressure layers to include: the effects of desalination operations. The new layers are called *po_desal_in*, and *po_desal_out*.  
+
+Adding these pressure layers to the Toolbox requires the following steps:
+
+1. register (add) pressure layer(s) in `pressures_matrix.csv`
+  + 1a set the pressure category  
+  + 1b identify the goals affected and set the weighting
+  + 1c modify the resilience matrix (if necessary) 
+2. create pressure layer(s); save in the `layers` folder
+3. register pressure layer(s) in `layers.csv`  
+
+
+#### Register the new layers in `pressure_matrix.csv`. 
+
+**1a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+
+**1b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+
+![](./fig/pressure_categories.png)
+
+
+
+![](./fig/register_new_pressures.png)
+
+**1c.**
+
+#### Create the new layers 
+
+Suppose that there is information 
+
+- for each region
+- compliance reports
+- rescale from 0 to 1
+- save in `layers` folder
+
+#### Register the new layers in `layers.csv`
+
+![](./fig/register_pressure.png)
+
 
 ### Updating resilience matrix with local habitat information
 
@@ -1057,6 +1135,25 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 * if there are local data on Marine Protected Areas (MPAs) and any areas with special regulations, this should be used to generate the `MPA_coast` and `MPA_eez` layers. \*\*NOTE: these are the same datasets used to calculate the status of Lasting Special Places (LSP).
 5) How to update `resilience_matrix.csv`?
 * write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
+
+### Removing a goal
+
+1) Remove the carbon storage (CS) goal model from `functions.r`:
+
+![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+
+2) Remove the CS row from `goals.csv`:
+
+![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+
+3) Remove all CS rows from `pressures_matrix.csv`:
+
+![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+
+4) Remove all CS rows from `resilience_matrix.csv`:
+
+![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+
 
 
 ## Notes about R
@@ -1259,8 +1356,7 @@ A: Commercial high and low bycatch are categorical values that were set based on
 
 # Toolbox Troubleshooting
 
-The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips.  
-(\*\* note: this page is under development).
+The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips. This section will be updated frequently; please share any problems that you encounter.  
 
 
 ## Loading RWorkspace on Restart

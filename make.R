@@ -123,7 +123,7 @@ render(
 render(
   out_md, 
   pdf_document(
-    toc = T, toc_depth = 3, number_sections = T,
+    toc = T, toc_depth = 4, number_sections = T,
     fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
     fig_caption = T, highlight = "default", template = "default",
     keep_tex = F, latex_engine = "pdflatex", 

@@ -5,7 +5,7 @@
 ## Regional Evaluation File System
 Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo_with_github.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China will have a repository called ohi-china from which the regional evaluation will be conducted.
 
-![alt text(./fig/assessment_location.png)
+![](./fig/assessment_location.png)
 
 >> *OHI Toolbox regional file systems on a Mac.*
 
@@ -16,7 +16,7 @@ The ohi-china assessment will subsequently be used to illustrate how to perform 
 ### china2014
 Each of the elements (files and folders) within github/ohi-china/china2014 are critical to the proper functioning of the Toolbox App (See file and folder descriptions below)
 
-![alt text(./fig/china2014_descr.png)
+![](./fig/china2014_descr.png)
 
 
 ### launchApp.command (for Mac), launchApp.bat (for Windows)
@@ -30,7 +30,7 @@ The App can also be launched through R by running the code in lauchApp_code.R.
 ### layers.csv
 layers.csv is the registry that manages all data to be called by the Toolbox App. 
 
-![alt text(./fig/layers_csv_registry.png)
+![](./fig/layers_csv_registry.png)
 
 The first eight columns (columns A-H) contain information inputted by the user; other columns are generated later by the Toolbox App as it confirms data formatting and content. Each row of information represents a specific data layer. Columns A-H have the following information:
 
@@ -46,11 +46,11 @@ The first eight columns (columns A-H) contain information inputted by the user; 
 ### layers folders
 The layers folder contains every data layer as an individual .csv file. The names of the .csv files within the layers folder correspond to those listed in the filename field of the layers.csv file described above.
 
-![alt text(./fig/layers_location_1.png)
+![](./fig/layers_location.png)
 
 Note that each file has a specific format that the Toolbox expects and requires in order to run properly. Comma separated value files (.csv files) can be opened with text editor software, or will open by default by Microsoft Excel (if it is installed). Below is an example of proper data formatting using the file cc_acid_2013.csv. Note the unique region identifier (rgn_id) with a single associated pressure_score, and that the data are presented in ‘long format’ with minimal columns. Please see [formatting_data_for_toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx) for further details and instructions on data formatting requirements.
 
-![alt text(./fig/cc_acid_format_example.png)
+![](./fig/cc_acid_format_example.png)
 
 ### scenario.R
 scenario.R is a script in R that identifies which data layers and models should be used to calculate OHI scores using the Toolbox App. This combination of data layers, models, and all supporting files are called a ‘scenario’. Currently, the default scenario is using Global 2013 assessment files, and is the folder within ohi-global, called eez2013. 
