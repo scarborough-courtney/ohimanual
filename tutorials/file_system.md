@@ -8,6 +8,10 @@ In this example, **ohi-global** is the assessment folder and **eez2013** is the 
 
 ![](./fig/ohiglobal_file_location.png)
 
+In this example, **ohi-china** is the assessment folder and **china2014** is the scenario.
+
+![](./fig/china2014_descr.png)
+
 ### *layers.csv*
 `layers.csv` is the registry that manages all data to be used in the Toolbox.
 
