@@ -1,7 +1,5 @@
 # The Ocean Health Index Toolbox Manual
 
-
-
 ## Regional Evaluation File System
 Within the github folder is a sub-folder called ohi-[region-name] which is the repository that was created [previously](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo_with_github.md#create-your-ohi-assessment-repo) by the OHI team. For example, the OHI regional assessment for China will have a repository called ohi-china from which the regional evaluation will be conducted.
 
@@ -56,20 +54,3 @@ Note that each file has a specific format that the Toolbox expects and requires 
 scenario.R is a script in R that identifies which data layers and models should be used to calculate OHI scores using the Toolbox App. This combination of data layers, models, and all supporting files are called a ‘scenario’. Currently, the default scenario is using Global 2013 assessment files, and is the folder within ohi-global, called eez2013. 
 
 When conducting regional assessments, the best way to start is by copying the folder eez2013, renaming it to indicate the desired study area, and changing the working directory within the scenario.R file to identify that folder. The name of the folder should begin with ‘scenario.’, and indentify the year of study. For example, if conducting a California regional assessment, the folder could be named scenario.California2014, and has all the contents identical to the original eez2013 folder
-
-### scores.csv
-scores.csv is a record of the calculated scores for the assessment (Global 2013 scores). Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each reporting region, and are presented in ‘long’ format. 
-
-### conf folder
-This folder includes includes R functions (config.R and functions.R) and .csv files containing information that will be accessed by the R functions (goals.csv, pressures_matrix.R, resilience_matrix.csv, and resilience_weights.csv).
-
- + **config.R:** is an R script that configures labeling and constants appropriately.
- + **functions.R:**  contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in layers.csv. 
- + **goals.csv:** is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. Changing goal weights will be done here by editing the value in the ‘weight’ column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. Goals can be removed by setting the weight to 0.
-goals.csv also indicates the arguments passed to functions.R. These are indicated by two columns: preindex_function (functions for all goals that do not have sub-goals, and functions for all sub-goals) and postindex_function (functions for goals with sub-goals). 
- + **pressures_matrix.csv:** describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion. Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details. 
- + **resilience_matrix.csv:** describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.  Please see the OHI Conceptual Guide, HowTo_CalculatePressures and HowTo_CalculateResilience for more details. 
- + **resilience_weights.csv:** describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
-
-### spatial folder 
-The spatial folder contains components of shapefiles to delineate the 2013 OHI reporting regions that are created and read by spatial analysis software like ESRI’s ArcGIS. When conducting regional assessments, the files within this folder will need to be replaced by new files created for the study area and regions.
