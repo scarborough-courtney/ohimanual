@@ -12,6 +12,8 @@ In this example, **ohi-china** is the assessment folder and **china2014** is the
 
 ![](./fig/china2014_descr.png)
 
+See section below for a detailed overview of the files located in the scenario folder.
+
 ### *layers.csv*
 `layers.csv` is the registry that manages all data to be used in the Toolbox.
 
