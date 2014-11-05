@@ -74,7 +74,10 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + are local data and indicators at the appropriate spatial and temporal scales?
     + process and format data and indicators to create data layers* for the Toolbox
     + use the Toolbox repository as a registry to organize data layers
-* Modify pressures and resilience matrices
+* Update pressures and resilience
+    + determine whether all global pressures are relevant locally
+      - are local data available to update global data layers?
+    + identify local pressures not captured in the pressures matrix
     + categorize any new pressures layers
       - example: pollution, fishing, etc
     + set pressure weighting/ranking based on literature, expert opinion

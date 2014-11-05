@@ -47,15 +47,32 @@ The `conf` folder includes includes R functions (*config.R* and *functions.R*) a
 `goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
 
 #### *pressures_matrix.csv*
-`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high pressure, 1=low pressure). These weights are relative across the rows. Setting these weights will take deliberation with your regional assessment team. 
+`pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Pressures are grouped into categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures. The matrix has weights assigned that were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high, 2=medium, and 1=low pressure). These weights are relative across the rows. Setting these weights will take deliberation with your regional assessment team. 
 
-Pressures are grouped by category, indicated by a prefix (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.
+The pressures matrix is used by the Toolbox to associated each pressure with each certain goals. Each column in the pressures matrix identifies a data layer that is also registered in `layers.csv`: these presssure data layers are also requried to have a value for every region in the study area. Pressure layers each have a score between 0-1, and has its pressure category indicated by a prefix (for example: *po_* for the pollution category). 
 
 ![](./fig/pressure_categories.png)
 
+Pressures (columns in `pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type). 
+
+Ranks (weights) are assigned on a scale from 1-3, based on expert judgment of how important the pressure in that column is for the delivery of the goal, sub-goal, or component, in that row.
+
+It is important to note that the matrix identifies the pressures relevant to each goal, and which weight it will get. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressures layers need information for each region in the study area, and some layers will need to be updated with local data.  
+
+Here is some background on the reasoning behind nutrient and chemical pollution in the global `pressures_matrix.csv`. Nutrient and chemical pollution were calculated from the global cumulative impact maps (spatial data). These data were clipped to each global region's EEZ: 200 km from the coast.  
+
+* For some goals, these data clipped to the EEZ would affect goals that far from shore, so `po_chemicals` apply to goals relevant offshore: FIS, MAR, ECO, and SPP. 
+* However, some goals are really only nearshore, and so we clipped the spatial data to 3nm from shore and used this as a separate input. So `po_chemicals_3nm` apply to goals nearshore: AO, CS, CP, TR, ICO, LSP, HAB. 
+
+These distinctions don't always apply for smaller-scale assessments. For example, in the US West Coast study (Halpern et al. 2014), only a single `po_chemicals` layer was used: we did not distinguish between offshore and 3nm.
 
 #### *resilience_matrix.csv*
-`resilience_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.
+`resilience_matrix.csv` maps the different types of resilience (columns) with the goals that they affect (rows). Resilience is grouped into categories: regulatory, ecological, and social. Like the pressures matrix, the resilience matrix also has weights depending on the level of protection. However, these weights are in a separate file: `resilience_weights.csv`.
+
+
+![](./fig/resilience_categories.png)
+
+Each column in the resilience matrix is a data layer that is also registered in `layers.csv`. Resilience layers, like the pressure layers, are also requried to have a value for every region in the study area. Resilience layers each have a score between 0-1. 
 
 #### *resilience_weights.csv*
 `resilience_weights.csv` describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.

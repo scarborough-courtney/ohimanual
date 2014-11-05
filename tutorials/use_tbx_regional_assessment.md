@@ -2,20 +2,39 @@
 
 This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
 
-The most common modifications you will make to your repository are changes with:
+The most common modifications you will make to your repository are:
 
-- updating or adding new data layers for status, trend, pressures and resilience
 - modifying pressures and resilience matrices
+- modifying and creating data layers for status, trend, pressures and resilience
 - modifying goal models
 - removing goals
 
 ## Modifying pressures and resilience matrices
 
-[develop JSL]
+Previous decisions made with your team will identify if any pressures layers should be added to the pressures and/or resilience matrices, and if so, which goals the pressure affects and what weight they should have. Then, you can transfer this information into the Toolbox's `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
 
-Even before data layers are created and formatted, it is important to modify `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
 
-snag material from update_matrices.md
+### Updating pressures_matrix.csv
+
+Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name. The name should be short but descriptive. The name should also include a prefix to indicate the pressure category. There are five physical categories and one social category:
+
+* *po_* = pollution
+* *hd_* = habitat destruction
+* *fp_* = fishing pressure
+* *sp_* = species pollution
+* *cc_* = climate change
+* *ss_* = social pressure  
+
+For example, `po_trash` is a pollution layer with trash on beaches, and `sp_alien` is species pollution due to alien (invasive) species. 
+
+### Updating resilience_matrix.csv
+
+New resilience layers may be added to `resilience_matrix.csv` based on finer-scale local information either in response to a new pressures layer, or as a new independent measure. Any added layer must be associated with a pressures layer that has a weight of 2 or 3 in the Ocean Health Index framework so that resilience measures can mitigate pressures in each region.
+
+Each goal must have a resilience measure associated with it. In the figure below, the Toolbox would give an error because there are no resilience layers indicated for the natural products (NP) goal. 
+  
+![](./fig/resil_mtx_bad.png)  
+  
 
 ## Modifying and creating data layers
   
@@ -32,13 +51,14 @@ Data layers are *.csv* files and are located in the `[assessment]/[scenario]/lay
 
 ![](./fig/layers_folder_location_global2013.png)  
 
-* Layers with the suffix `_gl2014.csv` ('gl' for 'global') have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
-* Layers with the suffix `_sc2014.csv` ('sc' for 'subcountry') have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
+* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
 
 Both types of layers are data are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
 
 ### Create data layers with proper formatting
-[develop JSL, with Rscript examples]
+
+See the the 'Formatting data for the Toolbox' section above.
 
 ### Save data layers in the *layers* folder
 
@@ -59,38 +79,13 @@ However, if a new layer has been added (for example when a new goal model is dev
  + **name:** Add a longer title for the data layer: this will be displayed in the Toolbox interface.
  + **description:** Add a longer description of the new data layer this will be displayed in the Toolbox interface.
  + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
- + **units:** Add a description about the 'units' chosen in the 'fld_value' column above.
- + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
+ + **units:** Add a description about the *units* chosen in the *fld_value* column above.
+ + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the `layers` folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
 ### Check pressures and resilience matrices
 
-Next, check `pressures_matrix.csv` and `resilience_matrix.csv` to make see if the new or modified layer should be registered or if anything should be altered. 
-
-1. New pressure layer
-
-
-# Update pressures_matrix.csv
-
-[add content]
-
-# Update resilience_matrix.csv
-
-When you update layers in the `layers` folder and in `layers.csv`, you will need to update the `resilience_matrix.csv` file as well.
-
-A few things about these updates: 
-1. There must be at least one field for each goal. Correct:
-
-  > ![](./fig/resil_mtx_good.png)  
-
-  Incorrect:
-  
-  > ![](./fig/resil_mtx_bad.png)  
-  
-  
-
-
-
+If the new or modified layer is a pressures layer, check again that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data. 
 
 
 ## Modifying goal models
