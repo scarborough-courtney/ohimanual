@@ -10,9 +10,7 @@ The most common modifications you will make to your repository are:
 - removing goals
 
 
-These changes are to be made in the files located in the folders shown below:
-
-![](./fig/china2014_descr2.png)
+These changes are to be made in the following files (see below for more detailed instructions):
 
 ![](./fig/china2014_descr3.png)
 
