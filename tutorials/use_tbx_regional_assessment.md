@@ -63,7 +63,18 @@ Both types of layers are data are at coarse-resolution and should be exhanged fo
 
 ### Create data layers with proper formatting
 
-See the the 'Formatting data for the Toolbox' section above.
+The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting (gapfilling, etc...), please consult that section.
+
+The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+
+1. At least five years of data are available, 
+2. There are no data gaps
+3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
+
+**Example of data in the appropriate format:**
+
+![](./fig/formatting_data_example.png)
+
 
 ### Save data layers in the *layers* folder
 
