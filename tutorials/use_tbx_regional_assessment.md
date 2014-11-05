@@ -9,6 +9,13 @@ The most common modifications you will make to your repository are:
 - modifying goal models
 - removing goals
 
+
+These changes are to be made in the files located in the folders shown below:
+
+![](./fig/china2014_descr2.png)
+
+![](./fig/china2014_descr3.png)
+
 ## Modifying pressures and resilience matrices
 
 Previous decisions made with your team will identify if any pressures layers should be added to the pressures and/or resilience matrices, and if so, which goals the pressure affects and what weight they should have. Then, you can transfer this information into the Toolbox's `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
