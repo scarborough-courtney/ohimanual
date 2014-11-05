@@ -63,7 +63,9 @@ Both types of layers are data are at coarse-resolution and should be exhanged fo
 
 ### Create data layers with proper formatting
 
-The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting (gapfilling, etc...), please consult that section.
+The OHI Toolbox App expects each data layers to be in its own .csv file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. 
+
+The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting and gapfilling, please consult that section.
 
 The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
