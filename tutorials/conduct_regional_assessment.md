@@ -76,15 +76,11 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + use the Toolbox repository as a registry to organize data layers
 * Update pressures and resilience
     + determine whether all global pressures are relevant locally
-      - are local data available to update global data layers?
     + identify local pressures not captured in the pressures matrix
     + categorize any new pressures layers
-      - example: pollution, fishing, etc
     + set pressure weighting/ranking based on literature, expert opinion
     + identify responsive resilience measures
-      - any pressure layer with a weight of 2 or 3 needs a complementary resilience layer
     + categorize any new resilience layers
-      - example: regulations, ecological, etc
 * Modify goal models and set reference points:
     + can goal goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?
