@@ -58,13 +58,13 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
   >   ![](./fig/terminal_pico.png)
   
 
-**For Windows:**
+  > **For Windows:**
 
-Download *git* at http://git-scm.com/downloads and follow the install instructions. 
+  > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
 
-When running the Windows installer, use all default options except "Adjusting your PATH environment": instea, select "_**Run Git from the Windows Command Prompt**_". This will allow compatibility with RStudio.  
+  > When running the Windows installer, use all default options except "Adjusting your PATH environment": instea, select "_**Run Git from the Windows Command Prompt**_". This will allow compatibility with RStudio.  
   
-![](./fig/git_install_win_option.png)
+  > ![](./fig/git_install_win_option.png)
   
 ### Set up your Git Identity
 
