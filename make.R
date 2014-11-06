@@ -27,6 +27,7 @@ in_md = c(
   'accessing_a_repo_without_github.md',
   'file_system.md',
   'use_tbx_regional_assessment.md',
+  'example_modifications_with_tbx.md',
   'frequently_asked_questions.md',
   'toolbox_troubleshooting.md')
 out_md = 'ohi-manual.md'
