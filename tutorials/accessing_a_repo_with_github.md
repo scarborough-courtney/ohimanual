@@ -29,42 +29,42 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
 
 **For Mac:**
 
-Download *git* at http://git-scm.com/downloads and follow the install instructions. 
+  > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
 
-Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in *RStudio* and in *Terminal*:
+  > Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in *RStudio* and in *Terminal*:
 
-- *RStudio*
+  > - *RStudio*
 
-  Within RStudio, update your preferences for 'Git executable':
+  >   Within RStudio, update your preferences for 'Git executable':
   
   > RStudio > Preferences... > Git/SVN > Git executable: `/usr/local/git/bin/git`
   
- ![](./fig/rstudio_prefs_git.png)
+  >  ![](./fig/rstudio_prefs_git.png)
 
-- *Terminal*
+  > - *Terminal*
   
-  From Terminal, add a line to your 'bash profile' (launch Terminal from Applications > Utilities > Terminal).
+  >   From Terminal, add a line to your 'bash profile' (launch Terminal from Applications > Utilities > Terminal).
   
-  First type:  `pico ~/.bash_profile`
+  >   First type:  `pico ~/.bash_profile`
   
-  Add this line: 
+  >   Add this line: 
 
-  ```
-  export PATH=/usr/local/git/bin:$PATH
-  ```
+  >   ```
+  >   export PATH=/usr/local/git/bin:$PATH
+  >   ```
   
-  Type `control-X` to exit pico; type `exit` before quitting Terminal.  
+  >   Type `control-X`, then `y` and then `return` keys to exit pico; type `exit` before quitting Terminal.  
   
-  ![](./fig/terminal_pico.png)
+  >   ![](./fig/terminal_pico.png)
   
 
 **For Windows:**
 
-Download *git* at http://git-scm.com/downloads and follow the install instructions. 
+  > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
 
-When running the Windows installer, use all default options except "Adjusting your PATH environment": instea, select "_**Run Git from the Windows Command Prompt**_". This will allow compatibility with RStudio.  
+  > When running the Windows installer, use all default options except "Adjusting your PATH environment": instea, select "_**Run Git from the Windows Command Prompt**_". This will allow compatibility with RStudio.  
   
-![](./fig/git_install_win_option.png)
+  > ![](./fig/git_install_win_option.png)
   
 ### Set up your Git Identity
 
