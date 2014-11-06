@@ -27,7 +27,7 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
 *git* is version-control software that you will need to install on your computer. Note that there are specific settings to select for **Windows** and **Mac**. 
 
 
-  > **For Mac:**
+**For Mac:**
 
   > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
 
@@ -58,7 +58,7 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
   >   ![](./fig/terminal_pico.png)
   
 
-  > **For Windows:**
+**For Windows:**
 
   > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
 
