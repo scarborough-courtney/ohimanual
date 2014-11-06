@@ -31,16 +31,17 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
 
 Download *git* at http://git-scm.com/downloads and follow the install instructions. 
 
-Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in RStudio and in Terminal:
+Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in *RStudio* and in *Terminal*:
 
-- **RStudio**
+- *RStudio*
+
   Within RStudio, update your preferences for 'Git executable':
   
   > RStudio > Preferences... > Git/SVN > Git executable: `/usr/local/git/bin/git`
   
  ![](./fig/rstudio_prefs_git.png)
 
-- **Terminal**
+- *Terminal*
   
   From Terminal, add a line to your 'bash profile' (launch Terminal from Applications > Utilities > Terminal).
   
