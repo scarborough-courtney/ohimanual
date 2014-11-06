@@ -21,6 +21,7 @@ in_md = c(
   'conduct_regional_assessment.md',
   'gathering_appropriate_data.md', 
   'formatting_data.md',
+  'update_pressures_resilience.md',
   'install_tbx_regional_assessment.md',
   'accessing_a_repo_with_github.md',
   'accessing_a_repo_without_github.md',

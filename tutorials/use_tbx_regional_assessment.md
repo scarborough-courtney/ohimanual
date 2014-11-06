@@ -9,6 +9,11 @@ The most common modifications you will make to your repository are:
 - modifying goal models
 - removing goals
 
+
+These changes are to be made in the following files (see below for more detailed instructions):
+
+![](./fig/china2014_descr3.png)
+
 ## Modifying pressures and resilience matrices
 
 Previous decisions made with your team will identify if any pressures layers should be added to the pressures and/or resilience matrices, and if so, which goals the pressure affects and what weight they should have. Then, you can transfer this information into the Toolbox's `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
@@ -58,7 +63,20 @@ Both types of layers are data are at coarse-resolution and should be exhanged fo
 
 ### Create data layers with proper formatting
 
-See the the 'Formatting data for the Toolbox' section above.
+The OHI Toolbox App expects each data layers to be in its own .csv file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. 
+
+The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting and gapfilling, please consult that section.
+
+The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+
+1. At least five years of data are available, 
+2. There are no data gaps
+3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
+
+**Example of data in the appropriate format:**
+
+![](./fig/formatting_data_example.png)
+
 
 ### Save data layers in the *layers* folder
 
