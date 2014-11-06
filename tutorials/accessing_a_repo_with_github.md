@@ -60,6 +60,8 @@ Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools opt
 
 **For Windows:**
 
+Download *git* at http://git-scm.com/downloads and follow the install instructions. 
+
 When running the Windows installer, use all default options except "Adjusting your PATH environment": instea, select "_**Run Git from the Windows Command Prompt**_". This will allow compatibility with RStudio.  
   
 ![](./fig/git_install_win_option.png)
