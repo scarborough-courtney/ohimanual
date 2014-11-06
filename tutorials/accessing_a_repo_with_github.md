@@ -53,7 +53,7 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
   >   export PATH=/usr/local/git/bin:$PATH
   >   ```
   
-  >   Type `control-X` to exit pico; type `exit` before quitting Terminal.  
+  >   Type `control-X`, then `y` and then `return` keys to exit pico; type `exit` before quitting Terminal.  
   
   >   ![](./fig/terminal_pico.png)
   
