@@ -48,11 +48,11 @@ Four requirements to remember when investigating (or ‘scoping’) potential da
 
 *Note: Once the appropriate data layers are chosen, they may need to be re-formatted in order to be readable by the toolbox (See: 'Formatting Data for Toolbox' section below).* 
 
-#### Relevance to ocean health
+#### Relevance to ocean health  
 
 There must be a clear connection between the data and ocean health, and determining this will be closely linked to each goal model.
 
-#### Reference point
+#### Reference point  
 
 As each data layer must be scaled to a reference point, as you consider different data sources it is important to think about or identify what a reasonable reference point may be. Ask the following types of questions as you explore data possibilities:
 
@@ -61,11 +61,11 @@ As each data layer must be scaled to a reference point, as you consider differen
   * Would a historic target be appropriate?
   * Could a region within the study area be set as a spatial target?
   
-#### Appropriate spatial scale
+#### Appropriate spatial scale  
 
 Data must be available for every region within the study area.*
 
-#### Appropriate temporal scale
+#### Appropriate temporal scale  
 
 Data must be available for at least five years to calculate the trend. Longer time series are preferable because this can be used to set temporal reference points.*
 
@@ -81,7 +81,8 @@ Final calculated scores by region will be represented on a map in addition to th
 
 Below are examples of some decisions made when exploring available data for the US West Coast regional assessment. Determining whether certain data could be included started with a good understanding of the data layers and models included in the global assessment, and because the US West Coast is a data-rich region, finer-resolution local data could be used in place of many of the global data layers.
 
-#### Reasons data were excluded
+#### Reasons data were excluded  
+
 There are a lot of existing data that contribute to our scientific understanding of ocean processes and interactions but that are not ideal for the OHI. Reasons to exclude data occur both on a practical level (do data adhere to the requirements above?) and on a philosophical level, which requires reflecting on the relationship with ocean health. Some common reasons for excluding data are listed below:
 
   * 
