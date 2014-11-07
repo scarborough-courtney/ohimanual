@@ -42,9 +42,11 @@ It is good practice to keep detailed notes of attributes of each potential data 
 Four requirements to remember when investigating (or ‘scoping’) potential data layers are: 
 
 1. relevance to ocean health 
-2. how to the reference point
+2. how to set the reference point
 3. spatial scale
-4. temporal scale. 
+4. temporal scale.
+
+*Note: Once the appropriate data layers are chosen, they may need to be re-formatted in order to be readable by the toolbox (See: 'Formatting Data for Toolbox' section below).* 
 
 #### Relevance to ocean health
 
