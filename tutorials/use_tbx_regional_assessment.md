@@ -4,10 +4,10 @@ This page explains how to incorporate all of the pre-Toolbox decisions your team
 
 The most common modifications you will make to your repository are:
 
-- modifying pressures and resilience matrices
-- modifying and creating data layers for status, trend, pressures and resilience
-- modifying goal models
-- removing goals
+- **modifying pressures and resilience matrices**
+- **modifying and creating data layers for status, trend, pressures and resilience**
+- **modifying goal models**
+- **removing goals**
 
 
 These changes are to be made in the following files (see below for more detailed instructions):
