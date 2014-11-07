@@ -37,7 +37,7 @@ Adding these pressure layers to the Toolbox requires the following steps:
 3. register pressure layer(s) in `layers.csv`  
 
 
-#### Register the new layers in `pressure_matrix.csv`. 
+#### Register the new layers in `pressure_matrix.csv`.  
 
 **1a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
 
