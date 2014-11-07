@@ -14,11 +14,12 @@ It is possible to conduct a regional assessment by downloading a template reposi
  * Install R and RStudio
  * Clone regional assessment repository on Desktop
 
-**2. Become familiar with the OHI Toolbox File System**
-
 Detailed instructions for step **1** are provided below for users who want to either:
 
  * work with GitHub (See: Accessing repository with GitHub section), or 
  * work without GitHub (See: Accessing repository without GitHub section). 
+
+**2. Become familiar with the OHI Toolbox File System**
+
 
 Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: 'Using the Toolbox for a Regional assessment' section below).
