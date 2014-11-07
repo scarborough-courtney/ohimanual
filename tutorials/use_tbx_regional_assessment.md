@@ -42,15 +42,8 @@ Each goal must have a resilience measure associated with it. In the figure below
   
 
 ## Modifying and creating data layers
-  
-**There are several steps to follow when working with data layers:**
 
-1. Modify or create data layer with proper formatting
-2. Save the layer in the `layers` folder
-3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
-
-### Template data layers
+### Overview
 
 Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All  layers provided in your regional assessment repo are the global values from the 2014 assessment. 
 
@@ -60,6 +53,13 @@ Data layers are *.csv* files and are located in the `[assessment]/[scenario]/lay
 * Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
 
 Both types of layers are data are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
+
+**There are several steps to follow when working with data layers:**
+
+1. Modify or create data layer with proper formatting
+2. Save the layer in the `layers` folder
+3. Register the layer in `layers.csv`
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
 
 ### Create data layers with proper formatting
 
