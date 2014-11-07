@@ -82,7 +82,7 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + identify responsive resilience measures
     + categorize any new resilience layers
 * Modify goal models and set reference points:
-    + can goal goal models be refined using locally available data and indicators?
+    + can goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?
     
     
