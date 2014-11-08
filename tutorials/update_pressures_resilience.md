@@ -70,9 +70,15 @@ These distinctions don't always apply for smaller-scale assessments. For example
 
 ### Determine how the pressure affects goals
 
-Next, you will need to map how the pressure affects which goals, determine the appropriate rank weighting, and decide in which pressure category the new pressure belongs.  
+Next, you will need to:
 
-These decisions should depend on previous scientific studies, even if they do not occur in your study area. Experts on the topic should also be included in the conversation. Ranks (weights) are assigned on a scale from 1-3, based on expert judgment of how important the pressure in that column is for the delivery of the goal, sub-goal, or component, in that row.
+ + Map which goals are affected by a given pressure layer
+ + Determine the appropriate rank weighting (how important the pressure is for the delivery of the goal/component)
+ + Decide in which pressure category the new pressure belongs.
+
+These decisions should depend on expert opinions and previous scientific studies, even if they do not occur in your study area.
+
+The original pressure matrix weights for instance were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high, 2=medium, and 1=low pressure; stressors that have no impact drop out rather than being assigned a rank of zero, which would affect the average score). Pressures are ranked rather than being represented as a binary (yes/no) measure because the range of consequence of different pressures on each goal can be quite large, and to classify all those pressures as a simple 'yes' would unduly give too much influence to the weakest stressors. For example, food provision is most heavily impacted by unsustainable, high-bycatch fishing, but pollution does have  some impact on fish stocks. Without a weighting system, these stressors would be treated equally in their impact on the food provision goal. 
 
 Most likely, the new pressure will fit into one of the existing categories. However, depending on the type of pressures in your study area, it is possible that a new pressure category could be created.  
 
