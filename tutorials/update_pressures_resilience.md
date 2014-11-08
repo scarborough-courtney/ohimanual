@@ -11,7 +11,7 @@
 
 For more general information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
 
-Updating the pressure and resilience matrix for a new regional assessment will require the user to:
+**Updating the pressure and resilience matrix for a new regional assessment will require the user to:**
 
  + Understand the pressures and resilience measures included in completed Global/Regional assessments and determine whether they are relevant locally.
  + Identify and categorize new local pressures not captured in the pressures matrix.
