@@ -76,8 +76,8 @@ These distinctions don't always apply for smaller-scale assessments. For example
 
 Next, you will need to:
 
- + Map which goals are affected by a given pressure layer
- + Determine the appropriate rank weighting (how important the pressure is for the delivery of the goal/component)
+ + Map which goals are affected by a given pressure layer.
+ + Determine the appropriate rank weighting (how important the pressure is for the delivery of the goal/component).
  + Decide in which pressure category the new pressure belongs.
 
 These decisions should depend on expert opinions and previous scientific studies, even if they do not occur in your study area.
@@ -141,7 +141,13 @@ As you explore to any new local resilience measures to be included, remember tha
 
 ### Determine how the resilience measure affects goals
 
-Next, you will need to map how the resilience affects which goals, determine the appropriate rank weighting, and indicate the resilience category. These decisions should be based on scientific and local knowledge.
+Next, you will need:
+
+ + Map which goals are affected by a given resilience layer. 
+ + Determine the appropriate rank weighting, (how important the resilience is in counteracting a pressure). 
+ + Decide in which resilience category the new pressure belongs.
+
+These decisions should depend on local expert knowledge and previous scientific studies, even if they do not occur in your study area. 
 
 
 ### Identify available resilience data
