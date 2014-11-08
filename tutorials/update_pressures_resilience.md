@@ -13,7 +13,7 @@ For more general information on how OHI scores are calculated, see: http://www.o
 
 **Updating the pressure and resilience matrix for a new regional assessment will require the user to:**
 
- + Understand the pressures and resilience measures included in completed Global/Regional assessments and determine whether they are relevant locally.
+ + Understand the pressures and resilience measures included in completed global assessment and determine whether they are relevant locally.
  + Identify and categorize new local pressures not captured in the pressures matrix.
  + Identify and categorize new local resilience measures (laws, regulations) not captured in the resilience matrix.
  + Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
