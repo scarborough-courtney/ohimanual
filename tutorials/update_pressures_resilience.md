@@ -138,7 +138,7 @@ Ecological integrity in the global assessment was measured as the relative condi
 
 ### Identify regulatory resilience measures for any new ecological pressures
 
-As you explore to any new local resilience measures to be included, remember that any new pressure in the ecological resilience category with a rank of 2 or 3 will need a corresponding resilience measure. 
+As you explore any new local resilience measures to be included, remember that any new pressure in the ecological resilience category with a rank of 2 or 3 will need a corresponding resilience measure. 
 
 
 ### Determine how the resilience measure affects goals
