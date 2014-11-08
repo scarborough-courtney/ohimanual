@@ -33,7 +33,7 @@ Begin by exploring the pressures included in the global pressures matrix (`press
 
 ![](./fig/pressure_categories.png)
 
-Are there any pressures that should be excluded from your study? For example, if there is no mariculture in your study area, perhaps there is also no genetic escapes (*sp_genetic* layer).
+The first step to updating the pressures matrix for your regional assessment is to determine if there any pressures that should be excluded from your study? For example, if there is no mariculture in your study area, perhaps there is also no genetic escapes (*sp_genetic* layer).
 
 Next, brainstorm local pressures that are not captured in `pressures_matrix.csv`. Which pressures stand out in your study area? Pressures included in the `pressures_matrix.csv` are ultimately determined by available data, and thus there were pressures that were important but could not be included in the global assessment because of data availability (including altered sediment regimes, noise and light pollution, toxic chemicals from point sources, and nutrient pollution from atmospheric deposition and land-based sources other than fertilizer application to agricultural land). There are likely pressures important to your study area that were not captured in the global pressures matrix.  
 
