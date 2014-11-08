@@ -11,7 +11,12 @@
 
 For more information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
 
-Before updating the actual pressure and resilience matrices, there are elements to consider. 
+Before updating the actual pressure and resilience matrices, there are elements to consider:
+
+ + Understand the pressures and resilience measures included in the Global/Regional assessments and determine whether they are relevant locally.
+ + Identify and categorize new local pressures not captured in the pressures matrix.
+ + Identify and categorize new local resilience measures (laws, regulations) not captured in the resilience matrix.
+ + Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
 
 The Ocean Health Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason behind the ecological categories was largely due to data availability at the global level and was designed to minimize sampling bias. For example, we found that there was more pollution data available than habitat destruction data, but just because people have monitored pollution more does not mean it is a larger pressure than habitat destruction. Ecologial and social pressures are then combined with equal weighting, which could be changed if there is local information on how to do so.
 
