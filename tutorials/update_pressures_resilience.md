@@ -2,7 +2,10 @@
 
 ### Introduction 
 
-'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend'). "Pressures are the sum of the ecological and social pressures that negatively affect scores for a goal; while Resilience is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect scores for a goal by reducing or eliminating pressures" (exerpt from oceanhealthindex.com).
+'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend'):
+
+ + "**Pressures** are the sum of the ecological and social pressures that negatively affect scores for a goal".
+ + "**Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect scores for a goal by reducing or eliminating pressures" (exerpt from oceanhealthindex.com).
 
 ![](./fig/calculating_index.png)
 
