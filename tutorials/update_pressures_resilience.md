@@ -29,7 +29,7 @@ Note that goals often interact with each other through pressures. The pressure c
 
 ### Explore local pressures
 
-Begin by exploring the pressures included in the global pressures matrix (`pressures_matrix.csv`) (grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures:
+Begin by exploring the pressures included in the global pressures matrix (`pressures_matrix.csv`). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures:
 
 ![](./fig/pressure_categories.png)
 
