@@ -9,7 +9,7 @@
 
 ![](./fig/calculating_index.png)
 
-For more information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
+For more general information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
 
 Updating the pressure and resilience matrix for a new regional assessment will require the user to:
 
