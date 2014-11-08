@@ -11,19 +11,18 @@
 
 For more information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
 
+The Ocean Health Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason behind the ecological categories was largely due to data availability at the global level and was designed to minimize sampling bias. For example, we found that there was more pollution data available than habitat destruction data, but just because people have monitored pollution more does not mean it is a larger pressure than habitat destruction. Ecologial and social pressures are then combined with equal weighting, which could be changed if there is local information on how to do so.
+
+Ecological and social resilience are assessed separately and then combined with equal weighting, as done with pressures. Any new resilience measure must be associated with a pressure layer. This is because resilience in the Ocean Health Index framework acts to reduce pressures in each region. Therefore, resilience measures must not only be directly or indirectly relevant to ocean health, but must be in response to a pressure layer affecting a goal.
+
+Note that goals often interact with each other through pressures. The pressure created by one goal may affect a second goal without being affected itself. For example, raising fish in the mariculture goal can cause genetic escapes, which is a pressure (the *sp_genetic* layer). This pressure affects only the wild-caught fisheries and species sub-goals, but does not affect mariculture itself. 
+
 Before updating the actual pressure and resilience matrices, there are elements to consider:
 
  + Understand the pressures and resilience measures included in the Global/Regional assessments and determine whether they are relevant locally.
  + Identify and categorize new local pressures not captured in the pressures matrix.
  + Identify and categorize new local resilience measures (laws, regulations) not captured in the resilience matrix.
  + Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
-
-The Ocean Health Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason behind the ecological categories was largely due to data availability at the global level and was designed to minimize sampling bias. For example, we found that there was more pollution data available than habitat destruction data, but just because people have monitored pollution more does not mean it is a larger pressure than habitat destruction. Ecologial and social pressures are then combined with equal weighting, which could be changed if there is local information on how to do so.
-
-Goals often interact with each other through pressures. The pressure created by one goal affects a second goal, and may not affect the first. For example, raising fish in the mariculture goal can cause genetic escapes, which is a pressure (the *sp_genetic* layer). This pressure affects only the wild-caught fisheries and species sub-goals, but does not affect mariculture itself. 
-
-Ecological and social resilience are assessed separately and then combined with equal weighting, as done with pressures. Any new resilience measure must be associated with a pressure layer. This is because resilience in the Ocean Health Index framework acts to reduce pressures in each region. Therefore, resilience measures must not only be directly or indirectly relevant to ocean health, but must be in response to a pressure layer affecting a goal.
-
 
 ### Explore local pressures
 
