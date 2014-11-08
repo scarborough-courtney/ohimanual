@@ -30,7 +30,9 @@ Previous decisions made with your team will identify if any pressures layers sho
 * *cc_* = climate change
 * *ss_* = social pressure  
 
-For example, `po_trash` is a pollution layer with trash on beaches, and `sp_alien` is species pollution due to alien (invasive) species. 
+For example, `po_trash` is a pollution layer with trash on beaches, and `sp_alien` is species pollution due to alien (invasive) species.
+
+It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data.  
 
 ### Updating resilience_matrix.csv
 
