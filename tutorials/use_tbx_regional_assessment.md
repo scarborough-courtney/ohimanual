@@ -21,7 +21,7 @@ Previous decisions made with your team will identify if any pressures layers sho
 
 ### Updating pressures_matrix.csv
 
-Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name. The name should be short but descriptive. The name should also include a prefix to indicate the pressure category. There are five physical categories and one social category:
+`pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name. The name should be short but descriptive. The name should also include a prefix to indicate the pressure category. There are five physical categories and one social category:
 
 * *po_* = pollution
 * *hd_* = habitat destruction
