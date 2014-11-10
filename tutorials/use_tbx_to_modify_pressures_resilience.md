@@ -24,26 +24,15 @@ In this example there are two new pressure layers to include: the effects of des
 
 Adding these pressure layers to the Toolbox requires the following steps:
 
-1. register (add) pressure layer(s) in `pressures_matrix.csv`
+1. create new pressure layer(s) and save in the `layers` folder
+2. register pressure layer(s) in `layers.csv` 
+3. register (add) pressure layer(s) in `pressures_matrix.csv`
   + a. set the pressure category  
   + b. identify the goals affected and set the weighting
   + c. modify the resilience matrix (if necessary) 
-2. create new pressure layer(s) and save in the `layers` folder
-3. register pressure layer(s) in `layers.csv`  
 
 
-**1. Register the new layers in `pressure_matrix.csv`.**  
-
-**1a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
-
-**1b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
-
-
-![](./fig/register_new_pressures.png)
-
-**1c.** [develop]
-
-**2. Create the new pressure layers**
+**1. Create the new pressure layers**
 
 Suppose that there is information 
 
@@ -52,9 +41,20 @@ Suppose that there is information
 - rescale from 0 to 1
 - save in `layers` folder
 
-**3. Register the new layers in `layers.csv`**
+**2. Register the new layers in `layers.csv`**
 
 ![](./fig/register_pressure.png)
+
+**3. Register the new layers in `pressure_matrix.csv`.**  
+
+**3a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+
+**3b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+
+![](./fig/register_new_pressures.png)
+
+**3c.** [develop]
+
 
 
 ### Updating resilience_matrix.csv
