@@ -136,6 +136,11 @@ The table displays the target value for each region and the overall study area, 
 ![](./fig/table_view.png)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
+
+>>>>>>> FETCH_HEAD
 =======
 It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
 
@@ -154,7 +159,10 @@ Scores by goal are calculated weighted average to produce the score for the over
 
 The Ocean Health Index framework is flexible to accommodate regional priorities: goal models should be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. Similarly, pressures and resilience measures can be refined using local data and indicators. Calculated Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental. 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> FETCH_HEAD
 **The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
   
 Regional assessments have been published in peer-review journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
@@ -472,6 +480,7 @@ For a certain data layer, suppose the second region (rgn_id 2) has no data repor
 Here are properties that can be important for decision making:
 
 rgn_id 2:
+<<<<<<< HEAD
 
 - is located between rgn_id 1 and 3
 - is larger than rgn_id 1
@@ -482,6 +491,18 @@ There is no absolute answer of how to best gapfill rgn_id 2. Here are a few reas
 
 Assign rgn_id 2 values from:
 
+=======
+
+- is located between rgn_id 1 and 3
+- is larger than rgn_id 1
+- has similar population size/demographics to rgn_id 3
+- has not been growing as quickly as rgn_id 4
+
+There is no absolute answer of how to best gapfill rgn_id 2. Here are a few reasonable possibilities:
+
+Assign rgn_id 2 values from:
+
+>>>>>>> FETCH_HEAD
 - rgn_id 1 because it is in close proximity to rgn_id 2
 - rgn_id 3 because it is in close proximity to rgn_id 2 and has similar population size/demographics
 - rgn_id 1 and 3 averaged since they are in close proximity to rgn_id 2
@@ -677,6 +698,7 @@ As you explore any new local resilience measures to be included, remember that a
 ### Determine how the resilience measure affects goals
 
 Next, you will need:
+<<<<<<< HEAD
 
  + Map which goals are affected by a given resilience layer. 
  + Determine the appropriate rank weighting, (how important the resilience is in counteracting a pressure). 
@@ -684,6 +706,15 @@ Next, you will need:
 
 These decisions should depend on local expert knowledge and previous scientific studies, even if they do not occur in your study area. 
 
+=======
+
+ + Map which goals are affected by a given resilience layer. 
+ + Determine the appropriate rank weighting, (how important the resilience is in counteracting a pressure). 
+ + Decide in which resilience category the new pressure belongs.
+
+These decisions should depend on local expert knowledge and previous scientific studies, even if they do not occur in your study area. 
+
+>>>>>>> FETCH_HEAD
 
 ### Identify available resilience data
 
@@ -730,9 +761,15 @@ We recommend that groups interested in conducting OHI assessments do so using Gi
 It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
 
 To get started on an OHI assessments using GitHub, follow the steps below:
+<<<<<<< HEAD
 
 Software required for regional assessments with version control:
 
+=======
+
+Software required for regional assessments with version control:
+
+>>>>>>> FETCH_HEAD
 > ![](./fig/overview_requirements_1.png)
 
 ### Install R and RStudio
@@ -767,6 +804,7 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
   > - *Terminal*
   
   >   From Terminal, add a line to your 'bash profile' (launch Terminal from Applications > Utilities > Terminal).
+<<<<<<< HEAD
   
   >   First type:  `pico ~/.bash_profile`
   
@@ -778,6 +816,19 @@ GitHub is an online interface for *git*, and to use it you must create a GitHub 
   
   >   Type `control-X`, then `y` and then `return` keys to exit pico; type `exit` before quitting Terminal.  
   
+=======
+  
+  >   First type:  `pico ~/.bash_profile`
+  
+  >   Add this line: 
+
+  >   ```
+  >   export PATH=/usr/local/git/bin:$PATH
+  >   ```
+  
+  >   Type `control-X`, then `y` and then `return` keys to exit pico; type `exit` before quitting Terminal.  
+  
+>>>>>>> FETCH_HEAD
   >   ![](./fig/terminal_pico.png)
   
 
@@ -895,9 +946,15 @@ This example illustrates GitHub's collaborative workflow with the `ohi-israel` r
 ### Committing and pushing changes locally
 
 Committing and pushing changes can be done using either RStudio or the GitHub App.
+<<<<<<< HEAD
 
 **Using RStudio to commit and push changes to GitHub repository**
 
+=======
+
+**Using RStudio to commit and push changes to GitHub repository**
+
+>>>>>>> FETCH_HEAD
 Launch your project in RStudio by double-clicking the `[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](./fig/RStudio_sk1.png)
@@ -939,12 +996,22 @@ where:
 * `[user]` is your GitHub username
 
 Note however that users can also change files directly in the repository on the GitHub website (column 1), by clicking on the button indicated by the red arrow:
+<<<<<<< HEAD
+
+> ![](./fig/web_edit.png)
+=======
 
 > ![](./fig/web_edit.png)
 
+>>>>>>> FETCH_HEAD
 
 Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
 
+<<<<<<< HEAD
+Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
+
+=======
+>>>>>>> FETCH_HEAD
 > ![](./fig/fork_repository.png)
 
 See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
@@ -1077,6 +1144,7 @@ The most common modifications you will make to your repository are:
 
 
 These changes are to be made in the following files (see below for more detailed instructions):
+<<<<<<< HEAD
 
 ![](./fig/china2014_descr3.png)
 
@@ -1087,6 +1155,18 @@ Previous decisions made with your team will identify if any pressures layers sho
 
 ### Updating pressures_matrix.csv
 
+=======
+
+![](./fig/china2014_descr3.png)
+
+## Modifying pressures and resilience matrices
+
+Previous decisions made with your team will identify if any pressures layers should be added to the pressures and/or resilience matrices, and if so, which goals the pressure affects and what weight they should have. Then, you can transfer this information into the Toolbox's `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
+
+
+### Updating pressures_matrix.csv
+
+>>>>>>> FETCH_HEAD
 `pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name. The name should be short but descriptive. The name should also include a prefix to indicate the pressure category. There are five physical categories and one social category:
 
 * *po_* = pollution
@@ -1105,9 +1185,15 @@ It is important to note that the matrix identifies the pressures relevant to eac
 `resilience_matrix.csv` maps the different types of resilience (columns) with the goals that they affect (rows). New resilience layers may be added to `resilience_matrix.csv` based on finer-scale local information either in response to a new pressures layer, or as a new independent measure. Any added layer must be associated with a pressures layer that has a weight of 2 or 3 in the Ocean Health Index framework so that resilience measures can mitigate pressures in each region.
 
 Each goal must have a resilience measure associated with it. In the figure below, the Toolbox would give an error because there are no resilience layers indicated for the natural products (NP) goal. 
+<<<<<<< HEAD
   
 ![](./fig/resil_mtx_bad.png)  
   
+=======
+  
+![](./fig/resil_mtx_bad.png)  
+  
+>>>>>>> FETCH_HEAD
 
 ## Modifying and creating data layers
 
@@ -1374,6 +1460,7 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 1) Remove the carbon storage (CS) goal model from `functions.r`:
 
 ![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+<<<<<<< HEAD
 
 2) Remove the CS row from `goals.csv`:
 
@@ -1459,6 +1546,93 @@ The *taxon_name_key* column indicates the name of the species (e.g. Aristeus ant
 *only needed if there is mariculture*: for each region, this represents the relative proportion of catch coming from wild caught fisheries versus mariculture. The layer is used to weight how much the fisheries score influences the final food provision score, the higher the fisheries catch, the more the food provision score will reflect the fisheries score, and vice-versa if mariculture has a higher catch.       
 (NOTE that, before all mariculture harvest from all species gets summed, the mariculture harvest for each species is smoothed and then multiplied by the resilience score).     
 
+=======
+
+2) Remove the CS row from `goals.csv`:
+
+![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+
+3) Remove all CS rows from `pressures_matrix.csv`:
+
+![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+
+4) Remove all CS rows from `resilience_matrix.csv`:
+
+![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+
+
+### Preparing the fisheries sub-goal 
+
+Here is some background information about how to prepare fisheries data layers for the Toolbox.
+
+**Data layers used by the Toolbox:**
+
+* `fis_b_bmsy`
+* `fis_meancatch`
+* `fis_proparea_saup2rgn`
+* `fp_wildcaught_weight`
+
+#### Description of data layers
+
+`fis_b_bmsy`
+
+* *for species*: B/Bmsy estimate (either from formal stock assessment, or from a data-poor method such as CMSY)    
+* *for genus/family/broader taxa*: the toolbox will use median B/Bmsy from species in that region + a penalty for not reporting at species level. In order for the code to assign the correct penalty, the taxa need to include a numerical code of 6 digits, where the first digit behaves like an ISSCAAP code (the standardized species codes used by FAO): 6 means species, 5 means genus, 4 to 1 are increasingly broad taxonomic groups    
+* *data source (for CMSY)*: catch time-series (at least 10 years of catch >0), species resilience (if available)  
+
+**Example data:**
+
+|fao_id |taxon_name     |year |b_bmsy   |
+|:------|:--------------|:----|:--------|
+|51     |Ablennes hians |1985 |1.112412 |
+|51     |Ablennes hians |1986 |1.222996 |
+|51     |Ablennes hians |1987 |1.371058 |
+
+
+NOTE: if a species that is caught in different sub-regions belongs to the same population, you don't want to split the catch among sub-regions, instead, you want to sum catch across all sub-regions, so you can calculate B/Bmsy for the whole population. For the global analysis we grouped all species catch by FAO major fishing area (www.fao.org/fishery/area/search/en), indicated in the column *fao_id*, assuming that all species caught within the same FAO area belonged to the same stock, while we assumed that the same species, if caught in a different fishing area, belonged to a separate stock.  
+Use *fao_id* as an identifier that separates different fisheries 'stocks' belonging to the same species.   
+If you don't have multiple stocks in your study area, set all *fao_id* = 1.  
+
+`fis_meancatch`:
+
+* average catch across all years, per species, per region  
+* *data source*: catch time-series (at least 10 years of catch >0), with a unique identifier for each population that you want to assess separately   
+ 
+**Example data:**
+
+|fao_saup_id |taxon_name_key             |year |mean_catch  |
+|:-----------|:--------------------------|:----|:-----------|
+|37_8        |Aristeus antennatus_690051 |2014 |14.24398116 |
+|37_8        |Atherinidae_400218         |2014 |27.30120156 |
+|37_8        |Balistes capriscus_607327  |2014 |3.247883895 |
+
+The *taxon_name_key* column indicates the name of the species (e.g. Aristeus antennatus) and its 'taxonkey'. The taxonkey is a 6 digit numeric code used by the Sea Around Us Project, modified from FAO codes. The important element of this code is the first digit, because it reflects the taxonomic level (6=species, 5=genus, 4=family, etc.) of the reported catch.The toolbox uses this first digit to assign a score to all catch that was not reported at species level, taking the median of the B/Bmsy of assessed species, and adding a penalty that is increasingly strong for coarser taxa.    
+
+`fis_proparea_saup2rgn`:  
+
+* a conversion file that, for each region for which catch is reported, tells us what proportion of that region falls within each of the final OHI reporting regions.   
+
+**Example data:**
+
+| saup_id| rgn_id| prop_area|
+|-------:|------:|---------:|
+|     166|      1|       1.0|
+|     162|      2|       1.0|
+|     574|      3|       0.7|
+|      37|      4|       0.8|
+
+**Specific instances:**
+
+ *only if catch is reported for different regions than the ones used for the OHI assessment:* this should be calculated using spatial analyses of overlap of the spatial units at which catch is reported with the spatial units at which the OHI assessment will be reported. The global data was reported by subregions (*saup_id*) and in some cases multiple subregions were part of the same, larger EEZ. Since for OHI we wanted results by EEZ (*rgn_id*), in those cases we needed to combine results from the subregions to get the final score, based on their size relative to the total EEZ size (*prop_area*).   
+ *If catch is reported for the same areas for which OHI is calculated:* then all the *prop_area* are = 1.   
+ *If catch is reported for the whole area of the assessment, but you want to calculate a separate OHI score for different sub-regions:* for each OHI reporting region (*rgn_id*) you'll repeat the same region in the *saup_id* column, and *prop_area* will be =1. This effectively means all the reporting regions will get assigned 100% of the catch and will have the same final stastus and trend score for the fisheries goal (but may have different pressures and resilience scores, if those layers are different in each sub-region).  
+
+`fp_wildcaught_weight`: 
+
+*only needed if there is mariculture*: for each region, this represents the relative proportion of catch coming from wild caught fisheries versus mariculture. The layer is used to weight how much the fisheries score influences the final food provision score, the higher the fisheries catch, the more the food provision score will reflect the fisheries score, and vice-versa if mariculture has a higher catch.       
+(NOTE that, before all mariculture harvest from all species gets summed, the mariculture harvest for each species is smoothed and then multiplied by the resilience score).     
+
+>>>>>>> FETCH_HEAD
 #### Running CMSY model
 
 **Sample data to run CMSY:**
