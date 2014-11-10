@@ -11,7 +11,7 @@ Adding these pressure layers to the Toolbox requires the following steps:
   + b. identify the goals affected and set the weighting
   + c. modify the resilience matrix (if necessary) 
 
-We will now go through the following steps using as an example there are two new pressure layers to include: the input and output effects of desalination operations.
+We will now go through the following steps using the input and output effects of desalination operations as an example (adding two new pressure layers).
 
 
 **1. Create the new pressure layers**
