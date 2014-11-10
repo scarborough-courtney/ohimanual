@@ -146,7 +146,7 @@ In this example we will walk through how to add a new layer to a goal model by f
 4. update goal model in `functions.r`
 5. update goal call in `goals.csv`
 
-1) and 2) is done outside of the Toolbox
+Steps 1. and 2. are done outside of the Toolbox
 
 3. register in `layers.csv`
 
