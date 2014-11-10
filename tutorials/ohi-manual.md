@@ -6,7 +6,7 @@ title: The Ocean Health Index Toolbox Manual
   
 ## The Ocean Health Index
 
-**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by [Halpern et al. 2012](http://www.nature.com/nature/journal/v488/n7413/abs/nature11397.html) in *Nature*, we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** software that will enable others to conduct assessments on their own using the OHI framework. Here, the **Ocean Health Index Manual** describes how to use the Toolbox software.
+**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern et al. 2012 in *Nature* (available at ohi-science.org/), we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** software that will enable others to conduct assessments on their own using the OHI framework. Here, the **Ocean Health Index Manual** describes how to use the Toolbox software.
 
 OHI scores by goal are calculated at the scale of the reporting unit, which is called a **region** and then combined using a weighted average to produce the score for the overall area assessed, called a **study area**. 
 
@@ -22,11 +22,11 @@ We recommend first becoming familiar with the Toolbox App and exploring the resu
 **Requirements**: an Internet connection for the initial Toolbox App installation. The Toolbox runs on both a Mac and PC.
 
 1. Install the latest version of R (http://cran.r-project.org/).
-2. Launch the Toolbox Application (http://ohi-science.org/pages/install.html).
+2. Install and launch the Toolbox Application (http://ohi-science.org/pages/install.html).
 
 # Overview of the OHI Toolbox App
 
-The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The [*Data*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#data-page) page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The [*Calculate*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#calculate-page) page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The [*Report*](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#report-page) page provides different methods of reporting the data.  
+The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The *Data* page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The *Calculate* page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The *Report* page provides different methods of reporting the data.  
   
 The **Current scenario** is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
   
@@ -38,17 +38,14 @@ The **Current scenario** is displayed in the upper-right corner of the Data page
 The Data page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
 
 
-**Data displayed in [Map](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#map) form:**
+**Data displayed in Map form:**
   
 ![](./fig/datapage_view.png)
 
-The map displays data for every region as reported in the scenario. Zooming in and out is possible with the plus/minus in the upper left of the map, and a color legend is displayed in the lower right corner of the map. The legend provides a linear colormap of the data and the range of values will change as different variables are selected. 
-
-The target and dimension chosen from the drop-down menu is also displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’.
+The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
 
-
-**Data displayed in [Histogram](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#histogram) form:**
+**Data displayed in Histogram form:**
 
 ![](./fig/histogrampage_view.png)
 
@@ -56,11 +53,11 @@ The histogram shows the distribution of the selected variable as the number of o
 
 
 
-**Data displayed in [Table](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/overview_toolbox_app.md#table) form:**
+**Data displayed in Table form:**
   
 ![](./fig/tablepage_view.png)
 
-The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each. It is possible to search the data using the search bar at the upper right of the table (caps-sensitive). It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
+The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
 
 
 ### Overview of variable options
@@ -80,7 +77,7 @@ On the other hand, if the user selects “Input Layer” as the variable type, t
 
 ![](./fig/overview_variable_options2.png)
 
-
+To further familiarize yourself with the display and variable options of the Toolbox App, please see the 'Explore Global Results with the Toolbox App' section below.
 
 ## Calculate page
 The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
@@ -97,7 +94,9 @@ It is currently possible to create flower plots and tables with several options,
 
 # Explore Global Results with the Toolbox App
 
-## develop
+The following section will be devoted to exploring the Ocean Health Index Global Results using the Toolbox App. The section will further familiarize the user with the organizational structure and functionality of the Toolbox, and will also help the user understand the results that were obtained in the global assessment,  including the types of data that were used to calculate the Ocean Health Index.
+
+To begin exploring results, the user must first select (from the drop-down menus) the data that they wish to display with the Toolbox (i.e. variable type > target > dimension/layer > category > year).
 
 **For example:**
 
@@ -112,22 +111,35 @@ shows the different harvested species that were used to calculate the maricultur
 
 ![](./fig/input_mariculture_harvested.png)
 
+As mentioned previously, the selected data can then be viewed as a Map, as a distribution on the Histogram tab or numerically in Table form.
 
-### Map 
+## Map 
+
+Suppose for instance that **Output Score > Index > score** is selected and viewed as a map (default selection).
 
 ![](./fig/map_view.png)
 
-### Histogram
+The target (Index) and dimension (Score) chosen from the drop-down menu is displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’. Zooming in and out of the map is possible with the plus/minus in the upper left of the map. A color legend is also displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
-> For example, if the **Output Score > Fisheries > score** sub-goal is selected, the information displayed by the histogram is as follows:
+## Histogram
+
+For example, if the **Output Score > Fisheries > score** sub-goal is selected, the histogram shows the frequency of each fisheries score:
 
 ![](./fig/histogram_view.png)
 
+As noted in the figure above, the Histogram view allows the user to see the range of scores (lowest and highest) as well as the frequency of each (most vs. least common). The latter may be helpful for instance if the user wishes to compare to score of a particular country to all the other scores.
 
-### Table
+## Table
+
+The table displays the target value for each region and the overall study area, with an identifying code (rgn_id), name (rgn_name), and value (value) for each. The Table view can be especially useful in quickly finding values for a particular country, given that the user can easily navigate the OHI data using the search bar located on the upper right of the table (caps-sensitive).
 
 ![](./fig/table_view.png)
 
+<<<<<<< HEAD
+=======
+It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
+
+>>>>>>> FETCH_HEAD
 ---
 output: html_document
 ---
@@ -144,9 +156,8 @@ The Ocean Health Index framework is flexible to accommodate regional priorities:
 
 
 **The process for developing a regional assessment can be as valuable as the final calculated scores, since it creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
-
   
-Regional assessments have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589)), and more are underway.   
+Regional assessments have been published in peer-review journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
 
 ## Before getting started
 
@@ -240,8 +251,8 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
 * Be familiar with the global inputs to your Toolbox repository
     + understand the data and models used in global assessments
     + prioritize which data and models should be updated 
-    + become familiar with the Toolbox framework for your study region: **ohi-science.shinyapps.io/[study_area]**
-      - example: ohi-science.shinyapps.io/colombia
+    + become familiar with the Toolbox framework for your study region
+      - example: ohi-science.org/ecu
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
     + what local data and indicators are available pressures and resilience?
@@ -250,8 +261,15 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + are local data and indicators at the appropriate spatial and temporal scales?
     + process and format data and indicators to create data layers* for the Toolbox
     + use the Toolbox repository as a registry to organize data layers
+* Update pressures and resilience
+    + determine whether all global pressures are relevant locally
+    + identify local pressures not captured in the pressures matrix
+    + categorize any new pressures layers
+    + set pressure weighting/ranking based on literature, expert opinion
+    + identify responsive resilience measures
+    + categorize any new resilience layers
 * Modify goal models and set reference points:
-    + can goal goal models be refined using locally available data and indicators?
+    + can goal models be refined using locally available data and indicators?
     + can reference points be refined using locally available data and indicators?
     
     
@@ -303,15 +321,17 @@ It is good practice to keep detailed notes of attributes of each potential data 
 Four requirements to remember when investigating (or ‘scoping’) potential data layers are: 
 
 1. relevance to ocean health 
-2. how to the reference point
+2. how to set the reference point
 3. spatial scale
-4. temporal scale. 
+4. temporal scale.
 
-#### Relevance to ocean health
+*Note: Once the appropriate data layers are chosen, they may need to be re-formatted in order to be readable by the toolbox (See: 'Formatting Data for Toolbox' section below).* 
+
+#### Relevance to ocean health  
 
 There must be a clear connection between the data and ocean health, and determining this will be closely linked to each goal model.
 
-#### Reference point
+#### Reference point  
 
 As each data layer must be scaled to a reference point, as you consider different data sources it is important to think about or identify what a reasonable reference point may be. Ask the following types of questions as you explore data possibilities:
 
@@ -320,15 +340,15 @@ As each data layer must be scaled to a reference point, as you consider differen
   * Would a historic target be appropriate?
   * Could a region within the study area be set as a spatial target?
   
-#### Appropriate spatial scale
+#### Appropriate spatial scale  
 
 Data must be available for every region within the study area.*
 
-#### Appropriate temporal scale
+#### Appropriate temporal scale  
 
 Data must be available for at least five years to calculate the trend. Longer time series are preferable because this can be used to set temporal reference points.*
 
-\* It is not always possible to meet the spatial and temporal requirements with each data layer. In these cases it can still be possible to use these data if appropriate gap-filling techniques are used. It is important that data satisfy as many of these requirements as possible, and in cases where creative ways of working with such data are not possible, it might be better to exclude these data from the analyses and try a different approach.
+\* It is not always possible to meet the spatial and temporal requirements with each data layer. In these cases it can still be possible to use these data if appropriate gap-filling techniques are used (See: 'Formatting Data for Toolbox' section below). It is important that data satisfy as many of these requirements as possible, and in cases where creative ways of working with such data are not possible, it might be better to exclude these data from the analyses and try a different approach.
 
 ### Notes about data and regions
 
@@ -340,7 +360,8 @@ Final calculated scores by region will be represented on a map in addition to th
 
 Below are examples of some decisions made when exploring available data for the US West Coast regional assessment. Determining whether certain data could be included started with a good understanding of the data layers and models included in the global assessment, and because the US West Coast is a data-rich region, finer-resolution local data could be used in place of many of the global data layers.
 
-#### Reasons data were excluded
+#### Reasons data were excluded  
+
 There are a lot of existing data that contribute to our scientific understanding of ocean processes and interactions but that are not ideal for the OHI. Reasons to exclude data occur both on a practical level (do data adhere to the requirements above?) and on a philosophical level, which requires reflecting on the relationship with ocean health. Some common reasons for excluding data are listed below:
 
   * 
@@ -368,11 +389,11 @@ For the US West Coast, available data measure the current extent of seagrass hab
 
 ### Introduction
 
-The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based .csv files (.csv stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
+The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based *.csv* files (*csv* stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be nearly as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
 
 Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
-The example below shows two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
 1. At least five years of data are available, 
 2. There are no data gaps
@@ -382,16 +403,17 @@ The example below shows two different (and separate) data layer files: tourism c
 
 ![](./fig/formatting_data_example.png)
 
+### Gapfilling
+
 It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
 
-How these gaps are filled will depend on the data and regions themselves, and requires a thoughtful decision to most reasonably fill the gap. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highlight some example of temporal and spatial gapfilling. 
+How these gaps are filled will depend on the data and regions themselves, and requires thoughtful, logical  decisions to most reasonably fill gaps. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highlight some example of temporal and spatial gapfilling.  
 
-**Note that the DataLayer column has been included for clarity in the examples below, but should be ommitted in the final .csv file.**
+All decisions of gapfilling should be documented to ensure transparency and reproducibility. The examples below are in Excel, but programming these changes in software like R easily enables transparency and reproducibility. 
 
+#### Temporal gapfilling
 
-### Temporal gapfilling
-
-Temporal gaps are when some data are available for a region, but there are missing years. The Toolbox requires data for each year for every region.
+Temporal gaps are when some data are available for a region, but there are missing years. The Toolbox requires data for each year for every region. It is important to make an informed decision about how to temporally gapfilling data.
 
 ![](./fig/temporal_gaps.png)
 
@@ -399,75 +421,76 @@ Many times, creating a linear model is the best way to estimate data and fill te
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region 1.
 
-**Steps to temporally gapfill data (assumes linearity):**
+** Temporal gapfilling example (assumes linearity):**
+
+There are four steps to temporally gapfill with a linear model, illustrated in the figures with four columns.
 
 **1. Calculate the slope for each region**
 
-The first step is to calculate the **slope** of the line that is fitted through the available data points. This can be done in excel using the SLOPE(known_y's,known_x's) function as highlighted in the figure below. In this case, the x-axis is in years (2005, 2006, etc...), the y-axis is in 'tourist_count', and the excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
+The first step is to calculate the slope of the line that is fitted through the available data points. This can be done in excel using the **SLOPE(known_y's,known_x's)** function as highlighted in the figure below. In this case, the x-axis is *years* (2005, 2006, etc...), the y-axis is *count*, and the Excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
 ![](./fig/filling_temporal_gaps_slope.png) 
 
 **2. Calculate the y-intercept for each region**
 
-The next step is to calculate the **intercept** of the line that is fitted through the available data points. This can be done in excel similarly as for the slope calculation, using the the INTERCEPT(known_y's,known_x's) function that calculates the y-intercept (-25273.89) of the fitted line as highlighted in the figure below.
+The next step is to calculate the intercept of the line that is fitted through the available data points. This can be done in excel similarly as for the slope calculation, using the the **INTERCEPT(known_y's,known_x's)** function that calculates the y-intercept (-25273.89) of the fitted line.
 
 ![](./fig/filling_temporal_gaps_intercept.png)
 
 **3. Calculate y for all years**
 
-The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the **unknown 'y-values'**. To do so, simply replace the known three values into the y = mx + b equation, as illustrated in the figure below, to calculate the unknown 'tourist_count' for a given year (189.39 in 2006, and 202.08 in 2007).
+The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y-values'. To do so, simply replace the known three values into the **y = mx + b** equation, to calculate the unknown 'count' for a given year (189.39 in 2006, and 202.08 in 2007).
 
 ![](./fig/filling_temporal_gaps_value.png)
 
 **4. Replace modeled values into original data where gaps had occurred**
 
+Substitute these modeled values that were previously gaps in the timeseriew. The data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
 
-Data layer is now ready for the Toolbox, gapfilled and in the appropriate format.
 
+#### Spatial gapfilling
 
-### Spatial gapfilling
-
-Spatial gaps are when no data are available for a particular region.
+Spatial gaps are when no data are available for a particular region. The Toolbox requires data for each region. It is important to make an informed decision about how to spatially gapfilling data.
 
 ![](./fig/gapfilling_spatial.png)
 
-To fill gaps spatially, assumptions must be made that one region is like another, and data from another region will be substituted in place of the missing data. 
+To fill gaps spatially, assumptions must be made that one region is like another, and data from another region will be substituted in place of the missing data. This will depend on the type of data and the properties of the regions requiring gapfilling. For example, if a region is missing data but has similar properties to a different region that does have data, the missing data could be 'borrowed' from the region with information. Each data layer can be gapfilled using a different approach when necessary.
 
-Depending on the data, this can be done simply by assuming that two regions are similar enough that their data could be exactly copied, or a proportion of those values could also be applied. This will depend on the type of data, and the properties of the region. Each data layer can be gapfilled using a different approach when necessary.
-
-**Characteristics of a region that can influence spatial gapfilling:**
+**Characteristics of region regions requiring gapfilling that can help determine which type of spatial gapfilling to use:**
 
 1. proximity: can it be assumed that nearby regions have similar properties? 
 
-2. larger regions: Are data reported in larger regions and can those data be used for subregions?
+2. study area: are data reported for the study area, and can those data be used for subcountry regions?
 
 3. demographic information: can it be assumed a region with a similar population size has similar data? 
 
 
 **Spatial gapfilling example:**
 
-To spatially gapfill Region 2 requires thinking about the properties and characteristics of the region and the data, tourists_count. 
+For a certain data layer, suppose the second region (rgn_id 2) has no data reported, as illustrated in the figure above. How to spatially gapfill rgn_id 2 requires thinking about the properties and characteristics of the region and the data, tourist count. 
 
 Here are properties that can be important for decision making:
 
-Region 2:
-- is located between Region 1 and 3
-- is larger than Region 1
-- has similar population size/demographics to Region 3
-- has not been growing as quickly as Region 4
+rgn_id 2:
 
-There is no absolute answer of how to best gapfill Region 2. Here are a few reasonable possibilities:
+- is located between rgn_id 1 and 3
+- is larger than rgn_id 1
+- has similar population size/demographics to rgn_id 3
+- has not been growing as quickly as rgn_id 4
 
-Assign Region 2 values from:
-- Region 1
-- Region 3
-- Region 1 and 3 averaged 
+There is no absolute answer of how to best gapfill rgn_id 2. Here are a few reasonable possibilities:
 
-In the example below, the decision was made to gapfill Region 2 using the mean of Regions 1 and 3 since this would use a combination of both of those regions. Again, other possibilities could be equally correct. But some form of spatial gapfilling is required so a decision must be made.
+Assign rgn_id 2 values from:
+
+- rgn_id 1 because it is in close proximity to rgn_id 2
+- rgn_id 3 because it is in close proximity to rgn_id 2 and has similar population size/demographics
+- rgn_id 1 and 3 averaged since they are in close proximity to rgn_id 2
+
+Suppose the decision was made to gapfill rgn_id 2 using the mean of rgn_id 1 and 3 since this would use a combination of both of those regions. Again, other possibilities could be equally correct. But some form of spatial gapfilling is required so a decision must be made. The image below illustrates this in Excel.
 
 ![](./fig/gapfilling_spatial_example.png)
 
-Data layer is now ready for the Toolbox,  gapfilled and in the appropriate format.
+The data layer is now ready for the Toolbox, gapfilled and in the appropriate format.  
 
 ### Long formatting
 
@@ -483,7 +506,8 @@ With 'wide' format, data layers are more difficult to combine with others and mo
 
 Data are easily transformed in a programming language such as R. 
 
-In R, the 'reshape' package has the 'melt' command, which will melt the data from a wide format into a narrow format. It also can 'cast' the data back into a wide format if desired. R documentation: 
+In R, the `reshape` package has the `melt` command, which will melt the data from a wide format into a narrow format. It also can `cast` the data back into a wide format if desired. R documentation: 
+
 - http://cran.r-project.org/web/packages/reshape2/reshape2.pdf
 - http://www.slideshare.net/jeffreybreen/reshaping-data-in-r
 - http://tgmstat.wordpress.com/2013/10/31/reshape-and-aggregate-data-with-the-r-package-reshape2/
@@ -505,139 +529,268 @@ The final step is optional: ordering the data will make it more easy to read for
 
 ![](./fig/formatting_long_example_2.png)
 
-With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible.
+With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible. Data layers in this format can be easily combined with other data layers: the range of years available can be different for each data layer, and there are minimal column names.
 
-Data layers in this format can be easily combined with other data layers: the range of years available can be different for each data layer, and there are minimal column names.
+## Updating pressures and resilience
 
-### Gapfilling examples from 2013 Global Assessment
+### Introduction 
 
-**Data gap filling procedures:**
+'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend'):
 
-[excerpted from 2013 Global Supplementary Methods, www.oceanhealthindex.org/About/Methods/]
+ + "**Pressures** are the sum of the ecological and social pressures that negatively affect scores for a goal".
+ + "**Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect scores for a goal by reducing or eliminating pressures".
 
-Many data layers had sufficient global coverage to merit inclusion in the calculation of the Index, yet still had gaps (i.e., regions not represented) that needed to be filled to calculate scores for all Index regions. In this current 2013 assessment, unrepresented regions often included many of the new (small) reporting regions (Table S1). Data used for calculation of goal trends also required temporal replication over the previous five years (minimum), and this was not always available. In both cases (data with spatial and temporal gaps) we attempted to fill gaps in a manner as simple and transparent as possible.
+![](./fig/calculating_index.png)
 
-In regions where data were missing, or the data were considered too outdated to be informative, we adopted gap-filling procedures based on a hierarchical decision tree. These rules were only applied to data that were missing but known to exist in relevant Index regions: no gap-filling was done for regions where the data layer or goal were deemed not applicable. Cases where gap-filling was not appropriate occurred: a) for goals that entail local human activities (i.e. artisanal opportunities, natural products, tourism & recreation, and coastal livelihoods & economies), no gap-filling was applied in uninhabited regions (as opposed to goals such as biodiversity and sense of place that matter even in uninhabited locations, where gap-filling was applied in uninhabited regions) b) for goals capturing extractive uses (i.e. food provision, natural products), no gap-filling was applied in regions that did not report them, under the assumption that such activities occur only where reported, and c) for goals based on the presence of certain habitats (i.e., carbon storage, coastal protection, and biodiversity), no gap-filling was applied in regions where the relevant habitats were not present in the global maps of habitat cover available. A particular case of gap-filling decisions for habitat data is for the “exposure” component of the natural products goal. There were regions that reported the harvest of a product, but, according to the habitat maps, the habitat(s) where such a product would be harvested were missing in that region. In these cases of mismatches, the habitat map was assumed to have gaps (i.e., the harvest data in that region was assumed to be “real”), and to gap-fill the habitat data, a georegional average (see below) of exposure values was used. If, however, a product was reported for a region that includes some offshore territories that in 2013 are reported as separate regions, it was assumed the product is harvested only in the regions with documented extent of the relevant habitats (see section below on “special gap-filling rules” for new reporting regions).
+For more general information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
 
-We used three different methods to gap-fill missing data within reporting regions: temporal, by using data from previous years; spatial, by using averages from nearby regions, and for a few exceptional cases, fixed scores or alternate datasets used as proxies. If a region was present in time-series data with years of data missing, temporal gap-filling was always attempted first, with spatial gap-filling used only when data were too outdated or for regions that were completely absent. To decide if a region’s values were outdated, we established a year prior to which the data could not be used. This “threshold year” was in most cases set to be 10 years prior to the most recent sampled year in the dataset. A few exceptions were made in the case of fertilizer trends, pesticide trends, natural products monetary value, livelihoods and economies (see data-layer sections for more details).
+**Updating the pressure and resilience matrix for a new regional assessment will require the user to:**
 
-**Temporal gap filling:**
+ + Understand the pressures and resilience measures included in completed global assessment and determine whether they are relevant locally.
+ + Identify and categorize new local pressures not captured in the pressures matrix.
+ + Identify and categorize new local resilience measures (laws, regulations) not captured in the resilience matrix.
+ + Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
 
-Gaps in time-series data for each reporting region were filled using one of the following three approaches, each applied when appropriate rather than hierarchically:
+**Before updating the pressure and resilience matrices however, please also consider the following:**
 
-1. Previous year: the value from the previous year is used to replace the current year’s value. This approach assumes no change in the past 2 years and was implemented in cases where the current year could have been missing due to a delay in reporting at the time the Index was calculated. This approach was only implemented for the natural products goal (i.e. for harvested tonnage of each product), and for the mariculture subgoal (i.e. for harvested tonnage of each species). 
+The Ocean Health Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason behind the ecological categories was largely due to data availability at the global level and was designed to minimize sampling bias. For example, we found that there was more pollution data available than habitat destruction data, but just because people have monitored pollution more does not mean it is a larger pressure than habitat destruction. Ecologial and social pressures are assessed separately and then combined with equal weighting, which could be changed if there is local information on how to do so.
 
-2. Fitted values: the available data were used to fit a linear model to the time series and predict missing values. Data within a 10-year window centered on the gap year (i.e. ± 5 years) were used as input in the fitted model. When the missing year was less than 5 years from the most recent year in the data set, the window was shifted to still include 10 years of data even though it was no longer centered upon the missing year. Temporal gap-filling of this kind was done when at least two years of data were available. 
+Ecological and social resilience are similarly assessed separately and then combined with equal weighting, which could also be changed based on expert opinions. Any new resilience measure must be associated with a pressure layer. This is because resilience in the Ocean Health Index framework acts to reduce pressures in each region. Therefore, resilience measures must not only be directly or indirectly relevant to ocean health, but must be in response to a pressure layer affecting a goal.
 
-3. Fitted values for data older than 10 years: in the cases of livelihoods & economies, the goals based on habitats, i.e. coastal protection, carbon storage and biodiversity, and the monetary value data for natural products, due to the scarcity of data available, the 10 year rule was relaxed so as to include older data. For more details see Halpern et al. (2012), and see the sections 4.3 and 5.53 on natural products value data.
+Note that goals often interact with each other through pressures. The pressure created by one goal may affect a second goal without being affected itself. For example, raising fish in the mariculture goal can cause genetic escapes, which is a pressure (the *sp_genetic* layer). This pressure affects only the wild-caught fisheries and species sub-goals, but does not affect mariculture itself. 
 
-**Spatial gap filling:**
 
-For some reporting regions (e.g., small regions that are remote territorial holdings of countries) and/or certain data layers, no data exist, or they have no data after 2002, and thus temporal gap-filling is not an option. Thus, we used data to gap-fill spatially with the exception of livelihoods & economies, and the goals based on habitats, i.e. coastal protection, carbon storage and biodiversity, where older data were used to gap-fill temporally, following the same rules as in Halpern et al. (2012). For spatial gap-filling, we used one of the following three methods, each applied when appropriate rather than hierarchically:
+### Explore local pressures
 
-1. Georegional: in general, we assumed nearby regions (with data) could serve as reasonable proxies for a region missing data, and so we averaged values from geographically nearby regions to fill the gap. We used two levels of spatial aggregation to determine which regions defined ‘nearby’, derived from United Nations definitions of geopolitical regions (Table S7). The first level aggregates geographically closer regions (preferred), while the second defines much larger regions, in some cases coinciding with entire continents (used only when no countries within the ‘first level’ aggregation had data).
+Begin by exploring the pressures included in the global pressures matrix (`pressures_matrix.csv`). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures.
 
-2. Sovereign country + georegional: often data were missing for small remote islands. Several of these are under the governance of distant countries that would not fall within the same georegion. For institutional and socioeconomic data, we assumed that offshore domains would have more in common with their administrative country than with geographically closer regions. In these cases, the values from the administrative country were used to gap-fill when present, otherwise the georegional averages were used as described above.
+![](./fig/pressure_categories.png)
 
-3. Habitat regions: for goals using habitat data (i.e., natural products, carbon storage, coastal prediction, and biodiversity), when the habitat extent data indicated that a given habitat was present, but data on its condition was missing, geo-ecological regional averages were used specific to each habitat type (see Halpern et al. 2012, Selig et al. 2013 for descriptions of these regions). Because no habitat data could be updated for this current assessment, we did not need to repeat this method, but its implications for results remain.
+Pressures (columns in `pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type).
 
-**Special gap-filling rules:**
+The first step in updating the pressures matrix for your regional assessment is to determine if there any pressures that should be excluded from your study? For example, if there is no mariculture in your study area, perhaps there are also no genetic escapes (*sp_genetic* layer).
 
-In a few cases, we adopted a method unique and appropriate to the specific situation. 
+Next, brainstorm local pressures that are not captured in `pressures_matrix.csv`. Which pressures stand out in your study area? Pressures included in the `pressures_matrix.csv` are ultimately determined by available data, and thus there were pressures that were important but could not be included in the global assessment because of data availability (including altered sediment regimes, noise and light pollution, toxic chemicals from point sources, and nutrient pollution from atmospheric deposition and land-based sources other than fertilizer application to agricultural land). There are likely pressures important to your study area that were not captured in the global pressures matrix.  
 
-1. Southern Islands: For a group of small, remote islands found in the Southern oceans (see Table S6), data are often missing. Due to their remote location, a spatial gap-filling approach would result in values from very distant regions, that may have no similarities with these islands, being used to gap-fill, thus leading to biased scores. For the tourism & recreation and coastal livelihoods & economies goals, we assume that these scarcely inhabited areas do not develop either aspect and these goals therefore drop out. For the artisanal fishing opportunities goal, on the other hand, we assigned a perfect score because we assume that there is need for it and that it is fully satisfied, since legislative or economic constraints on people’s access to artisanal fishing are unlikely in these regions. Note that this only applies to the southern islands that are inhabited (Table S6); uninhabited Southern Islands get no score as do all other uninhabited regions.
+**Table of pressures layers and descriptions**
 
-2. Using other data layers as a proxy: for the evaluation of trends in pesticides, fertilizers and trash pollution, it was assumed that the relative rate of change would mimic that of population. Hence, this was used when data to calculate these trends were missing. On the other hand, the fertilizer and pesticide consumption used as input values to calculate pressures were gap-filled by using a linear relationship between these two layers. 
+|layer            |name                                                                                              |
+|:----------------|:-------------------------------------------------------------------------------------------------|
+|cc_acid          |Ocean acidification                                                                               |
+|cc_slr           |Sea level rise                                                                                    |
+|cc_sst           |Sea surface temperature (SST) anomalies                                                           |
+|cc_uv            |UV radiation                                                                                      |
+|fp_art_hb        |High bycatch caused by artisanal fishing                                                          |
+|fp_art_lb        |Low bycatch caused by artisanal fishing                                                           |
+|fp_com_hb        |High bycatch caused by commercial fishing                                                         |
+|fp_com_lb        |Low bycatch caused by commercial fishing                                                          |
+|fp_targetharvest |Targeted harvest of cetaceans and sea turtles                                                     |
+|hd_intertidal    |Coastal population density as a proxy for intertidal habitat destruction                          |
+|hd_subtidal_hb   |High bycatch artisanal fishing practices as a proxy for subtidal hard bottom habitat destruction  |
+|hd_subtidal_sb   |High bycatch commercial fishing practices as a proxy for subtidal soft bottom habitat destruction |
+|po_chemicals_3nm |Land-based chemical pollution                                                                     |
+|po_nutrients_3nm |Coastal nutrient pollution                                                                        |
+|sp_alien         |Alien species                                                                                     |
+|sp_genetic       |Introduced species as a proxy for genetic escapes                                                 |
+|ss_wgi           |Weakness of governance indicated with the WGI                                                     |
+|po_chemicals     |Ocean-based chemical pollution                                                                    |
+|po_nutrients     |Ocean nutrient pollution                                                                          |
+|po_pathogens     |Access to improved sanitation as a proxy for pathogen pollution                                   |
+|po_trash         |Trash pollution                                                                                   |
 
-3. New reporting regions: Some gap-filling was necessary even when the data sources used were identical to those in the 2012 calculation (i.e., no updated data were available), due to the presence of new, better resolved, reporting regions added for this 2013 calculation (see section 3). Most of the new reporting regions were offshore territorial holdings that in 2012 had been aggregated with their administrative country. For spatially explicit data sources this was not an issue, as we simply re-calculated the values using the new regional delimitations (i.e., all calculations based on habitat coverage, including the soft bottom layer, the exposure layers for the natural products status, the relative weights assigned to the pressure and resilience matrices pertinent to habitat-based goals, most of the pressure layers). However, tabular data were not always reported at the scale of the smaller reporting regions added in 2013 (e.g., trash, targeted harvest, artisanal fishing high & low bycatch, habitat destruction of subtidal hard-bottom, etc.). In these cases, values from 2012 aggregated reporting regions were disaggregated for corresponding 2013 reporting regions using one of three approaches: 
 
-  - a. identical value assigned, for example with some regulatory measures used in resilience measures (the World Governance Indicators (WGI), the Convention on Biological Diversity (CBD), the Global Competitiveness Index (GCI), the Mariculture Sustainability Index (MSI), the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), alien species regulations, and sector evenness); for the status and trend of habitat-based goals (habitat-specific “health” condition and its trend); for artisanal opportunities (access based on regulations reported by Mora et al. 2009); for pressures (artisanal fishing with high bycatch, and targeted harvest)
+**Some background** on the reasoning behind nutrient and chemical pollution in the global `pressures_matrix.csv`: Nutrient and chemical pollution were calculated from the global cumulative impact maps (spatial data). These data were clipped to each global region's EEZ: 200 km from the coast.  
 
-  - b. weighted by the relative proportions of coastal population (namely: revenue, number of jobs, adjusted workforce size, pressure from artisanal fishing with low bycatch, and from intertidal habitat destruction) 
+* For some goals, the data clipped to the EEZ affects goals that occur far from shore, so `po_chemicals` applies to goals relevant offshore: FIS, MAR, ECO, and SPP. 
+* However, some goals are really only relevant nearshore, so we clipped the spatial data again, to 3nm from shore and used this as a separate input. So `po_chemicals_3nm` applies to goals nearshore: AO, CS, CP, TR, ICO, LSP, HAB. 
 
-  - c. weighted by the relative proportions of corresponding EEZ area (e.g. alien species pressure).
+These distinctions don't always apply for smaller-scale assessments. For example, in the US West Coast study (Halpern et al. 2014), only a single `po_chemicals` layer was used: we did not distinguish between offshore and 3nm.
 
-4. Alternate data sources: for total population, data were not reported in 59 of the 2013 reporting regions. For these cases we manually searched Wikipedia for population estimates to fill in the missing values.  
 
-**Gap filling calculated scores:**
+### Determine how the pressure affects goals
 
-In two cases, gap-filling was applied to calculated values for the pertinent dimension because individually gap-filled layers would produce inaccurate results (details provided in following examples). These exceptions were: 
+Next, you will need to:
 
-1. the status for tourism & recreation, where relative coastal population abundance and number of employees would not be comparable if they were gap-filled using different approaches (e.g., the regional average for the population layer may not be commensurate to the tourism employment value); and 
+ + Map which goals are affected by a given pressure layer.
+ + Determine the appropriate rank weighting (how important the pressure is for the delivery of the goal/component).
+ + Decide in which pressure category the new pressure belongs.
 
-2. the calculation of sector evenness in cases where some of data for any of the sectors were gap-filled. The gap-filled values, even if they are derived from countries with much bigger or smaller populations, so that they are not commensurate in absolute terms to the gap-filled country’s workforce, may be used when capturing no-net loss of jobs, as they can still provide a proxy for the rate of change in jobs, but would create potentially not comparable absolute numbers of employees per sector.
+These decisions should depend on expert opinions and previous scientific studies, even if they do not occur in your study area.
+
+The original pressure matrix weights for instance were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high, 2=medium, and 1=low pressure; stressors that have no impact drop out rather than being assigned a rank of zero, which would affect the average score). Pressures are ranked rather than being represented as a binary (yes/no) measure because the range of consequence of different pressures on each goal can be quite large, and to classify all those pressures as a simple 'yes' would unduly give too much influence to the weakest stressors. For example, food provision is most heavily impacted by unsustainable, high-bycatch fishing, but pollution does have  some impact on fish stocks. Without a weighting system, these stressors would be treated equally in their impact on the food provision goal. 
+
+Most likely, the new pressure will fit into one of the existing categories. However, depending on the type of pressures in your study area, it is possible that a new pressure category could be created.  
+
+      
+### Identify available pressures data
+
+Like the global study, what pressures you are able to include in your regional study will also depend on data availability. Remember that each column in `pressures_matrix.csv` is a data layer, which requires data for each region in your study area. Begin with a list of local pressures that are important, and then refine if data are not available. 
+  
+In addition to data for the local pressures you identify, it will likely be possible to find better, local data to replace the global template data layers from the pressures matrix. In this case, you will first find local data and then update the pressure data layer as you would with any other data layer. See the 'modifying and creating data layers' section below for how to do this. 
+      
+      
+### Explore local resilience 
+
+As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (`resilience_matrix.csv`). As illustrated below, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social  components.
+
+![](./fig/resilience_categories.png)
+
+Goal-specific regulations intend to address ecological pressures, and are measured as laws, regulations, and other institutional measures related to a specific goal. Governance is a function of institutional structures that address the intended objective, implementing such governance, and whether stated objectives have been effectively met. Social integrity is intended to describe those processes internal to a community that affect its resilience. It is a function of a wide range of aspects of social structure within a region, and may not be strictly marine related, but can judge how well-governed areas are and therefore how well a region may be able to respond to or prevent environmental challenges.  
+
+The first step in updating the resilience matrix for your regional assessment is to determine if there any resilience measures that should be excluded from your study? 
+
+Next, brainstorm local resilience measures that are not captured in `resilience_matrix.csv`. What are important regulatory, ecological and social resilience measures in your study area? Resilience measures included in `resilience_matrix.csv` are also determined by available data, and thus it is possible to improve upon the resilience measures when doing an assessment at a spatial scale smaller than the global analysis.
+
+**Table of resilience layers and descriptions**
+
+|layer                 |name                                                            |
+|:---------------------|:---------------------------------------------------------------|
+|alien_species         |Alien species                                                   |
+|cites                 |Resilience from commitment to CITES                             |
+|fishing_v1            |CBD survey: coastal fishing v1                                  |
+|fishing_v1_eez        |CBD survey: ocean fishing v1                                    |
+|fishing_v2_eez        |CBD survey: ocean fishing v2                                    |
+|fishing_v3            |CBD survey: coastal fishing v3                                  |
+|fishing_v3_eez        |CBD survey: ocean fishing v3                                    |
+|habitat               |CBD survey: habitat                                             |
+|habitat_combo         |CBD survey: coastal habitat                                     |
+|habitat_combo_eez     |CBD survey: ocean habitat                                       |
+|li_gci                |GCI: competitiveness in achieving sustained economic prosperity |
+|li_sector_evenness    |Sector evenness as a measure of economic diversity              |
+|mariculture           |CBD survey: mariculture                                         |
+|msi_gov               |MSI sustainability and regulations                             |
+|species_diversity     |Ocean ecological integrity                                      |
+|species_diversity_3nm |Coastal ecological integrity                                    |
+|tourism               |CBD survey: tourism                                             |
+|water                 |CBD survey: water                                               |
+|wgi_all               |Strength of governance indicated with the WGI                   |
+
+\* *CBD = Centre for Biological Diversity; GCI = Global Competitiveness Index; MSI = Mariculture Sustainability Index; WGI = World Governance Indicators*. 
+
+Ecological integrity in the global assessment was measured as the relative condition of assessed species in a given location, and therefore is only relevant to a subset of goals (wild-caught fisheries, artisanal opportunity, natural products, iconic species, and species). Local measures of this component would potentially allow for more goals to be affected. 
+
+### Identify regulatory resilience measures for any new ecological pressures
+
+As you explore any new local resilience measures to be included, remember that any new pressure in the ecological resilience category with a rank of 2 or 3 will need a corresponding resilience measure. 
+
+
+### Determine how the resilience measure affects goals
+
+Next, you will need:
+
+ + Map which goals are affected by a given resilience layer. 
+ + Determine the appropriate rank weighting, (how important the resilience is in counteracting a pressure). 
+ + Decide in which resilience category the new pressure belongs.
+
+These decisions should depend on local expert knowledge and previous scientific studies, even if they do not occur in your study area. 
+
+
+### Identify available resilience data
+
+Resilience layers are intended to describe the measures that set rules and regulations to address ecological pressures, and are measured as laws and other institutional measures related to a specific goal. Data to address these resilience  components should fall into one of three categories: 
+
+1. Existence of rules and regulations: Are there institutional structures in place to appropriately address the ecological pressure? 
+2. Implementation and Enforcement: Have these structures been appropriately implemented and are there enforcement mechanisms in place? 
+3. Effectiveness and Compliance: How effective has the structure been at mitigating these pressures and is their effective compliance with these structures?      
+
+Social measures may not be strictly marine related, but can judge how well-governed areas are and therefore how well a region may be able to respond to or prevent environmental challenges.  
+
+
 
 # Installing the Toolbox for a Regional Assessment 
 
-[[develop 
+## Getting started
+The Ocean Health Index (OHI) Toolbox is software written in R that can be used to conduct regional assessments using the OHI framework. Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. The files and scripts for any given assessment are packaged together in a folder called a **repository** ('repos'), and stored online through GitHub, an open-source development platform that enables easy collaboration with  versioning capabilities (See: http://en.wikipedia.org/wiki/GitHub).
+
+It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case.
+
+**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
+
+**1. Set up:**
+
+ * Install R and RStudio
+ * Clone regional assessment repository on Desktop
+
+Detailed instructions for step **1** are provided below for users who want to either:
+
+ * work with GitHub (See: Accessing repository with GitHub section), or 
+ * work without GitHub (See: Accessing repository without GitHub section). 
+
+**2. Become familiar with the OHI Toolbox File System**
 
 
-## Getting Started
-
-Ocean Health Index assessments have a specific organization of data files, registry files, and R scripts that work together to do calculations and present the final scores graphically. These files and scripts are packaged together in a folder called a **repository**. Each Ocean Health Index assessment has its own repository. Repositories are stored online through GitHub, which enables easy collaboration with versioning capabilities. [Learn more about GitHub repositories and OHI]((https://github.com/OHI-Science/ohimanual/blob/master/tutorials/install_tbx_regional_assessment.md#github-repositories)).
-
-It is possible to conduct a regional assessment by downloading a template repository from GitHub. We recommend having a GitHub user account and syncing with the online repository: this faciliates collaboration within your team but also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although we cannot offer much support in this case. 
-
-**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy). 
-
-1. Begin a [regional assessment](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/regional_assessments_intro.md#ocean-health-index-regional-assessments)
-2. Become familiar with the Toolbox [file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system)
-3. [Modify the Toolbox](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/calculate_regional_assessment_score.md#calculate-regional-assessment-scores) to calculate regional scores.
-
-
-## OHI and GitHub 
-The Ocean Health Index (OHI) Toolbox is written in [R](http://cran.r-project.org/) and uses [GitHub](http://github.com), an [open-source development platform](http://en.wikipedia.org/wiki/GitHub), to develop and share software and data. GitHub has powerful versioning capabilities, which allows changes to be archived and tracked by each user. This is incredibly useful to not only document what work has been done, but how it differs from work done in the past, and who is responsible for the changes: it provides a record of all changes made. GitHub enables easy collaboration with others, including the OHI team. 
-  
-OHI has several **repositories** ('repos') where data and code are stored. From the [GitHub glossary](https://help.github.com/articles/github-glossary#repository): 
-
-> A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private.
-
-
-### OHI regional assessments and GitHub
-[OHI-Science](https://github.com/OHI-Science) is the 'owner' of the OHI repositories stored on GitHub, and individual users contribute to these repositories when they have permission. A user works locally on their own computer, but syncs their work back to the repo on the server. Because there can be multiple users working on the same repo, there are specific steps involved, and GitHub has specific words for each of these steps, including **cloning** a repo from the server to a local repository, **committing** any changes made with a description, **pulling** any updates from the server's repo, and finally **pushing** committed changes back to the server. 
-
-#### GitHub flow with _Fork & Pull Model_
-
-|     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
-| --- |------------------------  | -------------------------- | -------------- |
-| -> |                          | -> [fork](help.github.com/articles/fork-a-repo)            | -> [clone](help.github.com/articles/fetching-a-remote)    |
-| <- |  [merge pull request](help.github.com/articles/merging-a-pull-request) {admin} <-                           | <- [pull request](Fork & Pull Model) | <- [push](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio), <-> [commit](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) |
-
-where:
-* `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
-* `[user]` is your GitHub username
-
-see also:
-* [GitHub flow in the browser](https://help.github.com/articles/github-flow-in-the-browser)
-
-This example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
-
-> > > ![](./fig/clone_push_pull.png)
+Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: 'Using the Toolbox for a Regional assessment' section below).
 
 ## Accessing repositories with GitHub
 
-We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. This will enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. To get started, follow the steps below. The OHI team will create a repository for your regional assessment.  
+### Overview
 
-It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions [here](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo_without_github.md#accessing-repositories-without-github). We can always get your filesystem onto GitHub later. 
-  
+We recommend that groups interested in conducting OHI assessments do so using GitHub, which is an online interface for version-control software called *git*. GitHub has powerful versioning capabilities, which allows changes to be archived and tracked by each user. This is incredibly useful to not only to document what work has been done, but how it differs from work done in the past, and who is responsible for the changes: it provides a record of all changes made. Conducting an OHI regional assessment using GitHub will therefore enable collaboration and transparency, and will provide access to the latest developments in the Toolbox software. 
 
-> ![software required for regional assessments with version control](./fig/overview_requirements.png)
+It is also possible to conduct a regional assessment without GitHub. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. However, if this is preferable, see the instructions in the 'Accessing repositories without GitHub' section below. We can always get your filesystem onto GitHub later. 
+
+To get started on an OHI assessments using GitHub, follow the steps below:
+
+Software required for regional assessments with version control:
+
+> ![](./fig/overview_requirements_1.png)
 
 ### Install R and RStudio
-Make sure you have the most current version of [R and RStudio](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/software_for_OHI/software_for_OHI.md). (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on [CRAN](http://cran.r-project.org/)). 
+
+Make sure you have the most current version of R and RStudio. (Hint: type `sessionInfo()` into the R console to see which version of R you have installed, and update it if this is not the most recent version available on CRAN at http://cran.r-project.org/). 
 
 
 ### Create a GitHub account
-GitHub is an online interface for *git*, and to use it you must [create a GitHub account](http://github.com). You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
+
+GitHub is an online interface for *git*, and to use it you must create a GitHub account at http://github.com. You will use this username and password when you install *git* and access your GitHub repository (next two steps below).
 
 
 ### Install *git* software
-*git* is version-control software that you will need to install on your computer. 
 
-[Download](http://git-scm.com/downloads) *git* and follow the install instructions. There are specific settings to select for [**Windows**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_windows.md#git-on-windows) and [**Mac**](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/git_mac.md). 
+*git* is version-control software that you will need to install on your computer. Note that there are specific settings to select for **Windows** and **Mac**. 
+
+
+**For Mac:**
+
+  > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
+
+  > Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in *RStudio* and in *Terminal*:
+
+  > - *RStudio*
+
+  >   Within RStudio, update your preferences for 'Git executable':
   
+  > RStudio > Preferences... > Git/SVN > Git executable: `/usr/local/git/bin/git`
+  
+  >  ![](./fig/rstudio_prefs_git.png)
+
+  > - *Terminal*
+  
+  >   From Terminal, add a line to your 'bash profile' (launch Terminal from Applications > Utilities > Terminal).
+  
+  >   First type:  `pico ~/.bash_profile`
+  
+  >   Add this line: 
+
+  >   ```
+  >   export PATH=/usr/local/git/bin:$PATH
+  >   ```
+  
+  >   Type `control-X`, then `y` and then `return` keys to exit pico; type `exit` before quitting Terminal.  
+  
+  >   ![](./fig/terminal_pico.png)
+  
+
+**For Windows:**
+
+  > Download *git* at http://git-scm.com/downloads and follow the install instructions. 
+
+  > When running the Windows installer, use all default options except "Adjusting your PATH environment": instea, select "_**Run Git from the Windows Command Prompt**_". This will allow compatibility with RStudio.  
+  
+  > ![](./fig/git_install_win_option.png)
   
 ### Set up your Git Identity
+
 After downloading and installing, you will then need to set up your Git Identity, which identifies you with any changes made. You will use the command line: 
 
 * **Mac**: launch the Terminal application (Applications > Utilities > Terminal)
@@ -665,47 +818,87 @@ exit
 ```
 
 
-### Clone your ohi-[assessment] repo to your computer
-The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
+### Clone your  repo to your computer
 
-The repository will be backed up and stored on github.com and you will also have a local version on your computer.   
+OHI-Science is the 'owner' of the OHI repositories stored on GitHub at https://github.com/OHI-Science, and individual users contribute to these repositories when they have permission. The OHI team will create a repository for your assessment once you provide your GitHub username: email your username to bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu.
 
-\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/ohi-[assessment]` will therefore be:
+The repository will be backed up and stored on github.com and you will also have a local version on your computer.
 
-+ on a Mac: `/Users/[User]/github/ohi-[assessment]`
-+ on Windows: `C:\Users\[User]\Documents\github\ohi-[assessment]` 
+\*\* **Important:** Please create a folder called `github` in your root directory and save the repository there. This will make collaborating possible, particularly between Macs and Windows machines. The directory for the assessment `~/github/[assessment]` will therefore be:
 
-Downloading a repository from GitHub is called **cloning** and there are multiple ways to do it. Cloning allows you to make changes on your local computer and sync them to the online repository, described elsewhere ([GitHub-OHI repositories](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/install_tbx_regional_assessment.md#ohi-regional-assessments-and-github)). 
++ on a Mac: `/Users/[User]/github/[assessment]`
++ on Windows: `C:\Users\[User]\Documents\github\[assessment]` 
+
+Downloading a repository from GitHub is called **cloning** and there are multiple ways to do it. Cloning allows you to make changes on your local computer and sync them to the online repository. 
 
 
-#### Cloning options
-There are several options to clone the ohi-[assessment] repository to your local machine:
+**Cloning options:**
 
-1) The [GitHub App for Mac](https://mac.github.com/) or [Windows](https://windows.github.com/). After installing the GitHub App, log in with your username and passord. Then follow instructions for cloning (see the *Getting started guide* on a [Mac](https://mac.github.com/help.html) and [Windows](https://windows.github.com/help.html))  
+There are several options to clone the repository to your local machine:
 
-2) [The command line (Windows) or Terminal (Mac)](https://help.github.com/articles/fork-a-repo#keep-your-fork-synced). For example, clone `ohi-israel` into the `~/github` folder:
-```
-cd ~/github
-git clone https://github.com/OHI-Science/ohi-israel.git
-cd ohi-israel
-```
-3) [RStudio](https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio). This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. 
+> 1. **GitHub App**
+
+> 2. **Command line** (Windows) or **Terminal** (Mac)
+
+> 3. **RStudio**
+
+**1. The GitHub App** 
+
+**(a)** For Mac (freely available at https://mac.github.com/):
+
+Once the the GitHub App is installed and opened, the following page will appear:
+
+> ![](./fig/GitHub_App_Cloning_1.png)
+
+Follow the instructions for cloning on a Mac (copied from: https://mac.github.com/help.html)
+
+> ![](./fig/GitHub_App_Cloning_2.png)
+
+
+**(b)** For Windows:
+
+Follow the instructions for cloning on Windows (copied from: https://windows.github.com/help.html)
+
+> ![](./fig/creating_local_clone_windows.png)
+
+
+**2. The Command line (Windows) or Terminal (Mac)**
+
+Below is an example for a repository called 'Spoon-Knife':
+
+> ![](./fig/creating_local_clone.png)
+
+(Instructions copied from: https://help.github.com/articles/fork-a-repo#keep-your-fork-synced)
+
+
+**3. RStudio**
+
+This is best after the initial clone, since RStudio occassionally has trouble with setting the username / password. Open RStudio, and follow the instructions below copied from: https://github.com/OHI-Science/ohiprep/wiki/Setup#rstudio.
+
+> ![](./fig/creating_local_clone_R.png)
 
 
 ### Working locally
-All of the files available from the online server repository `https://github.com/OHI-Science/ohi-[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/ohi-[assessment]`. 
+All of the files available from the online server repository `https://github.com/OHI-Science/[assessment]` are now cloned on your local computer, in the location you specified. We recommend cloning the repository to this file path: `~/github/[assessment]`. 
 
 > ![](./fig/filepath.png)
 
-You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment. 
-All changes within this folder will be tracked by GitHub when you commit and sync these changes, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
+You will then work locally on your own computer, changing the cloned files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment. Because there can be multiple users working on the same repo, there are specific steps involved, and GitHub has specific words for each of these steps, including **cloning** a repo from the server to a local repository, **committing** any changes made with a description, **pulling** any updates from the server's repo, and finally **pushing** committed changes back to the server.
+
+All changes within this folder will be tracked by GitHub when you commit and sync these changes back to the repo on the GitHub server, *even if you make these changes outside of R or RStudio*. This means that you can delete or paste files in the Mac Finder or Windows Explorer, edit `layers.csv` and `goals.csv` in Excel or a text editor, and modify `functions.r` in RStudio, and commit all these changes to GitHub to track the changes you make.
+
+This example illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
+
+> > > ![](./fig/clone_push_pull.png)
+
 
 ### Committing and pushing changes locally
 
-Committing and pushing changes can be done using RStudio or the Github App.
+Committing and pushing changes can be done using either RStudio or the GitHub App.
 
-### Using RStudio to commit and push changes to GitHub ohi-[assessment] repository
-Launch your `ohi-[assessment]` project in RStudio by double-clicking the `ohi-[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
+**Using RStudio to commit and push changes to GitHub repository**
+
+Launch your project in RStudio by double-clicking the `[assessment].Rproj` file. From RStudio, Commit locally, associating a message with each set of changes.
 
 > ![](./fig/RStudio_sk1.png)
 
@@ -717,12 +910,13 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
 3. Click 'Commit' to commit the changes and the commit message
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. 
-5. Push your committed changes to the online server at `github.com/OHI-Science/ohi-[assessment]`. Your changes are now visable online.
+5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visable online.
   
 > ![](./fig/commit_sk.png)
 
-### Using Github App to push commits to GitHub ohi-[assessment] repository
-The Github App can also be used to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
+**Using GitHub App to push commits to GitHub repository**
+
+The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
 
 > ![](./fig/github_app_notes.png)
 
@@ -731,35 +925,61 @@ The Github App can also be used to commit and sync any changes made locally in t
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
 
 
-#### More Information
+### More Information
 
-* [presentation: Reproducible science with the Ocean Health Index](http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1)
-* [wiki: Using GitHub](https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
+The following is a diagram describing three ways in which files can be editted on GitHub. The third column refers to the 'clone', 'push' and 'commit' model described above:
+
+|     | `github.com/ohi-science/[repo]` (web)  | `github.com/[user]/[repo]` (web) |   `~/github/[repo]` (local) |
+| --- |------------------------  | -------------------------- | -------------- |
+| -> |                          | -> [fork](help.github.com/articles/fork-a-repo)            | -> [clone](help.github.com/articles/fetching-a-remote)    |
+| <- |  [merge pull request](help.github.com/articles/merging-a-pull-request) {admin} <-                           | <- [pull request](Fork & Pull Model) | <- [push](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio), <-> [commit](github.com/OHI-Science/ohiprep/wiki/Setup#rstudio) |
+
+where:
+* `[repo]` is one of OHI-Science repositories: ohicore, ohiprep, etc.
+* `[user]` is your GitHub username
+
+Note however that users can also change files directly in the repository on the GitHub website (column 1), by clicking on the button indicated by the red arrow:
+
+> ![](./fig/web_edit.png)
 
 
+Alternatively, the user can create a fork, or copy of a repository (column 2) to freely experiment with changes without affecting the original project:
+
+> ![](./fig/fork_repository.png)
+
+See intructions at: https://help.github.com/articles/fork-a-repo/#keep-your-fork-synced.
+
+For more information about GitHub, see:
+
+* 'GitHub flow in the browser' at: https://help.github.com/articles/github-flow-in-the-browser
+
+* A presentation about 'Reproducible science with the Ocean Health Index' can be found at: http://bbest.github.io/talks/2014-06_OHI-repro-sci/#1
+
+* A wiki about 'Using GitHub' can be found at: https://github.com/OHI-Science/ohiprep/wiki/Using-GitHub)
 
 ## Accessing repositories without GitHub
 
 ### OHI regional assessments without GitHub
-It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend [accessing a repository with GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/accessing_a_repo/accessing_a_repo_with_github.md) but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
+It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend accessing a repository with GitHub but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
 
 
 ### Install the latest version of R
-Download [**R**](http://cran.r-project.org/) and install this on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
+Download R at http://cran.r-project.org/ and install on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
 
-While not required, we highly recommend working with [**RStudio**](http://www.rstudio.com/products/RStudio/), which is an interface that makes working with R much easier. RStudio also has great compatibility with GitHub so you can collaborate with your team directly from your R code. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
+While not required, we highly recommend working with RStudio, which is an interface that makes working with R much easier. RStudio also has great compatibility with GitHub so you can collaborate with your team directly from your R code. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
+
 
 ### Download the repo to your computer
-Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/ohi-[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
+Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
 When your repository has been created, enter the url in to an internet browser (for example, `github.com/OHI-Science/ohi-israel`). Click `Download ZIP`.  
   
 > ![](./fig/download_zip_sk.png)  
   
 ### Working locally
 
-Unzip the downloaded folder `ohi-[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/ohi-[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
+Unzip the downloaded folder `[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
 
-You will work on your computer to change the files in `~/github/ohi-[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
+You will work on your computer to change the files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
 
 ## OHI Toolbox File System
 This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
@@ -770,6 +990,12 @@ Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario 
 In this example, **ohi-global** is the assessment folder and **eez2013** is the scenario.
 
 ![](./fig/ohiglobal_file_location.png)
+
+In this example, **ohi-china** is the assessment folder and **china2014** is the scenario.
+
+![](./fig/china2014_descr.png)
+
+See section below for a detailed overview of all the files located in the scenario folder.
 
 ### *layers.csv*
 `layers.csv` is the registry that manages all data to be used in the Toolbox.
@@ -810,13 +1036,19 @@ The `conf` folder includes includes R functions (*config.R* and *functions.R*) a
 `goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
 
 #### *pressures_matrix.csv*
-`pressures_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate pressure categories. The matrix has weights assigned that were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion.
+`pressures_matrix.csv` maps the different types of ocean pressures with the goals that they affect.  
+
+Each column in the pressures matrix identifies a data layer that is also registered in `layers.csv`: these presssure data layers are also required to have a value for every region in the study area. Pressure layers each have a score between 0-1, and has its pressure category indicated by a prefix (for example: *po_* for the pollution category). 
 
 #### *resilience_matrix.csv*
-`resilience_matrix.csv` describes the layers (‘layers’ column in layers.csv) needed to calculate resilience categories.
+`resilience_matrix.csv` maps the different types of resilience with the goals that they affect.
+
+Like the pressures matrix, the resilience matrix also has weights depending on the level of protection. However, these weights are in a separate file: `resilience_weights.csv`.
+
+Each column in the resilience matrix is a data layer that is also registered in `layers.csv`. Resilience layers, like the pressure layers, are also requried to have a value for every region in the study area. Resilience layers each have a score between 0-1. 
 
 #### *resilience_weights.csv*
-`resilience_weights.csv` describes the weight of various resilience layers, were determined by Halpern et al. 2012 (Nature) based on scientific literature and expert opinion.
+`resilience_weights.csv` describes the weight of various resilience layers, which in Halpern et al. 2012 (Nature) were determined based on scientific literature and expert opinion.
 
 ### spatial folder 
 The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the JSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
@@ -834,61 +1066,113 @@ After the initial Toolbox setup, further launches of the Toolbox Application can
 
 # Using the Toolbox for a Regional Assessment
 
-\*\* **Note: this page is under development**
+This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
 
-This page explains how to incorporate all of the [pre-Toolbox decisions](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/pretoolbox_decisions) your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the [Toolbox file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system).  
+The most common modifications you will make to your repository are:
 
-The most common modifications you will make to your repository are changes with:
+- **modifying pressures and resilience matrices**
+- **modifying and creating data layers for status, trend, pressures and resilience**
+- **modifying goal models**
+- **removing goals**
 
-- [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#modifying-and-creating-data-layers)
-- [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#modifying-goal-models)
-- [removing goals](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#removing-goals)
 
+These changes are to be made in the following files (see below for more detailed instructions):
+
+![](./fig/china2014_descr3.png)
+
+## Modifying pressures and resilience matrices
+
+Previous decisions made with your team will identify if any pressures layers should be added to the pressures and/or resilience matrices, and if so, which goals the pressure affects and what weight they should have. Then, you can transfer this information into the Toolbox's `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
+
+
+### Updating pressures_matrix.csv
+
+`pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name. The name should be short but descriptive. The name should also include a prefix to indicate the pressure category. There are five physical categories and one social category:
+
+* *po_* = pollution
+* *hd_* = habitat destruction
+* *fp_* = fishing pressure
+* *sp_* = species pollution
+* *cc_* = climate change
+* *ss_* = social pressure  
+
+For example, `po_trash` is a pollution layer with trash on beaches, and `sp_alien` is species pollution due to alien (invasive) species.
+
+It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data.  
+
+### Updating resilience_matrix.csv
+
+`resilience_matrix.csv` maps the different types of resilience (columns) with the goals that they affect (rows). New resilience layers may be added to `resilience_matrix.csv` based on finer-scale local information either in response to a new pressures layer, or as a new independent measure. Any added layer must be associated with a pressures layer that has a weight of 2 or 3 in the Ocean Health Index framework so that resilience measures can mitigate pressures in each region.
+
+Each goal must have a resilience measure associated with it. In the figure below, the Toolbox would give an error because there are no resilience layers indicated for the natural products (NP) goal. 
+  
+![](./fig/resil_mtx_bad.png)  
+  
 
 ## Modifying and creating data layers
 
-To modify existing or create new data layers, data must be appropriately [formatted](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx).  
-  
+### Overview
+
+Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All  layers provided in your regional assessment repo are the global values from the 2014 assessment. 
+
+![](./fig/layers_folder_location_global2013.png)  
+
+* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
+* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+
+Both types of dat layers are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
+
 **There are several steps to follow when working with data layers:**
 
-1. Create data layer with proper formatting
+1. Modify or create data layer with proper formatting
 2. Save the layer in the `layers` folder
 3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
 
 ### Create data layers with proper formatting
-[develop]
+
+The OHI Toolbox App expects each data layers to be in its own .csv file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. 
+
+The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting and gapfilling, please consult that section.
+
+The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+
+1. At least five years of data are available, 
+2. There are no data gaps
+3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
+
+**Example of data in the appropriate format:**
+
+![](./fig/formatting_data_example.png)
+
 
 ### Save data layers in the *layers* folder
 
-Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
-
-  ![](./fig/layers_folder_location_global2013.png)  
-  
-When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data.
+When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
 
 ![](./fig/layer_example_israel2014.png)
   
 ### Register data layers in *layers.csv*  
   
-When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
+When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
   ![](./fig/layers_israel2014.png)  
   
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
  + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
+ + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
  + **name:** Add a longer title for the data layer: this will be displayed in the Toolbox interface.
  + **description:** Add a longer description of the new data layer this will be displayed in the Toolbox interface.
  + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
- + **units:** Add a description about the 'units' chosen in the 'fld_value' column above.
- + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
+ + **units:** Add a description about the *units* chosen in the *fld_value* column above.
+ + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the `layers` folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
 ### Check pressures and resilience matrices
 
-[under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
+If the new or modified layer is a pressures layer, check again that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data. 
+
 
 ## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
@@ -930,25 +1214,6 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 ![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
 
-### Example: Removing 'Carbon Storage' goal
-1) Remove the CS goal model from `functions.r`:
-
-![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
-
-2) Remove the CS row from `goals.csv`:
-
-![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
-
-3) Remove all CS rows from `pressures_matrix.csv`:
-
-![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
-
-4) Remove all CS rows from `resilience_matrix.csv`:
-
-![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
-
-
-
 
 ## Example modifications
 
@@ -975,6 +1240,48 @@ In this example we will walk through the following steps:
 
 5. [develop]
 
+
+### Adding a new pressure layer
+In this example there are two new pressure layers to include: the effects of desalination operations. The new layers are called *po_desal_in*, and *po_desal_out*.  
+
+Adding these pressure layers to the Toolbox requires the following steps:
+
+1. register (add) pressure layer(s) in `pressures_matrix.csv`
+  + 1a set the pressure category  
+  + 1b identify the goals affected and set the weighting
+  + 1c modify the resilience matrix (if necessary) 
+2. create pressure layer(s); save in the `layers` folder
+3. register pressure layer(s) in `layers.csv`  
+
+
+#### Register the new layers in `pressure_matrix.csv`.  
+
+**1a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+
+**1b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+
+![](./fig/pressure_categories.png)
+
+
+
+![](./fig/register_new_pressures.png)
+
+**1c.**
+
+#### Create the new layers 
+
+Suppose that there is information 
+
+- for each region
+- compliance reports
+- rescale from 0 to 1
+- save in `layers` folder
+
+#### Register the new layers in `layers.csv`
+
+![](./fig/register_pressure.png)
+
+
 ### Updating resilience matrix with local habitat information
 
 In this example we will borrow from the experience of `ohi-israel`, where they assessed habitats in the Habitats (HAB) sub-goal that were not included in global assessments `ohi-global`. Therefore, the resilience matrix may need some revision.  
@@ -995,7 +1302,7 @@ The habitats assessed for `ohi-israel` are:
 ***Default resilience layers:***   
 The full list of layers used to calculate resilience in `ohi-global` are:
 
-> `alien_species,  cites,  fishing_v1,	fishing_v1_eez,	fishing_v2_eez,	fishing_v3,	fishing_v3_eez,	habitat,	habitat_combo,	habitat_combo_eez,	li_gci,	li_sector_evenness,	mariculture,	msi_gov,	species_diversity,	species_diversity_3nm,	tourism,	water,	wgi_all`
+> `alien_species,  cites,  fishing_v1,  fishing_v1_eez,	fishing_v2_eez,	fishing_v3,	fishing_v3_eez,	habitat,	habitat_combo,	habitat_combo_eez,	li_gci,	li_sector_evenness,	mariculture,	msi_gov,	species_diversity,	species_diversity_3nm,	tourism,	water,	wgi_all`
 
 Some of these layers capture general aspects of governance that apply to the protection of any habitat. These are:  
 
@@ -1062,12 +1369,190 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 5) How to update `resilience_matrix.csv`?
 * write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
 
+### Removing a goal
+
+1) Remove the carbon storage (CS) goal model from `functions.r`:
+
+![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+
+2) Remove the CS row from `goals.csv`:
+
+![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+
+3) Remove all CS rows from `pressures_matrix.csv`:
+
+![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+
+4) Remove all CS rows from `resilience_matrix.csv`:
+
+![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+
+
+### Preparing the fisheries sub-goal 
+
+Here is some background information about how to prepare fisheries data layers for the Toolbox.
+
+**Data layers used by the Toolbox:**
+
+* `fis_b_bmsy`
+* `fis_meancatch`
+* `fis_proparea_saup2rgn`
+* `fp_wildcaught_weight`
+
+#### Description of data layers
+
+`fis_b_bmsy`
+
+* *for species*: B/Bmsy estimate (either from formal stock assessment, or from a data-poor method such as CMSY)    
+* *for genus/family/broader taxa*: the toolbox will use median B/Bmsy from species in that region + a penalty for not reporting at species level. In order for the code to assign the correct penalty, the taxa need to include a numerical code of 6 digits, where the first digit behaves like an ISSCAAP code (the standardized species codes used by FAO): 6 means species, 5 means genus, 4 to 1 are increasingly broad taxonomic groups    
+* *data source (for CMSY)*: catch time-series (at least 10 years of catch >0), species resilience (if available)  
+
+**Example data:**
+
+|fao_id |taxon_name     |year |b_bmsy   |
+|:------|:--------------|:----|:--------|
+|51     |Ablennes hians |1985 |1.112412 |
+|51     |Ablennes hians |1986 |1.222996 |
+|51     |Ablennes hians |1987 |1.371058 |
+
+
+NOTE: if a species that is caught in different sub-regions belongs to the same population, you don't want to split the catch among sub-regions, instead, you want to sum catch across all sub-regions, so you can calculate B/Bmsy for the whole population. For the global analysis we grouped all species catch by FAO major fishing area (www.fao.org/fishery/area/search/en), indicated in the column *fao_id*, assuming that all species caught within the same FAO area belonged to the same stock, while we assumed that the same species, if caught in a different fishing area, belonged to a separate stock.  
+Use *fao_id* as an identifier that separates different fisheries 'stocks' belonging to the same species.   
+If you don't have multiple stocks in your study area, set all *fao_id* = 1.  
+
+`fis_meancatch`:
+
+* average catch across all years, per species, per region  
+* *data source*: catch time-series (at least 10 years of catch >0), with a unique identifier for each population that you want to assess separately   
+ 
+**Example data:**
+
+|fao_saup_id |taxon_name_key             |year |mean_catch  |
+|:-----------|:--------------------------|:----|:-----------|
+|37_8        |Aristeus antennatus_690051 |2014 |14.24398116 |
+|37_8        |Atherinidae_400218         |2014 |27.30120156 |
+|37_8        |Balistes capriscus_607327  |2014 |3.247883895 |
+
+The *taxon_name_key* column indicates the name of the species (e.g. Aristeus antennatus) and its 'taxonkey'. The taxonkey is a 6 digit numeric code used by the Sea Around Us Project, modified from FAO codes. The important element of this code is the first digit, because it reflects the taxonomic level (6=species, 5=genus, 4=family, etc.) of the reported catch.The toolbox uses this first digit to assign a score to all catch that was not reported at species level, taking the median of the B/Bmsy of assessed species, and adding a penalty that is increasingly strong for coarser taxa.    
+
+`fis_proparea_saup2rgn`:  
+
+* a conversion file that, for each region for which catch is reported, tells us what proportion of that region falls within each of the final OHI reporting regions.   
+
+**Example data:**
+
+| saup_id| rgn_id| prop_area|
+|-------:|------:|---------:|
+|     166|      1|       1.0|
+|     162|      2|       1.0|
+|     574|      3|       0.7|
+|      37|      4|       0.8|
+
+**Specific instances:**
+
+ *only if catch is reported for different regions than the ones used for the OHI assessment:* this should be calculated using spatial analyses of overlap of the spatial units at which catch is reported with the spatial units at which the OHI assessment will be reported. The global data was reported by subregions (*saup_id*) and in some cases multiple subregions were part of the same, larger EEZ. Since for OHI we wanted results by EEZ (*rgn_id*), in those cases we needed to combine results from the subregions to get the final score, based on their size relative to the total EEZ size (*prop_area*).   
+ *If catch is reported for the same areas for which OHI is calculated:* then all the *prop_area* are = 1.   
+ *If catch is reported for the whole area of the assessment, but you want to calculate a separate OHI score for different sub-regions:* for each OHI reporting region (*rgn_id*) you'll repeat the same region in the *saup_id* column, and *prop_area* will be =1. This effectively means all the reporting regions will get assigned 100% of the catch and will have the same final stastus and trend score for the fisheries goal (but may have different pressures and resilience scores, if those layers are different in each sub-region).  
+
+`fp_wildcaught_weight`: 
+
+*only needed if there is mariculture*: for each region, this represents the relative proportion of catch coming from wild caught fisheries versus mariculture. The layer is used to weight how much the fisheries score influences the final food provision score, the higher the fisheries catch, the more the food provision score will reflect the fisheries score, and vice-versa if mariculture has a higher catch.       
+(NOTE that, before all mariculture harvest from all species gets summed, the mariculture harvest for each species is smoothed and then multiplied by the resilience score).     
+
+#### Running CMSY model
+
+**Sample data to run CMSY:**
+
+|id |stock_id                    |res    |ct          |yr   |
+|:--|:---------------------------|:------|:-----------|:----|
+|6  |Acanthistius brasilianus_41 |Medium |100         |1950 |
+|23 |Acanthurus dussumieri_61    |       |0.059250269 |1950 |
+|24 |Acanthurus dussumieri_71    |       |0.190749971 |1950 |
+|25 |Acanthurus lineatus_61      |Low    |12.74821966 |1950 |
+
+The current CMSY script produces an output that looks something like this (split into 2 tables): 
+
+|stock_id          |convergence |effective_sample_size |yr   |b_bmsy   |b_bmsyUpper |
+|:-----------------|:-----------|:---------------------|:----|:--------|:-----------|
+|Ablennes hians_51 |SC          |30974                 |1985 |1.112412 |1.8         |
+|Ablennes hians_51 |SC          |30974                 |1986 |1.222996 |1.768895    |
+
+|stock_id          |yr   |b_bmsyLower |b_bmsyiq25 |b_bmsyiq75 |b_bmsyGM |b_bmsyMed |
+|:-----------------|:----|:-----------|:----------|:----------|:--------|:---------|
+|Ablennes hians_51 |1985 |1           |1          |1          |1.093932 |1         |
+|Ablennes hians_51 |1986 |1.014688    |1.075699   |1.298437   |1.209005 |1.160329  |
+
+where *stock_id* is the unique identifier for each stock that was used in the input file, *convergence* indicates whether the model converged and how strongly ('SC' = strong convergence), *effective_sample_size* reports the number of iterations used, *yr* = year, b_bmsy = B/Bmsy for the corresponding year (based on the median of all the estimated values: reccomended),  b_bmsyUpper = B/Bmsy at the upper 95% bootstrapped confidence bound, b_bmsyLower = B/Bmsy at the lower 95% bootstrapped confidence bound, b_bmsyiq25 = B/Bmsy at the first quartile, b_bmsyiq75 = B/Bmsy at the third quartile, b_bmsyGM = B/Bmsy based on the geometric mean of estimates, b_bmsyMed = B/Bmsy based on the median of estimates.
+
+**How to:** 
+
+**1. Include resilience in the CMSY code:**
+
+In the CMSY R script, in the PARAMETERS section, replace the following:
+
+```
+start_r     <- c(0.01,10)  ## disable this line if you use resilience  
+with 
+
+  if(res == "Very low"){
+    start_r  <- c(0.015, 0.1)
+  } else { 
+    if(res == "Low"){
+      start_r  <- c(0.05,0.5)
+    } else { 
+      if(res == "High"){
+        start_r  <- c(0.6,1.5)   
+      } else {
+        start_r  <- c(0.1,1)
+      }
+    }
+  }
+```
+
+**2. Make assumptions about fisheries regulations:**
+
+If you assume that fisheries are depleted and there isn't very much fisheries regulation, and you are using the CMSY method to assess B/Bmsy, the original model may work well. If, however, the catch of a species declined because fisheries regulations have closed or limited the fishery, or if a fishery was abandoned for economic reasons (e.g., change in consumer prefereces, market price dynamics, etc.), the model may be too pessimistic and understimate B/Bmsy. In that case it may be best to use a version with a uniform prior on final biomass, instead of the constrained prior.  
+The original constrained prior on final biomass is set by this line within the code:  
+  
+```
+finalbio    <- if(ct[nyr]/max(ct) > 0.5) {c(0.3,0.7)} else {c(0.01,0.4)}    
+```  
+
+The model uses a uniform prior if that line is replaced with:
+
+```
+finalbio    <- c(0.01,0.7) 
+```
+
+**3. Use data at a different spatial resolution than the final assessment:**
+
+See notes above for `fis_proparea_saup2rgn`
+
+**4. Calculate B, or Bmsy:**
+
+The CMSY model calculates B/Bmsy as a ratio, it does not estimate the two variables separately.      
+
+**5. Use catch per unit of effort (CPUE):**
+
+The CMSY model requires total biomass removed by fisheries, and uses catch as a proxy for that. It cannot use CPUE. Other more sophisticated stock assessment models use CPUE and may be employed. We do not provide documentation for the use of these other models.     
+
+**6. Use other life-history characteristics, in addition to resilience:**
+
+The CMSY model does not use more detailed information. Other more sophisticated stock assessment models use other life-history traits such as fecundity, larval dispersal, r, K, Lmax, etc., and may be employed. We do not provide documentation for the use of these other models.    
+
+**7. Create a 'taxonkey' to assign to each species:**
+
+When replacing the SAUP_FAO data with your own data, assign a key of 600000 to all species. For all catch that is reported at genus or coarser taxonomic level, you will have to choose an appropriate taxonkey. You can create your own key, from 100000 to 500000, based on your own judgment of how many species may be reported under that same denomination, and how different they may be (all that matters for the toolbox code is whether the number starts with a 1,2,3,4,5 or 6 with 1 being the coarsest, such as 'miscellaneous marine animals', or 'crustaceans nei'). 
+
+#### Resources
+
+Martell, S & Froese, R (2013) "A simple method for estimating MSY from catch and resilience". *Fish and Fisheries*, DOI: 10.1111/j.1467-2979.2012.00485.x. [Downloadable here](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCkQFjAB&url=http%3A%2F%2Fwww.iotc.org%2Fsites%2Fdefault%2Ffiles%2Fdocuments%2F2013%2F06%2FIOTC-2013-WPNT03-INF01%2520-%2520Martell%2520%2526%2520Froese%25202012.pdf&ei=PXryU6TtGY3goATglYHoDA&usg=AFQjCNE-S0T1B7B_l7rUYaNNLxsUDguDaQ&bvm=bv.73231344,d.cGU)   
+     
+Rosenberg, A.A., Fogarty, M.J., Cooper, A.B., Dickey-Collas, M., Fulton, E.A., Gutiérrez, N.L., Hyde, K.J.W., Kleisner, K.M., Kristiansen, T., Longo, C., Minte-Vera, C., Minto, C., Mosqueira, I., Chato Osio, G., Ovando, D., Selig, E.R., Thorson, J.T. & Ye, Y. (2014) Developing new approaches to global stock status assessment and fishery production potential of the seas. *FAO Fisheries and Aquaculture Circular No. 1086*. Rome, FAO. 175 pp. [Downloadable here](http://www.fao.org/docrep/019/i3491e/i3491e.pdf)
 
 ## Notes about R
 
-The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See [github.com/hadley/dplyr#dplyr](https://github.com/hadley/dplyr#dplyr) for documentation. 
-
-
+The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See: https://github.com/hadley/dplyr#dplyr for documentation. 
 
 
 
@@ -1263,8 +1748,7 @@ A: Commercial high and low bycatch are categorical values that were set based on
 
 # Toolbox Troubleshooting
 
-The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips.  
-(\*\* note: this page is under development).
+The Toolbox prints messages during its processing to help guide error checking and debugging. Here are a few troubleshooting tips. This section will be updated frequently; please share any problems that you encounter.  
 
 
 ## Loading RWorkspace on Restart

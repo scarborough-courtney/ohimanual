@@ -21,11 +21,13 @@ in_md = c(
   'conduct_regional_assessment.md',
   'gathering_appropriate_data.md', 
   'formatting_data.md',
+  'update_pressures_resilience.md',
   'install_tbx_regional_assessment.md',
   'accessing_a_repo_with_github.md',
   'accessing_a_repo_without_github.md',
   'file_system.md',
   'use_tbx_regional_assessment.md',
+  'example_modifications_with_tbx.md',
   'frequently_asked_questions.md',
   'toolbox_troubleshooting.md')
 out_md = 'ohi-manual.md'
@@ -123,7 +125,7 @@ render(
 render(
   out_md, 
   pdf_document(
-    toc = T, toc_depth = 3, number_sections = T,
+    toc = T, toc_depth = 4, number_sections = T,
     fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
     fig_caption = T, highlight = "default", template = "default",
     keep_tex = F, latex_engine = "pdflatex", 

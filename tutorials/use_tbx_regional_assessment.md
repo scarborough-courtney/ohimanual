@@ -1,60 +1,84 @@
 # Using the Toolbox for a Regional Assessment
 
-\*\* **Note: this page is under development**
+This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
 
-This page explains how to incorporate all of the [pre-Toolbox decisions](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/pretoolbox_decisions) your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the [Toolbox file system](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/file_system.md#file-system).  
+The most common modifications you will make to your repository are:
 
-The most common modifications you will make to your repository are changes with:
+- **modifying pressures and resilience matrices**
+- **modifying and creating data layers for status, trend, pressures and resilience**
+- **modifying goal models**
+- **removing goals**
 
-- [updating or adding new data layers](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#modifying-and-creating-data-layers)
-- [modifying goal models](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#modifying-goal-models)
-- [removing goals](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/use_tbx_regional_assessment.md#removing-goals)
+
+These changes are to be made in the following files (see sections below for detailed instructions):
+
+![](./fig/china2014_descr3.png)
 
 
 ## Modifying and creating data layers
 
-To modify existing or create new data layers, data must be appropriately [formatted](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/formatting_data_for_toolbox.xlsx).  
-  
+### Overview
+
+Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All  layers provided in your regional assessment repo are the global values from the 2014 assessment. 
+
+![](./fig/layers_folder_location_global2013.png)  
+
+* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
+* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+
+Both types of dat layers are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
+
 **There are several steps to follow when working with data layers:**
 
-1. Create data layer with proper formatting
+1. Modify or create data layer with proper formatting
 2. Save the layer in the `layers` folder
 3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `ohi-[assessment]/[scenario]/conf` folder)
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
 
 ### Create data layers with proper formatting
-[develop]
+
+The OHI Toolbox App expects each data layers to be in its own .csv file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. 
+
+The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting and gapfilling, please consult that section.
+
+The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
+
+1. At least five years of data are available, 
+2. There are no data gaps
+3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
+
+**Example of data in the appropriate format:**
+
+![](./fig/formatting_data_example.png)
+
 
 ### Save data layers in the *layers* folder
 
-Data layers are *.csv* files and are located in the `ohi-[assessment]/[scenario]/layers` folder. The layers provided in your regional assessment repo are the global values from the 2013 assessment: these layers all have a suffix of `_global2013.csv`. These data are at coarse-resolution and should be exhanged for local, high-resolution data when possible.
-
-  ![](./fig/layers_folder_location_global2013.png)  
-  
-When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data.
+When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
 
 ![](./fig/layer_example_israel2014.png)
   
 ### Register data layers in *layers.csv*  
   
-When there are new filenames associated with each layer, they will need to be registered in `ohi-[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
+When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
   ![](./fig/layers_israel2014.png)  
   
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
  + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and .csv files like pressures_matrix.csv and resilience_matrix.csv.
+ + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
  + **name:** Add a longer title for the data layer: this will be displayed in the Toolbox interface.
  + **description:** Add a longer description of the new data layer this will be displayed in the Toolbox interface.
  + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
- + **units:** Add a description about the 'units' chosen in the 'fld_value' column above.
- + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the 'layers' folder.
+ + **units:** Add a description about the *units* chosen in the *fld_value* column above.
+ + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the `layers` folder.
  + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
 
 ### Check pressures and resilience matrices
 
-[under development](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/update_matrices.md#update-resilience_matrixcsv)
+If the new or modified layer is a pressures layer, check again that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data. 
+
 
 ## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
@@ -84,6 +108,30 @@ Changing goal weights will be done here by editing the value in the *weight* col
 - check the years
 - etc...
 
+### Example modification: 
+
+In this example we will walk through how to add a new layer to a goal model by following these steps:
+
+1. decide to add artisanal access component to the model because of locally available data
+2. prepare the data file; save layer ao_access_art
+3. register in `layers.csv`
+4. update goal model in `functions.r`
+5. update goal call in `goals.csv`
+
+Steps 1. and 2. are done outside of the Toolbox
+
+> 3. register in `layers.csv`
+
+![](./fig/new_layer.png)
+
+
+> 4. update goal model
+
+![](./fig/functions_explained.png)
+
+> 5. update goal call in goals.csv
+
+[develop]
 
 
 ## Removing goals
@@ -96,8 +144,9 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 ![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
 
-### Example: Removing 'Carbon Storage' goal
-1) Remove the CS goal model from `functions.r`:
+**Example: Removing carbon storage (CS) goal**
+
+1) Remove the carbon storage (CS) goal model from `functions.r`:
 
 ![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
 
@@ -112,127 +161,3 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 4) Remove all CS rows from `resilience_matrix.csv`:
 
 ![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
-
-
-
-
-## Example modifications
-
-### Adding a new layer to a goal model
-
-In this example we will walk through the following steps:
-
-1. decide to add artisanal access component to the model because of locally available data
-2. prepare the data file; save layer ao_access_art
-3. register in `layers.csv`
-4. update goal model in `functions.r`
-5. update goal call in `goals.csv`
-
-1) and 2) is done outside of the Toolbox
-
-3. register in `layers.csv`
-
-![](./fig/new_layer.png)
-
-
-4. update goal model
-
-![](./fig/functions_explained.png)
-
-5. [develop]
-
-### Updating resilience matrix with local habitat information
-
-In this example we will borrow from the experience of `ohi-israel`, where they assessed habitats in the Habitats (HAB) sub-goal that were not included in global assessments `ohi-global`. Therefore, the resilience matrix may need some revision.  
-
-The habitats assessed for `ohi-israel` are:
-
-> `rocky_reef, sand_dunes, soft_bottom`
-
-***Layers affected:***  
-
-* resilience_matrix.csv
-* resilience_weights.csv (only if adding new resilience layers)   
-
-***Scripts affected:***  
-
-* none (but may need to create a simple code to generate modified layers)   
-
-***Default resilience layers:***   
-The full list of layers used to calculate resilience in `ohi-global` are:
-
-> `alien_species,  cites,  fishing_v1,	fishing_v1_eez,	fishing_v2_eez,	fishing_v3,	fishing_v3_eez,	habitat,	habitat_combo,	habitat_combo_eez,	li_gci,	li_sector_evenness,	mariculture,	msi_gov,	species_diversity,	species_diversity_3nm,	tourism,	water,	wgi_all`
-
-Some of these layers capture general aspects of governance that apply to the protection of any habitat. These are:  
-
-> `alien_species, cites, msi_gov, water, wgi_all`
-
-Two layers only apply to the livelihoods and economies goal (LE), so they should be excluded from HAB resilience:
-
-> `li_gci,  li_sector_evenness`
-
-The remaining layers will apply to certain habitats, but not others. We focus on these to determine how to adapt the HAB resilience calculation for `ohi-israel`. They are:
-
-> `fishing_v1, fishing_v1_eez, fishing_v2_eez, fishing_v3, fishing_v3_eez, habitat, habitat_combo,	habitat_combo_eez, mariculture, species_diversity, species_diversity_3nm,	tourism`
-
-**To determine how to modify these resilience layers:**
-
-* If the new habitat occurs only along the coast, we should use `tourism` and `species_diversity_3nm`, otherwise, only use `species_diversity`. 
-    + `sand_dunes` should use `tourism` and `species_diversity_3nm`,
-    + `soft_bottom` should use `species_diversity`,
-    + is `rocky_reef` mainly coastal? if so it should use `tourism` and `species_diversity_3nm`.
-* If the habitats can be affected by mariculture plants (e.g. eutrophication and decreased water quality can occur if mariculture plants are close by and have poor wastewater treatment), then the `mariculture` resilience score should be added.
-    + are there any mariculture plants in Israel? If yes, on which habitats do they occur?
-* The remaining layers are the `fishing_v...` and `habitat..` layers, these are composite indicators that we call 'combo' layers, obtained from different combinations of the following datasets:
-
-> `Mora, Mora_s4, CBD_hab, MPA_coast, MPA_eez`,
-
-where: 
-
-* `Mora` is a fisheries governance effectiveness indicator by Mora *et al* (2009)
-* `Mora_s4` is another indicator from Figure S4 of the supplementary material of the same publication that focuses on regulations of artisanal and recreational fisheries
-* `CBD_hab` is a questionnaire compiled by countries that committed to Rio's Convention on Biodiversity (CBD) to establish their progress towards habitat biodiversity protection
-* `MPA_coast` is the proportion of coastal (3nm) waters that are in a marine protected area (MPA), with the maximum being 30% of coastal waters 
-* `MPA_eez` is the proportion of the whole EEZ that is in a marine protected area, with the maximum being 30% of the whole EEZ.  
-
-This table shows which data-sets are used by each combo layer: 
-
-Layer | Mora | Mora_s4 | CBD_hab | MPA_coast | MPA_eez
-------|------|---------|---------|-----------|--------
-fishing_v1 | Mora | | CBD_hab | MPA_coast | 
-fishing_v1_eez | Mora | | CBD_hab | | MPA_eez
-fishing_v2_eez | Mora | Mora_s4 | CBD_hab | | MPA_eez
-fishing_v3 | | Mora_s4 | CBD_hab |  MPA_coast | 
-fishing_v3_eez | | Mora_s4 | CBD_hab | | MPA_eez
-habitat | | | CBD_hab | | 
-habitat_combo | | | CBD_hab |  MPA_coast | 
-habitat_combo_eez | | | CBD_hab | | MPA_eez
-
-**Questions to consider**:
-
-1) For which habitats should you use both a fishery and a habitat combo, or just use a habitat combo?
-* fisheries regulations do not affect the conservation of sand-dunes, so this habitat should not use any of the fisheries combos. Also, this is a strictly coastal habitat, so choose the habitat layer that uses the `MPA_coast` instead of the `MPA_eez`, i.e. `habitat_combo` (and, as mentioned above, choose the coastal version of biodiversity, i.e. `species_diversity_3nm`).
-* The rocky reef and soft bottom, on the other hand, should definitely include fisheries regulations. So you'll need to choose a fisheries and a habitat combo for these two habitats.
-2) Which fisheries and habitat combos for `rocky_reef` and `soft_bottom`? The choice depends on two things:
-* whether they are coastal habitats (within 3nm of the coast) or EEZ-wide habitats     
-      + if coastal, use the fisheries and habitat combos with `MPA_coast` (`fishing_v1`, `fishing_v3`, `habitat_combo`), and the `species_diversity_3nm` layer   
-      + if EEZ-wide, use the fisheries and habitat combos with `MPA_eez` (`fishing_v1_eez`, `fishing_v2_eez`, `fishing_v3_eez`, `habitat_combo_eez`), and the `species_diversity` layer
-* whether the fisheries occurring on that habitat are mainly artisanal, mainly commercial, or both
-    + if only commercial fisheries, use a layer that only uses the `Mora` data `fishing_v1..`)
-    + if only artisanal/small-scale fisheries, use a layer that only uses the `Mora_s4` data (`fishing_v3..`)
-    + if both, use a layer that uses both `Mora` and `Mora_s4` data (`fishing_v2..`)
-3) Are the existing combo layers appropriate or do you need an ad-hoc version for any of the Israel habitats? 
-* if rocky reef is mainly coastal, and it is fished by both commercial and artisanal methods, then we need a new combo, specifically, we need a combo that uses `Mora`, `Mora_s4`, `CBD_hab`, and `MPA_coast` (this is the same as `fishing_v2_eez`, but we use the `MPA_coast` layer instead of the `MPA_eez`). All other combinations are already present.
-4) Are there local data to be used?
-* if there are local data on Marine Protected Areas (MPAs) and any areas with special regulations, this should be used to generate the `MPA_coast` and `MPA_eez` layers. \*\*NOTE: these are the same datasets used to calculate the status of Lasting Special Places (LSP).
-5) How to update `resilience_matrix.csv`?
-* write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
-
-
-## Notes about R
-
-The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See [github.com/hadley/dplyr#dplyr](https://github.com/hadley/dplyr#dplyr) for documentation. 
-
-
-
-
