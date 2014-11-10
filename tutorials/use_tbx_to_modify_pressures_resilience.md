@@ -19,6 +19,7 @@ For example, `po_trash` is a pollution layer with trash on beaches, and `sp_alie
 It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data.  
 
 **Example: Adding a new pressure layer**
+
 In this example there are two new pressure layers to include: the effects of desalination operations. The new layers are called *po_desal_in*, and *po_desal_out*.  
 
 Adding these pressure layers to the Toolbox requires the following steps:
