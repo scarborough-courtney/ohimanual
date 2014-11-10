@@ -1,46 +1,5 @@
 ## Example modifications
 
-### Adding a new pressure layer
-In this example there are two new pressure layers to include: the effects of desalination operations. The new layers are called *po_desal_in*, and *po_desal_out*.  
-
-Adding these pressure layers to the Toolbox requires the following steps:
-
-1. register (add) pressure layer(s) in `pressures_matrix.csv`
-  + 1a set the pressure category  
-  + 1b identify the goals affected and set the weighting
-  + 1c modify the resilience matrix (if necessary) 
-2. create pressure layer(s); save in the `layers` folder
-3. register pressure layer(s) in `layers.csv`  
-
-
-#### Register the new layers in `pressure_matrix.csv`.  
-
-**1a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
-
-**1b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
-
-![](./fig/pressure_categories.png)
-
-
-
-![](./fig/register_new_pressures.png)
-
-**1c.**
-
-#### Create the new layers 
-
-Suppose that there is information 
-
-- for each region
-- compliance reports
-- rescale from 0 to 1
-- save in `layers` folder
-
-#### Register the new layers in `layers.csv`
-
-![](./fig/register_pressure.png)
-
-
 ### Updating resilience matrix with local habitat information
 
 In this example we will borrow from the experience of `ohi-israel`, where they assessed habitats in the Habitats (HAB) sub-goal that were not included in global assessments `ohi-global`. Therefore, the resilience matrix may need some revision.  
