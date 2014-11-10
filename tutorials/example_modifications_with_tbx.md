@@ -1,29 +1,5 @@
 ## Example modifications
 
-### Adding a new layer to a goal model
-
-In this example we will walk through the following steps:
-
-1. decide to add artisanal access component to the model because of locally available data
-2. prepare the data file; save layer ao_access_art
-3. register in `layers.csv`
-4. update goal model in `functions.r`
-5. update goal call in `goals.csv`
-
-1) and 2) is done outside of the Toolbox
-
-3. register in `layers.csv`
-
-![](./fig/new_layer.png)
-
-
-4. update goal model
-
-![](./fig/functions_explained.png)
-
-5. [develop]
-
-
 ### Adding a new pressure layer
 In this example there are two new pressure layers to include: the effects of desalination operations. The new layers are called *po_desal_in*, and *po_desal_out*.  
 
@@ -151,24 +127,6 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 * if there are local data on Marine Protected Areas (MPAs) and any areas with special regulations, this should be used to generate the `MPA_coast` and `MPA_eez` layers. \*\*NOTE: these are the same datasets used to calculate the status of Lasting Special Places (LSP).
 5) How to update `resilience_matrix.csv`?
 * write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
-
-### Removing a goal
-
-1) Remove the carbon storage (CS) goal model from `functions.r`:
-
-![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
-
-2) Remove the CS row from `goals.csv`:
-
-![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
-
-3) Remove all CS rows from `pressures_matrix.csv`:
-
-![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
-
-4) Remove all CS rows from `resilience_matrix.csv`:
-
-![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
 
 
 ### Preparing the fisheries sub-goal 
