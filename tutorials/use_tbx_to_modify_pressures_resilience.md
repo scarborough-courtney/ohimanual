@@ -38,9 +38,6 @@ Adding these pressure layers to the Toolbox requires the following steps:
 
 **1b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
 
-![](./fig/pressure_categories.png)
-
-
 
 ![](./fig/register_new_pressures.png)
 
