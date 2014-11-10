@@ -136,6 +136,28 @@ Changing goal weights will be done here by editing the value in the *weight* col
 - check the years
 - etc...
 
+### Example modification: 
+
+In this example we will walk through how to add a new layer to a goal model by following these steps:
+
+1. decide to add artisanal access component to the model because of locally available data
+2. prepare the data file; save layer ao_access_art
+3. register in `layers.csv`
+4. update goal model in `functions.r`
+5. update goal call in `goals.csv`
+
+1) and 2) is done outside of the Toolbox
+
+3. register in `layers.csv`
+
+![](./fig/new_layer.png)
+
+
+4. update goal model
+
+![](./fig/functions_explained.png)
+
+5. [develop]
 
 
 ## Removing goals
