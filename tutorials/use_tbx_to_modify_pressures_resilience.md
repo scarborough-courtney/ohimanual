@@ -16,7 +16,7 @@ We will now go through the following steps using as an example there are two new
 
 **1. Create the new pressure layers**
 
-Create a data layer with a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
+Create the new data layers with a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
 
 * *po_* = pollution
 * *hd_* = habitat destruction
@@ -34,7 +34,9 @@ In the current example, the two new layers created to account for the input and 
 - rescale from 0 to 1
 - save in `layers` folder
 
-**2. Register the new layers in `layers.csv`**
+**2. Register the new pressure layers**
+
+Add two new rows in `layers.csv`, and register the new pressure layers by filling out the first eight columns for *po_desal_in*, and *po_desal_out*. 
 
 ![](./fig/register_pressure.png)
 
