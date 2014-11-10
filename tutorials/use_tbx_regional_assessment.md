@@ -148,16 +148,18 @@ In this example we will walk through how to add a new layer to a goal model by f
 
 Steps 1. and 2. are done outside of the Toolbox
 
-3. register in `layers.csv`
+> 3. register in `layers.csv`
 
 ![](./fig/new_layer.png)
 
 
-4. update goal model
+> 4. update goal model
 
 ![](./fig/functions_explained.png)
 
-5. [develop]
+> 5. update goal call in goals.csv
+
+[develop]
 
 
 ## Removing goals
