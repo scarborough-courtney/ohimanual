@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 # Introduction
   
 ## The Ocean Health Index
