@@ -24,9 +24,9 @@ In this example there are two new pressure layers to include: the effects of des
 
 Adding these pressure layers to the Toolbox requires the following steps:
 
-1. create new pressure layer(s) and save in the `layers` folder
-2. register pressure layer(s) in `layers.csv` 
-3. register (add) pressure layer(s) in `pressures_matrix.csv`
+> 1. create new pressure layer(s) and save in the `layers` folder
+> 2. register pressure layer(s) in `layers.csv` 
+> 3. register pressure layer(s) in `pressures_matrix.csv`
   + a. set the pressure category  
   + b. identify the goals affected and set the weighting
   + c. modify the resilience matrix (if necessary) 
