@@ -34,6 +34,8 @@ Adding these pressure layers to the Toolbox requires the following steps:
 
 **1. Create the new pressure layers**
 
+Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category).
+
 Suppose that there is information 
 
 - for each region
@@ -47,7 +49,7 @@ Suppose that there is information
 
 **3. Register the new layers in `pressure_matrix.csv`.**  
 
-**3a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Create a data layer name with a prefix that signifies the pressure category (for example: *po_* for the pollution category). Each category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+**3a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Each pressure category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
 
 **3b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
 
