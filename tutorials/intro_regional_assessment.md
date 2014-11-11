@@ -13,15 +13,8 @@ The Ocean Health Index framework is flexible to accommodate regional priorities:
 
 **The process for developing a regional assessment is equally valuable as the final calculated scores, since it helps identify knowledge and data gaps, produces decision-relevant information, and creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-Regional assessment case studies have been published in peer-review journals for the U.S. West Coast ([Halpern et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0098995)) and for Brazil ([Elfes et al. 2014](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0092589)), and more are underway.   
-=======
-Regional assessments have been published in peer-review journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
->>>>>>> FETCH_HEAD
-=======
-Regional assessments have been published in peer-review journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
->>>>>>> FETCH_HEAD
+Regional assessments have been published in peer-reviewed journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
+
 
 ## Before getting started
 
