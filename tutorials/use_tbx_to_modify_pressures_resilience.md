@@ -14,7 +14,7 @@ Adding these pressure layers to the Toolbox requires the following steps:
 We will now go through the following steps using the input and output effects of desalination operations as an example (adding two new pressure layers).
 
 
-**1. Create the new pressure layers**
+### Create the new pressure layers
 
 Create the new data layers with a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
 
@@ -34,13 +34,13 @@ In the current example, the two new layers created to account for the input and 
 - rescale from 0 to 1
 - save in `layers` folder
 
-**2. Register the new pressure layers**
+### Register the new pressure layers
 
 Add two new rows in `layers.csv`, and register the new pressure layers by filling out the first eight columns for *po_desal_in*, and *po_desal_out*. 
 
 ![](./fig/register_pressure.png)
 
-**3. Register the new layers in `pressure_matrix.csv`.**  
+### Register the new layers in `pressure_matrix.csv`.**  
 
 `pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name.
 
