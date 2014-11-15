@@ -199,8 +199,6 @@ The GitHub App is freely available for download for both Mac (mac.github.com) an
 2. The user can then select the different files to which changes have been made (2a.), and preview those changes on the right column of the github app window (2b.).
 3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the Github App window, then click on commit and sync.
 
-> ![](./fig/github_app_notes1.png)
-
 > ![](./fig/github_app_notes.png)
 
 Your changes should now visable online.
