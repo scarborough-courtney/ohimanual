@@ -207,7 +207,7 @@ Your changes should now visible on Github online.
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
 
 
-### More Information
+### Supplementary Information
 
 The following is a diagram describing three ways in which files can be editted on GitHub. The third column refers to the 'clone', 'push' and 'commit' model described above:
 
