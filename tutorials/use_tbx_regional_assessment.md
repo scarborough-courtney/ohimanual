@@ -12,4 +12,4 @@ The most common modifications you will make to your repository are:
 
 These changes are to be made in the following files (see sections below for detailed instructions):
 
-![](./fig/china2014_descr3.png)
+![](./fig/modifying_scenario_tbx.png)
