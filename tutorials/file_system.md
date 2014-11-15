@@ -8,7 +8,7 @@ In this example, **ecu** is the assessment folder and **subcountry2014** is the 
 
 ![](./fig/ohiglobal_file_location.png)
 
-The **subcountry2014** folder contains all the data inputs used to calculate the OHI score for that scenario, as well as the files that are necessary to run the calculations.
+The **subcountry2014** folder contains all the data inputs used to calculate the OHI score for that scenario (illustrated below), as well as the files that are necessary to run the calculations.
 
 ![](./fig/scenario_folder_overview.png)
 
