@@ -73,6 +73,9 @@ The spatial folder contains a single file, *regions_gcs.js*. This is a spatial f
 ### launchApp_code.R
 The App can be launched through R by running the code in lauchApp_code.R.
 
+### layers-empty_swapping-global-mean.csv 
+Contains a list of data layers for which there were no data for the study area. In order for the Toolbox to run, global averages are used as template data. This file is not used anywhere in the Toolbox but is a registry of data layers that should be replaced with local data, as they are based on global averages. 
+
 ### *calculate_scores.r*
 `calculate_scores.r` will run the Toolbox calculations using the *.csv* files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
 
