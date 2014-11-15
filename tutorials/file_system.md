@@ -4,15 +4,15 @@ This section describes the files within the ohi-[assessment] folder that you hav
 ### Assessments and scenarios
 Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
 
-In this example, **ohi-global** is the assessment folder and **eez2013** is the scenario.
+In this example, **ecu** is the assessment folder and **subcountry2014** is the scenario.
 
 ![](./fig/ohiglobal_file_location.png)
 
-In this example, **ohi-china** is the assessment folder and **china2014** is the scenario.
+The **subcountry2014** folder contains all the data inputs used to calculate the OHI score for that scenario, as well as the files that are necessary to run the calculations.
 
-![](./fig/china2014_descr.png)
+![](./fig/scenario_folder_overview.png)
 
-See section below for a detailed overview of all the files located in the scenario folder.
+See below for a detailed overview of all the files located in the scenario folder.
 
 ### *layers.csv*
 `layers.csv` is the registry that manages all data to be used in the Toolbox.
