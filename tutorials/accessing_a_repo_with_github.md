@@ -196,12 +196,12 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. Changes made directly to layer files in the local OHI-china repository for example will be automatically tracked by the Github App. Once you are done working on the pertinent files and wish to commit and sync the changes to the online server on the Github server, open the Github App:
 
 1. Make sure you select the correct repository, in this case OHI-china, located on the left column of the github app window.
-2. The user can then select the different files to which changes have been made (2a.), and preview those changes on the right column of the github app window (2b.).
+2. The user can then select the different files to which changes have been made (2a), and preview those changes on the right column of the github app window (2b).
 3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the Github App window, then click on commit and sync.
 
 > ![](./fig/github_app_notes.png)
 
-Your changes should now visable online.
+Your changes should now visable on Github online.
 
 ### Keeping syncronized
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
