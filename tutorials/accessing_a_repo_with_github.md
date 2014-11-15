@@ -197,7 +197,7 @@ The GitHub App is freely available for download for both Mac (mac.github.com) an
 
 1. Make sure you select the correct repository, in this case OHI-china, located on the left column of the github app window.
 2. The user can then select the different files to which changes have been made (2a), and preview those changes on the right column of the github app window (2b).
-3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the Github App window, then click on commit and sync.
+3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the Github App window, then click on commit and sync (Note: If a `Commit` button appears instead of the `Commit & Sync` button, you can either click `Commit` and then click the `Sync` button located on the top-right corner of the githup app window, or you can alternatively click the `+` button next to the `Commit` button, and then click the the `Commit & Sync` button that appears).
 
 > ![](./fig/github_app_notes.png)
 
