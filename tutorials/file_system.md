@@ -70,6 +70,9 @@ Each column in the resilience matrix is a data layer that is also registered in 
 ### spatial folder 
 The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the JSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
 
+### launchApp_code.R
+The App can be launched through R by running the code in lauchApp_code.R.
+
 ### *calculate_scores.r*
 `calculate_scores.r` will run the Toolbox calculations using the *.csv* files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
 
