@@ -5,10 +5,6 @@ After the china2014 folder has been installed on the user<U+2019>s computer, fur
 
 *Note that on a Mac, launch_App.command is how to run the Toolbox App by double-clicking, and on a PC, launchApp.bat is the correct file to double-click.*
 
-### layers.csv
-
- + **citation:** is for book-keeping purposes, indicating where to find further information about the layer from the supplemental information of the 2012 Nature publication.
-
 ### scenario.R
 scenario.R is a script in R that identifies which data layers and models should be used to calculate OHI scores using the Toolbox App. This combination of data layers, models, and all supporting files are called a <U+2018>scenario<U+2019>. Currently, the default scenario is using Global 2013 assessment files, and is the folder within ohi-global, called eez2013. 
 
