@@ -187,7 +187,7 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
 3. Click 'Commit' to commit the changes and the commit message
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. 
-5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visable online.
+5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visible online.
   
 > ![](./fig/commit_sk.png)
 
@@ -201,7 +201,7 @@ The GitHub App is freely available for download for both Mac (mac.github.com) an
 
 > ![](./fig/github_app_notes.png)
 
-Your changes should now visable on Github online.
+Your changes should now visible on Github online.
 
 ### Keeping syncronized
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
