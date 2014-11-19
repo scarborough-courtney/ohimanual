@@ -15,8 +15,7 @@ title = 'The Ocean Health Index Toolbox Manual'
 wd = '~/github/ohimanual/tutorials'
 in_md = c(
   'README.md',
-  'overview_toolbox_app.md',
-  'explore_global_results.md',
+  'overview_webapp.md',
   'intro_regional_assessment.md',
   'conduct_regional_assessment.md',
   'gathering_appropriate_data.md',
@@ -110,11 +109,16 @@ render(
   out_md, 
   html_document(
     number_sections=T, fig_width = 7, fig_height = 5, fig_retina = 2, fig_caption = T, smart=T,
-    self_contained=T, theme='default',
+    self_contained=F, theme='default',
     highlight='default', mathjax='default', template='default',
     toc=T, toc_depth=3), 
   clean=T, quiet=F,
   output_file = paste0(pfx, '.html'))
+file.copy(paste0(pfx, '.html'), '~/github/ohi-science.github.io/manual/index.html', overwrite=T)
+dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
+file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
+
+
 
 # render docx ----
 render(

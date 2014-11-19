@@ -1,29 +1,29 @@
 # Overview of the OHI Toolbox App
 
-The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The *Data* page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The *Calculate* page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The *Report* page provides different methods of reporting the data.  
+The Toolbox Application (App) is viewed through a web browser has three **tabs**: **Data**, **Calculate**, and **Report**. The **Data** tab provides several subtabs for viewing data (*Map*, *Histogram*, *Table*), and is the default tab when the Toolbox is launched. The **Calculate** tab is used to calculate goal scores based on the information in the file system (data can be changed and tested). The **Report** tab provides different methods of reporting the data.  
   
-The **Current scenario** is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
+The **Current scenario** is displayed in the upper-right corner of the Data tab. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
   
 ![](./fig/homepage_view.png)
 
-## Data page
+## Data tab
 
 ### Overview of display options
-The Data page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
+The Data tab displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data tab).
 
 
 **Data displayed in Map form:**
   
 ![](./fig/datapage_view.png)
 
-The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
+The map subtab displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
 
 **Data displayed in Histogram form:**
 
 ![](./fig/histogrampage_view.png)
 
-The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading).
+The histogram subtab shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading).
 
 
 
@@ -31,12 +31,12 @@ The histogram shows the distribution of the selected variable as the number of o
   
 ![](./fig/tablepage_view.png)
 
-The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
+The table subtab displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
 
 
 ### Overview of variable options
 
-The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
+The Data tab has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the tab.
 
 ![](./fig/varible_options_view.png)
 
@@ -53,14 +53,14 @@ On the other hand, if the user selects 'Input Layer' as the variable type, they 
 
 To further familiarize yourself with the display and variable options of the Toolbox App, please see the 'Explore Global Results with the Toolbox App' section below.
 
-## Calculate page
-The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
+## Calculate tab
+The Calculate tab is used to calculate the Index. The Calculate tab displays the “Scenario path” in the user’s home directory where the folders are located.
 
 ![](./fig/calculate_view.png)  
   
 
-## Report page
-The Report page allows the user to create a report of results as .html and .pdfs files.
+## Report tab
+The Report tab allows the user to create a report of results as .html and .pdfs files.
 
 ![](./fig/reportpage_view.png)
 

@@ -6,54 +6,50 @@ title: The Ocean Health Index Toolbox Manual
   
 ## The Ocean Health Index
 
-**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern et al. 2012 in *Nature* (available at ohi-science.org/), we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** software that will enable others to conduct assessments on their own using the OHI framework. Here, the **Ocean Health Index Manual** describes how to use the Toolbox software.
-
-OHI scores by goal are calculated at the scale of the reporting unit, which is called a **region** and then combined using a weighted average to produce the score for the overall area assessed, called a **study area**. 
+**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern *et al*. 2012 in *Nature* (available at [ohi-science.org](http://ohi-science.org)), we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** to enable others to conduct assessments on their own using the OHI framework. The Toolbox is more than simply software to calculate scores; it is an ecosystem of materials that facilitate groups to collaborate throughout the assessment process. Here, the **Ocean Health Index Manual** describes how to use the Toolbox.
 
 
 ## The Ocean Health Index Toolbox
 
-**The Ocean Helath Index Toolbox Application (App)** is open-source software developed to facilitate Index calculations at any scale. The Toolbox App runs using the statistical programming language R and displays input data and calculated scores graphically with maps, histograms, and tables. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. Modifications can be made to the global studies, allowing calculation of scores with updated data that can then be visualized with the Toolbox App. 
+**The Ocean Health Index Toolbox** has been developed to facilitate Index assessments at any scale. The Toolbox not only calculates scores, but it provides structure for organizing and managing data, which can be done using any software, and has been created through an online collaborative platform that tracks changes through time. The Toolbox Application (App) is open-source, cross-platform, and runs using the statistical programming language R. The App displays input data and calculated scores graphically with maps, histograms, and tables.  
 
-The Toolbox can also be used to calculate scores in smaller-scale **regional assessments** after finer-scale data has been gathered and decisions have been made regarding goal models, pressures and resilience, and reference points. The Toolbox App therefore enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen area. The App can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
-
-We recommend first becoming familiar with the Toolbox App and exploring the results from the global assessment before beginning a regional assessment.
-
-**Requirements**: an Internet connection for the initial Toolbox App installation. The Toolbox runs on both a Mac and PC.
-
-1. Install the latest version of R (http://cran.r-project.org/).
-2. Install and launch the Toolbox Application (http://ohi-science.org/pages/install.html).
+The Toolbox enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen study area. The App can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
 
 # Overview of the OHI Toolbox App
 
-The Toolbox Application (App) runs through a web browser and has three **Page options**: *Data*, *Calculate*, and *Report*. The *Data* page provides several ways of viewing the data (*Map*, *Histogram*, *Table*), and is the default home-screen when the Toolbox is opened. The *Calculate* page is used to calculate goal scores based on the information in the file system (data can be changed and tested). The *Report* page provides different methods of reporting the data.  
+The Toolbox Application (App) has two **tabs**: **Data** and **Compare**. The **Data** tab provides several subtabs for viewing data (*Map*, *Histogram*, *Table*), and is the default tab when the Toolbox is launched. The **Compare** tab is most useful for error checking.
   
-The **Current scenario** is displayed in the upper-right corner of the Data page. This identifies the scale (example: global) and year (example: 2013) of the information displayed.  
-  
-![](./fig/homepage_view.png)
+The **Branch/Scenario** is displayed in the upper-left corner of the Data tab. 
 
-## Data page
+The Github branch is either "draft" if in the process of editing, or "published" if scores are in a final state. The term branch technically refers to how the data files are stored in Github:
+
+1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
+
+2. **published** branch is a vetted copy of the draft branch, not for direct editing.
+
+An Ocean Health Index scenario contains all the files needed to calculate scores. By convention, scenarios are named with the spatial scale and year.
+
+## Data tab
 
 ### Overview of display options
-The Data page displays input data or calculated scores for each goal parameter, and presents the information as a Map, Histogram, or Table. These options are presented as tabs located above the map (Map view is the default display option for the Data page).
+The Data tab displays input data or calculated scores for each goal parameter, and presents the information as a map, histogram, or table. These options are presented as subtabs located above the map (the Map subtab is the default display option for the Data tab).
 
 
-**Data displayed in Map form:**
+**Data displayed in the Map subtab:**
   
 ![](./fig/datapage_view.png)
 
 The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
 
 
-**Data displayed in Histogram form:**
+**Data displayed in the Histogram subtab:**
 
 ![](./fig/histogrampage_view.png)
 
 The histogram shows the distribution of the selected variable as the number of observations per value bin (white bars) and a smoothed density function (pink shading).
 
 
-
-**Data displayed in Table form:**
+**Data displayed in the Table subtab:**
   
 ![](./fig/tablepage_view.png)
 
@@ -62,7 +58,7 @@ The table displays the target value for each region and the overall study area. 
 
 ### Overview of variable options
 
-The Data page has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the page.
+The Data tab has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the tab.
 
 ![](./fig/varible_options_view.png)
 
@@ -77,65 +73,9 @@ On the other hand, if the user selects 'Input Layer' as the variable type, they 
 
 ![](./fig/overview_variable_options2.png)
 
-To further familiarize yourself with the display and variable options of the Toolbox App, please see the 'Explore Global Results with the Toolbox App' section below.
+## Compare tab
 
-## Calculate page
-The Calculate page is used to calculate the Index. The Calculate page displays the “Scenario path” in the user’s home directory where the folders are located.
-
-![](./fig/calculate_view.png)  
-  
-
-## Report page
-The Report page allows the user to create a report of results as .html and .pdfs files.
-
-![](./fig/reportpage_view.png)
-
-It is currently possible to create flower plots and tables with several options, including saving global figures or figures per country. In future versions of the Toolbox App, more options for visualizations, including maps, histograms, and equations, will be possible. It will also be possible to compare different scenarios.
-
-# Explore Global Results with the Toolbox App
-
-The following section will be devoted to exploring the Ocean Health Index Global Results using the Toolbox App. The section will further familiarize the user with the organizational structure and functionality of the Toolbox, and will also help the user understand the results that were obtained in the global assessment,  including the types of data that were used to calculate the Ocean Health Index.
-
-To begin exploring results, the user must first select (from the drop-down menus) the data that they wish to display with the Toolbox (i.e. variable type > target > dimension/layer > category > year).
-
-**For example:**
-
-> **Output Score > Fisheries (FIS) > score**
-shows the final calculated score for the fisheries sub-goal in the current scenario (2013).
-
-![](./fig/output_score_fisheries_score.png)
-
-
-> **Input Layer > Mariculture > Mariculture species harvested**
-shows the different harvested species that were used to calculate the mariculture sub-goal in the current scenario (2013).
-
-![](./fig/input_mariculture_harvested.png)
-
-As mentioned previously, the selected data can then be viewed as a Map, as a distribution on the Histogram tab or numerically in Table form.
-
-## Map 
-
-Suppose for instance that **Output Score > Index > score** is selected and viewed as a map (default selection).
-
-![](./fig/map_view.png)
-
-The target (Index) and dimension (Score) chosen from the drop-down menu is displayed as text on the top right corner of the map. Below this information, the region name, (region number), and value appear if the user’s mouse hovers over a specific region. When the value of that region is displayed, the region will darken on the map. If the mouse is not indicating a specific region, this area will instruct to ‘hover over a region’. Zooming in and out of the map is possible with the plus/minus in the upper left of the map. A color legend is also displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
-
-## Histogram
-
-For example, if the **Output Score > Fisheries > score** sub-goal is selected, the histogram shows the frequency of each fisheries score:
-
-![](./fig/histogram_view.png)
-
-As noted in the figure above, the Histogram view allows the user to see the range of scores (lowest and highest) as well as the frequency of each (most vs. least common). The latter may be helpful for instance if the user wishes to compare to score of a particular country to all the other scores.
-
-## Table
-
-The table displays the target value for each region and the overall study area, with an identifying code (rgn_id), name (rgn_name), and value (value) for each. The Table view can be especially useful in quickly finding values for a particular country, given that the user can easily navigate the OHI data using the search bar located on the upper right of the table (caps-sensitive).
-
-![](./fig/table_view.png)
-
-It is also possible to search within individual columns by entering the search term at the bottom of each column; this option is more easily displayed by changing the number of records per page to 10 using the drop-down menu. Data may also be sorted the arrows at the left of each column name. Sorting by rgn_id is the default.
+The **Compare** tab allows you to visualize score differences between different branches, scenarios and/or commits (ie each online save). It proves most useful for error checking during the editing phase of development.
 
 ---
 output: html_document
@@ -702,17 +642,17 @@ It is possible to conduct a regional assessment by downloading a template reposi
 
 **Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
 
-**1. Set up:**
-
- * Install R and RStudio
- * Clone regional assessment repository on Desktop
-
-Detailed instructions for step **1** are provided below for users who want to either:
-
- * work with GitHub (See: Accessing repository with GitHub section), or 
- * work without GitHub (See: Accessing repository without GitHub section). 
-
-**2. Become familiar with the OHI Toolbox File System**
+> **1. Set up:**
+> 
+>  * Install R and RStudio
+>  * Clone regional assessment repository on Desktop
+> 
+> Detailed instructions for step **1** are provided below for users who want to either:
+> 
+>  * work with GitHub (See: Accessing repository with GitHub section), or 
+>  * work without GitHub (See: Accessing repository without GitHub section). 
+> 
+> **2. Become familiar with the OHI Toolbox File System**
 
 
 Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: 'Using the Toolbox for a Regional assessment' section below).
@@ -906,22 +846,27 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
   - Note 2: clicking on a staged file will identify additions and deletions within that file for your review
 3. Click 'Commit' to commit the changes and the commit message
 4. Pull any changes that have been made to the online repo. This is important to ensure there are no conflicts with updating the online repo. 
-5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visable online.
+5. Push your committed changes to the online server at `github.com/OHI-Science/[assessment]`. Your changes are now visible online.
   
 > ![](./fig/commit_sk.png)
 
 **Using GitHub App to push commits to GitHub repository**
 
-The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. To do so, write a summary and description in the respective message bars in the Github App window, then click on commit and sync.
+The GitHub App is freely available for download for both Mac (mac.github.com) and PC (windows.github.com), and can be used instead of RStudio to commit and sync any changes made locally in the github folder. Changes made directly to layer files in the local OHI-china repository for example will be automatically tracked by the Github App. Once you are done working on the pertinent files and wish to commit and sync the changes to the online server on the Github server, open the Github App:
+
+1. Make sure you select the correct repository, in this case OHI-china, located on the left column of the github app window.
+2. The user can then select the different files to which changes have been made (2a), and preview those changes on the right column of the github app window (2b).
+3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the Github App window, then click on commit and sync (Note: If a `Commit` button appears instead of the `Commit & Sync` button, you can either click `Commit` and then click the `Sync` button located on the top-right corner of the githup app window, or you can alternatively click the `+` button next to the `Commit` button, and then click the the `Commit & Sync` button that appears).
 
 > ![](./fig/github_app_notes.png)
 
+Your changes should now visible on Github online.
 
 ### Keeping syncronized
 Always pull before pushing commits. This is the best way to avoid merging errors due to other users in your group modifying files. 
 
 
-### More Information
+### Supplementary Information
 
 The following is a diagram describing three ways in which files can be editted on GitHub. The third column refers to the 'clone', 'push' and 'commit' model described above:
 
@@ -983,15 +928,15 @@ This section describes the files within the ohi-[assessment] folder that you hav
 ### Assessments and scenarios
 Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
 
-In this example, **ohi-global** is the assessment folder and **eez2013** is the scenario.
+In this example, **ecu** is the assessment folder and **subcountry2014** is the scenario.
 
 ![](./fig/ohiglobal_file_location.png)
 
-In this example, **ohi-china** is the assessment folder and **china2014** is the scenario.
+The **subcountry2014** folder contains all the data inputs used to calculate the OHI score for that scenario (illustrated below), as well as the files that are necessary to run the calculations.
 
-![](./fig/china2014_descr.png)
+![](./fig/scenario_folder_overview.png)
 
-See section below for a detailed overview of all the files located in the scenario folder.
+See below for a detailed overview of all the files located in the scenario folder.
 
 ### *layers.csv*
 `layers.csv` is the registry that manages all data to be used in the Toolbox.
@@ -1049,6 +994,12 @@ Each column in the resilience matrix is a data layer that is also registered in 
 ### spatial folder 
 The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the JSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
 
+### launchApp_code.R
+The App can be launched through R by running the code in lauchApp_code.R.
+
+### layers-empty_swapping-global-mean.csv 
+Contains a list of data layers for which there were no data for the study area. In order for the Toolbox to run, global averages are used as template data. This file is not used anywhere in the Toolbox but is a registry of data layers that should be replaced with local data, as they are based on global averages. 
+
 ### *calculate_scores.r*
 `calculate_scores.r` will run the Toolbox calculations using the *.csv* files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
 
@@ -1074,7 +1025,7 @@ The most common modifications you will make to your repository are:
 
 These changes are to be made in the following files (see sections below for detailed instructions):
 
-![](./fig/china2014_descr3.png)
+![](./fig/modifying_scenario_tbx.png)
 
 ## Modifying pressures matrices
 
@@ -1092,7 +1043,7 @@ Adding these pressure layers to the Toolbox requires the following steps:
 We will now go through the following steps using the input and output effects of desalination operations as an example (adding two new pressure layers).
 
 
-**1. Create the new pressure layers**
+### Create the new pressure layers
 
 Create the new data layers with a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
 
@@ -1112,13 +1063,13 @@ In the current example, the two new layers created to account for the input and 
 - rescale from 0 to 1
 - save in `layers` folder
 
-**2. Register the new pressure layers**
+### Register the new pressure layers
 
 Add two new rows in `layers.csv`, and register the new pressure layers by filling out the first eight columns for *po_desal_in*, and *po_desal_out*. 
 
 ![](./fig/register_pressure.png)
 
-**3. Register the new layers in `pressure_matrix.csv`.**  
+### Register the new layers in `pressure_matrix.csv`.**  
 
 `pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name.
 
