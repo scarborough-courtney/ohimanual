@@ -34,7 +34,7 @@ Many times, creating a linear model is the best way to estimate data and fill te
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region 1.
 
-** Temporal gapfilling example (assumes linearity):**
+**Temporal gapfilling example (assumes linearity):**
 
 There are four steps to temporally gapfill with a linear model, illustrated in the figures with four columns.
 

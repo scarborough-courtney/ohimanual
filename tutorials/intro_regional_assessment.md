@@ -9,16 +9,16 @@ Each goal score is combined into a weighted average to produce the score for the
 
 ![](./fig/global_v_brazil_map.png)  
 
-The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. Similarly, pressures and resilience measures can be refined using local data and indicators. Because OHI is a data driven framework, Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental to obtain meaningful findings that can help inform decision-making. 
+The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely. Similarly, pressures and resilience measures can be refined using local data and indicators. Because OHI is a data driven framework, Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental to obtain meaningful findings that can help inform decision-making. 
 
 **The process for developing a regional assessment is equally valuable as the final calculated scores, since it helps identify knowledge and data gaps, produces decision-relevant information, and creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
   
-Regional assessments have been published in peer-reviewed journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
+Regional assessments have been published in peer-reviewed journals for the U.S. West Coast (Halpern *et al*. 2014) and for Brazil (Elfes *et al*. 2014), and more are underway (available at ohi-science.org).   
 
 
-## Before getting started
+## Before conducting an assessment
 
-Before beginning a regional assessment, it is important to have planned several things:
+Before conducting a regional assessment, it is important to have planned several things:
 
 * Develop strategic plan and timeline
     + determine resources available

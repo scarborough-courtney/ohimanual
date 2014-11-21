@@ -11,9 +11,10 @@ title: The Ocean Health Index Toolbox Manual
 
 ## The Ocean Health Index Toolbox
 
-**The Ocean Health Index Toolbox** has been developed to facilitate Index assessments at any scale. The Toolbox not only calculates scores, but it provides structure for organizing and managing data, which can be done using any software, and has been created through an online collaborative platform that tracks changes through time. The Toolbox Application (App) is open-source, cross-platform, and runs using the statistical programming language R. The App displays input data and calculated scores graphically with maps, histograms, and tables.  
+**The Ocean Health Index Toolbox** has been developed to facilitate Index assessments at any scale. The Toolbox enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen study area. The Toolbox can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
+ 
+The Toolbox refers to a host of tools, accessible in several formats. The Toolbox is more than the software that calculates final scores (written in the software language R). The Toolbox also includes *repositories*, or folders, containing all files necessary for data and parameter settings. The filesystem provides structure for organizing and managing updated data (done using any software), and also contains goal models that can be modified (using R). The filesystem is accessed through an online collaborative platform, called Github. Github tracks changes by all collaborators through time, and saves all versions for comparison.  The filesystem , which can be done using any software, and has been created through an online collaborative platform that tracks changes through time.
 
-The Toolbox enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen study area. The App can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
 
 # Overview of the OHI Toolbox App
 
@@ -21,7 +22,7 @@ The Toolbox Application (App) has two **tabs**: **Data** and **Compare**. The **
   
 The **Branch/Scenario** is displayed in the upper-left corner of the Data tab. 
 
-The Github branch is either "draft" if in the process of editing, or "published" if scores are in a final state. The term branch technically refers to how the data files are stored in Github:
+The GitHub branch is either "draft" if in the process of editing, or "published" if scores are in a final state. The term branch technically refers to how the data files are stored in GitHub:
 
 1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
 
@@ -88,16 +89,16 @@ Each goal score is combined into a weighted average to produce the score for the
 
 ![](./fig/global_v_brazil_map.png)  
 
-The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely to best represent regional attributes. Similarly, pressures and resilience measures can be refined using local data and indicators. Because OHI is a data driven framework, Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental to obtain meaningful findings that can help inform decision-making. 
+The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely. Similarly, pressures and resilience measures can be refined using local data and indicators. Because OHI is a data driven framework, Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental to obtain meaningful findings that can help inform decision-making. 
 
 **The process for developing a regional assessment is equally valuable as the final calculated scores, since it helps identify knowledge and data gaps, produces decision-relevant information, and creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
   
-Regional assessments have been published in peer-reviewed journals for the U.S. West Coast (Halpern et al. 2014) and for Brazil (Elfes et al. 2014), and more are underway (available at ohi-science.org/).   
+Regional assessments have been published in peer-reviewed journals for the U.S. West Coast (Halpern *et al*. 2014) and for Brazil (Elfes *et al*. 2014), and more are underway (available at ohi-science.org).   
 
 
-## Before getting started
+## Before conducting an assessment
 
-Before beginning a regional assessment, it is important to have planned several things:
+Before conducting a regional assessment, it is important to have planned several things:
 
 * Develop strategic plan and timeline
     + determine resources available
@@ -137,7 +138,11 @@ The time required to complete a regional assessment depends on the local context
     
 ## What is provided  
 
-The Ocean Health Index Toolbox can be used to calculate scores for regional assessments. When you begin a regional assessment, you will be provided with a **repository**: a set of Toolbox files and software scripts specific to your study area. The data in the files provided serve as a template: they are the data used in the global assessments, extracted for your study area. These data files will need to be updated with locally available data and indicators so as to give a more fine-scale assessment of ocean health in your study area. However, if better data are not available, it is possible to use the files provided.  
+Your study area's website (accessed from [ohi-science.org](http://ohi-science.org)) was created to facilitate planning and communication during your assessment. It displays template data, regions, goal models, and calculated scores visually through maps, histograms, and tables. Template regions are the largest subcountry designation. These are primarily coastal states or provinces, which, in our experience, is consistent with the scale at which policy decisions are made.
+
+The information displayed on the website is also stored online, in a **GitHub repository**. GitHub (https://github.com) is an open-source development platform that for collaboration and tracking changes by user, as well as multiple versions of a document. Your study area's GitHub repository contains files specific to your study area. The data in the repository serve as a template: they are the data for your study area used in the global assessments, and have been attributed to each subcountry region. 
+
+The data files in your repository will need to be updated with locally available data and indicators so as to give a more fine-scale assessment of ocean health in your study area. However, if better data are not available, it is possible to use the files provided.  
 
 Our team of scientists and managers is prepared to provide guidance for regional assessments, from initial meetings to discussions about model development to disseminating results.
 
@@ -145,11 +150,9 @@ Our team of scientists and managers is prepared to provide guidance for regional
 
 We recommend to remember the following as you develop your approach:
 
-* People are part of ocean health
+* Remember that people are part of ocean health
     + economic and social data are included, and certain terrestrial data near the coast
-* Document all decisions made
-    + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
-    + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
+
 * Goal models should be modified to capture local characteristics and priorities of the region
     + how goal models are developed depends on what is important locally and what data/indicators are available.
 * Assessments can use a mixture of regional-, country- and global-scale data   
@@ -159,11 +162,14 @@ We recommend to remember the following as you develop your approach:
     + goal models are the same across all regions; data are specific to the region. For example, the carbon storage goal model is calculated in the same way for each region, but which habitats are present in each region, and the area and condition of those habitats are specific to each region
 * All data do not need to be at the same spatial or temporal scale
     + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
+* Document all decisions made
+    + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
+    + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
 
 
-## Checklist: To Do Before Using the Toolbox
+## Checklist: How to prepare for using the Toolbox
 
-Most of the time spent while conducting a regional assessment occurs before using the Toolbox, although being familiar with the Toolbox's composition and structure can help guide you. The following will not be checked-off in sequence: there is a lot of back and forth as you discover data, develop reference points and models, revisit other data possibilities.  
+Most of the time spent while conducting a regional assessment occurs before using the Toolbox to calculate scores. Before then, the Toolbox should be used as a checklist in itself, for organizing data, and having a structure can guide you. The following will not be checked-off in sequence: there is a lot of back and forth as you discover data, develop reference points and models, and revisit other data possibilities.  
 
 Here is a checklist of decisions and steps that must be done before the Toolbox can calculate regional goal scores:
 
@@ -180,6 +186,7 @@ Here is a checklist of decisions and steps that must be done before the Toolbox 
     + what resilience measures (laws, regulations) are in place locally?
     + what local cultural preferences or priorities should be captured in the assessment? 
 * Decide the spatial scale for regions within the study area 
+    + do template regions make sense?
     + we recommend multiple regions
     + regions within the study area should be at the smallest scale the data allow
     + in what spatial scale are data most frequently reported?
@@ -288,9 +295,9 @@ Data must be available for at least five years to calculate the trend. Longer ti
 
 ### Notes about data and regions
 
-Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
+Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region, even if individual data layers do not all extend to the EEZ. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
 
-![Scores will be presented in the EEZ of each region, even if individual data layers do not all extend to the EEZ](./fig/rgns_brazil.png)
+![](./fig/rgns_brazil.png)
 
 ### Example: US West Coast data discovery
 
@@ -325,10 +332,10 @@ For the US West Coast, available data measure the current extent of seagrass hab
 
 ### Introduction 
 
-'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend'):
+'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend').
 
- + "**Pressures** are the sum of the ecological and social pressures that negatively affect scores for a goal".
- + "**Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect scores for a goal by reducing or eliminating pressures".
+ + **Pressures** are the sum of the ecological and social pressures that negatively affect goal scores.
+ + **Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures.
 
 ![](./fig/calculating_index.png)
 
@@ -352,11 +359,13 @@ Note that goals often interact with each other through pressures. The pressure c
 
 ### Explore local pressures
 
-Begin by exploring the pressures included in the global pressures matrix (`pressures_matrix.csv`). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures.
+Begin by exploring the pressures included in the global pressures matrix in the GitHub repository (`subcountry2014/conf/pressures_matrix.csv`; more on the filesystem below). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures.
+
+In the example below, the clean waters goal is affected by four data layers within the pollution category, as well as one in the social category.
 
 ![](./fig/pressure_categories.png)
 
-Pressures (columns in `pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type).
+Pressures (columns in `subcountry2014/conf/pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type).
 
 The first step in updating the pressures matrix for your regional assessment is to determine if there any pressures that should be excluded from your study? For example, if there is no mariculture in your study area, perhaps there are also no genetic escapes (*sp_genetic* layer).
 
@@ -421,7 +430,9 @@ In addition to data for the local pressures you identify, it will likely be poss
       
 ### Explore local resilience 
 
-As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (`resilience_matrix.csv`). As illustrated below, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social  components.
+As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (`subcountry2014/conf/resilience_matrix.csv`). As illustrated below, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social components.
+
+In the example below, only one regulatory measure is relevant for the clean waters goal, along with one social integrity measure.
 
 ![](./fig/resilience_categories.png)
 
@@ -523,7 +534,7 @@ Many times, creating a linear model is the best way to estimate data and fill te
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region 1.
 
-** Temporal gapfilling example (assumes linearity):**
+**Temporal gapfilling example (assumes linearity):**
 
 There are four steps to temporally gapfill with a linear model, illustrated in the figures with four columns.
 
@@ -656,6 +667,24 @@ It is possible to conduct a regional assessment by downloading a template reposi
 
 
 Once the user has completed steps 1 and 2, they will then be able to make changes to the Toolbox to calculate regional scores (See: 'Using the Toolbox for a Regional assessment' section below).
+
+## GitHub repository architecture
+
+GitHub stores all data files and scripts for your assessment in a repository (a folder). Different copies or complements to these folders, called *branches* can also exist, which aid with versioning and drafting. Your repository has four branches, two of which are displayed on your website (e.g. ohi-science.org/ecu):
+
+1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
+
+1. **published** branch is a vetted copy of the draft branch, not for direct editing. This branch is only updated by automatic calculation of scores if:
+
+    1. no errors occur during the calculation of scores in the draft branch, and
+
+    2. publishing is turned on. During the draft editing and testing phases of development, it is typically desirable to turn this off. (Details below.)
+
+1. **gh-pages** branch is this website. The results sections of the site (regions, layers, goals, scores per branch/scenario) are overwritten into this repository after automatic calculation of scores. The rest of the site can be manually altered.
+
+1. **app** branch is the interactive layer and map viewer application. The user interface and server-side processing use the [Shiny](http://shiny.rstudio.com/) R package and are deployed online via [ShinyApps.io](https://www.shinyapps.io/) to your website. Once deployed, the App pulls updates from the data branches (draft and published) every time a new connection is initiated (ie browser refreshes).
+
+
 
 ## Accessing repositories with GitHub
 
@@ -924,6 +953,29 @@ You will work on your computer to change the files in `~/github/[assessment]` to
 
 ## OHI Toolbox File System
 This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
+
+
+## draft branch
+
+```
+subcountry2014 folder
+|-- conf
+|   |-- config.R                # configuration parameters
+|   |-- functions.R             # functions for calculating goals
+|   |-- goals.csv               # table of goal parameters
+|   |-- pressures_matrix.csv    # table of goals (rows) vs pressure layers (cols)
+|   |-- resilience_matrix.csv   # table of goals (rows) vs resilience layers (cols)
+|   |-- resilience_weights.csv  # table of weights per resilience layer
+|-- layers                      # layers
+|   |-- *.csv                   # layer data files
+|   |-- ...
+|-- reports                     # table and figure results
+|-- spatial                     # spatial
+|-- tmp                         # temporary files
+|-- .travis.yml                 # directives to calculate scores and publish
+```
+
+
 
 ### Assessments and scenarios
 Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
@@ -1661,6 +1713,14 @@ A: The best way is to use a local indicator or measure of tourism sustainability
 **Q: Where do Natural Products come from?**
 
 A: In the global assessments, Natural Products data come from the UN’s Food and Agriculture Administration (www.fao.org/fishery/statistics/software/fishstatj/en). These data are compiled and reported by product for each country, and available by downloading the FishStatJ software.
+
+## Species
+
+**Q: Can species and iconic species model scores be penalized if there are local flagship species that have not been evaluated?**
+
+Global data are based on IUCN assessments. For these evaluations, IUCN chooses a taxon (e.g. sharks) and a group of world experts assess it comprehensively. Locally identified species identified in a regional assessment may not be in the IUCN database because they do not belong to one of the taxa that have been selected for assessment, or because the experts that did the assessment did not know that information existed. In either case, there is no connection between what IUCN reports and what assessments are done locally. Therefore, it might not be fair to penalize a study area for missing species. For biodiversity, it is unrealistic to expect that all species are assessed, so it seems unfair to penalize for unassessed species. In the fisheries goal, there are penalties for species that are exploited but not assessed, because if there are landings data, it means they are somewhat measurable, and so it is reasonable to expect they should be at least monitored. 
+
+It might be reasonable to penalize unassessed iconic species. It is a smaller list of species that are specifically identified as being of interest, for one reason or other. This would work for species that have some form of assessment - unless that information already exists, it might be unrealistic to try to produce the data layer required to develop a new model.
 
 ## Sense of Place
 

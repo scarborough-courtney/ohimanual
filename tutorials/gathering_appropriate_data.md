@@ -73,9 +73,9 @@ Data must be available for at least five years to calculate the trend. Longer ti
 
 ### Notes about data and regions
 
-Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
+Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region, even if individual data layers do not all extend to the EEZ. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
 
-![Scores will be presented in the EEZ of each region, even if individual data layers do not all extend to the EEZ](./fig/rgns_brazil.png)
+![](./fig/rgns_brazil.png)
 
 ### Example: US West Coast data discovery
 

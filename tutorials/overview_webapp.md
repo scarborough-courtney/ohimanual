@@ -4,7 +4,7 @@ The Toolbox Application (App) has two **tabs**: **Data** and **Compare**. The **
   
 The **Branch/Scenario** is displayed in the upper-left corner of the Data tab. 
 
-The Github branch is either "draft" if in the process of editing, or "published" if scores are in a final state. The term branch technically refers to how the data files are stored in Github:
+The GitHub branch is either "draft" if in the process of editing, or "published" if scores are in a final state. The term branch technically refers to how the data files are stored in GitHub:
 
 1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
 

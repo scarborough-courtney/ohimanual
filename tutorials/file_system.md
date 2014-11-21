@@ -1,6 +1,29 @@
 ## OHI Toolbox File System
 This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
 
+
+## draft branch
+
+```
+subcountry2014 folder
+|-- conf
+|   |-- config.R                # configuration parameters
+|   |-- functions.R             # functions for calculating goals
+|   |-- goals.csv               # table of goal parameters
+|   |-- pressures_matrix.csv    # table of goals (rows) vs pressure layers (cols)
+|   |-- resilience_matrix.csv   # table of goals (rows) vs resilience layers (cols)
+|   |-- resilience_weights.csv  # table of weights per resilience layer
+|-- layers                      # layers
+|   |-- *.csv                   # layer data files
+|   |-- ...
+|-- reports                     # table and figure results
+|-- spatial                     # spatial
+|-- tmp                         # temporary files
+|-- .travis.yml                 # directives to calculate scores and publish
+```
+
+
+
 ### Assessments and scenarios
 Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
 

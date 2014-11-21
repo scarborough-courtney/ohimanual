@@ -2,10 +2,10 @@
 
 ### Introduction 
 
-'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend'):
+'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend').
 
- + "**Pressures** are the sum of the ecological and social pressures that negatively affect scores for a goal".
- + "**Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect scores for a goal by reducing or eliminating pressures".
+ + **Pressures** are the sum of the ecological and social pressures that negatively affect goal scores.
+ + **Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures.
 
 ![](./fig/calculating_index.png)
 
@@ -29,11 +29,13 @@ Note that goals often interact with each other through pressures. The pressure c
 
 ### Explore local pressures
 
-Begin by exploring the pressures included in the global pressures matrix (`pressures_matrix.csv`). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures.
+Begin by exploring the pressures included in the global pressures matrix in the GitHub repository (`subcountry2014/conf/pressures_matrix.csv`; more on the filesystem below). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures.
+
+In the example below, the clean waters goal is affected by four data layers within the pollution category, as well as one in the social category.
 
 ![](./fig/pressure_categories.png)
 
-Pressures (columns in `pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type).
+Pressures (columns in `subcountry2014/conf/pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type).
 
 The first step in updating the pressures matrix for your regional assessment is to determine if there any pressures that should be excluded from your study? For example, if there is no mariculture in your study area, perhaps there are also no genetic escapes (*sp_genetic* layer).
 
@@ -98,7 +100,9 @@ In addition to data for the local pressures you identify, it will likely be poss
       
 ### Explore local resilience 
 
-As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (`resilience_matrix.csv`). As illustrated below, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social  components.
+As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (`subcountry2014/conf/resilience_matrix.csv`). As illustrated below, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social components.
+
+In the example below, only one regulatory measure is relevant for the clean waters goal, along with one social integrity measure.
 
 ![](./fig/resilience_categories.png)
 
