@@ -14,7 +14,7 @@ Adding these pressure layers to the Toolbox requires the following steps:
 We will now go through the following steps using the input and output effects of desalination operations as an example (adding two new pressure layers).
 
 
-### Create the new pressure layers
+### Create the new pressure layers and save in the `layers` folder
 
 Create the new data layers with a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
 
@@ -34,7 +34,7 @@ In the current example, the two new layers created to account for the input and 
 - rescale from 0 to 1
 - save in `layers` folder
 
-### Register the new pressure layers
+### Register the new pressure layers in `layers.csv`
 
 Add two new rows in `layers.csv`, and register the new pressure layers by filling out the first eight columns for *po_desal_in*, and *po_desal_out*. 
 
@@ -44,13 +44,19 @@ Add two new rows in `layers.csv`, and register the new pressure layers by fillin
 
 `pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name.
 
-**3a.** This step should simply be transferring previous decisions made by your team into the Toolbox format. Each pressure category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+**3a. Set the pressure category**  
 
-**3b.** This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+This step should simply be transferring previous decisions made by your team into the Toolbox format. Each pressure category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+
+**3b. Identify the goals affected and set the weighting** 
+
+This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
 
 ![](./fig/register_new_pressures.png)
 
-**3c.** [develop]
+**3c. modify the resilience matrix (if necessary)** 
+
+[develop]
 
 
 ## Modifying resilience matrices
