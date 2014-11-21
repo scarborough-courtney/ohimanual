@@ -56,7 +56,7 @@ This step is also transferring prior decisions into the Toolbox format. Mark whi
 
 **3c. modify the resilience matrix (if necessary)** 
 
-[develop]
+Remember, 'resilience' is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures. The addition of new pressure layers may therefore  warrant the addition of new resilience layers that were not previously relevant. Similarly, the removal of pressure layers may warrant the removal of now irrelevant resilience layers. See below for instructions and examples about modifying resilience matrices.
 
 
 ## Modifying resilience matrices
