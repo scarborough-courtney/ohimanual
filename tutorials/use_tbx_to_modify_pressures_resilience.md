@@ -7,9 +7,9 @@ Adding these pressure layers to the Toolbox requires the following steps:
 > 1. Create new pressure layer(s) and save in the `layers` folder
 > 2. Register pressure layer(s) in `layers.csv` 
 > 3. Register pressure layer(s) in `pressures_matrix.csv`
-  + a. set the pressure category  
-  + b. identify the goals affected and set the weighting
-  + c. modify the resilience matrix (if necessary) 
+  + a. Set the pressure category  
+  + b. Identify the goals affected and set the weighting
+  + c. Modify the resilience matrix (if necessary) 
 
 We will now go through the following steps using the input and output effects of desalination operations as an example (adding two new pressure layers).
 
@@ -54,7 +54,7 @@ This step is also transferring prior decisions into the Toolbox format. Mark whi
 
 ![](./fig/register_new_pressures.png)
 
-**3c. modify the resilience matrix (if necessary)** 
+**3c. Modify the resilience matrix (if necessary)** 
 
 Remember, 'resilience' is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures. The addition of new pressure layers may therefore  warrant the addition of new resilience layers that were not previously relevant. Similarly, the removal of pressure layers may warrant the removal of now irrelevant resilience layers. See below for instructions and examples about modifying resilience matrices.
 
