@@ -1,5 +1,5 @@
 ## OHI Toolbox File System
-This section describes the files within the ohi-[assessment] folder that you have accessed by either cloning through GitHub and RStudio or downloading to your computer from GitHub.
+This section describes the files within your GitHub repository.
 
 
 ## draft branch
