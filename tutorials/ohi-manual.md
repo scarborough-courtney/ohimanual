@@ -85,7 +85,7 @@ output: html_document
 
 Regional assessments use the Ocean Health Index (OHI) framework to study smaller spatial scales (e.g. countries, states, provinces, ecoregions, bays, etc.), where policy and management decisions are made. Using ten criteria (called goals), the Index scores on a scale of 0 to 100 how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets). Regional assessments incorporate local priorities and preferences, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores that better reflect local realities. OHI is designed to combine and complement existing efforts to produce a comprehensive assessment of ocean health. And, because the assessments are developed at the scale of decision-making using local data and parameters, the findings can help inform decision-making and management actions aimed at maximizing sustainable productivity while preserving vital natural capital.  
 
-Each goal score is combined into a weighted average to produce the score for the overall area assessed, called a **study area**. In regional assessments, coastal states or provinces are often the **regions** within the **study area**. 
+Each goal score is combined into a weighted average to produce the score for the overall area assessed, called a **study area**. In regional assessments, coastal states or provinces are often the **regions** within the study area. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. Modifications can be made to the global studies, allowing calculation of scores with updated data that can then be visualized with the Toolbox App and project website.
 
 ![](./fig/global_v_brazil_map.png)  
 
@@ -765,36 +765,6 @@ At this point, you should already be familiar with your repository's filesystem 
 
 We recommend establishing a GitHub user account, which will allow you to syncronize your modifications with the online repository. Your website (accessed from [ohi-science.org](http://ohi-science.org)) will also display these modifications visually. Using GitHub faciliates collaboration within your team and also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although you will not be able to synchronize your work with your website, and we cannot offer much support in this case.
 
-**Requirements**: an Internet connection for the initial Toolbox App installation and continued access if syncing with GitHub (highly recommended); proficiency with data management and the coding language **R**; proficiency in spatial software such as ArcGIS (potentially, depending on the regional assessment strategy).
-
-> **Set up:**
-> 
->  * Install R and RStudio
->  * Clone regional assessment repository on Desktop
-> 
-> Detailed instructions follow for users who want to either:
-> 
->  * work with GitHub (See: Accessing repository with GitHub section), or 
->  * work without GitHub (See: Accessing repository without GitHub section). 
-
-
-## GitHub repository architecture
-
-GitHub stores all data files and scripts for your assessment in a repository (a folder). Different copies or complements to these folders, called *branches* can also exist, which aid with versioning and drafting. Your repository has four branches, two of which are displayed on your website (e.g. ohi-science.org/ecu):
-
-1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
-
-1. **published** branch is a vetted copy of the draft branch, not for direct editing. This branch is only updated by automatic calculation of scores if:
-
-    1. no errors occur during the calculation of scores in the draft branch, and
-
-    2. publishing is turned on. During the draft editing and testing phases of development, it is typically desirable to turn this off. (Details below.)
-
-1. **gh-pages** branch is this website. The results sections of the site (regions, layers, goals, scores per branch/scenario) are overwritten into this repository after automatic calculation of scores. The rest of the site can be manually altered.
-
-1. **app** branch is the interactive layer and map viewer application. The user interface and server-side processing use the [Shiny](http://shiny.rstudio.com/) R package and are deployed online via [ShinyApps.io](https://www.shinyapps.io/) to your website. Once deployed, the App pulls updates from the data branches (draft and published) every time a new connection is initiated (ie browser refreshes).
-
-
 
 ## Accessing repositories with GitHub
 
@@ -985,29 +955,30 @@ Make sure you have the most current version of R and RStudio. Download **R** at 
 
 While not required, we highly recommend working with **RStudio**, which is an interface that makes working with R much easier, and it also interfaces with GitHub so you are able to syncronize without using the GitHub app. RStudio does not get updated as often as R does, but it is good to check for updates regularly. 
 
-## Accessing repositories without GitHub
+## GitHub repository architecture
 
-### OHI regional assessments without GitHub
-It is possible to conduct a regional assessment without having a GitHub account. You can do a one-time download from the GitHub repository and then work locally on your computer without syncing to the GitHub server. We do not recommend this because it is more difficult for you to track progress and decisions, and for us to help or advise you. We recommend accessing a repository with GitHub but provide instructions here of how to access a repository without Github. We can always get your filesystem onto GitHub later. 
+GitHub stores all data files and scripts for your assessment in a repository (a folder). Different copies or complements to these folders, called *branches* can also exist, which aid with versioning and drafting. Your repository has four branches, two of which are displayed on your website (e.g. ohi-science.org/ecu):
+
+1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
+
+1. **published** branch is a vetted copy of the draft branch, not for direct editing. This branch is only updated by automatic calculation of scores if:
+
+    1. no errors occur during the calculation of scores in the draft branch, and
+
+    2. publishing is turned on. During the draft editing and testing phases of development, it is typically desirable to turn this off. (Details below.)
+
+1. **gh-pages** branch is this website. The results sections of the site (regions, layers, goals, scores per branch/scenario) are overwritten into this repository after automatic calculation of scores. The rest of the site can be manually altered.
+
+1. **app** branch is the interactive layer and map viewer application. The user interface and server-side processing use the [Shiny](http://shiny.rstudio.com/) R package and are deployed online via [ShinyApps.io](https://www.shinyapps.io/) to your website. Once deployed, the App pulls updates from the data branches (draft and published) every time a new connection is initiated (ie browser refreshes).
 
 
-### Download the repo to your computer
-Contact the OHI team (bbest@nceas.ucsb.edu or lowndes@nceas.ucsb.edu) to create a repository for your group. The repository will be stored on github.com and called `OHI-Science/[assessment]`: for example, `github.com/OHI-Science/ohi-israel`.
-When your repository has been created, enter the url in to an internet browser (for example, `github.com/OHI-Science/ohi-israel`). Click `Download ZIP`.  
-  
-> ![](./fig/download_zip_sk.png)  
-  
-### Working locally
 
-Unzip the downloaded folder `[assessment]-master` and save the folder on your computer. We recommend creating a folder called `github` in your root directory and saving your repository to this file path: `~/github/[assessment]`. This will make collaborating much simpler since everyone will work with the same file path. 
-
-You will work on your computer to change the files in `~/github/[assessment]` to reflect the desired modifications your team has identified for your regional assessment.
 
 # Using the Toolbox for a Regional Assessment
 
-This page explains how to incorporate all of the pre-Toolbox decisions your team has made for your regional assessment into the OHI framework and your repository. Having a good understanding of how the Toolbox is structured can also help identify what must be modified for a regional assessment, particularly with data and models. This page assumes a good understanding of the Toolbox file system.  
+As your team finalizes which data should be included in the assessment and develops goal models, you can incorporate this information into your repository. Data files can be updated with any software, but goal models will be updated in R. With any modifications you sync to the online repository, the Toolbox will automatically recalculate goal scores. Calculations can also be done locally by running `subcountry2014/calculate_scores.R`.
 
-The most common modifications you will make to your repository are:
+This section gives instruction and examples for the most common modifications you will make to your repository:
 
 - **modifying pressures and resilience matrices**
 - **modifying and creating data layers for status, trend, pressures and resilience**
@@ -1015,15 +986,62 @@ The most common modifications you will make to your repository are:
 - **removing goals**
 
 
-These changes are to be made in the following files (see sections below for detailed instructions):
+The files you will modify are identified in the figure below:
 
 ![](./fig/modifying_scenario_tbx.png)
 
+## Modifying and creating data layers
+
+Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All template layers provided in your repository are the global values from the 2014 assessment. 
+
+![](https://docs.google.com/drawings/d/1EVlceWpGgA9r7hypBz1mDXBbtjJAq1Bj8Az42Lhkal0/pub?w=960&h=720)  
+
+* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
+* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would incorrectly increase the nation's GDP serveral times), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+
+Both types of data layers are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
+
+**There are several steps to follow when working with data layers:**
+
+1. Modify or create data layer with proper formatting
+2. Save the layer in the `layers` folder
+3. Register the layer in `layers.csv`
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
+
+### Create data layers with proper formatting
+
+The OHI Toolbox expects each data layer to be in its own *.csv* file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. See the 'Formatting data for the Toolbox' section above for more information. 
+
+### Save data layers in the *layers* folder
+
+When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
+  
+### Register data layers in *layers.csv*  
+  
+When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
+  
+  ![](https://docs.google.com/drawings/d/1PPNNR4ljPVr0fGElGtOXhyLIfRwsJX4lAdBXEJO797s/pub?w=960&h=720)  
+  
+However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
+
+ + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
+ + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
+ + **name:** Add a longer title for the data layer: this will be displayed on your project website.
+ + **description:** Add a longer description of the new data layer this will be displayed on your project website.
+ + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
+ + **units:** Add a description about the *units* chosen in the *fld_value* column above.
+ + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the `layers` folder.
+ + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
+
+### Check pressures and resilience matrices
+
+If the new or modified layer is a pressures layer, check again that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data. 
+
 ## Modifying pressures matrices
 
-Previous decisions made with your team will identify if any pressures layers should be added to the pressures matrices, and if so, which goals the pressure affects and what weight they should have. Then, you can transfer this information into the Toolbox's `pressures_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder). It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data.  
+Your team will identify if any pressures layers should be added to the pressures matrices, and if so, which goals the pressure affects and what weight they should have. You can transfer this information into the Toolbox's `pressures_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder). It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data. In modifying pressures, you will need to consider whether data layers can be updated or added, and whether data layers map onto goals appropriately in the local context. 
 
-Adding these pressure layers to the Toolbox requires the following steps:
+Adding a new pressure to the pressures matrix requires the following steps:
 
 > 1. Create new pressure layer(s) and save in the `layers` folder
 > 2. Register pressure layer(s) in `layers.csv` 
@@ -1032,12 +1050,11 @@ Adding these pressure layers to the Toolbox requires the following steps:
   + b. Identify the goals affected and set the weighting
   + c. Modify the resilience matrix (if necessary) 
 
-We will now go through the following steps using the input and output effects of desalination operations as an example (adding two new pressure layers).
-
+The following is an example of adding two new pressures layers.
 
 ### Create the new pressure layers and save in the `layers` folder
 
-Create the new data layers with a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
+If you will create a new data layer, give it a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
 
 * *po_* = pollution
 * *hd_* = habitat destruction
@@ -1050,10 +1067,7 @@ So for example, `po_trash` is a pollution layer with trash on beaches, and `sp_a
 
 In the current example, the two new layers created to account for the input and output effects of desalination operations will be called *po_desal_in*, and *po_desal_out*.
 
-- for each region
-- compliance reports
-- rescale from 0 to 1
-- save in `layers` folder
+Assume that these new layers have scores from 0 to 1, with values for each region in your study area, and have been saved in `layers` folder.
 
 ### Register the new pressure layers in `layers.csv`
 
@@ -1061,28 +1075,28 @@ Add two new rows in `layers.csv`, and register the new pressure layers by fillin
 
 ![](./fig/register_pressure.png)
 
-### Register the new layers in `pressure_matrix.csv`.**  
+### Register the new layers in `pressure_matrix.csv`**  
 
 `pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name.
 
-**3a. Set the pressure category**  
+#### Set the pressure category
 
-This step should simply be transferring previous decisions made by your team into the Toolbox format. Each pressure category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
+This step requires transferring previous decisions made by your team into `pressures_matrix.csv`. Each pressure category is calculated separately before being combined with the others, so it is important to register the new pressure with the appropriate category prefix decided by your regional assessment team.  
 
-**3b. Identify the goals affected and set the weighting** 
+#### Identify the goals affected and set the weighting
 
-This step is also transferring prior decisions into the Toolbox format. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+This step also requries transferring prior decisions into `pressures_matrix.csv`. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
 
 ![](./fig/register_new_pressures.png)
 
-**3c. Modify the resilience matrix (if necessary)** 
+### Modify the resilience matrix (if necessary)
 
-Remember, 'resilience' is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures. The addition of new pressure layers may therefore  warrant the addition of new resilience layers that were not previously relevant. Similarly, the removal of pressure layers may warrant the removal of now irrelevant resilience layers. See below for instructions and examples about modifying resilience matrices.
+Resilience in the Ocean Health Index is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures. The addition of new pressure layers may therefore warrant the addition of new resilience layers that were not previously relevant. Similarly, the removal of pressure layers may warrant the removal of now irrelevant resilience layers. See below for instructions and examples about modifying resilience matrices.
 
 
 ## Modifying resilience matrices
 
-Previous decisions made with your team will identify if any resilience layers should be added to the resilience matrices, and if so, which goals/pressures the resilience affects and what weight they should have. Then, you can transfer this information into the Toolbox's `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
+Previous decisions made with your team will identify if any resilience layers should be added to the resilience matrices, and if so, which goals/pressures the resilience affects and what weight they should have. Then, you can transfer this information into `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
 
 `resilience_matrix.csv` maps the different types of resilience (columns) with the goals that they affect (rows). New resilience layers may be added to `resilience_matrix.csv` based on finer-scale local information either in response to a new pressures layer, or as a new independent measure. Any added layer must be associated with a pressures layer that has a weight of 2 or 3 in the Ocean Health Index framework so that resilience measures can mitigate pressures in each region.
 
@@ -1092,23 +1106,20 @@ Each goal must have a resilience measure associated with it. In the figure below
   
 ### Updating resilience matrix with local habitat information
 
-In this example we will borrow from the experience of `ohi-israel`, where they assessed habitats in the Habitats (HAB) sub-goal that were not included in global assessments `ohi-global`. Therefore, the resilience matrix may need some revision.  
+In this example we will borrow from the experience of `ohi-israel`, where they assessed habitats in the Habitats (HAB) sub-goal that were not included in global assessments `ohi-global`. Therefore, the resilience matrix needed some revision.  
 
 The habitats assessed for `ohi-israel` are:
 
 > `rocky_reef, sand_dunes, soft_bottom`
 
-***Layers affected:***  
+Updates are required for several files:
 
 * resilience_matrix.csv
 * resilience_weights.csv (only if adding new resilience layers)   
 
-***Scripts affected:***  
+#### Template resilience layers
 
-* none (but may need to create a simple code to generate modified layers)   
-
-***Default resilience layers:***   
-The full list of layers used to calculate resilience in `ohi-global` are:
+The full list of layers included in the template resilience matrix are:
 
 > `alien_species,  cites,  fishing_v1,  fishing_v1_eez,	fishing_v2_eez,	fishing_v3,	fishing_v3_eez,	habitat,	habitat_combo,	habitat_combo_eez,	li_gci,	li_sector_evenness,	mariculture,	msi_gov,	species_diversity,	species_diversity_3nm,	tourism,	water,	wgi_all`
 
@@ -1124,7 +1135,7 @@ The remaining layers will apply to certain habitats, but not others. We focus on
 
 > `fishing_v1, fishing_v1_eez, fishing_v2_eez, fishing_v3, fishing_v3_eez, habitat, habitat_combo,	habitat_combo_eez, mariculture, species_diversity, species_diversity_3nm,	tourism`
 
-**To determine how to modify these resilience layers:**
+#### Determining how to modify these resilience layers
 
 * If the new habitat occurs only along the coast, we should use `tourism` and `species_diversity_3nm`, otherwise, only use `species_diversity`. 
     + `sand_dunes` should use `tourism` and `species_diversity_3nm`,
@@ -1178,70 +1189,6 @@ habitat_combo_eez | | | CBD_hab | | MPA_eez
 * write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
 
 
-## Modifying and creating data layers
-
-### Overview
-
-Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All  layers provided in your regional assessment repo are the global values from the 2014 assessment. 
-
-![](./fig/layers_folder_location_global2013.png)  
-
-* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
-* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would greatly increase the nation's GDP), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
-
-Both types of dat layers are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
-
-**There are several steps to follow when working with data layers:**
-
-1. Modify or create data layer with proper formatting
-2. Save the layer in the `layers` folder
-3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
-
-### Create data layers with proper formatting
-
-The OHI Toolbox App expects each data layers to be in its own .csv file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. 
-
-The following is an excerpt from the 'Formatting data for the Toolbox' section above. For more information about formatting and gapfilling, please consult that section.
-
-The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
-
-1. At least five years of data are available, 
-2. There are no data gaps
-3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
-
-**Example of data in the appropriate format:**
-
-![](./fig/formatting_data_example.png)
-
-
-### Save data layers in the *layers* folder
-
-When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
-
-![](./fig/layer_example_israel2014.png)
-  
-### Register data layers in *layers.csv*  
-  
-When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
-  
-  ![](./fig/layers_israel2014.png)  
-  
-However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
-
- + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
- + **name:** Add a longer title for the data layer: this will be displayed in the Toolbox interface.
- + **description:** Add a longer description of the new data layer this will be displayed in the Toolbox interface.
- + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
- + **units:** Add a description about the *units* chosen in the *fld_value* column above.
- + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the `layers` folder.
- + **fld_id_num:** Area designation that applies to the newly created data layer, such as: *rgn_id* and *fao_id*.
-
-### Check pressures and resilience matrices
-
-If the new or modified layer is a pressures layer, check again that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data. 
-
 ## Modifying goal models
 In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
   
@@ -1252,15 +1199,17 @@ In the discussion on data layers above, when an existing layer is still used as 
 
 ### Update *functions.r*
 
-To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. In RStudio, there is a navigation pane that can be used to navigate between them:
+To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. A member of your team with the ability to write R code will need to translate the updated goal model into the Toolbox format. Follow the structure of existing goal models in order to incorpoarte the new data layers, noting the use of certain R packages for data manipulation. 
+
+The image below shows the navigation pane in RStudio that can be used to easily navigate between goal models. 
 
 ![](./fig/navigation_functions.png)
 
 ### Check and possibly update *goals.csv*
 
-*goals.csv* provides input information for *functions.r*, particularly about goal weighting and function calls. It also includes descriptions about goals and sub-goals, which is presented in the Toolbox Application. 
+*goals.csv* provides input information for *functions.r*, particularly about goal weighting and function calls. It also includes descriptions about goals and sub-goals, which is presented on the project website. 
 
-Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a percentage of the goal totals. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
+Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a proportion of the goal totals. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
 
 ![](./fig/registering_goals.png)
 
@@ -1272,57 +1221,56 @@ Changing goal weights will be done here by editing the value in the *weight* col
 
 ### Example modification: 
 
-In this example we will walk through how to add a new layer to a goal model by following these steps:
+Suppose in your study area, there are new data to include in the artisanal fishing opportunity goal to refine understanding of this goal. Your team has decided to add an 'artisanal access' component to the goal model because of locally available data. Once this data is obtained and properly formatted, the data layer is saved as `ao_access_art`. To include this new information in the goal model, you will need to do the following:
 
-1. decide to add artisanal access component to the model because of locally available data
-2. prepare the data file; save layer ao_access_art
-3. register in `layers.csv`
-4. update goal model in `functions.r`
-5. update goal call in `goals.csv`
+1. register the layer in `layers.csv`
+2. update the goal model in `functions.r`
+3. update the goal call in `goals.csv`
 
-Steps 1. and 2. are done outside of the Toolbox
 
-> 3. register in `layers.csv`
+> 1. register in `layers.csv`
 
 ![](./fig/new_layer.png)
 
 
-> 4. update goal model
+> 2. update goal model
 
 ![](./fig/functions_explained.png)
 
-> 5. update goal call in goals.csv
+> 3. update goal call in goals.csv
 
 [develop]
 
 
 ## Removing goals
-If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal:
+If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal. Failing to delete all referenced layers after the goal is deleted will result in errors.
 
 1. `functions.r`
 2. `goals.csv`
 3. `pressures_matrix.csv`
 4. `resilience_matrix.csv`
 
-![*Failing to delete all referenced layers after the goal is deleted will prompt a number of error messages.*](./fig/remove_goal.png)
+![](./fig/remove_goal.png)
 
 **Example: Removing carbon storage (CS) goal**
 
-1) Remove the carbon storage (CS) goal model from `functions.r`:
+To completely remove the carbon storage goal from Index calculations, you will do the following. 
 
-![Delete the highlighted text that references the CS layers and calculates CS goal status, trend, and scores](./fig/functions_delete.png)
+1) Remove the carbon storage (CS) goal model from `functions.r`. Delete the highlighted text in the figure below that references the CS layers and calculates CS goal status, trend, and scores.
 
-2) Remove the CS row from `goals.csv`:
+![](./fig/functions_delete.png)
 
-![Delete the highlighted row that contains the CS goal](./fig/goals_delete.png)
+2) Remove the CS row from `goals.csv`. Delete the highlighted row in the figure below that contains the CS goal.
 
-3) Remove all CS rows from `pressures_matrix.csv`:
+![](./fig/goals_delete.png)
 
-![Delete the highlighted rows that contain CS pressures](./fig/delete_pressures.png)
+3) Remove all CS rows from `pressures_matrix.csv`. Delete the highlighted rows in the figure below that contain CS pressures.
 
-4) Remove all CS rows from `resilience_matrix.csv`:
+![](./fig/delete_pressures.png)
 
-![Delete the highlighted rows that contain CS resilience](./fig/delete_resilience.png)
+4) Remove all CS rows from `resilience_matrix.csv`. Delete the highlighted rows in the figure below that contain CS resilience.
+
+![](./fig/delete_resilience.png)
 
 ## Other example modifications
 
