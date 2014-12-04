@@ -27,13 +27,8 @@ You do not want it to load `ohicore` or to save anything in your workspace. You 
 ### 'The following components for [goal] are not in the aggregation layer [layer]...'
 
 Example:
-```
-Running Setup()...
-Calculating Pressures...
-The following components for NP are not in the aggregation layer np_harvest_product_weight categories (fish_oil, ornamentals, seaweeds): corals, shells, sponges
-Error in data.frame(names(P), P) : 
-  arguments imply differing number of rows: 0, 1
-```  
+
+> ![](./fig/troubleshoot_aggregation_layer.png)
   
   > ![](./fig/tblshoot_pressures.png)  
   
