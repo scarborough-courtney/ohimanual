@@ -226,24 +226,7 @@ This section describes the files within your GitHub repository.
 
 ## draft branch
 
-```
-subcountry2014 folder
-|-- conf
-|   |-- config.R                # configuration parameters
-|   |-- functions.R             # functions for calculating goals
-|   |-- goals.csv               # table of goal parameters
-|   |-- pressures_matrix.csv    # table of goals (rows) vs pressure layers (cols)
-|   |-- resilience_matrix.csv   # table of goals (rows) vs resilience layers (cols)
-|   |-- resilience_weights.csv  # table of weights per resilience layer
-|-- layers                      # layers
-|   |-- *.csv                   # layer data files
-|   |-- ...
-|-- reports                     # table and figure results
-|-- spatial                     # spatial
-|-- tmp                         # temporary files
-|-- .travis.yml                 # directives to calculate scores and publish
-```
-
+![](./fig/draft_branch.png)
 
 
 ### Assessments and scenarios
@@ -739,12 +722,7 @@ In R, the `reshape` package has the `melt` command, which will melt the data fro
 
 Example code using the *melt* command in the *reshape2* library. Assume the data above is in a variable called *data_wide*:
 
-```
-install.packages('reshape2')
-library(reshape2)
-data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
-data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
-```
+![](./fig/melt_code.png)
 
 This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
 
@@ -1020,7 +998,7 @@ When you modify existing or create new data layers, we recommend saving this as 
   
 When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
-  ![](https://docs.google.com/drawings/d/1PPNNR4ljPVr0fGElGtOXhyLIfRwsJX4lAdBXEJO797s/pub?w=960&h=720)  
+> ![](./fig/register_layers.png)  
   
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
@@ -1110,7 +1088,7 @@ In this example we will borrow from the experience of `ohi-israel`, where they a
 
 The habitats assessed for `ohi-israel` are:
 
-> `rocky_reef, sand_dunes, soft_bottom`
+> `rocky_reef`, `sand_dunes`, `soft_bottom`
 
 Updates are required for several files:
 
@@ -1121,19 +1099,19 @@ Updates are required for several files:
 
 The full list of layers included in the template resilience matrix are:
 
-> `alien_species,  cites,  fishing_v1,  fishing_v1_eez,	fishing_v2_eez,	fishing_v3,	fishing_v3_eez,	habitat,	habitat_combo,	habitat_combo_eez,	li_gci,	li_sector_evenness,	mariculture,	msi_gov,	species_diversity,	species_diversity_3nm,	tourism,	water,	wgi_all`
+> `alien_species`,  `cites`,  `fishing_v1`,  `fishing_v1_eez`,	`fishing_v2_eez`,	`fishing_v3`,	`fishing_v3_eez`,	`habitat`,	`habitat_combo`,	`habitat_combo_eez`,	`li_gci`,	`li_sector_evenness`,	`mariculture`,	`msi_gov`,	`species_diversity`,	`species_diversity_3nm`,	`tourism`,	`water`,	`wgi_all`
 
 Some of these layers capture general aspects of governance that apply to the protection of any habitat. These are:  
 
-> `alien_species, cites, msi_gov, water, wgi_all`
+> `alien_species`, `cites`, `msi_gov`, `water`, `wgi_all`
 
 Two layers only apply to the livelihoods and economies goal (LE), so they should be excluded from HAB resilience:
 
-> `li_gci,  li_sector_evenness`
+> `li_gci`, `li_sector_evenness`
 
 The remaining layers will apply to certain habitats, but not others. We focus on these to determine how to adapt the HAB resilience calculation for `ohi-israel`. They are:
 
-> `fishing_v1, fishing_v1_eez, fishing_v2_eez, fishing_v3, fishing_v3_eez, habitat, habitat_combo,	habitat_combo_eez, mariculture, species_diversity, species_diversity_3nm,	tourism`
+> `fishing_v1`, `fishing_v1_eez`, `fishing_v2_eez`, `fishing_v3`, `fishing_v3_eez`, `habitat`, `habitat_combo`,	`habitat_combo_eez`, `mariculture`, `species_diversity`, `species_diversity_3nm`,	`tourism`
 
 #### Determining how to modify these resilience layers
 
@@ -1376,24 +1354,7 @@ where *stock_id* is the unique identifier for each stock that was used in the in
 
 In the CMSY R script, in the PARAMETERS section, replace the following:
 
-```
-start_r     <- c(0.01,10)  ## disable this line if you use resilience  
-with 
-
-  if(res == "Very low"){
-    start_r  <- c(0.015, 0.1)
-  } else { 
-    if(res == "Low"){
-      start_r  <- c(0.05,0.5)
-    } else { 
-      if(res == "High"){
-        start_r  <- c(0.6,1.5)   
-      } else {
-        start_r  <- c(0.1,1)
-      }
-    }
-  }
-```
+> ![](./fig/include_resilience.png)
 
 **2. Make assumptions about fisheries regulations:**
 
@@ -1669,13 +1630,8 @@ You do not want it to load `ohicore` or to save anything in your workspace. You 
 ### 'The following components for [goal] are not in the aggregation layer [layer]...'
 
 Example:
-```
-Running Setup()...
-Calculating Pressures...
-The following components for NP are not in the aggregation layer np_harvest_product_weight categories (fish_oil, ornamentals, seaweeds): corals, shells, sponges
-Error in data.frame(names(P), P) : 
-  arguments imply differing number of rows: 0, 1
-```  
+
+> ![](./fig/troubleshoot_aggregation_layer.png)
   
   > ![](./fig/tblshoot_pressures.png)  
   
