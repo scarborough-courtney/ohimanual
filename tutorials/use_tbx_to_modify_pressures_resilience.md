@@ -71,7 +71,7 @@ In this example we will borrow from the experience of `ohi-israel`, where they a
 
 The habitats assessed for `ohi-israel` are:
 
-> **rocky_reef, sand_dunes, soft_bottom**
+> `rocky_reef`, `sand_dunes`, `soft_bottom`
 
 Updates are required for several files:
 
@@ -82,7 +82,7 @@ Updates are required for several files:
 
 The full list of layers included in the template resilience matrix are:
 
-> **alien_species,  cites,  fishing_v1,  fishing_v1_eez,	fishing_v2_eez,	fishing_v3,	fishing_v3_eez,	habitat,	habitat_combo,	habitat_combo_eez,	li_gci,	li_sector_evenness,	mariculture,	msi_gov,	species_diversity,	species_diversity_3nm,	tourism,	water,	wgi_all**
+> `alien_species`,  `cites`,  `fishing_v1`,  `fishing_v1_eez`,	`fishing_v2_eez`,	`fishing_v3`,	`fishing_v3_eez`,	`habitat`,	`habitat_combo`,	`habitat_combo_eez`,	`li_gci`,	`li_sector_evenness`,	`mariculture`,	`msi_gov`,	`species_diversity`,	`species_diversity_3nm`,	`tourism`,	`water`,	`wgi_all`
 
 Some of these layers capture general aspects of governance that apply to the protection of any habitat. These are:  
 
