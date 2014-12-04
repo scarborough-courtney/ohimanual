@@ -127,12 +127,7 @@ In R, the `reshape` package has the `melt` command, which will melt the data fro
 
 Example code using the *melt* command in the *reshape2* library. Assume the data above is in a variable called *data_wide*:
 
-```
-install.packages('reshape2')
-library(reshape2)
-data_melt = melt(data=data_wide, id.vars=c('Region', 'DataLayer'), variable.name='Year')
-data_melt = data_melt[order(data_melt$DataLayer, data_melt$Region),]
-```
+![](./fig/melt_code.png)
 
 This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
 
