@@ -132,17 +132,18 @@ file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive
 system('cd ~/github/ohi-science.github.io; git add -A; git commit -m "update manual"; git push')
 
 ## to resize already existing figures. Check folder paths.
-# dir.create('~/github/ohimanual/tutorials/fig/resized', showWarnings=F)
-# for (f in list.files('~/github/ohimanual/tutorials/fig/originals','*.\\.png$')){ # f = list.files('~/github/ohimanual/tutorials/fig','*.\\.png$')[1]
-#   f_old = file.path('~/github/ohimanual/tutorials/fig/originals', f)
-#   f_new = file.path('~/github/ohimanual/tutorials/fig/resized', f)
-#   dpi = 72
-#   width_in = 10
-#   height_in = 6
-#   if (!file.exists(f_new)){
-#     system(sprintf("convert -density %d -resize '%dx%d' %s %s", dpi, width_in * dpi, height_in * dpi, f_old, f_new))
-#   }
-# }
+dir.create('~/github/ohimanual/tutorials/fig/_resized', showWarnings=F)
+for (f in list.files('~/github/ohimanual/tutorials/fig/_originals','*.\\.png$')){ # f = list.files('~/github/ohimanual/tutorials/fig','*.\\.png$')[1]
+  f_old = file.path('~/github/ohimanual/tutorials/fig/_originals', f)
+  f_new = file.path('~/github/ohimanual/tutorials/fig/_resized', f)
+  dpi = 72
+  width_in = 10
+  height_in = 6
+  if (!file.exists(f_new)){
+    system(sprintf("convert -density %d -resize '%dx%d' %s %s", dpi, width_in * dpi, height_in * dpi, f_old, f_new))
+  }
+}
+
 
 # render docx ----
 render(
