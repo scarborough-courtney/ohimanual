@@ -102,24 +102,7 @@ where *stock_id* is the unique identifier for each stock that was used in the in
 
 In the CMSY R script, in the PARAMETERS section, replace the following:
 
-```
-start_r     <- c(0.01,10)  ## disable this line if you use resilience  
-with 
-
-  if(res == "Very low"){
-    start_r  <- c(0.015, 0.1)
-  } else { 
-    if(res == "Low"){
-      start_r  <- c(0.05,0.5)
-    } else { 
-      if(res == "High"){
-        start_r  <- c(0.6,1.5)   
-      } else {
-        start_r  <- c(0.1,1)
-      }
-    }
-  }
-```
+> ![](./fig/include_resilience.png)
 
 **2. Make assumptions about fisheries regulations:**
 
