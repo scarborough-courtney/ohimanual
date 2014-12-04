@@ -28,7 +28,7 @@ When you modify existing or create new data layers, we recommend saving this as 
   
 When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
   
-  ![](https://docs.google.com/drawings/d/1PPNNR4ljPVr0fGElGtOXhyLIfRwsJX4lAdBXEJO797s/pub?w=960&h=720)  
+  ![](register_layers.png)  
   
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
