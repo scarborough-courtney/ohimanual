@@ -108,17 +108,41 @@ pfx = tools::file_path_sans_ext(out_md)
 render(
   out_md, 
   html_document(
-    number_sections=T, fig_width = 7, fig_height = 5, fig_retina = 2, fig_caption = T, smart=T,
+    number_sections=T, fig_width = 3, fig_height = 2, fig_retina = 2, fig_caption = T, smart=T,
     self_contained=F, theme='default',
     highlight='default', mathjax='default', template='default',
     toc=T, toc_depth=3), 
   clean=T, quiet=F,
   output_file = paste0(pfx, '.html'))
-file.copy(paste0(pfx, '.html'), '~/github/ohi-science.github.io/manual/index.html', overwrite=T)
+cat('---
+layout: page
+title : Manual
+header : Manual for Ocean Health Index
+group: navigation
+---
+{% include JB/setup %}
+', file='~/github/ohi-science.github.io/manual/index.html')
+cat(
+  readLines(paste0(pfx, '.html')), 
+  file='~/github/ohi-science.github.io/manual/index.html',
+  append=T)
+#file.copy(paste0(pfx, '.html'), '~/github/ohi-science.github.io/manual/index.html', overwrite=T)
 dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
 file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
+system('cd ~/github/ohi-science.github.io; git add -A; git commit -m "update manual"; git push')
 
-
+## to resize already existing figures. Check folder paths.
+# dir.create('~/github/ohimanual/tutorials/fig/resized', showWarnings=F)
+# for (f in list.files('~/github/ohimanual/tutorials/fig/originals','*.\\.png$')){ # f = list.files('~/github/ohimanual/tutorials/fig','*.\\.png$')[1]
+#   f_old = file.path('~/github/ohimanual/tutorials/fig/originals', f)
+#   f_new = file.path('~/github/ohimanual/tutorials/fig/resized', f)
+#   dpi = 72
+#   width_in = 10
+#   height_in = 6
+#   if (!file.exists(f_new)){
+#     system(sprintf("convert -density %d -resize '%dx%d' %s %s", dpi, width_in * dpi, height_in * dpi, f_old, f_new))
+#   }
+# }
 
 # render docx ----
 render(
