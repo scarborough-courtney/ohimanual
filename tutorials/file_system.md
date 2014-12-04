@@ -4,24 +4,7 @@ This section describes the files within your GitHub repository.
 
 ## draft branch
 
-```
-subcountry2014 folder
-|-- conf
-|   |-- config.R                # configuration parameters
-|   |-- functions.R             # functions for calculating goals
-|   |-- goals.csv               # table of goal parameters
-|   |-- pressures_matrix.csv    # table of goals (rows) vs pressure layers (cols)
-|   |-- resilience_matrix.csv   # table of goals (rows) vs resilience layers (cols)
-|   |-- resilience_weights.csv  # table of weights per resilience layer
-|-- layers                      # layers
-|   |-- *.csv                   # layer data files
-|   |-- ...
-|-- reports                     # table and figure results
-|-- spatial                     # spatial
-|-- tmp                         # temporary files
-|-- .travis.yml                 # directives to calculate scores and publish
-```
-
+![](./fig/draft_branch.png)
 
 
 ### Assessments and scenarios
