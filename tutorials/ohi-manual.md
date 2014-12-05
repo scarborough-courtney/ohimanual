@@ -972,7 +972,7 @@ The files you will modify are identified in the figure below:
 
 Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All template layers provided in your repository are the global values from the 2014 assessment. 
 
-![](https://docs.google.com/drawings/d/1EVlceWpGgA9r7hypBz1mDXBbtjJAq1Bj8Az42Lhkal0/pub?w=960&h=720)  
+![](./fig/layers_directory.png)  
 
 * Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
 * Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would incorrectly increase the nation's GDP serveral times), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
