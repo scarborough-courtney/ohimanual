@@ -129,9 +129,9 @@ cat(
   file='~/github/ohi-science.github.io/manual/index.html',
   append=T)
 # #file.copy(paste0(pfx, '.html'), '~/github/ohi-science.github.io/manual/index.html', overwrite=T)
-# dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
-# file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
-# system('cd ~/github/ohi-science.github.io; git pull; git add -A; git commit -m "update manual"; git push')
+dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
+file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
+system('cd ~/github/ohi-science.github.io; git pull; git add -A; git commit -m "update manual"; git push')
 
 ## to resize already existing figures. Check folder paths.
 # dir.create('~/github/ohimanual/tutorials/fig/_resized', showWarnings=F)

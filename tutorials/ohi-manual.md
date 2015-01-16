@@ -22,7 +22,7 @@ This manual provides information for:
 ---
 output: html_document
 ---
-# Introduction to OHI Regional Assessments
+# Introduction to OHI Assessments
 
 Assessments using the OHI framework can be most relevant to policy and management decisions when they are conducted at smaller spatial scales (e.g., countries, states, provinces, ecoregions, bays, etc.). Using ten criteria (called goals), the Index scores on a scale of 0 to 100 how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets). Relevant goal models are developed based on the best available information, which can be either raw data or composite data, or previously developed indicators.  
 
@@ -170,7 +170,7 @@ The best way to do this is to begin with the WebApps. As described above, most c
 
 You should also be familiar with the approaches taken by other assessments adapted from the global context, including Brazil, the US West Coast, and Fiji. You can find these studies at ohi-science.org.  
 
-While our team of scientists and managers is prepared to provide guidance for regional assessments, you should follow the steps in this training program to complete your assessment as autonomously as possible.
+While our team of scientists and managers is prepared to provide guidance for assessments, you should follow the steps in this training program to complete your assessment as autonomously as possible.
 
 
 ## Points to remember
