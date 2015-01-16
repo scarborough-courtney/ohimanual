@@ -1,4 +1,4 @@
-# Using the Toolbox for a Regional Assessment
+# Using the Toolbox
 
 As your team finalizes which data should be included in the assessment and develops goal models, you can incorporate this information into your repository. Data files can be updated with any software, but goal models will be updated in R. With any modifications you sync to the online repository, the Toolbox will automatically recalculate goal scores. Calculations can also be done locally by running `subcountry2014/calculate_scores.R`.
 

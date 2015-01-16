@@ -11,21 +11,23 @@ library(stringr)
 stopifnot(file.copy('~/github/ohimanual/tutorials/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
 
 # set variables ----
-title = 'The Ocean Health Index Toolbox Manual'
+title = 'The Ocean Health Index Assessment Manual'
 wd = '~/github/ohimanual/tutorials'
 in_md = c(
   'README.md',
+  'intro_assessment.md',
   'overview_webapp.md',
-  'intro_regional_assessment.md',
-  'conduct_regional_assessment.md',
+  'before_conduct_assessment.md',
+  'conduct_assessment.md',
+  'intro_to_tbx.md',
   'file_system.md',
   'gathering_appropriate_data.md',
   'update_pressures_resilience.md',
   'formatting_data.md',
-  'install_tbx_regional_assessment.md',
+  'install_tbx.md',
   'accessing_a_repo_with_github.md',
   'github_architecture.md',
-  'use_tbx_regional_assessment.md',
+  'use_tbx.md',
   'use_tbx_to_modify_data_layers.md',
   'use_tbx_to_modify_pressures_resilience.md',
   'use_tbx_to_modify_goal_models.md',

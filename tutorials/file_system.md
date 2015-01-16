@@ -1,20 +1,20 @@
 ## OHI Toolbox File System
-This section describes the files within your GitHub repository.
 
+This section describes the files within your GitHub repository, which can be viewed online at with your country’s three-letter code. For example, https://github.com/OHI-Science/can. You are able to view all the files in the repository online through GitHub. You are also able to download the repository from the website, but to be able to sync any modifications back to GitHub, you will need to ‘**clone**’ this repository following the steps in the ‘Installing the Toolbox’ section below.  
 
-## draft branch
-
-![](./fig/draft_branch.png)
+The following is an orientation to the Toolbox file system, whether you are viewing it online through GitHub, or have downloaded or cloned it to your computer.
 
 
 ### Assessments and scenarios
-Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
 
-In this example, **ecu** is the assessment folder and **subcountry2014** is the scenario.
+Your **assessment**, i.e. your GitHub repository, contains a several files. The most important is your **scenario** folder: *subcountry2014* (other files are specific to GitHub and will not change). Your scenario folder contains all the files needed to calculate scores, and they are described in detail below. This scenario folder is named *subcountry2014* to indicate that it is based on data from the 2014 global assessment, with data extracted per subcountry region (i.e. state, province, district, as per gadm.org). You can rename your scenario folder to better reflect the spatial and temporal scale of your assessment after you have set up your GitHub account. Eventually, you will likely have multiple scenario folders that contain analysis for different years or for exploring policy alternatives.
+
+![](https://docs.google.com/drawings/d/1eHViTehnAuxSDw1fYI54C3X5YgBktGtaVt71R3OXYeE/pub?w=960&h=720)
+
+In this example, **Ecuador (ecu)** is the assessment repository and *subcountry2014* is the scenario folder.
 
 ![](./fig/ohiglobal_file_location.png)
 
-The **subcountry2014** folder contains all the data inputs used to calculate the OHI score for that scenario (illustrated below), as well as the files that are necessary to run the calculations.
 
 ![](./fig/scenario_folder_overview.png)
 
