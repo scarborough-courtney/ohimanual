@@ -2,12 +2,15 @@
   
 ## The Ocean Health Index
 
-**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern *et al*. 2012 in *Nature* (available at [ohi-science.org](http://ohi-science.org)), we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** to enable others to conduct assessments on their own using the OHI framework. The Toolbox is more than simply software to calculate scores; it is an ecosystem of materials that facilitate groups to collaborate throughout the assessment process. Here, the **Ocean Health Index Manual** describes how to use the Toolbox.
+**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern *et al*. 2012 in *Nature*, we have conducted global assessments annually (in 2013, 2014, and ongoing), and have conducted smaller-scale assessments for the U.S. West Coast (Halpern *et al.* 2014), Fiji (Selig *et al.* in press), and Brazil (Elfes *et al.* 2014).
 
-TEST
-## The Ocean Health Index Toolbox
+We have also developed the **OHI Toolbox** and **WebApps** to enable any group to conduct independent assessments using the OHI framework and modifying it to their needs. The Toolbox enables the OHI framework to be customized to any area of interest, incorporating whatever goals, data, indicators, and priorities regarding ocean-derived benefits that are relevant and available to the chosen spatial scale. Information is presented through the WebApps, which are used for orientation, visualization, and reporting.   
 
-**The Ocean Health Index Toolbox** has been developed to facilitate Index assessments at any scale. The Toolbox enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen study area. The Toolbox can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
- 
-The Toolbox refers to a host of tools, accessible in several formats. The Toolbox is more than the software that calculates final scores (written in the software language R). The Toolbox also includes *repositories*, or folders, containing all files necessary for data and parameter settings. The filesystem provides structure for organizing and managing updated data (done using any software), and also contains goal models that can be modified (using R). The filesystem is accessed through an online collaborative platform, called Github. Github tracks changes by all collaborators through time, and saves all versions for comparison.  The filesystem , which can be done using any software, and has been created through an online collaborative platform that tracks changes through time.
+This manual provides information for: 
+
+1. Planning an assessment
+2. Navigating the OHI WebApp to visualize data at global and regional scales
+3. Modifying data and models within the Toolbox for an independent assessment
+4. Guidance for frequently asked questions and troubleshooting
+
 

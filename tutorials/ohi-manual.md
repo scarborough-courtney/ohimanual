@@ -1,39 +1,85 @@
 ---
-title: The Ocean Health Index Toolbox Manual
+title: The Ocean Health Index Assessment Manual
 ---
 
 # Introduction
   
 ## The Ocean Health Index
 
-**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern *et al*. 2012 in *Nature* (available at [ohi-science.org](http://ohi-science.org)), we have conducted annual global assessments to track changes in global ocean health. At the same time, we have been developing the **Ocean Health Index Toolbox** to enable others to conduct assessments on their own using the OHI framework. The Toolbox is more than simply software to calculate scores; it is an ecosystem of materials that facilitate groups to collaborate throughout the assessment process. Here, the **Ocean Health Index Manual** describes how to use the Toolbox.
+**The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern *et al*. 2012 in *Nature*, we have conducted global assessments annually (in 2013, 2014, and ongoing), and have conducted smaller-scale assessments for the U.S. West Coast (Halpern *et al.* 2014), Fiji (Selig *et al.* in press), and Brazil (Elfes *et al.* 2014).
 
-TEST
-## The Ocean Health Index Toolbox
+We have also developed the **OHI Toolbox** and **WebApps** to enable any group to conduct independent assessments using the OHI framework and modifying it to their needs. The Toolbox enables the OHI framework to be customized to any area of interest, incorporating whatever goals, data, indicators, and priorities regarding ocean-derived benefits that are relevant and available to the chosen spatial scale. Information is presented through the WebApps, which are used for orientation, visualization, and reporting.   
 
-**The Ocean Health Index Toolbox** has been developed to facilitate Index assessments at any scale. The Toolbox enables the Ocean Health Index framework to be customized to an area of interest, incorporating the data, indicators, and priorities regarding ocean-derived benefits that are relevant to the chosen study area. The Toolbox can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
- 
-The Toolbox refers to a host of tools, accessible in several formats. The Toolbox is more than the software that calculates final scores (written in the software language R). The Toolbox also includes *repositories*, or folders, containing all files necessary for data and parameter settings. The filesystem provides structure for organizing and managing updated data (done using any software), and also contains goal models that can be modified (using R). The filesystem is accessed through an online collaborative platform, called Github. Github tracks changes by all collaborators through time, and saves all versions for comparison.  The filesystem , which can be done using any software, and has been created through an online collaborative platform that tracks changes through time.
+This manual provides information for: 
+
+1. Planning an assessment
+2. Navigating the OHI WebApp to visualize data at global and regional scales
+3. Modifying data and models within the Toolbox for an independent assessment
+4. Guidance for frequently asked questions and troubleshooting
+
+
+
+---
+output: html_document
+---
+# Introduction to OHI Regional Assessments
+
+Assessments using the OHI framework can be most relevant to policy and management decisions when they are conducted at smaller spatial scales (e.g., countries, states, provinces, ecoregions, bays, etc.). Using ten criteria (called goals), the Index scores on a scale of 0 to 100 how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets). Relevant goal models are developed based on the best available information, which can be either raw data or composite data, or previously developed indicators.  
+
+**The process of conducting an OHI assessment is as valuable as the final results.** This is because while conducting an OHI assessment you will identify gaps in knowledge and data, produce decision-relevant information, and create an ocean alliance that combines knowledge and cultural values across disciplines. Conducting an OHI assessment requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.  
+
+Assessments can incorporate higher-resolution data and indicators, local priorities and preferences, and develop tailored goal models and reference points, which produce scores that better reflect local realities. If a goal is not relevant in the local context, it can be excluded entirely. Similarly, pressures and resilience measures can be refined using local data and indicators. Index scores are only as good as the data on which they are based. **Finding the best data and indicators available is crucial for obtaining meaningful findings that can help inform decision-making.**  
+
+OHI assessments most often involve several **regions** within an overall **study area**. For example, in the global assessment, there were 221 regions (nations and territories) within the study area (global coastal oceans). 
+
+![](./fig/global_v_brazil_map.png)  
+
+Goal scores are calculated for each region separately and then combined to produce an overall Index score for the region. Index scores are combined using an area-weighted average to produce the Index score for the overall study area.    
 
 
 # Overview of the OHI Toolbox App
 
-The Toolbox Application (App) has two **tabs**: **Data** and **Compare**. The **Data** tab provides several subtabs for viewing data (*Map*, *Histogram*, *Table*), and is the default tab when the Toolbox is launched. The **Compare** tab is most useful for error checking.
-  
-The **Branch/Scenario** is displayed in the upper-left corner of the Data tab. 
+## Background
 
-The GitHub branch is either "draft" if in the process of editing, or "published" if scores are in a final state. The term branch technically refers to how the data files are stored in GitHub:
+**OHI WebApps** are websites created to facilitate independent assessments, and one is available for nearly every coastal nation or territory: they are a ‘Starter Kit’. WebApps are available through http://ohi-science.org with a three-letter identifier. For example, Ecuador’s WebApp is found at http://ohi-science.org/ecu. 
+Each WebApp displays raw data layers\* and calculated OHI scores based on information extracted from global assessments. As such, they do not provide fine-scale resolution of data for each coastal nation or territory: the scores and data on which they are based are a starting point for an assessment to be conducted by an independent group. These data can be used as a default if better data for the region do not exist, but we encourage you to replace them wherever possible. (\*Note: each data component that is included in the OHI is called a **data layer** because it will be combined with others to calculate the goal scores.  Many data layers are rescaled from 0-1 to be combined with others on the same unitless scale.)  
 
-1. **draft** branch is for editing. This is the default branch and the main working area where existing scenario data files can be edited and new scenarios added.
+Boundaries for exclusive economic zones (EEZs) were identified by www.marineregions.org and the largest subcountry regions (i.e. provinces, states, districts) were identified by gadm.org. Subcountry region boundaries were extended offshore to divide the EEZ of each study area into offshore regions. These subcountry regions have been provided as a starting point, and are typically coastal states or provinces, which, in our experience, is consistent with the scale at which most policy decisions are made. However, it is possible to change the boundaries for the regions and the study area depending on your preferences.  
 
-2. **published** branch is a vetted copy of the draft branch, not for direct editing.
+OHI WebApps serve several purposes because they:
 
-An Ocean Health Index scenario contains all the files needed to calculate scores. By convention, scenarios are named with the spatial scale and year.
+1. allow for exploration of how the Index works: what data look like and which data are used in each goal 
+2. are a communication platform for an assessment team, since information is presented in a manner that is accessible to group members of different disciplines and technical capacities 
+3. can be used to set data gathering or goal model development priorities for the assessment
+4. display your assessment’s data and calculated scores once you have finalized and formatted your data and modified goal models.  
 
-## Data tab
+The information displayed on the website is stored online, in a **GitHub repository.** GitHub is an open-source development platform allows for multiple users to collaborate, track changes, and document work such as data files and code. Therefore, any changes made to the files contained within the GitHub repository will be displayed on the WebApp for all team members to view. See below for how to modify files using GitHub.  
+
+## Using the WebApp
+
+When first exploring a WebApp (for example, http://ohi-science.org/ecu), first note that it is possible to **translate** the site into any language that Google provides using the pull-down menu at the top.  
+
+![](https://docs.google.com/drawings/d/11Gojqw0Xz4kUo_uM1Y699EKO3qN_dae0w93ICzXJ2Pg/pub?w=960&h=720)
+
+The WebApp homepage provides several tabs for you to explore. The interactive **App** allows you to explore input data layers and output calculated scores for each region, and is explained fully in the following section. More detailed information is about the default **regions** and **data layers**, **goal models**, and **calculated scores** based on global data can be viewed in separate tabs, as well as through the App. 
+A quick reference about navigating the WebApp is available through the **Docs** tab. When your team has finalized data layers and updated goal models, these data and scores will be visualized through the WebApp.
+
+## The App
+
+The App allows you to explore and visualize input data layers and calculated output scores for each region in the study area. By default, global data are presented for each subcountry region in the study area, and scores are calculated for each region using those data.  
+
+The App displays this information through two tabs: Data and Compare. The **Data** tab provides several subtabs for viewing data (*Map*, *Histogram*, *Table*), and is the default tab when the Toolbox is launched. The **Compare** tab is most useful for comparing output scores when modifications are made to the underlying data or models (this provides a way to error check) once you have begun the process of calculating your own assessment.  
+
+The App provides two Branch/Scenario options to view, identified in the upper-left corner of the Data tab. The **Branch** options refer to the versions of the GitHub repository where data are stored. Branches start off as copies of the same repository, but can be modified independently of each other, enabling progress to be made on one (‘draft’ branch) while not altering the vetted original (‘published’ branch). These branches can be merged back together at any time. The App will display the ‘published branch’ by default; we recommend working on the ‘draft’ branch until your assessment is finalized, at which point you would merge the draft branch with the published branch.  
+
+**Scenario** folders contain all the files needed to calculate scores. Scenario folders can differ from each other based on the years included (i.e. 2014 would be a different scenario from 2015), or they can be used to explore outcomes of policy alternatives, such as implementation of a proposed Marine Protected Area network or fisheries regulations.
+
+
+## The App's Data tab
 
 ### Overview of display options
-The Data tab displays input data or calculated scores for each goal parameter, and presents the information as a map, histogram, or table. These options are presented as subtabs located above the map (the Map subtab is the default display option for the Data tab).
+
+The Data tab displays input data or calculated scores for each goal parameter, and presents the information as a map, histogram, or table. These options (*Map*, *Histogram*, *Table*) are presented as subtabs located the map. The Map subtab is the default display option for the Data tab, and all data presented is based on data from global assessments.
 
 
 **Data displayed in the Map subtab:**
@@ -59,184 +105,172 @@ The table displays the target value for each region and the overall study area. 
 
 ### Overview of variable options
 
-The Data tab has drop-down menus from which the user chooses the data to be displayed by the Toolbox. The data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the 'Overview of display options' section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the tab.
+The Data tab has drop-down menus from which  you choose the data to be displayed. Data selected from the pull-down menus can be viewed in Map, Histogram, or Table form as described in the section above. Descriptions, statistics and metadata for the chosen fields are also displayed below the drop-down menus on the left side of the tab.
 
 ![](./fig/varible_options_view.png)
 
 
-The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target. 
+The first selection to be made from the drop-down menus is variable type, in which the user can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target. To reiterate, Output Scores are the scores calculated using the Input Layers (data).  
 
-> In short: **Output Score = Calculated Score** and **Input Layer = Data**
+For example, if you select ‘Output Score’ as the variable type (which is the default), you will then be able to choose a target (goal or sub-goal), and the OHI dimension to be reported.  
 
-For example, if the user selects ‘Output Score’ as the variable type (which is the default), they will then be able to choose a goal/sub-goal (target), and the goal/sub-goal score calculation (dimension) to be reported.
+As another example, if you select 'Input Layer' as the variable type, you will be able to choose a target and a specific data layer associated with that target. If that layer has multiple categories or years available, you will be able to select a preference. Without selection, the default setting is the first category alphabetically and the most recent year.
 
-On the other hand, if the user selects 'Input Layer' as the variable type, they will be able to choose a target and a specific data layer that is associated with that target. If that layer has multiple categories or years available, the user will be able to select a preference, with a default being the first category alphabetically and the most recent year.
 
 ![](./fig/overview_variable_options2.png)
 
-## Compare tab
+## The App’s Compare tab
 
-The **Compare** tab allows you to visualize score differences between different branches, scenarios and/or commits (ie each online save). It proves most useful for error checking during the editing phase of development.
-
----
-output: html_document
----
-# Introduction to OHI Regional Assessments
-
-Regional assessments use the Ocean Health Index (OHI) framework to study smaller spatial scales (e.g. countries, states, provinces, ecoregions, bays, etc.), where policy and management decisions are made. Using ten criteria (called goals), the Index scores on a scale of 0 to 100 how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to self-established reference points (targets). Regional assessments incorporate local priorities and preferences, higher-resolution data and indicators, and use tailored goal models and reference points, which produce scores that better reflect local realities. OHI is designed to combine and complement existing efforts to produce a comprehensive assessment of ocean health. And, because the assessments are developed at the scale of decision-making using local data and parameters, the findings can help inform decision-making and management actions aimed at maximizing sustainable productivity while preserving vital natural capital.  
-
-Each goal score is combined into a weighted average to produce the score for the overall area assessed, called a **study area**. In regional assessments, coastal states or provinces are often the **regions** within the study area. Goal scores are calculated for each region separately and then combined using a weighted average to produce the score for the overall study area assessed. Modifications can be made to the global studies, allowing calculation of scores with updated data that can then be visualized with the Toolbox App and project website.
-
-![](./fig/global_v_brazil_map.png)  
-
-The Ocean Health Index framework is flexible to accommodate regional priorities: goal models can be modified to incorporate the best available local data and indicators, or excluded entirely. Similarly, pressures and resilience measures can be refined using local data and indicators. Because OHI is a data driven framework, Index scores are only as 'good' as the data on which they are based, so finding the best data or indicators available is fundamental to obtain meaningful findings that can help inform decision-making. 
-
-**The process for developing a regional assessment is equally valuable as the final calculated scores, since it helps identify knowledge and data gaps, produces decision-relevant information, and creates an ocean alliance that combines knowledge and cultural values from many different perspectives and disciplines**. Calculating Ocean Health Index scores at regional scales requires engagement from as many different groups as possible, including research institutions, government agencies, policy groups, non-governmental organizations, and the civil and private sectors.
-  
-Regional assessments have been published in peer-reviewed journals for the U.S. West Coast (Halpern *et al*. 2014) and for Brazil (Elfes *et al*. 2014), and more are underway (available at ohi-science.org).   
-
+The **Compare** tab allows you to compare differences in calculated scores based on changes you have made to the underlying data. Visualizing these differences is extremely helpful for confirming results and error checking. Instructions about how to use the Compare function are presented later in the manual, following more context about why you might want to use this functionality.
 
 ## Before conducting an assessment
 
-Before conducting a regional assessment, it is important to have planned several things:
+Before conducting an assessment, it is important to prepare the following:
 
-* Develop strategic plan and timeline
-    + determine resources available
-    + outline timeline with any meetings and workshops necessary
-    + engage management/decision-makers early for results to be most useful
-* Assemble a qualified team with diverse skills
-    + have a broad scientific understanding and experience with environmental policy
-    + are comfortable with handling large data sets, making decisions, and thinking creatively
-    + collaborate well in a multidisciplinary team, remotely and in person
-    + can work with the software program R and user-created packages (at least one person)
-    + can work with ArcGIS or other spatial analysis software (at least one person)
-    + are fluent in English (at least one person)
-* Funding 
+* Develop a strategic plan and timeline
+    + establish the need for an assessment
+    + define the spatial scale of the assessment: country, state, eco-region, etc.
+    + determine the resources available
+    + outline a timeline with necessary meetings and workshops
+    + engage decision-makers early for results to be most useful
+* Assemble a qualified team with diverse skills and knowledge, including:
+    + a broad scientific understanding and experience with environmental policy
+    + ability to manage large data sets, make decisions, and think creatively
+    + capacity to collaborate in a multidisciplinary team, remotely and in person
+    + team members who can use the statistical programming language R (http://cran.r-project.org/), ArcGIS or other spatial analysis software, and are fluent in English 
+* Funding
     + greatly depends on the local context
     + potentially needed for a management and scientific team, workshops and meetings (including travel), communications, policy engagement, and operating costs
 * Policy and management interest
-    + engage policy/decision-makers early: informing government policies to improve ocean health is most effective if there is early interest and engagement from government agencies and decision-making bodies
-    + requires ongoing communication during Index development to best inform management actions that could have measurable impacts. 
+    + engage decision-makers early: informing policies to improve ocean health is most effective if there is early interest and engagement from government agencies and decision-making bodies
+    + requires ongoing communication during Index development to best inform management actions
     + repeated assessments as new data become available enable tracking ocean health through time and evaluating management and policy interventions
-    
-    
-    
 
-# Conducting a Regional Assessment
 
-## What to expect when conducting a regional assessment
+# Conducting an Assessment
 
-There are key considerations and processes that will be a part of every regional assessment, however, how each regional assessment is conducted will be unique depending on the local context. For example: what data and indicators are available will determine how goal models are able to be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment. 
+## What to expect when conducting an assessment
+
+There are key considerations and processes that will be a part of every assessment, however, the process for conducting each assessment will be unique depending on the local context. For example: what data and indicators are available will determine how goal models can be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment.
 
 ### Timeline 
 
-The time required to complete a regional assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
+The time required to complete an assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
 
-**Expect for strategic planning, discovering and gathering data, and developing reference points and models, to comprise > 80% of the time allotted for the regional assessment**. 
+**Expect strategic planning, discovering and gathering data, and developing reference points and models to comprise > 80% of the time allotted for the assessment.**  
+
 
 ![](./fig/task_timeline.png)  
     
-## What is provided  
+## Where to start
 
-Your study area's website (accessed from [ohi-science.org](http://ohi-science.org)) was created to facilitate planning and communication during your assessment. It displays template data, regions, goal models, and calculated scores visually through maps, histograms, and tables. Template regions are the largest subcountry designation. These are primarily coastal states or provinces, which, in our experience, is consistent with the scale at which policy decisions are made.
+You should start by understanding the structure of the global assessment and the data involved will help you think about what should be done differently in your local context.  
 
-The information displayed on the website is also stored online, in a **GitHub repository**. GitHub (https://github.com) is an open-source development platform that for collaboration and tracking changes by user, as well as multiple versions of a document. Your study area's GitHub repository contains files specific to your study area. The data in the repository serve as a template: they are the data for your study area used in the global assessments, and have been attributed to each subcountry region. 
+The best way to do this is to begin with the WebApps. As described above, most coastal countries have a WebApp that was created to facilitate planning and communication during your assessment. The WebApp presents data, goal models and calculated scores for each region (global administrative area identified by gadm.org) visually through maps, histograms, and tables. All data presented were extracted from the global analysis, and scores were calculated using global goal models. For a finer-scale assessment of ocean health in your region, these data files provided will need to be updated with available data and indicators for each region in your assessment. However, if better data are not available, you can use the data provided. Then, to dive deeper into data layers and goal models, you can explore your assessment's GitHub repository, which stores all the information presented through the WebApp.  
 
-The data files in your repository will need to be updated with locally available data and indicators so as to give a more fine-scale assessment of ocean health in your study area. However, if better data are not available, it is possible to use the files provided.  
+You should also be familiar with the approaches taken by other assessments adapted from the global context, including Brazil, the US West Coast, and Fiji. You can find these studies at ohi-science.org.  
 
-Our team of scientists and managers is prepared to provide guidance for regional assessments, from initial meetings to discussions about model development to disseminating results.
+While our team of scientists and managers is prepared to provide guidance for regional assessments, you should follow the steps in this training program to complete your assessment as autonomously as possible.
+
 
 ## Points to remember
 
-We recommend to remember the following as you develop your approach:
+We recommend keeping in mind the following as you develop your approach:
 
-* Remember that people are part of ocean health
-    + economic and social data are included, and certain terrestrial data near the coast
-
-* Goal models should be modified to capture local characteristics and priorities of the region
-    + how goal models are developed depends on what is important locally and what data/indicators are available.
-* Assessments can use a mixture of regional-, country- and global-scale data   
-* Scores are calculated by region
-    + comparing scores between subcountry regions is a main reason of conducting a regional assessment
-    + regional scores are combined by weighted average to calculate scores for the study area
-    + goal models are the same across all regions; data are specific to the region. For example, the carbon storage goal model is calculated in the same way for each region, but which habitats are present in each region, and the area and condition of those habitats are specific to each region
+* People are part of ocean health
+    + economic and social data are included in OHI: consider how people are locally engaging with the ocean
+* Goal models should be modified to capture local characteristics and priorities that can be measured with available data 
+    + after identifying what is important locally, identify direct or indirect measures to develop tailored goal models  
+* Assessments can use a mix of regional-, country- and global-scale data
+    + include the finest-scale data available, but when this is not possible, rely on global-scale data
+* Scores are calculated by region and then aggregated to the study area
+    + comparing scores between regions is a primary reason for conducting a independent assessment
+    + goal models and data layers are the same across all regions; data values will vary by region. For example, the carbon storage goal model is the same for each region, but the habitats present in each region, and the area and condition of those habitats (the data values) are specific to each region
 * All data do not need to be at the same spatial or temporal scale
-    + each assessment should represent the best understanding of ocean health at the point in time. For example if fisheries data are available from 1980-2011 and tourism from 2008-2012; these can be used together to calculate Index scores, which will be the representation of current ocean health
-* Document all decisions made
-    + document data sources, urls, date of access, reference points set, why models were modified the way they were (and not other potential ways)...
-    + important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
+    + each assessment should represent the best understanding of ocean health at a point in time. For example, if fisheries data are available from 1980-2011 and tourism data are available from 2008-2012; these can both be used to represent current ocean health
+* Document all decisions made, including:
+    + all data sources (publications, website URL, date of access, etc).
+    + processes for establishing reference points, 
+    + how and why models were modified, and additionally why other potential modifications were not done, as this reminds yourself of past decisions and helps explain them to others in the future)
+    + that it is important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
 
 
 ## Checklist: How to prepare for using the Toolbox
 
-Most of the time spent while conducting a regional assessment occurs before using the Toolbox to calculate scores. Before then, the Toolbox should be used as a checklist in itself, for organizing data, and having a structure can guide you. The following will not be checked-off in sequence: there is a lot of back and forth as you discover data, develop reference points and models, and revisit other data possibilities.  
+Most time spent conducting an assessment occurs before using the Toolbox to calculate scores. Prior to these calculations the Toolbox and WebApp can be used to understand the Index and as a tool to provide structure to its underlying framework. For example: how the data and models are used to calculate the ten goals (and, in some cases, corresponding subgoals) for each region and how these are combined to generate an overall score for each region can be explored with the Toolbox. At this point, the Toolbox provides a guideline for the data that must be collected and how it should be organized.  
 
-Here is a checklist of decisions and steps that must be done before the Toolbox can calculate regional goal scores:
+When going through the checklist remember too that a motivation for conducting an assessment is to be able to modify goal models and set reference points using finer-scale, local information and reference points.  
 
-* Understand the philosophy of the Ocean Health Index
-    + understand what goals represent and how they are modeled 
-    + understand what pressures and resilience are included 
-    + understand how reference points are set
+The following list of tasks will not necessarily be accomplished in sequence: there is a lot of iteration of tasks as you discover data, develop reference points and models, and revisit other data possibilities. This checklist identifies decisions and steps that must be done before the Toolbox can be used to calculate regional goal scores:
+
+
+* Understand the philosophy of OHI
+    + what the goals represent, how they are modeled, and what types of data are included
+    + what pressures and resilience data are included
+    + how reference points are set
 * Identify local characteristics and priorities
+    + what local cultural preferences or priorities should be captured in the assessment?
     + should any goals be removed?
     + should any goals be redefined?
     + should other goals be added?
-    + should goals be weighted unequally? 
-    + what are pressures to the local system?
-    + what resilience measures (laws, regulations) are in place locally?
-    + what local cultural preferences or priorities should be captured in the assessment? 
-* Decide the spatial scale for regions within the study area 
-    + do template regions make sense?
-    + we recommend multiple regions
-    + regions within the study area should be at the smallest scale the data allow
-    + in what spatial scale are data most frequently reported?
-    + in what spatial scale are policy decisions made (optional)?
-* Be familiar with the global inputs to your Toolbox repository
+    + should goals be weighted unequally?
+    + what are social and ecological pressures to the local system?
+    + what social and ecological resilience measures (laws, regulations, restoration projects) are in place locally?
+* Be familiar with the global inputs (data and models) used in the WebApp
     + understand the data and models used in global assessments
-    + prioritize which data and models should be updated 
-    + become familiar with the Toolbox framework for your study region
-      - example: ohi-science.org/ecu
+    + prioritize which data and models should be updated to better represent local characteristics and priorities
+* Decide the spatial scale for regions within the study area
+    + do the WebApp regions (states or provinces) make sense? If not, what alternate scales are more appropriate?
+    + we recommend multiple regions to allow for comparisons and determine geographic priorities within the study area
+    + regions should be at the smallest scale the data allow
+    + at what spatial scale are data most frequently reported?
+    + at what spatial scale are policy decisions made (optional)?
 * Discover and gather appropriate data and indicators
     + what local data and indicators are available for goal models?
-    + what local data and indicators are available pressures and resilience?
-    + how would reference points be set for local data?
-    + do local data and indicators capture the philosophy of the Ocean Health Index?
-    + are local data and indicators at the appropriate spatial and temporal scales?
-    + process and format data and indicators to create data layers* for the Toolbox
+    + what local data and indicators are available for pressures and resilience?
+    + are available data and indicators relevant to OHI?
+    + are local data and indicators at the appropriate temporal scales?
+    + how should reference points be set for local data?
+    + process and format data and indicators to create data layers for the Toolbox (See ‘Formatting Data for the Toolbox’ section below)
     + use the Toolbox repository as a registry to organize data layers
-* Update pressures and resilience
+* Update pressures and resilience information
     + determine whether all global pressures are relevant locally
-    + identify local pressures not captured in the pressures matrix
-    + categorize any new pressures layers
+    + identify local pressures not captured in the global pressures matrix
+    + categorize any new local pressures layers
     + set pressure weighting/ranking based on literature, expert opinion
-    + identify responsive resilience measures
-    + categorize any new resilience layers
-* Modify goal models and set reference points:
-    + can goal models be refined using locally available data and indicators?
-    + can reference points be refined using locally available data and indicators?
-    
-    
-\* Each data component that is included in the OHI is called a **data layer** because it will be combined with others to create the most complete picture of ocean health. Many data layers are rescaled from 0-1 to be combined with others on the same unitless scale.
-    
+    + identify potential resilience measures for each of the pressures identified
+    + determine what datasets may be available to measure resilience metrics
+* Modify goal models mathematically:
+    + how can goal models be represented mathematically using locally available data and indicators?
+    + can reference points be refined using locally available data and indicators, government mandates, management targets, obligations from multilateral agreements?
 
+
+
+## The Ocean Health Index Toolbox
+
+**The OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate groups with the highly collaborative OHI assessment process at any scale. Toolbox scripts are open source, written in the software language R, and data inputted into the Toolbox are *.csv* (comma-separated-value) files, which can be created or edited using text editors or Microsoft Excel.  
+
+The Toolbox ecosystem is organized through an online collaborative platform, called **GitHub**. GitHub stores the R scripts and *.csv* files in a folder called a repository, which is found online and can also be downloaded on your computer and synced with the online version. GitHub tracks changes by all collaborators working on the project through time, and saves all versions for comparison.  
+
+The Toolbox is used to calculate final scores. But, perhaps more importantly, it can also be used to organize an assessment, including data identification and management.  The Toolbox can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
 
 ## OHI Toolbox File System
-This section describes the files within your GitHub repository.
 
+This section describes the files within your GitHub repository, which can be viewed online at with your country’s three-letter code. For example, https://github.com/OHI-Science/can. You are able to view all the files in the repository online through GitHub. You are also able to download the repository from the website, but to be able to sync any modifications back to GitHub, you will need to ‘**clone**’ this repository following the steps in the ‘Installing the Toolbox’ section below.  
 
-## draft branch
-
-![](./fig/draft_branch.png)
+The following is an orientation to the Toolbox file system, whether you are viewing it online through GitHub, or have downloaded or cloned it to your computer.
 
 
 ### Assessments and scenarios
-Within the **ohi-[assessment]** folder is the **scenario** folder. The scenario folder contains all the data, functions and other files required to calculate the Ocean Health Index. To calculate the Index for a different region or with new data or models, you will modify the files within this folder (default data is from the global assessment).
 
-In this example, **ecu** is the assessment folder and **subcountry2014** is the scenario.
+Your **assessment**, i.e. your GitHub repository, contains a several files. The most important is your **scenario** folder: *subcountry2014* (other files are specific to GitHub and will not change). Your scenario folder contains all the files needed to calculate scores, and they are described in detail below. This scenario folder is named *subcountry2014* to indicate that it is based on data from the 2014 global assessment, with data extracted per subcountry region (i.e. state, province, district, as per gadm.org). You can rename your scenario folder to better reflect the spatial and temporal scale of your assessment after you have set up your GitHub account. Eventually, you will likely have multiple scenario folders that contain analysis for different years or for exploring policy alternatives.
+
+![](https://docs.google.com/drawings/d/1eHViTehnAuxSDw1fYI54C3X5YgBktGtaVt71R3OXYeE/pub?w=960&h=720)
+
+In this example, **Ecuador (ecu)** is the assessment repository and *subcountry2014* is the scenario folder.
 
 ![](./fig/ohiglobal_file_location.png)
 
-The **subcountry2014** folder contains all the data inputs used to calculate the OHI score for that scenario (illustrated below), as well as the files that are necessary to run the calculations.
 
 ![](./fig/scenario_folder_overview.png)
 
@@ -952,7 +986,7 @@ GitHub stores all data files and scripts for your assessment in a repository (a 
 
 
 
-# Using the Toolbox for a Regional Assessment
+# Using the Toolbox
 
 As your team finalizes which data should be included in the assessment and develops goal models, you can incorporate this information into your repository. Data files can be updated with any software, but goal models will be updated in R. With any modifications you sync to the online repository, the Toolbox will automatically recalculate goal scores. Calculations can also be done locally by running `subcountry2014/calculate_scores.R`.
 
