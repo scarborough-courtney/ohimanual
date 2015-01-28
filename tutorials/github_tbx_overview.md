@@ -6,7 +6,7 @@ This document is more of an outline than detailed information.
 
 By now you have github accounts and are becoming familiar with the Issues repository. Here is some basic background on GitHub capabilities.
 
-GitHub has synching capabilities like Dropbox, but with added functionality since multiple users (with the correct permission) can edit documents and so GitHub manages all the merging required, and saves all versions with editing users identified and modifications attributed. There are many ways to investigate past versions, all of which can be reinstated at any time. [Mel]
+GitHub has synching capabilities like Dropbox, but with added functionality since multiple users (with the correct permission) can edit documents and so GitHub manages all the merging required, and saves all versions with editing users identified and modifications attributed. There are many ways to investigate past versions, all of which can be reinstated at any time.
 
 ## Structure
 
@@ -25,7 +25,7 @@ Most repos we work with in OHI-Science are freely available; some repos are priv
 
 **sync = pull + commit + push**
 
-![](/Users/jstewart/github/ohimanual/tutorials/fig/clone_push_pull.png)
+![](./fig/clone_push_pull.png)
 
 ## Syncing options
 
