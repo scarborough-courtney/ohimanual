@@ -37,6 +37,8 @@ When you work on your computer, any edits you make to any files in your repo, us
 
 When you work on your computer, any edits you make to any files in your repo, using any program, will be tracked by Git. You can use any of the above to commit and sync your changes back to GitHub.  
 
+TODO: filepaths. github folder
+
 * Ex 1: create a new file in Excel, save as .csv in your repo, commit, pull, push using GitHub App.  
 * Ex 3: modify R script using RStudio, commit, pull, push from RStudio.
 * Ex 2: open .md file, edit in Atom, commit, pull, push using  Terminal.
@@ -53,6 +55,9 @@ git commit -m 'testing'
 git status
 git push
 ```
+
+TODO: how to clone repositories from GitHub App, RStudio
+
 
 # Intro to OHI Toolbox
 

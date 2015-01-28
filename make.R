@@ -7,7 +7,7 @@ library(knitr)
 library(rmarkdown)
 library(stringr)
 
-# copy ohimanual/README.md into ohimanual/tutorials/README.md
+# Copy ohimanual/README.md into ohimanual/tutorials/README.md
 stopifnot(file.copy('~/github/ohimanual/tutorials/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
 
 # set variables ----
