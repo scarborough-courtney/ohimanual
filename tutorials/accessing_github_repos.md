@@ -105,8 +105,8 @@ Because you will use GitHub to collaborate with your team or request support fro
 
 **Please create a folder called github in your root directory**. The file path for this folder will be:
 
-* **Windows**: `C:\Users\[User]\Documents\github\`
-* **Mac**: `/Users/[User]/github/`
+* **Windows**: `Users\[User]\Documents\github\`
+* **Mac**: `Users/[User]/github/`
 
 This folder can be identified by any computer as `~/github/`.  
 
