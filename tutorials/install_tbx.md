@@ -1,9 +1,33 @@
-# Installing the Toolbox for a Regional Assessment 
+# Installing the Toolbox
 
-## Getting started
-OHI Toolbox software is written in R, and work with simple *.csv* files to store data and registeries. Template files and scripts are kept together in a folder, a **GitHub repository**, online. GitHub is an open-source development platform that enables easy collaboration and versioning (see: http://en.wikipedia.org/wiki/GitHub).
+## Overview
 
-At this point, you should already be familiar with your repository's filesystem (see Section 4.5 above). To efficiently modify input data files, set parameters and modify goals, you will need to download your repository onto your computer. In GitHub vocabulary, this is called to 'clone' your repository. This will put a complete copy of the repository on your computer, enabling you to work offline.
+The **OHI Toolbox** is essentially several folders containing all the files required for an OHI assessment. These folders are stored online on www.github.com, and are called **GitHub repositories**. At this point, you should already be familiar with your assessment’s repository, and all of the files it contains (if not, read the ‘file system’ section above).  
 
-We recommend establishing a GitHub user account, which will allow you to syncronize your modifications with the online repository. Your website (accessed from [ohi-science.org](http://ohi-science.org)) will also display these modifications visually. Using GitHub faciliates collaboration within your team and also allows us to provide support when you need it. However, it is possible to work independently without GitHub (after the initial download), although you will not be able to synchronize your work with your website, and we cannot offer much support in this case.
+Conducting an OHI assessment using GitHub enables collaboration and transparency, and will provide access to the latest developments in the Toolbox software, allowing the OHI team to provide support remotely if necessary.  
 
+This section explains the GitHub workflow and how to access and setup required software. Then, it explains how to after modifying files on your own computer, you can use GitHub to upload any modifications you make so that you can work collaboratively with your team.  
+
+**Required software:**
+
+1. **Github App**
+2. ** *git* **
+3. **R**
+4. **RStudio**
+
+> ![](./fig/overview_requirements_1.png)
+
+## GitHub
+
+**GitHub** is an open-source development platform that enables easy collaboration and versioning, which means that all saved versions are archived and attributed to each user. It is possible to revert back to any previous version, which is incredibly useful to not only to document what work has been done, but how it differs from work done in the past, and who is responsible for the changes.  
+
+**GitHub Vocabulary:**
+
+* **clone** ~ download to your computer from online version with synching capabilities enabled
+* **commit** ~ message associated with your changes at a point in time
+* **pull** ~ sync a repo on your computer with online version
+* **push** ~ sync the online repo with your version, only possible after committing
+
+**sync = pull + commit + push**
+
+The following describes how to use GitHub to access and sync your assessment repository. For more in-depth information about the following steps, read *Git and GitHub* by Hadley Wickham, available at http://r-pkgs.had.co.nz/git.html

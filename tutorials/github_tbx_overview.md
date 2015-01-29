@@ -37,7 +37,7 @@ When you work on your computer, any edits you make to any files in your repo, us
 
 When you work on your computer, any edits you make to any files in your repo, using any program, will be tracked by Git. You can use any of the above to commit and sync your changes back to GitHub.  
 
-TODO: filepaths. github folder
+**Filepaths**: Save any GitHub repos is a folder in your home directory called 'github', so that you can access it with the filepath `~/github`. This is very important since any filepaths you use in your files will need to be also usable by others on your team.
 
 * Ex 1: create a new file in Excel, save as .csv in your repo, commit, pull, push using GitHub App.  
 * Ex 3: modify R script using RStudio, commit, pull, push from RStudio.
