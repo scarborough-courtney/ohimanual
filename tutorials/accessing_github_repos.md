@@ -119,8 +119,8 @@ Clone a repository by clicking the 'Clone in Desktop' button on your online repo
 
 You will be asked where to save this repository: save it into the `github` folder you created. The file path for your assessment will therefore be:
 
-* Windows: C:\Users\[User]\Documents\github\[assessment] (example: C:\Users\[User]\Documents\github\ecu)
-•	on a Mac: /Users/[User]/github/[assessment] (example: /Users/[User]/github/ecu)
+* Windows: C: `\Users\[User]\Documents\github\[assessment] (example: C:\Users\johndoe\Documents\github\ecu)`
+* on a Mac: `/Users/[User]/github/[assessment] (example: /Users/johndoe/github/ecu)`
 
 The assessment can be identified by any computer as `~/github/[assessment]`.  
 
