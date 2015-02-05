@@ -7,12 +7,12 @@ library(knitr)
 library(rmarkdown)
 library(stringr)
 
-# copy ohimanual/README.md into ohimanual/tutorials/README.md
-stopifnot(file.copy('~/github/ohimanual/tutorials/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
+# copy ohimanual/README.md into ohimanual/content/README.md
+stopifnot(file.copy('~/github/ohimanual/content/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
 
 # set variables ----
 title = 'The Ocean Health Index Assessment Manual'
-wd = '~/github/ohimanual/tutorials'
+wd = '~/github/ohimanual/content'
 in_md = c(
   'README.md',
   'intro_assessment.md',
@@ -61,7 +61,7 @@ for (f in list.files(getwd(), glob2rx('*.md'))){
 
 
 # rename *.png
-setwd('~/github/ohimanual/tutorials/fig')
+setwd('~/github/ohimanual/content/fig')
 for (f in list.files(getwd(), glob2rx('zfig_*'))){
   file.rename(f, str_replace(f, 'zfig_',''))
 }
@@ -103,7 +103,7 @@ cat_md = function(
 setwd(wd)
 #cat_md()                           # use default file listing of *.md, default output _all_.md
 #cat_md(md_order)                   # use own md ordered file listing , default output _all_.md
-cat_md(in_md, out_md)               # use own md ordered file listing , output to tutorials.md
+cat_md(in_md, out_md)               # use own md ordered file listing , output to ohi-manual.md
 pfx = tools::file_path_sans_ext(out_md)
 
 # render html ----
@@ -134,10 +134,10 @@ file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive
 system('cd ~/github/ohi-science.github.io; git pull; git add -A; git commit -m "update manual"; git push')
 
 ## to resize already existing figures. Check folder paths.
-# dir.create('~/github/ohimanual/tutorials/fig/_resized', showWarnings=F)
-# for (f in list.files('~/github/ohimanual/tutorials/fig/_originals','*.\\.png$')){ # f = list.files('~/github/ohimanual/tutorials/fig','*.\\.png$')[1]
-#   f_old = file.path('~/github/ohimanual/tutorials/fig/_originals', f)
-#   f_new = file.path('~/github/ohimanual/tutorials/fig/_resized', f)
+# dir.create('~/github/ohimanual/content/fig/_resized', showWarnings=F)
+# for (f in list.files('~/github/ohimanual/content/fig/_originals','*.\\.png$')){ # f = list.files('~/github/ohimanual/content/fig','*.\\.png$')[1]
+#   f_old = file.path('~/github/ohimanual/content/fig/_originals', f)
+#   f_new = file.path('~/github/ohimanual/content/fig/_resized', f)
 #   dpi = 72
 #   width_in = 10
 #   height_in = 6
