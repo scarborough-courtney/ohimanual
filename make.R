@@ -19,10 +19,10 @@ in_md = c(
   'overview_webapp.md',
   'before_conduct_assessment.md',
   'conduct_assessment.md',
+  'gathering_appropriate_data.md',
+  'pressures_resilience.md',
   'intro_to_tbx.md',
   'file_system.md',
-  'gathering_appropriate_data.md',
-  'update_pressures_resilience.md',
   'formatting_data.md',
   'install_tbx.md',
   'accessing_github_repos.md',
@@ -55,7 +55,6 @@ for (f in list.files(getwd(), glob2rx('*.md'))){
   # s = str_replace_all(s, fixed('toolbox_app_overview.md'), fixed('overview_toolbox_app.md'))
   s = str_replace_all(s, fixed('regional_assessment_intro.md'), fixed('intro_regional_assessment.md'))
   writeLines(s, f)
-
 }
 
 
