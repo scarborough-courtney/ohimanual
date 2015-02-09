@@ -246,259 +246,170 @@ The following list of tasks will not necessarily be accomplished in sequence: th
 
 
 
-## The Ocean Health Index Toolbox
-
-**The OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate groups with the highly collaborative OHI assessment process at any scale. Toolbox scripts are open source, written in the software language R, and data inputted into the Toolbox are *.csv* (comma-separated-value) files, which can be created or edited using text editors or Microsoft Excel.  
-
-The Toolbox ecosystem is organized through an online collaborative platform, called **GitHub**. GitHub stores the R scripts and *.csv* files in a folder called a repository, which is found online and can also be downloaded on your computer and synced with the online version. GitHub tracks changes by all collaborators working on the project through time, and saves all versions for comparison.  
-
-The Toolbox is used to calculate final scores. But, perhaps more importantly, it can also be used to organize an assessment, including data identification and management.  The Toolbox can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
-
-## OHI Toolbox File System
-
-This section describes the files within your GitHub repository, which can be viewed online at with your country’s three-letter code. For example, https://github.com/OHI-Science/can. You are able to view all the files in the repository online through GitHub. You are also able to download the repository from the website, but to be able to sync any modifications back to GitHub, you will need to ‘**clone**’ this repository following the steps in the ‘Installing the Toolbox’ section below.  
-
-The following is an orientation to the Toolbox file system, whether you are viewing it online through GitHub, or have downloaded or cloned it to your computer.
-
-
-### Assessments and scenarios
-
-Your **assessment**, i.e. your GitHub repository, contains a several files. The most important is your **scenario** folder: *subcountry2014* (other files are specific to GitHub and will not change). Your scenario folder contains all the files needed to calculate scores, and they are described in detail below. This scenario folder is named *subcountry2014* to indicate that it is based on data from the 2014 global assessment, with data extracted per subcountry region (i.e. state, province, district, as per gadm.org). You can rename your scenario folder to better reflect the spatial and temporal scale of your assessment after you have set up your GitHub account. Eventually, you will likely have multiple scenario folders that contain analysis for different years or for exploring policy alternatives.
-
-![](https://docs.google.com/drawings/d/1eHViTehnAuxSDw1fYI54C3X5YgBktGtaVt71R3OXYeE/pub?w=960&h=720)
-
-In this example, **Ecuador (ecu)** is the assessment repository and *subcountry2014* is the scenario folder.
-
-![](./fig/ohiglobal_file_location.png)
-
-
-![](./fig/scenario_folder_overview.png)
-
-See below for a detailed overview of all the files located in the scenario folder.
-
-### *layers.csv*
-`layers.csv` is the registry that manages all data to be used in the Toolbox.
-
-![](./fig/layers_csv_registry.png)
-
-Each row of information represents a specific data layer that has been prepared and formatted properly for the Toolbox. The first columns contain information inputted by the user; other columns are generated later by the Toolbox App as it confirms data formatting and content. The first columns have the following information:
-
- + **targets** indicates how the data layer related goals or dimensions. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
- + **layer** is the identifying name of the data layer, which will be used in R scripts like `functions.R` and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`. This is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **name** is a longer title of the data layer; this is displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **description** is further description of the data layer; this is also displayed on the Toolbox App under the drop-down menu when the variable type is ‘input layer’.
- + **fld_value** indicates the units along with the units column.
- + **units** some clarification about the unit of measure in which the data are reported
- + **filename** is the *.csv* filename that holds the data layer information, and is located in the folder ‘layers’.
- 
- 
-### *layers* folder
-The `layers` folder contains every data layer as an individual *.csv* file. The names of the *.csv* files within the layers folder correspond to those listed in the *filename* column of the `layers.csv` file described above. All *.csv* files can be read with text editors or with Microsoft Excel or similar software.
-
-![](./fig/layers_folder_location.png)
-
-Note that each *.csv* file within the `layers` folder has a specific format that the Toolbox expects and requires. Comma separated value files (*.csv* files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software. Open a `layers/*.csv` file: note the unique region identifier (*rgn_id*) with a single associated *score* or *value*, and that the data are presented in ‘long format’ with minimal columns. Please see the section on *Formatting Data for the Toolbox* for further details and instructions.
-
-
-### *conf* folder
-The `conf` folder includes includes R functions (*config.R* and *functions.R*) and *.csv* files containing information that will be accessed by the R functions (*goals.csv*, *pressures_matrix.R*, *resilience_matrix.csv*, and *resilience_weights.csv*).
-
-![](./fig/layers_folder_location_conf.png)
-
-#### *config.r*
-`config.r` is an R script that configures labeling and constants appropriately.
-
-#### *functions.r*
-`functions.r` contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in `layers.csv`. 
-
-#### *goals.csv* 
-`goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the Toolbox App. `goals.csv` also indicates the arguments passed to functions.R. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
-
-#### *pressures_matrix.csv*
-`pressures_matrix.csv` maps the different types of ocean pressures with the goals that they affect.  
-
-Each column in the pressures matrix identifies a data layer that is also registered in `layers.csv`: these presssure data layers are also required to have a value for every region in the study area. Pressure layers each have a score between 0-1, and has its pressure category indicated by a prefix (for example: *po_* for the pollution category). 
-
-#### *resilience_matrix.csv*
-`resilience_matrix.csv` maps the different types of resilience with the goals that they affect.
-
-Like the pressures matrix, the resilience matrix also has weights depending on the level of protection. However, these weights are in a separate file: `resilience_weights.csv`.
-
-Each column in the resilience matrix is a data layer that is also registered in `layers.csv`. Resilience layers, like the pressure layers, are also requried to have a value for every region in the study area. Resilience layers each have a score between 0-1. 
-
-#### *resilience_weights.csv*
-`resilience_weights.csv` describes the weight of various resilience layers, which in Halpern et al. 2012 (Nature) were determined based on scientific literature and expert opinion.
-
-### spatial folder 
-The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the JSON format; it has the appropriate study area and regions for the assessment. This file will be created by the OHI team for all regional assessments.
-
-### launchApp_code.R
-The App can be launched through R by running the code in lauchApp_code.R.
-
-### layers-empty_swapping-global-mean.csv 
-Contains a list of data layers for which there were no data for the study area. In order for the Toolbox to run, global averages are used as template data. This file is not used anywhere in the Toolbox but is a registry of data layers that should be replaced with local data, as they are based on global averages. 
-
-### *calculate_scores.r*
-`calculate_scores.r` will run the Toolbox calculations using the *.csv* files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
-
-### scores.csv
-`scores.csv` is a record of the calculated scores for the assessment (Global 2013 scores). Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each reporting region, and are presented in ‘long’ format. 
-
-
-### Relaunching the Toolbox
-After the initial Toolbox setup, further launches of the Toolbox Application can be done without the software program R. Instead, PC users can double-click the `launchApp.bat` file and Mac users can double-click the `launchApp.command` file.
-
-
 ## Discovering and Gathering Appropriate Data and Indicators
 
-The OHI spans disciplines and integrates diverse data and sources to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available data to create models that capture the philosophy of individual goals, and finding appropriate data requires research and creativity. There are many decisions to make when gathering from disparate sources, deciding reference points, and developing goal models.
+The OHI spans disciplines and integrates diverse data to give a comprehensive assessment of ocean health. A hallmark of the OHI is that it uses freely-available, existing data and indicators to create models that capture the philosophy of individual goals, and finding appropriate data requires good problem-solving abilities. There are many decisions to make when gathering from disparate sources, identifying good proxies and indicators, deciding reference points, and developing goal models.
 
-**Index scores are a reflection of data quality, and thus accessing the best data and indicators available is of highest importance**. 
+** The accuracy of Index scores is a reflection of input data quality and the degree of understanding of the study area, and thus including the best quality and appropriate data and indicators available is of highest importance.**
 
-### Data sources 
+Because the data and indicators you use will come from different sources and available from online databases, reports, spreadsheets and text files, they will also have different formatting. To include these data and indicators in your assessment, you will need to process these files into the format required by the Toolbox, which is explained in a separate section. When data have been prepared and formatted for the Toolbox, we call it a **data layer.** Because creating data layers can be quite time-intensive, data should only be prepared for the Toolbox after final decisions have been made to include the data or indicator in your assessment, and after the appropriate goal model and reference points have been finalized.  
+
+There are many data layers included in the OHI framework. There are about eighty individual data layers from the global assessment that may be replaced with higher-resolution data in your study area. You will need to search for data used to calculate status models as well as pressures and resilience layers.  
+
+### Data sources
 
 Existing data and indicators can be gathered from many sources across environmental, social, and economic disciplines, including:
 
-* government reports
-* government websites
-* academic literature
+* government reports and project websites
+* peer-reviewed literature
 * masters and PhD theses
 * university websites
-* non-profit organizations
+* non-profit organizations  
 
-All data will be rescaled to specific reference points (targets) before being combined; therefore setting these reference points at the appropriate scale is a fundamental component of any OHI assessment. This requires the regional assessment team to interpret the philosophy of each Index goal and sub-goal using the best available data and indicators.  
+All data must be rescaled to specific reference points (targets) before being combined with the Toolbox; therefore setting these reference points at the appropriate scale is a fundamental component of any OHI assessment. This requires your assessment team to interpret the philosophy of each Index goal and sub-goal using the best available data and indicators. Some indicators already are scaled (e.g. from 0-1 or 0-10), and can easily be incorporated into your assessment since the reference points have already been identified.
+
+### Gathering responsibilities
+
+Gathering appropriate data requires searching for and accessing existing data. You do not have to go collect the data itself, but you do need to discover and acquire existing data. It is important that team members responsible for data discovery make thoughtful decisions about whether data are appropriate for the assessment, and that they get feedback from the full team to discuss the merits of different data sources. Data discovery and acquisition are typically an iterative process, as there are both practical and philosophical reasons for including or excluding data.  
+
+When you begin exploring data possibilities, you can seek local data sources that could directly replace data from the global assessment provided in your repository. Such data would be better quality, i.e., higher accuracy and spatio-temporal resolution, than the data from the global assessment, and models may not need to change. However, we recommend first exploring other data possibilities that could capture specific characteristics to your study area. Assessments conducted at smaller scales are an opportunity to include characteristics specific to your study area that were not captured in the global assessment.
+
+### The process of discovery
+
+The most important thing to remember when gathering data and indicators is that they must contribute to measuring ocean health. Not all information that enhances our knowledge of marine processes directly convey information about ocean health and may not be appropriate within the OHI framework. Because of this, compiled indicators can sometimes be more suitable than raw data measuring single marine attributes.  
+
+Begin by understanding and comparing the best approaches used in assessments that have been completed, including global assessments, Brazil, Fiji, and the US West Coast. For the smaller-scale assessments (i.e. anything but the global assessments), if finer-resolution local data were available in the study area, these data were either incorporated into modified goal models that used locally appropriate and informed approaches or into the existing global goal model. When local data were not available, the global-scale data and global goal models were used, which is least desirable because it does not provide more information than the global study. When looking for data, the following decision tree may be useful. This should be a goal-by-goal process:
 
 
-### Data gathering responsibilities
+![](https://docs.google.com/drawings/d/1bJ3lk0stX78YM_VVR8VDAmdVUcMv4riSZk-0L2x8ybw/pub?w=624&h=336)
 
-Gathering appropriate data requires searching for and accessing freely-available data. It is important that team members responsible for data discovery make thoughtful decisions about whether data are appropriate for the regional assessment, and that they also get feedback from the full team to discuss the merits of different data sources. Data discovery and acquisition can be quite an iterative process, as there are both practical and philosophical reasons for including or excluding data, in addition to requiring access to the data.
+### Requirements for data and indicators
 
-Index scores can be recalculated annually as new data become available. This can establish a baseline of ocean health and serve as a monitoring mechanism to evaluate the effectiveness of actions and policies in improving the status of overall ocean health. This is good to keep in mind while looking for data: will it be available again in the future? It is also important to document the sources of all data so that it is both transparent where it came from and so that you will be able to find it again in the future. 
+There are six requirements to remember when investigating (or ‘scoping’) potential data and indicators. It is important that data satisfy as many of these requirements as possible, at times requiring gap-filling solutions. If requirements are not met and gap-filling solutions are not possible, you will likely need to exclude a dataset from the analyses. If data cannot be included, you may elect to use the global data layers or identifying other data and a different modeling approach.
 
+1. relevance to ocean health
+2. accessibility
+3. quality
+4. how to set the reference point
+5. spatial scale
+6. temporal scale
 
-### The process of data discovery
-
-In terms of philosophical considerations, the most important thing to remember when gathering data is that the data must contribute to measuring ocean health. Many data sources that enhance our knowledge of marine processes may not directly convey information about ocean health and may not be appropriate within the OHI framework. Because of this, compiled indicators can sometimes be more suitable than would raw data measuring single marine attributes.
-
-Begin by understanding and comparing the best approaches used in assessments that have been completed, including global assessments, Brazil, and the US West Coast. If finer-resolution local data were available in the study area, they could be used either in a newly developed regional goal model using locally appropriate and informed approaches, or in the existing global goal model. When local data were not available, the same global-scale data were used with the original global goal model, which is least desirable because it does not provide more information than the global study. When looking for data, the following decision tree may be useful. This should be a goal-by-goal process:
-
-![](./fig/data_discovery.png)
-
-Searching for data requires exploring data sources beyond any single discipline, and a good place to start is with an internet search. Internet searches can lead to published data in government and non-governmental organization reports, peer-reviewed articles, and masters and doctoral dissertations. Not everything will be freely available online but it is sometimes possible to request access.
-
-It is good practice to keep detailed notes of attributes of each potential data layer, since there may be different options to work with. Searching for data by goal is a good approach, although some data layers will be used for multiple goals.
-
-### Requirements for data layers
-
-Four requirements to remember when investigating (or ‘scoping’) potential data layers are: 
-
-1. relevance to ocean health 
-2. how to set the reference point
-3. spatial scale
-4. temporal scale.
-
-*Note: Once the appropriate data layers are chosen, they may need to be re-formatted in order to be readable by the toolbox (See: 'Formatting Data for Toolbox' section below).* 
 
 #### Relevance to ocean health  
 
 There must be a clear connection between the data and ocean health, and determining this will be closely linked to each goal model.
 
+#### Accessibility
+
+The two main points regarding accessibility are whether the source is open access and whether the data or indicators will be updated regularly.  
+
+The Index was created in the spirit of transparency and open-access, using open-source software and online platforms such as GitHub, is to ensure as much accessibility and open collaboration as possible. Data and indicators included should also follow these guidelines, so that anyone wishing to understand more about the Index may be able to see what data were used and how. For this reason we emphasize the importance of using data that may be made freely downloadable, as well as the importance of clearly documenting all data sources and reasons for the choices made in selecting data, indicators, and models.  
+
+Index scores can be recalculated annually as new data become available. This can establish a baseline of ocean health and serve as a monitoring mechanism to evaluate the effectiveness of actions and policies in improving the status of overall ocean health. This is good to keep in mind while looking for data: will it be available again in the future? It is also important to document the sources of all data so that it is both transparent where it came from and you will be able to find it in the future.
+
+#### Quality
+
+Understanding how the data or indicators were collected or created is important. Are they collected by a respected organization with quality control? Are there any protocol changes to be aware of, e.g. were there changes in the collection protocol to be aware of when interpreting temporal trends?
+
+
+
 #### Reference point  
 
-As each data layer must be scaled to a reference point, as you consider different data sources it is important to think about or identify what a reasonable reference point may be. Ask the following types of questions as you explore data possibilities:
+Most data will need to be scaled to a reference point, as you consider different data sources it is important to think about or identify what a reasonable reference point may be. Ask the following types of questions as you explore data possibilities:  
 
-  * Is there a known relationship associated with these data?
-  * Have policy targets been set regarding these data?
-  * Would a historic target be appropriate?
-  * Could a region within the study area be set as a spatial target?
-  
-#### Appropriate spatial scale  
+* Has past research identified potential targets for these data?
+  + example: maximum sustainable yield in fisheries
+* Have policy targets been set regarding these data?
+  + example: maximum levels of pollutants before beach closures
+* Would a historic reference point be an appropriate target?
+  + example: percent of habitat coverage before coastal development
+* Could a region within the study area be set as a spatial reference point?
+  + example: a certain region a leader in creating protected areas
+
+
+#### Appropriate spatial scale
 
 Data must be available for every region within the study area.*
 
-#### Appropriate temporal scale  
+#### Appropriate temporal scale
+  Data must be available for at least three to five years to calculate the trend. For some goals, where temporal reference points are desirable, longer time series are preferable.*  
 
-Data must be available for at least five years to calculate the trend. Longer time series are preferable because this can be used to set temporal reference points.*
-
-\* It is not always possible to meet the spatial and temporal requirements with each data layer. In these cases it can still be possible to use these data if appropriate gap-filling techniques are used (See: 'Formatting Data for Toolbox' section below). It is important that data satisfy as many of these requirements as possible, and in cases where creative ways of working with such data are not possible, it might be better to exclude these data from the analyses and try a different approach.
-
-### Notes about data and regions
-
-Final calculated scores by region will be represented on a map in addition to the flower plot. The map displays scores in the exclusive economic zone (EEZ) of the region, even if individual data layers do not all extend to the EEZ. This is a visualization that exactly maps the availble information of some data layers, but not all. Therefore, available data do not need to have been collected for all of the region's EEZ, but they need to be available for the region itself.
-
-![](./fig/rgns_brazil.png)
+\* It is not always possible to fully meet the spatial and temporal requirements with each source. In these cases, provided that the gaps are not extensive, it can still be possible to use these data if appropriate gap-filling techniques are used (See: 'Formatting Data for Toolbox' section).  
 
 ### Example: US West Coast data discovery
 
-Below are examples of some decisions made when exploring available data for the US West Coast regional assessment. Determining whether certain data could be included started with a good understanding of the data layers and models included in the global assessment, and because the US West Coast is a data-rich region, finer-resolution local data could be used in place of many of the global data layers.
+Below are examples of some decisions made when exploring available data for the US West Coast assessment. Determining whether certain data could be included began with a solid understanding of the data layers and models included in the global assessment. Since the US West Coast is a data-rich region, finer-resolution local data could be used in place of many of the global data layers. The US West Coast assessment had five regions: Washington, Oregon, Northern California, Central California, and Southern California.
+
 
 #### Reasons data were excluded  
 
-There are a lot of existing data that contribute to our scientific understanding of ocean processes and interactions but that are not ideal for the OHI. Reasons to exclude data occur both on a practical level (do data adhere to the requirements above?) and on a philosophical level, which requires reflecting on the relationship with ocean health. Some common reasons for excluding data are listed below:
+There are a lot of existing data that contribute to our scientific understanding of ocean processes and interactions but are not ideal for the OHI. Reasons to exclude data are both due to practical requirements (e.g., resolution, coverage, or other requirements listed above) and philosophical requirements (i.e., they do not help capture the attributes of interest for assessing ocean health). Some common reasons for excluding data are listed below:  
 
-  * 
-  **The data do not cover the entire area of the reporting region**. The state of California had excellent, long-term data on public attendance at state parks that would have been quite useful in the calculation of the tourism and recreation goal. However, Oregon and Washington did not have these same data so they were not used.
+* **The data do not cover the entire area of the reporting region**. The state of California had excellent, long-term data on public attendance at state parks that would have been quite useful in the calculation of the tourism and recreation goal. However, data were only available for three of the five regions (the three California regions but not Oregon and Washington), so they could not be used.  
 
-  * 
-  **There is not a clear and scientifically proven connection between the metric described by the data and ocean health**. 
-Along the US West Coast, kelp beds are a very important habitat because of their contribution to biodiversity and coastal protection. However, kelp coverage is quite variable and is driven primarily by abiotic natural forcing (wave/storm disturbance and temperature) and thus kelp coverage is not a good metric of ecosystem health. For these reasons kelp coverage was not included in the assessment.
+* **There is not a clear and scientifically observed relationship between the data and ocean health**. Along the US West Coast, kelp beds are a very important habitat because of their contribution to biodiversity and coastal protection. However, kelp coverage variation and is driven primarily by abiotic natural forcing (wave/storm disturbance and temperature) and thus it is not a good indicator of kelp forest health, particularly in the case of anthropogenic impacts.. For these reasons kelp coverage was not included in the assessment.  
 
-  * 
-  **The feature being measured may provide benefits to people, but this feature is not derived from the ocean**.
-Sea walls and riprap provide coastal protection to many people along the US West Coast. However, these structures are not a benefit that is derived from the ocean itself, so only biogenic habitats were included in the calculation of this goal. These data can be included as a pressure due to habitat loss.
+* **The feature being measured may provide benefits to people, but this feature is not derived from marine or coastal ecosystems**. Sea walls and riprap provide coastal protection to many people along the US West Coast. However, these structures are not a benefit that is derived from the marine ecosystems, so only coastal habitats were included in the calculation of this goal. These data can be included as a pressure due to habitat loss. They were not used as a resilience measure because they can often have negative side effects (e.g., by altering sedimentation dynamics), and because they have limited long-term sustainability (i.e., they need maintenance).  
 
-  * 
-  **Data collection is biased and might misrepresent ocean health**.
-The US Endangered Species Act identifies a species list focused on species of concern within the US. As such, these data are biased in the context of ocaean health since they assess only species whose populations may be in danger. For the calculation of the biodiversity goal, using these data would be inappropriate because this goal represents the status of all species in the region, not just those that are currently of conservation concern. Using these data may have shown the status of biodiversity to be lower than it really is because the selection of species to assess was already biased towards species of concern.
+* **Data collection is biased and might misrepresent ocean health**. The US Endangered Species Act identifies a species list focused on species of concern within the US. As such, these data are biased in the context of ocean health since they only assess species whose populations may be in danger. For the calculation of the biodiversity goal, using these data would be inappropriate because this goal represents the status of all species in the region, not just those that are currently of conservation concern. Using these data may have shown the status of biodiversity to be lower than it really is because the selection of species to assess was already biased towards species of concern.
 
-#### Creative approaches to using data
+* **Time series data are not long enough to calculate a trend or a reference point** (when a historical reference point is most appropriate). For the US West Coast, the current extent of seagrass habitats was available, however, these do not exist for previous points in time in most areas, so could not be used to calculate the trend or set a historical reference point. Therefore, we estimated the trend in health of seagrass habitats using as a proxy the trend in the main stressor (i.e., turbidity). In other words, we assumed that the rate of seagrass loss was directly proportional to the rate of increase in turbidity. Similar solutions may be used to estimate trends in your own assessment, if there is scientific support for assuming that the trend of what we want to assess (or the relationship between the current state and the state in the reference year) has a strong relationship with the trend of the proxy data available.
 
-  * 
-  **Time series data are not long enough to calculate a trend or a reference point (when a historical reference point is most appropriate)**.
-For the US West Coast, available data measure the current extent of seagrass habitats, however, these only exist for one time point in most areas so could not be used to calculate the trend or set a historical reference point. As these were the best data available for habitat coverage, we built a model to calculate the status and trend of seagrass habitats using other data that were available over time. A reasonable approach was to model the pressures exerted on seagrasses over time as a proxy for seagrass health.
+## Pressures and resilience
 
-## Updating pressures and resilience
+The same considerations and requirements about data presented above also apply to pressures and resilience. Pressures and resilience are organized in two separate matrices that indicate which measures affect which goals or goal components.
 
-### Introduction 
+![](https://docs.google.com/drawings/d/1IQhFezmGGAgPS-iZQ_0TfU2FgtV0hv81f2RV9pyiJCI/pub?w=960&h=480)
 
-'Pressures' and 'Resilience' are two of the four dimensions with which each goal/sub-goal is evaluated (the other two are 'Present Status' and 'Future Trend').
+**Pressures** and **Resilience** are two of the four dimensions used to evaluate each goal or sub-goal (the other two are 'Status' and 'Trend').
 
- + **Pressures** are the sum of the ecological and social pressures that negatively affect goal scores.
- + **Resilience** is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures.
+* **Pressures** are the sum of the ecological and social pressures that negatively affect goal scores.
+* **Resilience** is the sum of the ecological and social status (e.g., food-web integrity, health of the governance process) and initiatives (e.g., environmental laws, social policies) that can positively affect goal scores by reducing or eliminating pressures. In the figure, likely future state (in yellow) is the result of the trend, minus the negative effect of pressures (grey), plus the positive effect of resilience (salmon pink).
 
-![](./fig/calculating_index.png)
+![](https://docs.google.com/drawings/d/1GkLZnW8hQJf1KLX89LzViEBU4PkJ8kRqOERt_Fxtwu4/pub?w=864&h=384)
 
-For more general information on how OHI scores are calculated, see: http://www.oceanhealthindex.org/About/Methods/.
 
-**Updating the pressure and resilience matrix for a new regional assessment will require the user to:**
+### Matrices
 
- + Understand the pressures and resilience measures included in completed global assessment and determine whether they are relevant locally.
- + Identify and categorize new local pressures not captured in the pressures matrix.
- + Identify and categorize new local resilience measures (laws, regulations) not captured in the resilience matrix.
- + Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
+In your assessment, as you identify new sources for pressures and resilience layers, you will also need to update the pressures and resilience matrices. To update these matrices, you will need to:  
 
-**Before updating the pressure and resilience matrices however, please also consider the following:**
+* Evaluate which pressures and resilience measures included in the global assessment and determine whether they are relevant for the study area of your assessment.
+* Evaluate whether the indicators used to capture the pressure and resilience attributes are suitable in your area, or whether you can use regionally-developed indicators instead
+* Identify and categorize new locally-relevant pressures not captured in the global pressures matrix. Make sure you add it under one of the five existing ecological categories or the pressure category (or create a new category if needed).
+* Identify and categorize new local resilience measures (laws, regulatory process ranking, food-web integrity) not captured in the global resilience matrix.
+* Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
 
-The Ocean Health Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason behind the ecological categories was largely due to data availability at the global level and was designed to minimize sampling bias. For example, we found that there was more pollution data available than habitat destruction data, but just because people have monitored pollution more does not mean it is a larger pressure than habitat destruction. Ecologial and social pressures are assessed separately and then combined with equal weighting, which could be changed if there is local information on how to do so.
+#### To consider when updating pressures
 
-Ecological and social resilience are similarly assessed separately and then combined with equal weighting, which could also be changed based on expert opinions. Any new resilience measure must be associated with a pressure layer. This is because resilience in the Ocean Health Index framework acts to reduce pressures in each region. Therefore, resilience measures must not only be directly or indirectly relevant to ocean health, but must be in response to a pressure layer affecting a goal.
+**Pressure categories**
 
-Note that goals often interact with each other through pressures. The pressure created by one goal may affect a second goal without being affected itself. For example, raising fish in the mariculture goal can cause genetic escapes, which is a pressure (the *sp_genetic* layer). This pressure affects only the wild-caught fisheries and species sub-goals, but does not affect mariculture itself. 
+The OHI framework calculates pressures by first grouping them into an ecological pressure component divided in five categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and a social pressure component. The reason behind the ecological categories is to avoid hidden weighting. For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the individual stressor scores, pollution scores would have a greater influence on the results (stronger weight) just because people have monitored pollution by measuring many separate components.  
 
+Instead, aggregating by pressure categories first ensures that different stressor types influence the score based on the expert-based ranking. Nonetheless, to account for the fact that multiple different stressors within a category are likely to have a cumulative impact that is greater than if only one of the stressors were present, the scores are combined in a cumulative way within each category. The resulting scores are then averaged across ecological pressure categories. This result, in turn, is averaged with the social pressures to produce the final overall pressure score (see next paragraph).
+
+**Pressure weights**
+
+Ecological and social pressure components are assessed separately and then the two resulting scores are combined with equal weighting, which can be changed if there is local information on how to do so.  
+
+Ecological and social resilience are assessed separately and then combined with equal weighting (which could also be changed based on expert opinion). Ecological resilience is divided into an ecological integrity score and a regulations score. Any resilience regulation score is associated with a pressure layer. This is because regulations are intended to contrast the effect of pressures. The OHI math is designed assuming that, when the regulation score matches the respective pressure score, they cancel each other out (i.e. the regulation is being effective in keeping the stressor under control). Therefore, by including a layer for regulatory response to each pressure affecting the delivery of the goals, we ensure that the resilience regulation measures are relevant to ocean health.
+
+**Pressure and Status interactions**
+
+Note that a consequence of this structure is that goals may interact with each other. The pressure created by one goal may affect a second goal. For example, cultivating fish for mariculture (food provision sub-goal) can cause genetic escapes threatening the health of wild fish populations (captured through the *sp_genetic* layer in the figure). This pressure affects only the wild-caught fisheries and species sub-goals, but does not affect the mariculture goal itself. In other cases, such as the fishing harvest pressure, the pressure comes as a result of pursuing the food provision sub-goal of wild-caught fisheries, affecting several goals including the fishing sub-goal itself.
 
 ### Explore local pressures
 
-Begin by exploring the pressures included in the global pressures matrix in the GitHub repository (`subcountry2014/conf/pressures_matrix.csv`; more on the filesystem below). As illustrated below, pressures are either ecological or social, and are grouped into 6 categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures.
-
-In the example below, the clean waters goal is affected by four data layers within the pollution category, as well as one in the social category.
+Begin by exploring the pressures included in the global pressures matrix. You can explore this in Halpern *et al*. 2012 Supplementary Table S25, or in your assessment repository located at `subcountry2014/conf/pressures_matrix.csv`; (more information on the file system below). As illustrated below, pressures are either ecological or social, and are grouped into six categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures. In the figure, the clean waters goal is affected by four data layers within the pollution category, as well as one in the social category.
 
 ![](./fig/pressure_categories.png)
 
-Pressures (columns in `subcountry2014/conf/pressures_matrix.csv`), are matched with different goals and subgoals (rows) to indicate which pressures will be included when goal scores are calculated. In some cases the goals are further divided into components (e.g. habitats are divided by habitat type, natural products by product type).
+Pressures (columns in `pressures_matrix.csv`) are matched with different goals and subgoals (rows) to indicate which pressures to include when goal scores are calculated. In some cases, the goals are further divided into components (e.g., Habitat type: mangroves, seagrass, corals; natural products: seashells, fish for aquarium, etc).  
 
-The first step in updating the pressures matrix for your regional assessment is to determine if there any pressures that should be excluded from your study? For example, if there is no mariculture in your study area, perhaps there are also no genetic escapes (*sp_genetic* layer).
+### Updating the pressures matrix
 
-Next, brainstorm local pressures that are not captured in `pressures_matrix.csv`. Which pressures stand out in your study area? Pressures included in the `pressures_matrix.csv` are ultimately determined by available data, and thus there were pressures that were important but could not be included in the global assessment because of data availability (including altered sediment regimes, noise and light pollution, toxic chemicals from point sources, and nutrient pollution from atmospheric deposition and land-based sources other than fertilizer application to agricultural land). There are likely pressures important to your study area that were not captured in the global pressures matrix.  
+The first step in updating the pressures matrix for your  assessment is to determine if any of the global pressures should be excluded from your study. For example, if there is no mariculture in your study area, perhaps there are also no genetic escapes (*sp_genetic* layer).  
+
+Next, brainstorm local pressures that are not captured in `pressures_matrix.csv`. Which pressures stand out in your study area? Pressures included in the `pressures_matrix.csv` are ultimately determined by available data, and thus there were pressures that were important but could not be included in the global assessment because there were little or no data, such as altered sediment regimes, noise and light pollution, toxic chemicals from point sources, and nutrient pollution from atmospheric deposition, and land-based sources other than fertilizer and pesticide applications to agricultural land). There are likely pressures important to your study area that were not captured in the global pressures matrix. Another reason why pressures in the global assessment may be different than yours may be because of scale: certain sources of pollution, such as mariculture, may be very relevant at the scale of a single bay, but become negligible at the scale of the whole country’s coastline.
 
 **Table of pressures layers and descriptions**
 
@@ -527,49 +438,50 @@ Next, brainstorm local pressures that are not captured in `pressures_matrix.csv`
 |po_trash         |Trash pollution                                                                                   |
 
 
-**Some background** on the reasoning behind nutrient and chemical pollution in the global `pressures_matrix.csv`: Nutrient and chemical pollution were calculated from the global cumulative impact maps (spatial data). These data were clipped to each global region's EEZ: 200 km from the coast.  
+### Some spatial considerations
 
-* For some goals, the data clipped to the EEZ affects goals that occur far from shore, so `po_chemicals` applies to goals relevant offshore: FIS, MAR, ECO, and SPP. 
-* However, some goals are really only relevant nearshore, so we clipped the spatial data again, to 3nm from shore and used this as a separate input. So `po_chemicals_3nm` applies to goals nearshore: AO, CS, CP, TR, ICO, LSP, HAB. 
+For pressure layers that are derived from spatially-explicit data, it is important to consider to what portion of the study area that pressure is relevant. For example, in the global study, nutrient and chemical pollution were calculated from the global cumulative impact study (spatial data from Halpern *et al.* 2008). These data were clipped to each global region's EEZ: 200 nm from the coast:
 
-These distinctions don't always apply for smaller-scale assessments. For example, in the US West Coast study (Halpern et al. 2014), only a single `po_chemicals` layer was used: we did not distinguish between offshore and 3nm.
+* For some goals, the data clipped to the EEZ affects goals that occur far from shore, so `po_chemicals` applies to goals relevant offshore: FIS, MAR, ECO, and SPP.
+* However, some goals are really only relevant nearshore, so we clipped the spatial data again, to 3nm from shore and used this as a separate input. So `po_chemicals_3nm` applies to goals nearshore: AO, CS, CP, TR, ICO, LSP, HAB.
 
+These distinctions won't always apply for smaller-scale assessments. For example, in the US West Coast study (Halpern et al. 2014), only a single po_chemicals layer was used: we did not distinguish between offshore and 3nm.
 
 ### Determine how the pressure affects goals
 
-Next, you will need to:
+Next, you will need to determine:
 
- + Map which goals are affected by a given pressure layer.
- + Determine the appropriate rank weighting (how important the pressure is for the delivery of the goal/component).
- + Decide in which pressure category the new pressure belongs.
+ + which goals are affected by a given pressure layer.
+ + the appropriate rank weighting (how important the pressure is for the delivery of the goal/component).
+ + which pressure category the new pressure belongs.
 
-These decisions should depend on expert opinions and previous scientific studies, even if they do not occur in your study area.
+These decisions should depend on expert opinions and previous scientific studies.
 
-The original pressure matrix weights for instance were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high, 2=medium, and 1=low pressure; stressors that have no impact drop out rather than being assigned a rank of zero, which would affect the average score). Pressures are ranked rather than being represented as a binary (yes/no) measure because the range of consequence of different pressures on each goal can be quite large, and to classify all those pressures as a simple 'yes' would unduly give too much influence to the weakest stressors. For example, food provision is most heavily impacted by unsustainable, high-bycatch fishing, but pollution does have  some impact on fish stocks. Without a weighting system, these stressors would be treated equally in their impact on the food provision goal. 
+The original pressure matrix weights for instance were determined by Halpern *et al*. 2012 (*Nature*) based on scientific literature and expert opinion (3=high, 2=medium, and 1=low pressure; stressors that have no impact drop out rather than being assigned a rank of zero, which would affect the average score). Pressures are ranked rather than being represented as a binary (yes/no) measure because the range of consequence of different pressures on each goal can be quite large, and to classify all those pressures as a simple 'yes' would give too much influence to the weakest stressors. For example, food provision is most heavily impacted by unsustainable, high-bycatch fishing, but pollution does have  some impact on fish populations. Without a weighting system, these stressors would be treated equally in their impact on the food provision goal.
 
-Most likely, the new pressure will fit into one of the existing categories. However, depending on the type of pressures in your study area, it is possible that a new pressure category could be created.  
+Most likely, the new pressure will fit into one of the existing categories. However, depending on the type of pressures in your study area, it is possible that a new pressure category could be created. If you decide to create a new category, be mindful of the implications described above.  
 
-      
+
 ### Identify available pressures data
 
-Like the global study, what pressures you are able to include in your regional study will also depend on data availability. Remember that each column in `pressures_matrix.csv` is a data layer, which requires data for each region in your study area. Begin with a list of local pressures that are important, and then refine if data are not available. 
-  
-In addition to data for the local pressures you identify, it will likely be possible to find better, local data to replace the global template data layers from the pressures matrix. In this case, you will first find local data and then update the pressure data layer as you would with any other data layer. See the 'modifying and creating data layers' section below for how to do this. 
-      
-      
-### Explore local resilience 
+Like the global study, what pressures you are able to include in your regional study will also depend on data availability. Remember that each column in `pressures_matrix.csv` is a data layer, which requires data for each region in your study area. Begin with a list of local pressures that are important, and then refine if data are not available.
 
-As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (`subcountry2014/conf/resilience_matrix.csv`). As illustrated below, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social components.
+In addition to data for the local pressures you identify, it will likely be possible to find better, local data to replace the global template data layers from the pressures matrix. In this case, you will first find local data and then update the pressure data layer as you would with any other data layer. See the 'modifying and creating data layers' section below for how to do this.  
+
+It is important to keep in mind that each pressure layer needs to capture the stressor on a scale that goes from 0 (no stressor at all) to 100 (the highest possible value for the stressor, or the value at which the goal achievement is completely impaired). In other words, when using local data, ensure that you are able to come up with benchmarks to rescale the pressure layer from 0 to 100.
+
+### Explore local resilience
+
+As with the pressures matrix, begin by exploring the resilience measures included in the global resilience matrix (from Halpern *et al*. 2012 Table S26 or `subcountry2014/conf/resilience_matrix.csv`). As illustrated in the figure, resilience is also grouped into ecological and social categories, and includes ecological components, goal-specific regulations, and social components.
 
 In the example below, only one regulatory measure is relevant for the clean waters goal, along with one social integrity measure.
 
 ![](./fig/resilience_categories.png)
 
-Goal-specific regulations intend to address ecological pressures, and are measured as laws, regulations, and other institutional measures related to a specific goal. Governance is a function of institutional structures that address the intended objective, implementing such governance, and whether stated objectives have been effectively met. Social integrity is intended to describe those processes internal to a community that affect its resilience. It is a function of a wide range of aspects of social structure within a region, and may not be strictly marine related, but can judge how well-governed areas are and therefore how well a region may be able to respond to or prevent environmental challenges.  
+Goal-specific regulations intend to address ecological pressures, and are measured as laws, regulations, and other institutional measures related to a specific goal. Governance includes the laws or regulations that address the intended objective, implementation of such laws, and whether stated objectives have been effectively met. Social integrity is intended to describe those processes internal to a community that affect its resilience. It is a function of a wide range of aspects of social structure within a region, and may not be strictly marine related, but can inform the level of governance within a region and therefore the ability to respond to or prevent environmental challenges.
 
-The first step in updating the resilience matrix for your regional assessment is to determine if there any resilience measures that should be excluded from your study? 
-
-Next, brainstorm local resilience measures that are not captured in `resilience_matrix.csv`. What are important regulatory, ecological and social resilience measures in your study area? Resilience measures included in `resilience_matrix.csv` are also determined by available data, and thus it is possible to improve upon the resilience measures when doing an assessment at a spatial scale smaller than the global analysis.
+The first step in updating the resilience matrix for your regional assessment is to determine if any resilience measures should be excluded from your study.
+Next, brainstorm local resilience measures that are not captured in `resilience_matrix.csv`. What are important regulatory measures to address the stressors you’ve included in your study area? Can you add social resilience measures that are not included in the global assessment?
 
 **Table of resilience layers and descriptions**
 
@@ -595,49 +507,171 @@ Next, brainstorm local resilience measures that are not captured in `resilience_
 |water                 |CBD survey: water                                               |
 |wgi_all               |Strength of governance indicated with the WGI                   |
 
-\* *CBD = Centre for Biological Diversity; GCI = Global Competitiveness Index; MSI = Mariculture Sustainability Index; WGI = World Governance Indicators*. 
+\* *CBD = Convention on Biological Diversity; GCI = Global Competitiveness Index; MSI = Mariculture Sustainability Index; WGI = World Governance Indicators*.
 
-Ecological integrity in the global assessment was measured as the relative condition of assessed species in a given location, and therefore is only relevant to a subset of goals (wild-caught fisheries, artisanal opportunity, natural products, iconic species, and species). Local measures of this component would potentially allow for more goals to be affected. 
+Ecological integrity in the global assessment was measured as the relative condition of assessed species in a given location, and therefore is only relevant to a subset of goals (wild-caught fisheries, artisanal opportunity, natural products, iconic species, and species). Local measures of this component would potentially allow for more goals to be affected.
 
 ### Identify regulatory resilience measures for any new ecological pressures
 
-As you explore any new local resilience measures to be included, remember that any new pressure in the ecological resilience category with a rank of 2 or 3 will need a corresponding resilience measure. 
-
+As you explore any new local resilience measures to be included, remember that any new pressure in the ecological integrity category with a high ranking of (2 or 3) will need a corresponding resilience measure.
 
 ### Determine how the resilience measure affects goals
 
-Next, you will need:
+Next, you will need to determine:
 
- + Map which goals are affected by a given resilience layer. 
- + Determine the appropriate rank weighting, (how important the resilience is in counteracting a pressure). 
- + Decide in which resilience category the new pressure belongs.
+ + which goals are affected by a given resilience measure
+ + the appropriate rank weighting, (how important the resilience is in counteracting a pressure)
+ + whether the resilience measure is social or ecological
 
-These decisions should depend on local expert knowledge and previous scientific studies, even if they do not occur in your study area. 
+These decisions should depend on local expert knowledge and previous scientific studies.
 
 
 ### Identify available resilience data
 
-Resilience layers are intended to describe the measures that set rules and regulations to address ecological pressures, and are measured as laws and other institutional measures related to a specific goal. Data to address these resilience  components should fall into one of three categories: 
+Resilience measures included in `resilience_matrix.csv` are also determined by available data, coarser spatial resolution, and may not reflect local management targets. When data or indicators are available, you should include them to improve upon resilience measures. You may also ask: What are local management benchmarks that you can use to rescale the resilience layers? Do you have locally-developed indices to capture social resilience that may be more specific to your area than the World Bank governance index? Do you have regional models that might capture the ecological integrity of the foodweb that could replace average extinction risk of IUCN-assessed species?
 
-1. Existence of rules and regulations: Are there institutional structures in place to appropriately address the ecological pressure? 
-2. Implementation and Enforcement: Have these structures been appropriately implemented and are there enforcement mechanisms in place? 
-3. Effectiveness and Compliance: How effective has the structure been at mitigating these pressures and is their effective compliance with these structures?      
+**Ecological resilience** scores are intended to describe the degree to which there are effective regulations to address ecological pressures, and are measured by assessing the relevant laws and institutional processes. It is difficult to assign a quantitative score to such a complex attribute. Moreover, it is challenging to establish a benchmark to compare that score against, but this is necessary to rescale the resilience score from 0 to 100. In some cases, some numerical indices are readily available and may be used as is (rescaled to the highest observed value, if necessary). In other cases, we had to assign expert-based scores:
 
-Social measures may not be strictly marine related, but can judge how well-governed areas are and therefore how well a region may be able to respond to or prevent environmental challenges.  
+1. Existence of regulations: Are regulations in place to appropriately address the ecological pressure?
+2. Implementation and Enforcement: Have these regulations been appropriately implemented and are there enforcement mechanisms in place?
+3. Effectiveness and Compliance: How effective have the regulations been at mitigating these pressures and is there compliance with these regulations?
+
+**Social resilience** may not be strictly marine related, but can help predict how well a region may be able to respond to or prevent new environmental challenges. 
+
+## The Ocean Health Index Toolbox
+
+**The OHI Toolbox** is an ecosystem of data, scripts, and structure required to calculate OHI scores at any scale. Toolbox scripts are open source, written in the software language R, and data inputted into the Toolbox are *.csv* (comma-separated-value) files, which can be created or edited using text editors or Microsoft Excel. Files are stored within two folders called **repositories (repos)**, such that
+
+> OHI Toolbox = your assessment repo + ohi core functions repo.
+
+We access and interact with the Toolbox ecosystem through an online collaborative platform called **GitHub**. GitHub stores the R scripts and *.csv* files in a folder called a repository, which is found online and can also be downloaded on your computer and synced with the online version. GitHub tracks changes by all collaborators working on the project through time, and saves all versions for comparison. A separate section provides instruction on how to download GitHub repositories to your computer, but everything is also available online.  
+
+The Toolbox is used to calculate final scores. But, perhaps more importantly, it can also be used to organize an assessment, including data identification and management.  The Toolbox can additionally be used to compare how different management scenarios could affect overall ocean health, which can inform effective strategies for ocean resource management at a local scale.
+
+## File System for Assessment Repositories
+
+This section is an orientation to the files within your assessment repository. The file system structure is the same whether you view your assessment repository online or after downloading or cloning to your computer (see Section 5).
+
+Throughout this example, we will use Ecuador’s assessment repository as an example, available at https://github.com/OHI-Science/ecu.
 
 
+### Assessments and scenarios
+
+Your **assessment repository** contains a **scenario folder**, which by default is named ** *subcountry2014* **. This scenario folder contains all the files needed to calculate scores, and they are described in detail below.
+
+The scenario folder is named *subcountry2014* because it contains data for your country used in the 2014 global assessment. These data in most cases were attributed equally to all regions within your study area (for example, data used for Ecuador in the global assessment was attributed to all coastal states in the files within *subcountry2014*).
+
+You will be able to rename your scenario folder to better reflect the spatial and temporal scale of your scenario after you have set up your GitHub account. We recommend that the name defines the scale of the regions and the year. Eventually, you will likely have multiple scenario folders that contain data for subsequent years or modifications to explore policy alternatives.
+
+
+![](https://docs.google.com/drawings/d/1eHViTehnAuxSDw1fYI54C3X5YgBktGtaVt71R3OXYeE/pub?w=960&h=720)
+
+In the above figure, **Ecuador (ecu)** is the **assessment repository** and ** *subcountry2014* ** is the **scenario folder**. Note that files with names preceded by a ‘.’ do not appear when not viewing from github.com; this is because these files are specific to GitHub.
+
+![](./fig/ohiglobal_file_location.png)
+
+Within the *subcountry2014* folder area all the inputs required by the Toolbox. Each one is described in detail below.
+
+![](./fig/scenario_folder_overview.png)
+
+
+### *layers.csv*
+`layers.csv` is the registry that manages all data required for the assessment. All relevant data are prepared as a ‘data layer’ and registered in this file. The Toolbox will rely on information from this file to use the data and display information on the WebApp.
+
+![](./fig/layers_csv_registry.png)
+
+When you open `layers.csv`, you’ll see that each row of information represents a specific data layer that has been prepared for the Toolbox. The first columns (*targets, layer, name, description, fld_value, units, filename*) contain information that will be updated by your team as you incorporate your own data and edits; all other columns are generated later by the Toolbox as it confirms data formatting and content. The first columns have the following information:
+
+* **targets** indicates which goal or dimension uses the data layer. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
+ + Food Provision (FP): Fisheries (FIS) and Mariculture (MAR)
+  + Artisanal Fishing Opportunity (AO)
+  + Natural Products (NP)
+  + Coastal Protection (CP)
+  + Carbon Storage (CS)
+  + Livelihoods and Economies (LE): Livelihoods (LIV) and Economies (ECO)
+  + Tourism and Recreation (TR)
+  + Sense of Place: Lasting Special Places (LSP) and Iconic Species (ICO)
+  + Clean Waters (CW)
+  + Biodiversity (BD): Habitats (HAB) and Species (SPP)  
+
+* **layer** is the identifying name of the data layer, which will be used in R scripts like `functions.R` and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`. This is also displayed on the WebApp under the drop-down menu when the variable type is ‘input layer’.
+* **name** is a longer title of the data layer; this is displayed on the WebApp under the drop-down menu when the variable type is ‘input layer’.
+* **description** is further description of the data layer; this is also displayed on the WebApp under the drop-down menu when the variable type is ‘input layer’.
+* **fld_value** indicates the units along with the units column.
+* **units** unit of measure in which the data are reported
+* **filename** is the *.csv* filename that holds the data layer information, and is located in the folder `subcountry2014/layers`.
+
+
+### *layers* folder
+The `layers` folder contains every data layer as an individual *.csv* file. The names of the *.csv* files within the layers folder correspond to those listed in the *filename* column of the `layers.csv` file described above. All *.csv* files can be read with text editors or with Microsoft Excel or similar software.
+
+![](./fig/layers_folder_location.png)
+
+Note that each *.csv* file within the `layers` folder has a specific format that the Toolbox expects and requires. Comma separated value files (*.csv* files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software.  
+
+Now, open the `layers/alien_species.csv` file: note the unique region identifier (*rgn_id*) with a single associated *score* or *value*, and that the data are presented in ‘long format’ with minimal columns. See the section on *Formatting Data for the Toolbox* for further details and instructions. Scores can be viewed through the App using the ‘Input Layer’ pulldown menu.
+
+
+### *conf* folder
+The `conf` (configuration) folder includes R functions (*config.R* and *functions.R*) and *.csv* files containing information that will be accessed by the R functions (*goals.csv*, *pressures_matrix.R*, *resilience_matrix.csv*, and *resilience_weights.csv*).
+
+![](./fig/layers_folder_location_conf.png)
+
+#### *config.r*
+`config.r` is an R script that configures labeling and constants appropriately.
+
+#### *functions.r*
+`functions.r` contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in `layers.csv`. When you modify or develop new goal models, you will modify functions.r.
+
+#### *goals.csv*
+`goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the WebApp. `goals.csv` also indicates the arguments passed to `functions.R`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).  
+
+#### *pressures_matrix.csv*
+`pressures_matrix.csv` defines the different types of ocean pressures and the goals they affect.
+
+Each column in the pressures matrix identifies a data layer that is also registered in `layers.csv`: and has a prefix (for example: `po_` for the pollution category).  The pressure data layers are also required to have a value for every region in the study area, with the region scores ranging from 0-1.
+
+#### *resilience_matrix.csv*
+`resilience_matrix.csv` defines the different types of resilience with the goals that they affect.
+
+Like the pressures matrix, the resilience matrix also has weights depending on the level of protection. However, these weights are in a separate file: `resilience_weights.csv`.
+
+Each column in the resilience matrix is a data layer that is also registered in `layers.csv`. Resilience layers, like the pressure layers, are also requried to have a value for every region in the study area. Resilience layers each have a score between 0-1.
+
+#### *resilience_weights.csv*
+`resilience_weights.csv` describes the weight of various resilience layers, which in Halpern et al. 2012 (Nature) were determined based on scientific literature and expert opinion.
+
+### spatial folder
+The spatial folder contains a single file, *regions_gcs.js*. This is a spatial file in the JSON format; it spatially identifies the study area and regions for the assessment. If you plan to modify your study area or regions, you will need to upload a *.js* file with appropriate offshore boundaries. You will need a GIS analyst to do this: see http://ohi-science.org/pages/create_regions.html for some instruction.
+
+### launch_app_code.R
+The App can be launched on your computer so that you can visualize any edits you make while you are offline. To do this, you will run the code in launch_app_code.R. Make sure you are in the *subcountry2014* directory at that time: `setwd(~/github/ecu/subcountry2014)`
+
+
+### layers-empty_swapping-global-mean.csv
+This file contains a list of data layers that were used in the global assessment, but no data were available for your country. Without these data for your country, global averages are included in your `subcountry2014` scenario folder so the Toolbox can calculate scores until you replace these data with appropriate data for your study area. This file is not used anywhere by the Toolbox but is a registry of data layers that should prioritized to be replaced with your own local data.
+
+### *calculate_scores.r*
+`calculate_scores.r` is a script that tells the Toolbox to calculate scores using the *.csv* files in the *layers* folder that are registered in *layers.csv* and the configurations identified in *config.r*. Scores will be saved in *scores.csv*.
+
+### scores.csv
+`scores.csv` contains the calculated scores for the assessment. Currently, these scores were calculated using data for your country from the global 2014 assessment. Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each region in the study area (with region identifier), and are presented in ‘long’ format. Scores can be viewed through the App using the ‘Output Score’ pulldown menu. 
+
+
+### Relaunching the Toolbox
+After the initial Toolbox setup, further launches of the Toolbox Application can be done without the software program R. Instead, PC users can double-click the `launchApp.bat` file and Mac users can double-click the `launchApp.command` file.
 
 ## Formatting Data for the Toolbox
 
 ### Introduction
 
-The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based *.csv* files (*csv* stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be nearly as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
+The OHI Toolbox is designed to work in the programming language **R** using input data stored in text-based *.csv* files (*csv* stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Each data layer (data input) has its own *.csv* file, which is combined with others within the Toolbox for the model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. The global analysis included over 100 data layer files, and there will probably be as many in regional assessments. This section describes and provides examples of how to format the layers data for the Toolbox App.
 
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
+OHI goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using an area-weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
 The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
-1. At least five years of data are available, 
+1. At least five years of data are available,
 2. There are no data gaps
 3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
 
@@ -647,23 +681,23 @@ The example below shows information for a study area with 4 regions. There are t
 
 ### Gapfilling
 
-It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
+It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer).
 
 How these gaps are filled will depend on the data and regions themselves, and requires thoughtful, logical  decisions to most reasonably fill gaps. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highlight some example of temporal and spatial gapfilling.  
 
-All decisions of gapfilling should be documented to ensure transparency and reproducibility. The examples below are in Excel, but programming these changes in software like R easily enables transparency and reproducibility. 
+All decisions of gapfilling should be documented to ensure transparency and reproducibility. The examples below are in Excel, but programming these changes in software like R easily promotes transparency and reproducibility.
 
 #### Temporal gapfilling
 
-Temporal gaps are when some data are available for a region, but there are missing years. The Toolbox requires data for each year for every region. It is important to make an informed decision about how to temporally gapfilling data.
+Temporal gaps occur when a region is missing data for some years. The Toolbox requires data for each year for every region. It is important to make an informed decision about how to temporally gapfill data.
 
 ![](./fig/temporal_gaps.png)
 
-Many times, creating a linear model is the best way to estimate data and fill temporal gaps. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
+Often, regression models are the best way to estimate data and fill temporal gaps. Here we give an example that assumes a linear relationship between the year and value variables within a region. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region 1.
 
-**Temporal gapfilling example (assumes linearity):**
+**Temporal gapfilling example (assumes linearity: able to be represented by a straight line on a graph)):**
 
 There are four steps to temporally gapfill with a linear model, illustrated in the figures with four columns.
 
@@ -671,7 +705,7 @@ There are four steps to temporally gapfill with a linear model, illustrated in t
 
 The first step is to calculate the slope of the line that is fitted through the available data points. This can be done in excel using the **SLOPE(known_y's,known_x's)** function as highlighted in the figure below. In this case, the x-axis is *years* (2005, 2006, etc...), the y-axis is *count*, and the Excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
-![](./fig/filling_temporal_gaps_slope.png) 
+![](./fig/filling_temporal_gaps_slope.png)
 
 **2. Calculate the y-intercept for each region**
 
@@ -681,7 +715,7 @@ The next step is to calculate the intercept of the line that is fitted through t
 
 **3. Calculate y for all years**
 
-The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y-values'. To do so, simply replace the known three values into the **y = mx + b** equation, to calculate the unknown 'count' for a given year (189.39 in 2006, and 202.08 in 2007).
+The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y-values'. To do so, simply replace the known three values into the **y = mx + b** equation (m=slope, x=year, b=intercept), to calculate the unknown 'count' for a given year (189.39 in 2006, and 202.08 in 2007).
 
 ![](./fig/filling_temporal_gaps_value.png)
 
@@ -696,20 +730,20 @@ Spatial gaps are when no data are available for a particular region. The Toolbox
 
 ![](./fig/gapfilling_spatial.png)
 
-To fill gaps spatially, assumptions must be made that one region is like another, and data from another region will be substituted in place of the missing data. This will depend on the type of data and the properties of the regions requiring gapfilling. For example, if a region is missing data but has similar properties to a different region that does have data, the missing data could be 'borrowed' from the region with information. Each data layer can be gapfilled using a different approach when necessary.
+To fill gaps spatially, you must assume that one region is like another, and data from another region is adequate to be substituted in place of the missing data. This will depend on the type of data and the properties of the regions requiring gapfilling. For example, if a region is missing data but has similar properties to a different region that does have data, the missing data could be 'borrowed' from the region with information. Each data layer can be gapfilled using a different approach when necessary.  
 
-**Characteristics of region regions requiring gapfilling that can help determine which type of spatial gapfilling to use:**
+**Characteristics of regions requiring gapfilling that can help determine which type of spatial gapfilling to use:**
 
-1. proximity: can it be assumed that nearby regions have similar properties? 
+1. proximity: can it be assumed that nearby regions have similar properties?
 
 2. study area: are data reported for the study area, and can those data be used for subcountry regions?
 
-3. demographic information: can it be assumed a region with a similar population size has similar data? 
+3. demographic information: can it be assumed a region with a similar population size has similar data?
 
 
 **Spatial gapfilling example:**
 
-For a certain data layer, suppose the second region (rgn_id 2) has no data reported, as illustrated in the figure above. How to spatially gapfill rgn_id 2 requires thinking about the properties and characteristics of the region and the data, tourist count. 
+For a certain data layer, suppose the second region (rgn_id 2) has no data reported, as illustrated in the figure above. How to spatially gapfill rgn_id 2 requires thinking about the properties and characteristics of the region and the data, in this case, tourist count.
 
 Here are properties that can be important for decision making:
 
@@ -736,7 +770,7 @@ The data layer is now ready for the Toolbox, gapfilled and in the appropriate fo
 
 ### Long formatting
 
-The Toolbox expects data to be in 'long' or 'narrow' formatting. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
+The Toolbox expects data to be in 'long' or 'narrow' format. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
 
 **Example of data in an incorrect format:**
 
@@ -746,9 +780,9 @@ With 'wide' format, data layers are more difficult to combine with others and mo
 
 **Transforming data into 'narrow' format:**
 
-Data are easily transformed in a programming language such as R. 
+Data are easily transformed in a programming language such as R.
 
-In R, the `reshape` package has the `melt` command, which will melt the data from a wide format into a narrow format. It also can `cast` the data back into a wide format if desired. R documentation: 
+In R, the `reshape` package has the `melt` command, which will melt the data from a wide format into a narrow format. It also can `cast` the data back into a wide format if desired. R documentation:
 
 - http://cran.r-project.org/web/packages/reshape2/reshape2.pdf
 - http://www.slideshare.net/jeffreybreen/reshaping-data-in-r
@@ -758,15 +792,13 @@ Example code using the *melt* command in the *reshape2* library. Assume the data
 
 ![](./fig/melt_code.png)
 
-This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
+This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'.
 
-The final step is optional: ordering the data will make it more easy to read for humans (R and the Toolbox can read these data without this final step):
+The final step is optional: ordering the data will make it easier for humans to read (R and the Toolbox can read these data without this final step):
 
 **Example of data in the appropriate format:**
 
 ![](./fig/formatting_long_example_2.png)
-
-With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible. Data layers in this format can be easily combined with other data layers: the range of years available can be different for each data layer, and there are minimal column names.
 
 # Installing the Toolbox
 
