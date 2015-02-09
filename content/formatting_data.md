@@ -2,13 +2,13 @@
 
 ### Introduction
 
-The Ocean Health Index Toolbox App is designed to work in the programming language **R** using input data stored in text-based *.csv* files (*csv* stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Data layers (data input) each have their own .csv file that are combined within the Toolbox in model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. In the global analysis, there were over 100 data layer files included, and there will be nearly as many in regional applications, no matter what the spatial scale. This document describes and provides examples of how to format data for the Toolbox App.
+The OHI Toolbox is designed to work in the programming language **R** using input data stored in text-based *.csv* files (*csv* stands for 'comma-separated value'; these files can be opened as a spreadsheet using Microsoft Excel or similar programs). Each data layer (data input) has its own *.csv* file, which is combined with others within the Toolbox for the model calculations. These data layers are used for calculating goal scores, meaning that they are inputs for status, trend, pressures, and resilience. The global analysis included over 100 data layer files, and there will probably be as many in regional assessments. This section describes and provides examples of how to format the layers data for the Toolbox App.
 
-Ocean Health Index goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
+OHI goal scores are calculated at the scale of the reporting unit, which is called a ‘**region**’ and then combined using an area-weighted average to produce the score for the overall area assessed, called a ‘**study area**’. The OHI Toolbox App expects each data file to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single *score* or *value*. In order to calculate trend, input data must be available as a time series for at least 5 recent years (and the longer the time series the better, as this can be used in setting temporal reference points).
 
 The example below shows information for a study area with 4 regions. There are two different (and separate) data layer files: tourism count (tr_total.csv) and natural products harvested, in metric tonnes (np_harvest_tonnes.csv). Each file has data for four regions (1-4) in different years, and the second has an additional 'categories' column for the different types of natural products that were harvested. In this example, the two data layers are appropriate for status calculations with the Toolbox because:
 
-1. At least five years of data are available, 
+1. At least five years of data are available,
 2. There are no data gaps
 3. Data are presented in 'long' or 'narrow' format (not 'wide' format).
 
@@ -18,23 +18,23 @@ The example below shows information for a study area with 4 regions. There are t
 
 ### Gapfilling
 
-It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer). 
+It is important that data prepared for the Toolbox App have no missing values or 'gaps'. Data gaps can occur in two main ways: 1) **temporal gaps**: when several years in a time series in a single region have missing data, and 2) **spatial gaps**: when all years for a region have missing data (and therefore the whole region is 'missing' for that data layer).
 
 How these gaps are filled will depend on the data and regions themselves, and requires thoughtful, logical  decisions to most reasonably fill gaps. Each data layer can be gapfilled using different approaches. Some data layers will require both temporal and spatial gapfilling. The examples below highlight some example of temporal and spatial gapfilling.  
 
-All decisions of gapfilling should be documented to ensure transparency and reproducibility. The examples below are in Excel, but programming these changes in software like R easily enables transparency and reproducibility. 
+All decisions of gapfilling should be documented to ensure transparency and reproducibility. The examples below are in Excel, but programming these changes in software like R easily promotes transparency and reproducibility.
 
 #### Temporal gapfilling
 
-Temporal gaps are when some data are available for a region, but there are missing years. The Toolbox requires data for each year for every region. It is important to make an informed decision about how to temporally gapfilling data.
+Temporal gaps occur when a region is missing data for some years. The Toolbox requires data for each year for every region. It is important to make an informed decision about how to temporally gapfill data.
 
 ![](./fig/temporal_gaps.png)
 
-Many times, creating a linear model is the best way to estimate data and fill temporal gaps. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
+Often, regression models are the best way to estimate data and fill temporal gaps. Here we give an example that assumes a linear relationship between the year and value variables within a region. If data do not fit a linear framework, other models may be fit to help with gapfilling. Here we give an example assuming linearity.
 
 Using a linear model can be done in most programming languages using specific functions, but here we show this step-by-step using functions in Excel for Region 1.
 
-**Temporal gapfilling example (assumes linearity):**
+**Temporal gapfilling example (assumes linearity: able to be represented by a straight line on a graph)):**
 
 There are four steps to temporally gapfill with a linear model, illustrated in the figures with four columns.
 
@@ -42,7 +42,7 @@ There are four steps to temporally gapfill with a linear model, illustrated in t
 
 The first step is to calculate the slope of the line that is fitted through the available data points. This can be done in excel using the **SLOPE(known_y's,known_x's)** function as highlighted in the figure below. In this case, the x-axis is *years* (2005, 2006, etc...), the y-axis is *count*, and the Excel function automatically plots and fits a line through the known values (177.14 in 2005, 212.99 in 2008, and 228.81 in 2009), and subsequently calculates the slope (12.69).
 
-![](./fig/filling_temporal_gaps_slope.png) 
+![](./fig/filling_temporal_gaps_slope.png)
 
 **2. Calculate the y-intercept for each region**
 
@@ -52,7 +52,7 @@ The next step is to calculate the intercept of the line that is fitted through t
 
 **3. Calculate y for all years**
 
-The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y-values'. To do so, simply replace the known three values into the **y = mx + b** equation, to calculate the unknown 'count' for a given year (189.39 in 2006, and 202.08 in 2007).
+The slope and y-intercept that were calculated in steps 1 and 2 can then be used along with the year (independent variable) to calculate the unknown 'y-values'. To do so, simply replace the known three values into the **y = mx + b** equation (m=slope, x=year, b=intercept), to calculate the unknown 'count' for a given year (189.39 in 2006, and 202.08 in 2007).
 
 ![](./fig/filling_temporal_gaps_value.png)
 
@@ -67,20 +67,20 @@ Spatial gaps are when no data are available for a particular region. The Toolbox
 
 ![](./fig/gapfilling_spatial.png)
 
-To fill gaps spatially, assumptions must be made that one region is like another, and data from another region will be substituted in place of the missing data. This will depend on the type of data and the properties of the regions requiring gapfilling. For example, if a region is missing data but has similar properties to a different region that does have data, the missing data could be 'borrowed' from the region with information. Each data layer can be gapfilled using a different approach when necessary.
+To fill gaps spatially, you must assume that one region is like another, and data from another region is adequate to be substituted in place of the missing data. This will depend on the type of data and the properties of the regions requiring gapfilling. For example, if a region is missing data but has similar properties to a different region that does have data, the missing data could be 'borrowed' from the region with information. Each data layer can be gapfilled using a different approach when necessary.  
 
-**Characteristics of region regions requiring gapfilling that can help determine which type of spatial gapfilling to use:**
+**Characteristics of regions requiring gapfilling that can help determine which type of spatial gapfilling to use:**
 
-1. proximity: can it be assumed that nearby regions have similar properties? 
+1. proximity: can it be assumed that nearby regions have similar properties?
 
 2. study area: are data reported for the study area, and can those data be used for subcountry regions?
 
-3. demographic information: can it be assumed a region with a similar population size has similar data? 
+3. demographic information: can it be assumed a region with a similar population size has similar data?
 
 
 **Spatial gapfilling example:**
 
-For a certain data layer, suppose the second region (rgn_id 2) has no data reported, as illustrated in the figure above. How to spatially gapfill rgn_id 2 requires thinking about the properties and characteristics of the region and the data, tourist count. 
+For a certain data layer, suppose the second region (rgn_id 2) has no data reported, as illustrated in the figure above. How to spatially gapfill rgn_id 2 requires thinking about the properties and characteristics of the region and the data, in this case, tourist count.
 
 Here are properties that can be important for decision making:
 
@@ -107,7 +107,7 @@ The data layer is now ready for the Toolbox, gapfilled and in the appropriate fo
 
 ### Long formatting
 
-The Toolbox expects data to be in 'long' or 'narrow' formatting. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
+The Toolbox expects data to be in 'long' or 'narrow' format. Below are examples of correct and incorrect formatting, and tips on how to transform data into the appropriate format.
 
 **Example of data in an incorrect format:**
 
@@ -117,9 +117,9 @@ With 'wide' format, data layers are more difficult to combine with others and mo
 
 **Transforming data into 'narrow' format:**
 
-Data are easily transformed in a programming language such as R. 
+Data are easily transformed in a programming language such as R.
 
-In R, the `reshape` package has the `melt` command, which will melt the data from a wide format into a narrow format. It also can `cast` the data back into a wide format if desired. R documentation: 
+In R, the `reshape` package has the `melt` command, which will melt the data from a wide format into a narrow format. It also can `cast` the data back into a wide format if desired. R documentation:
 
 - http://cran.r-project.org/web/packages/reshape2/reshape2.pdf
 - http://www.slideshare.net/jeffreybreen/reshaping-data-in-r
@@ -129,12 +129,10 @@ Example code using the *melt* command in the *reshape2* library. Assume the data
 
 ![](./fig/melt_code.png)
 
-This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'. 
+This will melt everything except any identified columns ('Region' and 'DataLayer'), and put all other column headers into a new column named 'Year'. Data values will then be found in a new column called 'value'.
 
-The final step is optional: ordering the data will make it more easy to read for humans (R and the Toolbox can read these data without this final step):
+The final step is optional: ordering the data will make it easier for humans to read (R and the Toolbox can read these data without this final step):
 
 **Example of data in the appropriate format:**
 
 ![](./fig/formatting_long_example_2.png)
-
-With 'narrow' format, each row of data provides complete and unique information, and does so with as few columns as possible. Data layers in this format can be easily combined with other data layers: the range of years available can be different for each data layer, and there are minimal column names.
