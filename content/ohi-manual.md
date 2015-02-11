@@ -1062,7 +1062,7 @@ GitHub stores all data files and scripts for your assessment in a repository (a 
 
 # Using the Toolbox
 
-As your team finalizes which data should be included in the assessment and develops goal models, you can incorporate this information into your repository. Data files can be updated with any software, but goal models will be updated in R. With any modifications you sync to the online repository, the Toolbox will automatically recalculate goal scores. Calculations can also be done locally by running `subcountry2014/calculate_scores.R`.
+As your team finalizes which data should be included in the assessment and begins developing goal models, you can incorporate this information into your repository. Data files can be created and updated with any software that handles *.csv* files, but goal models must be updated in R. With any modifications you sync to the online repository, the Toolbox will automatically recalculate goal scores. Calculations can also be done locally and offline by running  `subcountry2014/calculate_scores.R`.
 
 This section gives instruction and examples for the most common modifications you will make to your repository:
 
@@ -1078,42 +1078,44 @@ The files you will modify are identified in the figure below:
 
 ## Modifying and creating data layers
 
-Data layers are *.csv* files and are located in the `[assessment]/[scenario]/layers` folder. All template layers provided in your repository are the global values from the 2014 assessment. 
+Data layers are *.csv* files and are located in the `[assessment]/subcountry2014/layers` folder. Remember that all data layers provided in your repository are extracted from the global 2014 assessment.
 
 ![](./fig/layers_directory.png)  
 
-* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions. 
-* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each subcountry region has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would incorrectly increase the nation's GDP serveral times), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
+* Layers with the suffix `_gl2014.csv` (*gl* for *global*) have been exactly copied from the global assessment and applied equally to each region, and therefore the values will be the same across all subcountry regions.
+* Layers with the suffix `_sc2014.csv` (*sc* for *subcountry*) have been spatially-extracted from global data or adjusted with spatially-extracted data so that each  region in your assessment has a unique value. For example, gross domestic product (GDP) used in the global assessment was reported at the national (most often country) level. Instead of being applied equally across all subcountry regions (which would incorrectly increase the nation's GDP several times), national GDP was down-weighted by the proportion of coastal population in each region compared with the total coastal population.
 
-Both types of data layers are at coarse-resolution and should be exhanged for local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
+Both types of default data layers are of coarse-resolution and should be replaced with local, high-resolution data when possible. The priority should be to replace as much of the `_gl2014.csv` data as possible.
 
 **There are several steps to follow when working with data layers:**
 
 1. Modify or create data layer with proper formatting
 2. Save the layer in the `layers` folder
 3. Register the layer in `layers.csv`
-4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder)
+4. Check (and update when appropriate) `pressures_matrix.csv` and `resilience_matrix.csv` (located in the `[assessment]/subcountry2014/conf` folder)
 
 ### Create data layers with proper formatting
 
-The OHI Toolbox expects each data layer to be in its own *.csv* file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (rgn_id) associated with a single score or value. See the 'Formatting data for the Toolbox' section above for more information. 
+The OHI Toolbox expects each data layer to be in its own *.csv* file and to be in a specific format, with data available for every region within the study area, with data organized in 'long' format (as few columns as possible), and with a unique region identifier (*rgn_id*) associated with a single score or value. See the 'Formatting data for the Toolbox' section for more information.
 
 ### Save data layers in the *layers* folder
 
-When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Template layers (`_gl2014.csv` and `_sc2014.csv`) can then be deleted.
-  
+When you modify existing or create new data layers, we recommend saving this as a new *.csv* file with a suffix identifying your regional assessment (example: `_israel2014.csv`). Modifying the layer name provides an easy way to track which data layers have been updated regionally, and which rely on global data. Then, the original layers (`_gl2014.csv` and `_sc2014.csv`) can be deleted.  
+
+\* Note: filenames should not have any spaces: instead, use an underscore (‘_’). This will reduce potential problems when R reads the files.
+
 ### Register data layers in *layers.csv*  
-  
-When there are new filenames associated with each layer, they will need to be registered in `[assessment]/[scenario]/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
-  
+
+When there are new filenames associated with each layer, they will need to be registered in `[assessment]/subcountry2014/layers.csv`. If a layer simply has a new filename, only the *filename* column needs to be updated:
+
 > ![](./fig/register_layers.png)  
-  
+
 However, if a new layer has been added (for example when a new goal model is developed), you will need to add a new row in the registry for the new data layer and fill in the first eight columns (columns A-H); other columns are generated later by the Toolbox App as it confirms data formatting and content:
 
- + **targets:** Add the the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
+ + **targets:** Add the goal/dimension that the new data layer relates to. Goals are indicated with two-letter codes and sub-goals are indicated with three-letter codes, with pressures, resilience, and spatial layers indicated separately.
  + **layer:** Add an identifying name for the new data layer, which will be used in R scripts like functions.R and *.csv* files like `pressures_matrix.csv` and `resilience_matrix.csv`.
- + **name:** Add a longer title for the data layer: this will be displayed on your project website.
- + **description:** Add a longer description of the new data layer this will be displayed on your project website.
+ + **name:** Add a longer title for the data layer--this will be displayed on your WebApp.
+ + **description:** Add a longer description of the new data layer this will be displayed on your WebApp.
  + **fld_value:** Add the appropriate units for the new data layer (which will be referenced in subsequent calculations).
  + **units:** Add a description about the *units* chosen in the *fld_value* column above.
  + **filename:** Add a filename for the new data layer that matches the name of the csv file that was created previously in the `layers` folder.
@@ -1121,26 +1123,26 @@ However, if a new layer has been added (for example when a new goal model is dev
 
 ### Check pressures and resilience matrices
 
-If the new or modified layer is a pressures layer, check again that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data. 
+If the new or modified layer is a pressures layer, check that `pressures_matrix.csv` and `resilience_matrix.csv` have been properly modified to register the new data.
 
 ## Modifying pressures matrices
 
-Your team will identify if any pressures layers should be added to the pressures matrices, and if so, which goals the pressure affects and what weight they should have. You can transfer this information into the Toolbox's `pressures_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder). It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data. In modifying pressures, you will need to consider whether data layers can be updated or added, and whether data layers map onto goals appropriately in the local context. 
+Your team will identify if any pressures layers should be added to the pressures matrices, and if so, which goals the pressure affects and what weight they should have. You can transfer this information into the Toolbox's `pressures_matrix.csv` (located in the `[assessment]/subcountry2014/conf` folder). It is important to note that the matrix identifies the pressures relevant to each goal, and which weight will be applied in the calculation. But each pressure is a data layer, located in the `subcountry2014/layers` folder. This means that pressure layers need information for each region in the study area, and some layers will need to be updated with local data. In modifying pressures, you will need to consider whether data layers can be updated or added, and whether data layers map onto goals appropriately in the local context.
 
 Adding a new pressure to the pressures matrix requires the following steps:
 
 > 1. Create new pressure layer(s) and save in the `layers` folder
-> 2. Register pressure layer(s) in `layers.csv` 
+> 2. Register pressure layer(s) in `layers.csv`
 > 3. Register pressure layer(s) in `pressures_matrix.csv`
   + a. Set the pressure category  
   + b. Identify the goals affected and set the weighting
-  + c. Modify the resilience matrix (if necessary) 
+  + c. Modify the resilience matrix (if necessary)
 
 The following is an example of adding two new pressures layers.
 
 ### Create the new pressure layers and save in the `layers` folder
 
-If you will create a new data layer, give it a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
+If you create a new data layer, give it a short but descriptive name that also includes a prefix that signifies the pressure category (for example: *po_* for the pollution category). There are five physical categories and one social category:
 
 * *po_* = pollution
 * *hd_* = habitat destruction
@@ -1153,17 +1155,17 @@ So for example, `po_trash` is a pollution layer with trash on beaches, and `sp_a
 
 In the current example, the two new layers created to account for the input and output effects of desalination operations will be called *po_desal_in*, and *po_desal_out*.
 
-Assume that these new layers have scores from 0 to 1, with values for each region in your study area, and have been saved in `layers` folder.
+These new layers will have scores from 0 to 1, with values for each region in your study area, and will be saved in the `layers` folder.
 
 ### Register the new pressure layers in `layers.csv`
 
-Add two new rows in `layers.csv`, and register the new pressure layers by filling out the first eight columns for *po_desal_in*, and *po_desal_out*. 
+Add two new rows in `layers.csv`, and register the new pressure layers by filling out the first eight columns for *po_desal_in*, and *po_desal_out*.
 
 ![](./fig/register_pressure.png)
 
-### Register the new layers in `pressure_matrix.csv`**  
+### Register the new layers in `pressure_matrix.csv`  
 
-`pressures_matrix.csv` maps the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name.
+`pressures_matrix.csv` identifies the different types of ocean pressures (columns) with the goals that they affect (rows). Adding a new pressures layer to `pressures_matrix.csv` requires adding a new column with the pressure layer name.
 
 #### Set the pressure category
 
@@ -1171,25 +1173,25 @@ This step requires transferring previous decisions made by your team into `press
 
 #### Identify the goals affected and set the weighting
 
-This step also requries transferring prior decisions into `pressures_matrix.csv`. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=high pressure, 1=low pressure). 
+This step also requires transferring prior decisions into `pressures_matrix.csv`. Mark which goals are affected by this new pressure, and then set the weighting. Pressures weighting by goal should be based on scientific literature and expert opinion (3=highly influential pressure, 2 = moderately influential pressure, 1=not very influential pressure). Remember that the rankings in the pressures matrix are separate from the actual data within the pressures data layers. The rankings ensure that within a particular goal (e.g. within a row of the pressures matrix), the stressors that more strongly influence the goal’s delivery have a larger contribution to that goal’s overall pressure score. Therefore, the rankings are assigned independently of the actual pressure scores, and only determine their importance within the calculations.
 
 ![](./fig/register_new_pressures.png)
 
 ### Modify the resilience matrix (if necessary)
 
-Resilience in the Ocean Health Index is the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures. The addition of new pressure layers may therefore warrant the addition of new resilience layers that were not previously relevant. Similarly, the removal of pressure layers may warrant the removal of now irrelevant resilience layers. See below for instructions and examples about modifying resilience matrices.
+Resilience is included inOHI as the sum of the ecological factors and social initiatives (policies, laws, etc) that can positively affect goal scores by reducing or eliminating pressures. The addition of new pressure layers may therefore warrant the addition of new resilience layers that were not previously relevant. Similarly, the removal of pressure layers may warrant the removal of now irrelevant resilience layers.
 
 
 ## Modifying resilience matrices
 
-Previous decisions made with your team will identify if any resilience layers should be added to the resilience matrices, and if so, which goals/pressures the resilience affects and what weight they should have. Then, you can transfer this information into `resilience_matrix.csv` (located in the `[assessment]/[scenario]/conf` folder).
+Previous decisions made with your team will identify if any resilience layers should be added to the resilience matrices, and if so, which goals and/or pressures the resilience affects and what weight they should have. You can then transfer this information into `resilience_matrix.csv` (located in the `[assessment]/subcountry2014/conf` folder).
 
-`resilience_matrix.csv` maps the different types of resilience (columns) with the goals that they affect (rows). New resilience layers may be added to `resilience_matrix.csv` based on finer-scale local information either in response to a new pressures layer, or as a new independent measure. Any added layer must be associated with a pressures layer that has a weight of 2 or 3 in the Ocean Health Index framework so that resilience measures can mitigate pressures in each region.
+`resilience_matrix.csv` maps the different types of resilience (columns) with the goals that they affect (rows). New resilience layers may be added to `resilience_matrix.csv` based on finer-scale local information either in response to a new pressures layer, or as a new independent measure. Any added layer must be associated with a pressures layer that has a weight of 2 or 3 in the OHI framework so that resilience measures can mitigate pressures in each region.
 
-Each goal must have a resilience measure associated with it. In the figure below, the Toolbox would give an error because there are no resilience layers indicated for the natural products (NP) goal. 
-  
+Each goal must have a resilience measure associated with it. In the figure below, the Toolbox would give an error because there are no resilience layers indicated for the natural products (NP) goal.
+
 ![](./fig/resil_mtx_bad.png)  
-  
+
 ### Updating resilience matrix with local habitat information
 
 In this example we will borrow from the experience of `ohi-israel`, where they assessed habitats in the Habitats (HAB) sub-goal that were not included in global assessments `ohi-global`. Therefore, the resilience matrix needed some revision.  
@@ -1198,14 +1200,15 @@ The habitats assessed for `ohi-israel` are:
 
 > `rocky_reef`, `sand_dunes`, `soft_bottom`
 
-Updates are required for several files:
+Updates are required for the following files:
 
-* resilience_matrix.csv
-* resilience_weights.csv (only if adding new resilience layers)   
+* *layers.csv*
+* *resilience_matrix.csv*
+* *resilience_weights.csv* (only if adding new resilience layers)
 
-#### Template resilience layers
+#### Global resilience layers
 
-The full list of layers included in the template resilience matrix are:
+The first step is to determine which resilience layers from the global assessment are relevant to your assessment, and whether others need to be added. The full list of layers included in the global resilience matrix are:
 
 > `alien_species`,  `cites`,  `fishing_v1`,  `fishing_v1_eez`,	`fishing_v2_eez`,	`fishing_v3`,	`fishing_v3_eez`,	`habitat`,	`habitat_combo`,	`habitat_combo_eez`,	`li_gci`,	`li_sector_evenness`,	`mariculture`,	`msi_gov`,	`species_diversity`,	`species_diversity_3nm`,	`tourism`,	`water`,	`wgi_all`
 
@@ -1217,97 +1220,99 @@ Two layers only apply to the livelihoods and economies goal (LE), so they should
 
 > `li_gci`, `li_sector_evenness`
 
-The remaining layers will apply to certain habitats, but not others. We focus on these to determine how to adapt the HAB resilience calculation for `ohi-israel`. They are:
+The remaining layers apply to certain habitats, but not others. We focus on these to determine how to adapt the HAB resilience calculation for `ohi-israel`. They are:
 
 > `fishing_v1`, `fishing_v1_eez`, `fishing_v2_eez`, `fishing_v3`, `fishing_v3_eez`, `habitat`, `habitat_combo`,	`habitat_combo_eez`, `mariculture`, `species_diversity`, `species_diversity_3nm`,	`tourism`
 
 #### Determining how to modify these resilience layers
 
-* If the new habitat occurs only along the coast, we should use `tourism` and `species_diversity_3nm`, otherwise, only use `species_diversity`. 
-    + `sand_dunes` should use `tourism` and `species_diversity_3nm`,
+* To determine whether `species_diversity_3nm` or `species_diversity` should be used:
+    + `sand_dunes` should use `species_diversity_3nm`,
     + `soft_bottom` should use `species_diversity`,
     + is `rocky_reef` mainly coastal? if so it should use `tourism` and `species_diversity_3nm`.
 * If the habitats can be affected by mariculture plants (e.g. eutrophication and decreased water quality can occur if mariculture plants are close by and have poor wastewater treatment), then the `mariculture` resilience score should be added.
     + are there any mariculture plants in Israel? If yes, on which habitats do they occur?
-* The remaining layers are the `fishing_v...` and `habitat..` layers, these are composite indicators that we call 'combo' layers, obtained from different combinations of the following datasets:
+* The remaining layers are the `fishing_v...` and `habitat..` layers, which are composite indicators obtained from different combinations of the following indicators:
 
 > `Mora, Mora_s4, CBD_hab, MPA_coast, MPA_eez`,
 
-where: 
+where:
 
 * `Mora` is a fisheries governance effectiveness indicator by Mora *et al* (2009)
 * `Mora_s4` is another indicator from Figure S4 of the supplementary material of the same publication that focuses on regulations of artisanal and recreational fisheries
-* `CBD_hab` is a questionnaire compiled by countries that committed to Rio's Convention on Biodiversity (CBD) to establish their progress towards habitat biodiversity protection
-* `MPA_coast` is the proportion of coastal (3nm) waters that are in a marine protected area (MPA), with the maximum being 30% of coastal waters 
-* `MPA_eez` is the proportion of the whole EEZ that is in a marine protected area, with the maximum being 30% of the whole EEZ.  
+* `CBD_hab` is a score assigned based on answers to a questionnaire compiled by countries that committed to Rio's Convention on Biological Diversity (CBD) to establish their progress towards habitat biodiversity protection
+* `MPA_coast` is an indicator obtained as the proportion of coastal (3nm) waters that are in a marine protected area (MPA), with the maximum being 30% of coastal waters
+* `MPA_eez` is an indicator obtained as the proportion of the whole EEZ that is in a marine protected area, with the maximum being 30% of the whole EEZ.  
 
-This table shows which data-sets are used by each combo layer: 
+This table shows which indicators are used by each combo layer:
 
 Layer | Mora | Mora_s4 | CBD_hab | MPA_coast | MPA_eez
 ------|------|---------|---------|-----------|--------
-fishing_v1 | Mora | | CBD_hab | MPA_coast | 
+fishing_v1 | Mora | | CBD_hab | MPA_coast |
 fishing_v1_eez | Mora | | CBD_hab | | MPA_eez
 fishing_v2_eez | Mora | Mora_s4 | CBD_hab | | MPA_eez
-fishing_v3 | | Mora_s4 | CBD_hab |  MPA_coast | 
+fishing_v3 | | Mora_s4 | CBD_hab |  MPA_coast |
 fishing_v3_eez | | Mora_s4 | CBD_hab | | MPA_eez
-habitat | | | CBD_hab | | 
-habitat_combo | | | CBD_hab |  MPA_coast | 
+habitat | | | CBD_hab | |
+habitat_combo | | | CBD_hab |  MPA_coast |
 habitat_combo_eez | | | CBD_hab | | MPA_eez
 
 **Questions to consider**:
+
+The first objective is to determine whether the general `fishing_v..` or `habitat_...` categories are relevant to each of the habitats.  For example, fisheries regulations do not affect the conservation of sand dunes, so this habitat should not use any of the fisheries combos.
+If the general resilience categories are relevant to the habitat, the next step is to select one resilience layer within the `fishing_v…` and `habitat...` categories that most adequately captures the suite of combined resilience variables that affect the habitat.  For example, the sand dune habitat is a strictly coastal habitat, so the most appropriate resilience layer would be the one that uses the MPA_coast (i.e., habitat_combo). The rocky reef and soft bottom, on the other hand, should definitely include fisheries and habitat regulations. So, you'll need to choose a fisheries and a habitat combo for these two habitats.  To do so, consider:
 
 1) For which habitats should you use both a fishery and a habitat combo, or just use a habitat combo?
 * fisheries regulations do not affect the conservation of sand-dunes, so this habitat should not use any of the fisheries combos. Also, this is a strictly coastal habitat, so choose the habitat layer that uses the `MPA_coast` instead of the `MPA_eez`, i.e. `habitat_combo` (and, as mentioned above, choose the coastal version of biodiversity, i.e. `species_diversity_3nm`).
 * The rocky reef and soft bottom, on the other hand, should definitely include fisheries regulations. So you'll need to choose a fisheries and a habitat combo for these two habitats.
 2) Which fisheries and habitat combos for `rocky_reef` and `soft_bottom`? The choice depends on two things:
-* whether they are coastal habitats (within 3nm of the coast) or EEZ-wide habitats     
-      + if coastal, use the fisheries and habitat combos with `MPA_coast` (`fishing_v1`, `fishing_v3`, `habitat_combo`), and the `species_diversity_3nm` layer   
+* whether they are coastal habitats (within 3nm of the coast) or EEZ-wide habitats
+      + if coastal, use the fisheries and habitat combos with `MPA_coast` (`fishing_v1`, `fishing_v3`, `habitat_combo`), and the `species_diversity_3nm` layer
       + if EEZ-wide, use the fisheries and habitat combos with `MPA_eez` (`fishing_v1_eez`, `fishing_v2_eez`, `fishing_v3_eez`, `habitat_combo_eez`), and the `species_diversity` layer
 * whether the fisheries occurring on that habitat are mainly artisanal, mainly commercial, or both
     + if only commercial fisheries, use a layer that only uses the `Mora` data `fishing_v1..`)
     + if only artisanal/small-scale fisheries, use a layer that only uses the `Mora_s4` data (`fishing_v3..`)
     + if both, use a layer that uses both `Mora` and `Mora_s4` data (`fishing_v2..`)
-3) Are the existing combo layers appropriate or do you need an ad-hoc version for any of the Israel habitats? 
-* if rocky reef is mainly coastal, and it is fished by both commercial and artisanal methods, then we need a new combo, specifically, we need a combo that uses `Mora`, `Mora_s4`, `CBD_hab`, and `MPA_coast` (this is the same as `fishing_v2_eez`, but we use the `MPA_coast` layer instead of the `MPA_eez`). All other combinations are already present.
-4) Are there local data to be used?
-* if there are local data on Marine Protected Areas (MPAs) and any areas with special regulations, this should be used to generate the `MPA_coast` and `MPA_eez` layers. \*\*NOTE: these are the same datasets used to calculate the status of Lasting Special Places (LSP).
+3) It may also be that the existing global combo layers are not appropriate for your habitats.  For example, if rocky reef is mainly coastal, and it is fished by both commercial and artisanal methods, then we need a new combo that uses `Mora`, `Mora_s4`, `CBD_hab`, and `MPA_coast` (this is the same as `fishing_v2_eez`, but we use the `MPA_coast` layer instead of the `MPA_eez`). All other combinations are already present.
+4) Another issue to consider is whether local data are available to improve the pressure layers (that are based on global data).  For example, if  there are local data on Marine Protected Areas (MPAs) and any areas with special regulations, this should be used to generate the `MPA_coast` and `MPA_eez` layers.You may know that only certain types of protected areas are closed to fisheries, and may want to only include those. Also, local datasets may be more accurate and regularly updated. **NOTE: in the global study, these are the same datasets used to calculate the status of Lasting Special Places (LSP).
+
 5) How to update `resilience_matrix.csv`?
 * write the complete list of layers you want to use for each habitat. Based on the above, for example, `soft bottom` in Israel matches the combination of layers called *soft bottom, with corals* in the default `resilience_matrix.csv`. But the `rocky_reef` and `sand_dunes` don't seem to match any existing combination, so you'll probably need to delete some of the rows, e.g. the *coral only*, and replace with new ad-hoc rows.
 
-
 ## Modifying goal models
-In the discussion on data layers above, when an existing layer is still used as before but has a new *filename*, nothing further needs to be done for the Toolbox to incorporate this updated layer. However, if a new layer has been added to the `layers` folder and registered in `layers.csv` (and potentially added to the pressures or resilience matrices), the Toolbox will still not use it unless it is incorporated into a goal model.  
-  
-**There are several steps to follow when working with goal models:**
+
+When an existing layer is updated with new data, the Toolbox will automatically incorporate it into the goal calculations after the updated filenames are registered in *layers.csv*. However, if a new layer has been added to the layers folder and registered in *layers.csv*, the Toolbox will not use it unless it is called in a goal model. To integrate any new data layers registered in *layers.csv* you will need to modify the goal model to incorporate the data. Furthermore, in many cases, it will make sense to modify goal models based on data availability and/or local context. For example, the models for regional analyses can often be simplified because of improved data.
+
+**There are two steps to follow when working with goal models:**
 
 1. Update `functions.r`
 2. Check and possibly update `goals.csv`
 
 ### Update *functions.r*
 
-To incorporate a new data layer into a goal model, open `functions.R`: this script contains all the models for each goal and sub-goal. A member of your team with the ability to write R code will need to translate the updated goal model into the Toolbox format. Follow the structure of existing goal models in order to incorpoarte the new data layers, noting the use of certain R packages for data manipulation. 
+To incorporate a new data layer into a goal model, open `functions.R` in RStudio: this script contains all the models for each goal and sub-goal. A member of your team with the ability to write R code will need to translate the updated goal model into the Toolbox format. Follow the structure of existing goal models in order to incorporate the new data layers, noting the use of certain R packages for data manipulation.
 
-The image below shows the navigation pane in RStudio that can be used to easily navigate between goal models. 
+The image below shows the navigation pane in RStudio that can be used to easily navigate between goal models.
 
 ![](./fig/navigation_functions.png)
 
 ### Check and possibly update *goals.csv*
 
-*goals.csv* provides input information for *functions.r*, particularly about goal weighting and function calls. It also includes descriptions about goals and sub-goals, which is presented on the project website. 
+*goals.csv* provides input information for *functions.r*, particularly about goal weighting and function calls. It also includes descriptions about goals and sub-goals, which is presented on the WebApp.
 
-Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a proportion of the goal totals. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
+Changing goal weights will be done here by editing the value in the *weight* column. Weights do not need to be 0-1 or add up to 10; weights will be scaled as a proportion of the number of goals assessed. `goals.csv` also indicates the arguments passed to `functions.r`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
 
 ![](./fig/registering_goals.png)
 
 
-**When updating layers or goal models, it is important to ensure that information called from *goals.csv* is correct**: 
+**When updating layers or goal models, it is important to ensure that information called from *goals.csv* is correct**:
 
 - check the years
 - etc...
 
-### Example modification: 
+### Example modification:
 
-Suppose in your study area, there are new data to include in the artisanal fishing opportunity goal to refine understanding of this goal. Your team has decided to add an 'artisanal access' component to the goal model because of locally available data. Once this data is obtained and properly formatted, the data layer is saved as `ao_access_art`. To include this new information in the goal model, you will need to do the following:
+Suppose your team has decided to add an 'artisanal access' component to the Artisanal Fishing Opportunity goal because of locally available data. Your team has decided to add an 'artisanal access' component to the goal model because of locally available data. Once this data is obtained and properly formatted, the data layer is saved as `ao_access_art`. To include this new information in the goal model, you will need to do the following:
 
 1. register the layer in `layers.csv`
 2. update the goal model in `functions.r`
@@ -1329,18 +1334,18 @@ Suppose in your study area, there are new data to include in the artisanal fishi
 
 
 ## Removing goals
-If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal. Failing to delete all referenced layers after the goal is deleted will result in errors.
+If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal. Failing to delete all referenced layers after the goal is deleted will result in errors. To remove goals from your assessment, you will have to do the following:
 
-1. `functions.r`
-2. `goals.csv`
-3. `pressures_matrix.csv`
-4. `resilience_matrix.csv`
+1. Remove the goal model from `functions.r`
+2. Remove the goal’s row from `goals.csv`
+3. Remove the goal’s row from `pressures_matrix.csv`
+4. Remove the goal’s row from `resilience_matrix.csv`
 
 ![](./fig/remove_goal.png)
 
 **Example: Removing carbon storage (CS) goal**
 
-To completely remove the carbon storage goal from Index calculations, you will do the following. 
+To completely remove the carbon storage goal from Index calculations, you will do the following.
 
 1) Remove the carbon storage (CS) goal model from `functions.r`. Delete the highlighted text in the figure below that references the CS layers and calculates CS goal status, trend, and scores.
 
