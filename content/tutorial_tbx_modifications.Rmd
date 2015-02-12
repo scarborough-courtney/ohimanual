@@ -1,60 +1,23 @@
 ---
-title: "Modifying a goal model with the OHI Toolbox"
+title: "Using the OHI Toolbox: Modifying a goal model"
 output: ioslides_presentation
 ---
 
-## Outline
-
-* Introduction to WebApps
-* Explore an Assessment Repository
-* Modify the AO goal model by adding a variable to global model
-
-
-## Introduction to WebApps
-
-Let's look at an example for Belize: http://ohi-science.org/blz.
-
-WebApp tabs: 
-
-* [App](http://ohi-science.org/blz/app): interactive to explore data and scores
-* [Regions](http://ohi-science.org/blz/regions/): Belize has 4
-* [Layers](http://ohi-science.org/blz/layers/): alphabetical list of all data
-* [Goals](http://ohi-science.org/blz/goals/): global goal model equations
-* [Scores](http://ohi-science.org/blz/scores/): calculated based on extracted global data
-
-
-## Explore an Assessment Repository
-
-Belize's **assessment repository** is **blz**, available on GitHub at https://github.com/OHI-Science/blz.  
-  
-The **scenario folder** is **subcountry2014**. 
-
-Note the `blz.Rproj` file that allows you to sync this repository through RStudio.
-
-## Explore an Assessment Repository
-
-Within the **subcountry2014** folder are some key files we will work with:
-
-* **layers.csv**
-* **layers folder**
-* **conf/functions.r**
-* **conf/goals.csv**
-* **conf/pressures_matrix.csv**
-* **conf/resilience_matrix.csv**
- 
 ## Steps to create a new variable and add it to a goal model 
 
-Assume your team has decided the global model can be modified by adding a new variable.
+Assume your team has decided the global AO model can be modified by adding a new variable.
 
 Steps: 
 
-1. Prepare data layer & save in the `layers` folder
-2. Register the layer in `layers.csv`
-3. Update `functions.r`
-4. Check and possibly update `goals.csv`
+1. Review global AO model
+2. Prepare data layer & save in the `layers` folder
+3. Register the layer in `layers.csv`
+4. Update goal model in `functions.r`
+5. Check and possibly update `goals.csv`
+6. Calculate scores; view with WebApp
 
 
-## AO global model
+## Step 1: Review AO global model
 
 AO global model variables: need, access, and sustainability. 
 
@@ -62,89 +25,105 @@ $$
 D_{U} = (1 - P) * (1 - O_{AO})
 $$
 $$
-x_{AO} = (1 - D_{U}) * S_{AO};
+x_{AO} = (1 - D_{U}) * S_{AO}
 $$
 
-<small>$D_{U}$ = unmet demand</small>;  
-<small>$P$ = need (PPP-adjusted per capita GDP);</small>  
-<small>$O_{AO}$ = access to artisanal fishing;</small>  
+<small>$D_{U}$ = unmet demand</small>  
+<small>$P$ = need (PPP-adjusted per capita GDP)</small>  
+<small>$O_{AO}$ = access to artisanal fishing</small>  
 <small>$S_{AO}$ = sustainability of fishing methods</small>   
 
-## AO global model
+## Step 1: Review AO global model
 
 AO global model variables: need, access, and sustainability. 
-
 
 $$
 D_{U} = (1 - P) * (1 - O_{AO})
 $$
 $$
-x_{AO} = (1 - D_{U}) * S_{AO};
+x_{AO} = (1 - D_{U}) * S_{AO}
 $$
 
-The way this looks like in [`functions.r`](https://github.com/OHI-Science/ecu/blob/028ead581c5dade039941b1aa3524220c454e431/subcountry2014/conf/functions.R#L425-L429)  
+The way this looks like in [`functions.r`](https://github.com/OHI-Science/ecu/blob/028ead581c5dade039941b1aa3524220c454e431/subcountry2014/conf/functions.R#L425-L429):  
 
 ```
- # model
-  ry = within(ry,{
     Du = (1.0 - need) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
-  })
 ```
 
+## Step 1: Plan AO global model
 
-## AO updated model: simple example
+Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
 
-Let's simply modify the goal model to include a second measure of need
+## Step 1: Plan AO global model
+
+Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+
+Let's incorporate a second measure of need called $P_{pov}$.
 
 
 $$
-D_{U} = (1 - (P + P_{pov})/2) * (1 - (O_{AO})
+D_{U} = (1 - (P + P_{pov}) / 2) * (1 - (O_{AO})
 $$
 $$
-x_{AO} = (1 - D_{U}) * S_{AO};
+x_{AO} = (1 - D_{U}) * S_{AO}
+$$
+
+## Step 1: Plan AO global model
+
+Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+
+Let's incorporate a second measure of need called $P_{pov}$.
+
+
+$$
+D_{U} = (1 - (P + P_{pov}) / 2) * (1 - (O_{AO})
+$$
+$$
+x_{AO} = (1 - D_{U}) * S_{AO}
 $$
 
 The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/blob/9cf957f272e784f557eb75a3a9e5bf7b4677d5d5/subcountry2014/conf/functions.R#L407-L461):  
 
 ```
- # model
-  ry = within(ry,{
-    Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
+    Du = (1.0 - (need + need_pov) / 2 ) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
-  })
 ```
 
-## Step 1: Prepare & save the new data layer
+## Step 2: Prepare & save new data layer
 
-Let's say we have data available about poverty in Belize, which complements the information in the `need` layer (pcGDP adjusted by the purchasing power parity (PPP))
-
-Information comes from two sources: 
+### What do our new data look like?
 
 * [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
-* [Percent below poverty line for Belize as a whole](http://www.indexmundi.com/belize/population_below_poverty_line.html)
+* [Percent below poverty line for Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)
 
+## Step 2: Prepare & save new data layer
 
-## Step 1: Prepare & save the new data layer
+### What do our new data look like?
 
-What do the existing data layers look like?
+* [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
+* [Percent below poverty line for Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)  
+  
+  
+### What do the existing data layers look like?
 
-Information from http://ohi-science.org/blz/layers
+* **Explore using the blz WebApp**
+    + http://ohi-science.org/blz/layers
 
-[access](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
+* **Explore the blz repository**
+    + [access](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
+    + [need](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
 
-[need](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
+## Step 2: Prepare & save new data layer
 
-## Step 1: Prepare & save the new data layer
+### Good practices
 
-**Good practice**: 
-
-* **organize files in a github repository** (`github/blz-prep`)
-* **document metadata** (README's)
+* **organize & prepare data in a github repository** (`github/blz-prep`)
+* **document all metadata** (`README.md`s)
 * **create a region-to-name lookup table** (`rgn_district_lookup.csv`)
-* **script any manipulations** (`prep_ao_need.r`)
+* **script any data manipulations** (`prep_ao_need.r`)
 
-## Step 1: Prepare & save the new data layer
+## Step 2: Prepare & save new data layer
 
 `prep_ao_need_pov.r` prepares the layer `ao_need_pov.csv`. 
 
@@ -158,7 +137,7 @@ Information from http://ohi-science.org/blz/layers
 |      3| 2010| 0.0444745|
 |      4| 2010| 0.0422235|
 
-## Step 2. Register the layer in `layers.csv`
+## Step 3. Register the layer in `layers.csv`
 
 Since we've created a whole new variable, we'll add a new row to `layers.csv`
 
@@ -174,7 +153,7 @@ We need to add content to the following columns:
  + **filename:** *ao_need_pov_blz2014.csv*
  + **fld_id_num:** *rgn_id*
 
-## Step 3: Update AO model in `functions.r`
+## Step 4: Update AO model in `functions.r`
 
 Update the model and how the function prepares for it
 
@@ -182,15 +161,12 @@ Update the model and how the function prepares for it
  layers_data = SelectLayersData(layers, targets='AO')
   
 ... 
- # model
-  ry = within(ry,{
 ->  Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
-  })
 ```
 
 
-## Step 4: Check and possibly update `goals.csv`
+## Step 5: Check and possibly update `goals.csv`
 
 Nothing to change in `goals.csv`.  
 
@@ -199,3 +175,4 @@ What you would look for: any variables in the *preindex_function* column
 
 (Also, nothing to change in `pressures_matrix.csv` or `resilience_matrix.csv`)
 
+## Step 6: Calculate scores; view with WebApp

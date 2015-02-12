@@ -3,25 +3,44 @@ title: "Introduction to the OHI Toolbox"
 output: ioslides_presentation
 ---
 
-## TODO
 
-suffix _gl2014.csv 
+## Outline
 
-## Slide with Bullets
+* Introduction to WebApps
+* Explore an Assessment Repository
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
-## Slide with R Code and Output
+## Introduction to WebApps
 
-```{r}
-summary(cars)
-```
+Let's look at an example for Belize: http://ohi-science.org/blz.
 
-## Slide with Plot
+WebApp tabs: 
 
-```{r, echo=FALSE}
-plot(cars)
-```
+* [App](http://ohi-science.org/blz/app): interactive to explore data and scores
+* [Regions](http://ohi-science.org/blz/regions/): Belize has 4
+* [Layers](http://ohi-science.org/blz/layers/): alphabetical list of all data
+* [Goals](http://ohi-science.org/blz/goals/): global goal model equations
+* [Scores](http://ohi-science.org/blz/scores/): calculated based on extracted global data
+
+
+## Explore an Assessment Repository
+
+Belize's **assessment repository** is **blz**, available on GitHub at https://github.com/OHI-Science/blz.  
+  
+The **scenario folder** is **subcountry2014**. 
+
+Note the `blz.Rproj` file that allows you to sync this repository through RStudio.
+
+## Explore an Assessment Repository
+
+Within the **subcountry2014** folder are some key files we will work with:
+
+* **layers.csv**
+* **layers folder**
+* **conf/functions.r**
+* **conf/goals.csv**
+* **conf/pressures_matrix.csv**
+* **conf/resilience_matrix.csv**
+
+## More...
 
