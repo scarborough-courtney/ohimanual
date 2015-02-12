@@ -2,7 +2,7 @@
 
 ## Overview
 
-The manual is written in [Markdown](http://daringfireball.net/projects/markdown/syntax), which can render to .html, .docx, .pdf. This enables us to post directly online, generate pretty pdfs, and also circulate word documents with track changes.
+The manual is written in [Markdown](http://daringfireball.net/projects/markdown/syntax), which can render to .html, .docx, .pdf. This enables us to post directly online, generate pretty pdfs, and also circulate word documents with track changes. 
 
 Each section of the manual is written in a separate markdown file (**.md**) rather than one big document: it makes it easier as we shift sections around--which we do: we haven't quite found the right order to put these in yet (but I think we're close).
 

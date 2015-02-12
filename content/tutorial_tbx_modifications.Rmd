@@ -8,10 +8,7 @@ output: ioslides_presentation
 * Introduction to WebApps
 * Explore an Assessment Repository
 * Modify the AO goal model by adding a variable to global model
-    + create new data layer
-    + save and register the data layer
-    + modify the goal model
-    + run the Toolbox and explore differences
+
 
 ## Introduction to WebApps
 
@@ -45,18 +42,16 @@ Within the **subcountry2014** folder are some key files we will work with:
 * **conf/pressures_matrix.csv**
 * **conf/resilience_matrix.csv**
  
-## Create a new variable and add it to a goal model 
+## Steps to create a new variable and add it to a goal model 
 
 Assume your team has decided the global model can be modified by adding a new variable.
 
 Steps: 
 
-1. Modify or create data layer with proper formatting
-2. Save the layer in the `layers` folder
-3. Register the layer in `layers.csv`
-4. Update `functions.r`
-5. Check and possibly update `goals.csv`
-6. Check the pressures and resilience matrices
+1. Prepare data layer & save in the `layers` folder
+2. Register the layer in `layers.csv`
+3. Update `functions.r`
+4. Check and possibly update `goals.csv`
 
 
 ## AO global model
@@ -98,57 +93,109 @@ The way this looks like in [`functions.r`](https://github.com/OHI-Science/ecu/bl
 ```
 
 
-## AO updated model: what we want
+## AO updated model: simple example
 
-A simple example of a modified goal model: include a second measure of access
+Let's simply modify the goal model to include a second measure of need
 
 
 $$
-D_{U} = (1 - P) * (1 - (O_{AO} + O_{art})/2 )
+D_{U} = (1 - (P + P_{pov})/2) * (1 - (O_{AO})
 $$
 $$
 x_{AO} = (1 - D_{U}) * S_{AO};
 $$
 
-The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/blob/9cf957f272e784f557eb75a3a9e5bf7b4677d5d5/subcountry2014/conf/functions.R#L407-L461)  
+The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/blob/9cf957f272e784f557eb75a3a9e5bf7b4677d5d5/subcountry2014/conf/functions.R#L407-L461):  
 
 ```
  # model
   ry = within(ry,{
-    Du = (1.0 - need) * (1.0 - (access + access_art)/2 )
+    Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
   })
 ```
 
-## many other slides
+## Step 1: Prepare & save the new data layer
+
+Let's say we have data available about poverty in Belize, which complements the information in the `need` layer (pcGDP adjusted by the purchasing power parity (PPP))
+
+Information comes from two sources: 
+
+* [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
+* [Percent below poverty line for Belize as a whole](http://www.indexmundi.com/belize/population_below_poverty_line.html)
 
 
+## Step 1: Prepare & save the new data layer
 
-## Update AO model in `functions.r` 
+What do the existing data layers look like?
 
+Information from http://ohi-science.org/blz/layers
+
+[access](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
+
+[need](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
+
+## Step 1: Prepare & save the new data layer
+
+**Good practice**: 
+
+* **organize files in a github repository** (`github/blz-prep`)
+* **document metadata** (README's)
+* **create a region-to-name lookup table** (`rgn_district_lookup.csv`)
+* **script any manipulations** (`prep_ao_need.r`)
+
+## Step 1: Prepare & save the new data layer
+
+`prep_ao_need_pov.r` prepares the layer `ao_need_pov.csv`. 
+
+* combines national percent poverty with population by district
+* replaces district names with numeric identifiers (rgn_district_lookup.csv)
+
+| rgn_id| year|   percent|
+|------:|----:|---------:|
+|      1| 2010| 0.0557542|
+|      2| 2010| 0.1233978|
+|      3| 2010| 0.0444745|
+|      4| 2010| 0.0422235|
+
+## Step 2. Register the layer in `layers.csv`
+
+Since we've created a whole new variable, we'll add a new row to `layers.csv`
+
+We need to add content to the following columns:
+
+
+ + **targets:** AO
+ + **layer:** `ao_need_pov`
+ + **name:** Add a longer title for the data layer--this will be displayed on your WebApp.
+ + **description:** Add a longer description of the new data layer this will be displayed on your WebApp.
+ + **fld_value:** percent
+ + **units:** percent
+ + **filename:** *ao_need_pov_blz2014.csv*
+ + **fld_id_num:** *rgn_id*
+
+## Step 3: Update AO model in `functions.r`
+
+Update the model and how the function prepares for it
 
 ```
  layers_data = SelectLayersData(layers, targets='AO')
   
-  ry = rename(dcast(layers_data, id_num + year ~ layer, value.var='val_num', 
-                    subset = .(layer %in% c('ao_need'))),
-              c('id_num'='region_id', 'ao_need'='need')); head(ry); summary(ry)
-  
-  r = na.omit(rename(dcast(layers_data, id_num ~ layer, value.var='val_num', 
-                           subset = .(layer %in% c('ao_access'))),
-                     c('id_num'='region_id', 'ao_access'='access'))); head(r); summary(r)
-                     
-  ra = na.omit(rename(dcast(layers_data, id_num ~ layer, value.var='val_num', 
-                           subset = .(layer %in% c('ao_access_art'))),
-                     c('id_num'='region_id', 'ao_access_art'='access_art'))); head(ra); summary(ra)
-  
-  ry = merge(ry, r); 
-  ry = merge(ry, ra); head(ry); summary(ry); dim(ry)
- 
+... 
  # model
   ry = within(ry,{
-    Du = (1.0 - need) * (1.0 - (access + access_art)/2 )
+->  Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
   })
 ```
+
+
+## Step 4: Check and possibly update `goals.csv`
+
+Nothing to change in `goals.csv`.  
+
+What you would look for: any variables in the *preindex_function* column
+
+
+(Also, nothing to change in `pressures_matrix.csv` or `resilience_matrix.csv`)
 
