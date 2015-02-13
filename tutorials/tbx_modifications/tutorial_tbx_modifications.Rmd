@@ -1,0 +1,188 @@
+---
+title: 'The Ocean Health Index: Modify a goal model<br /> using the Toolbox'
+output: ioslides_presentation
+author: Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu
+---
+
+## Introduction 
+
+Determining how healthy oceans are requires an approach that integrates social, economic, and environmental information. The **Ocean Health Index** does this by measuring the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, Ocean Health Index assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
+
+Here, we will use the [Ocean Health Index](www.oceanhealthindex.org) Toolbox to modify a goal model by adding new data. We will use Belize as an example: this is for teaching purposes only.  
+
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). When rendered is viewable [online]() and the code is available on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+
+## Steps to create a new variable and add it to a goal model 
+
+Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
+
+(You've already discussed what is important in the local context, and explored all data available).  
+
+## Steps to create a new variable and add it to a goal model 
+
+Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
+
+Steps: 
+
+1. Review global AO model
+2. Prepare data layer & save in the `layers` folder
+3. Register the layer in `layers.csv`
+4. Update goal model in `functions.r`
+5. Check and possibly update `goals.csv`
+6. Calculate scores; view with WebApp
+
+
+## Step 1: Review AO global model
+
+AO global model variables: need, access, and sustainability. 
+
+$$
+D_{U} = (1 - P) * (1 - O_{AO})
+$$
+$$
+x_{AO} = (1 - D_{U}) * S_{AO}
+$$
+
+<small>$D_{U}$ = unmet demand</small>  
+<small>$P$ = need (PPP-adjusted per capita GDP)</small>  
+<small>$O_{AO}$ = access to artisanal fishing</small>  
+<small>$S_{AO}$ = sustainability of fishing methods</small>   
+
+## Step 1: Review AO global model
+
+AO global model variables: need, access, and sustainability. 
+
+$$
+D_{U} = (1 - P) * (1 - O_{AO})
+$$
+$$
+x_{AO} = (1 - D_{U}) * S_{AO}
+$$
+
+The way this looks like in [`functions.r`](https://github.com/OHI-Science/ecu/blob/028ead581c5dade039941b1aa3524220c454e431/subcountry2014/conf/functions.R#L425-L429):  
+
+```
+    Du = (1.0 - need) * (1.0 - access)
+    statusData = ((1.0 - Du) * Sustainability)
+```
+
+## Step 1: Plan AO global model
+
+Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+
+## Step 1: Plan AO global model
+
+Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+
+Let's incorporate a second measure of need called $P_{pov}$.
+
+
+$$
+D_{U} = (1 - (P + P_{pov}) / 2) * (1 - (O_{AO})
+$$
+$$
+x_{AO} = (1 - D_{U}) * S_{AO}
+$$
+
+## Step 1: Plan AO global model
+
+Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+
+Let's incorporate a second measure of need called $P_{pov}$.
+
+
+$$
+D_{U} = (1 - (P + P_{pov}) / 2) * (1 - (O_{AO})
+$$
+$$
+x_{AO} = (1 - D_{U}) * S_{AO}
+$$
+
+The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/blob/9cf957f272e784f557eb75a3a9e5bf7b4677d5d5/subcountry2014/conf/functions.R#L407-L461):  
+
+```
+    Du = (1.0 - (need + need_pov) / 2 ) * (1.0 - access)
+    statusData = ((1.0 - Du) * Sustainability)
+```
+
+## Step 2: Prepare & save new data layer
+
+### What do our new data look like?
+
+* [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
+* [Percent below poverty line for Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)
+
+## Step 2: Prepare & save new data layer
+
+### What do our new data look like?
+
+* [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
+* [Percent below poverty line for Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)  
+  
+  
+### What do the existing data layers look like?
+
+* **Explore using the blz WebApp**
+    + http://ohi-science.org/blz/layers
+
+* **Explore the blz repository**
+    + [access](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
+    + [need](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
+
+## Step 2: Prepare & save new data layer
+
+### Working with data: good practices
+
+* **organize & prepare data in a github repository** 
+    + ex: `github/blz/blz-prep` (ours is stored [here](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
+* **document all metadata** 
+    + `README.md`s are readable on GitHub ([example](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep/population))
+* **create a name-to-region lookup table** 
+    + ex: [`rgn_district_lookup.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/rgn_district_lookup.csv)
+* **script any data manipulations** 
+    + [`prep_ao_need.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R)
+
+## Step 2: Prepare & save new data layer
+
+Our R script [`prep_ao_need_pov.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R) prepares the data layer called [`ao_need_pov.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/ao_need_pov_blz2014.csv) with these steps:
+
+* Setup 
+* Access and clean raw data
+* Calculate percent poverty by district
+* Add region identifiers
+* Save final data layer
+
+## Step 3. Register layer in `layers.csv`
+
+Since we've created a new variable, we'll add a new row to [`layers.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers.csv), with information for the following columns:
+
+ + **targets:** *AO*
+ + **layer:** `ao_need_pov`
+ + **name:** layer name will be displayed on your WebApp.
+ + **description:** description will be displayed on your WebApp.
+ + **fld_value:** percent
+ + **units:** percent
+ + **filename:** `ao_need_pov_blz2014.csv`
+ + **fld_id_num:** *rgn_id*
+
+## Step 4: Update AO model in `functions.r`
+
+Update the model in [`functions.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/functions.R), (and some layer handling):
+
+```
+    Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
+    statusData = ((1.0 - Du) * Sustainability)
+```
+
+
+## Step 5: Check and possibly update `goals.csv`
+
+Look at [`goals.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/goals.csv) if there is anything to update (particularly in the *preindex_function* column)
+
+
+(Also, nothing to change in `pressures_matrix.csv` or `resilience_matrix.csv`)
+
+## Step 6: Calculate scores; view with WebApp
+
+
+
