@@ -1,11 +1,26 @@
 ---
-title: "Using the OHI Toolbox: Modifying a goal model"
+title: 'The Ocean Health Index: Modify a goal model<br /> using the Toolbox'
 output: ioslides_presentation
+author: Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu
 ---
+
+## Introduction 
+
+Determining how healthy oceans are requires an approach that integrates social, economic, and environmental information. The **Ocean Health Index** does this by measuring the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, Ocean Health Index assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
+
+Here, we will use the [Ocean Health Index](www.oceanhealthindex.org) Toolbox to modify a goal model by adding new data. We will use Belize as an example: this is for teaching purposes only.  
+
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). When rendered is viewable [online]() and the code is available on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
 
 ## Steps to create a new variable and add it to a goal model 
 
-Assume your team has decided the global AO model can be modified by adding a new variable.
+Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
+
+(You've already discussed what is important in the local context, and explored all data available).  
+
+## Steps to create a new variable and add it to a goal model 
+
+Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
 
 Steps: 
 
@@ -116,63 +131,58 @@ The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/bl
 
 ## Step 2: Prepare & save new data layer
 
-### Good practices
+### Working with data: good practices
 
-* **organize & prepare data in a github repository** (`github/blz-prep`)
-* **document all metadata** (`README.md`s)
-* **create a region-to-name lookup table** (`rgn_district_lookup.csv`)
-* **script any data manipulations** (`prep_ao_need.r`)
+* **organize & prepare data in a github repository** 
+    + ex: `github/blz/blz-prep` (ours is stored [here](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
+* **document all metadata** 
+    + `README.md`s are readable on GitHub ([example](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep/population))
+* **create a name-to-region lookup table** 
+    + ex: [`rgn_district_lookup.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/rgn_district_lookup.csv)
+* **script any data manipulations** 
+    + [`prep_ao_need.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R)
 
 ## Step 2: Prepare & save new data layer
 
-`prep_ao_need_pov.r` prepares the layer `ao_need_pov.csv`. 
+Our R script [`prep_ao_need_pov.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R) prepares the data layer called [`ao_need_pov.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/ao_need_pov_blz2014.csv) with these steps:
 
-* combines national percent poverty with population by district
-* replaces district names with numeric identifiers (rgn_district_lookup.csv)
+* Setup 
+* Access and clean raw data
+* Calculate percent poverty by district
+* Add region identifiers
+* Save final data layer
 
-| rgn_id| year|   percent|
-|------:|----:|---------:|
-|      1| 2010| 0.0557542|
-|      2| 2010| 0.1233978|
-|      3| 2010| 0.0444745|
-|      4| 2010| 0.0422235|
+## Step 3. Register layer in `layers.csv`
 
-## Step 3. Register the layer in `layers.csv`
+Since we've created a new variable, we'll add a new row to [`layers.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers.csv), with information for the following columns:
 
-Since we've created a whole new variable, we'll add a new row to `layers.csv`
-
-We need to add content to the following columns:
-
-
- + **targets:** AO
+ + **targets:** *AO*
  + **layer:** `ao_need_pov`
- + **name:** Add a longer title for the data layer--this will be displayed on your WebApp.
- + **description:** Add a longer description of the new data layer this will be displayed on your WebApp.
+ + **name:** layer name will be displayed on your WebApp.
+ + **description:** description will be displayed on your WebApp.
  + **fld_value:** percent
  + **units:** percent
- + **filename:** *ao_need_pov_blz2014.csv*
+ + **filename:** `ao_need_pov_blz2014.csv`
  + **fld_id_num:** *rgn_id*
 
 ## Step 4: Update AO model in `functions.r`
 
-Update the model and how the function prepares for it
+Update the model in [`functions.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/functions.R), (and some layer handling):
 
 ```
- layers_data = SelectLayersData(layers, targets='AO')
-  
-... 
-->  Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
+    Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
 ```
 
 
 ## Step 5: Check and possibly update `goals.csv`
 
-Nothing to change in `goals.csv`.  
-
-What you would look for: any variables in the *preindex_function* column
+Look at [`goals.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/goals.csv) if there is anything to update (particularly in the *preindex_function* column)
 
 
 (Also, nothing to change in `pressures_matrix.csv` or `resilience_matrix.csv`)
 
 ## Step 6: Calculate scores; view with WebApp
+
+
+
