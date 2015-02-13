@@ -34,6 +34,7 @@ This section explains the GitHub workflow and how to access and setup required s
 The following section describes how to use GitHub to access and sync your assessment repository. There are also many great resources available online with more in-depth information: 
 
 * [**Git and GitHub**](http://r-pkgs.had.co.nz/git.html) by Hadley Wickham: http://r-pkgs.had.co.nz/git.html
+* [**Collaboration and Time Travel: Version Control with Git, GitHub and RStudio**](http://www.rstudio.com/resources/webinars/) video tutorial by Hadley Wickham: www.rstudio.com/resources/webinars
 * [**Good Resources for Learning Git and GitHub**](https://help.github.com/articles/good-resources-for-learning-git-and-github/) by GitHub: https://help.github.com/articles/good-resources-for-learning-git-and-github/ 
 
 
