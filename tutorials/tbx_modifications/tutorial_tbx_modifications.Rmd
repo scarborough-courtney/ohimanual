@@ -6,19 +6,20 @@ author: Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> 
 
 ## Introduction 
 
-Determining how healthy oceans are requires an approach that integrates social, economic, and environmental information. The **Ocean Health Index** does this by measuring the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, Ocean Health Index assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
+The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
 
-Here, we will use the [Ocean Health Index](www.oceanhealthindex.org) Toolbox to modify a goal model by adding new data. We will use Belize as an example: this is for teaching purposes only.  
+**The OHI Toolbox** is an open-source, cross-platform resource to calculate OHI scores at any scale. Here, we will use the Toolbox to add a new variable to a goal model. We will use Belize as an example: this is for teaching purposes only.  
 
-Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). When rendered is viewable [online]() and the code is available on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). When rendered, it is viewable [online]() and the code is available on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
 
-## Steps to create a new variable and add it to a goal model 
+## Add a new variable to a goal model 
 
-Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
+We will walk through an example of adding a new variable to the Artisanal Fishing Opportunity (AO) goal model in Belize. 
 
-(You've already discussed what is important in the local context, and explored all data available).  
+Assume your team has already discussed what is important in terms of AO in Belize. You have explored all data available and your team has decided that the best way to capture local characteristics is to add a new variable to the global AO model.
+  
 
-## Steps to create a new variable and add it to a goal model 
+## Add a new variable to a goal model 
 
 Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
 
@@ -129,7 +130,14 @@ The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/bl
     + [access](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
     + [need](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
 
+
 ## Step 2: Prepare & save new data layer
+
+### Working with data: good practices
+
+* **organize & prepare data in a github repository** 
+    + ex: `github/blz/blz-prep` (ours is stored [here](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
+
 
 ### Working with data: good practices
 
@@ -165,7 +173,7 @@ Since we've created a new variable, we'll add a new row to [`layers.csv`](https:
  + **filename:** `ao_need_pov_blz2014.csv`
  + **fld_id_num:** *rgn_id*
 
-## Step 4: Update AO model in `functions.r`
+## Step 4: Update model in `functions.r`
 
 Update the model in [`functions.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/functions.R), (and some layer handling):
 
@@ -175,14 +183,17 @@ Update the model in [`functions.r`](https://github.com/OHI-Science/blz/blob/draf
 ```
 
 
-## Step 5: Check and possibly update `goals.csv`
+## Step 5: Check `goals.csv`
 
 Look at [`goals.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/goals.csv) if there is anything to update (particularly in the *preindex_function* column)
 
-
-(Also, nothing to change in `pressures_matrix.csv` or `resilience_matrix.csv`)
-
 ## Step 6: Calculate scores; view with WebApp
+
+After you make your changes, you can calculate and visualize your scores in several ways:
+
+1. In RStudio, run [`calculate_scores.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/calculate_scores.R) and visualize scores by running [`launch_app_code.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/launch_app_code.R)
+2. In RStudio, run [`calculate_scores.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/calculate_scores.R), sync changes to GitHub and visualize scores on the WebApp
+3. Sync your changes to GitHub: scores will be calculated online and can be visualized on the WebApp
 
 
 

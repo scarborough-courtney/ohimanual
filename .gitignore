@@ -3,3 +3,4 @@
 .RData
 **/*.html
 !tutorials.html
+!tutorial_tbx_modifications.html
