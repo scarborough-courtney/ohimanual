@@ -10,7 +10,7 @@ output: ioslides_presentation
 
 There are many resources available for learning GitHub: Hadley Wickham has a great instructions in his [book](http://r-pkgs.had.co.nz/git.html) and [webinars](http://www.rstudio.com/resources/webinars/).
 
-Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.rmd).
 
 
 ## Structure
