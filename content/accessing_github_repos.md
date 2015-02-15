@@ -110,7 +110,7 @@ Because you will use GitHub to collaborate with your team or request support fro
 
 This folder can be identified by any computer as `~/github/`.  
 
-### Cloning your repository to your computer
+### Clone your repository to your computer
 
 
 Clone a repository by clicking the 'Clone in Desktop' button on your online repository's homepage (https://github.com/OHI-Science/[assessment]):
@@ -127,11 +127,11 @@ The assessment can be identified by any computer as `~/github/[assessment]`.
 The entire folder will now be saved on your computer.
 
 
-### Updating permissions
+### Update permissions
 
 You need to **email your username to ohi-science@nceas.ucsb.edu** for permission to upload modifications to your GitHub repository (you only need to do this once). Only team members who will be modifying files will need to do this; all other members can view online and download the repository without these permissions.  
 
-### Working locally
+### Work locally
 
 You will then work locally on your own computer, modifying the files in the repository to reflect the desired modifications your team has identified for your regional assessment. Multiple users can work on the same repository at the same time, so there are steps involved to 'check in' your modifications so they can merge with the work of others without problems. GitHub has specific words for each of these steps. You have already successfully **cloned** an online repository to your local machine. After making modifications, you will **commit** these changes with a description before being able to sync back to the online repository. **Synching** involves both **pulling** any updates from the online repository before **pushing** committed changes back to the server.
 

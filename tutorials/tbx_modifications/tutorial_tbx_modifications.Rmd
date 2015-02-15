@@ -2,7 +2,6 @@
 title: 'The Ocean Health Index: Modify a goal model<br /> using the Toolbox'
 author: "Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
 output: ioslides_presentation
-
 ---
 
 ## Introduction 
@@ -11,7 +10,7 @@ The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustai
 
 **The OHI Toolbox** is an open-source, cross-platform resource to calculate OHI scores at any scale. Here, we will use the Toolbox to add a new variable to a goal model. We will use Belize as an example: this is for teaching purposes only.  
 
-Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). When rendered, it is viewable [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and the code is available on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
 
 ## Add a new variable to a goal model 
 

@@ -1,0 +1,93 @@
+---
+title: 'Introduction to GitHub'
+author: "Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
+output: ioslides_presentation
+---
+
+## Introduction  
+
+[**GitHub**](htpps://github.com) is a collaborative platform for version control. It has synching capabilities like Dropbox, but with added functionality since multiple users (with permission) can edit documents. GitHub saves all versions with editing users identified,  modifications attributed, complementary edits merged. There are many ways to investigate past versions, all of which can be reinstated at any time. 
+
+There are many resources available for learning GitHub: Hadley Wickham has a great instructions in his [book](http://r-pkgs.had.co.nz/git.html) and [webinars](http://www.rstudio.com/resources/webinars/).
+
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+
+
+## Structure
+
+GitHub stores files in **repositories**, owned by an **organization**.  
+
+Repositories ('repos') are essentially folders containing scripts and small text files. Repositories   are version controlled so that any modifications to files, additions or deletions, are tracked and attributed to contributors with the correct permissions. 
+
+* [OHI-Science](https://github.com/OHI-Science) is an **organization**
+* [blz](https://github.com/OHI-Science/blz/) is a **repository**
+
+## GitHub Vocabulary
+
+All collaborators will work locally on their own computers, syncing their changes back online so others work from the most current version.
+
+* **clone**: download to your computer from online version with synching capabilities enabled
+* **commit**: message associated with your changes (see some [best practices](http://r-pkgs.had.co.nz/git.html#commit-best-practices))
+* **pull**: sync a repo on your computer with online version
+* **push**: sync the online repo with your version, only possible after committing
+
+**sync = pull + commit + push**
+
+
+## GitHub Vocabulary
+
+**sync = pull + commit + push**
+
+![](./clone_push_pull.png)
+
+
+## Filepaths
+
+Because you will be working collaboratively with others, where you store your files makes a big difference. 
+
+Save any GitHub repos is a folder in your home directory called 'github', so that you can access it with the filepath `~/github`. 
+
+* **Windows**: `Users\[User]\Documents\github\`
+* **Mac**: `Users/[User]/github/`
+
+## Cloning options
+
+We will walk through two examples: 
+
+1. clone a repository using the GitHub app  
+2. clone a repository using RStudio.
+
+You can also clone using the shell (we will not discuss that here).
+
+## Synching options
+
+When you work on your computer, any edits you make to any files in your repo, using any program, will be tracked by GitHub. You can use any of the above to commit and sync your changes back to GitHub. There are many options you can use to sync your edits on a repo with the online version:
+
+* **GitHub App** [for Mac](https://mac.github.com/) and [for Windows](https://windows.github.com/)
+* [**RStudio**](www.rstudio.com)
+* **shell (Terminal on Mac)**
+ 
+
+## Synching: Examples
+
+We will walk through two examples: 
+
+1. create a new file in Excel, save as *.csv* in your repo, commit, pull, push using GitHub App.  
+2. modify R script using RStudio, commit, pull, push from RStudio.
+
+You can also synch using the shell but we will not discuss that here.
+
+## Getting Started
+
+Follow these steps, referring to the Ocean Health Index Manual's section on [Installing the Toolbox](http://ohi-science.org/manual/#installing-the-toolbox) for more detailed instructions. 
+
+1. Create a [GitHub](http://github.com) account 
+2. Download and install [*git*](http://git-scm.com/downloads) software
+3. Set up your git identity
+4. Install the GitHub application
+5. Create a folder called  ***github*** on your computer
+6. Clone your repository to your computer
+7. Update permissions
+
+Now you can work locally, synching your edits back to the online repositories!
+

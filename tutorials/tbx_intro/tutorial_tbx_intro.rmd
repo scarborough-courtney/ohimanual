@@ -1,7 +1,16 @@
 ---
-title: "Introduction to the OHI Toolbox"
+title: 'The Ocean Health Index: Introduction to the Toolbox
+author: "Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
 output: ioslides_presentation
 ---
+
+## Introduction
+
+
+
+
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+
 
 
 ## Outline
