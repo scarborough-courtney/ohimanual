@@ -24,7 +24,11 @@ Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/).
 
 The **OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate the highly collaborative OHI assessment process at any scale. We interact with the Toolbox through a few repositories stored on GitHub. Data are fed to the Toolbox as *.csv* files, and all scripts are in *R*.
 
+<<<<<<< HEAD
 You will have an assessment repository that contains all data and functions, pressures + resilience matices, and other goodies. So,
+=======
+Any assessment relies on the `ohicore` repository. But there is also an additional repository specific to the assessment, which contains all the prepped data and functions, pressures + resilience matices, and other goodies. So,
+>>>>>>> 97039a3ba4bfd8e30e3c0de0f55a590646466639
 
 >  **OHI Toolbox = assessment-repo + ohicore**.
 
