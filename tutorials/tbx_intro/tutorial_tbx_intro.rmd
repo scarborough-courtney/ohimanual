@@ -1,22 +1,32 @@
 ---
-title: 'The Ocean Health Index: Introduction to the Toolbox
+title: 'The Ocean Health Index: Introduction to the Toolbox'
 author: "Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
 output: ioslides_presentation
 ---
 
 ## Introduction
 
+The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
 
+**The OHI Toolbox** is an open-source, cross-platform resource to calculate OHI scores at any scale. Here, we will explore the Toolbox. We will use Belize as an example: this is for teaching purposes only.  
 
-
-Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro.html#1).
 
 
 
 ## Outline
 
+* What is the Toolbox?
 * Introduction to WebApps
 * Explore an Assessment Repository
+
+## What is the Toolbox?
+
+The **OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate the highly collaborative OHI assessment process at any scale. We interact with the Toolbox through a few repositories stored on GitHub. Data are fed to the Toolbox as *.csv* files, and all scripts are in *R*.
+
+You will have an assessment repository that contains all data and functions, pressures + resilience matices, and other goodies. So,
+
+>  **OHI Toolbox = assessment-repo + ohicore**.
 
 
 ## Introduction to WebApps

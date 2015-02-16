@@ -60,7 +60,7 @@ TODO: how to clone repositories from GitHub App, RStudio
 
 # Intro to OHI Toolbox
 
-The **OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate groups with the highly collaborative OHI assessment process at any scale. We interact with it through GitHub, through a few repositories. Data are fed to the Toolbox as *.csv* files, and all scripts are in *R*.
+The **OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate the highly collaborative OHI assessment process at any scale. We interact with the Toolbox through GitHub, through a few repositories. Data are fed to the Toolbox as *.csv* files, and all scripts are in *R*.
 
 Any assessment relies on the `ohicore` repository. But there is also an additional repository specific to the assessment, which contains all the prepped data and functions, pressures + resilience matices, and other goodies. So,
 >  **OHI Toolbox = assessment-repo + ohicore**.
