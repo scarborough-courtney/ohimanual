@@ -12,14 +12,14 @@ The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustai
 
 Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
 
-## Add a new variable to a goal model 
+## Outline: Modify a goal model 
 
 We will walk through an example of adding a new variable to the Artisanal Fishing Opportunity (AO) goal model in Belize. 
 
 Assume your team has already discussed what is important in terms of AO in Belize. You have explored all data available and your team has decided that the best way to capture local characteristics is to add a new variable to the global AO model.
   
 
-## Add a new variable to a goal model 
+## Outline: Modify a goal model 
 
 Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
 

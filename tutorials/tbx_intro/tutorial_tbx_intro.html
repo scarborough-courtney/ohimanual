@@ -95,24 +95,53 @@
 
 <p>The <a href='www.oceanhealthindex.org' title=''><strong>Ocean Health Index (OHI)</strong></a> measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.</p>
 
-<p>The <strong>OHI Toolbox</strong> is an ecosystem of data, scripts, and structure used to facilitate the highly collaborative OHI assessment process at any scale. We interact with the Toolbox through a few repositories stored on GitHub. Data are fed to the Toolbox as <em>.csv</em> files, and all scripts are in <em>R</em>.</p>
+<p><strong>The OHI Toolbox</strong> is an open-source, cross-platform resource to calculate OHI scores at any scale. Here, we will explore the Toolbox. We will use Belize as an example: this is for teaching purposes only.</p>
 
-<p>Note: this presentation is made with <a href='http://rmarkdown.rstudio.com/' title=''>Rmarkdown</a>. It is viewable rendered <a href='http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1' title=''>online</a> and in its raw form on <a href='https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd' title=''>GitHub</a>.</p>
+<p>Note: this presentation is made with <a href='http://rmarkdown.rstudio.com/' title=''>Rmarkdown</a>. It is viewable rendered <a href='http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro.html#1' title=''>online</a> and in its raw form on <a href='https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro.html#1' title=''>GitHub</a>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Outline</h2></hgroup><article  id="outline">
 
 <ul>
-<li>Introduction to WebApps</li>
+<li>What is the Toolbox?</li>
+<li>The Toolbox and WebApps</li>
+<li>Explore a WebApp</li>
 <li>Explore an Assessment Repository</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>What is the Toolbox?</h2></hgroup><article  id="what-is-the-toolbox">
 
-<p>Any assessment relies on the <code>ohicore</code> repository. But there is also an additional repository specific to the assessment, which contains all the prepped data and functions, pressures + resilience matices, and other goodies. So, &gt; <strong>OHI Toolbox = assessment-repo + ohicore</strong>.</p>
+<p>The <strong>OHI Toolbox</strong> facilitates the highly collaborative OHI assessment process at any scale. It is an ecosystem of data, scripts, and structure stored in several GitHub repositories. Data are saved as <em>.csv</em> files, and all scripts are in <em>R</em>.</p>
 
-<p>Data need to be prepped for that assessment repository, so additional repos exist for that.</p>
+</article></slide><slide class=''><hgroup><h2>What is the Toolbox?</h2></hgroup><article  id="what-is-the-toolbox-1">
 
-</article></slide><slide class=''><hgroup><h2>Introduction to WebApps</h2></hgroup><article  id="introduction-to-webapps">
+<p>The <strong>OHI Toolbox</strong> facilitates the highly collaborative OHI assessment process at any scale. It is an ecosystem of data, scripts, and structure stored in several GitHub repositories. Data are saved as <em>.csv</em> files, and all scripts are in <em>R</em>.</p>
+
+<blockquote>
+<p><strong>The OHI Toolbox = assessment-repo + ohicore</strong>:</p>
+</blockquote>
+
+<ul>
+<li><strong>your assessment repository</strong> you will edit with your data, goal models, and updated pressures &amp; resilience matices.</li>
+<li><strong>the <em>ohicore</em> repository</strong> you will not edit: it provides the underlying functionality of the Toolbox and WebApps.</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>The Toolbox and WebApps</h2></hgroup><article  id="the-toolbox-and-webapps">
+
+<blockquote>
+<p><strong>The OHI Toolbox = assessment-repo + ohicore</strong>.</p>
+</blockquote>
+
+<p>OHI <strong>WebApps</strong> visually display the information stored in <strong>Toolbox</strong> repositories (data, models, and calculated scores). Each are identified by a three-letter code.</p>
+
+<p>To use Belize as an example:</p>
+
+<ul>
+<li>three-letter code: <strong>blz</strong></li>
+<li>WebApp: <strong><a href='http://ohi-science.org/blz' title=''>http://ohi-science.org/blz</a></strong></li>
+<li>assessment repo: <strong><a href='https://github.com/ohi-science/blz' title=''>https://github.com/ohi-science/blz</a></strong></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Explore a WebApp</h2></hgroup><article  id="explore-a-webapp">
 
 <p>Let&#39;s look at an example for Belize: <a href='http://ohi-science.org/blz' title=''>http://ohi-science.org/blz</a>.</p>
 
@@ -120,7 +149,7 @@
 
 <ul>
 <li><a href='http://ohi-science.org/blz/app' title=''>App</a>: interactive to explore data and scores</li>
-<li><a href='http://ohi-science.org/blz/regions/' title=''>Regions</a>: Belize has 4</li>
+<li><a href='http://ohi-science.org/blz/regions/' title=''>Regions</a>: Belize has four</li>
 <li><a href='http://ohi-science.org/blz/layers/' title=''>Layers</a>: alphabetical list of all data</li>
 <li><a href='http://ohi-science.org/blz/goals/' title=''>Goals</a>: global goal model equations</li>
 <li><a href='http://ohi-science.org/blz/scores/' title=''>Scores</a>: calculated based on extracted global data</li>
@@ -145,9 +174,7 @@
 <li><strong>conf/goals.csv</strong></li>
 <li><strong>conf/pressures_matrix.csv</strong></li>
 <li><strong>conf/resilience_matrix.csv</strong></li>
-</ul>
-
-</article></slide><slide class=''><hgroup><h2>More&#8230;</h2></hgroup><article  id="more..."></article></slide>
+</ul></article></slide>
 
 
   <slide class="backdrop"></slide>
