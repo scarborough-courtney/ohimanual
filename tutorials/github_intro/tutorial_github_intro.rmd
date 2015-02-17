@@ -102,3 +102,17 @@ Follow these steps, referring to the Ocean Health Index Manual's section on [Ins
 
 Now you can work locally, synching your edits back to the online repositories!
 
+## Resources
+
+**Learn more about GitHub:**
+
+* [**Git and GitHub**](http://r-pkgs.had.co.nz/git.html) by Hadley Wickham
+* [**Collaboration and Time Travel: Version Control with Git, GitHub and RStudio**](http://www.rstudio.com/resources/webinars/) video tutorial by Hadley Wickham
+* [**Good Resources for Learning Git and GitHub**](https://help.github.com/articles/good-resources-for-learning-git-and-github/) by GitHub
+
+**Learn more about R:**
+
+* [**Learn R** ](http://swirlstats.com/) by Swirl
+* [**Learn R**](https://www.nceas.ucsb.edu/scicomp/software/r) by NCEAS
+
+
