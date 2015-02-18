@@ -6,7 +6,11 @@ output: ioslides_presentation
 
 ## Introduction 
 
-The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
+The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. 
+
+For regional studies, the goals are calculated for each reporting regions (i.e., state, province, etc.) using the best information available at this spatial scale.
+
+Ultimately, the scores of the reporting units are combined to give a comprehensive picture of the region's coastal ocean health.  
 
 OHI assessments require clearly defined reporting regions within the study area, and calculations require a map file with these boundaries identified both inland and offshore. This tutorial describes requirements and considerations for these map files. 
 
