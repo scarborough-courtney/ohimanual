@@ -97,8 +97,8 @@ Follow these steps, referring to the Ocean Health Index Manual's section on [Ins
 3. Set up your git identity
 4. Install the GitHub application
 5. Create a folder called  ***github*** on your computer
+5. Email your GitHub username to Julie so you can finally: 
 6. Clone your repository to your computer
-7. Update permissions
 
 Now you can work locally, synching your edits back to the online repositories!
 

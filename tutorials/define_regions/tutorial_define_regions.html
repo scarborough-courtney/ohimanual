@@ -93,15 +93,15 @@
 
 <slide class=''><hgroup><h2>Introduction</h2></hgroup><article  id="introduction">
 
-<p>The <a href='www.oceanhealthindex.org' title=''><strong>Ocean Health Index (OHI)</strong></a> measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.</p>
+<p>The <a href='www.oceanhealthindex.org' title=''><strong>Ocean Health Index (OHI)</strong></a> measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future.</p>
+
+<p>For regional studies, the goals are calculated for each reporting region (i.e., state, province, etc.) using the best information available at this spatial scale. Ultimately, the scores of the reporting units are combined to give a comprehensive picture of coastal ocean health for a region.</p>
 
 <p>OHI assessments require clearly defined reporting regions within the study area, and calculations require a map file with these boundaries identified both inland and offshore. This tutorial describes requirements and considerations for these map files.</p>
 
 <p>Note: this presentation is made with <a href='http://rmarkdown.rstudio.com/' title=''>Rmarkdown</a>. It is viewable rendered <a href='http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1' title=''>online</a> and in its raw form on <a href='https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd' title=''>GitHub</a>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Outline</h2></hgroup><article  id="outline">
-
-<p>Steps:</p>
 
 <ol>
 <li>Define your reporting regions</li>
@@ -111,7 +111,7 @@
 
 </article></slide><slide class=''><hgroup><h2>1: Define your reporting regions</h2></hgroup><article  id="define-your-reporting-regions">
 
-<p>One of the first steps of performing a regional Ocean Health Index analysis is determining the boundaries for the reporting units. This is important because all data, analyses, and results will be at this scale.</p>
+<p>One of the first steps of performing a regional Ocean Health Index analysis is determining the boundaries for the reporting regions. This is important because all data, analyses, and results will be at this spatial scale.</p>
 
 <p>For example, as a starting point for Ecuador, we created 5 reporting units based on the country&#39;s coastal provinces: <img src='https://cloud.githubusercontent.com/assets/5685517/6217554/0191279e-b5ca-11e4-9b87-4de199b4f63a.png' title=''/></p>
 
@@ -123,25 +123,27 @@
 
 <p>In this case, the reporting units were based on political boundaries. This often makes sense because data, policies, and regulations are at this scale. However, ecological or geomorphological boundaries may play an important role in the delineation of these boundaries.</p>
 
-</article></slide><slide class=''><hgroup><h2>1: Define your reporting regions</h2></hgroup><article  id="define-your-reporting-regions-2">
-
-<p>For the global OHI analysis, we used <a href='http://en.wikipedia.org/wiki/Exclusive_economic_zone' title=''>EEZ</a> boundaries to define our reporting units.</p>
-
 </article></slide><slide class=''><hgroup><h2>2: Create a map with your boundaries</h2></hgroup><article  id="create-a-map-with-your-boundaries">
 
 <p>This map will be used to extract data from other spatial files and for displaying results. The map will likely be in <a href='http://en.wikipedia.org/wiki/Shapefile' title=''>shapefile</a> format, and making it will require someone with GIS skills.</p>
 
-<p>When the map is created, it will also be a good idea to create a range of inland and offshore buffers. For example, some of the goals require coastal population data, which is defined as the number of people within 25 miles of the shore. Obtaining these data requires a 25 mile inland buffer for each region.</p>
+<p>When the map is created, it will also be a good idea to create a range of inland and offshore buffers.</p>
+
+<p>For example, some of the goals require coastal population data, which is defined as the number of people within 25 miles of the shore. Obtaining these data requires a 25 mile inland buffer for each reporting region.</p>
 
 <p>The buffers that must be generated will vary based on the models used to calculate the goals, but some common buffers we use are: 1 km inland, 25 miles inland, 3 nm offshore, etc.</p>
 
 </article></slide><slide class=''><hgroup><h2>Additional resources</h2></hgroup><article  id="additional-resources">
 
-<p>The <a href='http://ohi-science.org/pages/create_regions.html' title=''>Python script</a> and data we used to create the regional OHI maps (like the Ecuador example above) can be used to create different boundaries. The Python script is useful if you have land boundaries that you want to use as the basis of the ocean reporting regions. (NOTE: Running the Python script requires the ArcGIS program.)</p>
+<p>The <a href='http://ohi-science.org/pages/create_regions.html' title=''>Python script</a> and data we used to create the regional OHI maps (like the Ecuador example) can be used to create different boundaries.</p>
+
+<p>In particular, the Python script is useful if you have land boundaries that you want to use as the basis of the ocean reporting regions. (NOTE: Running the Python script requires the ArcGIS program.)</p>
+
+<img src='https://cloud.githubusercontent.com/assets/5685517/6242346/f73d57ea-b6e1-11e4-9eab-36974801f0ee.png' title=''/>
 
 </article></slide><slide class=''><hgroup><h2>Additional resources</h2></hgroup><article  id="additional-resources-1">
 
-<p>We used a Thiessen Polygons approach to create the boundaries and buffers.</p>
+<p>The script uses a Thiessen Polygons approach to create the boundaries and buffers.</p>
 
 <p>In this case, we had land-based boundaries:</p>
 
