@@ -8,7 +8,7 @@ output: ioslides_presentation
 
 The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. 
 
-For regional studies, the goals are calculated for each reporting region (i.e., state, province, etc.) using the best information available at this spatial scale.  Ultimately, the scores of the reporting units are combined to give a comprehensive picture of coastal ocean health.  
+For regional studies, the goals are calculated for each reporting region (i.e., state, province, etc.) using the best information available at this spatial scale.  Ultimately, the scores of the reporting units are combined to give a comprehensive picture of coastal ocean health for a region.  
 
 OHI assessments require clearly defined reporting regions within the study area, and calculations require a map file with these boundaries identified both inland and offshore. This tutorial describes requirements and considerations for these map files. 
 
@@ -52,6 +52,7 @@ The  [Python script](http://ohi-science.org/pages/create_regions.html) and data 
 
 In particular, the Python script is useful if you have land boundaries that you want to use as the basis of the ocean reporting regions.  (NOTE: Running the Python script requires the ArcGIS program.)
 
+![image](https://cloud.githubusercontent.com/assets/5685517/6242346/f73d57ea-b6e1-11e4-9eab-36974801f0ee.png)
 
 ## Additional resources
 The script uses a Thiessen Polygons approach to create the boundaries and buffers.
