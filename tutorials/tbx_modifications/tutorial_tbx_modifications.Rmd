@@ -139,6 +139,8 @@ The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/bl
     + ex: `github/blz/blz-prep` (ours is stored [here](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
 
 
+## Step 2: Prepare & save new data layer
+
 ### Working with data: good practices
 
 * **organize & prepare data in a github repository** 
