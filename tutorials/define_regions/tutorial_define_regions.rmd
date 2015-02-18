@@ -17,8 +17,6 @@ Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/).
 
 ## Outline
 
-Steps: 
-
 1. Define your reporting regions
 2. Create a map file that describes the reporting unit boundaries
 3. Additional resources
