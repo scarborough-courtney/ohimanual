@@ -3,3 +3,7 @@
 .RData
 **/*.html
 !tutorials.html
+!tutorial_github_intro.html
+!tutorial_tbx_intro.html
+!tutorial_tbx_modifications.html
+!tutorial_define_regions.html

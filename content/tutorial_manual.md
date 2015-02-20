@@ -2,7 +2,7 @@
 
 ## Overview
 
-The manual is written in [Markdown](http://daringfireball.net/projects/markdown/syntax), which can render to .html, .docx, .pdf. This enables us to post directly online, generate pretty pdfs, and also circulate word documents with track changes.
+The manual is written in [Markdown](http://daringfireball.net/projects/markdown/syntax), which can render to .html, .docx, .pdf. This enables us to post directly online, generate pretty pdfs, and also circulate word documents with track changes. 
 
 Each section of the manual is written in a separate markdown file (**.md**) rather than one big document: it makes it easier as we shift sections around--which we do: we haven't quite found the right order to put these in yet (but I think we're close).
 
@@ -16,10 +16,10 @@ Note: this document is also saved in `~/github/ohimanual/content`. These sorts o
 
 ## Figures
 
-Figures are stored in two places:
+Figures are currently stored in two places:
 
-1. a subfolder called `~/github/ohimanual/content/fig`
-2. in a shared google drive folder: [OHI > toolbox > manual > drawings](https://drive.google.com/drive/u/1/#folders/0BzLReAQzT2SVWTZtcHdNSHU2bHM/0BzLReAQzT2SVaEU0b2N0YW8zeDQ/0B04tAQB4L2N3RktubktOU1FmU1E).
+1. (new way): in a shared google drive folder: [OHI > toolbox > manual > drawings](https://drive.google.com/drive/u/1/#folders/0BzLReAQzT2SVWTZtcHdNSHU2bHM/0BzLReAQzT2SVaEU0b2N0YW8zeDQ/0B04tAQB4L2N3RktubktOU1FmU1E).
+2. (old way): a subfolder called `~/github/ohimanual/content/fig`
 
 As we progress, we'd like to put all new figures in the google drive folder: it's free software for adding arrows, boxes, text, etc, and easily editable.
 
@@ -34,7 +34,7 @@ As we progress, we'd like to put all new figures in the google drive folder: it'
     1. File > Publish to the Web...
     1. Click 'Publish' and 'OK'
     1. copy url
-1. Insert figure into the `.md` file by pasting it like this: 
+1. Insert figure into the `.md` file by pasting it like this:
 
 ```
 ![](https://docs.google.com/drawings...)

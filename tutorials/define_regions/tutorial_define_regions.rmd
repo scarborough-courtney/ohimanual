@@ -1,0 +1,83 @@
+---
+title: "The Ocean Health Index: Defining regions"
+author: "Melanie Frazier<br /> Project Scientist, Ocean Health Index<br /> frazier@nceas.ucsb.edu"
+output: ioslides_presentation
+---
+
+## Introduction 
+
+The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. 
+
+For regional studies, the goals are calculated for each reporting region (i.e., state, province, etc.) using the best information available at this spatial scale.  Ultimately, the scores of the reporting units are combined to give a comprehensive picture of coastal ocean health for a region.  
+
+OHI assessments require clearly defined reporting regions within the study area, and calculations require a map file with these boundaries identified both inland and offshore. This tutorial describes requirements and considerations for these map files. 
+
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+
+
+## Outline
+
+1. Define your reporting regions
+2. Create a map file that describes the reporting unit boundaries
+3. Additional resources
+
+## 1: Define your reporting regions
+One of the first steps of performing a regional Ocean Health Index analysis is determining the boundaries for the reporting regions.  This is important because all data, analyses, and results will be at this spatial scale. 
+
+For example, as a starting point for Ecuador, we created 5 reporting units based on the country's coastal provinces:
+![image](https://cloud.githubusercontent.com/assets/5685517/6217554/0191279e-b5ca-11e4-9b87-4de199b4f63a.png)
+
+## 1: Define your reporting regions
+
+All data is collected at the scale of these reporting units.  As an example, here is some population data for the 5 reporting units in Ecuador:  
+
+![image](https://cloud.githubusercontent.com/assets/5685517/6217649/e7c4f722-b5ca-11e4-930e-b1c85c7aab01.png)
+
+In this case, the reporting units were based on political boundaries.  This often makes sense because data, policies, and regulations are at this scale.  However, ecological or geomorphological boundaries may play an important role in the delineation of these boundaries. 
+
+
+## 2: Create a map with your boundaries
+This map will be used to extract data from other spatial files and for displaying results.  The map will likely be in [shapefile](http://en.wikipedia.org/wiki/Shapefile) format, and making it will require someone with GIS skills.  
+
+When the map is created, it will also be a good idea to create a range of inland and offshore buffers.  
+
+For example, some of the goals require coastal population data, which is defined as the number of people within 25 miles of the shore.  Obtaining these data requires a 25 mile inland buffer for each reporting region.  
+
+The buffers that must be generated will vary based on the models used to calculate the goals, but some common buffers we use are: 1 km inland, 25 miles inland, 3 nm offshore, etc.
+
+## Additional resources
+The  [Python script](http://ohi-science.org/pages/create_regions.html) and data we used to create the regional OHI maps (like the Ecuador example) can be used to create different boundaries.  
+
+In particular, the Python script is useful if you have land boundaries that you want to use as the basis of the ocean reporting regions.  (NOTE: Running the Python script requires the ArcGIS program.)
+
+![image](https://cloud.githubusercontent.com/assets/5685517/6242346/f73d57ea-b6e1-11e4-9eab-36974801f0ee.png)
+
+## Additional resources
+The script uses a Thiessen Polygons approach to create the boundaries and buffers.
+
+In this case, we had land-based boundaries:  
+
+![image](https://cloud.githubusercontent.com/assets/5685517/6218950/a7c8318a-b5d8-11e4-8254-9c79aad77dff.png)
+
+## Additional resources
+An offshore buffer was drawn for each region:  
+
+![image](https://cloud.githubusercontent.com/assets/5685517/6218960/b830ac00-b5d8-11e4-9a88-1a287801ca48.png)
+
+## Additional resources
+But the buffers overlap:  
+
+![image](https://cloud.githubusercontent.com/assets/5685517/6218966/c7211664-b5d8-11e4-8c8f-decb0c91284d.png)
+
+## Additional resources
+For the Thiessen's polygons approach, the overlap is divided:
+![image](https://cloud.githubusercontent.com/assets/5685517/6218970/d2f9d23c-b5d8-11e4-9e8a-55a88c62fe4b.png)
+
+## Additional resources
+To produce the borders between the regions:
+![image](https://cloud.githubusercontent.com/assets/5685517/6218976/de025bb8-b5d8-11e4-8bad-0e71548760d1.png)
+
+This approach will not be appropriate if you want more control over the ocean boundaries.  
+
+
+         

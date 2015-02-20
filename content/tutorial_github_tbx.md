@@ -29,19 +29,18 @@ Most repos we work with in OHI-Science are freely available; some repos are priv
 
 ## Syncing options
 
-When you work on your computer, any edits you make to any files in your repo, using any program, will be tracked by Git. You can use any of the above to commit and sync your changes back to GitHub. There are many options you can use to sync your edits on a repo with the online version.
+When you work on your computer, any edits you make to any files in your repo, using any program, will be tracked by Git. You can use any of the below to commit and sync your changes back to GitHub. There are many options you can use to sync your edits on a repo with the online version.
 
 * **GitHub App** [for Mac](https://mac.github.com/) and [for Windows](https://windows.github.com/)
 * [**RStudio**](www.rstudio.com)
 * **Terminal**
 
-When you work on your computer, any edits you make to any files in your repo, using any program, will be tracked by Git. You can use any of the above to commit and sync your changes back to GitHub.  
 
 **Filepaths**: Save any GitHub repos is a folder in your home directory called 'github', so that you can access it with the filepath `~/github`. This is very important since any filepaths you use in your files will need to be also usable by others on your team.
 
 * Ex 1: create a new file in Excel, save as .csv in your repo, commit, pull, push using GitHub App.  
-* Ex 3: modify R script using RStudio, commit, pull, push from RStudio.
-* Ex 2: open .md file, edit in Atom, commit, pull, push using  Terminal.
+* Ex 2: modify R script using RStudio, commit, pull, push from RStudio.
+* Ex 3: open .md file, edit in Atom, commit, pull, push using  Terminal.
 
 ```
 (type the following commands after the $ in your Terminal window)
@@ -61,7 +60,7 @@ TODO: how to clone repositories from GitHub App, RStudio
 
 # Intro to OHI Toolbox
 
-The **OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate groups with the highly collaborative OHI assessment process at any scale. We interact with it through GitHub, through a few repositories. Data are fed to the Toolbox as *.csv* files, and all scripts are in *R*.
+The **OHI Toolbox** is an ecosystem of data, scripts, and structure used to facilitate the highly collaborative OHI assessment process at any scale. We interact with the Toolbox through GitHub, through a few repositories. Data are fed to the Toolbox as *.csv* files, and all scripts are in *R*.
 
 Any assessment relies on the `ohicore` repository. But there is also an additional repository specific to the assessment, which contains all the prepped data and functions, pressures + resilience matices, and other goodies. So,
 >  **OHI Toolbox = assessment-repo + ohicore**.

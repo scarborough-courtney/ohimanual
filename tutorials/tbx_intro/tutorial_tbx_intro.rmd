@@ -1,0 +1,80 @@
+---
+title: 'The Ocean Health Index: Introduction to the Toolbox'
+author: "Julia Stewart Lowndes<br /> Project Scientist, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
+output: ioslides_presentation
+---
+
+## Introduction
+
+The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
+
+**The OHI Toolbox** is an open-source, cross-platform resource to calculate OHI scores at any scale. Here, we will explore the Toolbox. We will use Belize as an example: this is for teaching purposes only.  
+
+Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro.html#1).
+
+## Outline
+
+* What is the Toolbox?
+* The Toolbox and WebApps
+* Explore a WebApp
+* Explore an Assessment Repository
+
+## What is the Toolbox?
+
+The **OHI Toolbox** facilitates the highly collaborative OHI assessment process at any scale. It is an ecosystem of data, scripts, and structure stored in several GitHub repositories. Data are saved as *.csv* files, and all scripts are in *R*.
+
+
+## What is the Toolbox?
+
+The **OHI Toolbox** facilitates the highly collaborative OHI assessment process at any scale. It is an ecosystem of data, scripts, and structure stored in several GitHub repositories. Data are saved as *.csv* files, and all scripts are in *R*.
+
+>  **The OHI Toolbox = assessment-repo + ohicore**:
+
+* **your assessment repository** you will edit with your data, goal models, and updated pressures & resilience matices.
+* **the *ohicore* repository** you will not edit: it provides the underlying functionality of the Toolbox and WebApps. 
+
+## The Toolbox and WebApps
+
+>  **The OHI Toolbox = assessment-repo + ohicore**.
+
+OHI **WebApps** visually display the information stored in **Toolbox** repositories (data, models, and calculated scores). Each are identified by a three-letter code. 
+
+To use Belize as an example: 
+
+* three-letter code: **blz**
+* WebApp: **http://ohi-science.org/blz**
+* assessment repo: **https://github.com/ohi-science/blz**
+
+## Explore a WebApp
+
+Let's look at an example for Belize: http://ohi-science.org/blz.
+
+WebApp tabs: 
+
+* [App](http://ohi-science.org/blz/app): interactive to explore data and scores
+* [Regions](http://ohi-science.org/blz/regions/): Belize has four
+* [Layers](http://ohi-science.org/blz/layers/): alphabetical list of all data
+* [Goals](http://ohi-science.org/blz/goals/): global goal model equations
+* [Scores](http://ohi-science.org/blz/scores/): calculated based on extracted global data
+
+
+## Explore an Assessment Repository
+
+Belize's **assessment repository** is **blz**, available on GitHub at https://github.com/OHI-Science/blz.  
+  
+The **scenario folder** is **subcountry2014**. 
+
+Note the `blz.Rproj` file that allows you to sync this repository through RStudio.
+
+## Explore an Assessment Repository
+
+Within the **subcountry2014** folder are some key files we will work with:
+
+* **layers.csv**
+* **layers folder**
+* **conf/functions.r**
+* **conf/goals.csv**
+* **conf/pressures_matrix.csv**
+* **conf/resilience_matrix.csv**
+
+
