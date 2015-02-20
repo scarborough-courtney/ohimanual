@@ -1,8 +1,12 @@
 # Installing the Toolbox
 
+>**Section Summary:**
+
+>In this section, you will learn how to successfully download, install, and use the software required to conduct an assessment. You will create a GitHub account and install R, RStudio, git, and the Github desktop  app. OHI assessments are conducted through open-source platforms that allow you to make real-time changes with collaborators, and to track progress so that errors can be corrected and new insights can be shared in the future.
+
 ## Overview
 
-The **OHI Toolbox** is essentially several folders containing all the files required for an OHI assessment. These folders are stored online on www.github.com, and are called **GitHub repositories**. At this point, you should already be familiar with your assessment’s repository, and all of the files it contains (if not, read the ‘file system’ section above).  
+The **OHI Toolbox** is essentially several folders containing all the files required for an OHI assessment. These folders are stored online on www.github.com, and are called **GitHub repositories**. At this point, you should already be familiar with your assessment’s repository, and all of the files it contains (if not, read the section, **"File System for Assessment Repositories"**).  
 
 Conducting an OHI assessment using GitHub enables collaboration and transparency, and will provide access to the latest developments in the Toolbox software, allowing the OHI team to provide support remotely if necessary.  
 
@@ -30,4 +34,4 @@ This section explains the GitHub workflow and how to access and setup required s
 
 **sync = pull + commit + push**
 
-The following describes how to use GitHub to access and sync your assessment repository. For more in-depth information about the following steps, read *Git and GitHub* by Hadley Wickham, available at http://r-pkgs.had.co.nz/git.html
+The following describes how to use GitHub to access and sync your assessment repository. For more in-depth information about the installation steps, read *Git and GitHub* by Hadley Wickham, available at http://r-pkgs.had.co.nz/git.html

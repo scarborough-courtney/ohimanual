@@ -1,10 +1,16 @@
 # Conducting an Assessment
 
+>**Section Summary:**
+
+>In this section, you will learn what to think about before conducting an assessment. Your team should already be familiar with the OHI approach and can now prepare for tailoring it to the local context.
+
+> TIP: Careful planning before an assessment will pay off later.
+
 ## What to expect when conducting an assessment
 
 There are key considerations and processes that will be a part of every assessment, however, the process for conducting each assessment will be unique depending on the local context. For example: what data and indicators are available will determine how goal models can be tailored to the region, and what skillsets and resources are involved will affect the time it takes to complete the assessment.
 
-### Timeline 
+### Timeline
 
 The time required to complete an assessment depends on the local context and available resources, but the proportion of time required for different phases of the assessment is more predictable.  
 
@@ -12,12 +18,12 @@ The time required to complete an assessment depends on the local context and ava
 
 
 ![](./fig/task_timeline.png)  
-    
+
 ## Where to start
 
 You should start by understanding the structure of the global assessment and the data involved will help you think about what should be done differently in your local context.  
 
-The best way to do this is to begin with the WebApps. As described above, most coastal countries have a WebApp that was created to facilitate planning and communication during your assessment. The WebApp presents data, goal models and calculated scores for each region (global administrative area identified by gadm.org) visually through maps, histograms, and tables. All data presented were extracted from the global analysis, and scores were calculated using global goal models. For a finer-scale assessment of ocean health in your region, these data files provided will need to be updated with available data and indicators for each region in your assessment. However, if better data are not available, you can use the data provided. Then, to dive deeper into data layers and goal models, you can explore your assessment's GitHub repository, which stores all the information presented through the WebApp.  
+The best way to do this is to begin with the WebApps. As described in the section, **"Overview of the OHI WebApp**", most coastal countries have a WebApp that was created to facilitate planning and communication during your assessment. The WebApp presents data, goal models and calculated scores for each region (global administrative area identified by gadm.org) visually through maps, histograms, and tables. All data presented were extracted from the global analysis, and scores were calculated using global goal models. For a finer-scale assessment of ocean health in your region, these data files provided will need to be updated with available data and indicators for each region in your assessment. However, if better data are not available, you can use the data provided. Then, to dive deeper into data layers and goal models, you can explore your assessment's GitHub repository, which stores all the information presented through the WebApp.  
 
 You should also be familiar with the approaches taken by other assessments adapted from the global context, including Brazil, the US West Coast, and Fiji. You can find these studies at ohi-science.org.  
 
@@ -30,7 +36,7 @@ We recommend keeping in mind the following as you develop your approach:
 
 * People are part of ocean health
     + economic and social data are included in OHI: consider how people are locally engaging with the ocean
-* Goal models should be modified to capture local characteristics and priorities that can be measured with available data 
+* Goal models should be modified to capture local characteristics and priorities that can be measured with available data
     + after identifying what is important locally, identify direct or indirect measures to develop tailored goal models  
 * Assessments can use a mix of regional-, country- and global-scale data
     + include the finest-scale data available, but when this is not possible, rely on global-scale data
@@ -41,7 +47,7 @@ We recommend keeping in mind the following as you develop your approach:
     + each assessment should represent the best understanding of ocean health at a point in time. For example, if fisheries data are available from 1980-2011 and tourism data are available from 2008-2012; these can both be used to represent current ocean health
 * Document all decisions made, including:
     + all data sources (publications, website URL, date of access, etc).
-    + processes for establishing reference points, 
+    + processes for establishing reference points,
     + how and why models were modified, and additionally why other potential modifications were not done, as this reminds yourself of past decisions and helps explain them to others in the future)
     + that it is important for transparency, describing methods and explaining results in reports and publications, and for reproducibility (for any future comparable assessments in your study area)
 
@@ -52,7 +58,7 @@ Most time spent conducting an assessment occurs before using the Toolbox to calc
 
 When going through the checklist remember too that a motivation for conducting an assessment is to be able to modify goal models and set reference points using finer-scale, local information and reference points.  
 
-The following list of tasks will not necessarily be accomplished in sequence: there is a lot of iteration of tasks as you discover data, develop reference points and models, and revisit other data possibilities. This checklist identifies decisions and steps that must be done before the Toolbox can be used to calculate regional goal scores:
+The following list of tasks will not necessarily be accomplished in sequence: there is a lot of iteration of tasks as you discover data, develop reference points and models, and revisit other data possibilities. This checklist identifies decisions and steps that must be done before the Toolbox can be used to calculate your goal scores:
 
 
 * Understand the philosophy of OHI
@@ -94,5 +100,3 @@ The following list of tasks will not necessarily be accomplished in sequence: th
 * Modify goal models mathematically:
     + how can goal models be represented mathematically using locally available data and indicators?
     + can reference points be refined using locally available data and indicators, government mandates, management targets, obligations from multilateral agreements?
-
-

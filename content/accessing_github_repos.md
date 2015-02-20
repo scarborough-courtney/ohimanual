@@ -1,6 +1,6 @@
 ## Accessing GitHub Repositories
 
-GitHub has an online interface and a desktop application for the version-control software called ** *git*. ** In addition to cloning your GitHub repository to your computer, you will need to download and install git software and the GitHub App (application), both of which are freely available.
+GitHub has an online interface and a desktop application for the version-control software called ** *git*. ** In addition to cloning your GitHub repository to your computer, you will need to download and install *git* software and the GitHub App (application), both of which are freely available.
 
 
 ### Create a GitHub account
@@ -10,7 +10,7 @@ Create a GitHub account at http://github.com. Choose a username and password. Yo
 
 ### Install *git* software
 
-How you install *git* will depend on whether you are working on a Windows or Mac computer. It will also depend on your operating system version. If you have problems following these instructions, it is likely because your operating system requires a preveious version of *git*. Previous versions are available from www.wandisco.com/git/download (you will need to provide your email address).
+How you install *git* will depend on whether you are working on a Windows or Mac computer. It will also depend on your operating system version. If you have problems following these instructions, it is likely because your operating system requires a previous version of *git*. Previous versions are available from www.wandisco.com/git/download (you will need to provide your email address).
 
 **For Windows:**
 
@@ -23,7 +23,7 @@ How you install *git* will depend on whether you are working on a Windows or Mac
 **For Mac:**
 
 * Download *git* at http://git-scm.com/downloads and follow the install instructions.
-* Apple's Xcode has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, you will need to launch  Terminal and type a few lines of code:
+* Apple's Xcode has a command line tools option during install which can override the preferred *git* command line tools. To ensure you are using the latest preferred version, you will need to launch  Terminal and type a few lines of code:
 * Access Terminal from the Applications folder: **Applications > Utilities > Terminal**. When you launch Terminal a window will appear with your computer’s name followed by a `$`. When you type, your commands will appear after the `$`.
 
   > Download *git* at http://git-scm.com/downloads and follow the install instructions.
@@ -133,7 +133,7 @@ You need to **email your username to ohi-science@nceas.ucsb.edu** for permission
 
 ### Working locally
 
-You will then work locally on your own computer, modifying the files in the repository to reflect the desired modifications your team has identified for your regional assessment. Multiple users can work on the same repository at the same time, so there are steps involved to 'check in' your modifications so they can merge with the work of others without problems. GitHub has specific words for each of these steps. You have already successfully **cloned** an online repository to your local machine. After making modifications, you will **commit** these changes with a description before being able to sync back to the online repository. **Synching** involves both **pulling** any updates from the online repository before **pushing** committed changes back to the server.
+You will then work locally on your own computer, modifying the files in the repository to reflect the desired modifications your team has identified for your assessment. Multiple users can work on the same repository at the same time, so there are steps involved to 'check in' your modifications so they can merge with the work of others without problems. GitHub has specific words for each of these steps. You have already successfully **cloned** an online repository to your local machine. After making modifications, you will **commit** these changes with a description before being able to sync back to the online repository. **Synching** involves both **pulling** any updates from the online repository before **pushing** committed changes back to the server.
 
 The example below illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
 
@@ -141,7 +141,7 @@ The example below illustrates GitHub's collaborative workflow with the `ohi-isra
 
 **All changes within your local repository will be tracked by GitHub regardless of the software you use to make the changes**. This means that you can delete or paste files in the Mac Finder or Windows Explorer and edit *.csv* files in Excel or a text editor, and still sync these changes with the online repository. We recommend doing as much data manipulation as possible in a programming language like R, to maximize transparency and reproducibility. When modifying R scripts such as `functions.r`, you will need to work in R.
 
-We recommend syncing with either the GitHub app or with RStudio. Both methods require you to commit your changes, before pulling any updates and pushing your modifications. The GitHub app combines the pulling and pushing into one step, called syncing. The following sections show you how to synchronize the repository on your computer with the repository online.
+We recommend syncing with either the GitHub App or with RStudio. Both methods require you to commit your changes, before pulling any updates and pushing your modifications. The GitHub App combines the pulling and pushing into one step, called syncing. The following sections show you how to synchronize the repository on your computer with the repository online.
 
 ### Syncing
 
@@ -155,19 +155,19 @@ If you are just modifying data *.csv* files, you probably only need to use the G
 
 ### Using the GitHub App to synchronize your repository
 
-The GitHub App will track your modifications and can be used to commit and sync any changes made locally to your repository.  Once you are done working on the pertinent files and wish to commit and sync the changes to the online server on the Github server, open the Github App. The following example is with the ohi-china repository:
+The GitHub App will track your modifications and can be used to commit and sync any changes made locally to your repository.  Once you are done working on the pertinent files and wish to commit and sync the changes to the online server on the Github server, open the GitHub App. The following example is with [the ohi-china repository]:
 
-1. Make sure you select the correct repository, located on the left column of the github app window.
-2. Select the different files to which changes have been made (2a), and preview those changes on the right column of the github app window (2b).
-3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the Github App window, then click on commit and sync (Note: If a `Commit` button appears instead of the `Commit & Sync` button, you can either click `Commit` and then click the `Sync` button located on the top-right corner of the githup app window, or you can alternatively click the `+` button next to the `Commit` button, and then click the the `Commit & Sync` button that appears).
+1. Make sure you select the correct repository, located on the left column of the GitHub App window.
+2. Select the different files to which changes have been made (2a), and preview those changes on the right column of the GitHub App window (2b).
+3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the GitHub App window, then click on commit and sync (Note: If a `Commit` button appears instead of the `Commit & Sync` button, you can either click `Commit` and then click the `Sync` button located on the top-right corner of the GitHub App window, or you can alternatively click the `+` button next to the `Commit` button, and then click the the `Commit & Sync` button that appears).
 
 > ![](./fig/github_app_notes.png)
 
-Go online and check that your changes are now visible on Github online.
+Go online and check that your changes are now visible on GitHub online.
 
 ### Working with R and RStudio
 
-**RStudio** is a program that can be used to synchronize any modifications you make to files in your assessment’s repository, and if you are working in R, it is convenient since you do not need to open the GitHub app.
+**RStudio** is a program that can be used to synchronize any modifications you make to files in your assessment’s repository, and if you are working in R, it is convenient since you do not need to open the GitHub App.
 If you do not already have this installed, install the latest version of R and RStudio (and if you do have these installed, check for updates: there are frequent updates to the R software, and the current version is identified on the website). Both R and RStudio are freely available to download.  
 
 **R**: Download the current version of R at http://cran.r-project.org/ and follow the instructions to install it on your computer. If updating, compare the available version on their website with what you already have on your computer by typing sessionInfo() into your R console.  
@@ -201,6 +201,6 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 
 ### Install the latest version of R and RStudio
 
-Make sure you have the most current version of R and RStudio. Download **R** at http://cran.r-project.org/ and install on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the websited. Compare what is available from their wesite with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
+Make sure you have the most current version of R and RStudio. Download **R** at http://cran.r-project.org/ and install on your computer. If you already have R installed, check the website for updates. There are frequent updates to the R software, and the current version is identified on the website. Compare what is available from their website with what you already have on your computer by typing `sessionInfo()` into your R console. (This will also identify packages you have installed).  
 
-While not required, we highly recommend working with **RStudio**, which is an interface that makes working with R much easier, and it also interfaces with GitHub so you are able to syncronize without using the GitHub app. RStudio does not get updated as often as R does, but it is good to check for updates regularly.
+While not required, we highly recommend working with **RStudio**, which is an interface that makes working with R much easier, and it also interfaces with GitHub so you are able to synchronize without using the GitHub App. RStudio does not get updated as often as R does, but it is good to check for updates regularly.
