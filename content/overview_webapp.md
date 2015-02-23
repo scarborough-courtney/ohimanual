@@ -1,4 +1,4 @@
-# Overview of the OHI Toolbox <<and OHI WebApp>>
+# Overview of the OHI Toolbox
 
 >**Section Summary:**
 
