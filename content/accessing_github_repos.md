@@ -62,7 +62,9 @@ Finally, quit Terminal.
 
 ### Set up your Git Identity
 
-After downloading and installing *git*, you will need to set up your **Git Identity**, which identifies you with your work. You will do this using the command line specific to Windows or Mac:
+After downloading and installing *git*, you will need to set up your **Git Identity**, which identifies you with your work. *Note*: if you have any problems with the following instructions, it is likely because of incompatibility between the version of your operating system and the version of git you downloaded in the previous section. In this case, find and download a compatible version at [www.wandisco.com/git/download](www.wandisco.com/git/download) and then follow the instructions below.
+
+You will set up your GitHub identity using the command line specific to Windows or Mac:
 
 * **Windows**: Start > Run > cmd
 * **Mac**: Applications > Utilities > Terminal
@@ -88,8 +90,6 @@ Quit the Terminal after typing:
 ```
 exit
 ```
-
-If you have any problems setting up your GitHub identity, it is likely because of the version of git you have installed. Download a compatible version at www.wandisco.com/git/download.
 
 ### Install the GitHub application
 
