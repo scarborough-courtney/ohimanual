@@ -1,0 +1,80 @@
+---
+title: 'El Indice de Salud del Océano: Introducción a la Caja de Herramientas'
+author: "Julia Stewart Lowndes<br /> Cientifico del Proyecto, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
+output: ioslides_presentation
+---
+
+## Introducción
+
+El [**Indice de Salud del Océano (OHI)**](www.oceanhealthindex.org) mide el aprovisionamiento sostenible de diez 'metas' (beneficios y servicios claves) a las personas ahora y en el futuro. A cualquier escala espacial, las evaluaciones OHI usan la mejor información disponible para desarrollar modelos de metas y establecer objetivos, y las puntuaciones de las metas son combinadas para proveer un mejor entendimiento de la salud marino costera.  
+
+**La Caja de Herramientas OHI** es un recurso plataforma a fuente abierta para calcular las puntuaciones OHI a cualquier escala. Aquí, se explorará la Caja de Herramientas. Utilizaremos el repositorio de Ecuador a nivel global como ejemplo: esto es para propósitos educativos únicamente.  
+
+Nota: esta presentación se hizo con [Rmarkdown](http://rmarkdown.rstudio.com/). Se puede ver producida [en Internet](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.html#1) y se puede ver un formato crudo de [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.rmd).
+
+## Resumen de la presentación
+
+* ¿Qué es la Caja de Herramientas OHI?
+* La Caja de Herramientas y los Webapps
+* Exploración de una Webapp
+* Exploración de un repositorio de evaluación
+
+## ¿Qué es la Caja de Herramientas OHI?
+
+La **Caja de Herramientas OHI** facilita el proceso colaborativo de una evaluación OHI a cualquier escala. Es un ecosistema de datos, scripts, y estructura almacenada en varios repositorios Github. Los datos son guardados como archivos *.csv*, y todos los scripts estan en *R*.
+
+
+## ¿Qué es la Caja de Herramientas OHI?
+
+La **Caja de Herramientas OHI** facilita el proceso colaborativo de una evaluación OHI a cualquier escala. Es un ecosistema de datos, scripts, y estructura almacenada en varios repositorios Github. Los datos son guardados como archivos *.csv*, y todos los scripts estan en *R*.
+
+>  **La Caja de Herramientas OHI = repositorio de la evaluación + ohicore**:
+
+* **el repositorio de su evaluación** tendrá que editar sus datos, los modelos de las metas, y actualizar las matrices de preciones y resilencia.
+* **el repositorio *ohicore* ** no será editado: este provée la funccionalidad subyacente de la Caja de Herramientas y los WebApps. 
+
+## La Caja de Herramientas y los Webapps
+
+>  **La Caja de Herramientas OHI = repositorio de la evaluación + ohicore**:
+
+Las **WebApps** del OHI visualizan la información almacenada en los repositorios de la **Caja de Herramientas** (datos, modelos, y puntuaciones calculadas). Cada **WebApp** es identificada por un código de tres letras. 
+
+Para utilizar a Ecuador como ejemplo: 
+
+* Código de tres letras: **ecu**
+* WebApp: **http://ohi-science.org/ecu**
+* Repositorio de la evaluación: **https://github.com/OHI-Science/ecu/**
+
+## Exploración de una Webapp
+
+Veamos un ejemplo para Ecuador: http://ohi-science.org/ecu
+
+Las pestañas dentro del WebApp:
+
+* [App](http://ohi-science.org/blz/app): interactivo para explorar datos y puntuaciones
+* [Regions](http://ohi-science.org/blz/regions/): Ecuador tiene cinco
+* [Layers](http://ohi-science.org/blz/layers/): lista alfabética de todos los datos utilizados en la evaluación global para esa geografía
+* [Goals](http://ohi-science.org/blz/goals/): ecuaciones de los modelos de las metas globales
+* [Scores](http://ohi-science.org/blz/scores/): calculadas basado en datos extraidos a nivel global
+
+
+## Exploración de un repositorio de evaluación
+
+El **repositorio de evaluación** de Ecuador **ecu**, disponible en GitHub en https://github.com/OHI-Science/ecu.  
+  
+La **carpeta del escenario** es **subcountry2014**. 
+
+Note el archivo `ecu.Rproj` que le permite sincronizar este repositorio a través de RStudio.
+
+## Exploración de un repositorio de evaluación
+
+Dentro de la carpeta **subcountry2014** existe algunos archivos con los que trabajaremos:
+
+* **layers.csv**
+* **layers folder**
+* **conf/functions.r**
+* **conf/goals.csv**
+* **conf/pressures_matrix.csv**
+* **conf/resilience_matrix.csv**
+
+

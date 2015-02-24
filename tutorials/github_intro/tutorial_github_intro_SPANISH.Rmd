@@ -1,0 +1,118 @@
+---
+title: 'Introducción a GitHub'
+author: "Julia Stewart Lowndes<br /> Cientifico del Proyecto, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
+output: ioslides_presentation
+---
+
+## Introducción  
+
+[**GitHub**](htpps://github.com) es una plataforma colaborativa para controlar diferentes versiones de trabajo. Tiene capacidades de sincronización como Dropbox, pero con funcionalidades agregadas ya que multiples usuarios pueden modificar documentos (con permisión). GitHub  guarda todas las versiones, identificando al usuario, las modificaciones atribuidas, y las ediciones complementarias incorporadas. Hay muchas maneras de investigar versiones pasadas, todas las cuales pueden ser readmitidas en cualquier momento.
+
+Hay muchos recursos disponibles para aprender GitHub: Hadley Wickham tiene buenas instrucciones en su [libro](http://r-pkgs.had.co.nz/git.html) y [webinars](http://www.rstudio.com/resources/webinars/).
+
+Nota: esta presentación se hizo con [Rmarkdown](http://rmarkdown.rstudio.com/). Se puede ver producida [en Internet](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.html#1) y se puede ver un formato crudo de [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.rmd).
+
+## Resumen de la presentación
+
+1. Estructura GitHub
+2. Vocabulario GitHub
+3. Ruta de archivos (Filepaths)
+4. Opciones de Clonar y Sincronizar
+5. Ejemplos de Clonaciones
+6. Ejemplos de sincronizaciones
+7. Como comenzar
+
+## Estructura GitHub
+
+GitHub almacena archivos en **repositorios**, poseidos por una **organización**.  
+
+Los repositorios ('repos') son esencialmente carpetas que contienen los guiones (scripts) y archivos de texto pequeños. Los repositorios tienen controles de verion, de modo que cualquier modificacion a los archivos, adiciones o supreciones, son monitoreados y atribuidos a contribuidores con las permisiones adecuadas.
+
+* [OHI-Science](https://github.com/OHI-Science) es una **organización**
+* [ecu](https://github.com/OHI-Science/ecu/) es un **repositorio**
+
+## Vocabulario GitHub
+
+Todos los colaboradores trabajaran localmente en sus ordenadores, sincronizando sus cambios de regreso a la nube (online) de modo que otros puedan trabajar usando la versión más actualizada.
+
+* **clone**: telecargar a su ordenador las versiones en la online con la capacidad de sincronizar activada
+* **commit**: mensaje asociado con sus cambions (veanse algunas de las [mejores practicas](http://r-pkgs.had.co.nz/git.html#commit-best-practices))
+* **pull**: sincronizar un repositorio en su ordenador con la version online
+* **push**: sincronizar el repositorio en la online con la version en su ordenador, solo posible despues de cometer (commit) 
+
+**sync = pull + commit + push**
+
+
+## Volabulario Github
+
+**sync = pull + commit + push**
+
+![](./clone_push_pull.png)
+
+
+## Ruta de archivos (Filepaths)
+
+Ya que trabajara en colaboración con otros, donde almacene sus archivos tiene una gran diferencia. 
+
+Guarde cualquier repositorio Github en una carpeta en su directorio personal (home) llamado ***'github'***, para que pueda tener acceso con la ruta de archivos (filepath) `~/github`. 
+
+* **Windows**: `Users\[User]\Documents\github\`
+* **Mac**: `Users/[User]/github/`
+
+
+## Opciones de Clonar y Sincronizar
+
+Clonará un repositorio a su ordenador para que pueda trabajar sin Internet.
+
+Cuando trabaje en su ordenador, cualquier cambio que haga a cualquier archivo en su repositorio, usando cualquier programa, sera rastreado por Github. Luego puede cometer (commit) y sincronizar (sync) sus cambios de regreso a Github. Hay muchas opciones que puede utilizar para primero clonar (clone) y luego sincronizar (sync) sus cambios a un repositorio con la version online:
+
+* **GitHub App** [para Mac](https://mac.github.com/) y [para Windows](https://windows.github.com/)
+* [**RStudio**](www.rstudio.com)
+* **shell (Terminal on Mac)**
+ 
+## Ejemplos de Clonaciones
+
+Les demostraremos dos ejemplos: 
+
+1. Clonar un repositorio utilizando la aplicación de GitHub  
+2. Clonar un repositorio utilizando RStudio
+
+Tambien puede clonar un repositorio utilizando shell (eso no lo discutiremos aquí).
+
+## Ejemplos de sincronizaciones
+
+Les demostraremos dos ejemplos: 
+
+1. Crear un nuevo archivo en Excel, guardar como *.csv* en su repositorio, cometer (commit), halar (pull), empujar (push) using GitHub App.  
+2. Modificar el R script utilizando RStudio, commit, pull, push desde RStudio.
+
+Tambien puede sincronizar utilizando Shell, pero no discutiremos eso aquí.
+
+## Cómo comenzar
+
+Siga estos pasos los cuales puede encontrar en el Manual del Indice de Salud del Océano en la sección [Instalando la Caja de Herramientas](http://ohi-science.org/manual/#installing-the-toolbox) para obtener información más detallada. 
+
+1. Crée una cuenta [GitHub](http://github.com) 
+2. Telecargue e instale el software [*git*](http://git-scm.com/downloads)
+3. Establezca un usuario con Github
+4. Instale la aplicación Github
+5. Crée una carpeta  ***github*** en su ordenador
+5. Envie su nombre de usuario Github a [Julie Stewart Lowndes](lowndes@nceas.ucsb.edu) para que pueda finalmente: 
+6. Clonar su repositorio en su ordenador
+
+Ahora puede trabajar localmente, sincronizando sus cambios a los repositorios online!
+
+## Recursos
+
+**Aprenda más sobre GitHub:**
+
+* [**Git y GitHub**](http://r-pkgs.had.co.nz/git.html) por Hadley Wickham
+* [**Colaboración y Viajes en el Tiempo: Control de Versiones con Git, GitHub y RStudio**](http://www.rstudio.com/resources/webinars/) video tutorial por Hadley Wickham
+* [**Buenos recursos para aprender Git and GitHub**](https://help.github.com/articles/good-resources-for-learning-git-and-github/) por GitHub
+
+**Aprenda más sobre R:**
+
+* [**Aprenda R** ](http://swirlstats.com/) por Swirl
+* [**Aprenda R**](https://www.nceas.ucsb.edu/scicomp/software/r) por NCEAS
+
+
