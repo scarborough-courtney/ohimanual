@@ -21,6 +21,7 @@ Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/).
 5. Cloning Examples
 6. Synching Examples
 7. Getting Started
+8. Resources
 
 ## GitHub Structure
 

@@ -21,12 +21,13 @@ Nota: esta presentación se hizo con [Rmarkdown](http://rmarkdown.rstudio.com/).
 5. Ejemplos de Clonaciones
 6. Ejemplos de sincronizaciones
 7. Como comenzar
+8. Recursos
 
 ## Estructura GitHub
 
 GitHub almacena archivos en **repositorios**, poseidos por una **organización**.  
 
-Los repositorios ('repos') son esencialmente carpetas que contienen los guiones (scripts) y archivos de texto pequeños. Los repositorios tienen controles de verion, de modo que cualquier modificacion a los archivos, adiciones o supreciones, son monitoreados y atribuidos a contribuidores con las permisiones adecuadas.
+Los repositorios ('repos') son esencialmente carpetas que contienen los guiones (scripts) y archivos de texto pequeños. Los repositorios tienen controles de versión, de modo que cualquier modificacion a los archivos, adiciones o supreciones, son monitoreados y atribuidos a contribuidores con las permisiones adecuadas.
 
 * [OHI-Science](https://github.com/OHI-Science) es una **organización**
 * [ecu](https://github.com/OHI-Science/ecu/) es un **repositorio**
@@ -35,7 +36,7 @@ Los repositorios ('repos') son esencialmente carpetas que contienen los guiones 
 
 Todos los colaboradores trabajaran localmente en sus ordenadores, sincronizando sus cambios de regreso a la nube (online) de modo que otros puedan trabajar usando la versión más actualizada.
 
-* **clone**: telecargar a su ordenador las versiones en la online con la capacidad de sincronizar activada
+* **clone**: telecargar a su ordenador el repo de la nube con la capacidad de sincronizar activada
 * **commit**: mensaje asociado con sus cambions (veanse algunas de las [mejores practicas](http://r-pkgs.had.co.nz/git.html#commit-best-practices))
 * **pull**: sincronizar un repositorio en su ordenador con la version online
 * **push**: sincronizar el repositorio en la online con la version en su ordenador, solo posible despues de cometer (commit) 
@@ -64,7 +65,7 @@ Guarde cualquier repositorio Github en una carpeta en su directorio personal (ho
 
 Clonará un repositorio a su ordenador para que pueda trabajar sin Internet.
 
-Cuando trabaje en su ordenador, cualquier cambio que haga a cualquier archivo en su repositorio, usando cualquier programa, sera rastreado por Github. Luego puede cometer (commit) y sincronizar (sync) sus cambios de regreso a Github. Hay muchas opciones que puede utilizar para primero clonar (clone) y luego sincronizar (sync) sus cambios a un repositorio con la version online:
+Cuando trabaje en su ordenador, cualquier cambio que haga a cualquier archivo en su repositorio, usando cualquier programa, sera rastreado por Github. Luego puede cometer (commit) y sincronizar (sync) sus cambios de regreso a Github. Hay algunas opciones que puede utilizar para primero clonar (clone) y luego sincronizar (sync) sus cambios a un repositorio con la version online:
 
 * **GitHub App** [para Mac](https://mac.github.com/) y [para Windows](https://windows.github.com/)
 * [**RStudio**](www.rstudio.com)
