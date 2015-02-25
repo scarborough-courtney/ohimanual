@@ -97,7 +97,7 @@ Siga estos pasos los cuales puede encontrar en el Manual del Indice de Salud del
 3. Establezca un usuario con Github
 4. Instale la aplicación Github
 5. Crée una carpeta  ***github*** en su ordenador
-5. Envie su nombre de usuario Github a [Julie Stewart Lowndes](lowndes@nceas.ucsb.edu) para que pueda finalmente: 
+5. Envie su nombre de usuario Github a lowndes@nceas.ucsb.edu para que pueda finalmente: 
 6. Clonar su repositorio en su ordenador
 
 Ahora puede trabajar localmente, sincronizando sus cambios a los repositorios online!
