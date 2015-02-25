@@ -1,7 +1,9 @@
 ---
-title: 'El Indice de Salud del Océano: Modificar el modelo de una meta<br /> Usando la Caja de Herramientas'
-author: "Julia Stewart Lowndes<br /> Cientifico del Proyecto, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
-output: ioslides_presentation
+title: 'El Indice de Salud del Océano: Modificar el modelo de una meta<br /> Usando
+  la Caja de Herramientas'
+author: Julia Stewart Lowndes<br /> Cientifico del Proyecto, Ocean Health Index<br
+  /> lowndes@nceas.ucsb.edu
+output: beamer_presentation
 ---
 
 ## Introducción 

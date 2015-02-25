@@ -80,7 +80,7 @@ d = d %>%
          percent = pov_percent)
 
 # save data layer in layers folder: github/blz/subcountry2014/layers
-# write.csv(d, file.path(dir_save, file_save), row.names=F)
+#write.csv(d, file.path(dir_save, file_save), row.names=F)
 
 
 # --- fin ---

@@ -37,7 +37,7 @@ Los repositorios ('repos') son esencialmente carpetas que contienen los guiones 
 Todos los colaboradores trabajaran localmente en sus ordenadores, sincronizando sus cambios de regreso a la nube (online) de modo que otros puedan trabajar usando la versión más actualizada.
 
 * **clone**: telecargar a su ordenador el repo de la nube con la capacidad de sincronizar activada
-* **commit**: mensaje asociado con sus cambions (veanse algunas de las [mejores practicas](http://r-pkgs.had.co.nz/git.html#commit-best-practices))
+* **commit**: mensaje asociado con sus cambions (veanse algunas de las mejores practicas: http://r-pkgs.had.co.nz/git.html#commit-best-practices)
 * **pull**: sincronizar un repositorio en su ordenador con la version online
 * **push**: sincronizar el repositorio en la online con la version en su ordenador, solo posible despues de cometer (commit) 
 
@@ -68,7 +68,7 @@ Clonará un repositorio a su ordenador para que pueda trabajar sin Internet.
 Cuando trabaje en su ordenador, cualquier cambio que haga a cualquier archivo en su repositorio, usando cualquier programa, sera rastreado por Github. Luego puede cometer (commit) y sincronizar (sync) sus cambios de regreso a Github. Hay algunas opciones que puede utilizar para primero clonar (clone) y luego sincronizar (sync) sus cambios a un repositorio con la version online:
 
 * **GitHub App** [para Mac](https://mac.github.com/) y [para Windows](https://windows.github.com/)
-* [**RStudio**](www.rstudio.com)
+* **RStudio**: www.rstudio.com
 * **shell (Terminal on Mac)**
  
 ## Ejemplos de Clonaciones
@@ -91,7 +91,7 @@ Tambien puede sincronizar utilizando Shell, pero no discutiremos eso aquí.
 
 ## Cómo comenzar
 
-Siga estos pasos los cuales puede encontrar en el Manual del Indice de Salud del Océano en la sección [Instalando la Caja de Herramientas](http://ohi-science.org/manual/#installing-the-toolbox) para obtener información más detallada. 
+Siga estos pasos los cuales puede encontrar en el Manual del Indice de Salud del Océano en la sección Instalando la Caja de Herramienta (http://ohi-science.org/manual/#installing-the-toolbox) para obtener información más detallada. 
 
 1. Crée una cuenta [GitHub](http://github.com) 
 2. Telecargue e instale el software [*git*](http://git-scm.com/downloads)
