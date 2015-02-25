@@ -1,41 +1,42 @@
 ---
-title: 'El Indice de Salud del Océano: Modificar el modelo de una meta<br /> using the Toolbox'
+title: 'El Indice de Salud del Océano: Modificar el modelo de una meta<br /> Usando la Caja de Herramientas'
 author: "Julia Stewart Lowndes<br /> Cientifico del Proyecto, Ocean Health Index<br /> lowndes@nceas.ucsb.edu"
 output: ioslides_presentation
 ---
 
 ## Introducción 
 
-The [**Ocean Health Index (OHI)**](www.oceanhealthindex.org) measures the sustainable delivery of ten ‘goals’ (key benefits and services) to people now and in the future. At any spatial scale, OHI assessments use the best available information to develop goal models and set targets, and goal scores are combined together to give a comprehensive picture of coastal ocean health.  
+El [**Indice de Salud del Océano (OHI)**](www.oceanhealthindex.org) mide el aprovisionamiento sostenible de diez 'metas' (beneficios y servicios claves) a las personas ahora y en el futuro. A cualquier escala espacial, las evaluaciones OHI usan la mejor información disponible para desarrollar modelos de metas y establecer objetivos, y las puntuaciones de las metas son combinadas para proveer un mejor entendimiento de la salud marino costera.  
 
-**The OHI Toolbox** is an open-source, cross-platform resource to calculate OHI scores at any scale. Here, we will use the Toolbox to add a new variable to a goal model. We will use Belize as an example: this is for teaching purposes only.  
 
-Note: this presentation is made with [Rmarkdown](http://rmarkdown.rstudio.com/). It is viewable rendered [online](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.html#1) and in its raw form on [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/tutorial_tbx_modifications.Rmd).
+**La Caja de Herramientas OHI** es un recurso plataforma a fuente abierta para calcular las puntuaciones OHI a cualquier escala. Aquí, se explorará la Caja de Herramientas. Utilizaremos el repositorio de Belize a nivel global como ejemplo: esto es para propósitos educativos únicamente.  
 
-## Outline: Modify a goal model 
+Nota: esta presentación se hizo con [Rmarkdown](http://rmarkdown.rstudio.com/). Se puede ver producida [en Internet](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.html#1) y se puede ver un formato crudo de [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.rmd).
 
-We will walk through an example of adding a new variable to the Artisanal Fishing Opportunity (AO) goal model in Belize. 
+## Resumen de la presentación: Mofidicar el modelo de una meta
 
-Assume your team has already discussed what is important in terms of AO in Belize. You have explored all data available and your team has decided that the best way to capture local characteristics is to add a new variable to the global AO model.
+Demonstraremos un ejemplo de como agregar una nueva variable al modelo de la meta de Oportunidad de Pesca Artesanal (AO) en Belize. 
+
+Aquí, asumimos que su equipo ya ha discutido los factores importantes a considerar en terminos de AO en Belize. El equipo ya ha explorado todos los datos disponibles y ha decidido que la mejor manera de capturar las carateristicas locales es agregando una nueva variable al modelo global de AO.
   
 
-## Outline: Modify a goal model 
+## Resumen de la presentación: Mofidicar el modelo de una meta
 
-Your team has decided that the best way to capture local AO information is to add a new variable to the global AO model.
+El equipo ya ha explorado todos los datos disponibles y ha decidido que la mejor manera de capturar las carateristicas locales es agregando una nueva variable al modelo global de AO.
 
-Steps: 
+Pasos: 
 
-1. Review global AO model
-2. Prepare data layer & save in the `layers` folder
-3. Register the layer in `layers.csv`
-4. Update goal model in `functions.r`
-5. Check and possibly update `goals.csv`
-6. Calculate scores; view with WebApp
+1. Revise el modelo global del AO
+2. Prepare la capa de datos y guardarla en la carpeta `layers`
+3. Registre la capa de datos en el archivo `layers.csv`
+4. Actualice el modelo de la meta en `functions.r`
+5. Revise y posiblemente actualice `goals.csv`
+6. Calcule las puntuaciones; vealas con el WebApp de Belize
 
 
-## Step 1: Review AO global model
+## Paso 1: Revise el modelo global del AO
 
-AO global model variables: need, access, and sustainability. 
+Variables del modelo global de AO: necesidad, acceso, y sostenibilidad. 
 
 $$
 D_{U} = (1 - P) * (1 - O_{AO})
@@ -49,9 +50,10 @@ $$
 <small>$O_{AO}$ = access to artisanal fishing</small>  
 <small>$S_{AO}$ = sustainability of fishing methods</small>   
 
-## Step 1: Review AO global model
 
-AO global model variables: need, access, and sustainability. 
+## Paso 1: Revise el modelo global del AO
+
+Variables del modelo global de AO: necesidad, acceso, y sostenibilidad. 
 
 $$
 D_{U} = (1 - P) * (1 - O_{AO})
@@ -60,22 +62,37 @@ $$
 x_{AO} = (1 - D_{U}) * S_{AO}
 $$
 
-The way this looks like in [`functions.r`](https://github.com/OHI-Science/ecu/blob/028ead581c5dade039941b1aa3524220c454e431/subcountry2014/conf/functions.R#L425-L429):  
+La manera como esto se ve en [`functions.r`](https://github.com/OHI-Science/ecu/blob/028ead581c5dade039941b1aa3524220c454e431/subcountry2014/conf/functions.R#L425-L429):  
 
 ```
     Du = (1.0 - need) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
 ```
 
-## Step 1: Plan AO global model
+## Paso 1: Revise el modelo global del AO
 
-Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+Digamos que ya hay datos sobre la pobreza en Belize, los cuales pueden ser incorporados como parte de 'necesidad' (el modelo global esta basado sobre necesidad y acceso).
 
-## Step 1: Plan AO global model
 
-Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
+## Paso 1: Revise el modelo global del AO
 
-Let's incorporate a second measure of need called $P_{pov}$.
+Digamos que ya hay datos sobre la pobreza en Belize, los cuales pueden ser incorporados como parte de 'necesidad' (el modelo global esta basado sobre necesidad y acceso).
+
+Incorporemos una segunda medida de necesidad llamada $P_{pov}$.
+
+$$
+D_{U} = (1 - (P + P_{pov}) / 2) * (1 - (O_{AO})
+$$
+$$
+x_{AO} = (1 - D_{U}) * S_{AO}
+$$
+
+
+## Paso 1: Revise el modelo global del AO
+
+Digamos que ya hay datos sobre la pobreza en Belize, los cuales pueden ser incorporados como parte de 'necesidad' (el modelo global esta basado sobre necesidad y acceso).
+
+Incorporemos una segunda medida de necesidad llamada $P_{pov}$.
 
 
 $$
@@ -85,99 +102,86 @@ $$
 x_{AO} = (1 - D_{U}) * S_{AO}
 $$
 
-## Step 1: Plan AO global model
-
-Let's say we have data available about poverty in Belize, which can be incorporated as part of need (the global model is based on need and access).
-
-Let's incorporate a second measure of need called $P_{pov}$.
-
-
-$$
-D_{U} = (1 - (P + P_{pov}) / 2) * (1 - (O_{AO})
-$$
-$$
-x_{AO} = (1 - D_{U}) * S_{AO}
-$$
-
-The way this looks like in [`functions.r`](https://github.com/OHI-Science/blz/blob/9cf957f272e784f557eb75a3a9e5bf7b4677d5d5/subcountry2014/conf/functions.R#L407-L461):  
+La manera como esto se ve en [`functions.r`](https://github.com/OHI-Science/blz/blob/9cf957f272e784f557eb75a3a9e5bf7b4677d5d5/subcountry2014/conf/functions.R#L407-L461):  
 
 ```
     Du = (1.0 - (need + need_pov) / 2 ) * (1.0 - access)
     statusData = ((1.0 - Du) * Sustainability)
 ```
 
-## Step 2: Prepare & save new data layer
+## Step 2: Prepare & guarde la nueva capa de datos
 
-### What do our new data look like?
+### ¿Cuál es el formato de sus nuevos datos?
 
-* [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
-* [Percent below poverty line for Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)
+* [Población por distrito](http://en.wikipedia.org/wiki/Districts_of_Belize)
+* [Porcentaje de la población por debajo de la pobreza en Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)
 
-## Step 2: Prepare & save new data layer
+## Step 2: Prepare & guarde la nueva capa de datos
 
-### What do our new data look like?
+### ¿Cuál es el formato de sus nuevos datos?
 
-* [Population by district](http://en.wikipedia.org/wiki/Districts_of_Belize)
-* [Percent below poverty line for Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)  
+* [Población por distrito](http://en.wikipedia.org/wiki/Districts_of_Belize)
+* [Porcentaje de la población por debajo de la pobreza en Belize](http://www.indexmundi.com/belize/population_below_poverty_line.html)  
   
   
-### What do the existing data layers look like?
+### ¿Cuál es el formato de las capas de datos existentes?
 
-* **Explore using the blz WebApp**
+* **Explore usando la WebApp blz**
     + http://ohi-science.org/blz/layers
 
-* **Explore the blz repository**
-    + [access](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
-    + [need](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
+* **Explore el repositorio blz**
+    + [acceso](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_access_gl2014.csv)
+    + [necesidad](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers/ao_need_gl2014.csv)
 
 
-## Step 2: Prepare & save new data layer
+## Step 2: Prepare & guarde la nueva capa de datos
 
-### Working with data: good practices
+### Trabajando con datos: buenas practicas
 
-* **organize & prepare data in a github repository** 
-    + ex: `github/blz/blz-prep` (ours is stored [here](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
+* **organise y prepare los datos en un repositorio de Github** 
+    + ex: `github/blz/blz-prep` (el nuestro esta almacenado [aquí](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
 
 
-## Step 2: Prepare & save new data layer
+## Step 2: Prepare & guarde la nueva capa de datos
 
-### Working with data: good practices
+### Trabajando con datos: buenas practicas
 
-* **organize & prepare data in a github repository** 
-    + ex: `github/blz/blz-prep` (ours is stored [here](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
-* **document all metadata** 
-    + `README.md`s are readable on GitHub ([example](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep/population))
-* **create a name-to-region lookup table** 
-    + ex: [`rgn_district_lookup.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/rgn_district_lookup.csv)
-* **script any data manipulations** 
+* **organise y prepare los datos en un repositorio de Github** 
+    + ex: `github/blz/blz-prep` (el nuestro esta almacenado ** 
+    + ex: `github/blz/blz-prep` (el nuestro esta almacenado [aquí](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep))
+* **documente todos los metadatos** 
+    + `README.md`s pueden ser leidos GitHub y contienen información sobre los archivos ([ejemplo](https://github.com/OHI-Science/ohimanual/tree/master/tutorials/tbx_modifications/blz-prep/population))
+* **crée un nobre a region para la tabla lookup** la cuál se utiliza para otorgar la identificación de cada region en el área de estudio
+    + ej: [`rgn_district_lookup.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/rgn_district_lookup.csv)
+* **escriba el script de todas las manipulaciones de datos, de modo que puedan ser reproducidas en el futuro** 
     + [`prep_ao_need.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R)
 
-## Step 2: Prepare & save new data layer
+## Step 2: Prepare & guarde la nueva capa de datos
 
-Our R script [`prep_ao_need_pov.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R) prepares the data layer called [`ao_need_pov.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/ao_need_pov_blz2014.csv) with these steps:
+Nuestro R script [`prep_ao_need_pov.r`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/prep_ao_need_pov.R) prepara la capa de datos llamada [`ao_need_pov.csv`](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_modifications/blz-prep/ao_need_pov_blz2014.csv) con estos pasos:
 
-* Setup 
-* Access and clean raw data
-* Calculate percent poverty by district
-* Add region identifiers
-* Save final data layer
+* Arreglar (Setup)
+* Accesar y organización de los datos originales
+* Calcular del porcentage de pobreza por distrito
+* Agregar los códigos de identificación de las regiones
+* Guarde la capa de datos final
 
-## Step 3. Register layer in `layers.csv`
+## Paso 3: Registre la capa de datos en el archivo `layers.csv`
 
-Since we've created a new variable, we'll add a new row to [`layers.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers.csv), with information for the following columns:
+Como hemos creado una nueva variable, tendremos que agregar una nueva linea a [`layers.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/layers.csv), con información de las siguientes columnas:
 
  + **targets:** *AO*
  + **layer:** `ao_need_pov`
- + **name:** layer name will be displayed on your WebApp.
- + **description:** description will be displayed on your WebApp.
- + **fld_value:** percent
- + **units:** percent
+ + **name:** el nombre de la capa sera visualizado en su WebApp.
+ + **description:** la descripción sera visualizada en su WebApp.
+ + **fld_value:** porcentaje
+ + **units:** porcentaje
  + **filename:** `ao_need_pov_blz2014.csv`
  + **fld_id_num:** *rgn_id*
 
-## Step 4: Update model in `functions.r`
+## Paso 4: Actualice el modelo en `functions.r`
 
-Update the model in [`functions.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/functions.R), (and some layer handling):
+Actualice el modelo en [`functions.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/functions.R), (y algunas modificaciones a la capa de datos):
 
 ```
     Du = (1.0 - (need + need_pov)/2 ) * (1.0 - access)
@@ -185,17 +189,17 @@ Update the model in [`functions.r`](https://github.com/OHI-Science/blz/blob/draf
 ```
 
 
-## Step 5: Check `goals.csv`
+## Pasp 5: Revise `goals.csv`
 
-Look at [`goals.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/goals.csv) if there is anything to update (particularly in the *preindex_function* column)
+Revise [`goals.csv`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/conf/goals.csv) si hay algo que necesita ser modificado (particularmente en la columna *preindex_function*)
 
-## Step 6: Calculate scores; view with WebApp
+## Paso 6: Calcule las puntuaciones; visualizarlos con la WebApp
 
-After you make your changes, you can calculate and visualize your scores in several ways:
+Despues que haga los cambios, puede calcular y visualizar las puntuaciones en diferentes maneras:
 
-1. In RStudio, run [`calculate_scores.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/calculate_scores.R) and visualize scores by running [`launch_app_code.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/launch_app_code.R)
-2. In RStudio, run [`calculate_scores.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/calculate_scores.R), sync changes to GitHub and visualize scores on the WebApp
-3. Sync your changes to GitHub: scores will be calculated online and can be visualized on the WebApp
+1. En RStudio, use el comando [`calculate_scores.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/calculate_scores.R) y visualise las puntuaciones con el comando [`launch_app_code.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/launch_app_code.R)
+2. En RStudio, ese el comando [`calculate_scores.r`](https://github.com/OHI-Science/blz/blob/draft/subcountry2014/calculate_scores.R), sincronise cambios a Github y visualise las puntuaciones con la WebApp
+3. Sincronise sus cambios a Github: las puntuaciones seran calculadas por internet y pueden ser visualizadas con la WebApp
 
 
 
