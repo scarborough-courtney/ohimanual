@@ -17,6 +17,12 @@ Assessments can incorporate higher-resolution data and indicators, local priorit
 
 OHI assessments most often involve several **regions** within an overall **study area**. For example, in the global assessment, there were 221 regions (nations and territories) within the study area (global coastal oceans).
 
-![](./fig/global_v_brazil_map.png)  
+![Figure. Global vs. regional assessments. Scores are calculated for each region and combined to produce a total score for the study area, whether at the regional, country, or global level.  ](./fig/global_v_brazil_map.png)  
 
 Goal scores are calculated for each region separately and then combined to produce an overall Index score for the region. Index scores are combined using an area-weighted average to produce the Index score for the overall study area.
+
+![Scores for Ecuador (ECU) as displayed in a flower chart on the the OHI WebApp. The length of a petal indicates the score for the goal or sub-goal, and the width of the petal indicates the goal or sub-goal weighting.](https://docs.google.com/drawings/d/1kj11Y0lYC0t2ofKD4fDkVUxopws7pIMpxtVD5JyDhAk/pub?w=960&h=720)
+
+Scores can then be visualized to communicate the results to  stakeholders. For example, the **flower plot** shown in the figure demonstrates a useful way to represent OHI scores. Goal or sub-goal scores are shown around the outside of the plot. The length of each 'petal'   represents the goal score, while the width of each petal represents the relative weighting of the goal or sub-goal. Sub-goals are weighted equally by default, as shown here, but can change depending on the regional context.
+
+Clear communication and transparency of the process are fundamental to the Ocean Health Index overall.
