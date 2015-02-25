@@ -10,7 +10,7 @@ El [**Indice de Salud del Océano (OHI)**](www.oceanhealthindex.org) mide el apr
 
 **La Caja de Herramientas OHI** es un recurso plataforma a fuente abierta para calcular las puntuaciones OHI a cualquier escala. Aquí, se explorará la Caja de Herramientas. Utilizaremos el repositorio de Ecuador a nivel global como ejemplo: esto es para propósitos educativos únicamente.  
 
-Nota: esta presentación se hizo con [Rmarkdown](http://rmarkdown.rstudio.com/). Se puede ver producida [en Internet](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.html#1) y se puede ver un formato crudo de [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.rmd).
+Nota: esta presentación se hizo con [Rmarkdown](http://rmarkdown.rstudio.com/). Se puede ver producida [en Internet](http://htmlpreview.github.io/?https://github.com/OHI-Science/ohimanual/blob/master/tutorials/tbx_intro/tutorial_tbx_intro_SPANISH.html#1) y se puede ver un formato crudo de [GitHub](https://github.com/OHI-Science/ohimanual/blob/master/tutorials/github_intro/tutorial_github_intro.rmd).
 
 ## Resumen de la presentación
 
