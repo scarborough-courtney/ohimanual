@@ -4,6 +4,9 @@
 **/*.html
 !tutorials.html
 !tutorial_github_intro.html
+!tutorial_github_intro_SPANISH.html
 !tutorial_tbx_intro.html
+!tutorial_tbx_intro_SPANISH.html
 !tutorial_tbx_modifications.html
+!tutorial_tbx_modifications_SPANISH.html
 !tutorial_define_regions.html
