@@ -18,11 +18,9 @@ You will be able to rename your scenario folder to better reflect the spatial an
 
 In the above figure, `ecu` is the **assessment repository** and `subcountry2014` is the **scenario folder**. Note that files with names preceded by a ‘.’ do not appear when not viewing from github.com; this is because these files are specific to GitHub.
 
-![](./fig/ohiglobal_file_location.png)
+![Navigating the assessment repository. The figure shows Mac folder navigation above and Windows navigation below. ](https://docs.google.com/drawings/d/13536h0d6hahYCBrxIItlG_q-r9FmezfN1lcpf-5BMHc/pub?w=692&h=820)
 
-Within the *subcountry2014* folder area all the inputs required by the Toolbox. Each one is described in detail below.
-
-![](./fig/scenario_folder_overview.png)
+Within the `subcountry2014` folder area all the inputs required by the Toolbox. See **Modifying and Creating Data Layers** for more information on the  files you will commonly modify.
 
 
 ### *layers.csv*
@@ -58,7 +56,7 @@ When you open `layers.csv`, you’ll see that each row of information represents
 ### *layers* folder
 The `layers` folder contains every data layer as an individual *.csv* file. The names of the *.csv* files within the layers folder correspond to those listed in the *filename* column of the `layers.csv` file described above. All *.csv* files can be read with text editors or with Microsoft Excel or similar software.
 
-![](./fig/layers_folder_location.png)
+![The `layers` folder contains every data layer as an individual *.csv* file. Mac navigation is shown on the left and Windows navigation is shown on the right.](https://docs.google.com/drawings/d/151Hw1Eb13T4KgndEKXM31BDjvdbB5JO7VGneqdUwGQU/pub?w=1702&h=476)
 
 Note that each *.csv* file within the `layers` folder has a specific format that the Toolbox expects and requires. Comma separated value files (*.csv* files) can be opened with text editor software, or will open by default by Microsoft Excel or similar software.  
 
@@ -68,7 +66,7 @@ Now, open the `layers/alien_species.csv` file: note the unique region identifier
 ### *conf* folder
 The `conf` (configuration) folder includes R functions (`config.R` and `functions.R`) and *.csv* files containing information that will be accessed by the R functions (`goals.csv`, `pressures_matrix.R`, `resilience_matrix.csv`, and `resilience_weights.csv`).
 
-![](./fig/layers_folder_location_conf.png)
+![The `conf` folder contains important R functions and *.csv* files. Mac navigation is shown on the left and Windows is shown on the right.](./fig/layers_folder_location_conf.png)
 
 #### *config.r*
 `config.r` is an R script that configures labeling and constants appropriately.
