@@ -18,4 +18,4 @@ This section gives instruction and examples for the most common modifications yo
 
 The files you will modify are:
 
-![](./fig/modifying_scenario_tbx.png)
+![Files you will commonly modify are shown in the figure (Mac navigation is shown above and Windows is shown below). These include the `conf` folder, `layers` folder, and `layers.csv`.](https://docs.google.com/drawings/d/10-cx0mlgT9tmy5KN_IKE0TxgojBX6J3U6ahZMMVmNqY/pub?w=964&h=878)
