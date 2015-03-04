@@ -93,7 +93,7 @@ exit
 
 ### Install the GitHub application
 
-There are several options to clone your repository to your local machine. When getting started, we recommend using the GitHub application. This is freely available for download. Follow the instructions for downloading and installing from the following:
+There are several options to clone your repository to your local machine. When getting started, we recommend using the GitHub application. This is freely available for download. Follow the default instructions for downloading and installing from the following:
 
 * **Windows**: https://windows.github.com/.
 
@@ -109,6 +109,8 @@ Because you will use GitHub to collaborate with your team or request support fro
 * **Mac**: `Users/[User]/github/`
 
 This folder can be identified by any computer as `~/github/`.  
+
+> TIP: You can check the location of your `github` folder by right-clicking the folder icon and selecting 'Get Info' on a Mac or 'Properties' on Windows.
 
 ### Clone your repository to your computer
 
@@ -170,9 +172,9 @@ Go online and check that your changes are now visible on GitHub online.
 **RStudio** is a program that can be used to synchronize any modifications you make to files in your assessment’s repository, and if you are working in R, it is convenient since you do not need to open the GitHub App.
 If you do not already have this installed, install the latest version of R and RStudio (and if you do have these installed, check for updates: there are frequent updates to the R software, and the current version is identified on the website). Both R and RStudio are freely available to download.  
 
-**R**: Download the current version of R at http://cran.r-project.org/ and follow the instructions to install it on your computer. If updating, compare the available version on their website with what you already have on your computer by typing sessionInfo() into your R console.  
+**R**: Download the current version of R appropriate for your operating system at http://cran.r-project.org/ and follow the instructions to install it on your computer. If updating, compare the available version on their website with what you already have on your computer by typing sessionInfo() into your R console.  
 
-**RStudio**: Download the current version of RStudio software at www.rstudio.com. RStudio is not updated as often as R, but it is good to check for updates regularly.  
+**RStudio**: Download the current version of RStudio software at www.rstudio.com. RStudio is not updated as often as R, but it is good to check for updates regularly.  Note that in this case, you should follow the default install instructions.
 
 If you are working on a Mac, you will need to tell RStudio to use the proper version of Git by doing the updating the preferences for 'Git executable':
 
@@ -182,11 +184,11 @@ If you are working on a Mac, you will need to tell RStudio to use the proper ver
 
 RStudio can sync files with GitHub directly, and can be used instead of the GitHub App. Like the GitHub App, it will capture the changes made to any files within the repository, no matter which software was used to modify them. The advantage for using RStudio to sync instead of the GitHub App is if you are working with R scripts already. In RStudio, you sync by first pulling and then pushing (separately); in the GitHub App these two functions are done together.
 
-Launch your project in RStudio by double-clicking the `.Rproj` file.
+Launch your project in RStudio by double-clicking the `.Rproj` file in the assessment folder on your local hard drive.
 
 > ![](https://docs.google.com/drawings/d/11F2lbB1S56ccZK5CbCxga4SEiRoE6E0-3QtZO99p37A/pub?w=384&h=288)
 
-When you modify or add a file, the file will appear in the 'Git' window. In the example below, the file `test.R` was created.
+When you modify or add a file, the file will appear in the 'Git' window once it has been saved. In the example below, the file `test.R` was created.
 
 1. Clicking the 'Staged' box and the 'Commit' button opens a new window where you can review changes.
 2. Type a commit message that is informative to the changes you've made.
@@ -196,8 +198,12 @@ When you modify or add a file, the file will appear in the 'Git' window. In the 
 4. Pull any changes that have been made to the online repository. This is important to ensure there are no conflicts with updating the online repository.
 5. Push your committed changes to the online repository. Your changes are now visible online.
 
-> ![](./fig/commit_sk.png)
+> TIP: If you aren't seeing your changes in the 'Git' window, try saving the file again.
 
+![](./fig/commit_sk.png)
+
+
+> TIP: Another way to sync and open the project is to click on 'New Project' in the upper-right-hand corner of Rstudio,  then choose 'Version Control', and then you can paste the URL of the desired repository. This URL can be found on on your online repository's homepage.
 
 ### Install the latest version of R and RStudio
 
