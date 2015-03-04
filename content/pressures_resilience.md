@@ -1,15 +1,22 @@
 ## Pressures and resilience
 
-The same considerations and requirements about data presented in the "**Gathering Appropriate Data" section also apply to pressures and resilience. Pressures and resilience are organized in two separate matrices that indicate which measures affect which goals or goal components.
-
-![](https://docs.google.com/drawings/d/1IQhFezmGGAgPS-iZQ_0TfU2FgtV0hv81f2RV9pyiJCI/pub?w=960&h=480)
+The same considerations and requirements about data presented in the "**Gathering Appropriate Data**" section also apply to pressures and resilience.
 
 **Pressures** and **Resilience** are two of the four dimensions used to evaluate each goal or sub-goal (the other two are **Status** and **Trend**).
 
 * **Pressures** are the sum of the ecological and social pressures that negatively affect goal scores.
 * **Resilience** is the sum of the ecological and social status (e.g., food-web integrity, health of the governance process) and initiatives (e.g., environmental laws, social policies) that can positively affect goal scores by reducing or eliminating pressures. In the figure, likely future state (in yellow) is the result of the trend, minus the negative effect of pressures (grey), plus the positive effect of resilience (salmon pink).
 
-![](https://docs.google.com/drawings/d/1GkLZnW8hQJf1KLX89LzViEBU4PkJ8kRqOERt_Fxtwu4/pub?w=864&h=384)
+![In the figure, likely future state (in yellow) is the result of the trend, minus the negative effect of pressures (grey), plus the positive effect of resilience (salmon pink)](https://docs.google.com/drawings/d/1GkLZnW8hQJf1KLX89LzViEBU4PkJ8kRqOERt_Fxtwu4/pub?w=864&h=384)
+
+In theory, every pressure identified for a particular goal or sub-goal should have a corresponding resilience, and every resilience identified should have a corresponding pressure. That way, if the pressure acting on a dataset is 'balanced' by the resilience, there will be no net change on the trend in the status. In practice, however, the resilience and pressure layers you identify may be limited by the data available. The figure shows cases where only resilience layers were available for some categories and goals.
+
+![Each resilience data layer should have a corresponding pressures layer, and vice versa. Note that a pressure layer becomes (1-resilience) in cases where only resilience data are available, due to data limitations.](https://docs.google.com/drawings/d/19ZBIhzTrNlumV9ZhCmsdEcvybFHp-eN5P5IFAsFmql0/pub?w=558&h=721)
+
+
+Pressures and resilience are organized in two separate matrices that indicate specifically which measures affect which goals or goal components. Scores are given to rank the importance of the measure, and in the OHI calculations only values above a certain threshold will activate a corresponding pressure or resilience layer.
+
+![Scores from 1-3 are given to rank the importance of each pressure. Only values of 2 or 3 require that a resilience layer be activated when calculating the goal scores.](https://docs.google.com/drawings/d/1IQhFezmGGAgPS-iZQ_0TfU2FgtV0hv81f2RV9pyiJCI/pub?w=960&h=480)
 
 
 ### Matrices
@@ -32,9 +39,7 @@ Instead, aggregating by pressure categories first ensures that different stresso
 
 **Pressure weights**
 
-Ecological and social pressure components are assessed separately and then the two resulting scores are combined with equal weighting, which can be changed if there is local information on how to do so.  
-
-Ecological and social resilience are assessed separately and then combined with equal weighting (which could also be changed based on expert opinion). Ecological resilience is divided into an ecological integrity score and a regulations score. Any resilience regulation score is associated with a pressure layer. This is because regulations are intended to contrast the effect of pressures. The OHI math is designed assuming that, when the regulation score matches the respective pressure score, they cancel each other out (i.e., the regulation is being effective in keeping the stressor under control). Therefore, by including a layer for regulatory response to each pressure affecting the delivery of the goals, we ensure that the resilience regulation measures are relevant to ocean health.
+Ecological and social pressure components are assessed separately and then the two resulting scores are combined with equal weighting. The weighting can be changed if there is local information or expert opinion on how to do so. Ecological resilience is divided into an ecological integrity score and a regulations score. Any resilience regulation score is associated with a pressure layer. This is because regulations are intended to contrast the effect of pressures. The OHI math is designed assuming that, when the regulation score matches the respective pressure score, they cancel each other out (i.e., the regulation is being effective in keeping the stressor under control). Therefore, by including a layer for regulatory response to each pressure affecting the delivery of the goals, we ensure that the resilience regulation measures are relevant to ocean health.
 
 **Pressure and Status interactions**
 
