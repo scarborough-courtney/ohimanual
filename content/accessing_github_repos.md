@@ -157,13 +157,13 @@ If you are just modifying data *.csv* files, you probably only need to use the G
 
 ### Using the GitHub App to synchronize your repository
 
-The GitHub App will track your modifications and can be used to commit and sync any changes made locally to your repository.  Once you are done working on the pertinent files and wish to commit and sync the changes to the online server on the Github server, open the GitHub App. The following example is with [the ohi-china repository]:
+The GitHub App will track your modifications and can be used to commit and sync any changes made locally to your repository.  Once you are done working on the pertinent files and wish to commit and sync the changes to the online server on the Github server, open the GitHub App. The following example is with the `ecu` repository:
 
-1. Make sure you select the correct repository, located on the left column of the GitHub App window.
+1. Make sure you select the correct repository, located on the left column of the GitHub App window (Step 1 in the figure).
 2. Select the different files to which changes have been made (2a), and preview those changes on the right column of the GitHub App window (2b).
-3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the GitHub App window, then click on commit and sync (Note: If a `Commit` button appears instead of the `Commit & Sync` button, you can either click `Commit` and then click the `Sync` button located on the top-right corner of the GitHub App window, or you can alternatively click the `+` button next to the `Commit` button, and then click the the `Commit & Sync` button that appears).
+3. Once all the changes have been reviewed, write a summary/description in the respective message bars in the GitHub App window (3), then click on 'Commit' (3a) and then 'Sync' (3b) located on the top-right corner of the GitHub App window (Note: If a `Commit` button appears instead of `Commit & Sync`, you can either click `Commit` and then click the `Sync` in this way, or you can alternatively select *Edit* > *Automatically Sync After Committing* which will then allow you to click on 'Commit and Sync')
 
-> ![](./fig/github_app_notes.png)
+> ![Figure showing the layout of the GitHub App when syncing. Click on 'Commit' and then 'Sync' to push changes to your repository.](https://docs.google.com/drawings/d/1-I-x8ML1QUR13AEAibn5OUX-bbHpdSIw1l6-fcMkO3o/pub?w=1033&h=665)
 
 Go online and check that your changes are now visible on GitHub online.
 
@@ -200,7 +200,7 @@ When you modify or add a file, the file will appear in the 'Git' window once it 
 
 > TIP: If you aren't seeing your changes in the 'Git' window, try saving the file again.
 
-![](./fig/commit_sk.png)
+![Figure showing RStudio when sycing. After first staging your changes, click the 'commit' button to open a new window where you can enter a 'commit message' and then pull and push new changes. ](https://docs.google.com/drawings/d/1M9-87q0RZ_lPD8QEL3DIpoPgyh-w2rKPoF-5IFWFJfo/pub?w=1027&h=687)
 
 
 > TIP: Another way to sync and open the project is to click on 'New Project' in the upper-right-hand corner of Rstudio,  then choose 'Version Control', and then you can paste the URL of the desired repository. This URL can be found on on your online repository's homepage.
