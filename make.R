@@ -8,12 +8,18 @@ library(rmarkdown)
 library(stringr)
 
 # copy ohimanual/README.md into ohimanual/content/README.md
-stopifnot(file.copy('~/github/ohimanual/content/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
+stopifnot(file.copy('~/github/ohimanual/content/README.md', 
+                    '~/github/ohimanual/README.md', overwrite=T))
+
+# Add version date (as a file for now)
+cat('# Date: ', format(Sys.time(), "%d %B %Y"), '\n',file='~/github/ohimanual/content/date.md',sep='')
+    
 
 # set variables ----
-title = 'The Ocean Health Index Assessment Manual'
+title = 'The Ocean Health Index Assessment Manual'      # this may not be used
 wd = '~/github/ohimanual/content'
 in_md = c(
+  'date.md',
   'README.md',
   'intro_assessment.md',
   'overview_webapp.md',
