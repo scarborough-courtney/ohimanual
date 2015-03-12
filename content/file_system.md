@@ -96,20 +96,20 @@ Each column in the resilience matrix is a data layer that is also registered in 
 #### *resilience_weights.csv*
 `resilience_weights.csv` describes the weight of various resilience layers, which in Halpern *et al*. 2012 (*Nature*) were determined based on scientific literature and expert opinion.
 
-### spatial folder
+### *spatial* folder
 The spatial folder contains a single file, `regions_gcs.js`. This is a spatial file in the JSON format; it spatially identifies the study area and regions for the assessment. If you plan to modify your study area or regions, you will need to upload a *.js* file with appropriate offshore boundaries. You will need a GIS analyst to do this: see http://ohi-science.org/pages/create_regions.html for some instruction.
 
-### launch_app_code.R
+### *launch_app_code.r*
 The Toolbox can be launched on your computer so that you can visualize any edits you make while you are offline. To do this, you will run the code in `launch_app_code.R`. Make sure you are in the `subcountry2014` directory at that time: `setwd(~/github/ecu/subcountry2014)`
 
 
-### layers-empty_swapping-global-mean.csv
+### *layers-empty_swapping-global-mean.csv*
 This file contains a list of data layers that were used in the global assessment while not for your country. Without these data for your country, global averages are included in your `subcountry2014` scenario folder so the Toolbox can calculate scores until you replace these data with appropriate data for your study area. This file is not used anywhere by the Toolbox but is a registry of data layers that should prioritized to be replaced with your own local data layers.
 
 ### *calculate_scores.r*
 `calculate_scores.r` is a script that tells the Toolbox to calculate scores using the *.csv* files in the `layers` folder that are registered in `layers.csv` and the configurations identified in `config.r`. Scores will be saved in `scores.csv`.
 
-### scores.csv
+### *scores.csv*
 `scores.csv` contains the calculated scores for the assessment. Currently, these scores were calculated using data for your country from the global 2014 assessment. Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each region in the study area (with region identifier), and are presented in ‘long’ format. Scores can be viewed through the WebApp using the ‘Output Score’ pulldown menu on the 'App' page.
 
 
