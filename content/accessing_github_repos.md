@@ -23,12 +23,8 @@ How you install *git* will depend on whether you are working on a Windows or Mac
 **For Mac:**
 
 * Download *git* at http://git-scm.com/downloads and follow the install instructions.
-* Apple's Xcode has a command line tools option during install which can override the preferred *git* command line tools. To ensure you are using the latest preferred version, you will need to launch  Terminal and type a few lines of code:
+* Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred *git* command line tools. To ensure you are using the latest preferred version of *git*, you will need to launch  Terminal and type the following few lines of code:
 * Access Terminal from the Applications folder: **Applications > Utilities > Terminal**. When you launch Terminal a window will appear with your computer’s name followed by a `$`. When you type, your commands will appear after the `$`.
-
-  > Download *git* at http://git-scm.com/downloads and follow the install instructions.
-
-  > Apple's [Xcode](https://developer.apple.com/xcode/) has a command line tools option during install which can override the preferred Git command line tools. To ensure you are using the latest preferred version, do the following things in *RStudio* and in *Terminal*:
 
 Add access your 'bash profile' by typing:
 
