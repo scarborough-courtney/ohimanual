@@ -62,19 +62,20 @@ Note that each *.csv* file within the `layers` folder has a specific format that
 
 Now, open the `layers/alien_species.csv` file: note the unique region identifier (*rgn_id*) with a single associated *score* or *value*, and that the data are presented in ‘long format’ with minimal columns. See the section on *Formatting Data for the Toolbox* for further details and instructions. Scores can be viewed through the WebApp  using the ‘Input Layer’ pulldown menu on the App page.
 
+> TIP: You can check your region identifiers (*rgn_id*) in the `rgn_labels.csv` file in the `layers` folder.
 
 ### *conf* folder
 The `conf` (configuration) folder includes R functions (`config.R` and `functions.R`) and *.csv* files containing information that will be accessed by the R functions (`goals.csv`, `pressures_matrix.R`, `resilience_matrix.csv`, and `resilience_weights.csv`).
 
 ![The `conf` folder contains important R functions and *.csv* files. Mac navigation is shown on the left and Windows is shown on the right.](./fig/layers_folder_location_conf.png)
 
-#### *config.r*
-`config.r` is an R script that configures labeling and constants appropriately.
+#### *config.R*
+`config.R` is an R script that configures labeling and constants appropriately.
 
-#### *functions.r*
-`functions.r` contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in `layers.csv`. When you modify or develop new goal models, you will modify `functions.r`.
+#### *functions.R*
+`functions.R` contains functions for each goal and sub-goal model, which calculate the status and trend using data layers identified as ‘layers’ in `layers.csv`. When you modify or develop new goal models, you will modify `functions.R`.
 
-> TIP: It's useful to skip to different sections of `functions.r` to see how key calculations are being done.
+> TIP: It's useful to skip to different sections of `functions.R` to see how key calculations are being done. See section, **Update *Functions.R***.
 
 #### *goals.csv*
 `goals.csv` is a list of goals and sub-goals and their weights used to calculate the final score for each goal. Other information includes the goal description that is also presented in the WebApp. `goals.csv` also indicates the arguments passed to `functions.R`. These are indicated by two columns: *preindex_function* (functions for all goals that do not have sub-goals, and functions for all sub-goals) and *postindex_function* (functions for goals with sub-goals).
@@ -99,15 +100,15 @@ Each column in the resilience matrix is a data layer that is also registered in 
 ### *spatial* folder
 The spatial folder contains a single file, `regions_gcs.js`. This is a spatial file in the JSON format; it spatially identifies the study area and regions for the assessment. If you plan to modify your study area or regions, you will need to upload a *.js* file with appropriate offshore boundaries. You will need a GIS analyst to do this: see http://ohi-science.org/pages/create_regions.html for some instruction.
 
-### *launch_app_code.r*
+### *launch_app_code.R*
 The Toolbox can be launched on your computer so that you can visualize any edits you make while you are offline. To do this, you will run the code in `launch_app_code.R`. Make sure you are in the `subcountry2014` directory at that time: `setwd(~/github/ecu/subcountry2014)`
 
 
 ### *layers-empty_swapping-global-mean.csv*
 This file contains a list of data layers that were used in the global assessment while not for your country. Without these data for your country, global averages are included in your `subcountry2014` scenario folder so the Toolbox can calculate scores until you replace these data with appropriate data for your study area. This file is not used anywhere by the Toolbox but is a registry of data layers that should prioritized to be replaced with your own local data layers.
 
-### *calculate_scores.r*
-`calculate_scores.r` is a script that tells the Toolbox to calculate scores using the *.csv* files in the `layers` folder that are registered in `layers.csv` and the configurations identified in `config.r`. Scores will be saved in `scores.csv`.
+### *calculate_scores.R*
+`calculate_scores.R` is a script that tells the Toolbox to calculate scores using the *.csv* files in the `layers` folder that are registered in `layers.csv` and the configurations identified in `config.R`. Scores will be saved in `scores.csv`.
 
 ### *scores.csv*
 `scores.csv` contains the calculated scores for the assessment. Currently, these scores were calculated using data for your country from the global 2014 assessment. Scores are reported for each dimension (future, pressures, resilience, score, status, trend) for each region in the study area (with region identifier), and are presented in ‘long’ format. Scores can be viewed through the WebApp using the ‘Output Score’ pulldown menu on the 'App' page.

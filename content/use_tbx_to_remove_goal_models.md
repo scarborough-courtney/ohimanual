@@ -2,7 +2,7 @@
 ## Removing goals
 If a goal is not relevant in your region, it is possible to remove the goal completely from the calculation. There are four places where you will need to remove the reference to this goal. Failing to delete all referenced layers after the goal is deleted will result in errors. To remove goals from your assessment, you will have to do the following:
 
-1. Remove the goal model from `functions.r`
+1. Remove the goal model from `functions.R`
 2. Remove the goal’s row from `goals.csv`
 3. Remove the goal’s row from `pressures_matrix.csv`
 4. Remove the goal’s row from `resilience_matrix.csv`
@@ -13,7 +13,7 @@ If a goal is not relevant in your region, it is possible to remove the goal comp
 
 To completely remove the carbon storage goal from Index calculations, you will do the following.
 
-1) Remove the carbon storage (CS) goal model from `functions.r`. Delete the highlighted text in the figure below that references the CS layers and calculates CS goal status, trend, and scores.
+1) Remove the carbon storage (CS) goal model from `functions.R`. Delete the highlighted text in the figure below that references the CS layers and calculates CS goal status, trend, and scores.
 
 ![](./fig/functions_delete.png)
 
