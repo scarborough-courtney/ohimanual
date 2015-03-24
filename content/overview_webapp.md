@@ -86,4 +86,4 @@ As another example, if you select 'Input Layer' as the variable type, you will b
 
 ## The App’s Compare tab
 
-The **Compare** tab allows you to compare differences in calculated scores based on changes you have made to the underlying data layers. Visualizing these differences is extremely helpful for confirming results and error checking. Instructions about how to use the Compare function are presented <<where??>> following more context about why you might want to use this functionality.
+The **Compare** tab allows you to compare differences in calculated scores based on changes you have made to the underlying data layers. Visualizing these differences is extremely helpful for confirming results and error checking. More context on the use of this function can be found in the section, "**The Ocean Health Index Toolbox**."<!--- develop. Removed line on 'instructions' for this functionality. --->

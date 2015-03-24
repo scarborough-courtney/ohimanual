@@ -5,23 +5,23 @@ The Toolbox prints messages during its processing to help guide error checking a
 
 ## Loading RWorkspace on Restart
 
-When you restart your R Session (Session > Restart R on a Mac), if you see that it is trying to load `ohicore`, it may give you an error:
+When you restart your R Session (**Session > Restart R** on a Mac), if you see that it is trying to load `ohicore`, it may give you an error:
 
   > ![](./fig/ohicore_load.png)
-  
+
 You do not want it to load `ohicore` or to save anything in your workspace. You will need to change the default setting from you **.Rproj** file. Steps to do this:
 
 1. Go to Project Options, either in the pull-down menu or by double-clicking the .Rproj file:
-   
+
 
   > ![](./fig/proj_op.png)
-  
+
   > ![](./fig/proj_op2.png)
-  
+
 2. Change all options to **No:**
-    
+
   > ![](./fig/proj_op3.png)
-    
+
 ## Calculating Pressures...
 
 ### 'The following components for [goal] are not in the aggregation layer [layer]...'
@@ -29,19 +29,19 @@ You do not want it to load `ohicore` or to save anything in your workspace. You 
 Example:
 
 > ![](./fig/troubleshoot_aggregation_layer.png)
-  
+
   > ![](./fig/tblshoot_pressures.png)  
-  
+
 This error means you should update your pressures matrix because it expects there to be components that your region does not have.
 
 ### 'Error in matrix...'
 
-Example: 
+Example:
   > ![](./fig/tblshoot_pressures.png)  
-  
+
 This error means there is an empty column in `pressures_matrix.csv`, and the Toolbox cannot handle empty columns.
 
-## Calculating Resilience ... 
+## Calculating Resilience ...
 
 ### 'Error in match(x, table, nomatch = OL) : object id_num not found'
 

@@ -6,7 +6,7 @@
 
 ## Overview
 
-The **OHI Toolbox** is essentially several folders containing all the files required for an OHI assessment. These folders are stored online on www.github.com, and are called **GitHub repositories**. At this point, you should already be familiar with your assessment’s repository, and all of the files it contains (if not, read the section, **"File System for Assessment Repositories"**).  
+The **OHI Toolbox** is essentially several folders containing all the files required for an OHI assessment. These folders are stored online on www.github.com, and are called **GitHub repositories**. At this point, you should already be familiar with your assessment’s repository, and all of the files it contains (if not, read the section, "**File System for Assessment Repositories**").  
 
 Conducting an OHI assessment using GitHub enables collaboration and transparency, and will provide access to the latest developments in the Toolbox software, allowing the OHI team to provide support remotely if necessary.  
 
