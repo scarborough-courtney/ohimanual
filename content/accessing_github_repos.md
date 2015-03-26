@@ -10,7 +10,7 @@ Create a GitHub account at http://github.com. Choose a username and password. Yo
 
 ### Install *git* software
 
-How you install *git* will depend on whether you are working on a Windows or Mac computer. It will also depend on your operating system version. If you have problems following these instructions, it is likely because your operating system requires a previous version of *git*. Previous versions are available from www.wandisco.com/git/download (you will need to provide your email address).
+How you install *git* will depend on whether you are working on a Windows or Mac computer. It will also depend on your operating system version. If you have problems following these instructions, it is likely because your operating system requires a previous version of *git*. Previous versions are available from http://www.wandisco.com/git/download (you will need to provide your email address).
 
 **For Windows:**
 
@@ -133,6 +133,8 @@ You need to **email your username to ohi-science@nceas.ucsb.edu** for permission
 
 You will then work locally on your own computer, modifying the files in the repository to reflect the desired modifications your team has identified for your assessment. Multiple users can work on the same repository at the same time, so there are steps involved to 'check in' your modifications so they can merge with the work of others without problems. GitHub has specific words for each of these steps. You have already successfully **cloned** an online repository to your local machine. After making modifications, you will **commit** these changes with a description before being able to sync back to the online repository. **Synching** involves both **pulling** any updates from the online repository before **pushing** committed changes back to the server.
 
+> TIP: While you can edit files in the online GitHub repository, we do not recommend this. It is good practice to track changes through commits and syncing.
+
 The example below illustrates GitHub's collaborative workflow with the `ohi-israel` repo owned by `OHI-Science`:
 
 > > > ![](./fig/clone_push_pull.png)
@@ -150,6 +152,8 @@ When you work on your computer, any edits you make to any files in your repo, us
 * **Command line**
 
 If you are just modifying data *.csv* files, you probably only need to use the GitHub App. RStudio is convenient if you are working with *.R* files. Also, the command line can be used by those interested, and there are resources available online.
+
+> TIP: Once you sync your repository, the updated information will be automatically available to the WebApps.
 
 ### Using the GitHub App to synchronize your repository
 

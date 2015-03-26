@@ -65,7 +65,7 @@ Now, open the `layers/alien_species.csv` file: note the unique region identifier
 > TIP: You can check your region identifiers (*rgn_id*) in the `rgn_labels.csv` file in the `layers` folder.
 
 ### *conf* folder
-The `conf` (configuration) folder includes R functions (`config.R` and `functions.R`) and *.csv* files containing information that will be accessed by the R functions (`goals.csv`, `pressures_matrix.R`, `resilience_matrix.csv`, and `resilience_weights.csv`).
+The `conf` (configuration) folder includes R functions (`config.R` and `functions.R`) and *.csv* files containing information that will be accessed by the R functions (`goals.csv`, `pressures_matrix.csv`, `resilience_matrix.csv`, and `resilience_weights.csv`).
 
 ![The `conf` folder contains important R functions and *.csv* files. Mac navigation is shown on the left and Windows is shown on the right.](./fig/layers_folder_location_conf.png)
 

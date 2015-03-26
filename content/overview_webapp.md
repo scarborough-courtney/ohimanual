@@ -51,7 +51,7 @@ The Data tab displays input data layer or calculated scores for each goal parame
 
 ![The Map subtab. Click on  'Map'  to see a geographic view of your assessment region. Colors indicate scores or values for your input layers or output scores.](https://docs.google.com/drawings/d/1SzyHRaHqNWyr_6fji5RcY-nYtN5x5HSTjSgl4tFty44/pub?w=959&h=405)
 
-The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map that provides a linear colormap of the data. The range of values will change as different variables are selected.
+The map displays data for every region as reported in the scenario. A color legend is displayed in the lower right corner of the map. The range of values will change as different variables are selected, and the colors will automatically change to create a visual scale of reference.
 
 
 **Data displayed in the Histogram subtab:**
@@ -65,7 +65,7 @@ The histogram shows the distribution of the selected variable as the number of o
 
 ![Click on 'Table' to see a table of your data or scores, after selecting a variable layer on the left. This example shows the Species sub-goal scores for the study regions of Ecuador.](https://docs.google.com/drawings/d/12CC5Q7YXweoKw39lHkRjBGcoEVsw3bWuuJPVdzxFRAc/pub?w=960&h=419)
 
-The table displays the target value for each region and the overall study area. It provides an identifying code (rgn_id), name (rgn_name), and value (value) for each.
+The table displays the target value for each region and the overall study area. It provides an identifying code (*rgn_id*), name (*rgn_name*), and value (*value*) for each.
 
 
 ### Overview of variable options
@@ -74,6 +74,7 @@ The Data tab has drop-down menus from which  you choose the data to be displayed
 
 ![Overview of the Data tab. Choose the variable you would like to explore through the drop-down menus on the left-hand side of the page. Once you select either raw data or a score, you can view a description and statistical summary below.](https://docs.google.com/drawings/d/17YGGl8ZGa7vB7MJTLGwCOL6yh2Ap-OZOK9iVsI-ez4M/pub?w=960&h=374)
 
+> TIP: Remember that your descriptions and values in `layers.csv` will appear here.
 
 The first selection to be made from the drop-down menus is variable type, in which you can choose the **Output Score** that will show a calculated score (for a particular target chosen subsequently), or **Input Layer** that will show the data layer used to calculate the score of a particular target. To reiterate, Output Scores are the scores calculated using the Input Layers (data layers).  
 
@@ -86,4 +87,4 @@ As another example, if you select 'Input Layer' as the variable type, you will b
 
 ## The App’s Compare tab
 
-The **Compare** tab allows you to compare differences in calculated scores based on changes you have made to the underlying data layers. Visualizing these differences is extremely helpful for confirming results and error checking. More context on the use of this function can be found in the section, "**The Ocean Health Index Toolbox**."<!--- develop. Removed line on 'instructions' for this functionality. --->
+The **Compare** tab allows you to compare differences in calculated scores based on changes you have made to the underlying data layers. Visualizing these differences is extremely helpful for confirming results and error checking. More context on the use of this function can be found in the section, "**The Ocean Health Index Toolbox**."<!--- develop. Removed line on 'instructions' for this functionality, so might want to include discussion of that elsewhere --->
