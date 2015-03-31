@@ -7,7 +7,7 @@ library(knitr)
 library(rmarkdown)
 library(stringr)
 
-redo_website = F # T if do push update to ohi-science.org/manual; F if do not push
+redo_website = F # T if do push update to ohi-science.org/manual; F if do not push. Displays T/F after rendering all
 
 
 # copy ohimanual/README.md into ohimanual/content/README.md
@@ -137,7 +137,7 @@ cat(
   file='~/github/ohi-science.github.io/manual/index.html',
   append=T)
 # #file.copy(paste0(pfx, '.html'), '~/github/ohi-science.github.io/manual/index.html', overwrite=T)
-if redo_website {
+if (redo_website) {
   dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
   file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
   system('cd ~/github/ohi-science.github.io; git pull; git add -A; git commit -m "update manual"; git push')
