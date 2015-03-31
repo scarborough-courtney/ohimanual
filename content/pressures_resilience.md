@@ -18,6 +18,10 @@ Pressures and resilience are organized in two separate matrices that indicate sp
 
 ![Scores from 1-3 are given to rank the importance of each pressure. Only values of 2 or 3 require that a resilience layer be activated when calculating the goal scores.](https://docs.google.com/drawings/d/1IQhFezmGGAgPS-iZQ_0TfU2FgtV0hv81f2RV9pyiJCI/pub?w=960&h=480)
 
+While pressures and resilience are usually displayed as a two-dimensional matrix, there is actually a third dimension, which is the regions dimension: for each pressure or resilience layer, there are data for each region. These data per region are then multiplied by the ranking weights specific to each goal (1, 2, or 3, with a blank being 0).
+
+![The pressures matrix is three-dimensional: each pressure layer has data per region, which is multiplied by the ranking weights of the pressures matrix.](./fig/ohiman_goals-pressures-regions.png)
+
 
 ### Matrices
 
