@@ -7,13 +7,22 @@ library(knitr)
 library(rmarkdown)
 library(stringr)
 
+redo_website = F # T if do push update to ohi-science.org/manual; F if do not push. Displays T/F after rendering all
+
+
 # copy ohimanual/README.md into ohimanual/content/README.md
-stopifnot(file.copy('~/github/ohimanual/content/README.md', file.path('~/github/ohimanual/README.md'), overwrite=T))
+stopifnot(file.copy('~/github/ohimanual/content/README.md', 
+                    '~/github/ohimanual/README.md', overwrite=T))
+
+# Add version date (as a file for now)
+cat('# Date: ', format(Sys.time(), "%d %B %Y"), '\n',file='~/github/ohimanual/content/date.md',sep='')
+    
 
 # set variables ----
-title = 'The Ocean Health Index Assessment Manual'
+title = 'The Ocean Health Index Assessment Manual'      # this may not be used
 wd = '~/github/ohimanual/content'
 in_md = c(
+  'date.md',
   'README.md',
   'intro_assessment.md',
   'overview_webapp.md',
@@ -128,9 +137,11 @@ cat(
   file='~/github/ohi-science.github.io/manual/index.html',
   append=T)
 # #file.copy(paste0(pfx, '.html'), '~/github/ohi-science.github.io/manual/index.html', overwrite=T)
-dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
-file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
-system('cd ~/github/ohi-science.github.io; git pull; git add -A; git commit -m "update manual"; git push')
+if (redo_website) {
+  dir.create('~/github/ohi-science.github.io/manual/fig', showWarnings=F)
+  file.copy('fig', '~/github/ohi-science.github.io/manual', overwrite=T, recursive=T)
+  system('cd ~/github/ohi-science.github.io; git pull; git add -A; git commit -m "update manual"; git push')
+}
 
 ## to resize already existing figures. Check folder paths.
 # dir.create('~/github/ohimanual/content/fig/_resized', showWarnings=F)
@@ -166,3 +177,14 @@ render(
     includes = NULL, pandoc_args = NULL),
   clean=T, quiet=F,
   output_file = paste0(pfx, '.pdf'))
+
+
+# message regarding redo_website ----
+
+print(sprintf('ohi-science.org/manual was updated: %s', redo_website))
+if(redo_website ==F) print("to update ohi-science.org/manual, change the 'redo_website' variable from FALSE to TRUE")
+   
+   
+   
+   
+   

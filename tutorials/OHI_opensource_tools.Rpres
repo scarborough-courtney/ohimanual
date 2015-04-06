@@ -1,0 +1,46 @@
+Open Source Tools used by OHI
+========================================================
+author: Jamie and Julie
+date: April 6, 2015
+
+Open Source Tools and OHI
+========================================================
+Shiny and Leaflet for data visualization and exploration
+
+
+OHI+ WebApps using Shiny 
+========================================================
+
+
+Example for Spain: [ohi-science.org/esp](http://ohi-science.org/esp)
+
+* allows groups to visual input data and output scores
+* created with R and GitHub
+
+
+Data exploration 
+========================================================
+
+Raster with leaflet -- this is what we got out of the runconf
+Jamie's decision tree: eases exploration
+
+Hover
+
+what we got out of the conference:
+dive deeper into the data (in dev) with interactivity (will improve the [decision tree](https://jafflerbach.shinyapps.io/decision_tree/))
+
+
+Tools we use
+========================================================
+
+* R for spatial and non-spatial analyses
+  + dplyr, tidyr
+  + raster, rasterfaster
+  + git2r
+  + shinapps
+* RStudio to interface with R
+* Rmarkdown
+* GitHub for data organization and collaboration
+
+
+

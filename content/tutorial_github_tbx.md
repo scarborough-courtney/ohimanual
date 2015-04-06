@@ -11,7 +11,7 @@ GitHub has synching capabilities like Dropbox, but with added functionality sinc
 ## Structure
 
 * OHI-Science is an **organization**
-* cia or ohi-webapps are examples of **repositories ('repos')**
+* ecu or ohi-webapps are examples of **repositories ('repos')**
 
 Most repos we work with in OHI-Science are freely available; some repos are private (issues, ohidev). You have permission to edit any of these within OHI-Science.
 
@@ -41,6 +41,9 @@ When you work on your computer, any edits you make to any files in your repo, us
 * Ex 1: create a new file in Excel, save as .csv in your repo, commit, pull, push using GitHub App.  
 * Ex 2: modify R script using RStudio, commit, pull, push from RStudio.
 * Ex 3: open .md file, edit in Atom, commit, pull, push using  Terminal.
+
+> TIP : How often should you commit or sync? That's up to you, but you'll get a feel for it as you go along and develop a workflow with your team.
+
 
 ```
 (type the following commands after the $ in your Terminal window)

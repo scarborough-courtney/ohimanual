@@ -29,7 +29,7 @@ data_pop = read.csv(file.path(dir_blz, file_pop)); head(data_pop)
 
 sapply(data_pop, class)                                     # check the type of variable
 
-pop = data_pop %>%                                          # %>% allows you to 'chain' together operations 
+pop = data_pop %>%                                          # %>% allows you to 'chain' together operations. See TIPS below
   mutate(year = 2010,                                       # add a year column 
          population = as.numeric(                           # pop: remove commas and change to numeric
            str_replace(Population..2010.census., ',', ''))) %>%                       
@@ -80,8 +80,19 @@ d = d %>%
          percent = pov_percent)
 
 # save data layer in layers folder: github/blz/subcountry2014/layers
-# write.csv(d, file.path(dir_save, file_save), row.names=F)
+#write.csv(d, file.path(dir_save, file_save), row.names=F)
 
+
+# TIPS ----
+
+# The dplyr package uses chaining ( %>% ) to operate on data in sequence without saving temporary variables. For example, it would read like this:
+
+# awesome_data = raw_interesting_data %>%
+#   transform(somehow) %>%
+#   filter(the_good_parts) %>%
+#   finalize
+
+# for more information: http://blog.rstudio.org/2014/12/01/magrittr-1-5/
 
 # --- fin ---
 

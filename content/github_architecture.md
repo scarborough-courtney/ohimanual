@@ -13,3 +13,5 @@ GitHub stores all data files and scripts for your assessment in a repository (a 
 1. **gh-pages** branch is this website. The results sections of the site (regions, layers, goals, scores per branch/scenario) are overwritten into this repository after automatic calculation of scores. The rest of the site can be manually altered.
 
 1. **app** branch is the interactive layer and map viewer application. The user interface and server-side processing use the [Shiny](http://shiny.rstudio.com/) R package and are deployed online via [ShinyApps.io](https://www.shinyapps.io/) to your website. Once deployed, the WebApp pulls updates from the data branches (draft and published) every time a new connection is initiated (i.e., browser refreshes).
+
+> TIP: When looking at files on GitHub, note that the timestamps are associated with the 'commit' time rather than the 'push' time.
