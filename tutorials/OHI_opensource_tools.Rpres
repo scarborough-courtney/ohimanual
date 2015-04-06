@@ -5,7 +5,8 @@ date: April 6, 2015
 
 Open Source Tools and OHI
 ========================================================
-Shiny and Leaflet for data visualization and exploration
+Using [Shiny](http://shiny.rstudio.com/gallery/) and [Leaflet](http://rstudio.github.io/leaflet/) for data visualization and exploration
+
 
 
 OHI+ WebApps using Shiny 
@@ -20,14 +21,14 @@ Example for Spain: [ohi-science.org/esp](http://ohi-science.org/esp)
 
 Data exploration 
 ========================================================
+[Pressures decision tree](https://jafflerbach.shinyapps.io/decision_tree/)
 
-Raster with leaflet -- this is what we got out of the runconf
-Jamie's decision tree: eases exploration
 
-Hover
+New fun tools from the Runconference:
+- Interactive raster data with leaflet (offline)
+- Tracking interactivity in shiny: [intRo stats from Iowa State](http://intro-stats.com/)
+- Data differencing/versioning from [dat](http://dat-data.com/)
 
-what we got out of the conference:
-dive deeper into the data (in dev) with interactivity (will improve the [decision tree](https://jafflerbach.shinyapps.io/decision_tree/))
 
 
 Tools we use
