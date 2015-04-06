@@ -1,8 +1,11 @@
+---
+output: pdf_document
+---
 # Instructions for creating and naming data files for each OHI goal
 
 This document explains how to name files that contain data for each layer, and how the file should be formatted for integration into the Ocean Health Index Toolbox.
 
-At this stage, each person must create a separate file for every data layer they are responsible for, and this will need to be done for pressures and resilience data layers as well when they are ready.
+At this stage, each person must create a separate file for every data layer for the goal model (status) they they are responsible for, and this will need to be done also for pressures and resilience data layers when they are ready.
 
 ## File names
 
@@ -37,10 +40,9 @@ The **layername** component should be formed of words or abbreviations that will
 
 The **scenario** component should identify the assessment scenario: the study area location and year of the assessment. The data layers that already exist on GitHub are all global data from the 2014 assessment  and have the  suffix 'gl2014'.
 
-
 The **suffix** of the filename should identify who prepared the data so any questions can easily to sent to the correct person. For the suffix, please identify yourself with your initials.
 
-The **extension** is the final component  of the filename. It identifies the filetype and is  separated by a period (.). For OHI, we will use comma separated values (.csv).
+The **extension** is the final component  of the filename. It identifies the filetype and is separated by a period (.). When you have entered your data appropriately, instead of saving as an Excel file (.xlsx), you must save your files as comma separated values (.csv) since this is the format used by the OHI Toolbox.
 
 Here is an example of a properly named data layer for the  tourism and recreation goal, where the data are the percent of unemployment  prepared by Julia Lowndes.
 
@@ -48,9 +50,8 @@ Here is an example of a properly named data layer for the  tourism and recreatio
 
 ## Contents of data layers
 
-When you have finished with the data you are working with, create an Excel file and save it with the filename discussed above. This data file will have at least two, but at most four, columns of information.  Look at an example in the `layers` folder on Github and you will see all layers have a `rgn_id` column. This is a numerical identifier for each region in your study area. You can find the identifier on the *regions* page of your WebApp.
+When you have finished with the data you are working with, create an Excel file and save it with the filename discussed above. This data file will have at least two, but at most four, columns of information.  Look at an example in the `layers` folder on Github and you will see all layers have a `rgn_id` column. This is a numerical identifier for each region in your study area. You can find the identifier on the *regions* page of your WebApp. The team may choose to modify the region numeral identifiers, however, it is important that you mantain consistency across all data layers, so the OHI Toolbox is able to gather all the appropriate data for each region using only the numeral identifier assigned.
 
-When you have entered your data appropriately, instead of saving as an Excel file (.xlsx), save the file as a .csv file. If you do not know how to save the file as a .csv, you can save it as an .xlsx.
 
 ## Explanatory document to accompany  each data file
 
@@ -63,7 +64,7 @@ Please write a document to accompany each data file. The document must be saved 
 1. The years of data available
 1. The units of data
 1. Full explanation of how to interpret the data values, including any processing or rescaling (normalizing from 0-1) that has occurred
-1. one-sentence explanation of the data layer (for the 'description' column in `layers.csv`)
+1. One-sentence explanation of the data layer (for the 'description' column in `layers.csv`)
 1. Any other observations or explanations about the data
 
 You will need to make a explanatory document for each data layer. Make sure that each explanatory document includes all of the information (1-9) above. 
