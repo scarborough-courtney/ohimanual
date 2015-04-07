@@ -17,7 +17,7 @@ dir_N = c('Windows' = '//neptune.nceas.ucsb.edu/data_edit',
 # quick and dirty trick is to read in .tif, then writeRaster(file,filename='file') <- no .tif 
 # extension automatically created the .gri and .grd files 
 
-setwd('globalprep/data_china_raster_vis')
+setwd('~/github/ohiprep/globalprep/data_china_raster_vis')
 
 uv    = raster('UV.grd')
 nitro = raster('nitro.grd')   
