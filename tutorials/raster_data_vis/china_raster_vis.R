@@ -2,6 +2,7 @@ devtools::install_github("jcheng5/rasterfaster")
 devtools::install_github("rstudio/leaflet@raster")
 
 library(shiny)
+library(shinyapps)
 library(raster)
 library(rgdal)
 library(leaflet)
@@ -17,10 +18,11 @@ dir_N = c('Windows' = '//neptune.nceas.ucsb.edu/data_edit',
 # quick and dirty trick is to read in .tif, then writeRaster(file,filename='file') <- no .tif 
 # extension automatically created the .gri and .grd files 
 
-setwd('~/github/ohiprep/globalprep/data_china_raster_vis')
+
+setwd('tutorials/raster_data_vis/data_china_raster_vis')
 
 uv    = raster('UV.grd')
-nitro = raster('nitro.grd')   
+nitro = raster('data_china_raster_vis/nitro.grd')   
 
 
 #shapefiles 
@@ -62,7 +64,7 @@ showRaster <- function(r, defaultTiles = TRUE, colorFunc = colorBin("RdBu", c(mi
     })
   }
   
-  shinyApp(ui, server, options = list(launch.browser = rstudio::viewer))
+  shinyApp(ui, server, options = list(launch.browser = TRUE))
 }
 
 
@@ -73,4 +75,6 @@ showRaster <- function(r, defaultTiles = TRUE, colorFunc = colorBin("RdBu", c(mi
 #r <- raster("globalprep/pressures_decision_tree/shinyapps/decision_tree/data/sst.grd")
 
 # Show the map
+
 showRaster(nitro, TRUE)
+
