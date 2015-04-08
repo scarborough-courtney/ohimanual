@@ -127,6 +127,11 @@ A: In this case you would probably have good reason to exclude the natural produ
 Habitat-based goals
 
 
+**Q: I have fish that are used as feed for other fish (e.g., sprat) in my country. Can I include them in this goal?
+
+ A: It would be more appropriate to include them in Natural Products rather than Food Provision. This is because they are not being consumed directly. Fish such as sprat, for example, may be used to feed pigs in addition to other fish, and therefore you would need to know how much (tonnage) is being produced, and where it is going to be able to accurately distinguish these categories to avoid double-counting.
+
+ *(Source: OHI Baltic Workshop, February 2015)*
 **Q: How is coral health calculated?**
 
 A: Coral health was estimated by compiling point data from multiple studies of percent live coral cover. In other words, estimates of coral cover within transects of certain sites were repeated in time and we used that rate of change in time as an indication of health of the reefs in the whole region. The difficulty lies in 1) having enough different locations sampled that you can say something about the whole region and 2) finding studies that did repeated measures in time, in the same location, over at least 20 years. In the Global 2013 assessment, there were so few datasets that satisfied this condition that we had to pool observations from different locations.
@@ -187,7 +192,7 @@ A: Data included in pressures calculations are accessed in the same manner as an
 
 **Q: Does the pressures matrix need to be changed?**
 
-A: It is likely that the pressures matrix will not need to be changed. The weights assigned in the matrix were set using information from the literature and by experts; the matrix was created by Halpern et al. 2012. 
+A: It is likely that the pressures matrix will not need to be changed. The weights assigned in the matrix were set using information from the literature and by experts; the matrix was created by Halpern et al. 2012.
 
 
 **Q: How is commercial high and low bycatch calculated?**
