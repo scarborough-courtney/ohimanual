@@ -1,0 +1,7 @@
+**Carbon Storage**
+
+This goal focuses on the carbon stored in natural coastal ecosystems that absorb and sequester it in large amounts.
+
+Coastal habitats play a significant role in the global storage of organic carbon as they have the highest per-area storage rates of any habitat. While the pelagic oceanic carbon sink plays a large role in the sequestration of anthropogenic carbon, the mechanisms for open ocean carbon storage cannot be managed locally or regionally as there are no practical methods for intervention or manipulation. This goal instead focuses on the the status of coastal marine habitats with high carbon storage capacity. In addition to preventing storage of carbon in the future, the destruction of these marine habitats has been shown to release large quantities of carbon, damaging the overall health of coupled marine systems.
+
+Ideally, to assess the amount of carbon stored in every coastal habitat, information would be available regarding coverage area and some measure of quality (example: density of mangrove coverage). Additionally, different weights would be assigned to the habitats based on their relative ability to store carbon (although exact values are currently poorly known). The carbon storage model can incorporate such weights once they are available in a similar way to the methods developed for the coastal protection goal. The reference point for habitat-based goals will likely be temporal; this means that historic data are needed such that current habitat and value data can be compared to them. 

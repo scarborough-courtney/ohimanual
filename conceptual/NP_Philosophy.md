@@ -1,0 +1,7 @@
+**Natural Products**
+
+This goal captures how sustainably people harvest non-food products from the sea.
+
+The natural products goal evaluates the amount of ocean-derived goods that are traded, such as shells, sponges, corals, seaweeds, fish oil, and ornamental fishes. Higher scores reflect sustainable extraction of non-food ocean resources with little to no impact on surrounding habitats, marine species, or human well-being. This goal does not include non-living items such as oil, gas, and mining products, because these practices are not considered to be sustainable, and they are done at such large scales that including them would essentially make an index for oil and mining. It also does not include bioprospecting (for medicines or genes), which has an unpredictable potential value in the future, rather than measureable value now. This goal can interact with other goals and sub-goals when unsustainable harvesting practices are used.
+
+Ideally, quantity, value, and the sustainability of the harvest method would be available for every marine and coastally-derived natural product within a region This would include a wide range of products, including corals, shells, seaweeds, aquarium fish, mangrove wood; any non-food parine product that is harvested within a region. The ideal reference point would be a functional relationship of the sustainability of harvest for each product; without this information assumptions will beed to be made to set the reference point.
