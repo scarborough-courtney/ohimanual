@@ -7,20 +7,21 @@ output: word_document
 This document explains what to provide to Ning for OHI China. 
 
 1. For each goal, please prepare a document describing the goal model, including the equation, an explanation of the variables, and the data layer name for each variable
+
 2. For each data layer, 
 
   + 2a. please provide separate *.csv* files for data layer
   + 2b. please provide separate description files for each data layer
   
 3. For pressures and resilience:
-  + 3a. please add columns to the matricies for any pressures or resilience measures in china 
+  + 3a. please format pressure and resilience layers as described in 2) above
   + 3b. please update the pressures matrix rank weights for any added pressures
-  + 3c. please format pressure and resilience layers as described in 2) above
+  + 3c. please add columns to the matricies for any pressures or resilience measures in China 
 
 
 ## 1. Description document for each goal 
 
-Please prepare a document with the following information. This will help our understanding and can be used in the China OHI Evaluation Manual you are preparing. 
+Please prepare a document with the following information. This can be used in your China OHI Evaluation Manual to help demonstrate and justify your approaches. This document can be written in Chinese. 
 
 1. Goal model equation
 2. Explanation of each variable
@@ -30,7 +31,9 @@ Please prepare a document with the following information. This will help our und
   + why some data were included and other data weren't
   + any data limitations that also limited the model
   + what data would ideally be available and how that could improve the model
-  + ...
+  + describe the 'ideal approach' for the goal, which may or may not be possible due to data availability, etc 
+  + list of pressures that negatively affect the status of the goal and the corresponding weight of the incidence of the pressure on the goal/subgoal
+  + list of resilience measures that positively affect the status of the goal
 
 ## 2a. *.csv* files for each data layer
 
@@ -38,18 +41,28 @@ Each file containing data in the proper format for the OHI Toolbox is called a `
 
 ### Contents of data layers
 
-Finalized data layers have at least two columns: the `rgn_id` column and a column with data, that is best identified by its units (km2 or often score). There also may be a `year` column or a `category` column (for natural product categories or habitat types). The 'region identifier' (`rgn_id`) column has numbers identifying each province in China, numbered from north to south. You can explore the identifier numbers at [https://ohi-science.org/chn/regions]. Note: the OHI China team may modify the which number is associated with which province, however, it is important that there is consistency across all data layers because the OHI Toolbox calculates scores based on `rgn_id`.
+Finalized data layers have at least two columns: the `rgn_id` column and a column with data, that is best identified by its units (km2 or often score). There also may be a `year` column or a `category` column (for natural product categories or habitat types). An example of a two-column file is '[al_access_gl2014.csv'](https://github.com/OHI-Science/chn/blob/draft/subcountry2014/layers/ao_access_gl2014.csv), and an example of a three-column file is [hab_extent_gl2014.csv'](https://github.com/OHI-Science/chn/blob/draft/subcountry2014/layers/rgn_labels.csv). 
 
 An example of a data file is `ao_access_gl2014.csv`:
 
 ```
 "rgn_id","value"
 1,0.555771907253878
-5,0.555771907253878
-4,0.555771907253878
 2,0.555771907253878
 3,0.555771907253878
+4,0.555771907253878
 ```
+An example of a data file is `hab_extent_gl2014.csv`:
+```
+"rgn_id","habitat","km2"
+1,"coral",261.102
+2,"coral",261.102
+3,"coral",261.102
+4,"coral",261.102
+```
+
+The 'region identifier' (`rgn_id`) column has numbers identifying each province in China, numbered from north to south. You can explore the identifier numbers at [https://ohi-science.org/chn/regions]. Note: the OHI China team may modify the which number is associated with which province, however, it is important that there is consistency across all data layers because the OHI Toolbox calculates scores based on `rgn_id`. You can work with Ning to change the regions in [rgn_labels.csv](https://github.com/OHI-Science/chn/blob/draft/subcountry2014/layers/rgn_labels.csv). 
+
 
 ### Naming data layers
 
@@ -84,7 +97,7 @@ The **scenario**should identify the assessment scenario: **chn2015**. This will 
 
 The **suffix** of the filename should identify who prepared the data so any questions can easily to sent to the correct person. For the suffix, please identify yourself with your initials.
 
-The **extension** identifies the filetype and is separated by a period (.). You must save your files as comma separated values (*.csv*) since this is the format used by the OHI Toolbox. You can work in Excel and after data are formatted properly, it is possible to save as a *.csv* instead of a *.xlsx* file.  
+The **extension** identifies the filetype and is separated by a period (.). You must save your files as comma separated values (*.csv*) since this is the format used by the OHI Toolbox. You can work in Excel and after data are formatted properly, it is possible to save as a *.csv* instead of a *.xlsx* file (select File > Save as > .csv).  
 
 Here is an example of a properly named data layer for the  tourism and recreation goal, where the data are the percent of unemployment prepared by Julia Lowndes.
 
