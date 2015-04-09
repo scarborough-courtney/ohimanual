@@ -1,61 +1,57 @@
 ## Pressures and resilience
 
-The same considerations and requirements about data presented in the "**Gathering Appropriate Data**" section also apply to pressures and resilience.
+It is important to spend time identifying the pressures that affect coastal systems in your study area; there will likely be additional pressures in smaller-scale assessments that were not included in the global assessments. Once you have identified pressures within your study area, identify what resilience measures could counteract those pressures.
 
+The same considerations and requirements about data presented in the "**Gathering Appropriate Data**" section also apply to pressures and resilience. This is because every measure you include for pressures and resilience requires data for each region in your assessment. This is explained in more detail in the following sections.
+
+### Introduction to pressures and resilience
 **Pressures** and **Resilience** are two of the four dimensions used to evaluate each goal or sub-goal (the other two are **Status** and **Trend**).
 
 * **Pressures** are the sum of the ecological and social pressures that negatively affect goal scores.
-* **Resilience** is the sum of the ecological and social status (e.g., food-web integrity, health of the governance process) and initiatives (e.g., environmental laws, social policies) that can positively affect goal scores by reducing or eliminating pressures. In the figure, likely future state (in yellow) is the result of the trend, minus the negative effect of pressures (grey), plus the positive effect of resilience (salmon pink).
+* **Resilience** is the sum of the ecological and social status (e.g., food-web integrity, health of the governance process) and initiatives (e.g., environmental laws, social policies) that can positively affect goal scores by reducing or eliminating pressures.  
+
+**In the figure below**, likely future state (in yellow) is the result of the current status modified by trend, minus the negative effect of pressures (grey), plus the positive effect of resilience (salmon pink).
 
 ![In the figure, likely future state (in yellow) is the result of the trend, minus the negative effect of pressures (grey), plus the positive effect of resilience (salmon pink)](https://docs.google.com/drawings/d/1GkLZnW8hQJf1KLX89LzViEBU4PkJ8kRqOERt_Fxtwu4/pub?w=864&h=384)
 
-In theory, every pressure identified for a particular goal or sub-goal should have a corresponding resilience, and every resilience identified should have a corresponding pressure. That way, if the pressure acting on a dataset is 'balanced' by the resilience, there will be no net change on the trend in the status. In practice, however, the resilience and pressure layers you identify may be limited by the data available. The figure below shows pressures measures by category, and the resilience measures meant to 'balance' them for the global assessment. Note that resilience layers were only available for some categories and goals.
+#### Categories
+
+The Toolbox calculates pressures in five ecological pressure categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social pressure category. The reason behind the ecological categories is to avoid hidden weighting. For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the individual stressor scores, pollution scores would have a greater influence on the results (stronger weight) just because people have monitored pollution by measuring many pollution types. Instead, aggregating by pressure categories ensures that different stressor types influence the score based on ranks. Nonetheless, to account for the fact that multiple different stressors within a category are likely to have a cumulative impact that is greater than if only one of the stressors were present, the scores are combined in a cumulative way within each category. The resulting scores are then averaged across ecological pressure categories. This result, in turn, is averaged with the social pressures to produce the final overall pressure score.
+
+In theory, every pressure measure identified to be important in an assessment should have a corresponding resilience measure. The reasoning behind this is that as resilience in the study area increases (example: there are better regulations), the pressures would decrease and overall scores would increase. It is important that you search for measures that 'balance' the pressures so that the regulation is being effective in keeping the stressor under control. By including a regulatory response to each pressure affecting the delivery of the goals, we ensure that the resilience regulation measures are relevant to ocean health.
+
+In practice, however, the pressures and resilience measures you include in your assessment will be determined by data availability. It is best to consider what pressures are acting in your study area and whether data are available to measure them, and then whether the pressures included in the global assessment are relevant and whether better data are available locally. When considering resilience measures, look for regulations or indicators that could be encompassed in one of the pressures categories.
+
+**The figure below** shows pressures measures by category, and the resilience measures meant to 'balance' them for the global assessment. Note that resilience layers were only available for some categories and goals. Also note that there are resilience measures that are goal-specific; that is to say that they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in specific goals, you can include them as resilience measures.  
 
 ![Each resilience data layer should have a corresponding pressures layer, and vice versa. Note that a pressure layer becomes (1-resilience) in cases where only resilience data are available, due to data limitations.](https://docs.google.com/drawings/d/19ZBIhzTrNlumV9ZhCmsdEcvybFHp-eN5P5IFAsFmql0/pub?w=558&h=721)
 
+#### Pressure and status interactions
 
-Pressures and resilience are organized in two separate matrices that indicate specifically which measures affect which goals or goal components. Scores are given to rank the importance of the measure, and in the OHI calculations only values above a certain threshold will activate a corresponding pressure or resilience layer.
+Goals may interact with each other because the pressure created by one goal may affect a second goal. For example, cultivating fish for mariculture (food provision sub-goal) can cause genetic escapes threatening the health of wild fish populations. This pressure affects two sub-goals:wild-caught fisheries and species, but does not affect the mariculture goal itself. In other cases, such as the fishing harvest pressure, the pressure comes as a result of pursuing the food provision sub-goal of wild-caught fisheries, affecting several goals including the fishing sub-goal itself.
+
+### Pressures and resilience matrices
+
+Once the pressures and resilience measures within a study area are identified (and data are available for each region), how each of the measures affect goals and sub-goals (and for some goals, habitat type or natural product categories) are determined and illustrated in matrix tables. Relationships between pressures measures and goals are determined, and ranks from 1-3 are applied based on how strongly that goal is affected by the pressure compared to all other pressures affecting that goal. That is to say, rankings are relative to each goal. Goals that are not affected by a pressure have a rank of 0, which is displayed as a blank in the matrix). These relationships and rankings are informed by literature review and expert opinion; see Supplemental Table S28 of *Halpern et al. 2012* for how the matrices were determined for the global assessment.
 
 ![Scores from 1-3 are given to rank the importance of each pressure. Only values of 2 or 3 require that a resilience layer be activated when calculating the goal scores.](https://docs.google.com/drawings/d/1IQhFezmGGAgPS-iZQ_0TfU2FgtV0hv81f2RV9pyiJCI/pub?w=960&h=480)
 
-While pressures and resilience are usually displayed as a two-dimensional matrix, there is actually a third dimension, which is the regions dimension: for each pressure or resilience layer, there are data for each region. These data per region are then multiplied by the ranking weights specific to each goal (1, 2, or 3, with a blank being 0).
+While pressures and resilience are usually displayed as two-dimensional matrices, they are actually three-dimensional matrices: each pressure measure has data for each region in the study area, which is the third dimension of the matrix, as shown in the figure. The Toolbox will combine the data with the rank weights to calculate the pressures scores.
 
 ![The pressures matrix is three-dimensional: each pressure layer has data per region, which is multiplied by the ranking weights of the pressures matrix.](./fig/ohiman_goals-pressures-regions.png)
 
 
-### Matrices
+### How to include pressures in your assessment
 
-In your assessment, as you identify new sources for pressures and resilience layers, you will also need to update the pressures and resilience matrices. To update these matrices, you will need to:  
+The following steps are iterative; return to previous steps to ensure you capture all important pressures in your study area.
 
-* Evaluate which pressures and resilience measures included in the global assessment and determine whether they are relevant for the study area of your assessment.
-* Evaluate whether the indicators used to capture the pressure and resilience attributes are suitable in your area, or whether you can use regionally-developed indicators instead.
-* Identify and categorize new locally-relevant pressures not captured in the global pressures matrix. Make sure you add it under one of the five existing ecological categories or the pressure category (or create a new category if needed).
-* Identify and categorize new local resilience measures (laws, regulatory process ranking, food-web integrity) not captured in the global resilience matrix.
-* Set pressure and resilience weighting/ranking based on scientific literature and expert opinions.
+1. Begin by exploring pressures important to your study area. What are big stressors acting along your coastlines? Are data available to measure these stressors? If not, are other indirect measures or proxies available to represent these stressors?
+2. Evaluate which pressures are included in the global assessment and determine whether they are relevant for the study area of your assessment.
+3. Evaluate whether information are available for each region in your study area that could be substituted for global measures.
+4. To add any new pressures measures to the matrix, add the pressure into one of the existing categories, or create a new category if needed.
 
-#### To consider when updating pressures
 
-**Pressure categories**
-
-The OHI framework calculates pressures by first grouping them into an ecological pressure component divided in five categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and a social pressure component. The reason behind the ecological categories is to avoid hidden weighting. For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the individual stressor scores, pollution scores would have a greater influence on the results (stronger weight) just because people have monitored pollution by measuring many separate components.  
-
-Instead, aggregating by pressure categories first ensures that different stressor types influence the score based on the expert-based ranking. Nonetheless, to account for the fact that multiple different stressors within a category are likely to have a cumulative impact that is greater than if only one of the stressors were present, the scores are combined in a cumulative way within each category. The resulting scores are then averaged across ecological pressure categories. This result, in turn, is averaged with the social pressures to produce the final overall pressure score.
-
-**Pressure weights**
-
-Ecological and social pressure components are assessed separately and then the two resulting scores are combined with equal weighting. The weighting can be changed if there is local information or expert opinion on how to do so. Ecological resilience is divided into an ecological integrity score and a regulations score. Any resilience regulation score is associated with a pressure layer. This is because regulations are intended to contrast the effect of pressures. The OHI math is designed assuming that, when the regulation score matches the respective pressure score, they cancel each other out (i.e., the regulation is being effective in keeping the stressor under control). Therefore, by including a layer for regulatory response to each pressure affecting the delivery of the goals, we ensure that the resilience regulation measures are relevant to ocean health.
-
-**Pressure and Status interactions**
-
-Note that a consequence of this structure is that goals may interact with each other. The pressure created by one goal may affect a second goal. For example, cultivating fish for mariculture (food provision sub-goal) can cause genetic escapes threatening the health of wild fish populations (captured through the `sp_genetic` layer in the figure). This pressure affects only the wild-caught fisheries and species sub-goals, but does not affect the mariculture goal itself. In other cases, such as the fishing harvest pressure, the pressure comes as a result of pursuing the food provision sub-goal of wild-caught fisheries, affecting several goals including the fishing sub-goal itself.
-
-### Explore local pressures
-
-Begin by exploring the pressures included in the global pressures matrix. You can explore this in Halpern *et al*. 2012 Supplementary Table S25, or in your assessment repository located at `subcountry2014/conf/pressures_matrix.csv`; (more information on the file system in the section, **File System**). As illustrated below, pressures are either ecological or social, and are grouped into six categories: pollution, habitat destruction, fishing pressure, species pollution, climate change, and social pressures. In the figure, the clean waters goal is affected by four data layers within the pollution category, as well as one in the social category.
-
-![](./fig/pressure_categories.png)
-
-Pressures (columns in `pressures_matrix.csv`) are matched with different goals and subgoals (rows) to indicate which pressures to include when goal scores are calculated. In some cases, the goals are further divided into components (e.g., Habitat type: mangroves, seagrass, corals; natural products: seashells, fish for aquarium, etc.).  
+JSL come back here
 
 ### Updating the pressures matrix
 
