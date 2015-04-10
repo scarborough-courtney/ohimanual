@@ -66,3 +66,23 @@ h_tot_mut <- harvest %>%
   arrange(country, commodity)
 ### Summarize information by creating a new variable to contain summary 
 ###   value; report value for every observation
+
+##############################################################/
+### %>% operator examples ====
+### 
+### Ugly nested functions:
+h_recent_totals2 <-arrange(mutate(filter(group_by(harvest, country, commodity), year >= 2009), harvest_tot = sum(tonnes, na.rm = TRUE)), country, commodity)
+
+### Boring sequential functions:
+h_temp <- group_by(harvest, country, commodity)
+h_temp <- filter(h_temp, year >= 2009)
+h_temp <- mutate(h_temp, harvest_tot = sum(tonnes, na.rm = TRUE))
+h_recent_totals1 <- arrange(h_temp, country, commodity)
+
+### Glorious chained functions:
+h_recent_totals <- harvest %>% 
+  group_by(country, commodity) %>% 
+  filter(year >= 2009) %>%
+  mutate(harvest_tot = sum(tonnes, na.rm = TRUE)) %>% 
+  arrange(country, commodity)
+

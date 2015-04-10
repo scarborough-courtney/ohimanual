@@ -17,15 +17,46 @@ From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/intr
 
 The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are helpful for organizing and understanding your data.  `dplyr` also introduces the ability to chain functions in a logical and intuitive manner, using the `%>%` chain operator to allow you to pass the results from one function directly to another function.
 
-Read more about `dplyr` here: http://blog.rstudio.org/2014/01/17/introducing-dplyr/
+Read more about `dplyr` here: http://blog.rstudio.org/2014/01/17/introducing-dplyr/ and here: http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html
 R data wrangling cheat sheet: quick reference guide to `tidyr` and `dplyr` functions: http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 
 ##%>% operator
 ###Description
-TBD
+The `%>%` operator allows you to 'pipe' or 'chain' a number of function calls, in which the output dataframe of one is fed directly into the input dataframe of the next.
+This lets you avoid creating temporary variables to store intermediate values, and lets you avoid nesting multiple functions.  Taking advantage of `%>%` makes your code more elegant, streamlined, and easy to read.
 ###Usage
+```
+data_out <- f(data_in, args)
+  ### standard function call
+  
+data_out <- data_in %>% f(args)
+  ### function call using %>% operator. data_in is passed as first argument
+  ### of function(). Output of function can be passed to another function
+  ### immediately, without need for temporary storage:
+data_out <- data_in %>% f1(args1) %>% f2(args2) %>% f3(args3) %>% ...
+```
 
-###Arguments
+###Example
+```
+### Barf!  Nested functions: read from inside out - hard to decipher
+h_recent_totals2 <-arrange(mutate(filter(group_by(harvest, country, commodity), year >= 2009), harvest_tot = sum(tonnes, na.rm = TRUE)), country, commodity)
+
+### Meh... Line by line: easier to read, but have to wait for the end to see 
+###   what it does.  Temp variables add more places for errors and bugs.
+h_temp <- group_by(harvest, country, commodity)
+h_temp <- filter(h_temp, year >= 2009)
+h_temp <- mutate(h_temp, harvest_tot = sum(tonnes, na.rm = TRUE))
+h_recent_totals1 <- arrange(h_temp, country, commodity)
+
+### Best!  Chained format intuitively links together the functions. Saves
+###   typing, fewer opportunities for errors, easier to debug.
+h_recent_totals <- harvest %>% 
+  group_by(country, commodity) %>% 
+  filter(year >= 2009) %>%
+  mutate(harvest_tot = sum(tonnes, na.rm = TRUE)) %>% 
+  arrange(country, commodity)
+```
+
 
 ##dplyr::select()
 ###Description
