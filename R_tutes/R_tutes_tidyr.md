@@ -19,7 +19,7 @@ another, and more time answering your questions about the data.
 Read more about `tidyr` here: http://blog.rstudio.org/2014/07/22/introducing-tidyr/
 R data wrangling cheat sheet: quick reference guide to `tidyr` and `dplyr` functions: http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 
-##Gather()
+##tidyr::gather()
 ###Description
 `gather()` takes multiple columns and collapses them into key-value pairs, duplicating all other columns as needed. Use `gather()` when your data is organized in "wide" format, so that some of your variables are in row form, rather than column form.  Another `tidyr` function, `spread()`, is more or less the reverse of `gather()`, to reformat long data into wide data.
 

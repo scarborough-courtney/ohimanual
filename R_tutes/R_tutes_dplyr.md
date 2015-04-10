@@ -7,22 +7,27 @@ From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/intr
 
 >Each function does one only thing, but does it well.
 
-* `group_by()`: groups data by specified variables, allowing for group-level data processing.
-* `summarize()`: uses analysis functions (sum, mean, etc) to summarize specified variables
-* `mutate()`: adds variables or modifies existing variables
-* `filter()`: filters data set by specified variable values
-* `select()`: selects variables to be retained or dropped from dataset
-* `arrange()`: sorts dataset by specified variables
+* `dplyr::group_by()`: groups data by specified variables, allowing for group-level data processing.
+* `dplyr::summarize()`: uses analysis functions (sum, mean, etc) to summarize specified variables
+* `dplyr::mutate()`: adds variables or modifies existing variables
+* `dplyr::filter()`: filters data set by specified variable values
+* `dplyr::select()`: selects variables to be retained or dropped from dataset
+* `dplyr::arrange()`: sorts dataset by specified variables
 * `%>%`: allows chaining of functions for cleaner, easier-to-read code
 
-The most important `dplyr` functions to understand for data processing will be group_by(), mutate(), and summarize().  Other dplyr functions are helpful for organizing and understanding your data.  `dplyr` also introduces the ability to chain functions in a logical and intuitive manner, using the `%>%` chain operator to allow you to pass the results from one function directly to another function.
+The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are helpful for organizing and understanding your data.  `dplyr` also introduces the ability to chain functions in a logical and intuitive manner, using the `%>%` chain operator to allow you to pass the results from one function directly to another function.
 
 Read more about `dplyr` here: http://blog.rstudio.org/2014/01/17/introducing-dplyr/
 R data wrangling cheat sheet: quick reference guide to `tidyr` and `dplyr` functions: http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 
 ##%>% operator
+###Description
+TBD
+###Usage
 
-##select()
+###Arguments
+
+##dplyr::select()
 ###Description
 `select()` allows you to choose specific columns/variables from your dataset, and drop all others.  Alternately, you can select specific variables to drop, leaving others in place.  `rename()` is a relative of `select()` that allows you to rename variables, while leaving all variables in place.
 
@@ -64,7 +69,7 @@ harvest1 <- harvest %>%
 The `harvest` data is fed into `select()`, and the output is fed into `rename()`. The final output of this complete flow is assigned to the new variable `harvest1`.
 ![using select() and rename() to manipulate variables in a data set](https://docs.google.com/drawings/d/14uc-1Pgaosfh5kPllJRf_sRXbiGWL4RcBqASqAG5f2E/pub?w=898&h=286)
 
-##filter()
+##dplyr::filter()
 ###Description
 `filter()` allows you to select observations (rows) based upon variable values.
 
@@ -88,7 +93,7 @@ harvest_vnm <- harvest %>% filter(country == 'Vietnam')
 h_vnm_recent <- harvest %>% filter(country == 'Vietnam' & year >= 2009)
 ```
 
-##arrange()
+##dplyr::arrange()
 ###Description
 `arrange()` sorts observations (rows) based upon a specified variable or list of variables.  Does not have any effec
 
@@ -110,7 +115,7 @@ To sort harvest values by most recent year:
 harvest_sorted <- harvest %>% arrange(country, commodity, desc(year))
 ```
 
-##mutate()
+##dplyr::mutate()
 ###Description
 `mutate()` is a powerful and useful tool for processing data.  You can add new variables or modify existing variables, using all variety of functions to perform operations on the dataset. `mutate()` works well with `group_by()` to perform calculations and manipulations at a group level rather than dataset level.
 
@@ -152,7 +157,7 @@ Notes:
 
 
 
-##summarize()
+##dplyr::summarize()
 ###Description
 `summarize()` combines multiple values of a variable into a single summary value. `summarize()` works well with `group_by()` - for grouped data, each group will be summarized and reported separately. For ungrouped data, the summary covers the entire dataset.
 
@@ -180,11 +185,8 @@ h_summary <- harvest %>%
 
 
 
-* summarize/summarise
-* join
 
-
-##group_by()
+##dplyr::group_by()
 ###Description
 `group_by()` allows you to easily group a dataset by one or more variables/columns.  By itself, it does nothing to manipulate your data.  But once your dataset has been sorted into useful groups, other `dplyr` functions will operate on each group separately, rather than operating on the entire dataset.
 
@@ -222,3 +224,12 @@ h_tot_mut <- harvest %>%
     ###   value; report value for every observation
 ```
 ![group_by to find group-level information](https://docs.google.com/drawings/d/1enHrgXWhpHz3FsURncMI5UB8LKoXLvXFPAcU25pDOSc/pub?w=745&h=285)
+
+
+##dplyr::join()
+###Description
+TBD
+###Usage
+
+###Arguments
+
