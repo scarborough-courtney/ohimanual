@@ -7,7 +7,7 @@ library(knitr)
 library(rmarkdown)
 library(stringr)
 
-redo_website = F # T if do push update to ohi-science.org/manual; F if do not push. Displays T/F after rendering all
+redo_website = T # T if do push update to ohi-science.org/manual; F if do not push. Displays T/F after rendering all
 
 
 # copy ohimanual/README.md into ohimanual/content/README.md

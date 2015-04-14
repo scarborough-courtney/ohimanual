@@ -90,14 +90,14 @@ If you are not able to find local data for stressors included in global assessme
 |hd_subtidal_hb   |High bycatch artisanal fishing practices as a proxy for subtidal hard bottom habitat destruction  |
 |hd_subtidal_sb   |High bycatch commercial fishing practices as a proxy for subtidal soft bottom habitat destruction |
 |po_chemicals**   |Ocean-based chemical pollution                                                                    |
-|po_chemicals_3nm**|Land-based chemical pollution                                                                     |
+|po_chemicals_3nm** |Land-based chemical pollution                                                                     |
 |po_nutrients**   |Ocean nutrient pollution                                                                          |
-|po_nutrients_3nm**|Coastal nutrient pollution                                                                        |
+|po_nutrients_3nm** |Coastal nutrient pollution                                                                        |
 |po_pathogens     |Access to improved sanitation as a proxy for pathogen pollution                                   |
 |po_trash         |Trash pollution                                                                                   |
 |sp_alien         |Alien species                                                                                     |
 |sp_genetic       |Introduced species as a proxy for genetic escapes                                                 |
-|ss_wgi           |Weakness of governance indicated with the WGI                                                     ||
+|ss_wgi           |Weakness of governance indicated with the WGI                                                     |
 
 
 Note that chemical and nutrient pollution have both land-based (within 3 nautical miles) and ocean-based (within the entire 200 nautical mile EEZ) elements. This is because how pollution affects different goals will depend on the spatial scale of the goal's activity. Some goals occur far from shore, and nutrient and chemical pollution should be included for all offshore waters: FIS, MAR, ECO, and SPP. However, some goals are really only relevant nearshore, so nutrient and chemical pollution should only be included close to the shoreline (3nm in the global study): AO, CS, CP, TR, ICO, LSP, HAB.

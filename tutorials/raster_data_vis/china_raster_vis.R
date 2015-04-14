@@ -7,12 +7,6 @@ library(raster)
 library(rgdal)
 library(leaflet)
 
-#directories
-dir_N = c('Windows' = '//neptune.nceas.ucsb.edu/data_edit',
-          'Darwin'  = '/Volumes/data_edit',
-          'Linux'   = '/var/data/ohi')[[ Sys.info()[['sysname']] ]]
-
-
 #raster
 # - rasters are read in as .tif but the app can only read rasters if they are '.grd' so my 
 # quick and dirty trick is to read in .tif, then writeRaster(file,filename='file') <- no .tif 
@@ -22,7 +16,7 @@ dir_N = c('Windows' = '//neptune.nceas.ucsb.edu/data_edit',
 setwd('tutorials/raster_data_vis/data_china_raster_vis')
 
 uv    = raster('UV.grd')
-nitro = raster('data_china_raster_vis/nitro.grd')   
+nitro = raster('nitro.grd')   
 
 
 #shapefiles 
