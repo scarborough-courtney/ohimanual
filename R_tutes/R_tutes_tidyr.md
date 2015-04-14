@@ -1,6 +1,10 @@
 #`tidyr` functions
 'Tidy' up your messy data to make it easier to work with.  The 'tidy tools'
-functions in the `dplyr` package work best with tidy data.
+functions in the `dplyr` package work best with tidy data. Install it:
+```
+install.packages('tidyr')
+library(tidyr)
+```
 
 From [RStudio's introduction to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/):
 
@@ -16,8 +20,11 @@ another, and more time answering your questions about the data.
 
 `gather()` is arguably the most useful function in `tidyr`, and is explained in more detail below.  
 `spread()` and `separate()` are other useful functions in `tidyr`.
-Read more about `tidyr` here: http://blog.rstudio.org/2014/07/22/introducing-tidyr/
-R data wrangling cheat sheet: quick reference guide to `tidyr` and `dplyr` functions: http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+Other 'tidyr' references:
+* [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) Basics and philosophy of `tidyr`
+* [Cran tidy data vignette:](http://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) An informal and code heavy version of Hadley's full *Tidy Data* paper below.
+* [Hadley Wickham's *Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html) Download the pre-print version for the whys and hows of tidy data.
+* [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) quick reference guide to `tidyr` and `dplyr` functions
 
 ##tidyr::gather()
 ###Description

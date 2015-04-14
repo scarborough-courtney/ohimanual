@@ -1,5 +1,9 @@
 #`dplyr` functions
-The `dplyr` package includes a number of functions to easily, quickly, and intuitively manipulate your data.
+The `dplyr` package includes a number of functions to easily, quickly, and intuitively manipulate your data.  Install it:
+```
+install.packages('dplyr')
+library(dplyr)
+```
 
 From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/introducing-dplyr/):
 
@@ -15,10 +19,13 @@ From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/intr
 * `dplyr::arrange()`: sorts dataset by specified variables
 * `%>%`: allows chaining of functions for cleaner, easier-to-read code
 
-The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are helpful for organizing and understanding your data.  `dplyr` also introduces the ability to chain functions in a logical and intuitive manner, using the `%>%` chain operator to allow you to pass the results from one function directly to another function.
+The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are helpful for organizing and understanding your data.  `dplyr` also introduces the ability to chain functions in a logical and intuitive manner, using the `%>%` chain operator.
 
-Read more about `dplyr` here: http://blog.rstudio.org/2014/01/17/introducing-dplyr/ and here: http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html
-R data wrangling cheat sheet: quick reference guide to `tidyr` and `dplyr` functions: http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+Other `dplyr` references:
+* [RStudio blogs: Introducing dplyr](http://blog.rstudio.org/2014/01/17/introducing-dplyr/)
+* [Cran dplyr vignette](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
+* [`dplyr` and pipes: the basics](http://seananderson.ca/2014/09/13/dplyr-intro.html)
+* [R data wrangling cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf): a quick reference guide to `tidyr` and `dplyr` functions
 
 ##%>% operator
 ###Description
@@ -28,33 +35,36 @@ This lets you avoid creating temporary variables to store intermediate values, a
 ```
 data_out <- f(data_in, args)
   ### standard function call
-  
+
 data_out <- data_in %>% f(args)
   ### function call using %>% operator. data_in is passed as first argument
-  ### of function(). Output of function can be passed to another function
-  ### immediately, without need for temporary storage:
+  ###   of function().
+
 data_out <- data_in %>% f1(args1) %>% f2(args2) %>% f3(args3) %>% ...
+  ### Output of function can be passed to another function immediately,
+  ###   without need for temporary storage.
 ```
 
 ###Example
 ```
 ### Barf!  Nested functions: read from inside out - hard to decipher
-h_recent_totals2 <-arrange(mutate(filter(group_by(harvest, country, commodity), year >= 2009), harvest_tot = sum(tonnes, na.rm = TRUE)), country, commodity)
+  h_recent_totals2 <-arrange(mutate(filter(group_by(harvest, country, commodity),
+    year >= 2009), harvest_tot = sum(tonnes, na.rm = TRUE)), country, commodity)
 
-### Meh... Line by line: easier to read, but have to wait for the end to see 
+### Meh... Line by line: easier to read, but have to wait for the end to see
 ###   what it does.  Temp variables add more places for errors and bugs.
-h_temp <- group_by(harvest, country, commodity)
-h_temp <- filter(h_temp, year >= 2009)
-h_temp <- mutate(h_temp, harvest_tot = sum(tonnes, na.rm = TRUE))
-h_recent_totals1 <- arrange(h_temp, country, commodity)
+  h_temp <- group_by(harvest, country, commodity)
+  h_temp <- filter(h_temp, year >= 2009)
+  h_temp <- mutate(h_temp, harvest_tot = sum(tonnes, na.rm = TRUE))
+  h_recent_totals1 <- arrange(h_temp, country, commodity)
 
 ### Best!  Chained format intuitively links together the functions. Saves
 ###   typing, fewer opportunities for errors, easier to debug.
-h_recent_totals <- harvest %>% 
-  group_by(country, commodity) %>% 
-  filter(year >= 2009) %>%
-  mutate(harvest_tot = sum(tonnes, na.rm = TRUE)) %>% 
-  arrange(country, commodity)
+  h_recent_totals <- harvest %>%
+    group_by(country, commodity) %>%
+    filter(year >= 2009) %>%
+    mutate(harvest_tot = sum(tonnes, na.rm = TRUE)) %>%
+    arrange(country, commodity)
 ```
 
 
@@ -70,7 +80,7 @@ data_selected <- select(data, var1, var2, var3, ...)
 data_selected <- data %>% select(var1, var2, var3, ...)
   ### using the chain operator '%>%'
 
-data_renamed <- data %>% rename(newname1 = oldname1, newname2 = oldname2, ...)
+data_renamed  <- data %>% rename(newname1 = oldname1, newname2 = oldname2, ...)
   ### using the chain operator '%>%'
 ```
 
@@ -82,7 +92,7 @@ data_renamed <- data %>% rename(newname1 = oldname1, newname2 = oldname2, ...)
     * There are many useful special functions within `select()` and `rename()` to help you select by `starts_with()`, `contains()`, etc.
 
 ###Example
-The dataset below includes the annual harvest, in tonnes, of a number of commodities exported by two countries.  I am not interested in the type of trade (it is all Export), so I will drop that variable.  I would also like to convert the names of all the variables to lower-case, to match our style guide.
+The dataset below includes the annual harvest, in tonnes, of a number of commodities exported by two countries.  Type of trade provides no information (it is all Export), so that variable can be dropped.  The names of all the variables should be converted to lower-case, to match the OHI style guide.
 ```
 harvest <- harvest %>% select(-Trade)
   ###drops 'Trade' column
@@ -117,9 +127,9 @@ data1 <- data %>% filter(...)
 
 ###Example
 ```
-harvest_vnm <- filter(harvest, country == 'Vietnam')
+harvest_vnm  <- filter(harvest, country == 'Vietnam')
 
-harvest_vnm <- harvest %>% filter(country == 'Vietnam')
+harvest_vnm  <- harvest %>% filter(country == 'Vietnam')
 
 h_vnm_recent <- harvest %>% filter(country == 'Vietnam' & year >= 2009)
 ```
@@ -263,4 +273,3 @@ TBD
 ###Usage
 
 ###Arguments
-
