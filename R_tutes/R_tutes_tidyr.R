@@ -1,9 +1,26 @@
-library(dplyr)
-library(tidyr)
+### if not already installed, install these OHI favorites:
+install.packages(c('readr', 'stringr', 'tidyr', 'dplyr'))
 
-# Read files ----
-data_wide <- read.csv("data/commodities_sample.csv")
-lookup <- read.csv("data/comm2prod_sample.csv")
+### once installed, attach the packages from the library:
+library(readr)
+library(stringr)
+library(tidyr)
+library(dplyr)
+
+### The Ocean Health Index team uses functions from `tidyr` and `dplyr` extensively.  
+### Being familiar with these packages will be useful in interpreting existing OHI
+### code and in developing code for modified and updated goal models.  These sample
+### data files are used for the tutorial examples:
+
+### download FAO commodity sample data and OHI lookup table:
+### * https://github.com/OHI-Science/ohimanual/blob/masterR_tutes/data/commodities_sample.csv
+### * https://github.com/OHI-Science/ohimanual/blob/masterR_tutes/data/comm2prod_sample.csv
+dir_data <- './R_tutes/data'  ### wherever you saved your files
+
+data     <- read.csv(sprintf('%s/commodities_sample.csv', dir_data))
+  ### harvest data on marine commodities (FAO)
+lookup   <- read.csv(sprintf('%s/comm2prod_sample.csv',   dir_data))
+  ### an OHI lookup table to assign individual commodities into product groups
 
 ##############################################################/
 ### tidyr examples ====
@@ -33,7 +50,9 @@ harvest <- data_long
 ##############################################################/
 ### dplyr examples ====
 ### Select and rename columns
-harvest <- harvest %>% select(-Trade) %>% rename(country = Country, commodity = Commodity)
+harvest <- harvest %>% 
+  select(-Trade) %>% 
+  rename(country = Country, commodity = Commodity)
 
 ### use mutate() to change values in dataset.
 library(stringr)

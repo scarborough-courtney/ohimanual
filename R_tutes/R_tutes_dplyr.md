@@ -14,14 +14,14 @@ functions that correspond to the most common operations...
 
 >Each function does one only thing, but does it well.
 
-* [`%>%` (chaining) :](R_tutes_dplyr.md#-operator) allows chaining of functions for cleaner, easier-to-read code
-* [`dplyr::select()` :](R_tutes_dplyr.md#dplyrselect) selects variables to be retained or dropped from dataset
-* [`dplyr::filter()` :](R_tutes_dplyr.md#dplyrfilter) filters data set by specified variable values
+* [`%>%` (chaining operator):](R_tutes_dplyr.md#-operator) allows chaining of functions for cleaner, easier-to-read code
+* [`dplyr::select()`:](R_tutes_dplyr.md#dplyrselect) selects variables to be retained or dropped from dataset
+* [`dplyr::filter()`:](R_tutes_dplyr.md#dplyrfilter) filters data set by specified variable values
 * [`dplyr::arrange()`:](R_tutes_dplyr.md#dplyrarrange) sorts dataset by specified variables
-* [`dplyr::mutate()` :](R_tutes_dplyr.md#dplyrmutate) adds variables or modifies existing variables
+* [`dplyr::mutate()`:](R_tutes_dplyr.md#dplyrmutate) adds variables or modifies existing variables
 * [`dplyr::summarize()`:](R_tutes_dplyr.md#dplyrsummarize) uses analysis functions (sum, mean, etc) to summarize
 specified variables
-* [`dplyr::group_by()` :](R_tutes_dplyr.md#dplyrgroup_by) groups data by specified variables, allowing for
+* [`dplyr::group_by()`:](R_tutes_dplyr.md#dplyrgroup_by) groups data by specified variables, allowing for
 group-level data processing.
 
 The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are
@@ -42,8 +42,13 @@ in which the output dataframe of one function is fed directly into the next
 function as the input dataframe.
 This lets you avoid creating temporary variables to store intermediate values,
 and lets you avoid nesting multiple functions.  Taking advantage of `%>%` makes
-your code more elegant, streamlined, and easy to read.  From [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)
->OK, here's where it gets cool. We can chain dplyr functions in succession. This lets us write data manipulation steps in the order we think of them and avoid creating temporary variables in the middle to capture the output. This works because the output from every dplyr function is a data frame and the first argument of every dplyr function is a data frame.
+your code more elegant, streamlined, and easy to read.  From 
+[`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)
+>OK, here's where it gets cool. We can chain dplyr functions in succession. 
+This lets us write data manipulation steps in the order we think of them and 
+avoid creating temporary variables in the middle to capture the output. This 
+works because the output from every dplyr function is a data frame and the 
+first argument of every dplyr function is a data frame.
 
 ###Usage
 ```
