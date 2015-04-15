@@ -1,5 +1,6 @@
 #`dplyr` functions
-The `dplyr` package includes a number of functions to easily, quickly, and intuitively manipulate your data.  Install it:
+The `dplyr` package includes a number of functions to easily, quickly, and
+intuitively manipulate your data.  Install it:
 ```
 install.packages('dplyr')
 library(dplyr)
@@ -7,30 +8,43 @@ library(dplyr)
 
 From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/introducing-dplyr/):
 
->The bottleneck in most data analyses is the time it takes for you to figure out what to do with your data, and dplyr makes this easier by having individual functions that correspond to the most common operations...
+>The bottleneck in most data analyses is the time it takes for you to figure
+out what to do with your data, and dplyr makes this easier by having individual
+functions that correspond to the most common operations...
 
 >Each function does one only thing, but does it well.
 
-* `dplyr::group_by()`: groups data by specified variables, allowing for group-level data processing.
-* `dplyr::summarize()`: uses analysis functions (sum, mean, etc) to summarize specified variables
-* `dplyr::mutate()`: adds variables or modifies existing variables
-* `dplyr::filter()`: filters data set by specified variable values
-* `dplyr::select()`: selects variables to be retained or dropped from dataset
-* `dplyr::arrange()`: sorts dataset by specified variables
-* `%>%`: allows chaining of functions for cleaner, easier-to-read code
+* [`%>%` (chaining) :](R_tutes_dplyr.md#-operator) allows chaining of functions for cleaner, easier-to-read code
+* [`dplyr::select()` :](R_tutes_dplyr.md#dplyrselect) selects variables to be retained or dropped from dataset
+* [`dplyr::filter()` :](R_tutes_dplyr.md#dplyrfilter) filters data set by specified variable values
+* [`dplyr::arrange()`:](R_tutes_dplyr.md#dplyrarrange) sorts dataset by specified variables
+* [`dplyr::mutate()` :](R_tutes_dplyr.md#dplyrmutate) adds variables or modifies existing variables
+* [`dplyr::summarize()`:](R_tutes_dplyr.md#dplyrsummarize) uses analysis functions (sum, mean, etc) to summarize
+specified variables
+* [`dplyr::group_by()` :](R_tutes_dplyr.md#dplyrgroup_by) groups data by specified variables, allowing for
+group-level data processing.
 
-The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are helpful for organizing and understanding your data.  `dplyr` also introduces the ability to chain functions in a logical and intuitive manner, using the `%>%` chain operator.
+The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are
+helpful for organizing and understanding your data.  `dplyr` also introduces
+the ability to chain functions in a logical and intuitive manner, using
+the `%>%` chain operator.
 
 Other `dplyr` references:
-* [RStudio blogs: Introducing dplyr](http://blog.rstudio.org/2014/01/17/introducing-dplyr/)
-* [Cran dplyr vignette](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)
-* [`dplyr` and pipes: the basics](http://seananderson.ca/2014/09/13/dplyr-intro.html)
-* [R data wrangling cheat sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf): a quick reference guide to `tidyr` and `dplyr` functions
+* [RStudio blogs: Introducing dplyr:](http://blog.rstudio.org/2014/01/17/introducing-dplyr/): philosophy, examples, and basics of `dplyr`
+* [Cran dplyr vignette:](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) Walkthrough of `dplyr` with examples
+* [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html) More examples of `dplyr` functions, and more depth on `%>%`
+* [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) a quick reference guide to `tidyr` and `dplyr` functions
 
 ##%>% operator
 ###Description
-The `%>%` operator allows you to 'pipe' or 'chain' a number of function calls, in which the output dataframe of one is fed directly into the input dataframe of the next.
-This lets you avoid creating temporary variables to store intermediate values, and lets you avoid nesting multiple functions.  Taking advantage of `%>%` makes your code more elegant, streamlined, and easy to read.
+The `%>%` operator allows you to 'pipe' or 'chain' a number of function calls,
+in which the output dataframe of one function is fed directly into the next
+function as the input dataframe.
+This lets you avoid creating temporary variables to store intermediate values,
+and lets you avoid nesting multiple functions.  Taking advantage of `%>%` makes
+your code more elegant, streamlined, and easy to read.  From [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)
+>OK, here's where it gets cool. We can chain dplyr functions in succession. This lets us write data manipulation steps in the order we think of them and avoid creating temporary variables in the middle to capture the output. This works because the output from every dplyr function is a data frame and the first argument of every dplyr function is a data frame.
+
 ###Usage
 ```
 data_out <- f(data_in, args)
@@ -48,7 +62,7 @@ data_out <- data_in %>% f1(args1) %>% f2(args2) %>% f3(args3) %>% ...
 ###Example
 ```
 ### Barf!  Nested functions: read from inside out - hard to decipher
-  h_recent_totals2 <-arrange(mutate(filter(group_by(harvest, country, commodity),
+  h_recent_totals1 <-arrange(mutate(filter(group_by(harvest, country, commodity),
     year >= 2009), harvest_tot = sum(tonnes, na.rm = TRUE)), country, commodity)
 
 ### Meh... Line by line: easier to read, but have to wait for the end to see
@@ -56,11 +70,11 @@ data_out <- data_in %>% f1(args1) %>% f2(args2) %>% f3(args3) %>% ...
   h_temp <- group_by(harvest, country, commodity)
   h_temp <- filter(h_temp, year >= 2009)
   h_temp <- mutate(h_temp, harvest_tot = sum(tonnes, na.rm = TRUE))
-  h_recent_totals1 <- arrange(h_temp, country, commodity)
+  h_recent_totals2 <- arrange(h_temp, country, commodity)
 
 ### Best!  Chained format intuitively links together the functions. Saves
 ###   typing, fewer opportunities for errors, easier to debug.
-  h_recent_totals <- harvest %>%
+  h_recent_totals3 <- harvest %>%
     group_by(country, commodity) %>%
     filter(year >= 2009) %>%
     mutate(harvest_tot = sum(tonnes, na.rm = TRUE)) %>%
@@ -136,7 +150,7 @@ h_vnm_recent <- harvest %>% filter(country == 'Vietnam' & year >= 2009)
 
 ##dplyr::arrange()
 ###Description
-`arrange()` sorts observations (rows) based upon a specified variable or list of variables.  Does not have any effec
+`arrange()` sorts observations (rows) based upon a specified variable or list of variables.  Does not actually change the data in any way, only the appearance.
 
 ###Usage
 ```
