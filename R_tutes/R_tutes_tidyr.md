@@ -1,10 +1,9 @@
 #`tidyr` functions
 'Tidy' up your messy data to make it easier to work with.  The 'tidy tools'
 functions in the `dplyr` package work best with tidy data. Install it:
-```
-install.packages('tidyr')
-library(tidyr)
-```
+
+From [Hadley Wickham's *Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html)
+>It is often said that 80% of data analysis is spent on the cleaning and preparing data. And it's not just a first step, but it must be repeated many over the course of analysis as new problems come to light or new data is collected. To get a handle on the problem, this paper focuses on a small, but important, aspect of data cleaning that I call data tidying: structuring datasets to facilitate analysis.
 
 From [RStudio's introduction to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/):
 
@@ -20,15 +19,24 @@ another, and more time answering your questions about the data.
 
 `gather()` is arguably the most useful function in `tidyr`, and is explained in more detail below.  
 `spread()` and `separate()` are other useful functions in `tidyr`.
+
 Other 'tidyr' references:
-* [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) Basics and philosophy of `tidyr`
-* [Cran tidy data vignette:](http://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html) An informal and code heavy version of Hadley's full *Tidy Data* paper below.
-* [Hadley Wickham's *Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html) Download the pre-print version for the whys and hows of tidy data.
-* [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) quick reference guide to `tidyr` and `dplyr` functions
+* [Hadley Wickham's *Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html)
+Download the pre-print version for the whys and hows of tidy data.
+* [Cran tidy data vignette:](http://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+An informal and code heavy version of Hadley's full *Tidy Data* paper.
+* [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) 
+Basics and philosophy of `tidyr`
+* [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+A quick reference guide to `tidyr` and `dplyr` functions
 
 ##tidyr::gather()
 ###Description
-`gather()` takes multiple columns and collapses them into key-value pairs, duplicating all other columns as needed. Use `gather()` when your data is organized in "wide" format, so that some of your variables are in row form, rather than column form.  Another `tidyr` function, `spread()`, is more or less the reverse of `gather()`, to reformat long data into wide data.
+`gather()` takes data organized in rows and collapses them into a column format (a
+key column and a value column), duplicating all other columns as needed. Use
+`gather()` when your data is organized in "wide" format, in which some of your
+variables are in row form, rather than column form.  Another `tidyr` function, `spread()`, is more or less the reverse of `gather()`, to reformat long data
+into wide data.
 
 Note: `gather()` essentially replaces `melt()` in `plyr` package.
 

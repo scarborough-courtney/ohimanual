@@ -26,11 +26,11 @@ data     <- read.csv(sprintf('%s/commodities_sample.csv', dir_data))
 lookup   <- read.csv(sprintf('%s/comm2prod_sample.csv',   dir_data))
   ### an OHI lookup table to assign individual commodities into product groups
 ```
-Use `tidyr` to organize your data into 'tidy data' format:
+Use `tidyr` to organize your data into 'tidy data' format - in Hadley's words, "structuring datasets to facilitate analysis":
 * [`tidyr` tutorial](R_tutes_tidyr.md)
     * [`tidyr::gather()`:](R_tutes_tidyr.md#tidyrgather)
-    Converts row-based data (wide format) to column-based data (long format)
-    to facilitate data cleaning and 'tidy data' manipulation
+    Converts row-based data (wide) to column-based data (long)
+    to facilitate data tidying and analysis
 
 Use `dplyr` to filter, calculate, and manipulate your tidy data:
 * [`dplyr` tutorial](R_tutes_dplyr.md)
