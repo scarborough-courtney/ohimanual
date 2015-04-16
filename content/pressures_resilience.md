@@ -21,7 +21,7 @@ Ideally, every stressor with an identified strong impact should have a correspon
 
 In practice, however, the pressures and resilience measures you include in your assessment will be highly determined by data availability. It is best to first consider what pressures are acting in your study area and then determine if data are available to measure them. You should also decide if the pressures data included in the global assessment are relevant for your assessment and determine if  local data better better capture  pressures for the study area (and the reporting regions). When considering resilience measures, look for regulations or indicators that could be encompassed in one of the pressures categories.
 
-**The figure below** shows stressors by category, and the resilience measures meant to 'balance' (or counteract) them for the global assessment. Note that resilience layers are only available for some categories and goals. Also, some resilience measures are goal-specific; that is, they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in the status specific goals (e.g. sustainable tourism, lower bycatch, etc.), you can include them as resilience measures.  
+**The figure below** shows stressors by category, and the resilience measures meant to 'balance' (or counteract) them for the global assessment. Note that resilience layers are only available for some categories and goals. Also, some resilience measures are goal-specific; that is, they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in the status specific goals (e.g. sustainable tourism, lower bycatch, etc.), you can include them as resilience measures.
 
 ![Each resilience data layer should have a corresponding pressures layer, and vice versa. Note that a pressure layer becomes (1-resilience) in cases where only resilience data are available, due to data limitations.](https://docs.google.com/drawings/d/19ZBIhzTrNlumV9ZhCmsdEcvybFHp-eN5P5IFAsFmql0/pub?w=558&h=721)
 
@@ -53,29 +53,25 @@ Each pressure with a rank weight of 2 or 3 should have a corresponding resilienc
 * **Implementation and enforcement**: Have these regulations been appropriately implemented and are there enforcement mechanisms in place?
 * **Effectiveness and compliance**: How effective have the regulations been at mitigating these pressures and is there compliance with these regulations?
 
-Ideally, information would exist for these three tiers, and you would be able to weight the resilience measure based on the quality of the information as 1 (existence of regulation), 2 (implementation and enforcement), or 3 (effectiveness and compliance). This approach is different from the way ranks are assigned in pressures, which is based on impact. However, in most cases, information is not available for these three tiers: often, the existence of regulations is all that is available, and this does not always vary by region. In some cases, you may want to consider building your own set of indicators to determine **implementation and enforcement** and **effectiveness and compliance.**  
-
+Ideally, information would exist for these three tiers, and you would be able to weight the resilience measure based on the quality of the information as 1 (existence of regulation), 2 (implementation and enforcement), or 3 (effectiveness and compliance). This approach is different from the way ranks are assigned in pressures, which is based on impact. However, in most cases, information is not available for these three tiers: often, the existence of regulations is all that is available, and this does not always vary by region. In some cases, you may want to consider building your own set of indicators to determine **implementation and enforcement** and **effectiveness and compliance.**
 
 ### Incorporating local pressures in your assessment
 
-The pressures you will include in your assessment will depend on what is important in your study area and what data are available. If local pressures data are not available, you may default to using data from the global assessment, but this means in most cases that you will not have different information for each region. You will determine the weight ranks required in the pressures matrix only after you have identified the data you will include.
+The pressures you will include in your assessment will depend on what is important in your study area and what data are available. If local pressures data are not available, you may default to using data from the global assessment, but this means in most cases that you will not have different information for each region (we will discuss this in more detail later). You will determine the weight ranks required in the pressures matrix only after you have identified the data you will include.
 
-The following steps outline the process of how to include pressures in your assessment. The steps are iterative; return to previous steps to ensure you capture all important pressures in your study area.
+The following steps outline the process of how to include pressures in your assessment. The steps are iterative; return to previous steps to ensure you capture all important pressures in your study area:
 
 1. Begin by exploring pressures important to your study area. What are big stressors acting along your coastlines?
 2. Are data available to measure these stressors? If not, are other indirect measures or proxies available to represent these stressors?
-3. Evaluate the pressures are included in the global assessment. For example, if there is no mariculture in your study area, the genetic escapes pressure could be removed.
-4.  Are all of them relevant? Are there local data that can be substituted in the place of global data?
+3. Evaluate the pressures included in the global assessment. For example, if there is no mariculture in your study area, you could remove pressures data layers that only affect this goal (i.e. genetic escapes).
+4. Are all of them relevant? Are there local data that can be substituted in the place of global data?
 5. Determine the pressure category for any additional stressors in your study area, and add it to the pressures matrix.
-6. When all stressors are included in the pressures matrix, determine which goals it affects. Then, determine the rankings of all stressors for each goal. Use literature and expert judgement to determine this.
-7. Prepare each pressure data layer only after steps 1-6 are completed. In addition to the proper formatting for the Toolbox, pressures data must be rescaled (normalized) on a unitless scale from 0 - 1, where 0 is no stressor at all and 1 is the highest possible value for the stressor, or the value at which the goal achievement is completely impaired. You will have to determine how to rescale the data, whether it is based on the highest value in the data range or other methods.
-
-
+6. When all stressors are included in the pressures matrix, determine which goals it affects. Then, determine the weight rankings of all stressors for each goal. Use literature and expert judgement to determine this.
+7. Prepare each pressure data layer as described in this manual only after steps 1-6 are completed. In addition to the proper formatting for the Toolbox, pressures data must be rescaled (normalized) on a unitless scale from 0 - 1, where 0 is no stressor at all and 1 is the highest possible value for the stressor, or the value at which the goal achievement is completely impaired. You will have to determine how to rescale the data, whether it is based on the highest value in the data range or other methods.
 
 #### Including pressures from global assessments
 
-If you are not able to find local data for stressors included in global assessments, it is possible to use the data from global assessments. For most of the stressors, this means that there will not be differences between the subcountry regions within your study area. However, several stressors included in the global assessment are based on spatial data at high resolution from previous work by Halpern *et al.* (2008) in *Science:* [A global map of human impact on marine ecosystems](http://www.sciencemag.org/content/319/5865/948.abstract). Data are available for every square kilometer of the global ocean, and can be extracted for the regions in your study. The stressors available at one square kilometer resolution are indicated below with ** \*\* **.
-
+If you are not able to find local data for stressors, you may use the data from the global assessments for your country. For most of the stressors, this means that there will not be differences between the subcountry regions (reporting regions) within your study area. However, several stressors included in the global assessment are based on spatial data at high resolution from previous work by Halpern *et al.* (2008) in *Science:* [A global map of human impact on marine ecosystems](http://www.sciencemag.org/content/319/5865/948.abstract). These data are available at a resolution of 1 km2 for the entire global ocean, and can be extracted for the regions in your study area. The stressors available at 1km2 resolution are indicated below with ** \*\* **.
 
 **Table of pressures layers and descriptions**
 
@@ -110,14 +106,13 @@ These distinctions won't always apply for smaller-scale assessments. For example
 
 ### Incorporating local resilience measures in your assessment
 
-Finding appropriate resilience measures is difficult. It is often difficult to find regulations and indicators that would directly 'balance' individual stressors, but it is worth the effort to explore what information is available in the local context and how it could be included as resilience measures.
+Finding appropriate resilience measures is difficult. It is often difficult to find regulations and indicators that would directly 'balance' individual stressors, but it is worth the effort to explore what information is available in the local context and how it could be included as resilience measures. As previously mentioned, you may be able to construct your own set of indicators for resilience (particularly social resilience) using proxy data. 
 
-1. Begin by exploring how resilience could be measured to your study area. What laws and regulations are in place that could provide resilience to ocean health?
-2. Do you have locally-developed indices to capture social or ecological resilience? Is there information about how each region in your study area are implementing or enforcing the laws?
+1. Begin by exploring how resilience could be measured in your study area. What laws and regulations are in place that could provide resilience to ocean health?
+2. Are there locally-developed indices that capture social or ecological resilience? Is there information about how each region in your study area are implementing or enforcing the laws?
 3. Evaluate the resilience measures are included in the global assessment. Are all of them relevant? Are there local data that can be substituted in the place of global data? Are there resilience measures that should be excluded entirely?
-4. Assign the resilience measure to the appropriate goall. Since resilience measures are in response to pressures that have a rank 2 or 3 effect on a certain goal, determining which goals ecological and social resilience measures affect is simply following the same pattern as the pressures matrix. For goal-specific resilience measures, assign the resilience measure to the appropriate goal.
+4. Assign the resilience measure to the appropriate goal. Since resilience measures are in response to pressures that have a weight rank of 2 or 3 effect on a certain goal, determining which goals ecological and social resilience measures effect follows the same pattern as the pressures matrix. For goal-specific resilience measures, assign the resilience measure to the appropriate goal.
 5. Prepare each resilience data layer only after steps 1-6 are completed. In addition to the proper formatting for the Toolbox, resilience data must be rescaled (normalized) on a unitless scale from 0 - 1. You will have to determine how to rescale the data, whether it is based on the highest value in the data range or other methods.
-
 
 #### Including resilience measures from global assessments
 
