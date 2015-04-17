@@ -1,6 +1,6 @@
 **Adaptive Management**
 
-“If the Index were adopted as a management tool, recalculating scores regularly could reveal whether management actions had the intended effect on both overall ocean health and particular goals” (Halpern et al two thousand fourteen).
+> “If the Index were adopted as a management tool, recalculating scores regularly could reveal whether management actions had the intended effect on both overall ocean health and particular goals” (Halpern *et al.* 2014).
 
 Findings will help inform decision-makers about management actions and policies. However, understanding the effect of management actions requires iterative studies. Repeated assessments are also necessary to continuously adapt management strategies.
 

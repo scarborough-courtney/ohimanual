@@ -4,7 +4,7 @@ Your strategy will consist of both the creation of materials to communicate the 
 
 **Communications Strategy**
 
-The following materials will be needed to influence decision making.
+The following materials will be needed to influence decision making:
 
  -	Summary of findings: present paper findings to wider audience, press, managers, and various decision-makers
 
@@ -12,7 +12,7 @@ The following materials will be needed to influence decision making.
 
  -	Website: in local language(s) and English (optional)
 
- -	Fact-sheets &printed materials
+ -	Fact-sheets & printed materials
 
 **Outreach Strategy**
 
