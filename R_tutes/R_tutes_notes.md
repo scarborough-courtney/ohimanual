@@ -1,5 +1,8 @@
 #Things to include in an OHI R guide
 ###Code unto others as you would have them code unto you.
+
+http://xkcd.com/1513/
+
 Why style? Hadley:
 >Good style is important because while your code only has one
 author, it’ll usually have multiple readers. This is especially true when you’re
