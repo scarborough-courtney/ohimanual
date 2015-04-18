@@ -1,24 +1,33 @@
 # R Tutes Intro
+##R Very Basics:
+* Have you already downloaded and installed [R](http://www.r-project.org/)?
+* Have you already downloaded and installed [RStudio](http://www.rstudio.com/)?
+* Have you walked through the excellent interactive tutorials from [swirl](http://swirlstats.com/students.html)?
 
+##R Basics for Ocean Health Index
 ```
 ### if not already installed, install these OHI favorites:
-install.packages(c('readr', 'stringr', 'tidyr', 'dplyr'))
+install.packages(c('tidyr', 'dplyr'))
 
 ### once installed, attach the packages from the library:
-library(readr)
-library(stringr)
 library(tidyr)
 library(dplyr)
 ```
-The Ocean Health Index team uses functions from `tidyr` and `dplyr` extensively.  
+The Ocean Health Index (OHI) team uses functions from `tidyr` and `dplyr` extensively.  
 Being familiar with these packages will be useful in interpreting existing OHI
-code and in developing code for modified and updated goal models.  These sample
-data files are used for the tutorial examples:
+code and in developing code for modified and updated goal models.  
+
+* If you haven't already, try out the swirl tutorials on `tidyr` and `dplyr`
+to introduce you to the basics.
+
+The OHI R tutorials introduce you to typical coding practices commonly seen
+in OHI scripts and functions.  These sample data files are used for the
+tutorial examples:
 * https://github.com/OHI-Science/ohimanual/blob/masterR_tutes/data/commodities_sample.csv
 * https://github.com/OHI-Science/ohimanual/blob/masterR_tutes/data/comm2prod_sample.csv
 
 ```
-### download FAO commodity sample data and OHI lookup table:
+### load FAO commodity sample data and OHI lookup table:
 dir_data <- './R_tutes/data'  ### wherever you saved your files
 
 data     <- read.csv(sprintf('%s/commodities_sample.csv', dir_data))
@@ -49,5 +58,5 @@ Use `dplyr` to filter, calculate, and manipulate your tidy data:
     * [`dplyr::group_by()`:](R_tutes_dplyr.md#dplyrgroup_by)
     groups data by specified variables, allowing for group-level data processing.
 
-Use OHI best practices to keep your code friendly:
+Use OHI best practices to keep your code reader-friendly:
 * [notes](R_tutes_notes.md)

@@ -33,6 +33,7 @@ Other `dplyr` references:
 * [RStudio blogs: Introducing dplyr:](http://blog.rstudio.org/2014/01/17/introducing-dplyr/): philosophy, examples, and basics of `dplyr`
 * [Cran dplyr vignette:](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) Walkthrough of `dplyr` with examples
 * [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html) More examples of `dplyr` functions, and more depth on `%>%`
+* [swirl tutorial package:](http://swirlstats.com/students.html) A tutorial package built directly into R.  Section 2: 'Getting and Cleaning Data' runs you through `dplyr` and `tidyr` basics
 * [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) a quick reference guide to `tidyr` and `dplyr` functions
 
 ##%>% operator
@@ -42,12 +43,12 @@ in which the output dataframe of one function is fed directly into the next
 function as the input dataframe.
 This lets you avoid creating temporary variables to store intermediate values,
 and lets you avoid nesting multiple functions.  Taking advantage of `%>%` makes
-your code more elegant, streamlined, and easy to read.  From 
+your code more elegant, streamlined, and easy to read.  From
 [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)
->OK, here's where it gets cool. We can chain dplyr functions in succession. 
-This lets us write data manipulation steps in the order we think of them and 
-avoid creating temporary variables in the middle to capture the output. This 
-works because the output from every dplyr function is a data frame and the 
+>OK, here's where it gets cool. We can chain dplyr functions in succession.
+This lets us write data manipulation steps in the order we think of them and
+avoid creating temporary variables in the middle to capture the output. This
+works because the output from every dplyr function is a data frame and the
 first argument of every dplyr function is a data frame.
 
 ###Usage
@@ -261,10 +262,10 @@ data <- data %>% group_by(var1, var2, var3, ...)
 * `var1`, `var2`, `var3`, `...`: variables to be used to define groups.
 
 Notes:
-* The function `groups(data)` reports back the current grouping status.  
+* The function `groups(data)` reports back the current grouping status of dataframe `data`.  
 * `group_by()` alters the grouping, but does not alter the sort order.  `arrange()` does not alter the current grouping - it will sort by groups first, then sorts within each group.
 * Multiple calls to `group_by()` will reset the groupings each time (by default), rather than adding additional layers of groups.
-* Once you have finished with your operation at the group level, it is a good practice to use the `ungroup()` function to remove the groupings, to avoid unintended consequences.
+* Once you have finished with your operation at the group level, it is a good practice to use the `ungroup()` function to remove the groupings, to avoid unintended consequences due to forgotten `group_by()` calls.
 
 ###Example
 If you want to find the total tonnage harvested for each commodity for each country, you would want to group by country and by commodity, and then perform a `sum()` function on the grouped data.  Two options presented here: `summarize()` and `mutate()`.

@@ -27,6 +27,7 @@ Download the pre-print version for the whys and hows of tidy data.
 An informal and code heavy version of Hadley's full *Tidy Data* paper.
 * [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) 
 Basics and philosophy of `tidyr`
+* [swirl tutorial package:](http://swirlstats.com/students.html) A tutorial package built directly into R.  Section 2: 'Getting and Cleaning Data' runs you through `dplyr` and `tidyr` basics
 * [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 A quick reference guide to `tidyr` and `dplyr` functions
 

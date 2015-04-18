@@ -1,20 +1,23 @@
 #Things to include in an OHI R guide
 ###Code unto others as you would have them code unto you.
 
-http://xkcd.com/1513/
-
-Why style? Hadley:
+Why style? ask Hadley:
 >Good style is important because while your code only has one
 author, it’ll usually have multiple readers. This is especially true when you’re
 writing code with others. In that case, it’s a good idea to agree on a common
 style up-front. Since no style is strictly better than another, working with
 others may mean that you’ll need to sacrifice some preferred aspects of your style.
 
+Why style? ask Randall Munroe:
+
+[![xkcd: code quality](http://imgs.xkcd.com/comics/code_quality.png)](http://xkcd.com/1513/)
+
 Since OHI values an open-source mindset, our code should be not just available, but legible to others.  For OHI+, we expect people to modify code to implement new goal models, and we may need to provide support in developing and debugging their code.
 
 Readable code is:
 * easier for others to debug
 * easier for others to update or modify
+* easier for 'future you' to interpret what 'past you' meant when you wrote that chunk of code.
 
 Check out Hadley's [style guide: ](http://r-pkgs.had.co.nz/style.html)
 * How many of these suggestions are second-nature to you? how many are you guilty of breaking?
