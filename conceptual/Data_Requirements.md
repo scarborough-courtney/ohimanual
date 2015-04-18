@@ -1,5 +1,7 @@
 **Data Requirements**
 
+<!---Link to Data section of the Manual--->
+
 Time-series data are needed for the four components of each goal: Status, future trend, pressures, and resilience.
 
  Data required for status and trend:

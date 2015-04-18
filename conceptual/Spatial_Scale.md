@@ -1,6 +1,6 @@
 **Determining the Spatial Scale**
 
-It is important to remember that the scale of assessment should match the scale of decision-making.
+It is important to remember that the scale of your assessment should match the scale of decision-making.
 
 Most assessments focus on political boundaries, since most agencies and organizations gather and report data at this spatial scale.
 

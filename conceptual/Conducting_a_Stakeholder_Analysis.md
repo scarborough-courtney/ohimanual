@@ -2,7 +2,7 @@
 
 A *stakeholder analysis* can help identify who to involve in the process and how. It is important to recognize that stakeholder support and buy-in is typically stronger when there is transparency and inclusivity from the very early phases of development.
 
-*"The Index was explicitly designed to help inform decision making by providing a comprehensive, comparable, and quantitative assessment of the range of components that drive overall ocean health" (Halpern et al. two thousand fourteen)* Because of this, it is imperative that you [understand the local decision-making process](Understand_Local_Decision_Making) and include key influencers in your stakeholder analysis.
+*"The Index was explicitly designed to help inform decision making by providing a comprehensive, comparable, and quantitative assessment of the range of components that drive overall ocean health"* (Halpern *et al.* 2014). Because of this, it is imperative that you [understand the local decision-making process](Understand_Local_Decision_Making) and include key influencers in your stakeholder analysis.
 
 Below are choices of resources you may wish to use to help you conduct your stakeholder analysis:
 
