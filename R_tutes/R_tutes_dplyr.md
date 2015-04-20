@@ -1,6 +1,8 @@
 #`dplyr` functions
 The `dplyr` package includes a number of functions to easily, quickly, and
-intuitively manipulate your data.  Install it:
+intuitively wrangle your data. Here is a quick introduction with examples from data used in the Ocean Health Index.
+
+Install `dplyr`:
 ```
 install.packages('dplyr')
 library(dplyr)
@@ -9,10 +11,13 @@ library(dplyr)
 From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/introducing-dplyr/):
 
 >The bottleneck in most data analyses is the time it takes for you to figure
-out what to do with your data, and dplyr makes this easier by having individual
+out what to do with your data, and `dplyr` makes this easier by having individual
 functions that correspond to the most common operations...
 
 >Each function does one only thing, but does it well.
+
+The following are the most important functions with the `dplyr` package. `dplyr` introduces
+the ability to perform subsequent functions in a logical and intuitive manner, using the `%>%` chain operator. The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.
 
 * [`%>%` (chaining operator):](R_tutes_dplyr.md#-operator) allows chaining of functions for cleaner, easier-to-read code
 * [`dplyr::select()`:](R_tutes_dplyr.md#dplyrselect) selects variables to be retained or dropped from dataset
@@ -24,12 +29,8 @@ specified variables
 * [`dplyr::group_by()`:](R_tutes_dplyr.md#dplyrgroup_by) groups data by specified variables, allowing for
 group-level data processing.
 
-The most important `dplyr` functions to understand for data processing will be `group_by()`, `mutate()`, and `summarize()`.  Other `dplyr` functions are
-helpful for organizing and understanding your data.  `dplyr` also introduces
-the ability to chain functions in a logical and intuitive manner, using
-the `%>%` chain operator.
-
 Other `dplyr` references:
+
 * [RStudio blogs: Introducing dplyr:](http://blog.rstudio.org/2014/01/17/introducing-dplyr/): philosophy, examples, and basics of `dplyr`
 * [Cran dplyr vignette:](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) Walkthrough of `dplyr` with examples
 * [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html) More examples of `dplyr` functions, and more depth on `%>%`
@@ -42,14 +43,14 @@ The `%>%` operator allows you to 'pipe' or 'chain' a number of function calls,
 in which the output dataframe of one function is fed directly into the next
 function as the input dataframe.
 This lets you avoid creating temporary variables to store intermediate values,
-and lets you avoid nesting multiple functions.  Taking advantage of `%>%` makes
-your code more elegant, streamlined, and easy to read.  From
-[`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)
->OK, here's where it gets cool. We can chain dplyr functions in succession.
+and lets you avoid nesting multiple functions.  Using `%>%` makes your code more elegant, streamlined, and easy to read since you are able to write your code on multiple indented lines.  From
+[`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)  
+
+>OK, here's where it gets cool. We can chain `dplyr` functions in succession.
 This lets us write data manipulation steps in the order we think of them and
 avoid creating temporary variables in the middle to capture the output. This
-works because the output from every dplyr function is a data frame and the
-first argument of every dplyr function is a data frame.
+works because the output from every `dplyr` function is a data frame and the
+first argument of every `dplyr` function is a data frame.
 
 ###Usage
 ```
@@ -80,6 +81,7 @@ data_out <- data_in %>% f1(args1) %>% f2(args2) %>% f3(args3) %>% ...
 
 ### Best!  Chained format intuitively links together the functions. Saves
 ###   typing, fewer opportunities for errors, easier to debug.
+### The %>% operator allows automatically indents each  each following line for easy reading.
   h_recent_totals3 <- harvest %>%
     group_by(country, commodity) %>%
     filter(year >= 2009) %>%
@@ -132,7 +134,7 @@ The `harvest` data is fed into `select()`, and the output is fed into `rename()`
 
 ##dplyr::filter()
 ###Description
-`filter()` allows you to select observations (rows) based upon variable values.
+`filter()` allows you to select observations (rows) based upon values in specified variables (columns).
 
 ###Usage
 ```

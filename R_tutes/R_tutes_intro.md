@@ -1,4 +1,8 @@
-# R Tutes Intro
+# R Tutorials Introduction
+
+Ocean Health Index R code uses several packages and best practices to faciliate understanding and collaboration. These approaches are presented here, along with examples using data included in global OHI assessments.
+
+
 ##R Very Basics:
 * Have you already downloaded and installed [R](http://www.r-project.org/)?
 * Have you already downloaded and installed [RStudio](http://www.rstudio.com/)?
@@ -23,9 +27,12 @@ to introduce you to the basics.
 The OHI R tutorials introduce you to typical coding practices commonly seen
 in OHI scripts and functions.  These sample data files are used for the
 tutorial examples:
-* https://github.com/OHI-Science/ohimanual/blob/masterR_tutes/data/commodities_sample.csv
-* https://github.com/OHI-Science/ohimanual/blob/masterR_tutes/data/comm2prod_sample.csv
 
+* [github.com/OHI-Science/ohimanual/R_tutes/data/commodities_sample.csv](https://github.com/OHI-Science/ohimanual/blob/master/R_tutes/data/commodities_sample.csv)
+* [github.com/OHI-Science/ohimanual/R_tutes/data/comm2prod_sample.csv](https://github.com/OHI-Science/ohimanual/blob/master/R_tutes/data/comm2prod_sample.csv)
+
+
+Load these data so you can try the examples yourself. 
 ```
 ### load FAO commodity sample data and OHI lookup table:
 dir_data <- './R_tutes/data'  ### wherever you saved your files
@@ -35,28 +42,31 @@ data     <- read.csv(sprintf('%s/commodities_sample.csv', dir_data))
 lookup   <- read.csv(sprintf('%s/comm2prod_sample.csv',   dir_data))
   ### an OHI lookup table to assign individual commodities into product groups
 ```
-Use `tidyr` to organize your data into 'tidy data' format - in Hadley's words, "structuring datasets to facilitate analysis":
+Use `tidyr` to organize your data into 'tidy data' format. As Hadley Wickham, `tidyr`'s developer says, "structuring datasets to facilitate analysis":
+
 * [`tidyr` tutorial](R_tutes_tidyr.md)
-    * [`tidyr::gather()`:](R_tutes_tidyr.md#tidyrgather)
+* [`tidyr::gather()`:](R_tutes_tidyr.md#tidyrgather)
     Converts row-based data (wide) to column-based data (long)
     to facilitate data tidying and analysis
 
-Use `dplyr` to filter, calculate, and manipulate your tidy data:
+Use `dplyr` to filter, calculate, and 'wrangle' your tidy data:
+
 * [`dplyr` tutorial](R_tutes_dplyr.md)
-    * [`%>%` (chaining operator):](R_tutes_dplyr.md#-operator)
+* [`%>%` (chaining operator):](R_tutes_dplyr.md#-operator)
     allows chaining of functions for cleaner, easier-to-read code
-    * [`dplyr::select()`:](R_tutes_dplyr.md#dplyrselect)
+* [`dplyr::select()`:](R_tutes_dplyr.md#dplyrselect)
     selects variables to be retained or dropped from dataset
-    * [`dplyr::filter()`:](R_tutes_dplyr.md#dplyrfilter)
+* [`dplyr::filter()`:](R_tutes_dplyr.md#dplyrfilter)
     filters data set by specified variable values
-    * [`dplyr::arrange()`:](R_tutes_dplyr.md#dplyrarrange)
+* [`dplyr::arrange()`:](R_tutes_dplyr.md#dplyrarrange)
     sorts dataset by specified variables
-    * [`dplyr::mutate()`:](R_tutes_dplyr.md#dplyrmutate)
+* [`dplyr::mutate()`:](R_tutes_dplyr.md#dplyrmutate)
     adds variables or modifies existing variables
-    * [`dplyr::summarize()`:](R_tutes_dplyr.md#dplyrsummarize)
+* [`dplyr::summarize()`:](R_tutes_dplyr.md#dplyrsummarize)
     uses analysis functions (sum, mean, etc) to summarize specified variables
-    * [`dplyr::group_by()`:](R_tutes_dplyr.md#dplyrgroup_by)
+* [`dplyr::group_by()`:](R_tutes_dplyr.md#dplyrgroup_by)
     groups data by specified variables, allowing for group-level data processing.
 
 Use OHI best practices to keep your code reader-friendly:
+
 * [notes](R_tutes_notes.md)

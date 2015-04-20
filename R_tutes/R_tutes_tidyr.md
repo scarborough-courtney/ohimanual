@@ -1,6 +1,12 @@
 #`tidyr` functions
 'Tidy' up your messy data to make it easier to work with.  The 'tidy tools'
-functions in the `dplyr` package work best with tidy data. Install it:
+functions in the `tidyr` package work best with tidy data.
+
+Install `tidyr`:
+```
+install.packages('tidyr')
+library(tidyr)
+```
 
 From [Hadley Wickham's *Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html)
 >It is often said that 80% of data analysis is spent on the cleaning and preparing data. And it's not just a first step, but it must be repeated many over the course of analysis as new problems come to light or new data is collected. To get a handle on the problem, this paper focuses on a small, but important, aspect of data cleaning that I call data tidying: structuring datasets to facilitate analysis.
@@ -25,7 +31,7 @@ Other 'tidyr' references:
 Download the pre-print version for the whys and hows of tidy data.
 * [Cran tidy data vignette:](http://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
 An informal and code heavy version of Hadley's full *Tidy Data* paper.
-* [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/) 
+* [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
 Basics and philosophy of `tidyr`
 * [swirl tutorial package:](http://swirlstats.com/students.html) A tutorial package built directly into R.  Section 2: 'Getting and Cleaning Data' runs you through `dplyr` and `tidyr` basics
 * [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
