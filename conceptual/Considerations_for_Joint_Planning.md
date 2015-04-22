@@ -1,4 +1,4 @@
-**Considerations for Joint Planning**
+##**Considerations for Joint Planning**
 
 Collaborative assessment planning is an effective approach to ensuring that the assessment will be useful for decision-making. Strengthening scientist-decision maker partnerships creates opportunities for applying research findings to improve ocean health.
 

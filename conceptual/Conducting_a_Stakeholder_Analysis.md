@@ -1,4 +1,4 @@
-**Conducting a Stakeholder Analysis**
+###**Conducting a Stakeholder Analysis**
 
 A *stakeholder analysis* can help identify who to involve in the process and how. It is important to recognize that stakeholder support and buy-in is typically stronger when there is transparency and inclusivity from the very early phases of development.
 

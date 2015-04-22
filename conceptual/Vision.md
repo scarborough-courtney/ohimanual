@@ -1,4 +1,4 @@
-**Establishing the Vision**
+###**Establishing the Vision**
 
 Producing the Index is not the end goal: It is merely a process toward the true end goal – achieving improved ocean health.
 

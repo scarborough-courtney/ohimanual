@@ -1,4 +1,4 @@
-**Adaptive Management**
+###**Adaptive Management**
 
 > “If the Index were adopted as a management tool, recalculating scores regularly could reveal whether management actions had the intended effect on both overall ocean health and particular goals” (Halpern *et al.* 2014).
 

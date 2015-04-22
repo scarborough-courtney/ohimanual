@@ -1,4 +1,4 @@
-**Task Timeline**
+#**Task Timeline**
 
 The Task Timeline (seen below) provides the steps involved in conducting Ocean Health Index assessments as well as the suggestions of the skills involved for doing so. The process of calculating he Index is not necessarily linear: there is a lot of 'back-and-forth' in regards to making the best decisions. For example, gathering appropriate data for each gaol, pressures, and resilience requires thinking about how to calculate reference points. It is possible that data sources will need to change as the process gets further along if it becomes clear that models should be further modified.
 

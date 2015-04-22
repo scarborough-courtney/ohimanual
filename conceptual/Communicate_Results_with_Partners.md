@@ -1,4 +1,4 @@
-**Communicate Results with Partners and Others**
+##**Communicate Results with Partners and Others**
 
 It is important to begin your communications with a strategy. The first thing you’ll want to do is go back to your [stakeholder analysis](link to conducting a stakeholder analysis section), breaking your stakeholders up into different groups. A good way to group your stakeholders is by their objectives. Think about the different needs of each group of your stakeholders. What information does each group need from you to meet their objectives or to perform your desired action/outcome? These groups should include decision makers, funders, the general public/news outlets, as well as other stakeholders that are important to your assessment. The quickest way to create these groups is to look back at your [stakeholder management sheet](http://www.mindtools.com/pages/article/newPPM_08.htm).
 

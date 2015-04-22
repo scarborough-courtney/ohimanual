@@ -1,4 +1,4 @@
-**Disseminating Findings**
+##**Disseminating Findings**
 
 Once assessments have been completed it is critical to spend just as much time and energy planning how you will communicate the findings of your assessment to your multiple audiences.
 
@@ -10,4 +10,4 @@ When disseminating the results of your assessment to policy makers, focus on the
 
 When identifying ways to increase resilience scores, it can be helpful to run a few scenarios that would illustrate how scores might react to various policy changes. An example of this can be found in the [U.S. West coast case study](http://www.oceanhealthindex.org/Apps/OHI/Vault/Output?VaultID=7899&ts=1422972909) in which two policy scenarios were run.
 
-It is crucial to the success of these assessments to consistently re-assess your study region on an annual basis to see how it is responding to management decisions. It is only through continued monitoring of these resources that you will better understand how effective your management strategy and policies are and it is only through effective communication that informed decisions can be made. 
+It is crucial to the success of these assessments to consistently re-assess your study region on an annual basis to see how it is responding to management decisions. It is only through continued monitoring of these resources that you will better understand how effective your management strategy and policies are and it is only through effective communication that informed decisions can be made.

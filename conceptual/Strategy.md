@@ -1,4 +1,4 @@
-**Establishing Your Strategy**
+###**Establishing Your Strategy**
 
 Your strategy should be a results-based planning document that details the results and objectives that will be achieved through the assessment and the specific activities, human resources, and funding needed to achieve them.
 

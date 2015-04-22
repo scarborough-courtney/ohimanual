@@ -1,4 +1,4 @@
-**What is the Ocean Health Index?**
+##**What is the Ocean Health Index?**
 
 
 The Index defines a healthy ocean as one that can sustainably deliver a range of benefits to people both now and in the future. A healthy ocean in this definition is not necessarily a pristine ocean, although the Index allows for pristine systems as well as sustainably used systems to score highly. The benefits provided by the ocean are captured by the following ten broadly held public goals:
@@ -13,3 +13,5 @@ The Index defines a healthy ocean as one that can sustainably deliver a range of
 - [**Tourism and recreation**](TR_Philosophy) opportunities
 - [**Clean waters**](CW_Philosophy) and beaches for aesthetic and health values
 - [**Biodiversity**](BIO_Philosophy) of species and habitats
+
+The!Ocean!Health!Index!is!unique!as!an!ocean!assessment!tool!because!it!quantitatively! compares!and!combines!key!elements!from!all!dimensions!of!the!ocean’s!health!–!biological,! physical,!economic!and!social.!Consideration!of!so!many!topics!is!complex,!but!the!methods! employed!are!clearly!and!transparently!described,!so!scientists,!managers!and!the!public! can!understand!how!the!results!are!calculated!and!use!them!to!promote!an!increasingly! beneficial!future!for!ocean!ecosystems.!By!integrating!information!from!many!different! disciplines!and!sectors,!the!Index!represents!a!significant!advance!over!conventional!singleD sector!approaches!to!assessing!ocean!condition.!

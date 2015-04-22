@@ -1,4 +1,4 @@
-**Planning and Partnering with Decision Makers**
+##**Planning and Partnering with Decision Makers**
 
 >"The Index offers a tool to engage stakeholders and decision-makers in difficult but necessary discussions, while also helping agencies fulfill their mandates" (Halpern *et al.* 2014)
 

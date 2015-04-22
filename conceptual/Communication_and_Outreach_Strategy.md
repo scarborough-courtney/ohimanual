@@ -1,4 +1,4 @@
-**Communications and Outreach Strategy**
+###**Communications and Outreach Strategy**
 
 Your strategy will consist of both the creation of materials to communicate the findings of the assessment as well as an outreach plan that details how you will position yourself with your various audiences to gain leverage.
 

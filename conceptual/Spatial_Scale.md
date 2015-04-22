@@ -1,4 +1,4 @@
-**Determining the Spatial Scale**
+###**Determining the Spatial Scale**
 
 It is important to remember that the scale of your assessment should match the scale of decision-making.
 

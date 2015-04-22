@@ -1,4 +1,4 @@
-**Understand the Philosophy Behind the Framework**
+##**Understand the Philosophy Behind the Framework**
 
 Before conducting your own assessment it is important that you understand the philosophy behind the Index. In order to do so, one must carefully read through the methods, a copy of which can be found [here](www.oceanhealthindex.org/About/Methods/). We have also created a conceptual guide and training manual which can be found [here](www.ohi-science.org).
 

@@ -1,4 +1,4 @@
-**Establish Your Objectives**
+###**Establish Your Objectives**
 
 First, establish concrete objectives for the assessment itself: creating models, collecting and synthesizing data, analyzing spatial information, and writing programming code. Second, create short and long-term objectives highlighting intentions for the findings and iterative activities for future assessments.
 

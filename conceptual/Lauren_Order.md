@@ -65,3 +65,6 @@ Outreach_and_Communications.md
  Develop_and_Implement_Policies_and_Management_Interventions_that_Respond_to_the_Priorities.md
 
  Monitor_and_Re-evaluate_to_Determine_Policy_Effectiveness_and_Set_New_Priorities.md
+
+<!--Note, this doc could serve as a notes document as well since it's not rendered--->
+ <!---Note, OM removed 2nd instance of task timeline on 04-21-15--->

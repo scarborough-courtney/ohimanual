@@ -1,4 +1,4 @@
-**Understand the Requirements for Conducting an OHI Assessment**
+##**Understand the Requirements for Conducting an OHI Assessment**
 
 Before you begin actually running your assessment, it is crucial to have a full understanding of what will be required to complete a successful assessment. Running an assessment is a labor intensive process that requires collaboration, communication, funding, dedication and, perhaps most importantly, data.
 
