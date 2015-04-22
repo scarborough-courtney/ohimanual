@@ -1,17 +1,77 @@
  ## Best approaches for goals, pressures and resilience
- 
- 
- 
+
+
+
  ### Goals to approach together
 - do HAB-based goals together (CS, CP, HAB)
-- do FIS and FIS pressure together 
+- do FIS and FIS pressure together
 - do MAR and MAR pressure together
 
  #### Natural Products
- 
+
  - @Melsteroni's sweet NP description and table #370
- 
+
+ ###Biodiversity
+ ###SPP
+
+ #Biodiversity
+ ##Practical Considerations
+
+ <!---Summary of Mel's notes from #366--->
+
+ Here is information about this goal (for the Seaside chats).  I've also attached the power point in case we ever want this.
+
+ ### Biodiversity (BD): Assesses conservation status of species based on two subgoals
+ * Species (SPP)
+ * Habitat (HAB)
+
+ ### SPP: Based on two primary types of data
+ * Distribution of species (IUCN and aquamaps data)
+ * Extinction risk status (IUCN data)
+
+ ### Data: IUCN extinction risk status
+ ![image](https://cloud.githubusercontent.com/assets/5685517/7187757/bb6e1fe2-e427-11e4-819f-2cd8f3df6a67.png)
+ (there are also range maps available from their website)
+
+ ### Data: Aquamaps range maps
+ Species range maps are provided at 0.5 degree resolution:
+ ![image](https://cloud.githubusercontent.com/assets/5685517/7187777/de90fbde-e427-11e4-8463-195b4932ec27.png)
+
+ ### Calculations
+ (I am ignoring the area correction that must be done because 0.5 degree grid cells have different areas depending on latitude)
+
+ * STEP 1: Overlay all species distribution maps
+
+ ![image](https://cloud.githubusercontent.com/assets/5685517/7210756/6c5a57ee-e509-11e4-87c9-01e74fc1594e.png)
+
+ * STEP 2: For each cell, average the risk status of each species (Risk status = 1 - IUCN Weight)
+
+ * STEP 3: For each cell, calculate:
+ Condition = 1 - avg risk status
+
+ Then, calculate score based on a reference point of 0.75 (corresponds to an average of 75% of species are extinct, a level comparable to the five documented mass extinctions):
+
+ (Condition - 0.25) / 0.75 * 100
+
+ ![image](https://cloud.githubusercontent.com/assets/5685517/7210872/4ef14d9c-e50a-11e4-8366-26bc5e4a888a.png)
+
+ * STEP 4: Summarize cell values by country boundaries.
+ * STEP 5: Calculate trend: Repeat steps 2-4, but instead of using the IUCN risk status, use the IUCN population trend for each species:
+
+ Increasing = 0.5
+ Stable = 0
+ Decreasing = -0.5
+
+ (This is different from how we calculate most trends where we do a linear model of status over the past 5 years).
+
+ ### Potential limitations
+ Score is driven primarily by common species because we are doing something close to area weighted average of the scores (although its not exactly equivalent to an area weighted average).  Consequently, rare species that may have poor status scores do have much influence on the score.
+
+ Possible solution: Average the IUCN status of all species found in a region.  This way rare and common species will have the same weight.  This is how we have been calculating the scores for the iconic species subgoal (after subsetting the species data to include only iconics).
+
+ We will use both methods to calculate scores for OHI 2015.
+ [Species.pptx | uploaded via ZenHub](https://files.zenhub.io/553176e6fe51d46838aabe9f)
+
+
  #### SPP and ICO
 - @Melsteroni's SPP ppt from the seaside chat (attached here), and how this relates to Iconic Species too
-
- 
