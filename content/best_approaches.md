@@ -1,11 +1,17 @@
  ## Best approaches for goals, pressures and resilience
 
 
+<<<<<<< HEAD
  ## Goals to approach together
+=======
+
+ ### Goals to approach together
+>>>>>>> c11b2e15228ef685be13430788a4081d45514fa8
 - do HAB-based goals together (CS, CP, HAB)
 - do FIS and FIS pressure together
 - do MAR and MAR pressure together
 
+<<<<<<< HEAD
 ****
 
  ## Natural Products
@@ -49,6 +55,11 @@
  ### Preparing data
 
 ****
+=======
+ #### Natural Products
+
+ - @Melsteroni's sweet NP description and table #370
+>>>>>>> c11b2e15228ef685be13430788a4081d45514fa8
 
  ###Biodiversity
  ###SPP
@@ -109,6 +120,7 @@
  Possible solution: Average the IUCN status of all species found in a region.  This way rare and common species will have the same weight.  This is how we have been calculating the scores for the iconic species subgoal (after subsetting the species data to include only iconics).
 
  We will use both methods to calculate scores for OHI 2015.
+<<<<<<< HEAD
 
  ![How the raster cells interpret the species data](https://cloud.githubusercontent.com/assets/10619388/7287365/c41926a6-e908-11e4-8cfb-db2b85cecd38.png)
 
@@ -132,3 +144,10 @@ An advantage is (actually a disadvantage of averaging species scores at the eez 
 For now, we are going to calculate SPP using both methods and evaluate (or present both).  
 
 ***
+=======
+ [Species.pptx | uploaded via ZenHub](https://files.zenhub.io/553176e6fe51d46838aabe9f)
+
+
+ #### SPP and ICO
+- @Melsteroni's SPP ppt from the seaside chat (attached here), and how this relates to Iconic Species too
+>>>>>>> c11b2e15228ef685be13430788a4081d45514fa8
