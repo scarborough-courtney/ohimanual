@@ -13,7 +13,7 @@ Here's how we fixed it: we updated `git.exe` to the latest version, 2.2.1, edite
 
 1. To check your current version of `git.exe`, type this at the terminal command line:
     * `$ git --version` should return something like:
-    * `git version 2.2.1` (this is what you’d like to see)
+    * `git version 2.2.1` (check online to see if this is the latest version)
 2. To update, go to http://git-scm.com/download/mac, download the latest *git* for OS X, install it.  
 3. In terminal, type  `git --version` and verify that it reports the new version.  If it shows the new version, great!  Skip to Step 5.
     * Don't be sad if it doesn't!  If you still see the old version, the installer put the new version into a different directory, which has a lower priority in the search path, so now to update the search path.  The default Apple *git* seems to install the `git.exe` into `/usr/bin/` directory, this particular updater seems to install into `/usr/local/git/bin/` directory.  The search path needs to be updated to look for `git.exe` in the new directory first.
@@ -29,14 +29,20 @@ Here's how we fixed it: we updated `git.exe` to the latest version, 2.2.1, edite
         * see https://github.com/OHI-Science/ohiprep/wiki/Setup#git_identity for help on updating user.name and user.email
     * `credential.helper=osxkeychain`
         * (if you need to configure the credential helper: https://help.github.com/articles/caching-your-github-password-in-git/)
-6. Now while you are in Terminal, go ahead and clone a repository to your computer and push a test commit. Once you are prompted for your username and password, your info will get stored in the keychain:
-    * Steps (borrowed from these instructions): https://github.com/OHI-Science/ohiprep/wiki/Setup#git_identity
-    * Change your working directory: `cd github`
-    * Clone into a repository with a URL *for which you have permissions*, e.g: `git clone https://github.com/omalik/zaf.git`
-    * Change directory to that repository: `cd zaf`
-    * Check status: `git status`
-    * Push a test commit to that repository: `touch test.md` -> `git add test.md` -> `git commit -m "testing"` -> ` git status` -> `git push`
-    * Check status again: `git status`
+6. Now while you are in Terminal, it is important to sync with a repository to establish your security credentials. You must clone a repository and push a 'test' commit, and then once you are prompted for your username and password your information will get stored in the keychain. Here are the steps:
+    * Change your working directory to your local github directory: `$ cd github`
+       * (Tip: you can check if you're in the right folder by entering `pwd`, short for "print working directory"; or you could look at the line of code preceding the "$".)
+    * Clone into a repository with a URL *for which you have permissions*. As an example, the following steps use a repository called 'ZAF' but you should use your own URL with a three-letter country code in place of 'ZAF':
+       * `$ git clone  https://github.com/omalik/zaf.git`
+    * Change your working directory to the folder you just created (here, 'ZAF'): `$ cd zaf`
+    * Push a test commit to repository 'ZAF':
+       * `$ touch test.md`
+       * `$ git add test.md`
+       * `$ git commit -m "testing"`
+       * `$ git status`
+       * `$ git push`
+       * Check your status again: `$ git status`
+         * (TIP: You can check your status with `$ git status` and you can use 'ls' to see if your new changes have registered in this repository.)
 7. Now that *git* is updated and your username and password are set, make sure RStudio knows the location of the new `git.exe`.  In RStudio, select **Tools > Global Options…**, select the `Git/SVN`, and browse to the new `Git executable` (it should appear as `/usr/local/git/bin/git` if you updated your *git* version as above).
 ![Checking the options in RStudio for the git executable path.](https://docs.google.com/drawings/d/1Y3NrM8mvhRqsMrF2wkTjA0b_Rgfl_2nwU2J6C4p-VUw/pub?w=581&h=542)
 
