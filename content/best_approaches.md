@@ -1,18 +1,17 @@
  ## Best approaches for goals, pressures and resilience
 
-
-<<<<<<< HEAD
  ## Goals to approach together
-=======
 
- ### Goals to approach together
->>>>>>> c11b2e15228ef685be13430788a4081d45514fa8
 - do HAB-based goals together (CS, CP, HAB)
 - do FIS and FIS pressure together
 - do MAR and MAR pressure together
+- also Baltic team's plan of action
 
-<<<<<<< HEAD
 ****
+
+ - @Melsteroni's sweet NP description and table #370
+
+ ****
 
  ## Natural Products
 
@@ -54,12 +53,6 @@
 
  ### Preparing data
 
-****
-=======
- #### Natural Products
-
- - @Melsteroni's sweet NP description and table #370
->>>>>>> c11b2e15228ef685be13430788a4081d45514fa8
 
  ###Biodiversity
  ###SPP
@@ -150,4 +143,3 @@ For now, we are going to calculate SPP using both methods and evaluate (or prese
 
  #### SPP and ICO
 - @Melsteroni's SPP ppt from the seaside chat (attached here), and how this relates to Iconic Species too
->>>>>>> c11b2e15228ef685be13430788a4081d45514fa8

@@ -1,6 +1,10 @@
 ---
 output: html_document
 ---
+
+Updated: 2015_04_15
+
+
 Need_For_and_Benefits_of_OHI.md
 
 Task_Timeline.md
@@ -8,6 +12,17 @@ Task_Timeline.md
 Phase_One.md
 
   - What_is_OHI.md
+
+  'FP_Philosophy.md',
+  'AO_Philosophy.md',
+  'NP_Philosophy.md',
+  'CS_Philosophy.md',
+  'CP_Philosophy.md',
+  'LE_Philosophy.md',
+  'TR_Philosophy.md',
+  'SP_Philosophy.md',
+  'CW_Philosophy.md',
+  'BD_Philosophy.md',
 
   - Why_ten_goals.md
 

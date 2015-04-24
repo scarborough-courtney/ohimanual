@@ -1,6 +1,5 @@
 # Ocean Health Index, Santa Barbara, CA
-# Omar Malik
-# last updated: 21 April 2015
+# last updated: 24 April 2015
 
 ##### Summary: the goal of this code is to combine the text in the `conceptual` folder into one markdown document for reading and editing purposes.
 
@@ -36,7 +35,7 @@ cat_mdv2 = function(
 }
 
 
-# Step B. This is the order of contents. Change it as needed, noting that these files must be in this directory for the time being.
+# Step B. This is the order of contents. Change it as needed, noting that these files must be in this directory for the time being. If we want to string 'content' and 'conceptual' together, we'll have to change the wd's.
 
 in_mdv2 = c(
   'Need_For_and_Benefits_of_OHI.md',
@@ -44,6 +43,16 @@ in_mdv2 = c(
   'Phase_One.md',
   'What_is_OHI.md',
   'Why_ten_goals.md',
+  'FP_Philosophy.md',
+  'AO_Philosophy.md',
+  'NP_Philosophy.md',
+  'CS_Philosophy.md',
+  'CP_Philosophy.md',
+  'LE_Philosophy.md',
+  'TR_Philosophy.md',
+  'SP_Philosophy.md',
+  'CW_Philosophy.md',
+  'BD_Philosophy.md',
   'How_Are_Goals_Weighted.md',
   'Reference_Points.md',
   'How_Is_The_Index_Calculated.md',
@@ -95,11 +104,11 @@ out_mdv2 = 'ohi-concguide.md' # <- this is the output "final" file.
 cat_mdv2(in_mdv2, out_mdv2)               # use own md ordered file listing , output to ohi-manual.md
 pfx = tools::file_path_sans_ext(out_mdv2)
 
-# This is the final step to output to either a .md file for now (.html looks weird). Next: use the complex "render_html" etc. for website styling...
+# This is the final step to output to either a .md file for now. Next step: use the complex "render_html" etc. for website styling...
 knit(out_mdv2, "ohi-concguide.md", text = NULL)
 
 knit2html('ohi-concguide.md', 'ohi-concguide.html') # update: this is easier to read, IMHO, so I'll render this output to html too while we're at it...
 
 
 
-# Step D. Continue editing! (Note: the philosophies aren't in here yet)
+# Step D. Continue editing!

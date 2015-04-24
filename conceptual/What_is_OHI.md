@@ -9,9 +9,7 @@ The Index defines a healthy ocean as one that can sustainably deliver a range of
 - [**Carbon storage**](CS_Philosophy) in coastal habitats
 - [**Coastal protection**](CP_Philosophy) from inundation and erosion
 - [**Sense of place**](SP_Philosophy) from culturally valued iconic species, habitats, and landscapes
-- [**Livelihoods and economies**](LE_Philosophy) from coastal and ocean-dependent communties
+- [**Livelihoods and economies**](LE_Philosophy) from coastal and ocean-dependent communities
 - [**Tourism and recreation**](TR_Philosophy) opportunities
 - [**Clean waters**](CW_Philosophy) and beaches for aesthetic and health values
 - [**Biodiversity**](BIO_Philosophy) of species and habitats
-
-The!Ocean!Health!Index!is!unique!as!an!ocean!assessment!tool!because!it!quantitatively! compares!and!combines!key!elements!from!all!dimensions!of!the!ocean’s!health!–!biological,! physical,!economic!and!social.!Consideration!of!so!many!topics!is!complex,!but!the!methods! employed!are!clearly!and!transparently!described,!so!scientists,!managers!and!the!public! can!understand!how!the!results!are!calculated!and!use!them!to!promote!an!increasingly! beneficial!future!for!ocean!ecosystems.!By!integrating!information!from!many!different! disciplines!and!sectors,!the!Index!represents!a!significant!advance!over!conventional!singleD sector!approaches!to!assessing!ocean!condition.!
