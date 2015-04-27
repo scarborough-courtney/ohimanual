@@ -13,6 +13,14 @@
 
  ****
 
+ **History of the Approach (lessons learned 2014)**
+ <!---Taken from Conceptual Guide v2--->
+
+>Overall Model:
+For each goal and sub-goal model and for each assessment, we will describe the models, evolution of the approach, reference point, how to interpret the score, and also recommendations for conducting regional assessments. When appropriate, we provide recommendations at both the goal and sub-goal levels.
+
+***
+
  ## Natural Products
 
  ### Data overview
