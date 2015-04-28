@@ -63,3 +63,10 @@ What makes a good function:
 * switch vs list?
 * ifelse?
 * apply functions?
+
+##Directories and files
+* avoid setwd() - stay in one location, but use variables to point to different locations
+* file.path(), expand.pathname() or whatever
+* write a script or function to use getwd() to automatically identify:
+    * local computer name/home github directory
+    * network location, e.g. Neptune
