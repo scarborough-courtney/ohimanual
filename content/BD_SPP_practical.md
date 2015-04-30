@@ -6,14 +6,15 @@
 
 Ideally, data would be available on the number of species, their habitat range, and assessments of their population or conservation status. The type of reference point used will depend on the data available.
 
+<!---Note from GitHub Issue #406-->
+
+that SPP is the only goal with an upper and lower ref pt
+if you have great data on SPP, you don't need the HAB part of the BD goal.
 
 <!---Summary of Mel's notes from #366--->
 
-Here is information about this goal (for the Seaside chats).  I've also attached the power point in case we ever want this.
-
-### Biodiversity (BD): Assesses conservation status of species based on two subgoals
-* Species (SPP)
-* Habitat (HAB)
+*****
+##Preparing Data
 
 ### SPP: Based on two primary types of data
 * Distribution of species (IUCN and aquamaps data)
@@ -84,11 +85,10 @@ An advantage is (actually a disadvantage of averaging species scores at the EEZ 
 
 For now, we are going to calculate SPP using both methods and evaluate (or present both).  
 
-***
-=======
- [Species.pptx | uploaded via ZenHub](https://files.zenhub.io/553176e6fe51d46838aabe9f)
 
-*****
+![How the raster cells interpret the species data](https://cloud.githubusercontent.com/assets/10619388/7287365/c41926a6-e908-11e4-8cfb-db2b85cecd38.png)
+
+****
 
 ##**History of the Approach (lessons learned 2014)**
 <!---Taken from Conceptual Guide v2--->

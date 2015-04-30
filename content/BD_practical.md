@@ -1,6 +1,10 @@
 ##Biodiversity
 ###Practical Considerations
 
+### Biodiversity (BD): Assesses conservation status of species based on two subgoals
+* Species (SPP)
+* Habitat (HAB)
+
 ##**History of the Approach (lessons learned 2014)**
 <!---Taken from Conceptual Guide v2--->
 
@@ -10,3 +14,8 @@ People value biodiversity in particular for its existence value. The risk of spe
 ###Recommendations for regional assessments:
 
 If comprehensive species biodiversity data exist, these data can be used alone and the sub-goal of habitats can be removed (so that the entire goal is species biodiversity). However, the inventory of marine biodiversity may not often be sufficiently complete to permit that.
+
+<!---Note from GitHub Issue #406-->
+
+that SPP is the only goal with an upper and lower ref pt
+if you have great data on SPP, you don't need the HAB part of the BD goal.
