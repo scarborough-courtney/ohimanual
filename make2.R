@@ -7,7 +7,7 @@
 # Note: this code is mainly copied form `make.R` but changed all instances of variables to "v2" just in case.
 
 # load libraries ----
-library(knitr)
+library(knitr) # install.packages("rmarkdown")
 library(rmarkdown)
 library(stringr)
 
@@ -43,6 +43,7 @@ in_mdv2 = c(
   'Phase_One.md',
   'What_is_OHI.md',
   'Why_ten_goals.md',
+  'How_Are_Goals_Weighted.md',
   'FP_Philosophy.md',
   'AO_Philosophy.md',
   'NP_Philosophy.md',
@@ -53,13 +54,13 @@ in_mdv2 = c(
   'SP_Philosophy.md',
   'CW_Philosophy.md',
   'BD_Philosophy.md',
-  'How_Are_Goals_Weighted.md',
   'Reference_Points.md',
   'How_Is_The_Index_Calculated.md',
   'Understanding_Status.md',
   'Understanding_Trend.md',
   'Understanding_Pressures.md',
   'Understanding_Resilience.md',
+  'Pres_Resi_interactions.md',
   'Understand_Philosophy_of_Index.md',
   'Understand_Scales_of_Assessement.md',
   'Determine_the_Need_and_Purpose.md',
@@ -85,7 +86,8 @@ in_mdv2 = c(
   'Disseminating_Findings.md',
   'Communicate_Results_with_Partners.md',
   'Develop_and_Implement_Policies_and_Management_Interventions_that_Respond_to_the_Priorities.md',
-  'Monitor_and_Re-evaluate_to_Determine_Policy_Effectiveness_and_Set_New_Priorities.md')
+  'Monitor_and_Re-evaluate_to_Determine_Policy_Effectiveness_and_Set_New_Priorities.md',
+  'glossary.md')
 
 out_mdv2 = 'ohi-concguide.md' # <- this is the output "final" file.
 

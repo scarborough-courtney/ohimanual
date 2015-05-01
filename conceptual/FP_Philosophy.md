@@ -9,7 +9,7 @@ The aim of this goal is to maximize the sustainable harvest of seafood in region
 
       Ideally, data for catch and effort of every commercially - and recreationally-fished species would be available, as well as the functional relationship between fish population size (biomass) and fisheries effort, so that maximum sustainable yield (MSY) could be calculated. Then, fisheries catch and effort information would be used to calculate the present state and MSY would be used to set the reference point. Current status would be calculated using the present state of every individual species and combining each species together, as the weighted proportion of total catch.
 
-  - **Mariculutre**
+  - **Mariculture**
       This sub-goal measures the ability to obtain maximal seafood yield from farm-raised facilities without damaging the ocean's ability to continue providing fish for people in the future.
 
       Mariculture practices must not inhibit the future production of seafood in the area. This means mariculture practices must be sustainable and also maximize the amount of food production that is physically possible and desired by regional governments and those who buy, sell and eat that food.
