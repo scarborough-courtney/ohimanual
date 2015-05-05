@@ -5,15 +5,16 @@
 
 Ideally, this goal would include some measure of how easy or hard it is for people to access ocean resources when they need them and an assessment of the (un)sustainability of harvest of all nearshore stocks used by artisanal fishermen. The type of reference point used will depend on the data available.
 
+###**Recommendations for regional assessments:**
+
+Regional assessments will likely modify the model using different or better-resolved data. This goal should be based on access: physical, economic, regulatory, and availability of stocks—as much as data allow.  A combination of all of these would be best.
+
 **History of the Approach (lessons learned 2014)**
 <!---Taken from Conceptual Guide v2--->
 
 This goal captures the access people have to coastal resources, whether or not they actually do fish in coastal waters. The amount of seafood caught, if reported, is contained within the Food Provision goal (or possibly the Natural Products goal); and any wages or revenue, are not included here but instead in the Livelihoods and Economies goal. Instead, this goal specifically tries to estimate whether individuals or households have the access to the sea that they need for their own survival.  Status for this goal is estimated as a function of need for artisanal fishing opportunities and whether or not the opportunity is permitted and/or encouraged institutionally, and whether artisanal fishing could be sustainable. It measures the potential for artisanal fishing whether or not this potential is actually met.
 
-###Recommendations for regional assessments:
-Regional assessments will likely modify the model using different or better-resolved data. This goal should be based on access: physical, economic, regulatory, and availability of stocks—as much as data allow.  A combination of all of these would be best.
-
-####Model description:
+####Model descriptions
 
 **Global 2012:**
 Status for this goal is measured as the demand for opportunities to fish artisanally. Demand is estimated using poverty levels as proxy, measured by the gross domestic product (GDP) per capita, adjusted by the purchasing power parity. The supply was estimated using an indicator that ranked how well regions regulated and supported artisanal fishing, as part of a study by Mora et al. (2009). This assessment did not incorporate a measure of the health of the targeted species or of sustainability of the fishing practices as a standardized artisanal harvest database was not available at a global scale.

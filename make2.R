@@ -36,6 +36,7 @@ cat_mdv2 = function(
 
 
 # Step B. This is the order of contents. Change it as needed, noting that these files must be in this directory for the time being. If we want to string 'content' and 'conceptual' together, we'll have to change the wd's.
+# note: to seam in pages from `content`, use the following format below:   '~/github/ohimanual/content/AO_practical.md',
 
 in_mdv2 = c(
   'Need_For_and_Benefits_of_OHI.md',
