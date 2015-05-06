@@ -4,7 +4,7 @@ title: The Ocean Health Index Conceptual Guide
 
 #**Need for and Benefits of an Ocean Heath Index**
 
-Marine management mandates in the current financially constrained environments are increasingly requiring the establishment of comprehensive management objectives that maximize sustainable production while maintaining healthy oceans. This requires a cycle of measuring conditions, developing and enacting strategic responses, and continuous monitoring. The Ocean Health Index (hereafter the ‘Index’) was developed to support this growing need by providing a framework that quantifies overall ecosystem health, which can be tailored to any spatial context, both political and ecological. The Index is the first assessment tool that provides a common platform for scientifically combining and comparing key elements from all dimensions of the oceans health — biological, physical, economic and social – to measure how sustainably people are using the ocean. The Index provides a tool to measure and track changes in several ocean and coastal dimensions through a repeatable, transparent, quantitative, and goal-driven approach. It was developed as a framework to assess coastal oceans in a formulaic manner, and was designed to be customizable to different spatial scales, data availability, and cultural priorities. As a management tool, the Index can help inform decision-making by helping stakeholders identify geographic and thematic priorities, which increases the cost-effectiveness of management interventions.
+Marine management mandates in the current financially constrained environments are increasingly requiring the establishment of comprehensive management objectives that maximize sustainable production while maintaining healthy oceans. This requires a cycle of measuring conditions, developing and enacting strategic responses, and continuous monitoring. The Ocean Health Index (OHI, or the ‘Index’) was developed to support this growing need by providing a framework that quantifies overall ecosystem health, which can be tailored to any spatial context, both political and ecological. The Index is the first assessment tool that provides a common platform for scientifically combining and comparing key elements from all dimensions of the oceans health — biological, physical, economic and social – to measure how sustainably people are using the ocean. The Index provides a tool to measure and track changes in several ocean and coastal dimensions through a repeatable, transparent, quantitative, and goal-driven approach. It was developed as a framework to assess coastal oceans in a formulaic manner, and was designed to be customizable to different spatial scales, data availability, and cultural priorities. As a management tool, the Index can help inform decision-making by helping stakeholders identify geographic and thematic priorities, which increases the cost-effectiveness of management interventions.
 
 Overall Index scores are a combination of ten components, or ‘goals’, of ocean health. These scores are calculated using the best available data and indicators at the scale of the assessment. Scores reflect how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to a reference point (or target), on a scale of 0 to 100. By combining ocean and coastal benefits under a single framework, the Index allows for a comprehensive and integrated view of marine systems as well as a better understanding of potential trade-offs or synergies among these goals. This structured, but highly tailorable, framework provides a consistent platform from which to conduct assessments through time, and at any spatial scales desired.
 
@@ -62,8 +62,8 @@ The recommended process and criteria presented in this section offer a systemati
 
 The Index defines a healthy ocean as one that can sustainably deliver a range of benefits to people both now and in the future. A healthy ocean in this definition is not necessarily a pristine ocean, although the Index allows for pristine systems as well as sustainably used systems to score highly. The benefits provided by the ocean are captured by the following ten broadly held public goals:
 
-- [**Food provision**](FP_Philosophy) from sustainably harvested or cultured stocks
-- [**Artisanal opportunities**](AO_Philosophy) for local communities from sustainable practices
+- [**Food provision**](ohi-concguide.html#FP_Philosophy) from sustainably harvested or cultured stocks
+- [**Artisanal opportunities**](#AO_Philosophy) for local communities from sustainable practices
 - [**Natural products**](NP_Philosophy), including pharmaceuticals and decorative materials, that are sustainably extracted
 - [**Carbon storage**](CS_Philosophy) in coastal habitats
 - [**Coastal protection**](CP_Philosophy) from inundation and erosion
@@ -85,9 +85,9 @@ The Index can also accommodate additional goals if they better reflect what loca
 
 ##**How are the goals weighted?**
 
-The goals are currently (and by default in the OHI Toolbox) weighted equally. However, weighting can be changed depending on your local values, if information on these values is available. Stakeholders may have differing priorities, but when presented with the portfolio of goals used in the Ocean Health Index, these differences can become less pronounced, as was found in a recent study by Halpern *et al.* (2013) in *Marine Policy*.
+The goals are currently weighted equally in OHI calculations. However, in your OHI+ assessment the weighting can be changed depending on your local context. Stakeholders may have differing priorities, but when presented with the portfolio of goals used in the Ocean Health Index, these differences can become less pronounced, as was found in a study by Halpern *et al.* (2013) in *Marine Policy*. This would require good data, of course, such as the information collected through a representatively sample survey.
 
-**Food Provision**
+##**Food Provision**
 
 The aim of this goal is to maximize the sustainable harvest of seafood in regional waters from wild-caught fisheries and mariculture (ocean-farmed seafood). Regions are rewarded for maximizing the amount of sustainable seafood provided and penalized for unsustainable practices and/or under-harvest. Because fisheries and mariculture are separate industries with very different feature, each is tracked separately as a unique sub-goal and combined after each is weighted by the proportion of the total yield it contributes to total food provision.
 
@@ -187,7 +187,7 @@ The sense of place goal aims to capture the level of protection for aspects of t
 
 **Clean Waters**
 
-This goal captures the degree to which waters are polluted by natural and man-made causes.
+This goal captures the degree to which waters are polluted by natural and human-made causes.
 
 People enjoy the presence of unpolluted estuarine, coastal, and marine waters for their aesthetic value and because they help avoid detrimental health effects to people or the marine life on which they depend. Many things can be responsible for negatively affecting clean waters, including sewage pollution (fecal coliform, viruses, parasites), nutrient runoff (eutrophication, algal blooms), chemical pollution (oil spills), and marine debris (floating trash). Combining the scores for these pollutants with a geometric mean ensures that just one of the pollutants can drive the model, with the philosophy that if one of the pollutants is greatly impacting the system, how the others are affecting the system is less critical because there is already great impact.
 
@@ -267,17 +267,32 @@ Resilience is the sum of the ecological factors and social initiatives (policies
 
 <!---Add new section on guidance for resilience metrics for countries--->
 
-##Interactions, Pressures, Resilience
+###Guide to searching for resilience metrics
 
-Pressures and resilience are ultimately important for scores, but they have a smaller contribution to the overall scores because we can only approximate their effects. Individual pressures are ranked for their importance to different goals based on published studies and expert opinion. Resilience actions are the best way to improve a score, because they can reduce pressures, protect ocean habitats and species, improve status, and optimize benefits to people.
+In practical terms, resilience is hard to define and you may have to get creative to develop appropriate assessment measures for these pressure layers.
 
-**The figure below** shows stressors by category, and the resilience measures meant to 'balance' (or counteract) them for the global assessment. Note that resilience layers are only available for some categories and goals. Also, some resilience measures are goal-specific; that is, they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in the status specific goals (e.g. sustainable tourism, lower bycatch, etc.), you can include them as resilience measures.
+A resilience measure can be a law, a policy, or a performance evaluation that speaks to the effectiveness of a policy instrument. It can be metrically be defined as presence-versus-absence (zero or one), or on a scale if the measure is an assessment or score. For instance in the 2013 Global OHI study, the resilience measures that were counted in the socio-economic resilience class was data from the World Governance Indicators (http://govindicators.org). In a regional context, however, a more appropriate data layer might be a local governance index of some kind, preferably developed by a reputable organization using credible methods.
+
+####Ideal Approach <!---source from 2012 Global SM--->
+
+Ideally, assessments of social resilience would include state and federal level rules and other relevant institutional mechanisms as well. However, such information is extremely difficult
+to access for every single country, and so we relied on global datasets that focus on international treaties and assessments. Another key gap is information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management in many settings. Information on these institutions is also extremely difficult to find at a global scale, although the WGI partly measures their effectiveness through its inclusion of corruption indices.
+
+##**Interactions: Pressures and Resilience**
+
+Ecological and social resilience are similarly assessed separately and then combined with equal weighting, which could also be changed based on expert opinions. Any new resilience measure must be associated with a pressures layer.
+
+**The figure below** shows stressors by category, and the resilience measures meant to 'balance' (or counteract) them for the global assessment. Note that resilience layers are only available for some categories and goals. Also, some resilience measures are goal-specific; that is, they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in the status specific goals (e.g., sustainable tourism, lower bycatch, etc.), you can include them as resilience measures.
 
 ![Each resilience data layer should have a corresponding pressures layer, and vice versa. Note that a pressure layer becomes (1-resilience) in cases where only resilience data are available, due to data limitations.](https://docs.google.com/drawings/d/19ZBIhzTrNlumV9ZhCmsdEcvybFHp-eN5P5IFAsFmql0/pub?w=558&h=721)
 
+Pressures and resilience are ultimately important for scores, but they have a smaller contribution to the overall scores because we can only approximate their effects. Individual pressures are ranked for their importance to different goals based on published studies and expert opinion. Resilience actions are the best way to improve a score, because they can reduce pressures, protect ocean habitats and species, improve status, and optimize benefits to people.
+
 ###Combining Categories
 
-The Toolbox calculates pressures in five ecological pressure categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social pressure category. The reason behind the ecological categories is to avoid hidden weighting (e.g. overrepresentation of pressures for which there is more data). For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the scores of each individual stressor, pollution scores would have a greater influence on the results (stronger weight) due to the relative higher availability of measurements of various pollutants. Instead, aggregating by pressure categories ensures that different stressor types influence the score based on ranks. Nonetheless, the scores are combined in a cumulative way within each category to account for the fact that multiple stressors within a category have a cumulative impact that is greater than if only one of the stressors were present. The resulting scores for the five ecological categories are averaged to produce a single ecological pressures score. This score is then averaged with the social pressures score to produce the final overall pressure score.
+The OHI Toolbox calculates pressures in five ecological pressure categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social pressure category. The reason behind the ecological categories is to avoid hidden weighting (e.g. overrepresentation of pressures for which there is more data). For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the scores of each individual stressor, pollution scores would have a greater influence on the results (stronger weight) due to the relative higher availability of measurements of various pollutants. Instead, aggregating by pressure categories ensures that different stressor types influence the score based on ranks. Nonetheless, the scores are combined in a cumulative way within each category to account for the fact that multiple stressors within a category have a cumulative impact that is greater than if only one of the stressors were present. The resulting scores for the five ecological categories are averaged to produce a single ecological pressures score. This score is then averaged with the social pressures score to produce the final overall pressure score.
+
+A similar combination method occurs for the resilience layers in the OHI Toolbox.
 
 ##**Understand the Philosophy Behind the Framework**
 

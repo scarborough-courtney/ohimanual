@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-Updated: 2015_04_15
+Updated: 2015_05_05
 
 
 Need_For_and_Benefits_of_OHI.md
@@ -25,25 +25,16 @@ Phase_One.md
   'BD_Philosophy.md',
 
   - Why_ten_goals.md
-
   - How_Are_Goals_Weighted.md
-
   - Reference_Points.md
-
   - How_Is_The_Index_Calculated.md
-
   - Understanding_Status.md
-
   - Understanding_Trend.md
-
   - Understanding_Pressures.md
-
   - Understanding_Resilience.md
 
 Understand_Philosophy_of_Index.md
-
 Understand_Scales_of_Assessment.md
-
 Determine_the_Need_and_Purpose.md
 
 Phase_two.md
@@ -81,5 +72,4 @@ Outreach_and_Communications.md
 
  Monitor_and_Re-evaluate_to_Determine_Policy_Effectiveness_and_Set_New_Priorities.md
 
-<!--Note, this doc could serve as a notes document as well since it's not rendered--->
  <!---Note, OM removed 2nd instance of task timeline on 04-21-15--->

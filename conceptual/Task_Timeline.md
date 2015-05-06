@@ -2,7 +2,7 @@
 
 <!---This page needs to be updated--->
 
-The Task Timeline (seen below) provides the steps involved in conducting Ocean Health Index assessments as well as the suggestions of the skills involved for doing so. The process of calculating he Index is not necessarily linear: there is a lot of 'back-and-forth' in regards to making the best decisions. For example, gathering appropriate data for each gaol, pressures, and resilience requires thinking about how to calculate reference points. It is possible that data sources will need to change as the process gets further along if it becomes clear that models should be further modified.
+The Task Timeline provides the steps involved in conducting Ocean Health Index assessments. It also suggests the types of skills required while doing so. The process of calculating the Index is not necessarily linear: there is a lot of iteration and discussion among the team to make the best decisions. For example, gathering appropriate data for each status, pressure, and resilience layer requires thinking about how to calculate their reference points at the same time. It is possible that data sources will need to change during the process and goal models will have to be modified as well.
 
 ![](./Figures/task_timeline-01.png)
 
@@ -10,8 +10,9 @@ The Task Timeline outlines three phases that occur through time. The time requir
 
 The phases and tasks outlined in the Task Timeline are:
 
-- **Phase 1:** Starting decisions an conceptual understanding
-- **Phase 2:** Data discovery & acquisition, reference points & models, preparing data and using the Toolbox App
-- **Phase 3:** Documentation & publishing, policy & communication
+- **Phase 1:**Learn
+- **Phase 2:**Plan
+- **Phase 3:**Conduct
+- **Phase 4:**Communicate
 
 Further supporting documentation, including examples, will be available for many of these steps soon.

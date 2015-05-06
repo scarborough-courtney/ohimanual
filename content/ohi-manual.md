@@ -3,14 +3,14 @@ title: The Ocean Health Index Assessment Manual
 ---
 
 # Introduction
-  
+
 ## The Ocean Health Index
 
 **The Ocean Health Index (OHI)** project was created with a strong foundation in communication and collaboration. Following the initial publication by Halpern *et al*. 2012 in *Nature*, we have conducted global assessments annually (in 2013, 2014, and ongoing), and have conducted smaller-scale assessments for the U.S. West Coast (Halpern *et al.* 2014), Fiji (Selig *et al.* in press), and Brazil (Elfes *et al.* 2014).
 
-We have also developed the **OHI Toolbox** and **WebApps** to enable any group to conduct independent assessments using the OHI framework and modifying it to their needs. The Toolbox enables the OHI framework to be customized to any area of interest, incorporating whatever goals, data, indicators, and priorities regarding ocean-derived benefits that are relevant and available to the chosen spatial scale. Information is presented through the WebApps, which are used for orientation, visualization, and reporting.   
+We have also developed the **OHI Toolbox** and **WebApps** to enable any group to conduct independent assessments using the OHI framework and modifying it to their needs. The Toolbox enables the OHI framework to be customized to any area of interest, incorporating whatever goals, data, indicators, and priorities regarding ocean-derived benefits that are relevant and available to the chosen spatial scale. Information is presented through the WebApps, which are used for orientation, visualization, and reporting.
 
-This manual provides information for: 
+This manual provides information for:
 
 1. Planning an assessment
 2. Navigating the OHI WebApp to visualize data at global and regional scales
@@ -417,7 +417,7 @@ The rank weights used in the pressures matrix were determined by Halpern *et al*
 
 * 3 = high pressure
 * 2 = medium pressure
-* 1 = low pressure 
+* 1 = low pressure
 
 Stressors that have no impact are not included rather than being assigned a rank of zero, which would affect the average score. Pressures are ranked rather than being represented as a binary (yes/no) measure because the range of consequence of different pressures on each goal can be quite large, and to classify all those pressures as a simple 'yes' would give too much influence to the weakest stressors. For example, food provision is most heavily impacted by unsustainable, high-bycatch fishing, but pollution does have some impact on fish populations. Without a weighting system, these stressors would be treated equally in their impact on the food provision goal.
 
@@ -486,7 +486,7 @@ These distinctions won't always apply for smaller-scale assessments. For example
 
 ### Incorporating local resilience measures in your assessment
 
-Finding appropriate resilience measures is difficult. It is often difficult to find regulations and indicators that would directly 'balance' individual stressors, but it is worth the effort to explore what information is available in the local context and how it could be included as resilience measures. As previously mentioned, you may be able to construct your own set of indicators for resilience (particularly social resilience) using proxy data. 
+Finding appropriate resilience measures is difficult. It is often difficult to find regulations and indicators that would directly 'balance' individual stressors, but it is worth the effort to explore what information is available in the local context and how it could be included as resilience measures. As previously mentioned, you may be able to construct your own set of indicators for resilience (particularly social resilience) using proxy data.
 
 1. Begin by exploring how resilience could be measured in your study area. What laws and regulations are in place that could provide resilience to ocean health?
 2. Are there locally-developed indices that capture social or ecological resilience? Is there information about how each region in your study area are implementing or enforcing the laws?
@@ -1386,7 +1386,7 @@ To completely remove the carbon storage goal from Index calculations, you will d
 
 ## Other example modifications
 
-### Preparing the fisheries sub-goal 
+### Preparing the fisheries sub-goal
 
 Here is some background information about how to prepare fisheries data layers for the Toolbox.
 
@@ -1401,8 +1401,8 @@ Here is some background information about how to prepare fisheries data layers f
 
 `fis_b_bmsy`
 
-* *for species*: B/Bmsy estimate (either from formal stock assessment, or from a data-poor method such as CMSY)    
-* *for genus/family/broader taxa*: the toolbox will use median B/Bmsy from species in that region + a penalty for not reporting at species level. In order for the code to assign the correct penalty, the taxa need to include a numerical code of 6 digits, where the first digit behaves like an ISSCAAP code (the standardized species codes used by FAO): 6 means species, 5 means genus, 4 to 1 are increasingly broad taxonomic groups    
+* *for species*: B/Bmsy estimate (either from formal stock assessment, or from a data-poor method such as CMSY)
+* *for genus/family/broader taxa*: the toolbox will use median B/Bmsy from species in that region + a penalty for not reporting at species level. In order for the code to assign the correct penalty, the taxa need to include a numerical code of 6 digits, where the first digit behaves like an ISSCAAP code (the standardized species codes used by FAO): 6 means species, 5 means genus, 4 to 1 are increasingly broad taxonomic groups
 * *data source (for CMSY)*: catch time-series (at least 10 years of catch >0), species resilience (if available)  
 
 **Example data:**
@@ -1415,14 +1415,14 @@ Here is some background information about how to prepare fisheries data layers f
 
 
 NOTE: if a species that is caught in different sub-regions belongs to the same population, you don't want to split the catch among sub-regions, instead, you want to sum catch across all sub-regions, so you can calculate B/Bmsy for the whole population. For the global analysis we grouped all species catch by FAO major fishing area (www.fao.org/fishery/area/search/en), indicated in the column *fao_id*, assuming that all species caught within the same FAO area belonged to the same stock, while we assumed that the same species, if caught in a different fishing area, belonged to a separate stock.  
-Use *fao_id* as an identifier that separates different fisheries 'stocks' belonging to the same species.   
+Use *fao_id* as an identifier that separates different fisheries 'stocks' belonging to the same species.
 If you don't have multiple stocks in your study area, set all *fao_id* = 1.  
 
 `fis_meancatch`:
 
 * average catch across all years, per species, per region  
-* *data source*: catch time-series (at least 10 years of catch >0), with a unique identifier for each population that you want to assess separately   
- 
+* *data source*: catch time-series (at least 10 years of catch >0), with a unique identifier for each population that you want to assess separately
+
 **Example data:**
 
 |fao_saup_id |taxon_name_key             |year |mean_catch  |
@@ -1431,11 +1431,11 @@ If you don't have multiple stocks in your study area, set all *fao_id* = 1.
 |37_8        |Atherinidae_400218         |2014 |27.30120156 |
 |37_8        |Balistes capriscus_607327  |2014 |3.247883895 |
 
-The *taxon_name_key* column indicates the name of the species (e.g. Aristeus antennatus) and its 'taxonkey'. The taxonkey is a 6 digit numeric code used by the Sea Around Us Project, modified from FAO codes. The important element of this code is the first digit, because it reflects the taxonomic level (6=species, 5=genus, 4=family, etc.) of the reported catch.The toolbox uses this first digit to assign a score to all catch that was not reported at species level, taking the median of the B/Bmsy of assessed species, and adding a penalty that is increasingly strong for coarser taxa.    
+The *taxon_name_key* column indicates the name of the species (e.g. Aristeus antennatus) and its 'taxonkey'. The taxonkey is a 6 digit numeric code used by the Sea Around Us Project, modified from FAO codes. The important element of this code is the first digit, because it reflects the taxonomic level (6=species, 5=genus, 4=family, etc.) of the reported catch.The toolbox uses this first digit to assign a score to all catch that was not reported at species level, taking the median of the B/Bmsy of assessed species, and adding a penalty that is increasingly strong for coarser taxa.
 
 `fis_proparea_saup2rgn`:  
 
-* a conversion file that, for each region for which catch is reported, tells us what proportion of that region falls within each of the final OHI reporting regions.   
+* a conversion file that, for each region for which catch is reported, tells us what proportion of that region falls within each of the final OHI reporting regions.
 
 **Example data:**
 
@@ -1448,14 +1448,14 @@ The *taxon_name_key* column indicates the name of the species (e.g. Aristeus ant
 
 **Specific instances:**
 
- *only if catch is reported for different regions than the ones used for the OHI assessment:* this should be calculated using spatial analyses of overlap of the spatial units at which catch is reported with the spatial units at which the OHI assessment will be reported. The global data was reported by subregions (*saup_id*) and in some cases multiple subregions were part of the same, larger EEZ. Since for OHI we wanted results by EEZ (*rgn_id*), in those cases we needed to combine results from the subregions to get the final score, based on their size relative to the total EEZ size (*prop_area*).   
- *If catch is reported for the same areas for which OHI is calculated:* then all the *prop_area* are = 1.   
+ *only if catch is reported for different regions than the ones used for the OHI assessment:* this should be calculated using spatial analyses of overlap of the spatial units at which catch is reported with the spatial units at which the OHI assessment will be reported. The global data was reported by subregions (*saup_id*) and in some cases multiple subregions were part of the same, larger EEZ. Since for OHI we wanted results by EEZ (*rgn_id*), in those cases we needed to combine results from the subregions to get the final score, based on their size relative to the total EEZ size (*prop_area*).
+ *If catch is reported for the same areas for which OHI is calculated:* then all the *prop_area* are = 1.
  *If catch is reported for the whole area of the assessment, but you want to calculate a separate OHI score for different sub-regions:* for each OHI reporting region (*rgn_id*) you'll repeat the same region in the *saup_id* column, and *prop_area* will be =1. This effectively means all the reporting regions will get assigned 100% of the catch and will have the same final stastus and trend score for the fisheries goal (but may have different pressures and resilience scores, if those layers are different in each sub-region).  
 
-`fp_wildcaught_weight`: 
+`fp_wildcaught_weight`:
 
-*only needed if there is mariculture*: for each region, this represents the relative proportion of catch coming from wild caught fisheries versus mariculture. The layer is used to weight how much the fisheries score influences the final food provision score, the higher the fisheries catch, the more the food provision score will reflect the fisheries score, and vice-versa if mariculture has a higher catch.       
-(NOTE that, before all mariculture harvest from all species gets summed, the mariculture harvest for each species is smoothed and then multiplied by the resilience score).     
+*only needed if there is mariculture*: for each region, this represents the relative proportion of catch coming from wild caught fisheries versus mariculture. The layer is used to weight how much the fisheries score influences the final food provision score, the higher the fisheries catch, the more the food provision score will reflect the fisheries score, and vice-versa if mariculture has a higher catch.
+(NOTE that, before all mariculture harvest from all species gets summed, the mariculture harvest for each species is smoothed and then multiplied by the resilience score).
 
 #### Running CMSY model
 
@@ -1468,7 +1468,7 @@ The *taxon_name_key* column indicates the name of the species (e.g. Aristeus ant
 |24 |Acanthurus dussumieri_71    |       |0.190749971 |1950 |
 |25 |Acanthurus lineatus_61      |Low    |12.74821966 |1950 |
 
-The current CMSY script produces an output that looks something like this (split into 2 tables): 
+The current CMSY script produces an output that looks something like this (split into 2 tables):
 
 |stock_id          |convergence |effective_sample_size |yr   |b_bmsy   |b_bmsyUpper |
 |:-----------------|:-----------|:---------------------|:----|:--------|:-----------|
@@ -1482,7 +1482,7 @@ The current CMSY script produces an output that looks something like this (split
 
 where *stock_id* is the unique identifier for each stock that was used in the input file, *convergence* indicates whether the model converged and how strongly ('SC' = strong convergence), *effective_sample_size* reports the number of iterations used, *yr* = year, b_bmsy = B/Bmsy for the corresponding year (based on the median of all the estimated values: reccomended),  b_bmsyUpper = B/Bmsy at the upper 95% bootstrapped confidence bound, b_bmsyLower = B/Bmsy at the lower 95% bootstrapped confidence bound, b_bmsyiq25 = B/Bmsy at the first quartile, b_bmsyiq75 = B/Bmsy at the third quartile, b_bmsyGM = B/Bmsy based on the geometric mean of estimates, b_bmsyMed = B/Bmsy based on the median of estimates.
 
-**How to:** 
+**How to:**
 
 **1. Include resilience in the CMSY code:**
 
@@ -1494,15 +1494,15 @@ In the CMSY R script, in the PARAMETERS section, replace the following:
 
 If you assume that fisheries are depleted and there isn't very much fisheries regulation, and you are using the CMSY method to assess B/Bmsy, the original model may work well. If, however, the catch of a species declined because fisheries regulations have closed or limited the fishery, or if a fishery was abandoned for economic reasons (e.g., change in consumer prefereces, market price dynamics, etc.), the model may be too pessimistic and understimate B/Bmsy. In that case it may be best to use a version with a uniform prior on final biomass, instead of the constrained prior.  
 The original constrained prior on final biomass is set by this line within the code:  
-  
+
 ```
-finalbio    <- if(ct[nyr]/max(ct) > 0.5) {c(0.3,0.7)} else {c(0.01,0.4)}    
+finalbio    <- if(ct[nyr]/max(ct) > 0.5) {c(0.3,0.7)} else {c(0.01,0.4)}
 ```  
 
 The model uses a uniform prior if that line is replaced with:
 
 ```
-finalbio    <- c(0.01,0.7) 
+finalbio    <- c(0.01,0.7)
 ```
 
 **3. Use data at a different spatial resolution than the final assessment:**
@@ -1511,29 +1511,29 @@ See notes above for `fis_proparea_saup2rgn`
 
 **4. Calculate B, or Bmsy:**
 
-The CMSY model calculates B/Bmsy as a ratio, it does not estimate the two variables separately.      
+The CMSY model calculates B/Bmsy as a ratio, it does not estimate the two variables separately.
 
 **5. Use catch per unit of effort (CPUE):**
 
-The CMSY model requires total biomass removed by fisheries, and uses catch as a proxy for that. It cannot use CPUE. Other more sophisticated stock assessment models use CPUE and may be employed. We do not provide documentation for the use of these other models.     
+The CMSY model requires total biomass removed by fisheries, and uses catch as a proxy for that. It cannot use CPUE. Other more sophisticated stock assessment models use CPUE and may be employed. We do not provide documentation for the use of these other models.
 
 **6. Use other life-history characteristics, in addition to resilience:**
 
-The CMSY model does not use more detailed information. Other more sophisticated stock assessment models use other life-history traits such as fecundity, larval dispersal, r, K, Lmax, etc., and may be employed. We do not provide documentation for the use of these other models.    
+The CMSY model does not use more detailed information. Other more sophisticated stock assessment models use other life-history traits such as fecundity, larval dispersal, r, K, Lmax, etc., and may be employed. We do not provide documentation for the use of these other models.
 
 **7. Create a 'taxonkey' to assign to each species:**
 
-When replacing the SAUP_FAO data with your own data, assign a key of 600000 to all species. For all catch that is reported at genus or coarser taxonomic level, you will have to choose an appropriate taxonkey. You can create your own key, from 100000 to 500000, based on your own judgment of how many species may be reported under that same denomination, and how different they may be (all that matters for the toolbox code is whether the number starts with a 1,2,3,4,5 or 6 with 1 being the coarsest, such as 'miscellaneous marine animals', or 'crustaceans nei'). 
+When replacing the SAUP_FAO data with your own data, assign a key of 600000 to all species. For all catch that is reported at genus or coarser taxonomic level, you will have to choose an appropriate taxonkey. You can create your own key, from 100000 to 500000, based on your own judgment of how many species may be reported under that same denomination, and how different they may be (all that matters for the toolbox code is whether the number starts with a 1,2,3,4,5 or 6 with 1 being the coarsest, such as 'miscellaneous marine animals', or 'crustaceans nei').
 
 #### Resources
 
-Martell, S & Froese, R (2013) "A simple method for estimating MSY from catch and resilience". *Fish and Fisheries*, DOI: 10.1111/j.1467-2979.2012.00485.x. [Downloadable here](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCkQFjAB&url=http%3A%2F%2Fwww.iotc.org%2Fsites%2Fdefault%2Ffiles%2Fdocuments%2F2013%2F06%2FIOTC-2013-WPNT03-INF01%2520-%2520Martell%2520%2526%2520Froese%25202012.pdf&ei=PXryU6TtGY3goATglYHoDA&usg=AFQjCNE-S0T1B7B_l7rUYaNNLxsUDguDaQ&bvm=bv.73231344,d.cGU)   
-     
+Martell, S & Froese, R (2013) "A simple method for estimating MSY from catch and resilience". *Fish and Fisheries*, DOI: 10.1111/j.1467-2979.2012.00485.x. [Downloadable here](http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCkQFjAB&url=http%3A%2F%2Fwww.iotc.org%2Fsites%2Fdefault%2Ffiles%2Fdocuments%2F2013%2F06%2FIOTC-2013-WPNT03-INF01%2520-%2520Martell%2520%2526%2520Froese%25202012.pdf&ei=PXryU6TtGY3goATglYHoDA&usg=AFQjCNE-S0T1B7B_l7rUYaNNLxsUDguDaQ&bvm=bv.73231344,d.cGU)
+
 Rosenberg, A.A., Fogarty, M.J., Cooper, A.B., Dickey-Collas, M., Fulton, E.A., Gutiérrez, N.L., Hyde, K.J.W., Kleisner, K.M., Kristiansen, T., Longo, C., Minte-Vera, C., Minto, C., Mosqueira, I., Chato Osio, G., Ovando, D., Selig, E.R., Thorson, J.T. & Ye, Y. (2014) Developing new approaches to global stock status assessment and fishery production potential of the seas. *FAO Fisheries and Aquaculture Circular No. 1086*. Rome, FAO. 175 pp. [Downloadable here](http://www.fao.org/docrep/019/i3491e/i3491e.pdf)
 
 ## Notes about R
 
-The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See: https://github.com/hadley/dplyr#dplyr for documentation. 
+The Toolbox is written in R, and relies heavily on a few R packages created to faciliate data handling and manipulation. The primary R package used is called `dplyr` by Hadley Wickham. The `dplyr` package allows for 'chaining' between functions, which is represented with a `%>%`. See: https://github.com/hadley/dplyr#dplyr for documentation.
 
 
 
@@ -1725,7 +1725,7 @@ A: Yes, it is possible to calculate only the marine component of this sub-goal: 
 
 **Q: Should we calculate each category used in our assessment (e.g., antiquities, MPAs, beaches of special interest) independently, and then give the same weight (e.g., a third of the goal score) to the three categories, or should we instead pool the actual areas of the 3 categories?**
 
-A: Whether you group them together or calculate each category separately depends on reference points. Maybe you want 10% of offshore water to be in MPAs, but only 5% of coastlines to be beaches and 3% Antiquities, for example; in this case, you would calculate them separately and then add them together. But if you want 10% of your country's coast to have any combination of these things, you would keep them together. 
+A: Whether you group them together or calculate each category separately depends on reference points. Maybe you want 10% of offshore water to be in MPAs, but only 5% of coastlines to be beaches and 3% Antiquities, for example; in this case, you would calculate them separately and then add them together. But if you want 10% of your country's coast to have any combination of these things, you would keep them together.
 
 *(Source: OHI Israel assessment discussions, 2014-2015)*
 
@@ -1836,4 +1836,3 @@ This error means there is an empty column in `pressures_matrix.csv`, and the Too
   > ![](./fig/error_resil_mtx.png)  
 
 This error means you should check that there is at least one entry for each goal (for each row) in `resilience_matrix.csv`.
-
