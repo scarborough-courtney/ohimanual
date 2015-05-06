@@ -66,7 +66,14 @@ What makes a good function:
 
 ##Directories and files
 * avoid setwd() - stay in one location, but use variables to point to different locations
-* file.path(), expand.pathname() or whatever
-* write a script or function to use getwd() to automatically identify:
-    * local computer name/home github directory
-    * network location, e.g. Neptune
+    * setwd at very start, to github/<repository>/<goal> directory
+    * create variables to point to other locations
+        * file.path() or whatever
+    * if absolutely necessary to setwd(), reset back to main wd when you're done 
+        * orig_wd <- getwd()
+        * setwd(<new working directory>)
+        * do your stuff
+        * setwd(orig_wd)
+* Directory locations:
+    * use src/R/common.R to set up network directory locations
+    * use '~/github' to identify local github directory
