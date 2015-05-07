@@ -4,7 +4,7 @@ This goal captures the conservation status of marine species. Because the status
 
   - ####**Species**
 
-    This sub-goal is conceptually equal to iconic species, but it includes all species (not just those that are iconic). The second difference is it also includes the amount of area where each species is present. So species that inhabit a greater area have a greater weight in the calculations than those with a smaller range.
+    This sub-goal is conceptually equal to iconic species, but it includes all species that are assessed. The second difference is it also includes the amount of area where each species is present. So species that inhabit a greater area have a greater weight in the calculations than those with a smaller range.
 
     This sub-goal aims to estimate how successfully the richness and variety of marine life is being maintained. People value the species that comprise marine biodiversity for their existence value as well as their contributions to resilient ecosystem structure and function. Biodiversity can also play a supporting role in food provision and sustainability generally, and is therefore also included in resilience dimensions of other public goals.
 
