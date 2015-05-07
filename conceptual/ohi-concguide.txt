@@ -18,18 +18,18 @@ As a composite index, the Index integrates the results for and relationships bet
 
 The Task Timeline provides the steps involved in conducting Ocean Health Index assessments. It also suggests the types of skills required while doing so. The process of calculating the Index is not necessarily linear: there is a lot of iteration and discussion among the team to make the best decisions. For example, gathering appropriate data for each status, pressure, and resilience layer requires thinking about how to calculate their reference points at the same time. It is possible that data sources will need to change during the process and goal models will have to be modified as well.
 
-![](./Figures/task_timeline-01.png)
+![A timeline of the OHI+ assessment process.](./Figures/task_timeline-01.png)
 
-The Task Timeline outlines three phases that occur through time. The time required will depend on the availability of data, the number of people working on the assessment, as well as challenges that may arise. Tasks are indicated by skill set but many decisions will also occur as a team.
+The Task Timeline outlines four phases that occur through time. The time required will depend on the availability of data, the number of people working on the assessment, as well as challenges that may arise. Tasks are indicated by skill set but many decisions will also occur as a team.
 
 The phases and tasks outlined in the Task Timeline are:
 
-- **Phase 1:**Learn
-- **Phase 2:**Plan
-- **Phase 3:**Conduct
-- **Phase 4:**Communicate
+- **Phase 1:** Learn about the OHI
+- **Phase 2:** Plan an OHI+ Assessment
+- **Phase 3:** Conduct the Assessment
+- **Phase 4:** Outreach and Communications
 
-Further supporting documentation, including examples, will be available for many of these steps soon.
+For more information, visit: http://ohi-science.org which is continually updated.
 
 #Phase One: Learn about the Ocean Health Index
 
@@ -72,20 +72,6 @@ The Ocean Health Index defines a healthy ocean as one that can sustainably deliv
 - [**Tourism and recreation**](TR_Philosophy) opportunities
 - [**Clean waters**](CW_Philosophy) and beaches for aesthetic and health values
 - [**Biodiversity**](BIO_Philosophy) of species and habitats
-
-##**Why Ten Goals?**
-
-The Index did not set out to have ten goals. The process of reviewing literature and assessing management objectives resulted in ten goals, several with sub-goals that are each assessed separately. Regions in which some goals are not relevant can (and should) be assessed based only on the remaining goals. The Index is flexible to the inclusion of different or additional goals, something we have not yet encountered but is certainly possible.
-
-###Changing Goal Models
-
-Although the Index framework provides guidelines on how to adapt underlying models to available regional data, using simpler models or different proxies when necessary, it cannot prescribe which available regional data sets are preferred, or dictate the most appropriate models to use or choices of reference points, proxy data or goal weights. These decisions require involving local experts within the region to provide opinions and direction towards an outcome most representative of ocean health in the study area.
-
-The Index can also accommodate additional goals if they better reflect what local communities value, although we feel that the ten goals currently defined within the Index are sufficiently broad to capture a vast majority of values. No indicator is exempt from such subjective decisions. The Index’s framework, however, requires one to document and track such assumptions explicitly and thus, contrary to many other existing indices, allows for careful assessment of the sensitivity of results to such decisions.
-
-##**How are the goals weighted?**
-
-The goals are currently weighted equally in OHI calculations. However, in your OHI+ assessment the weighting can be changed depending on your local context. Stakeholders may have differing priorities, but when presented with the portfolio of goals used in the Ocean Health Index, these differences can become less pronounced, as was found in a study by Halpern *et al.* (2013) in *Marine Policy*. This would require good data, of course, such as the information collected through a representatively sample survey.
 
 ##**Food Provision**
 
@@ -149,7 +135,7 @@ This goal focuses on avoiding the loss of ocean-dependent livelihoods and produc
 
     This sub-goal includes two equally important sub-components, the number of jobs, which is a proxy for livelihood quantity, and the per capita average annual wages, which is a proxy for job quality.
 
-    This sub-goal evaluates the benefits people obtain from the oceans in the form of jobs and wages. Jobs and wages produced from marine-related industries are clearly of huge value to many people, even those who do not directly participate in the industries but value community identity, tax revenue, and indirect economic and social impacts of a stable coastal economy.
+    This sub-goal evaluates the benefits people obtain from the oceans in the form of jobs and wages. Some relevant sectors include tourism, commercial fishing, marine mammal watching, and working at ports and harbors, among others. Jobs and wages produced from marine-related industries are clearly of huge value to many people, even those who do not directly participate in the industries but value community identity, tax revenue, and indirect economic and social impacts of a stable coastal economy.
 
     Ideally, this goal would capture all marine sectors that supply jobs and wages to coastal communities, incorporating information on the sustainability of different sectors and also working conditions and job satisfaction/identity. The jobs and revenue produced from marine-related industries directly benefit those who are employed, but also those that gain substantial indirect value from community identity, tax revenue, and other related economic and social impacts of a stable coastal economy. Capturing the indirect as well as direct benefits from jobs, wages and revenue from coastal communities and beyond is best; where data do not exist, multipliers derived from the literature can be incorporated into jobs to attempt to capture this. The reference point in this sub-goal will likely be set as a moving window temporal approach or a spatial comparison.
 
@@ -167,7 +153,7 @@ This goal captures the value people have for experiencing and taking pleasure in
 
 Tourism, travel, and recreation in coastal and ocean areas are major components of thriving coastal communities and a measure of how much people value ocean systems.
 
-Ideally, information would be available on how the ocean is used for enjoyment by both local residents and tourists, thereby capturing the full value of touristic and recreational activities. Models will vary greatly depending on data available; there are many ways to potentially measure the delivery of this goal. the type of reference point used will depend on the data available.
+Ideally, information would be available on how the ocean is used for enjoyment by both local residents and tourists, thereby capturing the full value of touristic and recreational activities. Models will vary greatly depending on data available; there are many ways to potentially measure the delivery of this goal. The type of reference point used will depend on the data available.
 
 ####What it does not measure
 
@@ -207,7 +193,7 @@ This goal captures the conservation status of marine species. Because the status
 
   - ####**Species**
 
-    This sub-goal is conceptually equal to iconic species, but it includes all species (not just those that are iconic). The second difference is it also includes the amount of area where each species is present. So species that inhabit a greater area have a greater weight in the calculations than those with a smaller range.
+    This sub-goal is conceptually equal to iconic species, but it includes all species that are assessed. The second difference is it also includes the amount of area where each species is present. So species that inhabit a greater area have a greater weight in the calculations than those with a smaller range.
 
     This sub-goal aims to estimate how successfully the richness and variety of marine life is being maintained. People value the species that comprise marine biodiversity for their existence value as well as their contributions to resilient ecosystem structure and function. Biodiversity can also play a supporting role in food provision and sustainability generally, and is therefore also included in resilience dimensions of other public goals.
 
@@ -221,9 +207,23 @@ This goal captures the conservation status of marine species. Because the status
 
     Ideally, information on the extent and condition of every single habitat type would be available. The reference point for habitat-based goals will likely be temporal; this means that historic data are needed such that current habitat and value data can be compared to historic data.
 
+##**Why Ten Goals?**
+
+The Index did not set out to have ten goals. The process of reviewing literature and assessing management objectives resulted in ten goals, several with sub-goals that are each assessed separately. Regions in which some goals are not relevant can (and should) be assessed based only on the remaining goals. The Index is flexible to the inclusion of different or additional goals, something we have not yet encountered but is certainly possible.
+
+###Changing Goal Models
+
+Although the Index framework provides guidelines on how to adapt underlying models to available regional data, using simpler models or different proxies when necessary, it cannot prescribe which available regional data sets are preferred, or dictate the most appropriate models to use or choices of reference points, proxy data or goal weights. These decisions require involving local experts within the region to provide opinions and direction towards an outcome most representative of ocean health in the study area.
+
+The Index can also accommodate additional goals if they better reflect what local communities value, although we feel that the ten goals currently defined within the Index are sufficiently broad to capture a vast majority of values. No indicator is exempt from such subjective decisions. The Index’s framework, however, requires one to document and track such assumptions explicitly and thus, contrary to many other existing indices, allows for careful assessment of the sensitivity of results to such decisions.
+
+##**How are the goals weighted?**
+
+The goals are currently weighted equally in OHI calculations. However, in your OHI+ assessment the weighting can be changed depending on your local context. Stakeholders may have differing priorities, but when presented with the portfolio of goals used in the Ocean Health Index, these differences can become less pronounced, as was found in a study by Halpern *et al.* (2013) in *Marine Policy*. This would require good data, of course, such as the information collected through a representatively sample survey.
+
 ##**Reference points**
 
-To assess how well a goal is being delivered, it is necessary to identify the target to which it will be compared. This target is called the reference point. In an Ocean Health Index framework, setting the reference point enables the numeric values relevant for each goal to be scaled between zero and one hundred (where one hundred means that the current status is equal to the target reference point, and zero means that it is as far from the target reference point as is possible). Sharing a common range for scores makes all goal scores comparable. The reference point may be a target value at some time in the past, a comparison with some other location (such as the best performing region), a target previously established by a treaty or other agreement, or---best of all---a target determined by an accepted input-output equation (also called a **production function**).
+To assess how well a goal is being delivered, it is necessary to identify the target to which it will be compared. This target is called the reference point. In an Ocean Health Index framework, setting the reference point enables the numeric values relevant for each goal to be scaled between zero and one hundred (where one hundred means that the current status is equal to the target reference point, and zero means that it is as far from the target reference point as is possible). Sharing a common range for scores makes all goal scores comparable. The reference point may be a target value at some time in the past, a comparison with some other location (such as the best performing region), a target established by a treaty or other agreement, or---best of all---a target determined by a scientifically-informed input-output relationship (an equation called a **production function**).
 
 It can be advantageous to translate a management goal to a maximization or minimization problem with an objective function so that it is clear exactly how an indicator should be developed to track progress. Indeed, these choices significantly influence the evaluation of a goal’s status. For instance, a sustainable seafood management goal could be measured in terms of yields if the goal is focused on maximizing food provision or in number of jobs if the goal is focused on maximizing social and economic welfare. These two goal framings would lead to the development of different targets in terms of both yields and level of employment. Where necessary, our conceptual framework encourages the reframing of management goals to ensure that the corresponding indicators, and the units in which they are reported, accurately portray the intent of the goal as it is stated.
 
@@ -233,15 +233,15 @@ It is important to understand that setting a reference point is a conscious choi
 
 For each goal, models are developed to best represent the philosophy of that goal using the best available data at the scale of study. The present status that is calculated individually for each goal forms half of that goal’s score.  The other half, called likely future status, is based on three things:
 
-•	the **trend**, which is the average rate of change for status during the most recent five years
+•	the **Trend**, which is the average rate of change for status during the most recent five years
 
-•	the total **pressures** that will harm future benefits
+•	the total **Pressures** that will harm future benefits
 
-•	the total **resilience** actions that can reduce pressures and maintain or raise future benefits (for example treaties, laws, enforcement, habitat protection)
+•	the total **Resilience** actions that can reduce pressures and maintain or raise future benefits (for example treaties, laws, enforcement, habitat protection)
 
 ![](./Figures/Trend_Pressure_Resilience.png)
 
-The current status of each goal is determined by comparing the most recent measure of the goal with a goal-specific sustainable reference point (see **Reference Points** for more).
+The current status of each goal is determined by comparing the most recent measure of the goal with a goal-specific sustainable **Reference Point**.
 
 The trend is calculated as the slope of the change in status based on recent data. As such, the trend calculation is not trying to predict the future but only to indicate likely condition (sustainability) based on a linear relationship.
 Pressures and resilience are ultimately important for scores, but they have a smaller contribution to the overall scores because we can only approximate their effects. Individual pressures are ranked for their importance to different goals based on published studies and expert opinion. Resilience actions are the best way to improve a score, because they can reduce pressures, protect ocean habitats and species, improve status, and optimize benefits to people.
@@ -263,34 +263,29 @@ The trend is calculated as the slope of the change in status based on recent dat
 
 ##**Understanding Pressures**
 
-Pressures are the sum of the ecological and social pressures that negatively affect goal scores. The Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason behind the ecological categories was designed to minimize sampling bias. Ecological and social pressures are assessed separately and then combined with equal weighting, which could be changed if there is local information on how to do so.
+A pressure is any kind of stressor on the social or ecological system that is harmful for ocean health.
 
-Goals often interact with each other through pressures. The pressure created by one goal may affect a second goal without being affected itself. For example, raising fish in the mariculture goal can cause genetic escapes, which is a pressure. This pressure affects only the wild-caught fisheries and species sub-goals but does not affect mariculture itself. In other cases, such as the fishing harvest pressure, the pressure comes as a result of pursuing the food provision sub-goal of wild-caught fisheries, affecting several goals including the fishing sub-goal itself.
+Pressures can change how goals interact with each other. For example, raising fish in the **Mariculture** sub-goal can cause genetic escapes, which are a pressure on the **Wild-Caught Fisheries** and **Species** sub-goals. The genetic escapes do not affect mariculture itself, however, and have no effect on that particular sub-goal score while they do have a negative effect on the other sub-goal scores.
+
+Pressures are calcuated as the sum of the ecological and social pressures that negatively affect goal scores. The Index framework calculates pressures by first grouping them into five ecological categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social category. The reason there are categories is to minimize sampling bias, so that no one kind disproportionately influences the score. They are weighted equally in the global assessment, but in your local assessment they can be changed if there is enough information on how to do so.
 
 ##**Understanding Resilience**
 
-Resilience is the sum of the ecological factors and social initiatives (policies, laws, indicators of good governance, etc.) that can positively affect goal scores by reducing or eliminating pressures. This is because resilience in the Index framework acts to reduce pressures in each region. Therefore, resilience measures must not only be directly or indirectly relevant to ocean health, but must be in response to a pressure layer affecting a goal.
+A resilience measure can be a law, policy, or a given performance evaluation that speaks to the effectiveness of actions to improve ocean health.
 
-*Ultimately, it is the resilience measures that a country has that will help determine the future of its ocean health.*
+*Ultimately, it is resilience that will help determine the future of ocean health.* Resilience actions are the best way to improve a score for a country, because they can reduce pressures, protect ocean habitats and species, improve status, and optimize benefits to people.
 
-<!---Add new section on guidance for resilience metrics for countries--->
+Resilience is calculated as the sum of the ecological factors and social initiatives (policies, laws, indicators of good governance, etc.) that can positively affect goal scores by reducing or eliminating pressures. This is because resilience in the Index framework acts to reduce pressures in each region. Therefore, resilience measures must not only be directly or indirectly relevant to ocean health, but must be in response to a pressure layer affecting a goal.
 
-###Guide to searching for resilience metrics
+####Ideal Approach
 
-In practical terms, resilience is hard to define and you may have to get creative to develop appropriate assessment measures for these pressure layers.
-
-A resilience measure can be a law, a policy, or a performance evaluation that speaks to the effectiveness of a policy instrument. It can be metrically be defined as presence-versus-absence (zero or one), or on a scale if the measure is an assessment or score. For instance in the 2013 Global OHI study, the resilience measures that were counted in the socio-economic resilience class was data from the World Governance Indicators (http://govindicators.org). In a regional context, however, a more appropriate data layer might be a local governance index of some kind, preferably developed by a reputable organization using credible methods.
-
-####Ideal Approach <!---source from 2012 Global SM--->
-
-Ideally, assessments of social resilience would include state and federal level rules and other relevant institutional mechanisms as well. However, such information is extremely difficult
-to access for every single country, and so we relied on global datasets that focus on international treaties and assessments. Another key gap is information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management in many settings. Information on these institutions is also extremely difficult to find at a global scale, although the WGI partly measures their effectiveness through its inclusion of corruption indices.
+Ideally, assessments of social resilience would include national-level and as well as local rules and other relevant institutional mechanisms that are meant to safeguard ocean health. The global focus has been on international treaties and indices, so your region should have more localized information. There would also be information as to their effectiveness and enforcement. of more. Information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management would be useful too.
 
 ##**Interactions: Pressures and Resilience**
 
 Ecological and social resilience are similarly assessed separately and then combined with equal weighting, which could also be changed based on expert opinions. Any new resilience measure must be associated with a pressures layer.
 
-**The figure below** shows stressors by category, and the resilience measures meant to 'balance' (or counteract) them for the global assessment. Note that resilience layers are only available for some categories and goals. Also, some resilience measures are goal-specific; that is, they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in the status specific goals (e.g., sustainable tourism, lower bycatch, etc.), you can include them as resilience measures.
+**The figure below** shows stressors by category, and the resilience measures meant to 'balance' (or counteract) them for the global assessment. Note that resilience layers are only available for some categories and goals in the Global case, highlighting the importance of data availability for these layers. Also, some resilience measures are goal-specific; that is, they act on certain goals without counteracting pressures. When you have regulations to improve the practices captured in the status specific goals (e.g., sustainable tourism, lower bycatch, etc.), you can include them as resilience measures.
 
 ![Each resilience data layer should have a corresponding pressures layer, and vice versa. Note that a pressure layer becomes (1-resilience) in cases where only resilience data are available, due to data limitations.](https://docs.google.com/drawings/d/19ZBIhzTrNlumV9ZhCmsdEcvybFHp-eN5P5IFAsFmql0/pub?w=558&h=721)
 
@@ -298,13 +293,13 @@ Pressures and resilience are ultimately important for scores, but they have a sm
 
 ###Combining Categories
 
-The OHI Toolbox calculates pressures in five ecological pressure categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social pressure category. The reason behind the ecological categories is to avoid hidden weighting (e.g. overrepresentation of pressures for which there is more data). For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the scores of each individual stressor, pollution scores would have a greater influence on the results (stronger weight) due to the relative higher availability of measurements of various pollutants. Instead, aggregating by pressure categories ensures that different stressor types influence the score based on ranks. Nonetheless, the scores are combined in a cumulative way within each category to account for the fact that multiple stressors within a category have a cumulative impact that is greater than if only one of the stressors were present. The resulting scores for the five ecological categories are averaged to produce a single ecological pressures score. This score is then averaged with the social pressures score to produce the final overall pressure score.
+The software of the **OHI Toolbox** calculates pressures in five ecological pressure categories (pollution, habitat destruction, fishing pressure, species pollution, and climate change) and one social pressure category. The reason behind the ecological categories is to avoid hidden weighting (e.g. overrepresentation of pressures for which there is more data). For example, in the global assessment there were many pollution datasets available, but few distinct habitat destruction datasets. If we simply averaged the scores of each individual stressor, pollution scores would have a greater influence on the results (stronger weight) due to the relative higher availability of measurements of various pollutants. Instead, aggregating by pressure categories ensures that different stressor types influence the score based on ranks. Nonetheless, the scores are combined in a cumulative way within each category to account for the fact that multiple stressors within a category have a cumulative impact that is greater than if only one of the stressors were present. The resulting scores for the five ecological categories are averaged to produce a single ecological pressures score. This score is then averaged with the social pressures score to produce the final overall pressure score.
 
 A similar combination method occurs for the resilience layers in the OHI Toolbox.
 
 ##**Understand the Philosophy Behind the Framework**
 
-Before conducting your own assessment it is important that you understand the philosophy behind the Index. In order to do so, one must carefully read through the methods, a copy of which can be found [here](www.oceanhealthindex.org/About/Methods/). We have also created a conceptual guide and training manual which can be found [here](www.ohi-science.org).
+Before conducting your own assessment it is important that you understand the philosophy behind the Index. In order to do so, one must carefully read through the methods, a copy of which can be found [at the Ocean Health Index website.](www.oceanhealthindex.org/About/Methods/). We have also created a conceptual guide and training manual which can be found [at OHI-Science.org](www.ohi-science.org).
 
 Below are several documents and materials that we have also created to support this important step.
 
@@ -828,4 +823,3 @@ The study area is the entire geographical boundary included in the assessment.
 **Sub-goal**
 
 Several goals have sub-goals for which data on all four dimensions exist, allowing calculation of a complete sub-goal score. In most cases the goal score is simply the arithmetic average of these sub-goal scores, but the score for the food provision goal is the yield-weighted average of the two sub-goal scores.
-
