@@ -4,7 +4,7 @@ This goal captures the value people have for experiencing and taking pleasure in
 
 Tourism, travel, and recreation in coastal and ocean areas are major components of thriving coastal communities and a measure of how much people value ocean systems.
 
-Ideally, information would be available on how the ocean is used for enjoyment by both local residents and tourists, thereby capturing the full value of touristic and recreational activities. Models will vary greatly depending on data available; there are many ways to potentially measure the delivery of this goal. the type of reference point used will depend on the data available.
+Ideally, information would be available on how the ocean is used for enjoyment by both local residents and tourists, thereby capturing the full value of touristic and recreational activities. Models will vary greatly depending on data available; there are many ways to potentially measure the delivery of this goal. The type of reference point used will depend on the data available.
 
 ####What it does not measure
 
