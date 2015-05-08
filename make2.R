@@ -113,6 +113,17 @@ knit(out_mdv2, "ohi-concguide.md", text = NULL)
 knit2html('ohi-concguide.md', 'ohi-concguide.html') # update: this is easier to read, IMHO, so I'll render this output to html too while we're at it...
 
 
+# render pdf ----
+render(
+  out_mdv2,
+  pdf_document(
+    toc = T, toc_depth = 4, number_sections = T,
+    fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
+    fig_caption = T, highlight = "default", template = "default",
+    keep_tex = F, latex_engine = "pdflatex",
+    includes = NULL, pandoc_args = NULL),
+  clean=T, quiet=F,
+  output_file = paste0(pfx, '.pdf'))
 
 # Step D. Continue editing!
 # test
