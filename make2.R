@@ -120,7 +120,7 @@ render(
     toc = T, toc_depth = 4, number_sections = T,
     fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
     fig_caption = T, highlight = "default", template = "default",
-    keep_tex = F, latex_engine = "pdflatex",
+    keep_tex = F, latex_engine = "xelatex",
     includes = NULL, pandoc_args = NULL),
   clean=T, quiet=F,
   output_file = paste0(pfx, '.pdf'))

@@ -107,7 +107,7 @@ This goal captures how sustainably people harvest non-food products from the sea
 
 Ideally, quantity, value, and the sustainability of the harvest method would be available for every marine and coastally-derived natural product within the regions of a study area. This would include a wide range of products, including corals, shells, seaweeds, aquarium fish, mangrove wood, or any non-food marine product that is harvested within a region. The ideal reference point would be derived from a functional relationship of the sustainability of the harvest for each product relative to the amount of product available in the ecosystem; without this information assumptions will need to be made to set the reference point.
 
-####What it does note include
+####What it does not include
 
 This goal does not include non-living items such as oil, gas, and mining products, because these practices are not considered to be sustainable, and they are done at such large scales that including them would essentially make an index for oil and mining. It also does not include bioprospecting (for medicines or genes), which has an unpredictable potential value in the future, rather than measurable value now. This goal can interact with other goals and sub-goals when unsustainable harvesting practices are used.
 
@@ -279,7 +279,7 @@ Resilience is calculated as the sum of the ecological factors and social initiat
 
 ####Ideal Approach
 
-Ideally, assessments of social resilience would include national-level and as well as local rules and other relevant institutional mechanisms that are meant to safeguard ocean health. The global focus has been on international treaties and indices, so your region should have more localized information. There would also be information as to their effectiveness and enforcement. of more. Information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management would be useful too.
+Ideally, assessments of social resilience would include national-level and as well as local rules and other relevant institutional mechanisms that are meant to safeguard ocean health. The global focus has been on international treaties and indices, so your region should have more localized information. There would also be information as to their effectiveness and enforcement. of more. Information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management would be useful too. 
 
 ##**Interactions: Pressures and Resilience**
 
@@ -823,3 +823,4 @@ The study area is the entire geographical boundary included in the assessment.
 **Sub-goal**
 
 Several goals have sub-goals for which data on all four dimensions exist, allowing calculation of a complete sub-goal score. In most cases the goal score is simply the arithmetic average of these sub-goal scores, but the score for the food provision goal is the yield-weighted average of the two sub-goal scores.
+
