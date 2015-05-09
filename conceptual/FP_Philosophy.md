@@ -1,15 +1,15 @@
-##**Food Provision**
+## **Food Provision**
 
 The aim of this goal is to maximize the sustainable harvest of seafood in regional waters from **Wild-Caught Fisheries** and **Mariculture** (specifically, ocean-farmed seafood). Regions are rewarded for maximizing the amount of sustainable seafood provided and they are penalized for unsustainable practices or for under-harvest. Because fisheries and mariculture are separate industries with very different features, each is tracked separately as a unique sub-goal under **Food Provision**. They are then combined after each sub-goal is weighted by the proportion of the total yield it contributes to total food provision.
 
-  - ####**Wild-Caught Fisheries**
+  - ### **Wild-Caught Fisheries**
       This sub-goal captures the amount and sustainability of wild-caught seafood harvested primarily for human consumption. It measures the ability to obtain maximal wild harvests without damaging the ocean's ability to continue providing similar quantities of fish for people in the future.
 
      Wild-caught fisheries harvests must remain below levels that would compromise the resource and its future harvest, but the amount of seafood harvested should be maximized within the bounds of sustainability. This is a departure from traditional conservation goals regarding wild-caught fisheries where under-harvesting is usually not penalized. This sub-goal can interact with other goals and sub-goals through, for example, destruction of surrounding habitats that can indirectly decrease the productivity of the fisheries.
 
       Ideally, data for catch and effort of every commercially - and recreationally-fished species would be available, as well as the functional relationship between fish population size (biomass) and fisheries effort, so that maximum sustainable yield (MSY) could be calculated. Then, fisheries catch and effort information would be used to calculate the present state and MSY would be used to set the reference point. Current status would be calculated using the present state of every individual species and combining each species together, as the weighted proportion of total catch.
 
-  - ####**Mariculture**
+  - ### **Mariculture**
       This sub-goal measures the ability to obtain maximal seafood yield from farm-raised facilities without damaging the ocean's ability to continue providing fish for people in the future.
 
       Mariculture practices must not inhibit the future production of seafood in the area. This means mariculture practices must be sustainable and also maximize the amount of food production that is physically possible and desired by regional governments and those who buy, sell and eat that food.

@@ -1,4 +1,4 @@
-###**Artisanal Opportunities**
+## **Artisanal Fishing Opportunities**
 
 This goal captures whether people with the desire to fish on small scales have the opportunity to do so. It is important to capture the degree to which a region permits or encourages artisanal fishing compared to the demand for such fishing opportunities, and if possible, the sustainability of artisanal fishing practices.
 

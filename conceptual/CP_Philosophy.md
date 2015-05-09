@@ -1,6 +1,6 @@
-###**Coastal Protection**
+##**Coastal Protection**
 
-This goal captures the condition and extent of habitats that protect the coasts against storm waves and flooding.
+This goal captures the condition and extent of habitats that protect the coasts against storm waves and flooding. It measures the area they currently cover relative to the area they covered in the recent past.
 
 Many habitats, including coral reefs, mangroves, seagrasses, salt marshes, and sea ice act, as natural buffers against incoming waves. By protecting against storm damage, flooding, and erosion, these living habitats keep people safe and can help mitigate economic loss of personal and public property, cultural landmarks, and natural resources. This goal assesses the amount of protection provided by marine and coastal habitats by measuring the area they cover now relative to the area they covered in the recent past.
 

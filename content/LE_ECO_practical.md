@@ -1,8 +1,7 @@
-##Livelihoods and Economies
-###ECONOMIES
-###Practical Considerations
+### **ECONOMIES**
+#### Practical Considerations
 
-###*Ideal Approach*:
+#### *Ideal Approach*
 
 Ideally, economic data would be collected coastally, and traced from sectors both directly and indirectly related to marine industries. When these data are not available it is possible to use revenue data at a larger scale and adapt them to a coastal area based on population distribution. The reference point in this sub-goal will likely be set as a moving window temporal approach.
 
@@ -12,7 +11,7 @@ Ideally, economic data would be collected coastally, and traced from sectors bot
 Economies:
 The economies sub-goal is composed of a single component, revenue.
 
-###Recommendations for regional assessments:
+#### Recommendations for regional assessments
 
 In the economies sub-goal, revenue had a moving target temporal comparison; we highly recommend that this remains a temporal comparison so that a specific place is compared to its performance in the past and not to anywhere else.
 Model description
@@ -29,7 +28,7 @@ Same as Global 2012.
 **US West Coast:**
 Same as Global 2012.
 
-####Evolution of the approach:
+#### Evolution of the approach
 
 **Global 2012:**
 We assumed that sector-specific job and revenue multipliers are static and globally consistent, but distinct for developed versus developing regions (when such information was available), because we do not have data to resolve temporal or regional differences. For all other sectors where the data sources only provided direct jobs or direct revenue, we used sector- and development status-specific multipliers derived from the literature to estimate total job or revenue impacts. We did not apply multiplier values to wages since the cascading effects of earned income are more contentious.
@@ -43,7 +42,7 @@ Same as Global 2012.
 **US West Coast:**
 Same as Global 2012.
 
-####The reference point:
+#### The reference point
 
 **Global 2012:**
 In the economies sub-goal, revenue had a moving target temporal comparison.
@@ -58,6 +57,6 @@ Same as Global 2012.
 **US West Coast:**
 Same as Global 2012.
 
-####Interpreting a score:
+#### Interpreting a score
 
 A score of 100 would indicate that revenue has not decreased compared to its value five years previous.
