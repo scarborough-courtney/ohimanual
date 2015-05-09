@@ -1,8 +1,8 @@
-###**Sense of Place**
+## **Sense of Place**
 
-The sense of place goal aims to capture the level of protection for aspects of the coastal and marine system that contribute to a person's sense of cultural identity. This definition includes people living near the ocean and those who live far from it but still derive a sense of identity or value from knowing particular places or species exist. Since few groups, communities, or states have explicitly described the attributes of the coastal and ocean environments that have special cultural meaning, the Index assesses the conditions that reflect how well this goal is being delivered through two sub-goals, **Iconic Species** and **Lasting Special Places**. The overall **Sense of Place** goal is then the arithmetic mean of the two sub-goal scores.
+The sense of place goal aims to capture the aspects of coastal and marine systems that people value as part of their cultural identity and connectedness to the marine environment. This definition includes people living near the ocean and those who live far from it and still derive a sense of identity or value from knowing particular places or species exist. Since few groups, communities, or states have explicitly described the attributes of the coastal and ocean environments that have special cultural meaning, the Index assesses the conditions that reflect how well this goal is being delivered through two sub-goals, **Iconic Species** and **Lasting Special Places**. The overall **Sense of Place** goal is then the arithmetic mean of the two sub-goal scores.
 
-  - ####**Iconic Species**
+  - ### **Iconic Species**
 
     This sub-goal describes the species that are important to a region: iconic species are defined as those that are relevant to local cultural identity through one or more of the following: 1) traditional activities such as fishing, hunting or commerce; 2) local ethnic or religious practices; 3) existence value; and 4) locally-recognized aesthetic value.
 
@@ -10,7 +10,7 @@ The sense of place goal aims to capture the level of protection for aspects of t
 
     Ideally, data would be available on all species that are important to coastal communities, and then a separate assessment would judge the condition of each of the populations. Because almost any species can be iconic to someone, defining which species are culturally iconic can be challenging; information can sometimes be found from local customs and experts, oral tradition, sociological or anthropological literature, journalism and regional assessments. The type of reference point used will depend on the data available.
 
-  - ####**Lasting Special Places**
+  - ### **Lasting Special Places**
 
     This sub-goal captures the conservation status of geographic locations that hold significant aesthetic, spiritual, cultural, recreational, or existence value for people.
 

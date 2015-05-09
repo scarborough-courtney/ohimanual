@@ -1,8 +1,8 @@
-###**Coastal Livelihoods and Economies**
+## **Coastal Livelihoods and Economies**
 
 This goal focuses on avoiding the loss of ocean-dependent livelihoods and productive coastal economies while maximizing livelihood quality. We measure the status of this goal through two sub-goals: **Livelihoods** (jobs and wages) and **Economies** (revenues). The two halves of this goal are tracked separately because the number and quality of jobs and the amount of revenue produced are both of considerable interest to stakeholders and governments, and could show very different patterns, such as the case when high revenue sectors do not necessarily provide large employment opportunities. The goal aims to maintain the number of coastal and ocean-dependent livelihoods (jobs) in a region, and maintain productive coastal economies (revenues), while also maximizing livelihood quality (represented by relative wages).
 
-  - ####**Livelihoods**
+  - ### **Livelihoods**
 
     This sub-goal includes two equally important sub-components, the number of jobs, which is a proxy for livelihood quantity, and the per capita average annual wages, which is a proxy for job quality.
 
@@ -10,7 +10,7 @@ This goal focuses on avoiding the loss of ocean-dependent livelihoods and produc
 
     Ideally, this goal would capture all marine sectors that supply jobs and wages to coastal communities, incorporating information on the sustainability of different sectors and also working conditions and job satisfaction/identity. The jobs and revenue produced from marine-related industries directly benefit those who are employed, but also those that gain substantial indirect value from community identity, tax revenue, and other related economic and social impacts of a stable coastal economy. Capturing the indirect as well as direct benefits from jobs, wages and revenue from coastal communities and beyond is best; where data do not exist, multipliers derived from the literature can be incorporated into jobs to attempt to capture this. The reference point in this sub-goal will likely be set as a moving window temporal approach or a spatial comparison.
 
-  - ####**Economies**
+  - ### **Economies**
 
     This sub-goal captures the economic value associated with marine industries. This is done using revenue from marine sectors as a proxy.
 
