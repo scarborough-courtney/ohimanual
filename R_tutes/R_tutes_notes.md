@@ -12,9 +12,11 @@ others may mean that you’ll need to sacrifice some preferred aspects of your s
 
 The Ocean Health Index is founded upon principles of open-source science, so our code should be not just available, but legible to others.  For OHI+, we expect people to modify code to implement new goal models, and we may need to provide support in developing and debugging their code.
 
+Certain coding techniques are more efficient than others (e.g. in R, looping across elements in a vector is much slower than operating on the entire vector at once), but rarely does OHI code push any performance envelopes.  Much more of our time is spent writing code, translating old code into new models, and debugging.  Transparent, readable code will save more time in the future than a perfectly-optimized but opaque algorithm.  
+
 Readable code is:
-* easier for others to debug
-* easier for others to update or modify
+* easier for others to understand and debug
+* easier for others to update and modify
 * easier for 'future you' to interpret what 'past you' meant when you wrote that chunk of code.
 
 Check out Hadley Wickham's [style guide: ](http://r-pkgs.had.co.nz/style.html)
@@ -66,7 +68,14 @@ What makes a good function:
 
 ##Directories and files
 * avoid setwd() - stay in one location, but use variables to point to different locations
-* file.path(), expand.pathname() or whatever
-* write a script or function to use getwd() to automatically identify:
-    * local computer name/home github directory
-    * network location, e.g. Neptune
+    * setwd at very start, to github/<repository>/<goal> directory
+    * create variables to point to other locations
+        * file.path() or whatever
+    * if absolutely necessary to setwd(), reset back to main wd when you're done 
+        * orig_wd <- getwd()
+        * setwd(<new working directory>)
+        * do your stuff
+        * setwd(orig_wd)
+* Directory locations:
+    * use src/R/common.R to set up network directory locations
+    * use '~/github' to identify local github directory
