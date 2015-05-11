@@ -1,4 +1,4 @@
-###**Costs and Financial Planning**
+### **Costs and Financial Planning**
 
 Funds are needed for human resources, workshops and travel, research, data gathering, spatial and statistical analysis, model programming, communications, and (including publications), and outreach.
 

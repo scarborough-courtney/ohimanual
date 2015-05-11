@@ -1,15 +1,14 @@
-##Biodiversity
-###HABITATS
-##Practical Considerations
+### **HABITATS**
+#### Practical Considerations
 
-###*Ideal Approach*:
+#### *Ideal Approach*
 
 Ideally, information on the extent and condition of every single habitat type would be available. The reference point for habitat-based goals will likely be temporal; this means that historic data are needed such that current habitat and value data can be compared to historic data (or a proportion of historic data).
 
-##**History of the Approach (lessons learned 2014)**
+#### *History of the Approach (lessons learned 2014)*
 <!---Taken from Conceptual Guide v2--->
 
-####Model description
+#### Model description
 
 **Global 2012:**
 The status of the Habitat sub-goal was assessed for all habitats for which at least some global data were available, specifically: mangroves, coral reefs, seagrass beds, salt marshes, sea ice edge, and subtidal soft-bottom habitats. Status was assessed as the average of the condition estimates for each habitat present in a region.
@@ -23,7 +22,7 @@ Same as Global 2012 for mangroves, coral reefs, seagrass beds, salt marshes, and
 **US West Coast:**
 Same as Global 2012 for salt marshes, seagrasses, sand dunes, and soft-bottom habitats. Additionally, when assessing habitat condition, we used reconstructions of historic extents to set more ambitious targets.
 
-####Evolution of the approach:
+#### Evolution of the approach
 
 **Global 2012:**
 A significant amount of pre-processing of the habitat data was needed to fill data gaps and resolve data quality issues (see the data layers section for details on data sources). Because consistent habitat monitoring data were unavailable for many regions, anomalous values can occur.
@@ -50,6 +49,6 @@ The timeframes between current and reference condition vary across habitats, but
 **US West Coast:**
 To establish our temporal reference points we instead set our reference uniquely for each habitat, as a percentage of pre-industrialized habitat coverage for salt marshes, as habitat extent between the 1950s and 1960s for sand dunes, or we utilized pressures on habitats as a proxy of habitat condition for seagrasses and soft bottom habitats.
 
-####Interpreting a score:
+#### Interpreting a score
 
 A score of 100 would indicate that habitat coverage had not reduced when compared to the temporal reference point.

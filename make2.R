@@ -1,5 +1,5 @@
 # Ocean Health Index, Santa Barbara, CA
-# last updated: 24 April 2015
+# last updated: 05 May 2015
 
 ##### Summary: the goal of this code is to combine the text in the `conceptual` folder into one markdown document for reading and editing purposes.
 
@@ -43,8 +43,6 @@ in_mdv2 = c(
   'Task_Timeline.md',
   'Phase_One.md',
   'What_is_OHI.md',
-  'Why_ten_goals.md',
-  'How_Are_Goals_Weighted.md',
   'FP_Philosophy.md',
   'AO_Philosophy.md',
   'NP_Philosophy.md',
@@ -55,6 +53,8 @@ in_mdv2 = c(
   'SP_Philosophy.md',
   'CW_Philosophy.md',
   'BD_Philosophy.md',
+  'Why_ten_goals.md',
+  'How_Are_Goals_Weighted.md',
   'Reference_Points.md',
   'How_Is_The_Index_Calculated.md',
   'Understanding_Status.md',
@@ -113,6 +113,17 @@ knit(out_mdv2, "ohi-concguide.md", text = NULL)
 knit2html('ohi-concguide.md', 'ohi-concguide.html') # update: this is easier to read, IMHO, so I'll render this output to html too while we're at it...
 
 
+# render pdf ----
+render(
+  out_mdv2,
+  pdf_document(
+    toc = T, toc_depth = 4, number_sections = T,
+    fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
+    fig_caption = T, highlight = "default", template = "default",
+    keep_tex = F, latex_engine = "xelatex",
+    includes = NULL, pandoc_args = NULL),
+  clean=T, quiet=F,
+  output_file = paste0(pfx, '.pdf'))
 
 # Step D. Continue editing!
 # test

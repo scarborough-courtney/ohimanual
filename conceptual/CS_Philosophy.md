@@ -1,4 +1,4 @@
-###**Carbon Storage**
+##**Carbon Storage**
 
 This goal focuses on the carbon stored in natural coastal ecosystems that absorb and sequester it in large amounts.
 

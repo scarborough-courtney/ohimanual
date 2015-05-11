@@ -1,4 +1,4 @@
-###**Clean Waters**
+## **Clean Waters**
 
 This goal captures the degree to which waters are polluted by natural and human-made causes.
 
