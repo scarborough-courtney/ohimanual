@@ -9,7 +9,10 @@ Ideally one would have (or develop) a list of all the places that people within 
 **History of the Approach (lessons learned 2014)**
 <!---Taken from Conceptual Guide v2--->
 
-Lasting Special Places
+<!---
+Taken from Conceptual Guide v2
+--->
+
 This sub-goal focuses instead on those geographic locations that hold particular value for aesthetic, spiritual, cultural, recreational or existence reasons. The scores for this sub-goal are calculated based upon two assumptions: that all regions have roughly the same percentage of their coastal areas (outward to 3 nm and inland to 1 km from the shore) that qualify as lasting special places, and that the regions with the most protected areas are the closest to achieving their region-specific target.
 
 ####Model description

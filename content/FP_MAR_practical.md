@@ -2,11 +2,11 @@
 ###MARICULTURE
 ##Practical Considerations
 
-###*Ideal Approach*:
+### Ideal Approach
 
 Ideally, there would be information on the area available for mariculture - physically and/or based on social expectations and priorities - and the sustainability of the mariculture practices. This would mean that assessments had been made to identify the physical coastal and offshore habitat appropriate for each intended type of mariculture species (example: offshore habitats for finfish and shallower habitats for filter-feeding invertebrates) and the areas that have been identified as socially appropriate, since mariculture competes for space with many other ocean uses, including fishing and tourism activities. This approach would not penalize regions that have less geographic area available for mariculture, though places with fewer sheltered bays or lower primary production could be at a disadvantage. The type of reference point used will depend on the data available.
 
-**History of the Approach (lessons learned 2014)**
+#### **History of the Approach (lessons learned 2014)**
 <!---Taken from Conceptual Guide v2--->
 
 Mariculture
