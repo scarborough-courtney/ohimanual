@@ -3,6 +3,14 @@
  ## Goals to approach together
 
 - do HAB-based goals together (CS, CP, HAB)
+
+This is because the data layer, `Hab_extent`, is used in multiple places in `Functions.R`, including:
+
+* NP
+* FIS
+* CS
+* CP
+
 - do FIS and FIS pressure together
 - do MAR and MAR pressure together
 - also Baltic team's plan of action
