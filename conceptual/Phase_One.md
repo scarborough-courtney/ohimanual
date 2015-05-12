@@ -2,9 +2,18 @@
 
 There are four distinct and interconnected phases in the Ocean Health Index assessment process. This document describes Phase One.
 
+The recommended process and criteria presented in this section offer a systematic approach to leveraging existing efforts in to the Index. The way information is incorporated depends on what is most appropriate for the region conducting the assessment, which requires considering local conditions and capacities.
+
+
 > In this section you will learn how to:
 
 > - Determine the need and purpose of your assessment as well as ways to leverage ongoing efforts
+
+> - Understand the OHI philosophy
+  - Methods
+  - Resources
+
+> - Design adaptive management strategies
 
 > - Plan and partner with decision makers
   - Who should be involved?
@@ -14,13 +23,3 @@ There are four distinct and interconnected phases in the Ocean Health Index asse
 > - Understand the requirements of running an Ocean Health Index assessment
   - Funding
   - Data Requirements
-
-> - Understand the OHI philosophy
-  - Methods
-  - Resources
-
-> - Design adaptive management strategies
-
-> - Structure an outreach and communications strategy around the assessment
-
-The recommended process and criteria presented in this section offer a systematic approach to leveraging existing efforts in to the Index. The way information is incorporated depends on what is most appropriate for the region conducting the assessment, which requires considering local conditions and capacities.

@@ -6,7 +6,6 @@
 Ideally one would have (or develop) a list of all the places that people within a region consider special, and then assess what percent of and how well those areas are protected. The type of reference point used will depend on the data available.
 
 #### *History of the Approach (lessons learned 2014)*
-<!---Taken from Conceptual Guide v2--->
 
 This sub-goal focuses instead on those geographic locations that hold particular value for aesthetic, spiritual, cultural, recreational or existence reasons. The scores for this sub-goal are calculated based upon two assumptions: that all regions have roughly the same percentage of their coastal areas (outward to 3 nm and inland to 1 km from the shore) that qualify as lasting special places, and that the regions with the most protected areas are the closest to achieving their region-specific target.
 

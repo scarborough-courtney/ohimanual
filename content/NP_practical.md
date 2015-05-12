@@ -46,17 +46,7 @@ TODO: move goal function code up to np_harvest_usd-peak-product-weight_year-max-
 
 3. Minor recoding to get away from using reshape and plyr packages
 
-#### *History of the Approach (lessons learned 2014)*
-<!---Taken from Conceptual Guide v2--->
-
-This goal model calculates overall status by weighting the status of sustainable harvest of each extracted marine product by its proportional value relative to other harvested products.
-
-
 #### Model description
-
-**Global 2012:**
-For the status of each product, we assessed the most recent harvest (in metric tons) per region relative to a fraction of the maximum value (in 2008 USD) ever achieved in that region. This was under the assumption that the maximum achieved at any point in time was likely the maximum possible, and that the sustainable maximum harvest was lower than that value, similarly to what is known about maximum fisheries harvests (Srinivasan et al., 2008). The status for each natural product category is calculated separately and then combined by weighting each category by the proportional value of that product relative to the total value of all products. Part of the status calculation for each product category is a measure of sustainability; the goal captures exposure, risk, and viability of harvesting the product.
-
 **Global 2013:**
 This used the same approach as Global 2012. Data processing did change however; see below in Evolution of the Approach.
 
