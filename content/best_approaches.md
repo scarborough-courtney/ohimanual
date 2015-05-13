@@ -1,8 +1,14 @@
  ## Best approaches for goals, pressures and resilience
 
- ## Goals to approach together
+<!--- See GitHub issue #100 --->
 
-- do HAB-based goals together (CS, CP, HAB)
+ #### Goals to approach together
+
+ #### HAB synergies
+
+- do HAB-based goals together (CS, CP, HAB). In fact, you could have the same team member coordinate activities for the development of these three goals.
+
+> TIP: See section, **Assembling a Team**
 
 This is because the data layer, `Hab_extent`, is used in multiple places in `Functions.R`, including:
 
@@ -11,9 +17,18 @@ This is because the data layer, `Hab_extent`, is used in multiple places in `Fun
 * CS
 * CP
 
+#### Linkages between pressures, goals, resilience
+
+Note that because trash is also a pressure, it affects other goals as well (TR, LSP/ICO/SP, LIV/ECO/LE, SPP/BD). In the case of Global 2012, the **Clean Waters** goal is very much linked to the pressures because the same data layers for pressures are used as the input layers for the status, albeit transformed as (1 - value).
+
+Other tips:
+
 - do FIS and FIS pressure together
 - do MAR and MAR pressure together
-- also Baltic team's plan of action
+
+#### Strategies for Assessment
+
+- See Baltic team's plan of action
 
 ****
 
@@ -24,19 +39,20 @@ This is because the data layer, `Hab_extent`, is used in multiple places in `Fun
 For each goal and sub-goal model and for each assessment, we will describe the models, evolution of the approach, reference point, how to interpret the score, and also recommendations for conducting regional assessments. When appropriate, we provide recommendations at both the goal and sub-goal levels.
 
 ****
-<!---Taken from Conceptual Guide v2--->
+<!---Duplicate from from Conceptual Guide--->
 
 ###Where to start?
 
 Any assessment will depend on the available data, which requires creative thinking, particularly when ideal data are unavailable. Determining the appropriate scale and defining the study area and any regions within the study area will also depend on available data. The scale and resolution of available data can help inform the scale of the study area to be analyzed and how to divide it into regions.
-To consider as you get started:
+
+#### To consider as you get started
+
 Data included to calculate scores are partly based on the philosophical framework of the Ocean Health Index (see Part I), and partly based on data available. Several goals that combine across categories have many potential data sources that could be included (or excluded): in particular the natural products, livelihoods and economies, and habitat based goals. The existence of the data itself will drive a lot of these decisions, but here are some guidelines to help determine if data are appropriate philosophically:
+
 * Do the data represent something truly ocean-based, and natural (i.e. not man-made)?
 * How would the reference point be calculated?
 * Do data cover the appropriate spatial scales?
 * Do data cover the appropriate temporal scales?
-
-See also How_ToGatherAppropriateData from ohi-science.org.
 
 ###Which data are available?
 

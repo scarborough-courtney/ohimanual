@@ -10,7 +10,9 @@ The kinds of marine products included, and how much should each contribute to th
 
 It is possible to measure sustainability in a number of different ways. Quantitative information can be used, or expert judgment, perhaps based on information or rough estimates of how sustainable the harvest method is, which is what was done in Global 2012. We based the sustainability component on the historical maximum harvest recorded, the maximum harvesting density recorded, and risk status assessments by the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). Ideally, both the maximum sustainable harvest levels and the sustainability coefficient would be based on functional relationships obtained from specific studies. In the absence of these, we borrowed general principles from fisheries models to provide rough estimates.
 
-#### Data overview
+#### Global Data Approach
+
+**Data Overview**
 
 product | relative tonnes (1) | weighting (2) | Exposure (3) | Risk (4)
 ----------|---------------------|-------------|--------------|------
@@ -45,3 +47,55 @@ TODO: add smoothing a la PLoS 2013 manuscript
 TODO: move goal function code up to np_harvest_usd-peak-product-weight_year-max-%d.csv into ohiprep so layer ready already for calculating pressures & resilience
 
 3. Minor recoding to get away from using reshape and plyr packages
+
+#### Preparing the Data
+Notes from Katie while updating the NP goal:
+
+Natural products
+**harvest:**
+- explore simplifying gap-filling: use correlation model of dollar value vs harvested tonnage, while discarding the part of script using dollar ratio (curr dollar value/peak dollar value) as a gap-filler for harvest ratio
+- switch the gap-filling order: using the dollar value correlation model first (in cases where the most recent year has no harvest reported but has dollar value reported, that’s a better estimate than using the harvest from the previous year), then gap-fill any remaining cases of missing harvest for the current year with harvest from the previous year
+
+**sustainability:**
+- check cases where country-product pair has 0 for sustainability score, but relatively high harvest ratio (curr harvest/peak harvest) – it may be a flag that the sustainability score is off (eg because the habitat area is off)
+
+
+#### Tech Specs
+
+**Updating the Script**
+
+I just pushed a new script, `data_prep_2015a.R`, and the resulting outputs to `ohiprep/globalprep/fao_commodities/v2015`.  The new script reworks the gap-filling, based on Mel's and Katie's suggestions.  I'll post later about the smoothing and calculations based on new input from Katie, but would love to get input on the gap-filling first.
+* Before gap-filling, binds the USD and tonnes data for all natural products at the commodity level (rather than product level).
+* By commodity & year: Identifies years with neither USD nor tonnes data, flags as `no_data`, and determines first reporting year based on first year with either data (and deletes years prior to this).
+* By commodity & year: Gap-fills according to these rules:
+    * If `no_data`, and not the last year of data set, assume that non-reporting means zero harvest; replace `NA` with `0` for both USD and tonnes
+    * Create regression models for `(tonnes ~ USD)` and `(USD ~ tonnes)`
+        * Exclude NAs (these will be in either USD or tonnes, but not both)
+        * Remove all commodities with fewer than four non-zero observations (within a particular region)
+            * not enough info for a decent regression or meaningful peak
+            * counting these could also penalize experimental production that later stops
+        * Use `lm()` to generate slope/intercept, and gap-fill all NAs with the appropriate regression model
+        * Regression gap-filling takes care of the most current-year gaps, per Katie's comment
+        * Regression gap-filling fails for certain data, where there are no paired observations for correlation (e.g. every reported value for USD shows NA for tonnes, and/or vice versa), still need to figure out how to deal with those without losing useful data.
+    * If `no_data` appears in most recent year of data set, not applicable for regression gap-fill, so end-fill based upon the prior year.
+    * Outputs a .csv with rgn_id, commodity, product, year, and gapfill method at the commodity level.  I made up text codes for now, pretty self-explanatory, but those are easy to change.  File is `data/np_gapfill_report.csv` if you want to take a peek.
+* Collapses commodities into products at this point, in preparation for smoothing, finding peaks, and determining status and weighting.
+
+Latest on NP:
+in ohiprep/globalprep/FAO-commodities, new (well, a week or so ago) data_prep2015.R that fixes:
+* the FAO data cleaning, so treats '0 0' as 0.1 instead of NA
+* gap filling:
+    * it runs at commodity level instead of product level
+    * gapfills between USD and tonnes in sequence: local regression, then georegional regression, then global regression.
+    * does all that before end-filling.
+    * produces a gapfilling report for every commodity/region/year.
+Currently this outputs a single file; needs to be updated to output individual files for tonnes, tonnes_rel, and prod_weight.  Needs to be renamed to data_prep.R.
+
+In ohi-global/eez2013, LSP_update branch, I've updated /conf/functions.R - cleaned up (dplyr, etc), chunked into sub-functions.  Questions that need to be addressed:
+* currently calcs trend using last five years of data (year_max >= year > year_max-5), which means only four intervals for the regression.  I think we want to include the (year_max - 5) data, for five intervals, so: (year_max >= year >= year_max-5).
+* currently, for regions with exposure = NA, replaces NAs with zero.  Should these be replaced with one instead?
+    * Exposure for these indicates harvest intensity (tonnes/km^2) relative to the region with the max harvest intensity.  
+    * NAs occur when a country hasn't reported area values for rocky (seaweeds), coral (corals), so tonnes/NA = NA.
+    * Setting exposure to zero means intensity = none at all (boosting the status); leaving as NA removes from calculation (ignored in status); setting to one means intensity = worst case (penalizing the status).
+
+Almost there!

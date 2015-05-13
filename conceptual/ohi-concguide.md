@@ -4,17 +4,21 @@ title: The Ocean Health Index Conceptual Guide
 
 #**Need for and Benefits of an Ocean Heath Index**
 
-Marine management mandates in the current financially constrained environments are increasingly requiring the establishment of comprehensive management objectives that maximize sustainable production while maintaining healthy oceans. This requires a cycle of measuring conditions, developing and enacting strategic responses, and continuous monitoring. The Ocean Health Index (OHI, or the ‘Index’) was developed to support this growing need by providing a framework that quantifies overall ecosystem health, which can be tailored to any spatial context, both political and ecological. The Index is the first assessment tool that provides a common platform for scientifically combining and comparing key elements from all dimensions of the oceans health — biological, physical, economic and social – to measure how sustainably people are using the ocean. The Index provides a tool to measure and track changes in several ocean and coastal dimensions through a repeatable, transparent, quantitative, and goal-driven approach. It was developed as a framework to assess coastal oceans in a formulaic manner, and was designed to be customizable to different spatial scales, data availability, and cultural priorities. As a management tool, the Index can help inform decision-making by helping stakeholders identify geographic and thematic priorities, which increases the cost-effectiveness of management interventions.
+> The Index is the first assessment tool that provides a common platform for scientifically combining and comparing key elements from all dimensions of the oceans health to measure how sustainably people are using the ocean
 
-Overall Index scores are a combination of ten components, or ‘goals’, of ocean health. These scores are calculated using the best available data and indicators at the scale of the assessment. Scores reflect how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to a reference point (or target), on a scale of 0 to 100. By combining ocean and coastal benefits under a single framework, the Index allows for a comprehensive and integrated view of marine systems as well as a better understanding of potential trade-offs or synergies among these goals. This structured, but highly tailorable, framework provides a consistent platform from which to conduct assessments through time, and at any spatial scales desired.
+Marine management mandates in the current financially constrained environments are increasingly requiring the establishment of comprehensive management objectives that maximize sustainable production while maintaining healthy oceans. This requires a cycle of measuring conditions, developing and enacting strategic responses, and continuous monitoring. The Ocean Health Index (OHI, or 'the Index') was developed to support this growing need by providing a framework that quantifies overall ecosystem health, which can be tailored to any spatial context, both political and ecological. The Index is the first assessment tool that provides a common platform for scientifically combining and comparing key elements from all dimensions of the oceans health — biological, physical, economic and social – to measure how sustainably people are using the ocean.
 
-While many indices have been created to track particular issues or trends in economics, social science or environmental quality, the Index is the first to define and track ocean health comprehensively. It recognizes that people are part of the ocean ecosystem, evaluates how well the ocean provides ten key benefits to people now, and how well we protect its ability to do so in the future. This index differs from typical indicator-based monitoring systems, be they small, such as managing a seafood farm, or large, such as the Millennium Development Goals. Those systems typically contain a list of indicators each of which assesses performance in a particular task or topic. Performing successfully in many or all categories undoubtedly improves overall performance, but does not provide information on the relationship between the different indicators and sectors evaluated.
+Overall Index scores are a combination of components, known as ‘goals’, of ocean health. These scores are calculated using the best available data and indicators at the scale of the assessment. Scores reflect how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to a reference point (or target), on a scale of 0 to 100. Because the Index compares scores against the available data within the scope of the study area, it presents a highly tailorable framework to match an assessment approach. It is a structured approach, but the structure may change appropriately with each new assessment.
 
-As a composite index, the Index integrates the results for and relationships between all categories that it evaluates. By integrating information from many different disciplines and sectors, the Index represents a significant advance over conventional single-sector approaches to assessing ocean condition. Because the information from the Index can help inform decision-making in terms of identifying cost-effective management interventions to improve ocean health, it addresses the desire of increasing environmental performance in the face of tightening budgets for natural resource management and conservation.
+The Index provides a tool to measure and track changes in several ocean and coastal dimensions through a repeatable, transparent, quantitative, and goal-driven approach. It was developed as a framework to assess coastal oceans in a formulaic manner, and was designed to be customizable to different spatial scales, data availability, and cultural priorities. By combining ocean and coastal benefits under a single framework, the Index allows for a comprehensive and integrated view of marine systems as well as a better understanding of potential trade-offs or synergies among these goals. This framework provides a consistent platform from which to conduct assessments through time, and at any spatial scales desired.
+
+While many indices have been created to track particular issues or trends in economics, social science or environmental quality, the Index is the first to define and track ocean health comprehensively. It recognizes that people are part of the ocean ecosystem, evaluates how well the ocean provides ten key benefits to people now, and how well we protect its ability to do so in the future. This index differs from typical indicator-based monitoring systems such as the Millennium Development Goals because those systems typically contain a list of indicators each of which individually assesses performance in a particular task, sector, or topic. Performing successfully in many or all categories undoubtedly improves overall performance, but does not provide information on the relationship between the different indicators and sectors evaluated.
+
+As a composite index, the Index integrates the results for and relationships between all categories that it evaluates. By integrating information from many different disciplines and sectors, the Index represents a significant advance over conventional single-sector approaches to assessing ocean condition. Because the information from the Index can help inform decision-making in terms of identifying cost-effective management interventions to improve ocean health, it addresses the desire of increasing environmental performance in the face of tightening budgets for natural resource management and conservation. As a management tool, the Index can help inform decision-making by helping stakeholders identify geographic and thematic priorities, which increases the cost-effectiveness of management interventions as well.
 
 #**Task Timeline**
 
->Remember: the process of conducing an OHI+ assessment is not linear.
+> Remember: the process of conducing an OHI+ assessment is not linear.
 
 The Task Timeline provides the steps involved in conducting Ocean Health Index assessments. It also recommends the the types of skills needed. The process of calculating the Index is not linear. There is a lot of iteration and discussion among the team, which consists of scientists, computer programmers, and a core management team, who must all work together to arrive at the best decisions possible. For example, gathering appropriate data for each status, pressure, and resilience layer requires serious thinking about how to calculate reference points at the same time as determining the validity and usability of the dataset. It is expected that your data sources and goal models will change during the process.
 
@@ -29,7 +33,7 @@ The phases and tasks outlined in the Task Timeline are:
 - **Phase 3:** Conduct the OH+ Assessment
 - **Phase 4:** Communicate
 
-For more information, visit: http://ohi-science.org.
+> For more information, visit: http://ohi-science.org.
 
 #Phase One: Learn about the Ocean Health Index
 
@@ -59,7 +63,13 @@ The recommended process and criteria presented in this section offer a systemati
 
 ##**What is the Ocean Health Index?**
 
-The Ocean Health Index defines a healthy ocean as one that can sustainably deliver a range of benefits to people both now and in the future. A healthy ocean in this definition is not necessarily a pristine ocean, although the Index allows for pristine systems as well as sustainably used systems to score highly. The benefits provided by the ocean are expressed in the Global Assessments through broadly held public goals:
+The Ocean Health Index scores important **Goals** of ocean health. The Ocean Health Index defines a healthy ocean as one that can sustainably deliver a range of benefits to people now and in the future, while not compromising the state of the oceans and coasts. A healthy ocean in this definition, however, is not necessarily a pristine ocean, although the Index allows for pristine systems as well as sustainably used systems to score highly. In fewer words, the OHI is about balance.
+
+The scores are calculated using the best available data and indicators at the scale of the assessment. Scores reflect how well coastal regions optimize their potential ocean benefits and services in a sustainable way relative to a reference point, also known as a target, on a scale of 0 to 100. Because the Index compares scores against the available data within the scope of a given study area, it presents a highly tailorable framework and can match an assessment's geographic scope. It is a structured approach, but the structure may change appropriately with each new interpretation.
+
+Outside partners are using the OHI in their own assessments. These are modifications and interpretations of the original Global Assessments conducted for the first time in 2012 (Halpern *et al.* 2012). The methods have improved since then, and collaborators have changed their goals, models, and data in their own assessments in the ever-evolving OHI process. This **Conceptual Guide** will help you understand the reasoning behind the framework, and will allow you to prepare to make use of local information to get the best results possible for your assessment once you are ready to engage with the data.
+
+The benefits provided by the ocean have most commonly been measured through these broadly held public goals:
 
 - [**Food provision**](FP_Philosophy) from sustainably harvested or cultured stocks
 - [**Artisanal opportunities**](AO_Philosophy) for local communities from sustainable practices
@@ -78,15 +88,11 @@ The Ocean Health Index defines a healthy ocean as one that can sustainably deliv
 
 The aim of this goal is to maximize the sustainable harvest of seafood in regional waters from **Wild-Caught Fisheries** and **Mariculture** (specifically, ocean-farmed seafood). Regions are rewarded for maximizing the amount of sustainable seafood provided and they are penalized for unsustainable practices or for under-harvest. Because fisheries and mariculture are separate industries with very different features, each is tracked separately as a unique sub-goal under **Food Provision**. They are then combined after each sub-goal is weighted by the proportion of the
 
-
-*****
-
 ### **Wild-Caught Fisheries**
->This sub-goal describes the amount and sustainability of wild-caught seafood harvested mainly for human consumption.
 
-#### Interpreting a Score
+>The **Wild-Caught Fisheries** sub-goal describes the amount of wild-caught seafood harvested and its sustainability for human consumption.
 
-Higher scores reflect fishing practices with sustainably high yields that avoid excessively high exploitation and do not target threatened populations.
+Higher scores reflect fishing practices with sustainably high yields that avoid excessively high exploitation and do not target threatened existing fish populations.
 
 #### Philosophy
 
@@ -100,7 +106,7 @@ Wild-caught fisheries harvests must remain below levels that would compromise th
 
 Ideally, data for catch and effort of every commercially - and recreationally-fished species would be available, as well as the functional relationship between fish population size (biomass) and fisheries effort, so that MSY could be calculated. Then, fisheries catch and effort information would be used to calculate the present state and MSY would be used to set the reference point. Current status would be calculated using the present state of every individual species and combining each species together, as the weighted proportion of total catch.
 
-#### Keeping in mind
+#### Keep in Mind
 
 So far, we have not created assessments of this model that capture food security. In other words, this goal assesses whether seafood is being harvested in a given region, but does not track where or by whom it is consumed, and it does not assess nutrition quality. Potentially, the outcome from assessing the Food Provision goal could be used as input if a food security assessment were developed.
 
@@ -177,7 +183,7 @@ Assessment | Model Description and Reference Point | Evolution of Approach | Int
 
 ## **Natural Products**
 
-> This goal describes how sustainably people harvest non-food products from the sea.
+> The **Natural Products** goal describes how sustainably people harvest non-food products from the sea.
 
 #Philosophy
 
@@ -359,7 +365,7 @@ Assessment | Model Description and Reference Point | Evolution of Approach | Int
 
 ## **Sense of Place**
 
-> The sense of place goal aims to capture the aspects of coastal and marine systems that people value as part of their cultural identity and connectedness to the marine environment.
+> The **Sense of Place** goal aims to capture the aspects of coastal and marine systems that people value as part of their cultural identity and connectedness to the marine environment.
 
 This definition includes people living near the ocean and those who live far from it and still derive a sense of identity or value from knowing particular places or species exist. Since few groups, communities, or states have explicitly described the attributes of the coastal and ocean environments that have special cultural meaning, the Index assesses the conditions that reflect how well this goal is being delivered through two sub-goals, **Iconic Species** and **Lasting Special Places**. The overall **Sense of Place** goal is then the arithmetic mean of the two sub-goal scores.
 
@@ -583,7 +589,7 @@ Resilience is calculated as the sum of the ecological factors and social initiat
 
 ####Ideal Approach
 
-Ideally, assessments of social resilience would include national-level and as well as local rules and other relevant institutional mechanisms that are meant to safeguard ocean health. The global focus has been on international treaties and indices, so your region should have more localized information. There would also be information as to their effectiveness and enforcement. of more. Information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management would be useful too.
+Ideally, assessments of social resilience would include national-level and as well as local rules and other relevant institutional mechanisms that are meant to safeguard ocean health. The global focus has been on international treaties and indices, so your region should have more localized information. There would also be information as to their effectiveness and enforcement. of more. Information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management would be useful too. 
 
 ##**Interactions: Pressures and Resilience**
 
@@ -623,9 +629,7 @@ All guides can be found at [www.ohi-science.org](www.ohi-science.org)
 
 Your assessment will be an example of an Ocean Health Index+ (OHI+) assessment. OHI+ assessments and are conducted by independent groups such as yours that use the same Index approach to measure ocean health in their own regions, countries, states, and communities. These assessments can be used by managers to incorporate local information and priorities at the spatial scale where policy and management decisions are made.
 
-Index scores by goal are calculated at the scale of the reporting unit, which is called a ‘region’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘study area’. Note that, while each goal score is measured on a scale from 0 to 100, during the calculation process, data layers are expressed on a scale from 0 to 1 and later multiplied by 100 (for convenience). As a result, when referring to individual dimensions or data layers, we discuss data on a scale from 0-1 units.
-
-In the global assessments the study area is the world and the regions assessed are coastal countries or territories (two hundred twenty one exclusive economic zones), Antarctica, and the High Seas (fifteen sub divisions). Global assessments are conducted by a multidisciplinary team of scientists led by the U.S. National Center for Ecological Assessment and Synthesis (NCEAS), Conservation International, and the Seas Around Us Project. These studies are published annually and use models developed using the best existing data available a the global scale to capture each goal philosophy. At the global level, we apply the same methods and reference points to all regions assessed equally, which ensures scientific objectivity and allows for comparison of performance across countries. The methods are improved every year by increasing goal model robustness, integrating new data, and recalculating the scores with the improved methods both for the current year and, retroactively, for previous years to allow for year to year comparisons.
+Index scores by goal are calculated at the scale of the reporting unit, which is called a ‘region’ and then combined using a weighted average to produce the score for the overall area assessed, called a ‘study area’. In the global assessments the study area is the world and the regions assessed are coastal countries or territories (two hundred twenty one exclusive economic zones), Antarctica, and the high seas (fifteen sub divisions). Global assessments are conducted by a multidisciplinary team of scientists led by the U.S. National Center for Ecological Assessment and Synthesis (NCEAS), Conservation International, and the Seas Around Us Project. These studies are published annually and use models developed using the best existing data available a the global scale to capture each goal philosophy. At the global level, we apply the same methods and reference points to all regions assessed equally, which ensures scientific objectivity and allows for comparison of performance across countries. The methods are improved every year by increasing goal model robustness, integrating new data, and recalculating the scores with the improved methods both for the current year and, retroactively, for previous years to allow for year to year comparisons.
 
 ###Comparing Scales of Assessment
 
@@ -633,7 +637,9 @@ It is important to note your OHI+ assessment can't be compared directly to the g
 
 ##**Determine the Need and Purpose of Conducting an OHI+ and How it Complements Ongoing Initiatives and Efforts**
 
-One of your first tasks when thinking about developing an OHI+ assessment should be defining the purpose(s) of the study. Producing the Index is not the end goal: it is merely a process toward the true end-goal - *achieving improved ocean health.*
+One of your first tasks when thinking about developing an OHI+ assessment should be defining the purposes of the study. Producing the Index is not the end goal: it is merely a process toward the true end-goal - *achieving improved ocean health.*
+
+> TIP: In conducting an OHI+ assessment, the process is just as important as the results.
 
 OHI+ falls under the realm of applied research, aiming at solving practical problems related to ocean and coastal resource management. Hence, the assessments should be conducted with a clear end-goal in mind: what problem(s) do you want to solve? Defining the end goal of the study will largely determine how goal models, data gathering, and reference points are developed to maximize the utility of the findings to inform decision-making to address the problem(s). You should consider why you need or want to conduct an OHI+ assessment and what you are going to do with the information. Some rationale for your assessment might include the need or desire to:
 
@@ -1129,3 +1135,4 @@ The study area is the entire geographical boundary included in the assessment.
 **Sub-goal**
 
 Several goals have sub-goals for which data on all four dimensions exist, allowing calculation of a complete sub-goal score. In most cases the goal score is simply the arithmetic average of these sub-goal scores, but the score for the food provision goal is the yield-weighted average of the two sub-goal scores.
+
