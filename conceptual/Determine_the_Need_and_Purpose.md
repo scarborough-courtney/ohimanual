@@ -1,6 +1,8 @@
 ##**Determine the Need and Purpose of Conducting an OHI+ and How it Complements Ongoing Initiatives and Efforts**
 
-One of your first tasks when thinking about developing an OHI+ assessment should be defining the purpose(s) of the study. Producing the Index is not the end goal: it is merely a process toward the true end-goal - *achieving improved ocean health.*
+One of your first tasks when thinking about developing an OHI+ assessment should be defining the purposes of the study. Producing the Index is not the end goal: it is merely a process toward the true end-goal - *achieving improved ocean health.*
+
+> TIP: In conducting an OHI+ assessment, the process is just as important as the results.
 
 OHI+ falls under the realm of applied research, aiming at solving practical problems related to ocean and coastal resource management. Hence, the assessments should be conducted with a clear end-goal in mind: what problem(s) do you want to solve? Defining the end goal of the study will largely determine how goal models, data gathering, and reference points are developed to maximize the utility of the findings to inform decision-making to address the problem(s). You should consider why you need or want to conduct an OHI+ assessment and what you are going to do with the information. Some rationale for your assessment might include the need or desire to:
 

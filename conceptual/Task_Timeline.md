@@ -1,6 +1,6 @@
 #**Task Timeline**
 
->Remember: the process of conducing an OHI+ assessment is not linear.
+> Remember: the process of conducing an OHI+ assessment is not linear.
 
 The Task Timeline provides the steps involved in conducting Ocean Health Index assessments. It also recommends the the types of skills needed. The process of calculating the Index is not linear. There is a lot of iteration and discussion among the team, which consists of scientists, computer programmers, and a core management team, who must all work together to arrive at the best decisions possible. For example, gathering appropriate data for each status, pressure, and resilience layer requires serious thinking about how to calculate reference points at the same time as determining the validity and usability of the dataset. It is expected that your data sources and goal models will change during the process.
 
@@ -15,4 +15,4 @@ The phases and tasks outlined in the Task Timeline are:
 - **Phase 3:** Conduct the OH+ Assessment
 - **Phase 4:** Communicate
 
-For more information, visit: http://ohi-science.org.
+> For more information, visit: http://ohi-science.org.

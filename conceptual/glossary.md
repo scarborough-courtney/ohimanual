@@ -30,6 +30,8 @@ One of ten public goals that are widely recognized for their important benefits 
 
 A healthy ocean sustainably delivers a range of benefits to people now and in the future.
 
+<!---Julie/Omar: do we have to expand here? There is information in Conc. Guide v2--->
+
 **Mariculture**
 
 Ocean-farmed seafood, as distinct from other forms of aquaculture.
