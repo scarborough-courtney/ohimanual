@@ -1,8 +1,10 @@
-#Things to include in an OHI R guide
-###Code unto others as you would have them code unto you.
+# Coding style 
+
+> Code unto others as you would have them code unto you.
 
 Why style? ask Hadley Wickham, developer of many wonderful R packages:
->Good style is important because while your code only has one
+
+> Good style is important because while your code only has one
 author, it’ll usually have multiple readers. This is especially true when you’re
 writing code with others. In that case, it’s a good idea to agree on a common
 style up-front. Since no style is strictly better than another, working with
@@ -15,15 +17,19 @@ The Ocean Health Index is founded upon principles of open-source science, so our
 Certain coding techniques are more efficient than others (e.g. in R, looping across elements in a vector is much slower than operating on the entire vector at once), but rarely does OHI code push any performance envelopes.  Much more of our time is spent writing code, translating old code into new models, and debugging.  Transparent, readable code will save more time in the future than a perfectly-optimized but opaque algorithm.  
 
 Readable code is:
+
+* collaborative
 * easier for others to understand and debug
 * easier for others to update and modify
 * easier for 'future you' to interpret what 'past you' meant when you wrote that chunk of code.
 
 Check out Hadley Wickham's [style guide: ](http://r-pkgs.had.co.nz/style.html)
+
 * How many of these suggestions are second-nature to you? how many are you guilty of breaking?
 * Note that these are guidelines, not rules; non-stylish code can still work.  
 
-##OHI best practices?:
+## Best practices for coding in OHI assessments:
+
 * use a consistent format for variable names, filenames, function names, etc.
     * `lower_case_with_underscores` (preferred) or `camelCase` (ok I suppose)
         * not `periods.in.between`
@@ -49,7 +55,7 @@ Check out Hadley Wickham's [style guide: ](http://r-pkgs.had.co.nz/style.html)
 * if you are working on an older script, spend a few extra minutes to update it according to these best practices
     * technical debt - you can do it quickly or you can do it right.  Time saved now may cost you or someone else more time later.
 
-##Writing functions
+## Writing functions
 http://nicercode.github.io/guides/functions/
 Why write functions?
 * name a chunk of code for easier reading
@@ -60,22 +66,6 @@ What makes a good function:
 * Performs a single operation
 * Uses intuitive names
 
-
-##Misc helpful or common or confusing functions
-* switch vs list?
-* ifelse?
-* apply functions?
-
-##Directories and files
-* avoid setwd() - stay in one location, but use variables to point to different locations
-    * setwd at very start, to github/<repository>/<goal> directory
-    * create variables to point to other locations
-        * file.path() or whatever
-    * if absolutely necessary to setwd(), reset back to main wd when you're done 
-        * orig_wd <- getwd()
-        * setwd(<new working directory>)
-        * do your stuff
-        * setwd(orig_wd)
-* Directory locations:
-    * use src/R/common.R to set up network directory locations
-    * use '~/github' to identify local github directory
+## Directories and files
+    * Store files in a folder called 'github' in your home directory; access it with `~/github` so that 
+    different users with different operating systems can work smoothly with your files
