@@ -1,4 +1,5 @@
 #`tidyr` functions
+
 'Tidy' up your messy data using `tidyr` to make it easier to work with.  The
 'tidy tools' functions in the `dplyr` package work best with tidy data.
 
@@ -7,23 +8,16 @@ From Hadley Wickham's [*Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-dat
 
 From [RStudio's introduction to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/):
 
->The two most important properties of tidy data are:
-* Each column is a variable.
-* Each row is an observation.
+> The two most important properties of tidy data are:
+1. Each column is a variable.
+2. Each row is an observation.
 
->Arranging your data in this way makes it easier to work with because you have a
+> Arranging your data in this way makes it easier to work with because you have a
 consistent way of referring to variables (as column names) and observations
 (as row indices). When you use tidy data and tidy tools, you spend less time
 worrying about how to feed the output from one function into the input of
 another, and more time answering your questions about the data.
 
-Install `tidyr`:
-```
-install.packages('tidyr')
-library(tidyr)
-```
-Follow directions on [intro](R_tutes_intro.md) to download sample data
-used in these examples.
 
 `gather()` is arguably the most useful function in `tidyr`, and is explained in
 more detail below.  `spread()` and `separate()` are other useful functions in
@@ -42,8 +36,8 @@ through `dplyr` and `tidyr` basics
 * [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 A quick reference guide to `tidyr` and `dplyr` functions
 
-##tidyr::gather()
-###Description
+## tidyr::gather()
+### Description
 `gather()` takes data organized in rows and collapses them into a column format (a
 key column and a value column), duplicating all other columns as needed. Use
 `gather()` when your data is organized in "wide" format, in which some of your
@@ -54,7 +48,7 @@ more convenient for examining data in a table format.
 
 Note: `gather()` essentially replaces `melt()` in `plyr` package.
 
-###Example
+### Example
 The sample data set (see intro) contains harvest data of a number of marine
 commodities, separated by country, commodity, and year.  In its original form,
 the harvest data (in tonnes) is spread across five different harvest years.
@@ -67,6 +61,7 @@ called 'year'.
 
 In this example (see figure), the original wide data is transformed into long
 data using the command:
+
 ```
 data_long <- data_wide %>% gather(year, tonnes, X2007:X2011)
   ### Gathers columns X2007 through X2011 into a single column called 'year';
@@ -78,8 +73,3 @@ data_long <- data_wide %>% gather(year, tonnes, -Country, -Commodity, -Trade)
 ```
 
 ![wide data to long data using gather() and spread()](https://docs.google.com/drawings/d/1VaZdLWK0NwAkov4sEytZLRpOUAndb3_NZOA4-n1HNIo/pub?w=948&h=499)
-
-
-
-Now that the data is tidy, we can use `dplyr` package functions to
-further wrangle and analyze the data: [`dplyr` tutorial](R_tutes_dplyr.md)

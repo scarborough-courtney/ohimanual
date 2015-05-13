@@ -1,42 +1,126 @@
-#`dplyr` functions
+---
+title: OHI and R Tutorials
+---
+
+# Introduction
+
+Ocean Health Index R code uses several packages and best practices to faciliate
+understanding and collaboration. These approaches are presented here, along with
+examples using data included in global OHI assessments.
+
+This document describes several packages that are used extensively in OHI assessments and 
+introduces you to typical coding practices commonly seen in OHI scripts and functions.
+
+Also see the accompanying R script to test examples using these packages. 
+
+## R Very Basics:
+* Have you already downloaded and installed [R](http://www.r-project.org/)?
+* Have you already downloaded and installed [RStudio](http://www.rstudio.com/)?
+* Have you walked through the excellent interactive tutorials
+from [swirl](http://swirlstats.com/students.html)?
+
+#`tidyr` functions
+
+'Tidy' up your messy data using `tidyr` to make it easier to work with.  The
+'tidy tools' functions in the `dplyr` package work best with tidy data.
+
+From Hadley Wickham's [*Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html)
+>It is often said that 80% of data analysis is spent on the cleaning and preparing data. And it's not just a first step, but it must be repeated many over the course of analysis as new problems come to light or new data is collected. To get a handle on the problem, this paper focuses on a small, but important, aspect of data cleaning that I call data tidying: structuring datasets to facilitate analysis.
+
+From [RStudio's introduction to `tidyr`](http://blog.rstudio.org/2014/07/22/introducing-tidyr/):
+
+> The two most important properties of tidy data are:
+1. Each column is a variable.
+2. Each row is an observation.
+
+> Arranging your data in this way makes it easier to work with because you have a
+consistent way of referring to variables (as column names) and observations
+(as row indices). When you use tidy data and tidy tools, you spend less time
+worrying about how to feed the output from one function into the input of
+another, and more time answering your questions about the data.
+
+
+`gather()` is arguably the most useful function in `tidyr`, and is explained in
+more detail below.  `spread()` and `separate()` are other useful functions in
+`tidyr`.
+
+Other 'tidyr' references:
+* [Hadley Wickham's *Tidy Data* paper:](http://vita.had.co.nz/papers/tidy-data.html)
+Download the pre-print version for the whys and hows of tidy data.
+* [Cran tidy data vignette:](http://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+An informal and code heavy version of Hadley's full *Tidy Data* paper.
+* [RStudio Blogs: Introducing tidyr:](http://blog.rstudio.org/2014/07/22/introducing-tidyr/)
+Basics and philosophy of `tidyr`
+* [swirl tutorial package:](http://swirlstats.com/students.html) A tutorial
+package built directly into R.  Section 2: 'Getting and Cleaning Data' runs you
+through `dplyr` and `tidyr` basics
+* [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+A quick reference guide to `tidyr` and `dplyr` functions
+
+## tidyr::gather()
+### Description
+`gather()` takes data organized in rows and collapses them into a column format (a
+key column and a value column), duplicating all other columns as needed. Use
+`gather()` when your data is organized in "wide" format, in which some of your
+variables are in row form, rather than column form.  Another `tidyr` function,
+`spread()`, is more or less the reverse of `gather()`, to reformat long data
+into wide data. It is more difficult to work with wide data, but may be
+more convenient for examining data in a table format.
+
+Note: `gather()` essentially replaces `melt()` in `plyr` package.
+
+### Example
+The sample data set (see intro) contains harvest data of a number of marine
+commodities, separated by country, commodity, and year.  In its original form,
+the harvest data (in tonnes) is spread across five different harvest years.
+* Counter to 'tidy data' principles, we have multiple columns (X2007:X2011)
+representing a single variable (year), and multiple observations of harvest
+tonnage in each row.
+* To transform this into 'tidy data' we will gather the five annual harvests
+into a single column called 'tonnes' and note the year of harvest in a new column
+called 'year'.
+
+In this example (see figure), the original wide data is transformed into long
+data using the command:
+
+```
+data_long <- data_wide %>% gather(year, tonnes, X2007:X2011)
+  ### Gathers columns X2007 through X2011 into a single column called 'year';
+  ### the values from each column are put into a new column called 'tonnes'.
+
+data_long <- data_wide %>% gather(year, tonnes, -Country, -Commodity, -Trade)
+  ### Same results; the '-' unselects the named columns, so they will not
+  ### be gathered; all other columns are gathered into 'year' and 'tonnes'.
+```
+
+![wide data to long data using gather() and spread()](https://docs.google.com/drawings/d/1VaZdLWK0NwAkov4sEytZLRpOUAndb3_NZOA4-n1HNIo/pub?w=948&h=499)
+
+# `dplyr` functions
+
 The `dplyr` package includes a number of functions to easily, quickly, and
 intuitively wrangle your data. Here is a quick introduction with examples from data used in the Ocean Health Index.
 
 From [RStudio's introduction to `dplyr`](http://blog.rstudio.org/2014/01/17/introducing-dplyr/):
 
->The bottleneck in most data analyses is the time it takes for you to figure
+> The bottleneck in most data analyses is the time it takes for you to figure
 out what to do with your data, and `dplyr` makes this easier by having individual
 functions that correspond to the most common operations...
 
->Each function does one only thing, but does it well.
-
-Install `dplyr`:
-```
-install.packages('dplyr')
-library(dplyr)
-```
-Follow directions on [intro](R_tutes_intro.md) to download sample data
-used in these examples.
+> Each function does one only thing, but does it well.
 
 The most important `dplyr` functions to understand for data processing will be
  `group_by()`, `mutate()`, and `summarize()`. Also important, `dplyr` introduces
 the ability to perform subsequent functions in a logical and intuitive manner,
 using the `%>%` chain operator.
 
-* [`%>%` (chaining operator):](R_tutes_dplyr.md#-operator) allows sequential
+* `%>%` (chaining operator): allows sequential
 chaining of functions for cleaner, easier-to-read code
-* [`dplyr::select()`:](R_tutes_dplyr.md#dplyrselect) selects variables to be retained
-or dropped from dataset
-* [`dplyr::filter()`:](R_tutes_dplyr.md#dplyrfilter) filters data set by specified
-criteria
-* [`dplyr::arrange()`:](R_tutes_dplyr.md#dplyrarrange) sorts dataset by specified
-variables
-* [`dplyr::mutate()`:](R_tutes_dplyr.md#dplyrmutate) adds variables or modifies
-existing variables
-* [`dplyr::summarize()`:](R_tutes_dplyr.md#dplyrsummarize) uses analysis
-functions (sum, mean, etc) to summarize/aggregate specified variables
-* [`dplyr::group_by()`:](R_tutes_dplyr.md#dplyrgroup_by) groups data by
-specified variables, allowing for group-level data processing.
+* `dplyr::select()`: selects variables to be retained or dropped from dataset
+* `dplyr::filter()`: filters data set by specified criteria
+* `dplyr::arrange()`: sorts dataset by specified variables
+* `dplyr::mutate()`: adds variables or modifies existing variables
+* `dplyr::summarize()`: uses analysis functions (sum, mean, etc) to summarize/aggregate specified variables
+* `dplyr::group_by()`: groups data by specified variables, allowing for group-level data processing.
 
 Other `dplyr` references:
 
@@ -46,8 +130,8 @@ Other `dplyr` references:
 * [swirl tutorial package:](http://swirlstats.com/students.html) A tutorial package built directly into R.  Section 2: 'Getting and Cleaning Data' runs you through `dplyr` and `tidyr` basics
 * [R data wrangling cheat sheet:](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) a quick reference guide to `tidyr` and `dplyr` functions
 
-##%>% operator
-###Description
+## %>% operator
+### Description
 The `%>%` operator allows you to 'pipe' or 'chain' a number of function calls,
 in which the output dataframe of one function is fed directly into the next
 function as the input dataframe.
@@ -55,31 +139,31 @@ This lets you avoid creating temporary variables to store intermediate values,
 and lets you avoid nesting multiple functions.  Using `%>%` makes your code more elegant, streamlined, and easy to read since you are able to write your code on multiple indented lines.  From
 [`dplyr` and pipes: the basics:](http://seananderson.ca/2014/09/13/dplyr-intro.html)  
 
->OK, here's where it gets cool. We can chain `dplyr` functions in succession.
+> OK, here's where it gets cool. We can chain `dplyr` functions in succession.
 This lets us write data manipulation steps in the order we think of them and
 avoid creating temporary variables in the middle to capture the output. This
 works because the output from every `dplyr` function is a data frame and the
 first argument of every `dplyr` function is a data frame.
 
-###Usage
+### Usage
 ```
 data_out <- f(data_in, args)
-  ### standard function call
+  # standard function call
 
 data_out <- data_in %>% f(args)
-  ### function call using %>% operator. data_in is passed as first argument
-  ### of function().
+  # function call using %>% operator. data_in is passed as first argument
+  # of function().
 
 data_out <- data_in %>%
   f1(args1) %>%
   f2(args2) %>%
   f3(args3) %>% ...
-  ### Output of function can be passed to another function immediately,
-  ### without need for temporary storage. Indented format for legibility,
-  ### see how pretty it looks?
+  # Output of function can be passed to another function immediately,
+  # without need for temporary storage. Indented format for legibility,
+  # see how pretty it looks?
 ```
 
-###Example
+### Example
 ```
 ### Bad!  Nested functions: read from inside out - hard to decipher
   h_recent_totals1 <- arrange(mutate(filter(group_by(harvest, country, commodity),
@@ -102,20 +186,23 @@ data_out <- data_in %>%
     arrange(country, commodity)
 ```
 
-##dplyr::select()
-###Description
+## dplyr::select()
+### Description
+
 `select()` allows you to choose specific columns/variables from your dataset,
 and drop all others.  Alternately, you can select specific variables to drop,
 leaving others in place.  `rename()` is a relative of `select()` that allows
 you to rename variables, while leaving all variables in place.
 
 
-###Example
+### Example
+
 The sample dataset  includes the annual harvest, in tonnes, of a number of
 commodities exported by two countries.  Type of trade provides no information
 (it is all Export), so that variable can be dropped.  The names of all the
 variables should be converted to lower-case, to match the OHI style guide.
 See the figure below.
+
 ```
 ### Example 1:
 harvest <- harvest %>%
@@ -146,14 +233,14 @@ The `harvest` data is fed into `select()`, and the output is fed into
 variable `harvest1`.
 ![using select() and rename() to organize variables in a data set](https://docs.google.com/drawings/d/14uc-1Pgaosfh5kPllJRf_sRXbiGWL4RcBqASqAG5f2E/pub?w=898&h=286)
 
-##dplyr::filter()
-###Description
+## dplyr::filter()
+### Description
 `filter()` allows you to select observations (rows) that match search criteria,
 using values in specified variables (columns).  Drops all observations that do
 not match the criteria.
 * Use logical operators & and | to filter on multiple criteria simultaneously
 
-###Example
+### Example
 ```
 harvest_vnm  <- harvest %>%
   filter(country == 'Vietnam')
@@ -164,13 +251,13 @@ h_vnm_recent <- harvest %>%
   ### filter with multiple criteria: selects 'Vietnam' data from 2009 or later.
 ```
 
-##dplyr::arrange()
-###Description
+## dplyr::arrange()
+### Description
 `arrange()` sorts observations (rows) based upon a specified variable or list of
 variables.  Does not actually change the data in any way, only the appearance.
 Useful for inspecting your data after each processing step.
 
-###Example
+### Example
 ```
 harvest_sorted <- harvest %>%
   arrange(country, commodity, year)
@@ -181,15 +268,16 @@ harvest_sorted <- harvest %>%
   ### Sorts harvest values by most recent year (descending order)
 ```
 
-##dplyr::mutate()
-###Description
+## dplyr::mutate()
+### Description
 `mutate()` is a powerful and useful tool for processing data.  You can add new
 variables or modify existing variables, using all variety of functions to
 perform operations on the dataset. `mutate()` works well with `group_by()` to
 perform calculations and analysis at a group level rather than dataset level.
 
-###Example
+### Example
 From the sample data set (see figure below), we would like to:
+
 * Remove the 'X' from the 'year' values.
 * Translate the text codes in 'tonnes' into numbers and NAs.  These codes are
 specific to FAO's data reporting format: `...` is the same as `NA`, and `0 0`
@@ -222,18 +310,20 @@ can convert the character strings to numeric where applicable. Similar for
 `as.integer(...)`
 
 
-##dplyr::summarize()
-###Description
+## dplyr::summarize()
+### Description
+
 `summarize()` combines multiple values of a variable into a single summary
 value. `summarize()` works well with `group_by()` - for grouped data, each
 group will be summarized and reported separately. For ungrouped data, the
 summary covers the entire dataset.
+
 * `summarize()` compresses the dataset and drops individual observations. To
 maintain individual observations, consider creating a summary variable using
 `mutate()` instead.
 * `NA` values can be problematic - use `na.rm=TRUE` or similar methods.
 
-###Example
+### Example
 To determine the total harvest of each country, for each commodity:
 ```
 h_summary <- harvest %>%
@@ -243,14 +333,16 @@ h_summary <- harvest %>%
 ```
 
 
-##dplyr::group_by()
-###Description
+## dplyr::group_by()
+### Description
+
 `group_by()` allows you to easily group a dataset by one or more variables/columns.  
 By itself, it does nothing to change your data.  But once your dataset has
 been sorted into useful groups, other `dplyr` functions will operate on each
 group separately, rather than operating on the entire dataset.
 * The function `groups(data)` reports back the current grouping status of
 dataframe `data`.  
+
 * `group_by()` alters the grouping, but does not alter the sort order.  
 `arrange()` does not alter the current grouping - it will sort by groups
 first, then sorts within each group.
@@ -260,7 +352,7 @@ first, then sorts within each group.
 practice to use the `ungroup()` function to remove the groupings, to avoid
 unintended consequences due to forgotten `group_by()` calls.
 
-###Example
+### Example
 If you want to find the total tonnage harvested for each commodity for each
 country, you would want to group by country and by commodity, and then perform
 a `sum()` function on the grouped data.  Two options presented here:
@@ -283,10 +375,75 @@ h_tot_mut <- harvest %>%
 ```
 ![group_by to find group-level information](https://docs.google.com/drawings/d/1enHrgXWhpHz3FsURncMI5UB8LKoXLvXFPAcU25pDOSc/pub?w=745&h=285)
 
+# Coding style 
 
-##dplyr::join()
-###Description
-TBD
-###Usage
+> Code unto others as you would have them code unto you.
 
-###Arguments
+Why style? ask Hadley Wickham, developer of many wonderful R packages:
+
+> Good style is important because while your code only has one
+author, it’ll usually have multiple readers. This is especially true when you’re
+writing code with others. In that case, it’s a good idea to agree on a common
+style up-front. Since no style is strictly better than another, working with
+others may mean that you’ll need to sacrifice some preferred aspects of your style.
+
+[![xkcd: code quality](http://imgs.xkcd.com/comics/code_quality.png)](http://xkcd.com/1513/)
+
+The Ocean Health Index is founded upon principles of open-source science, so our code should be not just available, but legible to others.  For OHI+, we expect people to modify code to implement new goal models, and we may need to provide support in developing and debugging their code.
+
+Certain coding techniques are more efficient than others (e.g. in R, looping across elements in a vector is much slower than operating on the entire vector at once), but rarely does OHI code push any performance envelopes.  Much more of our time is spent writing code, translating old code into new models, and debugging.  Transparent, readable code will save more time in the future than a perfectly-optimized but opaque algorithm.  
+
+Readable code is:
+
+* collaborative
+* easier for others to understand and debug
+* easier for others to update and modify
+* easier for 'future you' to interpret what 'past you' meant when you wrote that chunk of code.
+
+Check out Hadley Wickham's [style guide: ](http://r-pkgs.had.co.nz/style.html)
+
+* How many of these suggestions are second-nature to you? how many are you guilty of breaking?
+* Note that these are guidelines, not rules; non-stylish code can still work.  
+
+## Best practices for coding in OHI assessments:
+
+* use a consistent format for variable names, filenames, function names, etc.
+    * `lower_case_with_underscores` (preferred) or `camelCase` (ok I suppose)
+        * not `periods.in.between`
+    * use names that are brief but intuitive
+* Comment clearly for your own purposes, and for others.
+    * Comment on the purpose of each important block of code.
+    * Comment on the reasoning behind any unusual lines of code, for example an odd function call that gets around a problem.
+* Take advantage of R Studio section labels functionality:
+    * If a comment line ends with four or more -, =, or # signs, R Studio recognizes it as a new section.
+    * Text within the comment becomes the section name, accessible in the drop-down menu in the bottom left of the RStudio script window.
+* use <- to assign values to variables (not necessary, but preferred)
+* use %>% to create intuitive chains of related functions
+    * one function per line
+    * break long function calls into separate lines (e.g. multiple mutated variables)
+* use proper spacing and formatting for legibility
+    * don't crowd the code - use spaces between math operators and after commas
+    * use indents to indicate nested or sequential/chained code
+    * break sequences or long function calls into separate lines logically -
+    e.g. one function call per line
+* use functions to add intuitive names to chunks of code
+* Use 'tidy data' practices - take advantage of `tidyr`, `dplyr`
+    * clean up unused columns using `select(-colname)`
+* if you are working on an older script, spend a few extra minutes to update it according to these best practices
+    * technical debt - you can do it quickly or you can do it right.  Time saved now may cost you or someone else more time later.
+
+## Writing functions
+http://nicercode.github.io/guides/functions/
+Why write functions?
+* name a chunk of code for easier reading
+* easily reuse a chunk of code
+
+What makes a good function:
+* It’s short
+* Performs a single operation
+* Uses intuitive names
+
+## Directories and files
+    * Store files in a folder called 'github' in your home directory; access it with `~/github` so that 
+    different users with different operating systems can work smoothly with your files
+
