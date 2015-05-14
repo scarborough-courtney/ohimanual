@@ -10,4 +10,4 @@ Index scores by goal are calculated at the scale of the reporting unit, which is
 
 ###Comparing Scales of Assessment
 
-It is important to note that the scores form you OHI+ assessment can't be compared directly to the scores from global assessments. This is because your models and data will be different, leading to methods that are unique to your area. However, you can compare the scores for the same assessment area through time and make truly quantitative comparisons. Understanding this should allow you to be creative as you develop your plans going into your assessment.
+It is important to note that the scores form you OHI+ assessment can't be compared directly to the scores from global assessments. This is because your models and data will be different, which means that your methods  are unique to your area. However, you can compare the scores for the same assessment area through time and make truly quantitative comparisons. Understanding this should allow you to be creative as you develop your plans going into your assessment.
