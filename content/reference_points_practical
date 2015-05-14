@@ -5,6 +5,14 @@
 
 <!---Add content on setting reference points relative to regions, on a per-region basis--->
 
+One approach: other countries have used the minimum need of fish protein for a model to see if the demand is meeting that. china-specific model: need to discuss with fishery management agencies.
+
+Lesson: talk to agencies in goal-model development.
+
+#### Case Study: China
+
+As an example of when you would set a reference point, target, the China team compares the reference point for fisheries with the targets set by the 13th five year China state plan.
+
 <!--- Taken from Conceptual Guide v2--->
 
 Setting reference points depends on the goal philosophy and the available data. For instance, a sustainable seafood management goal could be measured in terms of yields if the goal is focused on maximizing food provision or in number of jobs if the goal is focused on maximizing social and economic welfare. These two goal framings would lead to the development of different targets in terms of both yields and level of employment. Where necessary, our conceptual framework encourages the reframing of management goals to ensure that the corresponding indicators, and the units in which they are reported, accurately portray the intent of the goal.
@@ -23,19 +31,21 @@ We refer to these three approaches as those based on functional relationships, t
 * scientific understanding about the relationship between the ecosystem state and natural or human pressures is reviewed
 * data sources and their limitations are investigated thoroughly
 
-1) Functional relationships
+#### Functional relationships
 This type of target is derived from a known relationship (an equation) between the ocean indicator and a natural or human pressure. If an empirical or theoretical functional relationship is available, it can be used to determine a reference point for the amount of a benefit that can be expected from the system. This process is simplified because functional relationships are often associated with thresholds and reflection points.
 
-The wild-caught fisheries sub-goal of food provision uses a functional relationship to determine the reference point. See Part II for specific information.
-2) Time series approaches
+The wild-caught fisheries sub-goal of food provision uses a functional relationship to determine the reference point.
+
+#### Time series approaches
 In cases where a functional relationship is unavailable, it is possible to use time series data to evaluate the current ocean conditions in an individual location relative to conditions in that location at a previous time period. Time series data are used to provide an internal standard against which current conditions are judged. We emphasize two types of targets that use time series data. The first is a baseline, which focuses on a stationary time period, relays information about what was previously possible in a particular location, and is especially useful for goals in which the desired state occurred at a fixed time in the past. The second is based on a moving window time period, which facilitates comparisons with contemporary conditions and smoothes short-term fluctuations and distortions in time series data. Moving window approaches are particularly appropriate when the intent of a management goal is to prevent declines in the current state relative to a recent time period. They are commonly used to describe the condition of financial markets (example: day-to-day changes in the Dow Jones Industrial Average).
 
-The carbon storage and coastal protection goals use time series approaches to determine reference points. See Part II for specific information.
-3) Spatial comparisons
+The **Carbon Storage** and **Coastal Protection** goals use time series approaches to determine reference points.
+
+#### Spatial comparisons
+
 Another approach to setting targets in cases where functional relationships are unavailable relies on spatial comparisons. Targets derived from spatial comparisons gauge the current ocean conditions in a particular location relative to the current ocean conditions in a reference area(s). In spatial comparisons, different locations are assumed to be capable of producing similar ecosystem benefits. In this case, the maximum amount of benefit observed across all locations is defined as the reference point and is used to judge the status in other locations. Thus, a target based on a spatial comparison relies on an external standard for all but one location (the place with the maximum benefit), under the assumption that if a reference location can attain a certain state, then so can other locations within the study area.
 
-The economies sub-goal use spatial comparisons to determine the reference point. See Part II for specific information.
-
+The **Economies** sub-goal use spatial comparisons to determine the reference point.
 
 *****
 
