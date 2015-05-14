@@ -6,12 +6,12 @@ Index findings can be used by decision-makers to establish ocean health outcomes
 
 Establishing a vision is the first step, and will help identify outstanding important issues that may need to be addressed later on. Here, it is important to think about why is there interest in completing an Index assessment. For example:
 
-•	What are the existing stakeholder problems, needs, and interests that need to be addressed?
+* What are the existing stakeholder problems, needs, and interests that need to be addressed?
 
-•	Is the objective to use the findings to reform policies and/or practices?
+* Is the objective to use the findings to reform policies and/or practices?
 
-•	Are there any specific management priorities established through government mandates, private sector initiatives, and/or international treaty obligations that would especially benefit from an Index assessment?
+* Are there any specific management priorities established through government mandates, private sector initiatives, and/or international treaty obligations that would especially benefit from an Index assessment?
 
-•	Are there any special management needs?
+* Are there any special management needs?
 
-•	Is there a need for stronger multi sectorial collaboration for effective management?
+* Is there a need for stronger multi sectorial collaboration for effective management?
