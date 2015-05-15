@@ -2,7 +2,10 @@
 
 ![Scores are calculated for each region and combined to produce a total score for the study area. Data or indicators are required for every region.](https://docs.google.com/drawings/d/1RsamVf-p5nSUS8_w--uU5I2717tqMPlhc3JEbW8Rvkg/pub?w=677&h=446)
 
+
 ###Assessements can be carried out at different scales
+
+> Remember: The OHI should guide your efforts, rather than direct them. 
 
 Your assessment will be an example of an Ocean Health Index+ (OHI+) assessment. OHI+ assessments and are conducted by independent groups such as yours that use the same Index approach to measure ocean health in their own regions, countries, states, and communities. These assessments can be used by managers to incorporate local information and priorities at the spatial scale where policy and management decisions are made.
 
