@@ -1,3 +1,7 @@
+---
+title: The Ocean Health Index Conceptual Guide
+---
+
 ## Resilience
 
 ### How to get started?
@@ -39,13 +43,18 @@ A subsequent, and final, step to creating a robust resilience assessment is to d
 
 #### Data sources: Typology of Laws, Policies, Regulations
 
-<!---Link to Courtney's Google Doc-->
+<!---See Courtney's Google Doc-->
 
-Environmental laws and policies offer tangible information on resilience. The most common type of environmental regulations come from administrative law, such as pollution regulation of various kinds. Land-use law is also important to the integration of social and ecosystem issues, so finding zoning laws relevant for coastal areas could be useful, and so could finding whether or not a region requires environmental impact statements before allowing construction for either coastal land or for marine planning. Other kinds of law some countries include court cases settling disputes or requiring reparation of pollution damages, for example.
+Environmental laws and policies offer concrete information.
 
-Resilience also goes beyond just the law, however. Insurance policies present another option, for instance.. Coastal areas are increasingly requiring climate-related insurance in some countries, and so the existence of such markets in a vulnerable area would be an example of a climate change resilience measure. Social initiatives also present another way to tackle resilience. There might be a beach clean-up day, a percentage of the refuse material that is recycled by the population, or some other social factor that reduces trash inputs into the ocean. A local law banning plastic bags is another way that local jurisdictions control plastic trash.
+Administrative law. Land-use law is also important to the integration of environmental law; zoning laws relevant for coastal areas;
+
+Insurance policies present another option. Coastal areas are increasingly requiring climate-related insurance in some countries, for instance.
+
+Social initiatives also present another way to tackle resilience. There might be a beach clean-up day, a percentage of the refuse material that is recycled by the population, or some other social factor that reduces trash inputs into the ocean. A local law banning plastic bags is another way that local jurisdictions control plastic trash.
 
 > In the Brazil study (2014), the marine trash resilience was calculated by counting up whether localities had one of four garbage management services, including access to beach clean-up services, household garbage collection, household recycling collection, and garbage collection in public streets. <!---Julie's MS--->
+
 
 #### **Examples of Resilience Metrics**
 
@@ -81,7 +90,7 @@ Used mostly the same resilience layers as Global Study (Halpern 2013) <!---Julie
 
 #### Case Study: U.S. West Coast (2014)
 
-The U.S. West Coast assessment (2014) used a tailor-made set of resilience metrics. These were more informative than the global metrics in that that reflected the policy response to the local context. They included, for instance, using the U.S. Marine Mammal Protection Act as a resilience layer.
+The U.S. West Coast assessment (2014) used a tailor-made set of resilience metrics. These were more informative than the global metrics in that that reflected the policy response to the local context. They included, for instance, using the U.S. Marine Mammal Protection Act as a resilience layer
 
 
 #### Key Questions
@@ -98,8 +107,6 @@ The U.S. West Coast assessment (2014) used a tailor-made set of resilience metri
 
 
 
-
-
 ****************
 ORPHANED TEXT
 ****************
@@ -107,3 +114,4 @@ ORPHANED TEXT
 #### ADD TO SECTION ON FLEXIBILITY OF THE OHI+
 
 See [448](github.com/ohi-science/issues/issues/448)
+
