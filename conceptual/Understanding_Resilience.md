@@ -1,8 +1,8 @@
 ##**Understanding Resilience**
 
-A resilience measure can be a law, policy, or a given performance evaluation that speaks to the effectiveness of actions to improve ocean health.
+> Ultimately, it is resilience that will help determine the future of ocean health.*
 
-*Ultimately, it is resilience that will help determine the future of ocean health.*
+A resilience measure can be a law, policy, or a given performance evaluation that speaks to the effectiveness of actions to improve ocean health.
 
 Resilience actions are the best way to improve a score for a country, because they can reduce pressures, protect ocean habitats and species, improve status, and optimize benefits to people.
 
@@ -31,10 +31,12 @@ Physical manifestations of resilience also appeared, such as public works projec
 <!---Below is good to use to lead to more practical data-finding steps-->
 The UN’s main goal was to prevent another world war, but over time it has become the nucleus for international and planetary resilience through programs in peace and security, development, human rights, humanitarian affairs and international law.
 
-he UN also organizes treaties such as the  Convention on the Law of the Sea (UNCLOS), Convention on Biological Diversity (CBD) and programs such as the Millennium Development Goals and Sustainable Development Goals that aim to end poverty and hunger, build healthy lives and well-being, achieve gender equality and empower women and girls; ensure access to sustainable sources of water, sanitation, energy; reduce inequality; combat climate change; create safe and resilient cities and settlements; and use ocean and land sustainably.  Though such engagements are entirely voluntary, most countries participate, and the Ocean Health Index considers such participation in calculating resilience scores.  
+The UN also organizes treaties such as the  Convention on the Law of the Sea (UNCLOS), Convention on Biological Diversity (CBD) and programs such as the Millennium Development Goals and Sustainable Development Goals that aim to end poverty and hunger, build healthy lives and well-being, achieve gender equality and empower women and girls; ensure access to sustainable sources of water, sanitation, energy; reduce inequality; combat climate change; create safe and resilient cities and settlements; and use ocean and land sustainably.  Though such engagements are entirely voluntary, most countries participate, and the Ocean Health Index considers such participation in calculating resilience scores.  
 
 ####Ideal Approach
 
 Ideally, assessments of social resilience would include national-level and as well as local rules and other relevant institutional mechanisms that are meant to safeguard ocean health. The global focus has been on international treaties and indices, so your region should have more localized information. There would also be information as to their effectiveness and enforcement. of more. Information on social norms and community (and other local-scale) institutions (such as tenure or use rights) that influence resource use and management would be useful too.
 
 #### Guide to Laws, Policies, Regulations
+
+*Coming soon.* <!---INSERT HERE--->

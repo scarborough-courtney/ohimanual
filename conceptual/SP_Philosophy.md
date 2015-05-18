@@ -2,7 +2,7 @@
 
 > The **Sense of Place** goal aims to capture the aspects of coastal and marine systems that people value as part of their cultural identity and connectedness to the marine environment.
 
-This definition includes people living near the ocean and those who live far from it and still derive a sense of identity or value from knowing particular places or species exist. Since few groups, communities, or states have explicitly described the attributes of the coastal and ocean environments that have special cultural meaning, the Index assesses the conditions that reflect how well this goal is being delivered through two sub-goals, **Iconic Species** and **Lasting Special Places**. The overall **Sense of Place** goal is then the arithmetic mean of the two sub-goal scores.
+The **Sense of Place** definition includes people living near the ocean and those who live far from it and still derive a sense of identity or value from knowing particular places or species exist. Since few groups, communities, or states have explicitly described the attributes of the coastal and ocean environments that have special cultural meaning to them, the Index assesses how well this goal is being delivered through the conditions of two sub-goals, **Iconic Species** and **Lasting Special Places**. The overall goal score is then the arithmetic mean of the two sub-goal scores.
 
 ### **Iconic Species**
 
@@ -10,32 +10,30 @@ This definition includes people living near the ocean and those who live far fro
 
 #### Philosophy
 
-Iconic species are defined as those that are relevant to local cultural identity through one of several ways. They can be identified through traditional activities such as fishing, hunting or commerce; through local ethnic or religious practices; through existence value; and through locally-recognized aesthetic value. This can even include, for example, touristic attractions/common subjects for art such as whales).
+**Iconic Species** are defined as those that are relevant to local cultural identity. The intent of the sub-goal is to focus on those species widely perceived as iconic within a region, and iconic from a cultural or existence value. This is in contrast to an economic or extractive reason for valuing the species. Iconic species symbolize the cultural, spiritual, and aesthetic benefits that people hold for a region, often bringing intangible benefits to coastal communities and beyond.
 
-The intent of the **Iconic Species** sub-goal is to focus on those species widely perceived as iconic within a region, and iconic from a cultural or existence value. This is in contrast to an economic or extractive reason for valuing the species. Iconic species symbolize the cultural, spiritual, and aesthetic benefits that people hold for a region, often bringing intangible benefits to coastal communities and beyond.
+They can be identified through activities such as fishing, hunting, or commerce; through local ethnic or religious practices; through existence value; and through locally-recognized aesthetic value. This can even include, for example, touristic attractions and iconic species as defined by their repeated representation in local art.
 
 #### Ideal Approach
 
-Ideally, data would be available on all species that are important to coastal communities, and then a separate assessment would judge the condition of each of the populations. Because almost any species can be iconic to someone, defining which species are culturally iconic can be challenging; information can sometimes be found from local customs and experts, oral tradition, sociological or anthropological literature, journalism and regional assessments. The type of reference point used will depend on the data available.
+Ideally, data would be available on all species that are important to coastal communities, and then a separate assessment would judge the condition of each of the populations. It would ideally be possible to find an officially-sanctioned list, or a list from a trusted source, of the iconic species for an area.
+
+> TIP: One way to think about **Iconic Species** is to think about what kinds of animals or plants would appear on local stamps or coinage. The nice thing about that process is the choice has already been vetted by the community.
 
 #### Keep in Mind
 
-This is in contrast simply an economic or extractive reason for valuing the species.
+The type of valuation carried out here stands in contrast to simply an economic or extractive reason for valuing the species. Even so, because almost any species can be iconic to to different groups or individuals, and defining which species are culturally iconic can be challenging. Information can sometimes be found from local customs and experts, oral tradition, sociological or anthropological literature, journalism, and regional studies.
 
 #### History of the Approach
 
 Assessment | Model Description and Reference Point | Evolution of Approach | Interpreting a score
 ---------------|------------------------------------------------|-----------------------------|-------------------|
-**Global 2012** | Status of this sub-goal is the average extinction risk of iconic species, calculated as the weighted sum of the number of species in each threat category, where an increasing weight is assigned by level of extinction risk of the threat category. This formula penalizes the gravity and number of species endangered among those recognized as iconic.<br  /><br  />The reference point is to have the risk status of all assessed species as Least Concern, meaning that the species is at lowest risk of extinction.  Species that either have not been assessed or are labeled as data deficient are not included in the calculation. | To define the list of iconic species for each region, we compiled lists of region-specific iconic species combined with lists of globally-recognized iconic species to create the total list of iconic species per region (see ‘Iconic species’ in section 7). Species were drawn from the World Wildlife Fund’s global and regional lists for Priority Species (especially important to people for their health, livelihoods, and/or culture) and Flagship Species (‘charismatic’ and/or well-known). Ultimately, almost any species can be iconic to someone, and so the intent with this goal was to focus on those species widely seen as iconic from a cultural or existence value (rather than for a livelihoods or extractive reason). Many lists exist for globally important, threatened, endemic, etc. species, but in all cases it is not clear if or to what extent these species represent culturally iconic species. The lists we used from World Wildlife Fund are the only source that included cultural reasons for listing iconic species but they only cover a few regions and by no means capture the rich diversity of species that are iconic for local regions, communities, religions, tribes or other groups elsewhere.  Collecting data at those scales would be a very important advance forward.<br  /><br  />Habitat-forming species are not included in this definition of iconic species, nor are species that are harvested solely for economic or utilitarian purposes (even though they may be iconic to a sector or individual). | A score of 100 would indicate that all species are in the threat category equivalent to ‘least concern’.
+**Global 2012** | Status of this sub-goal is the average extinction risk of iconic species, calculated as the weighted sum of the number of species in each threat category, where an increasing weight is assigned by level of extinction risk of the threat category. This formula penalizes the gravity and number of species endangered among those recognized as iconic.<br  /><br  />The reference point is to have the risk status of all assessed species as Least Concern, meaning that the species is at lowest risk of extinction.  Species that either have not been assessed or are labeled as data deficient are not included in the calculation. | To define the list of iconic species for each region, we compiled lists of region-specific iconic species combined with lists of globally-recognized iconic species to create the total list of iconic species per region. Species were drawn from the World Wildlife Fund’s global and regional lists for Priority Species (especially important to people for their health, livelihoods, and/or culture) and Flagship Species (‘charismatic’ and/or well-known). Ultimately, almost any species can be iconic to someone, and so the intent with this goal was to focus on those species widely seen as iconic from a cultural or existence value (rather than for a livelihoods or extractive reason). Many lists exist for globally important, threatened, endemic, etc. species, but in all cases it is not clear if or to what extent these species represent culturally iconic species. The lists we used from World Wildlife Fund are the only source that included cultural reasons for listing iconic species but they only cover a few regions and by no means capture the rich diversity of species that are iconic for local regions, communities, religions, tribes or other groups elsewhere. Collecting data at those scales would be a very important advance forward.<br  /><br  />Habitat-forming species are not included in this definition of iconic species, nor are species that are harvested solely for economic or utilitarian purposes (even though they may be iconic to a sector or individual). | A score of 100 would indicate that all species are in the threat category equivalent to ‘least concern’.
 **Global 2013** | The methods and reference point were the same as Global 2012. | The approach was the same as Global 2012. |
 **Brazil (2014)** | The methods and reference point were the same as Global 2012. | The approach was the same as Global 2012. |
 **U.S. West Coast (2014)** | To assess the status of these iconic species within the region we used the same methods outlined in Global 2012, but replaced the global IUCN risk assessments with regionally specific species assessments provided by NatureServe.<br  /><br  />The reference point was the same as Global 2012. | Same as Global 2012, with regional data for the threat categories. |
 
-
-
-
 ***
-
 
 ### **Lasting Special Places**
 
@@ -43,13 +41,17 @@ Assessment | Model Description and Reference Point | Evolution of Approach | Int
 
 #### Philosophy
 
-Well-maintained and protected lasting special places provide intangible but significant resources that help sustain and may also generate economic opportunities and help to sustain coastal communities, but those are captured in other goals.
+Th **Lasting Special Places** sub-goal focuses on those geographic locations that hold particular value for aesthetic, spiritual, cultural, recreational or existence reasons. It is different from simply quantifying protected areas because it attempts to contain the value of sustainability for human interaction. Well-maintained and protected lasting special places provide intangible but significant resources that help sustain and may also generate economic opportunities and help to sustain coastal communities, but those are captured in other goals.
 
-This sub-goal focuses instead on those geographic locations that hold particular value for aesthetic, spiritual, cultural, recreational or existence reasons. The scores for this sub-goal are calculated based upon two assumptions: that all regions have roughly the same percentage of their coastal areas (outward to 3 nm and inland to 1 km from the shore) that qualify as lasting special places, and that the regions with the most protected areas are the closest to achieving their region-specific target.
+> In the Global Assessments, the scores for this sub-goal are calculated based upon two assumptions: that all regions have roughly the same percentage of their coastal areas (outward to 3 nm and inland to 1 km from the shore) that qualify as lasting special places, and that the regions with the most protected areas are the closest to achieving their region-specific target.
 
 #### Ideal Approach
 
-Ideally, a list of all the places that people within a region consider special could be found or developed, along with an assessment of what percent of and how well those areas are protected.
+Ideally, a list of all the places that people within a region consider special could be found or developed, along with an assessment of what percent of and how well those areas are protected. First-hand information could be gathered through surveys or some similar approach.
+
+#### Keep in Mind
+
+This goal is hard to define in terms of data. Other goals capture the economic benefits derived from **Lasting Special Places**, as well as biodiversity. This goal assesses the human-use and assumes sustainability through aesthetic, cultural, and other kinds of engagement.
 
 #### History of the Approach
 

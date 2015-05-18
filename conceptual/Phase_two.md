@@ -1,4 +1,4 @@
-#Phase Two: Plan an OHI Assessment
+# Phase Two: Plan an OHI Assessment
 
 This document contains the steps of the second of four phases in conducting an assessment. In this section you will be guided through how to:
 

@@ -2,25 +2,29 @@
 
 > The **Coastal Livelihoods and Economies** goal rewards productive coastal economies that avoid the loss of ocean-dependent livelihoods while maximizing livelihood quality.
 
-This goal is founded on two sub-goals, **Livelihoods** and **Economies**. **Livelihoods** is comprised of jobs and wages, and **Economies** is comprised of revenues. The two halves of this goal are tracked separately because the number and quality of jobs and the amount of revenue produced are both of considerable interest to stakeholders and governments, and could show very different patterns, such as the case when high revenue sectors do not necessarily provide large employment opportunities. The goal aims to maintain the number of coastal and ocean-dependent livelihoods (jobs) in a region, and maintain productive coastal economies (revenues), while also maximizing livelihood quality (represented by relative wages).
+This goal is founded on two sub-goals, **Livelihoods** and **Economies**. **Livelihoods** is comprised of jobs and wages, and **Economies** is comprised of revenues. The two halves of this goal are tracked separately because the number and quality of jobs and the amount of revenue produced are both of considerable interest to stakeholders and governments, and could show very different patterns, such as is the case when high revenue sectors do not necessarily provide large employment opportunities. The goal aims to maintain the number of coastal and ocean-dependent livelihoods (jobs) in a region, and maintain productive coastal economies (revenues), while also maximizing livelihood quality (represented by relative wages).
+
+> This is an area where economic studies are integrated and inform the concept of ocean health.
 
 #### Keep in Mind
 
-Maintaining jobs in this case means not losing jobs--this sub-goal does not give credit for *gaining* jobs in the Global model. It does not attempt to capture aspects of job identity like reputation, desirability, or other social or cultural perspectives associated with different jobs, nor does it account for the impact upon an individual but rather focuses on the aggregate. One can examine the component parts that make up this goal, however, to evaluate individual sectors and infer implications for job identity.
+Maintaining jobs in this case means not losing jobs--this sub-goal does not give credit for *gaining* jobs in the Global Assessments. It does not attempt to capture aspects of job identity like reputation, desirability, or other social or cultural perspectives associated with different jobs, nor does it account for the impact upon an individual but rather focuses on the aggregate. One can examine the component parts that make up this goal, however, to evaluate individual sectors and infer implications for job identity.
 
 ### **Livelihoods**
 
 > The **Livelihoods** sub-goal describes livelihood quantity and quality.
 
-This sub-goal includes two equally important sub-components, the number of jobs, which is a proxy for livelihood quantity, and the per capita average annual wages, which is a proxy for job quality.
-
 #### Philosophy
 
-This sub-goal evaluates the benefits people obtain from the oceans in the form of jobs and wages. Some relevant sectors include tourism, commercial fishing, marine mammal watching, and working at ports and harbors, among others. Jobs and wages produced from marine-related industries are clearly of huge value to many people, even those who do not directly participate in the industries but value community identity, tax revenue, and indirect economic and social impacts of a stable coastal economy.
+This sub-goal evaluates the quantitative and qualitative benefits workers get from the oceans in the form of jobs and wages. In the Global Assessments, the two sub-components are equally important because the number of jobs is a proxy for livelihood quantity, and the per capita average annual wages is a proxy for job quality. Some relevant sectors include tourism, commercial fishing, marine mammal watching, and working at ports and harbors, among others. Jobs and wages produced from marine-related industries are clearly of huge value to many people, and directly benefit those who are employed--they also benefit those who do not directly participate in the industries but rather gain indirectly from the value of community identity, tax revenues, and other indirect economic and social impacts of a stable coastal economy.
 
 #### Ideal Approach
 
-Ideally, this goal would capture all marine sectors that supply jobs and wages to coastal communities, incorporating information on the sustainability of different sectors and also working conditions and job satisfaction/identity. The jobs and revenue produced from marine-related industries directly benefit those who are employed, but also those that gain substantial indirect value from community identity, tax revenue, and other related economic and social impacts of a stable coastal economy. Capturing the indirect as well as direct benefits from jobs, wages and revenue from coastal communities and beyond is best; where data do not exist, multipliers derived from the literature can be incorporated into jobs to attempt to capture this. The reference point in this sub-goal will likely be set as a moving window temporal approach or a spatial comparison.
+Ideally, this goal would represent and encompass all marine sectors that supply jobs and wages to coastal communities, incorporating information on the sustainability of different sectors and also working conditions and job satisfaction. Job identity would also be an important part of this. Capturing the indirect as well as direct benefits from jobs, wages and revenue from coastal communities and beyond is best; where data do not exist, multipliers derived from the literature can be incorporated into jobs to attempt to capture this. The reference point in this sub-goal will likely be set as a moving window temporal approach, or a spatial comparison.
+
+#### Keep in Mind
+
+It's important to note that the data approaches taken to date in the Global Assessments are imperfect, and do not represent the one way to convey the importance of individual identity with coastal work. The values are shown for the aggregate community and are proxies for quality-of-life of the individual. In further assessments, any new data that may otherwise speak to well-being would represent a useful improvement.
 
 #### History of the Approach
 
@@ -35,15 +39,15 @@ Assessment | Model Description and Reference Point | Evolution of Approach | Int
 
 ### **Economies**
 
-> The **Economies** sub-goal captures the economic value associated with marine industries. This is done using revenue from marine sectors as a proxy.
+> The **Economies** sub-goal captures the economic value associated with marine industries using revenue from marine sectors.
 
 #### Philosophy
 
-The economies sub-goal evaluates the revenue generated from marine-based industries. Strong coastal economies are something that people value, and this can be reflected by the GDP generated by these coastal regions both directly and indirectly. The economies sub-goal is composed of a single component, revenue.
+The **Economies** sub-goal evaluates the revenue generated from marine-based industries. Strong coastal economies are something that people value, and this can be reflected by the GDP generated by these coastal regions both directly and indirectly. The economies sub-goal is composed of a single component, revenue.
 
 #### Ideal Approach
 
-Ideally, economic data would be collected for each coast, and traced from sectors both directly and indirectly related to marine industries. When these data are not available it is possible to use revenue data at a larger scale and adapt them to a coastal area based on population distribution. The reference point in this sub-goal will likely be set as a moving window temporal approach.
+Ideally, economic data would be collected for each coast, and traced from sectors both directly and indirectly related to marine industries. When these data are not available it is possible to use revenue data at a larger scale and adapt them to a coastal area based on population distribution. The reference point in this sub-goal will likely be set as a moving-window temporal approach.
 
 #### Keep in Mind
 
@@ -56,6 +60,6 @@ Assessment | Model Description and Reference Point | Evolution of Approach | Int
 **Global 2012** | This sub-goal is captured as the total adjusted revenue generated directly and indirectly from each sector (measured in 2010 USD), at current and reference time points.<br  /><br  />In the economies sub-goal, revenue had a moving target temporal comparison. Because there is no absolute reference point for revenue, this sub-goal employs a moving baseline. We made a correction to revenue based on a region's GDP (“no loss and must keep pace with growth in GDP or can sustain losses comparable to national declines in GDP”). The current and reference years used for unemployment and GDP data were based on the average current year and average reference year across the sector data sources used for number of jobs and revenue, respectively. | We assumed that sector-specific job and revenue multipliers are static and globally consistent, but distinct for developed versus developing regions (when such information was available), because we do not have data to resolve temporal or regional differences. For all other sectors where the data sources only provided direct jobs or direct revenue, we used sector- and development status-specific multipliers derived from the literature to estimate total job or revenue impacts. We did not apply multiplier values to wages since the cascading effects of earned income are more contentious. | A score of 100 would indicate that revenue has not decreased compared to its value five years previous.
 **Global 2013** | The model was same as Global 2012, with a few simplifications:  revenue data were adjusted by dividing by GDP per region (reported in 2013 USD; data from the World Bank).<br  /><br  />The reference point was the same as Global 2012. | The approach was the same as Global 2012, although simplified where appropriate. |
 **Brazil (2014)** | The model and reference point were the same as Global 2012. | The approach was the same as Global 2012. |
-** U.S. West Coast (2014)** | The model and reference point were the same as Global 2012. | The approach was the same as Global 2012. |
+**U.S. West Coast (2014)** | The model and reference point were the same as Global 2012. | The approach was the same as Global 2012. |
 
 ***

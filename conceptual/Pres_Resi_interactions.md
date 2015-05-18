@@ -1,4 +1,4 @@
-##**Interactions: Pressures and Resilience**
+## **Interactions: Pressures and Resilience**
 
 Pressures and resilience layers interact with an indicator to increase or decrease its likely future state. The real-world goal of having resilience measures is to lead to an increase in the likely future state, although this can also be achieved through a decrease in the pressures as well. Either way, the most desired outcome for any goal is intended to improve the overall score. This would be most visible through multiple years of engagement with an OHI assessment.
 

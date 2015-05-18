@@ -2,21 +2,23 @@
 
 > The **Artisanal Fishing Opportunties** goal shows whether people with the desire to fish on small scales have the opportunity to do so.
 
-A score of 100 means that a region is addressing and meeting the needs that people and communities have to fish artisanally by implementing government policies that permit or encourage them to do so, providing appropriate access to near-shore areas, and maintaining the species targeted in good health. A low score indicates that regions are not achieving or allowing sustainable artisanal fishing opportunities to be realized.
-
 #### Philosophy
 
 It is important to capture the degree to which a region permits or encourages artisanal fishing compared to the demand for such fishing opportunities, and if possible, the sustainability of artisanal fishing practices.
 
-The artisanal fishing opportunities goal measures the opportunities for artisanal fishing rather than the amount of fish caught (covered in the **Food Provision** goal) or the household revenue earned (covered in the **Livelihoods and Economies** goal). Higher scores reflect high potential for the local population to access local ocean resources, regardless of whether or not those people actually do get access. This goal is about economic access (need and costs involved), as well as physical access (how possible it is for individuals to get to the resource), and access to the fish themselves (how robust fish populations are). The opportunity to fish artisanally interacts with other goals when damaging practices are used (for example, cyanide or dynamite fishing).
+The artisanal fishing opportunities goal measures the opportunities for artisanal fishing rather than the amount of fish caught (covered in the **Food Provision** goal) or the household revenue earned from the activities (covered in the **Livelihoods and Economies** goal). In the Global Assessments, higher scores reflect high potential for the local population to access local ocean resources, regardless of whether or not those people actually do get access. This goal is about economic access,  physical access, and access to the fish themselves. Economic access is comprised of needs and costs involved, and physical access is determined by how possible it is for individuals to get to the resource. Access to the fish themselves is a reflection of how robust fish populations are measured ot be.
+
+Damaging practices are sometimes used in artisanal fishing, such as the use of cyanide or dynamite, and these are penalized in the Index calculations. Such practices also lead **Artisanal Fishing Opportunities** to interact in a negative way with other goals.
 
 #### Ideal Approach
 
-Ideally, this goal would include some measure of how easy or hard it is for people to access ocean resources when they need them and a quantified evaluation of the sustainability of harvest of all nearshore stocks used by artisanal fishermen. The type of reference point used will depend on the data available.
+Ideally, this goal would include some measure of how easy or hard it is for people to access ocean resources when they need them and a quantified evaluation of the sustainability of harvest of all nearshore stocks used by artisanal fishermen. It will require the creative combination of different kind of data elements.
 
 #### Keep in Mind
 
-This goal captures the access people have to coastal resources, whether or not they actually do fish in coastal waters. The amount of seafood caught, if reported, is contained within the Food Provision goal (or possibly the Natural Products goal); and any wages or revenue, are not included here but instead in the Livelihoods and Economies goal. Instead, this goal specifically tries to estimate whether individuals or households have the access to the sea that they need for their own survival.  Status for this goal is estimated as a function of need for artisanal fishing opportunities and whether or not the opportunity is permitted and/or encouraged institutionally, and whether artisanal fishing could be sustainable. It measures the potential for artisanal fishing whether or not this potential is actually met.
+This goal reflects only the access people have to coastal resources, not necessarily whether they actually do fish in those waters. In other words, It measures the potential for artisanal fishing whether or not this potential is actually met. This is because this goal specifically tries to estimate whether individuals or households have the access to the sea that they need for their own survival. The status for this goal is estimated as a function of need for artisanal fishing opportunities and whether or not the opportunity is permitted or encouraged institutionally, and whether artisanal fishing could be sustainable.
+
+Keep in mind also that the amount of seafood caught, if reported, is contained within the **Food Provision** or **Natural Products** goals. Meanwhile, any wages or revenue are included instead in the **Livelihoods and Economies** goal. The data for this goal should therefore reflect its unique intention.
 
 #### History of the Approach
 

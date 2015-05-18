@@ -4,21 +4,17 @@
 
 #### Philosophy
 
-People enjoy the presence of unpolluted estuarine, coastal, and marine waters for their aesthetic value and because they help avoid detrimental health effects to people or the marine life on which they depend. Many things can be responsible for negatively affecting clean waters, including sewage pollution (fecal coliform, viruses, parasites), nutrient runoff (eutrophication, algal blooms), chemical pollution (oil spills), and marine debris (floating trash). Combining the scores for these pollutants with a geometric mean in the goal model ensures that just one of the pollutants can drive the score, with the philosophy that if one of the pollutants is greatly impacting the system, how the others are affecting the system is less critical because there is already great impact.
-
-This goal captures the degree to which waters are polluted by eutrophication (excess nutrients mostly from fertilizers and sewage), trash, pathogens and chemicals. People value marine waters that are free of pollution and debris for aesthetic and health reasons. Contamination of waters comes from oil spills, chemicals, eutrophication and algal blooms, disease pathogens (e.g., fecal coliform, viruses, and parasites from sewage outflow) and floating trash. People are sensitive to these phenomena occurring in areas that they access for recreation or other purposes as well as for simply knowing that clean waters exist. This goal scores highest when the contamination level is zero.
+**Clean Waters** are important to both people and the marine life on which they depend. People enjoy having unpolluted estuarine, coastal, and marine waters both for their aesthetic value and for their importance to health. Sewage pollution, nutrient runoff, chemical pollution, and marine trash all make coastal waters less clean. This leads to human problems, such as fecal coliform ingestion, and ecosystem problems like eutrophication and algal blooms. This goal scores highest when the contamination level is zero, and the Global  model ensures that just one of the pollutants can drive the score because. The philosophy is that one of the pollutant can greatly impact the system because of the sensitivity of the system.
 
 #### Ideal Approach
 
-Ideally, data would be available and combined from many different categories of marine pollution to best capture the factors that can cause waters to become unsuitable for recreation or other purposes. The type of reference point used will depend on the data available; a functional relationship would be best for setting limits to uses.
+Ideally, data would be available and combined from many different categories of marine pollution to best capture the factors that can cause waters to become unsuitable for recreation or other purposes. There would be data available across various classes of contaminants, including organic pollutants, inorganic pollutants, metals, oils, turbidity, and trash. Having good data from each of the desired categories, such as those culled from a repeated effort at monitoring the conditions of the coasts, would be ideal. For the reference point, a functional relationship would be best for setting hard use limits.
 
 #### Keep in Mind
 
-Due to data constraints, the models described below mostly used information on pollutant inputs from point sources. If in-situ measurements of water and biological uptake from organisms are available, these types of information should be preferred. Particularly, information on eutrophication anomalies, anoxic regions and toxic blooms, would be preferable to the nutrient inputs proxy used in previous assessments.
+Due to data constraints, the models described in the Global Assessments mostly used information on pollutant inputs from point sources. If in-situ measurements of water and biological uptake from organisms are available, these types of information would be preferred. Particularly, information on eutrophication anomalies, anoxic regions, and toxic blooms, would be preferable to the nutrient inputs used in previous assessment, which are really just proxies for the better data.
 
-We were not able to assess specific toxic chemicals at the global scale; however regional case studies often will have data available for the quantities and toxicity of a range of chemicals put into watersheds and coastal waters. In addition, where possible and relevant, we recommend including additional component that could not be covered in the models presented here due to data constraints, such as altered sedimentation/turbidity.
-
-
+> In the Global Assessments, it was not possible to assess specific toxic chemicals at the global scale; however regional case studies often might have data available for the quantities and toxicity of a range of chemicals put into watersheds and coastal waters. In addition, where possible and relevant, we recommend including additional component that could not be covered in the models presented in the Global due to data constraints, such as altered sedimentation or turbidity.
 
 #### History of the Approach
 
