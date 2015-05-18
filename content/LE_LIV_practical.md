@@ -13,6 +13,11 @@ There is another important decision to be made: what is a marine-related sector?
 
 #### Global Data Approach
 
+###What to do when you don't have new data
+
+Question: do we have the old format of data going back in time? If so can we check to see how wages per sector change over time? If they all change in the same way (eg following broader economic trends) within a country, then we could use those temporal relationships to project forward per sector per country.
+
+
 <!---From #438--->
 
 In the past, the International Labour Organization provided wage data for ~150 occupations. We then categorized these occupations to get wage data for 5 major occupations related to marine environments:
