@@ -12,7 +12,7 @@ Ideally, data for all habitats within regions of a study area would be available
 
 #### Keep in Mind
 
-We did not include an assessment of the protection afforded by human-made structures such as jetties and seawalls, because these structures cannot be preserved without maintenance and do not constitute long-term sustainable services. They may also have other undesirable side effects such as the altering of sedimentation rates causing erosion in new and unexpected locations.
+The Global studies did not include an assessment of the protection afforded by human-made structures such as jetties and seawalls, because these structures cannot be preserved without maintenance and do not constitute long-term sustainable services. They may also have other undesirable side effects such as the altering of sedimentation rates causing erosion in new and unexpected locations.
 
 #### History of the Approach
 
