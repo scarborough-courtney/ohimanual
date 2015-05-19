@@ -1,37 +1,17 @@
 ## **Determine the Need and Purpose of Conducting Your OHI+ Assessment**
 
-One of your first tasks when thinking about developing an OHI+ assessment should be defining the purposes of the study and thinking about how it complement ongoing efforts of management. Producing the Index is not the end goal: it is merely a process toward the true end-goal - *achieving improved ocean health.*
+> Remember that producing the Index is not the end in itself--the  aim is to *achieving improved ocean health.*
+
+OHI+ is applied research, aiming at solving practical problems related to ocean and coastal resource management. One of your first tasks when developing an OHI+ assessment should be to define the purpose of the study and think about how it can complement other or planned efforts of environmental management. Assessments should be conducted with clear research questions in mind--*how will what you are doing help achieve improved ocean health? How will it solve the problems you want to solve?*
+
+One clear way to think about this is in choosing your study area and the regions that will comprise it. Will your regions match the scales of decision-making, will they match biogeography, or will they try to fit both? Will this require new data, or will it require involvement and the collaboration of neighboring countries?
+
+* See [the Baltic Health Index](http://www.su.se/ostersjocentrum/english/baltic-eye/research/baltic-health-index) for an example of regional collaboration.
+
+Once you have a sense of your regions of interest, you should also consider whether other efforts are already underway to manage those areas and whether researchers are active in the area. This could lead to new opportunities for collaboration, and for chances support new data-collection efforts. You should Identify strengths, weaknesses, opportunities, and threats in your area on both the scientific and the policy scale where possible.
 
 > When conducting an OHI+ assessment, remember that the process is just as important as the results.
 
-OHI+ falls under the realm of applied research, aiming at solving practical problems related to ocean and coastal resource management. Hence, the assessments should be conducted with a clear end-goal in mind: what problem(s) do you want to solve? Defining the end goal of the study will largely determine how goal models, data gathering, and reference points are developed to maximize the utility of the findings to inform decision-making to address the problem(s). You should consider why you need or want to conduct an OHI+ assessment and what you are going to do with the information. Some rationale for your assessment might include the need or desire to:
+Defining the end-goals of the study will largely determine how goal models, data gathering, and reference points are developed to maximize the utility of the findings to inform decision-making, and is very important in ensuring a smooth and successful project with OHI+.
 
-<!---Cut or slim down or clean this whole section. Should mainly focus on preparing end-users for the next phase of the process - the main goal here is to get users to have done a literature review to harmonize management approaches to help save the sustainbility of the ocean -->
-
-**Identify strengths, weaknesses, opportunities, and threats.**
-
-
-•	Provide clear and objective measurements of ocean health to improve multi-stakeholder engagement. This can ensure that future stakeholder engagement activities are as effective as possible.
-
-•	Define management initiatives and policies to improve ocean and coastal health.
-
-•	Establish suitable management targets (reference points) for all elements of the ocean.
-
-•	Inform geographic and thematic priority setting.
-
-•	Improve resource allocation by identifying cost-effectiveness.
-
-•	Maximize sustainable ocean production.
-
-•	Establish a forum for stakeholder discussions about targets, potential conflicts of interests, and management preferences and priorities.
-
-•	Identify potential private-public partnerships for sustainable development and growth, mitigation, restoration, and management.
-
-•	Enhance international collaboration and partnerships with neighboring countries.
-
-•	Increase public awareness through campaigns.
-
-
-As you define the purpose of the assessment, it is important to keep in mind the scale at which the study is conducted and the various scales of decision-making. As you define your goals for the assessment, you should consider who the audience for the assessment is and what kind of information do they require. In most OHI+ studies there are several different stakeholder groups, all of which have different information needs and requirements. Therefore, you should consider the perspectives of groups such as government agencies, private sector members, Non-governmental organizations (NGOs) and civil society groups, and scientific and academic institutions.
-
-Effective assessments are carefully planned and require adequate project leadership and vision. Due to the multidisciplinary nature of the Index, assessments often count with participation of various stakeholder groups. Nevertheless, we recommend a key agency or group assumes the leadership of the assessment to ensure proper planning, development, and engagement throughout the assessment.
+***
