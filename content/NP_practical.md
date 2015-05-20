@@ -12,30 +12,32 @@ Whether you use the Global approach or are developing your own new model entirel
 
 The first is to identify **identify which products are in your region.** Does your area have corals, ornamental fish, sponges, for instance? Does your area yield medicines from the sea, that are not used for nutrition under **Food Provision**? Does your area harvest drinking water from the ocean through desalination plants? Is there a kelp or seaweed industry in your area?
 
-Study | Natural Products example | Data Source
+Study | Natural Products considered | Data Source
 -------|-----------------------------------|--------------
 Global 2013 | aquaria fishes, corals, sponges, shells, seaweeds, fish oil | UN FAO database
 U.S. West Coast (2013) | kelp considered, not included | NA
-OHI+ China | sea cucumber | China Statistical Yearbook 2014
-OHI+ Israel | desalinated water | ???
+OHI+ China | seasalt, medicine, chemicals | China Statistical Yearbook 2014
+OHI+ Israel | desalinated water, not included | ???
 
-The second task is to think about **where these products are harvested and how much of them are harvested** in these areas through a period of time. You should find spatial representation of these products, which is done typically by knowing where the habitats are that they are derived from. These spatial data are used to calculate **exposure** further on, and can also be used to set the **relative weighting** in the default Goal model equation. These spatial data may have already been used in other goals, or they may lead you to find useful data that can be used in other parts of the assessment (See **Best Approaches**).
+The second task is to think about **where these products are harvested and how much of them are harvested** in these areas through a period of time. You should find spatial representation of these products, which can be done by knowing where the habitats are that they are derived from. The harvest amounts and the spatial data are used to calculate **exposure** further on, and can also be used to set the **relative weighting** in the default Global model equation. These spatial data may have already been used in other goals, or they may lead you to find useful data that can be used in other parts of the assessment (See **Best Approaches**).
 
 > TIP: The data layer, `hab_extent` is used here and in other goal models in the default code for the Global Assessment.
 
-It should be noted that in the Global Assessments, the harvested amounts are derived from the information from the Food and Agriculture Organization of the United Nations (FAO), and these are combined with habitat values used elsewhere in the assessment. You should be conscious of this as you go through the model and change it, because you may be able to simplify aspects of the code, such as gap-filling.
+It should be noted that in the Global Assessments, the harvested amounts are derived from the information from the Food and Agriculture Organization of the United Nations (FAO), and these are combined with habitat values used elsewhere in the assessment. You should be conscious of this as you go through the model and change it, because you may be able to simplify aspects of the code such as gap-filling.
 
->Remember, the more explicit the map, and the finer the resolution, the better the results. In the Global Assessments, for example, squared kilometers are the units of the area used, but in your regions should ideally have finer data.
+>Remember, the more explicit the map, and the finer the resolution, the better the results. In the Global Assessments, for example, squared kilometers are the units of the area used, but in your regions could have finer data.
 
-The third component is to try to find the **sustainability** coefficients of the identified products through the factors of **exposure and risk**. The **exposure** will come from the spatio-temporal harvest amount data already prepared, and the **risk** will come from the scientific literature or by using a third-party's scoring system.  For *exposure* and *risk*, the scores can be calculated in separate equations as part of your data preparation process, or they can fed into the goal model in `functions.R` model.
-
-
+The third component is to try to find the **sustainability** coefficients of the identified products. These could be given values, in which case you would simplify the model, or they could be derived from two factors, **exposure and risk**. The **exposure** will come from the spatio-temporal harvest amount data already prepared, and the **risk** will come from the scientific literature or by using a third-party's scoring system. For both of those cases, the values can be calculated in separate equations as part of your data preparation process, or they can be fed directly into the goal model in `functions.R`:
 
 ![Natural Products goal model from OHI Global Assessment 2013](https://docs.google.com/drawings/d/1JFU166u9J8-bYDxeEJPKoZjHOnUtOsz4GlsxlMgKsQo/pub?w=594&h=100)
 
-> The newer Global Assessments borrow principles from fisheries models to make estimates of product sustainability. For the Global 2012, rough estimates of how sustainable the harvest method were made by expert judgment in light of available information on how much of a product was harvested relative to what was perceived to be available in the system. In Global 2013, however, the sustainability component was derived from the historical maximum harvest recorded, the maximum harvesting density recorded, and risk status assessments by the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES).
+> The Global Assessments borrow principles from fisheries models to make estimates of product sustainability. For the Global 2012, rough estimates of how sustainable the harvest method were made by expert judgment in light of available information on how much of a product was harvested relative to what was perceived to be available in the system. In Global 2013, however, the sustainability component was derived from the historical maximum harvest recorded, the maximum harvesting density recorded, and risk status assessments by the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES).
 
-The Global assessment used the following values in the equation:
+One very important thing to consider at this point is your **reference point for the relative harvest amount**. The relative harvest of your data is multiplied by the sustainability coefficient in the last step. Setting the reference point is a decision your team must make based on the available data and an inferred functional relationship between the harvest of the product and the amount in the system. Will you set the reference point to the average harvested total of the product? Will you set it to the peak yield through time? Was the highest yield in the past, or is the trend such that the harvest amount is only increasing? Whatever you do, you must think about whether or not this logic will create better or worse scores. <!---Need to confirm this section-->
+
+[insert an image of trend in total harvest vs time?]
+
+Example: The Global assessment used the following information in the Natural Products equations:
 
 product | relative tonnes (1) | weighting (2) | Exposure (3) | Risk (4)
 ----------|---------------------|-------------|--------------|------
@@ -48,6 +50,8 @@ seaweeds | FAO | FAO | rocky reef habitat | --
 
 #### What's the code trying to do?
 
+[check!]<!---Check this section, please--->
+
 You may have already looked at the **NP** section of `functions.R`. In simple terms, here is what the code is doing:
 
 * It pulls out the appropriate data layers to find out the amount of each product per unit area. It does gap-filling as necessary for the Global data.
@@ -58,17 +62,19 @@ You may have already looked at the **NP** section of `functions.R`. In simple te
 
 * In parallel to this, it finds the Risk of each product based on a scoring system that becomes binary: 0, or 1.
 
-* It then averages the two factors, Exposure and Risk, to reveal where risk and intensity are highest geographically. This value is then inverted to become Sustainability and to reward lower intensity and lower risk.
+* It then averages the two factors, Exposure and Risk, to reveal where risk and intensity are highest. This value is then inverted to become Sustainability and to reward lower intensity and lower risk.
 
-* Once the sustainability coefficient is found, the amount of each identified product is multiplied by it as a weighting. 
+* The amount of each kind of product, relative to the total amount [of?], is multiplied by the sustainability coefficient to create sustainability-weighted scores for all regions and all years available.
+
+* The latest year value is used in the status, and the past few years' values are used in the trend to produce the final score.
 
 ![Diagram of calculation, NP](https://docs.google.com/drawings/d/1cHTBz55p2ZoAM3tSbpLRHIWdfHZlUg2AqjX2xMvz8Po/pub?w=960&h=720)
-**Figure.** Diagram of calculation, NP.
+**Figure.** Diagram of sustainability calculation, NP.
 
 
 #### Data Sources
 
-If the case is that corals, sponges, and  then you might be able to use FAO data, which is the data source of the Global Assessments. Otherwise, you will have to find comparable data in your area or consult local statistical offices and local fisheries managers to get harvest values similar to landing values and any other kinds of stock assessments. The IUCN offers quantified assessments of risk to species, but that is more appropriate for biodiversity; CITES signatory data may be more appropriate for the trade products. Exposure can be calculated spatially, and for this you should be able to find or produce your own maps if possible. Your maps may have finer resolution than those in global resolution, and therefore in this case--as in all others--it's encouraged to find and use your own local data sources.
+If the case is that corals, sponges, and  then you might be able to use FAO data, which is the data source of the Global Assessments. Otherwise, you will have to find comparable data in your area or consult local statistical offices and local fisheries managers to get harvest values similar to landing values and any other kinds of stock assessments. The IUCN offers quantified assessments of risk to species, but that is more appropriate for biodiversity; CITES signatory data may be more appropriate for the trade products. Exposure can be calculated spatially, and for this you should be able to find or produce your own maps if possible. Your maps might have finer resolution than those in global resolution.
 
 #### What are other considerations?
 
