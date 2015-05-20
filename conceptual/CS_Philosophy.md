@@ -17,7 +17,7 @@ Highly productive coastal wetland ecosystems, like mangroves, salt marshes, and 
 
 Ideally, to assess the amount of carbon stored in every coastal habitat, information would be available regarding coverage area and some measure of quality. For example, you would have data for both the spatial coverage of a mangrove and know its tree density. Additionally, different weights would be assigned to the habitats based on their relative ability to store carbon. The carbon storage model can incorporate such weights once they are available in a similar way to the methods developed for the coastal protection goal. The reference point for habitat-based goals will likely be a comparison with a historic extent or state; this means that historic data are needed such that current habitat extent data can be compared to them.
 
-> TIP: The relative carbon storage abilities for different habitats is an area of active research..
+> TIP: The relative carbon storage abilities for different habitats is an area of active research.
 
 #### Keep in Mind
 
