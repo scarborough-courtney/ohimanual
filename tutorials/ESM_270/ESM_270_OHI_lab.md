@@ -25,31 +25,38 @@ You access an existing WebApp and modify it locally on your computer to complete
 3. **RStudio**: Download and install the current version of RStudio from [rstudio.com](www.rstudio.com). 
 
 4. Choose a coastal country or territory that has a WebApp using the list available at [ohi-science.org/subcountry](). The WebApp you choose must have a green `build | passing` indicator associated with its study area. 
-    - click the three-letter code in the '*Repo*' column to explore the WebApp of that study area. 
+    - click the three-letter code (`xxx`) in the '*Repo*' column to explore the WebApp of that study area. 
     - click the date in the '*Last Mod*' column to explore the GitHub repository of that study area. 
 
-5. Click the '*Download ZIP*' button on the main page of the repository  
+5. Click the '*Download ZIP*' button on the main page of the repository (github.com/OHI-Science/`xxx`)
     ![](./figures/downloadZIP.png)
+    - NOTE: do not choose CHN, as it is under development. 
 
-6. unzip the downloaded *.zip* folder and save in your `ESM_270` folder. 
+6. Unzip the downloaded ** *.zip* ** folder and save in your `ESM_270` folder, without changing the name. 
   
-7. Open RStudio follow the instructions below. 
+7. Open **RStudio** follow the instructions below. Note that anything following the `#` symbol in R is a comment and will not be executed.
 
 
 ```{r}
-# in your R Console, 
+# 1. type the following in the Console window, replacing 'xxx' with your 3-letter code: 
 key = 'xxx'
 
 ```
 
 ```{r}
 
-# paste the following into your console:
+# 2. paste the following into the Console window:
 
-setwd('~/ESM_270/
+# set the working directory
+setwd(sprintf('~/ESM_270/%s-draft/subcountry2014', key))
+
+# install OHI Toolbox software
+source(install_ohicore.r)
 
 summary(cars)
 ```
+
+
 
 You can also embed plots, for example:
 
